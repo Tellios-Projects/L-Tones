@@ -19,17 +19,17 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.leafenzo.template.ModInit"
+      "net.leafenzo.ltones.ModInit"
     ],
     "client": [
-      "net.leafenzo.template.ModClientInit"
+      "net.leafenzo.ltones.ModClientInit"
     ],
     "fabric-datagen": [
-      "net.leafenzo.template.datageneration.ModDataGenerator"
+      "net.leafenzo.ltones.datageneration.ModDataGenerator"
     ]
   },
   "mixins": [
-    "squashed.mixins.json"
+    "ltones.mixins.json"
   ],
 
   "depends": {
