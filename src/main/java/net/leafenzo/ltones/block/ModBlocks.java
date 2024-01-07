@@ -2,8 +2,11 @@ package net.leafenzo.ltones.block;
 
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.leafenzo.ltones.ModInit;
 import net.leafenzo.ltones.Super;
+import net.leafenzo.ltones.sound.ModBlockSoundGroup;
+import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
@@ -11,7 +14,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
@@ -19,11 +24,95 @@ import net.minecraft.world.BlockView;
 import java.util.function.ToIntFunction;
 
 public class ModBlocks {
-    //public static final Block BLAZE_ROD_BLOCK = registerBlock("blaze_rod_block", new ReversiblePillarBlock(FabricBlockSettings.copyOf(Blocks.STONE).mapColor(MapColor.TERRACOTTA_YELLOW).requiresTool().strength(2.0f).sounds(ModBlockSoundGroup.BLAZE_ROD_BLOCK).luminance(state -> 7)),ModItemGroups.SQUASHED);
+    public static final Block[] ISZM_BLOCKS = registerSetOfColoredBlocks("iszm", FabricBlockSettings.create().strength(0.3f).sounds(BlockSoundGroup.GLASS)); //Glass Screen
+    public static final Block[] FORRT_BLOCKS = registerSetOfColoredBlocks("forrt", FabricBlockSettings.create().strength(1.4f).sounds(ModBlockSoundGroup.METAL_STICKS)); //Plastic
+    public static final Block[] MYST_BLOCKS = registerSetOfColoredBlocks("myst", FabricBlockSettings.create().strength(0.3f).sounds(BlockSoundGroup.STONE)); //TODO what material is this?
+    public static final Block[] ZANE_BLOCKS = registerSetOfColoredBlocks("zane", FabricBlockSettings.create().strength(1.4f).sounds(ModBlockSoundGroup.METAL_STICKS)); //Plastic
+
+//    private static final FabricBlockSettings korpMaterial = FabricBlockSettings.create()
+//                    .mapColor(MapColor.TERRACOTTA_BLACK)
+//                    .requiresTool()
+//                    .strength(4.0f, 6.0f)
+//                    .sounds(BlockSoundGroup.METAL);
+//    public static final Block[] KORP_BLOCKS = {
+//        registerBlock("enchained_korp", new Block(korpMaterial.strength(2.0f, 3.0f))),
+//        registerBlock("rough_korp", new Block(korpMaterial.strength(1.6f))),
+//        registerBlock("smooth_korp", new Block(korpMaterial.strength(2.0f, 3.0f))),
+//        registerBlock("polished_korp", new Block(korpMaterial.strength(2.0f, 3.0f))),
+//        registerBlock("korp_vent", new Block(korpMaterial.strength(2.0f, 3.0f))),
+//        registerBlock("korp_pillar", new Block(korpMaterial.strength(2.0f, 3.0f))),
+//        registerBlock("korp_pillar", new Block(korpMaterial.strength(2.0f, 3.0f))),
+//    };
+
+    private static final FabricBlockSettings vectMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.YELLOW)
+            .requiresTool()
+            .strength(2.4f, 2.0f)
+            .sounds(BlockSoundGroup.METAL);
+    public static final Block[] VECT_BLOCKS = {
+        registerBlock("vect", new Block(vectMaterial)),
+        registerBlock("vect_tile", new Block(vectMaterial)),
+        registerBlock("vect_rivet", new Block(vectMaterial)),
+        registerBlock("vect_hub", new Block(vectMaterial)),
+        registerBlock("vect_strut", new Block(vectMaterial)),
+        registerBlock("vect_pad", new Block(vectMaterial)),
+        registerBlock("vect_tracker", new Block(vectMaterial.mapColor(MapColor.BLACK))),
+        registerBlock("vect_core", new Block(vectMaterial.mapColor(MapColor.BLACK))),
+        registerBlock("vect_treadplate", new Block(vectMaterial)),
+        registerBlock("vect_shield", new Block(vectMaterial)),
+        registerBlock("vect_panel", new Block(vectMaterial)),
+        registerBlock("vect_radiator", new Block(vectMaterial.mapColor(MapColor.GOLD))),
+        registerBlock("vect_bulkhead", new Block(vectMaterial)),
+        registerBlock("vect_tank", new Block(vectMaterial.mapColor(MapColor.GOLD).strength(1.8f).sounds(ModBlockSoundGroup.FOIL))),
+        registerBlock("vect_network", new Block(vectMaterial.mapColor(MapColor.PALE_YELLOW))),
+        registerBlock("vect_foil", new Block(vectMaterial.mapColor(MapColor.GOLD).strength(1.2f).sounds(ModBlockSoundGroup.FOIL))),
+    };
+
+//    private static final FabricBlockSettings reddsMaterial = FabricBlockSettings.create()
+//            .mapColor(MapColor.DARK_RED)
+//            .requiresTool()
+//            .strength(2.4f, 2.0f)
+//            .sounds(ModBlockSoundGroup.STATIC);
+//    public static final Block[] REDDS_BLOCKS = {
+//            registerBlock("redds", new Block(vectMaterial)),
+//    };
+
+
+    public static Block[] registerSetOfColoredBlocks(String name, FabricBlockSettings settings) {
+        DyeColor[] colors = ModUtil.VANILLA_DYE_COLORS;
+        Block[] blocks = new Block[colors.length];
+        for (int i = 0; i < colors.length; i++) {
+            DyeColor color = colors[i];
+            blocks[i] = registerBlock(color.getName() + "_" + name, new Block(settings.mapColor(color)));
+        }
+        return blocks;
+    }
+
+
+
+
+//    public static class BlockSet {
+//        public final String name;
+//        public Block[] Blocks;
+//
+//        public BlockSet(String name, Block[] blocks) {
+//            this.name = name;
+//            this.Blocks = blocks;
+//        }
+//    }
+
+//    public static Block registerBlockInBlockSet(BlockSet blockSet, String name, Block block, ItemGroup group) {
+//        Block block1 = registerBlock(name, block, group);
+//        blockSet.Blocks.add(block1);
+//        return block1;
+//    }
 
     public static Block registerBlock(String name, Block block, ItemGroup group) {
-        registerBlockItem(name,block,group);
-        //if(block.getDefaultState().isOpaque()) { ModRenderLayers.registerCutout(block);  }
+        return registerBlock(name, block);
+    }
+
+    public static Block registerBlock(String name, Block block) {
+        registerBlockItem(name,block);
         return Registry.register(Registries.BLOCK, new Identifier(Super.MOD_ID, name), block);
     }
 
@@ -39,7 +128,7 @@ public class ModBlocks {
         return state -> state.get(property) != false ? litLevel : 0;
     }
 
-    private static Item registerBlockItem(String name, Block block, ItemGroup group) {
+    private static Item registerBlockItem(String name, Block block) {
         BlockItem blockItem = new BlockItem(block, new FabricItemSettings());
         //ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(blockItem));
         return Registry.register(Registries.ITEM, new Identifier(Super.MOD_ID, name), blockItem);
