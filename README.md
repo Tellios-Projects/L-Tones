@@ -9,6 +9,6 @@
 
 l-tones is meant to be a successor to the original [ZTones](https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/2221070-ztones-v-2-2-1-decorative-blocks-16x) mod, brought to both Fabric and the latest versions of Minecraft. Unlike [XTones](https://github.com/TehNut/Xtones) and [XTones-Reworked](https://github.com/TobsenD/XTones-Reworked) before it, l-tones comes with all new, completely revampted textures for all blocksets - as well as some other new items and blocks that fit into it's theme.
 
-This is both a fabric port of the mod, and a full revamp by Tellio-Aridoitsu (Eliza) with some programming help by Leafenzo (Leah). 
+Textures are made by Tellio-Aridoitsu (Eliza) based off the original Ztones textures, with programming done by Leafenzo (Leah). 
 
 </h4>
