@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ltones:block/redds_fractal"
+    },
+    "lit=true": {
+      "model": "ltones:block/redds_fractal_on"
+    }
+  }
+}

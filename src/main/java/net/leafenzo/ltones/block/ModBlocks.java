@@ -16,6 +16,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
@@ -68,14 +69,45 @@ public class ModBlocks {
         registerBlock("vect_foil", new Block(vectMaterial.mapColor(MapColor.GOLD).strength(1.2f).sounds(ModBlockSoundGroup.FOIL))),
     };
 
-//    private static final FabricBlockSettings reddsMaterial = FabricBlockSettings.create()
-//            .mapColor(MapColor.DARK_RED)
-//            .requiresTool()
-//            .strength(2.4f, 2.0f)
-//            .sounds(ModBlockSoundGroup.STATIC);
-//    public static final Block[] REDDS_BLOCKS = {
-//            registerBlock("redds", new Block(vectMaterial)),
-//    };
+    private static final FabricBlockSettings reddsMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.DARK_RED)
+            .requiresTool()
+            .strength(2.4f, 2.0f)
+            .sounds(ModBlockSoundGroup.POLYGON);
+    public static final Block[] REDDS_BLOCKS = {
+            registerBlock("redds", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds_pice", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds_tract", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds_thought", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds_tile", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds_mark", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds_nexus", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds_tape", new LitPillarBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds_grate", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds_heart", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds_hopper", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds_fractal", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds_frame", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds_glazed", new LitGlazedTerracottaBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds_balance", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds_current", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+    };
+    public static final Block REDDS = REDDS_BLOCKS[0];
+    public static final Block REDDS_PICE = REDDS_BLOCKS[1];
+    public static final Block REDDS_TRACT = REDDS_BLOCKS[2];
+    public static final Block REDDS_THOUGHT = REDDS_BLOCKS[3];
+    public static final Block REDDS_TILE = REDDS_BLOCKS[4];
+    public static final Block REDDS_MARK = REDDS_BLOCKS[5];
+    public static final Block REDDS_NEXUS = REDDS_BLOCKS[6];
+    public static final Block REDDS_TAPE = REDDS_BLOCKS[7];
+    public static final Block REDDS_GRATE = REDDS_BLOCKS[8];
+    public static final Block REDDS_HEART = REDDS_BLOCKS[9];
+    public static final Block REDDS_HOPPER = REDDS_BLOCKS[10];
+    public static final Block REDDS_FRACTAL = REDDS_BLOCKS[11];
+    public static final Block REDDS_FRAME = REDDS_BLOCKS[12];
+    public static final Block REDDS_GLAZED = REDDS_BLOCKS[13];
+    public static final Block REDDS_BALANCE = REDDS_BLOCKS[14];
+    public static final Block REDDS_CURRENT = REDDS_BLOCKS[15];
 
 
     public static Block[] registerSetOfColoredBlocks(String name, FabricBlockSettings settings) {

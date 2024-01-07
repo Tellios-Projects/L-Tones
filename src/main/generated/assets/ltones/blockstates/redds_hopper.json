@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ltones:block/redds_hopper"
+    },
+    "lit=true": {
+      "model": "ltones:block/redds_hopper_on"
+    }
+  }
+}

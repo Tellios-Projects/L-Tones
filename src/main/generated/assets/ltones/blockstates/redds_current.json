@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ltones:block/redds_current"
+    },
+    "lit=true": {
+      "model": "ltones:block/redds_current_on"
+    }
+  }
+}

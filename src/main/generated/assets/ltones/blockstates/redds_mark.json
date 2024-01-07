@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ltones:block/redds_mark"
+    },
+    "lit=true": {
+      "model": "ltones:block/redds_mark_on"
+    }
+  }
+}

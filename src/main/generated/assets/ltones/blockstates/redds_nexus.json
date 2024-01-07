@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ltones:block/redds_nexus"
+    },
+    "lit=true": {
+      "model": "ltones:block/redds_nexus_on"
+    }
+  }
+}

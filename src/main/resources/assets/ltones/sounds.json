@@ -2,42 +2,187 @@
   "block.metal_sticks.break": {
     "subtitle": "subtitles.block.generic.break",
     "sounds": [
-      "squashed:block/metal_sticks_break_1",
-      "squashed:block/metal_sticks_break_2",
-      "squashed:block/metal_sticks_break_3",
-      "squashed:block/metal_sticks_break_4"
+      "ltones:block/metal_sticks_break_1",
+      "ltones:block/metal_sticks_break_2",
+      "ltones:block/metal_sticks_break_3",
+      "ltones:block/metal_sticks_break_4"
     ]
   },
   "block.metal_sticks.step": {
     "subtitle": "subtitles.block.generic.footsteps",
     "sounds": [
-      "squashed:block/metal_sticks_footsteps_1",
-      "squashed:block/metal_sticks_footsteps_2",
-      "squashed:block/metal_sticks_footsteps_3",
-      "squashed:block/metal_sticks_footsteps_4"
+      "ltones:block/metal_sticks_footsteps_1",
+      "ltones:block/metal_sticks_footsteps_2",
+      "ltones:block/metal_sticks_footsteps_3",
+      "ltones:block/metal_sticks_footsteps_4"
     ]
   },
   "block.metal_sticks.place": {
     "subtitle": "subtitles.block.generic.place",
     "sounds": [
-      "squashed:block/metal_sticks_place_1",
-      "squashed:block/metal_sticks_place_2",
-      "squashed:block/metal_sticks_place_3",
-      "squashed:block/metal_sticks_place_4"
+      "ltones:block/metal_sticks_place_1",
+      "ltones:block/metal_sticks_place_2",
+      "ltones:block/metal_sticks_place_3",
+      "ltones:block/metal_sticks_place_4"
     ]
   },
   "block.metal_sticks.hit": {
     "subtitle": "subtitles.block.generic.hit",
     "sounds": [
-      "squashed:block/metal_sticks_hit_1",
-      "squashed:block/metal_sticks_hit_2",
-      "squashed:block/metal_sticks_hit_3"
+      "ltones:block/metal_sticks_hit_1",
+      "ltones:block/metal_sticks_hit_2",
+      "ltones:block/metal_sticks_hit_3"
     ]
   },
   "block.metal_sticks.fall": {
     "subtitle": "subtitles.block.generic.fall",
     "sounds": [
-      "squashed:block/metal_sticks_fall_1"
+      "ltones:block/metal_sticks_fall_1"
+    ]
+  },
+  "block.polygon.break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "ltones:block/polygon_break1",
+      "ltones:block/polygon_break2",
+      "ltones:block/polygon_break3"
+    ]
+  },
+  "block.polygon.step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "step/stone1",
+      "step/stone2",
+      "step/stone3",
+      "step/stone4",
+      "step/stone5",
+      "step/stone6"
+    ]
+  },
+  "block.polygon.place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "ltones:block/polygon_place1",
+      "ltones:block/polygon_place2",
+      "ltones:block/polygon_place3",
+      "ltones:block/polygon_place4"
+    ]
+  },
+  "block.polygon.hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "ltones:block/polygon_hit1",
+      "ltones:block/polygon_hit2",
+      "ltones:block/polygon_hit3"
+    ]
+  },
+  "block.polygon.fall": {
+    "subtitle": "subtitles.block.generic.fall",
+    "sounds": [
+      "step/stone1",
+      "step/stone2",
+      "step/stone3",
+      "step/stone4",
+      "step/stone5",
+      "step/stone6"
+    ]
+  },
+
+  "block.zkul.break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "ltones:fallback/410/sfx_5509",
+      "ltones:fallback/410/sfx_5510",
+      "ltones:fallback/410/sfx_5511",
+      "ltones:fallback/410/sfx_5512",
+      "ltones:fallback/410/sfx_5513",
+      "ltones:fallback/410/sfx_5514",
+      "ltones:fallback/410/sfx_5515",
+      "ltones:fallback/410/sfx_5516",
+      "ltones:fallback/410/sfx_5517",
+      "ltones:fallback/410/sfx_5518",
+      "ltones:fallback/410/sfx_5519",
+      "ltones:fallback/410/sfx_5520",
+      "ltones:fallback/410/sfx_5521",
+      "ltones:fallback/410/sfx_5522",
+      "ltones:fallback/410/sfx_5523",
+      "ltones:fallback/410/sfx_5524",
+      "ltones:fallback/410/sfx_5525",
+      "ltones:fallback/410/sfx_5526",
+      "ltones:fallback/410/sfx_5527",
+      "ltones:fallback/410/sfx_5528",
+      "ltones:fallback/410/sfx_5529",
+      "ltones:fallback/410/sfx_5530",
+      "ltones:fallback/410/sfx_5531",
+      "ltones:fallback/410/sfx_5532",
+      "ltones:fallback/410/sfx_5533",
+      "ltones:fallback/410/sfx_5534",
+      "ltones:fallback/410/sfx_5535",
+      "ltones:fallback/410/sfx_5536",
+      "ltones:fallback/410/sfx_5537",
+      "ltones:fallback/410/sfx_5538",
+      "ltones:fallback/410/sfx_5539",
+      "ltones:fallback/410/sfx_5540",
+      "ltones:fallback/410/sfx_5541",
+      "ltones:fallback/410/sfx_5542",
+      "ltones:fallback/410/sfx_5543",
+      "ltones:fallback/410/sfx_5544",
+      "ltones:fallback/410/sfx_5545",
+      "ltones:fallback/410/sfx_5546",
+      "ltones:fallback/410/sfx_5547",
+      "ltones:fallback/410/sfx_5548",
+      "ltones:fallback/410/sfx_5549",
+      "ltones:fallback/410/sfx_5550",
+      "ltones:fallback/410/sfx_5551",
+      "ltones:fallback/410/sfx_5552",
+      "ltones:fallback/410/sfx_5553",
+      "ltones:fallback/410/sfx_5554",
+      "ltones:fallback/410/sfx_5555",
+      "ltones:fallback/410/sfx_5556",
+      "ltones:fallback/410/sfx_5557",
+      "ltones:fallback/410/sfx_5558",
+      "ltones:fallback/410/sfx_5559",
+      "ltones:fallback/410/sfx_5560",
+      "ltones:fallback/410/sfx_5561",
+      "ltones:fallback/410/sfx_5562",
+      "ltones:fallback/410/sfx_5563",
+      "ltones:fallback/410/sfx_5564",
+      "ltones:fallback/410/sfx_5565",
+      "ltones:fallback/410/sfx_5566",
+      "ltones:fallback/410/sfx_5567",
+      "ltones:fallback/410/sfx_5568",
+      "ltones:fallback/410/sfx_5569",
+      "ltones:fallback/410/sfx_5570",
+      "ltones:fallback/410/sfx_5571",
+      "ltones:fallback/410/sfx_5572"
+    ]
+  },
+  "block.zkul.step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "ltones:fallback/410/sfx_2423",
+      "ltones:fallback/410/sfx_2424",
+      "ltones:fallback/410/sfx_2425"
+    ]
+  },
+  "block.zkul.place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "ltones:fallback/410/sfx_0011"
+    ]
+  },
+  "block.zkul.hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "ltones:fallback/410/sfx_0011"
+    ]
+  },
+  "block.zkul.fall": {
+    "subtitle": "subtitles.block.generic.fall",
+    "sounds": [
+      "ltones:fallback/410/sfx_2423",
+      "ltones:fallback/410/sfx_2424",
+      "ltones:fallback/410/sfx_2425"
     ]
   }
 }

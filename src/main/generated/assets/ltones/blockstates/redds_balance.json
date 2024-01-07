@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ltones:block/redds_balance"
+    },
+    "lit=true": {
+      "model": "ltones:block/redds_balance_on"
+    }
+  }
+}

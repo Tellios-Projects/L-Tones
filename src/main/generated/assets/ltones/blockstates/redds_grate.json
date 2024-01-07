@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ltones:block/redds_grate"
+    },
+    "lit=true": {
+      "model": "ltones:block/redds_grate_on"
+    }
+  }
+}

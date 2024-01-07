@@ -4,6 +4,7 @@ package net.leafenzo.ltones.item;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.leafenzo.ltones.ModInit;
 import net.leafenzo.ltones.Super;
+import net.leafenzo.ltones.block.ModBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -17,9 +18,9 @@ public class ModItemGroups {
         ModInit.LOGGER.debug("Registering item groups for " + Super.MOD_ID);
     }
 
-    public static ItemGroup TEMPLATE = Registry.register(Registries.ITEM_GROUP, new Identifier(Super.MOD_ID, "template"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.template"))
-                    .icon(() -> new ItemStack(Blocks.AIR)).entries((displayContext, entries) -> {
-                     //entries.add(ModBlocks.);
+    public static ItemGroup LTONES = Registry.register(Registries.ITEM_GROUP, new Identifier(Super.MOD_ID, "ltones"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.ltones"))
+                    .icon(() -> new ItemStack(ModBlocks.REDDS)).entries((displayContext, entries) -> {
+                     entries.add(ModBlocks.REDDS);
                     }).build());
 }
