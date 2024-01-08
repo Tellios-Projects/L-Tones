@@ -2,17 +2,19 @@ package net.leafenzo.ltones.block;
 
 import net.minecraft.block.*;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.Direction;
+import org.jetbrains.annotations.Nullable;
 
 public class LitPillarBlock extends LitBlock {
     public static final EnumProperty<Direction.Axis> AXIS = Properties.AXIS;
 
-    public LitPillarBlock(Settings settings) {
-        super(settings);
+    public LitPillarBlock(Settings settings, @Nullable SoundEvent turnOnSound, @Nullable SoundEvent turnOffSound) {
+        super(settings, turnOnSound, turnOffSound);
         this.setDefaultState((BlockState)this.getDefaultState().with(AXIS, Direction.Axis.Y));
     }
 

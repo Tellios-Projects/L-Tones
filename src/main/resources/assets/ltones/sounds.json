@@ -87,9 +87,20 @@
       "step/stone6"
     ]
   },
-
+  "block.polygon.activate": {
+    "subtitle": "",
+    "sounds": [
+      "ltones:block/polygon_activate1"
+    ]
+  },
+  "block.polygon.deactivate": {
+    "subtitle": "",
+    "sounds": [
+      "ltones:block/polygon_activate1"
+    ]
+  },
   "block.zkul.break": {
-    "subtitle": "subtitles.block.generic.break",
+    "subtitle": "",
     "sounds": [
       "ltones:fallback/410/sfx_5509",
       "ltones:fallback/410/sfx_5510",

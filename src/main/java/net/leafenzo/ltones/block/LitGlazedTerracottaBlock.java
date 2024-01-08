@@ -5,17 +5,19 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.RedstoneLampBlock;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
+import org.jetbrains.annotations.Nullable;
 
 public class LitGlazedTerracottaBlock extends LitBlock {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
-    public LitGlazedTerracottaBlock(Settings settings) {
-        super(settings);
+    public LitGlazedTerracottaBlock(Settings settings, @Nullable SoundEvent turnOnSound, @Nullable SoundEvent turnOffSound) {
+        super(settings, turnOnSound, turnOffSound);
     }
 
     @Override

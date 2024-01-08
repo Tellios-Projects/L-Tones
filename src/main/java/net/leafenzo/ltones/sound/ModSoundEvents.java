@@ -30,6 +30,8 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_POLYGON_PLACE = registerSoundEvent("block.polygon.place");
     public static final SoundEvent BLOCK_POLYGON_HIT = registerSoundEvent("block.polygon.hit");
     public static final SoundEvent BLOCK_POLYGON_FALL = registerSoundEvent("block.polygon.fall");
+    public static final SoundEvent BLOCK_POLYGON_ACTIVATE = registerSoundEvent("block.polygon.activate");
+    public static final SoundEvent BLOCK_POLYGON_DEACTIVATE = registerSoundEvent("block.polygon.deactivate");
 
     public static final SoundEvent BLOCK_ZKUL_BREAK = registerSoundEvent("block.zkul.break");
     public static final SoundEvent BLOCK_ZKUL_STEP = registerSoundEvent("block.zkul.step");

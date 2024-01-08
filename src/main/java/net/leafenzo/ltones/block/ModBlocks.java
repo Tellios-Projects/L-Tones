@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.leafenzo.ltones.ModInit;
 import net.leafenzo.ltones.Super;
 import net.leafenzo.ltones.sound.ModBlockSoundGroup;
+import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.*;
 import net.minecraft.entity.EntityType;
@@ -75,22 +76,22 @@ public class ModBlocks {
             .strength(2.4f, 2.0f)
             .sounds(ModBlockSoundGroup.POLYGON);
     public static final Block[] REDDS_BLOCKS = {
-            registerBlock("redds", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
-            registerBlock("redds_pice", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
-            registerBlock("redds_tract", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
-            registerBlock("redds_thought", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
-            registerBlock("redds_tile", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
-            registerBlock("redds_mark", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
-            registerBlock("redds_nexus", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
-            registerBlock("redds_tape", new LitPillarBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
-            registerBlock("redds_grate", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
-            registerBlock("redds_heart", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
-            registerBlock("redds_hopper", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
-            registerBlock("redds_fractal", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
-            registerBlock("redds_frame", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
-            registerBlock("redds_glazed", new LitGlazedTerracottaBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
-            registerBlock("redds_balance", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
-            registerBlock("redds_current", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(1, Properties.LIT)))),
+            registerBlock("redds", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
+            registerBlock("redds_pice", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), null, null)),
+            registerBlock("redds_tract", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
+            registerBlock("redds_thought", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
+            registerBlock("redds_tile", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
+            registerBlock("redds_mark", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
+            registerBlock("redds_nexus", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
+            registerBlock("redds_tape", new LitPillarBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
+            registerBlock("redds_grate", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
+            registerBlock("redds_heart", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
+            registerBlock("redds_hopper", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
+            registerBlock("redds_fractal", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
+            registerBlock("redds_frame", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
+            registerBlock("redds_glazed", new LitGlazedTerracottaBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
+            registerBlock("redds_balance", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
+            registerBlock("redds_current", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
     };
     public static final Block REDDS = REDDS_BLOCKS[0];
     public static final Block REDDS_PICE = REDDS_BLOCKS[1];
