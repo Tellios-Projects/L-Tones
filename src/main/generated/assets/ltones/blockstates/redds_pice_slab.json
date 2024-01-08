@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ltones:block/redds_pice_slab"
+    },
+    "type=double": {
+      "model": "ltones:block/redds_pice"
+    },
+    "type=top": {
+      "model": "ltones:block/redds_pice_slab_top"
+    }
+  }
+}

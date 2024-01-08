@@ -3,10 +3,13 @@ package net.leafenzo.ltones.datageneration;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.leafenzo.ltones.Super;
+import net.leafenzo.ltones.block.LitSlabBlock;
 import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.data.client.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.state.property.Properties;
@@ -54,12 +57,40 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        //  AGON
+        for(Block block : ModBlocks.AGON_BLOCKS.keySet()) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        //  FORT
+        for(Block block : ModBlocks.FORT_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        //  GLAXX
+        for(Block block : ModBlocks.GLAXX_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        //  CRAY
+        for(Block block : ModBlocks.CRAY_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        //  CAST
+        for(Block block : ModBlocks.CAST_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        //  HOST
+        for(Block block : ModBlocks.HOST_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        //  ZANE
+        for(Block block : ModBlocks.ZANE_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
 
         //  REDDS
-
-        // TODO stairs for this un'
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.REDDS_PICE);
-
+        BlockStateModelGenerator.BlockTexturePool reddsPiceTexturePool =
+                blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.REDDS_PICE);
+        reddsPiceTexturePool.slab(ModBlocks.REDDS_PICE_SLAB);
+        reddsPiceTexturePool.stairs(ModBlocks.REDDS_PICE_STAIRS);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS, Models.CUBE_ALL, TextureMap::all);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_TRACT, Models.CUBE_ALL, TextureMap::all);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_THOUGHT, Models.CUBE_ALL, TextureMap::all);
@@ -110,6 +141,8 @@ public class ModModelProvider extends FabricModelProvider {
     }
     public void generateFallbackBlockItemModels(BlockStateModelGenerator blockStateModelGenerator) {
         for (Identifier id : ModUtil.allBlockIdsInNamespace(Super.MOD_ID)) {
+            Block block = Registries.BLOCK.get(id);
+            if(block instanceof StairsBlock || block instanceof LitSlabBlock || block instanceof SlabBlock) continue; //Jank but it works
             registerParentedBlockItemModel(blockStateModelGenerator, Registries.BLOCK.get(id), Super.asResource("block/" + id.getPath()));
         }
     }

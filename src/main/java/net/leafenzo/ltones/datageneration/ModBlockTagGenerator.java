@@ -2,6 +2,7 @@ package net.leafenzo.ltones.datageneration;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.leafenzo.ltones.block.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryWrapper;
@@ -27,6 +28,34 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
+        for(Block block : ModBlocks.AGON_BLOCKS.keySet()) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+        for(Block block : ModBlocks.FORT_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+        for(Block block : ModBlocks.GLAXX_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+        for(Block block : ModBlocks.CRAY_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+        for(Block block : ModBlocks.CAST_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+        for(Block block : ModBlocks.HOST_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+        for(Block block : ModBlocks.ZANE_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+        for(Block block : ModBlocks.VECT_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+        for(Block block : ModBlocks.REDDS_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 //.add(ModBlocks.)
              ;

@@ -25,6 +25,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_STATIC_HIT = registerSoundEvent("block.static.hit");
     public static final SoundEvent BLOCK_STATIC_FALL = registerSoundEvent("block.static.fall");
 
+    public static final SoundEvent BLOCK_NEON_BREAK = registerSoundEvent("block.neon.break");
+    public static final SoundEvent BLOCK_NEON_STEP = registerSoundEvent("block.neon.step");
+    public static final SoundEvent BLOCK_NEON_PLACE = registerSoundEvent("block.neon.place");
+    public static final SoundEvent BLOCK_NEON_HIT = registerSoundEvent("block.neon.hit");
+    public static final SoundEvent BLOCK_NEON_FALL = registerSoundEvent("block.neon.fall");
+
     public static final SoundEvent BLOCK_POLYGON_BREAK = registerSoundEvent("block.polygon.break");
     public static final SoundEvent BLOCK_POLYGON_STEP = registerSoundEvent("block.polygon.step");
     public static final SoundEvent BLOCK_POLYGON_PLACE = registerSoundEvent("block.polygon.place");

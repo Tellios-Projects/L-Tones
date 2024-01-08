@@ -195,5 +195,55 @@
       "ltones:fallback/410/sfx_2424",
       "ltones:fallback/410/sfx_2425"
     ]
+  },
+  "block.neon.break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "ltones:block/neon_break1",
+      "ltones:block/neon_break2",
+      "ltones:block/neon_break3"
+    ]
+  },
+  "block.neon.step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "step/stone1",
+      "step/stone2",
+      "step/stone3",
+      "step/stone4",
+      "step/stone5",
+      "step/stone6"
+    ]
+  },
+  "block.neon.place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "dig/stone1",
+      "dig/stone2",
+      "dig/stone3",
+      "dig/stone4"
+    ]
+  },
+  "block.neon.hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "step/stone1",
+      "step/stone2",
+      "step/stone3",
+      "step/stone4",
+      "step/stone5",
+      "step/stone6"
+    ]
+  },
+  "block.neon.fall": {
+    "subtitle": "subtitles.block.generic.fall",
+    "sounds": [
+      "step/stone1",
+      "step/stone2",
+      "step/stone3",
+      "step/stone4",
+      "step/stone5",
+      "step/stone6"
+    ]
   }
 }

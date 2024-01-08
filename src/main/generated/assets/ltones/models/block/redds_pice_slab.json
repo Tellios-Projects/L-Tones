@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "ltones:block/redds_pice",
+    "side": "ltones:block/redds_pice",
+    "top": "ltones:block/redds_pice"
+  }
+}
