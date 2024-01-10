@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ltones:block/minn_line",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ltones:block/minn_line"
+    },
+    "axis=z": {
+      "model": "ltones:block/minn_line",
+      "x": 90
+    }
+  }
+}

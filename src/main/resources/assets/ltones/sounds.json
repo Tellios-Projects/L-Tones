@@ -87,6 +87,54 @@
       "step/stone6"
     ]
   },
+  "block.lair.break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "ltones:block/lair_break1",
+      "ltones:block/lair_break2",
+      "ltones:block/lair_break3",
+      "ltones:block/lair_break4"
+    ]
+  },
+  "block.lair.step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "step/stone1",
+      "step/stone2",
+      "step/stone3",
+      "step/stone4",
+      "step/stone5",
+      "step/stone6"
+    ]
+  },
+  "block.lair.place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "ltones:block/lair_place1",
+      "ltones:block/lair_place2",
+      "ltones:block/lair_place3",
+      "ltones:block/lair_place4"
+    ]
+  },
+  "block.lair.hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "step/stone1",
+      "step/stone2",
+      "step/stone3"
+    ]
+  },
+  "block.lair.fall": {
+    "subtitle": "subtitles.block.generic.fall",
+    "sounds": [
+      "step/stone1",
+      "step/stone2",
+      "step/stone3",
+      "step/stone4",
+      "step/stone5",
+      "step/stone6"
+    ]
+  },
   "block.polygon.activate": {
     "subtitle": "",
     "sounds": [

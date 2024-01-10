@@ -107,6 +107,64 @@ public class ModModelProvider extends FabricModelProvider {
         registerLitOnOffAxisRotatedBlock(blockStateModelGenerator, ModBlocks.REDDS_TAPE, Models.CUBE_ALL, TextureMap::all);
         registerLitOnOffGlazedTerracottaBlock(blockStateModelGenerator, ModBlocks.REDDS_GLAZED, Models.CUBE_ALL, TextureMap::all);
 
+        //  VECT
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_TILE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_RIVET);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_HUB);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.VECT_STRUT, TexturedModel.CUBE_ALL);
+        registerUpDefaultOrientable(blockStateModelGenerator, ModBlocks.VECT_PAD, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_TRACKER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_CORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_TREADPLATE);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.VECT_SHIELD, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_PANEL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_RADIATOR);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.VECT_BULKHEAD, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_TANK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_NETWORK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_FOIL);
+
+        //  MINN
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_TILES);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_RESONANCE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_QUILT);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_POFFNODE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_POFFCAGE);
+//        registerUpDefaultOrientable(blockStateModelGenerator, ModBlocks.MINN_POFFCAGE, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_POFF);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_PAD);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_NEXUS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_LINENODE);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.MINN_LINE, TexturedModel.CUBE_ALL); ;
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_CIRCLE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_CAGE);
+//        registerUpDefaultOrientable(blockStateModelGenerator, ModBlocks.MINN_CAGE, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_CUBES);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_BLANK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_BEVEL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN);
+
+
+        //  LAIR
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_STRUT);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_SMOOTH);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_RIGOR);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_RIGID);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_MESS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_MATTERTILES);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_MATTER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_JEWEL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_HEAL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_DERMADENT);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_DERMA);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.LAIR_CROWNED, TexturedModel.CUBE_ALL);
+        registerUpDefaultOrientable(blockStateModelGenerator, ModBlocks.LAIR_CHUNK, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_CELL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_AGED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR);
+
+
     // Block Models
         // Cube with all sides the same texture, IE Dirt
         // blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_STONE);

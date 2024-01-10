@@ -39,6 +39,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_POLYGON_ACTIVATE = registerSoundEvent("block.polygon.activate");
     public static final SoundEvent BLOCK_POLYGON_DEACTIVATE = registerSoundEvent("block.polygon.deactivate");
 
+    public static final SoundEvent BLOCK_LAIR_BREAK = registerSoundEvent("block.lair.break");
+    public static final SoundEvent BLOCK_LAIR_STEP = registerSoundEvent("block.lair.step");
+    public static final SoundEvent BLOCK_LAIR_PLACE = registerSoundEvent("block.lair.place");
+    public static final SoundEvent BLOCK_LAIR_HIT = registerSoundEvent("block.lair.hit");
+    public static final SoundEvent BLOCK_LAIR_FALL = registerSoundEvent("block.lair.fall");
+    
     public static final SoundEvent BLOCK_ZKUL_BREAK = registerSoundEvent("block.zkul.break");
     public static final SoundEvent BLOCK_ZKUL_STEP = registerSoundEvent("block.zkul.step");
     public static final SoundEvent BLOCK_ZKUL_PLACE = registerSoundEvent("block.zkul.place");

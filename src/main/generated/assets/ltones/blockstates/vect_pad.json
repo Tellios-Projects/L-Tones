@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "ltones:block/vect_pad",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "ltones:block/vect_pad",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "ltones:block/vect_pad",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "ltones:block/vect_pad",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "ltones:block/vect_pad"
+    },
+    "facing=west": {
+      "model": "ltones:block/vect_pad",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

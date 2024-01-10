@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "ltones:block/lair_chunk",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "ltones:block/lair_chunk",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "ltones:block/lair_chunk",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "ltones:block/lair_chunk",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "ltones:block/lair_chunk"
+    },
+    "facing=west": {
+      "model": "ltones:block/lair_chunk",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

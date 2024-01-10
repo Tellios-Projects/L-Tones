@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ltones:block/lair_crowned",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ltones:block/lair_crowned"
+    },
+    "axis=z": {
+      "model": "ltones:block/lair_crowned",
+      "x": 90
+    }
+  }
+}

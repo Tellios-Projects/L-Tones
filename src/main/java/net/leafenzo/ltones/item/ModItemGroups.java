@@ -32,5 +32,7 @@ public class ModItemGroups {
                         for(Block block : ModBlocks.ZANE_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.VECT_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.REDDS_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.MINN_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.LAIR_BLOCKS) { entries.add(block); }
                     }).build());
 }

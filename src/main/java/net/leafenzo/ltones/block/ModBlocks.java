@@ -199,15 +199,15 @@ public class ModBlocks {
         registerBlock("vect_tile", new Block(vectMaterial)),
         registerBlock("vect_rivet", new Block(vectMaterial)),
         registerBlock("vect_hub", new Block(vectMaterial)),
-        registerBlock("vect_strut", new Block(vectMaterial)),
-        registerBlock("vect_pad", new Block(vectMaterial)),
+        registerBlock("vect_strut", new PillarBlock(vectMaterial)),
+        registerBlock("vect_pad", new ReversiblePillarBlock(vectMaterial)),
         registerBlock("vect_tracker", new Block(vectMaterial.mapColor(MapColor.BLACK))),
         registerBlock("vect_core", new Block(vectMaterial.mapColor(MapColor.BLACK))),
         registerBlock("vect_treadplate", new Block(vectMaterial)),
-        registerBlock("vect_shield", new Block(vectMaterial)),
+        registerBlock("vect_shield", new PillarBlock(vectMaterial)),
         registerBlock("vect_panel", new Block(vectMaterial)),
         registerBlock("vect_radiator", new Block(vectMaterial.mapColor(MapColor.GOLD))),
-        registerBlock("vect_bulkhead", new Block(vectMaterial)),
+        registerBlock("vect_bulkhead", new PillarBlock(vectMaterial)),
         registerBlock("vect_tank", new Block(vectMaterial.mapColor(MapColor.GOLD).strength(1.8f).sounds(ModBlockSoundGroup.FOIL))),
         registerBlock("vect_network", new Block(vectMaterial.mapColor(MapColor.PALE_YELLOW))),
         registerBlock("vect_foil", new Block(vectMaterial.mapColor(MapColor.GOLD).strength(1.2f).sounds(ModBlockSoundGroup.FOIL))),
@@ -275,6 +275,86 @@ public class ModBlocks {
     public static final Block REDDS_BALANCE = REDDS_BLOCKS[16];
     public static final Block REDDS_CURRENT = REDDS_BLOCKS[17];
 
+    private static final FabricBlockSettings minnMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.PALE_GREEN)
+            .requiresTool()
+            .strength(2.4f, 2.0f)
+            .sounds(ModBlockSoundGroup.POLYGON);
+    public static final Block[] MINN_BLOCKS = {
+            registerBlock("minn_tiles", new Block(minnMaterial)),
+            registerBlock("minn_resonance", new Block(minnMaterial)),
+            registerBlock("minn_quilt", new Block(minnMaterial)),
+            registerBlock("minn_poffnode", new Block(minnMaterial)),
+            registerBlock("minn_poffcage", new Block(minnMaterial)),
+            registerBlock("minn_poff", new Block(minnMaterial)),
+            registerBlock("minn_pad", new Block(minnMaterial)),
+            registerBlock("minn_nexus", new Block(minnMaterial)),
+            registerBlock("minn_linenode", new Block(minnMaterial)),
+            registerBlock("minn_line", new PillarBlock(minnMaterial)),
+            registerBlock("minn_circle", new Block(minnMaterial)),
+            registerBlock("minn_cage", new Block(minnMaterial)),
+            registerBlock("minn_cubes", new Block(minnMaterial)),
+            registerBlock("minn_blank", new Block(minnMaterial)),
+            registerBlock("minn_bevel", new Block(minnMaterial)),
+            registerBlock("minn", new Block(minnMaterial))
+    };
+    public static final Block MINN_TILES = MINN_BLOCKS[0];
+    public static final Block MINN_RESONANCE = MINN_BLOCKS[1];
+    public static final Block MINN_QUILT = MINN_BLOCKS[2];
+    public static final Block MINN_POFFNODE = MINN_BLOCKS[3];
+    public static final Block MINN_POFFCAGE = MINN_BLOCKS[4];
+    public static final Block MINN_POFF = MINN_BLOCKS[5];
+    public static final Block MINN_PAD = MINN_BLOCKS[6];
+    public static final Block MINN_NEXUS = MINN_BLOCKS[7];
+    public static final Block MINN_LINENODE = MINN_BLOCKS[8];
+    public static final Block MINN_LINE = MINN_BLOCKS[9];
+    public static final Block MINN_CIRCLE = MINN_BLOCKS[10];
+    public static final Block MINN_CAGE = MINN_BLOCKS[11];
+    public static final Block MINN_CUBES = MINN_BLOCKS[12];
+    public static final Block MINN_BLANK = MINN_BLOCKS[13];
+    public static final Block MINN_BEVEL = MINN_BLOCKS[14];
+    public static final Block MINN = MINN_BLOCKS[15];
+
+
+    private static final FabricBlockSettings lairMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.RAW_IRON_PINK)
+            .requiresTool()
+            .strength(0.75f)
+            .sounds(ModBlockSoundGroup.LAIR);
+    public static final Block[] LAIR_BLOCKS = {
+            registerBlock("lair_strut", new Block(lairMaterial)),
+            registerBlock("lair_smooth", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON))),
+            registerBlock("lair_rigor", new Block(lairMaterial)),
+            registerBlock("lair_rigid", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON))),
+            registerBlock("lair_mess", new Block(lairMaterial)),
+            registerBlock("lair_mattertiles", new Block(lairMaterial)),
+            registerBlock("lair_matter", new Block(lairMaterial)),
+            registerBlock("lair_jewel", new Block(lairMaterial)),
+            registerBlock("lair_heal", new Block(lairMaterial)),
+            registerBlock("lair_dermadent", new Block(lairMaterial)),
+            registerBlock("lair_derma", new Block(lairMaterial)),
+            registerBlock("lair_crowned", new PillarBlock(lairMaterial)),
+            registerBlock("lair_chunk", new ReversiblePillarBlock(lairMaterial.mapColor(MapColor.DARK_CRIMSON))),
+            registerBlock("lair_cell", new Block(lairMaterial)),
+            registerBlock("lair_aged", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON))),
+            registerBlock("lair", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON)))
+    };
+    public static final Block LAIR_STRUT = LAIR_BLOCKS[0];
+    public static final Block LAIR_SMOOTH = LAIR_BLOCKS[1];
+    public static final Block LAIR_RIGOR = LAIR_BLOCKS[2];
+    public static final Block LAIR_RIGID = LAIR_BLOCKS[3];
+    public static final Block LAIR_MESS = LAIR_BLOCKS[4];
+    public static final Block LAIR_MATTERTILES = LAIR_BLOCKS[5];
+    public static final Block LAIR_MATTER = LAIR_BLOCKS[6];
+    public static final Block LAIR_JEWEL = LAIR_BLOCKS[7];
+    public static final Block LAIR_HEAL = LAIR_BLOCKS[8];
+    public static final Block LAIR_DERMADENT = LAIR_BLOCKS[9];
+    public static final Block LAIR_DERMA = LAIR_BLOCKS[10];
+    public static final Block LAIR_CROWNED = LAIR_BLOCKS[11];
+    public static final Block LAIR_CHUNK = LAIR_BLOCKS[12];
+    public static final Block LAIR_CELL = LAIR_BLOCKS[13];
+    public static final Block LAIR_AGED = LAIR_BLOCKS[14];
+    public static final Block LAIR = LAIR_BLOCKS[15];
 
 //    public static Block[] registerSetOfColoredBlocks(String name, FabricBlockSettings settings) {
 //        DyeColor[] colors = ModUtil.VANILLA_DYE_COLORS;
