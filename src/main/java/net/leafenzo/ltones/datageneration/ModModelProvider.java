@@ -238,6 +238,24 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.VEELD_DRILL, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.VEELD_PATTERNED);
 
+        // JELT
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT_SUPPLY);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT_POKE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT_ORGANIZE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT_ORBULE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT_LUMINA);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT_FUSION);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT_FISSION);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT_ENERGY);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT_EMBOSS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT_DESTINE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT_CONFINE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT_ATWAL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.JELT_PATH, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.JELT_EXHAUST, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.JELT_PATHJOINT);
+
     // Block Models
         // Cube with all sides the same texture, IE Dirt
         // blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_STONE);

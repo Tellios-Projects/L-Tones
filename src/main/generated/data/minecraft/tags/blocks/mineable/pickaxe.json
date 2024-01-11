@@ -230,6 +230,22 @@
     "ltones:veeld_drill",
     "ltones:veeld_core",
     "ltones:veeld_brick",
-    "ltones:veeld"
+    "ltones:veeld",
+    "ltones:jelt_supply",
+    "ltones:jelt_poke",
+    "ltones:jelt_pathjoint",
+    "ltones:jelt_path",
+    "ltones:jelt_organize",
+    "ltones:jelt_orbule",
+    "ltones:jelt_lumina",
+    "ltones:jelt_fusion",
+    "ltones:jelt_fission",
+    "ltones:jelt_exhaust",
+    "ltones:jelt_energy",
+    "ltones:jelt_emboss",
+    "ltones:jelt_destine",
+    "ltones:jelt_confine",
+    "ltones:jelt_atwal",
+    "ltones:jelt"
   ]
 }

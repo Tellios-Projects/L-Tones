@@ -367,6 +367,27 @@ public class ModBlocks {
     public static final Block VEELD = registerBlockInBlockset(VEELD_BLOCKS, "veeld", new Block(veeldMaterial.mapColor(MapColor.GREEN)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - JELT">
+    private static final FabricBlockSettings jeltMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.ORANGE)
+            .requiresTool()
+            .strength(2.4f, 2.0f)
+            .sounds(ModBlockSoundGroup.POLYGON);
+    public static final Block JELT_SUPPLY = registerBlockInBlockset(JELT_BLOCKS, "jelt_supply", new Block(jeltMaterial));
+    public static final Block JELT_POKE = registerBlockInBlockset(JELT_BLOCKS, "jelt_poke", new Block(jeltMaterial));
+    public static final Block JELT_PATHJOINT = registerBlockInBlockset(JELT_BLOCKS, "jelt_pathjoint", new GlazedTerracottaBlock(jeltMaterial));
+    public static final Block JELT_PATH = registerBlockInBlockset(JELT_BLOCKS, "jelt_path", new PillarBlock(jeltMaterial));
+    public static final Block JELT_ORGANIZE = registerBlockInBlockset(JELT_BLOCKS, "jelt_organize", new Block(jeltMaterial));
+    public static final Block JELT_ORBULE = registerBlockInBlockset(JELT_BLOCKS, "jelt_orbule", new Block(jeltMaterial));
+    public static final Block JELT_LUMINA = registerBlockInBlockset(JELT_BLOCKS, "jelt_lumina", new Block(jeltMaterial));
+    public static final Block JELT_FUSION = registerBlockInBlockset(JELT_BLOCKS, "jelt_fusion", new Block(jeltMaterial));
+    public static final Block JELT_FISSION = registerBlockInBlockset(JELT_BLOCKS, "jelt_fission", new Block(jeltMaterial));
+    public static final Block JELT_EXHAUST = registerBlockInBlockset(JELT_BLOCKS, "jelt_exhaust", new PillarBlock(jeltMaterial));
+    public static final Block JELT_ENERGY = registerBlockInBlockset(JELT_BLOCKS, "jelt_energy", new Block(jeltMaterial));
+    public static final Block JELT_EMBOSS = registerBlockInBlockset(JELT_BLOCKS, "jelt_emboss", new Block(jeltMaterial));
+    public static final Block JELT_DESTINE = registerBlockInBlockset(JELT_BLOCKS, "jelt_destine", new Block(jeltMaterial));
+    public static final Block JELT_CONFINE = registerBlockInBlockset(JELT_BLOCKS, "jelt_confine", new Block(jeltMaterial));
+    public static final Block JELT_ATWAL = registerBlockInBlockset(JELT_BLOCKS, "jelt_atwal", new Block(jeltMaterial));
+    public static final Block JELT = registerBlockInBlockset(JELT_BLOCKS, "jelt", new Block(jeltMaterial));
     //</editor-fold>
     //<editor-fold desc ="Blocks - KORP">
     //    private static final FabricBlockSettings korpMaterial = FabricBlockSettings.create()

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ltones:block/jelt_pathjoint",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "ltones:block/jelt_pathjoint",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "ltones:block/jelt_pathjoint"
+    },
+    "facing=west": {
+      "model": "ltones:block/jelt_pathjoint",
+      "y": 90
+    }
+  }
+}
