@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "axis=x": {
+      "model": "ltones:block/kryp_kubt",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
       "model": "ltones:block/kryp_kubt"
+    },
+    "axis=z": {
+      "model": "ltones:block/kryp_kubt",
+      "x": 90
     }
   }
 }

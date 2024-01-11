@@ -186,21 +186,21 @@ public class ModModelProvider extends FabricModelProvider {
 
         //   KRYP
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_WIRE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_SUPPORT);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_STORAGE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_SMOOTH);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_SHEEN);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_RUIN);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_OMITTER);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_LEVI);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_KUBT);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_INFO);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_DATA);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_CONNECTOR);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_CHUNK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_BEAM);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_BASE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.KRYP_SUPPORT, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.KRYP_KUBT, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.KRYP_CHUNK);
 
         //   LAVE
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_WINDOW);

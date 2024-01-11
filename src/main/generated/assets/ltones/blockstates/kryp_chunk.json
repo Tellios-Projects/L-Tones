@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "ltones:block/kryp_chunk",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "ltones:block/kryp_chunk",
+      "y": 180
+    },
+    "facing=south": {
       "model": "ltones:block/kryp_chunk"
+    },
+    "facing=west": {
+      "model": "ltones:block/kryp_chunk",
+      "y": 90
     }
   }
 }
