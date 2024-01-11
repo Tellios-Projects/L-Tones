@@ -7,7 +7,6 @@ import net.leafenzo.ltones.block.LitSlabBlock;
 import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.data.client.*;
@@ -53,6 +52,19 @@ public class ModModelProvider extends FabricModelProvider {
         Identifier identifier = model.upload(block, textureFactory.apply(TextureMap.getId(block)), blockStateModelGenerator.modelCollector);
         Identifier identifier2 = blockStateModelGenerator.createSubModel(block, "_on", model, textureFactory);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createSouthDefaultHorizontalRotationStates()).coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.LIT, identifier2, identifier)));
+    }
+    private void registerAxisRotatedBlockWithTopTexturePath(BlockStateModelGenerator blockStateModelGenerator, Block block, String topTexturePath) {
+        TextureMap map = new TextureMap()
+                .put(TextureKey.PARTICLE, TextureMap.getId(block))
+                .put(TextureKey.NORTH, TextureMap.getId(block))
+                .put(TextureKey.SOUTH, TextureMap.getId(block))
+                .put(TextureKey.EAST, TextureMap.getId(block))
+                .put(TextureKey.WEST, TextureMap.getId(block))
+                .put(TextureKey.UP, Super.asResource(topTexturePath))
+                .put(TextureKey.DOWN, Super.asResource(topTexturePath));
+
+        Identifier identifier = Models.CUBE.upload(block, map, blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createAxisRotatedVariantMap()));
     }
 
     @Override
@@ -172,6 +184,42 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_AGED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR);
 
+        //   KRYP
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_WIRE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_SUPPORT);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_STORAGE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_SMOOTH);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_SHEEN);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_RUIN);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_OMITTER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_LEVI);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_KUBT);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_INFO);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_DATA);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_CONNECTOR);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_CHUNK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_BEAM);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_BASE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP);
+
+        //   LAVE
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_WINDOW);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_VENT);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_UNEVEN);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_TILE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_THICK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_SECTION);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_PANEL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_LOW);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_HEX);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_DIM);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_DARK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_CROSSSECTION);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.LAVE_TRACKPAD, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.LAVE_ELEVATE, TexturedModel.CUBE_ALL);
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.LAVE_BEAM, "block/lave_panel");
+
 
     // Block Models
         // Cube with all sides the same texture, IE Dirt
@@ -189,8 +237,8 @@ public class ModModelProvider extends FabricModelProvider {
         // Leaves Like Blocks, includes things that sample from Biome Color maps.
         //blockStateModelGenerator.registerSingleton(ModBlocks.GRASS_CLIPPINGS_BLOCK, TexturedModel.LEAVES);
 
-        // BlockItem Models
-            // Fallback
+
+        // BlockItem Models // Fallback
         generateFallbackBlockItemModels(blockStateModelGenerator);
     }
     @Override

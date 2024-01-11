@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ltones:block/lave_panel",
+    "east": "ltones:block/lave_beam",
+    "north": "ltones:block/lave_beam",
+    "particle": "ltones:block/lave_beam",
+    "south": "ltones:block/lave_beam",
+    "up": "ltones:block/lave_panel",
+    "west": "ltones:block/lave_beam"
+  }
+}

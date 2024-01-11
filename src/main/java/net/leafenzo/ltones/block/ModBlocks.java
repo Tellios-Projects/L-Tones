@@ -107,10 +107,9 @@ public class ModBlocks {
     //</editor-fold>
     //<editor-fold desc ="Blocks - CRAY">
     private static final FabricBlockSettings crayMaterial = FabricBlockSettings.create()
-            .strength(1.0f)
+            .strength(0.8f) // same as sandstone
             .requiresTool()
-            .sounds(BlockSoundGroup.DECORATED_POT) // perfect
-            .nonOpaque();
+            .sounds(BlockSoundGroup.DECORATED_POT); // perfect
     public static final Block YELLOW_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "yellow_cray", new Block(crayMaterial.mapColor(MapColor.YELLOW)));
     public static final Block VIOLET_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "violet_cray", new Block(crayMaterial.mapColor(MapColor.PURPLE)));
     public static final Block RED_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "red_cray", new Block(crayMaterial.mapColor(MapColor.RED)));
@@ -293,32 +292,53 @@ public class ModBlocks {
     public static final Block LAIR_AGED = registerBlockInBlockset(LAIR_BLOCKS, "lair_aged", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON))); 
     public static final Block LAIR = registerBlockInBlockset(LAIR_BLOCKS, "lair", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON)));
     //</editor-fold>
-
     //<editor-fold desc ="Blocks - KRYP">
-//    private static final FabricBlockSettings krypMaterial = FabricBlockSettings.create()
-//            .mapColor()
-//            .requiresTool()
-//            .strength(3.0f, 6.0f)
-//            .sounds(BlockSoundGroup.COPPER);
-//    public static final Block KRYP_WIRE = registerBlockInBlockset(ZANE_BLOCKS, "kryp_wire", new Block(krypMaterial));
-//    public static final Block KRYP_SUPPORT = registerBlockInBlockset(ZANE_BLOCKS, "kryp_support", new Block(krypMaterial));
-//    public static final Block KRYP_STORAGE = registerBlockInBlockset(ZANE_BLOCKS, "kryp_storage", new Block(krypMaterial));
-//    public static final Block KRYP_SMOOTH = registerBlockInBlockset(ZANE_BLOCKS, "kryp_smooth", new Block(krypMaterial));
-//    public static final Block KRYP_SHEEN = registerBlockInBlockset(ZANE_BLOCKS, "kryp_sheen", new Block(krypMaterial));
-//    public static final Block KRYP_RUIN = registerBlockInBlockset(ZANE_BLOCKS, "kryp_ruin", new Block(krypMaterial));
-//    public static final Block KRYP_OMITTER = registerBlockInBlockset(ZANE_BLOCKS, "kryp_omitter", new Block(krypMaterial));
-//    public static final Block KRYP_LEVI = registerBlockInBlockset(ZANE_BLOCKS, "kryp_levi", new Block(krypMaterial));
-//    public static final Block KRYP_KUBT = registerBlockInBlockset(ZANE_BLOCKS, "kryp_kubt", new Block(krypMaterial));
-//    public static final Block KRYP_INFO = registerBlockInBlockset(ZANE_BLOCKS, "kryp_info", new Block(krypMaterial));
-//    public static final Block KRYP_DATA = registerBlockInBlockset(ZANE_BLOCKS, "kryp_data", new Block(krypMaterial));
-//    public static final Block KRYP_CONNECTOR = registerBlockInBlockset(ZANE_BLOCKS, "kryp_connector", new Block(krypMaterial));
-//    public static final Block KRYP_CHUNK = registerBlockInBlockset(ZANE_BLOCKS, "kryp_chunk", new Block(krypMaterial));
-//    public static final Block KRYP_BEAM = registerBlockInBlockset(ZANE_BLOCKS, "kryp_beam", new Block(krypMaterial));
-//    public static final Block KRYP_BASE = registerBlockInBlockset(ZANE_BLOCKS, "kryp_base", new Block(krypMaterial));
-//    public static final Block KRYP = registerBlockInBlockset(ZANE_BLOCKS, "kryp", new Block(krypMaterial));
-
+    private static final FabricBlockSettings krypMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
+            .requiresTool()
+            .strength(3.0f, 6.0f)
+            .sounds(BlockSoundGroup.COPPER);
+    public static final Block KRYP_WIRE = registerBlockInBlockset(KRYP_BLOCKS, "kryp_wire", new Block(krypMaterial));
+    public static final Block KRYP_SUPPORT = registerBlockInBlockset(KRYP_BLOCKS, "kryp_support", new Block(krypMaterial));
+    public static final Block KRYP_STORAGE = registerBlockInBlockset(KRYP_BLOCKS, "kryp_storage", new Block(krypMaterial));
+    public static final Block KRYP_SMOOTH = registerBlockInBlockset(KRYP_BLOCKS, "kryp_smooth", new Block(krypMaterial));
+    public static final Block KRYP_SHEEN = registerBlockInBlockset(KRYP_BLOCKS, "kryp_sheen", new Block(krypMaterial));
+    public static final Block KRYP_RUIN = registerBlockInBlockset(KRYP_BLOCKS, "kryp_ruin", new Block(krypMaterial));
+    public static final Block KRYP_OMITTER = registerBlockInBlockset(KRYP_BLOCKS, "kryp_omitter", new Block(krypMaterial));
+    public static final Block KRYP_LEVI = registerBlockInBlockset(KRYP_BLOCKS, "kryp_levi", new Block(krypMaterial));
+    public static final Block KRYP_KUBT = registerBlockInBlockset(KRYP_BLOCKS, "kryp_kubt", new Block(krypMaterial));
+    public static final Block KRYP_INFO = registerBlockInBlockset(KRYP_BLOCKS, "kryp_info", new Block(krypMaterial));
+    public static final Block KRYP_DATA = registerBlockInBlockset(KRYP_BLOCKS, "kryp_data", new Block(krypMaterial));
+    public static final Block KRYP_CONNECTOR = registerBlockInBlockset(KRYP_BLOCKS, "kryp_connector", new Block(krypMaterial));
+    public static final Block KRYP_CHUNK = registerBlockInBlockset(KRYP_BLOCKS, "kryp_chunk", new Block(krypMaterial));
+    public static final Block KRYP_BEAM = registerBlockInBlockset(KRYP_BLOCKS, "kryp_beam", new Block(krypMaterial));
+    public static final Block KRYP_BASE = registerBlockInBlockset(KRYP_BLOCKS, "kryp_base", new Block(krypMaterial.sounds(BlockSoundGroup.STONE)));
+    public static final Block KRYP = registerBlockInBlockset(KRYP_BLOCKS, "kryp", new Block(krypMaterial.sounds(BlockSoundGroup.CALCITE)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - LAVE">
+    private static final FabricBlockSettings laveMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.LIGHT_BLUE_GRAY)
+            .requiresTool()
+            .strength(0.8f)
+            .sounds(BlockSoundGroup.DECORATED_POT);
+    public static final Block LAVE_WINDOW = registerBlockInBlockset(LAVE_BLOCKS, "lave_window", new Block(laveMaterial));
+    public static final Block LAVE_VENT = registerBlockInBlockset(LAVE_BLOCKS, "lave_vent", new Block(laveMaterial));
+    public static final Block LAVE_UNEVEN = registerBlockInBlockset(LAVE_BLOCKS, "lave_uneven", new Block(laveMaterial));
+    public static final Block LAVE_TRACKPAD = registerBlockInBlockset(LAVE_BLOCKS, "lave_trackpad", new PillarBlock(laveMaterial));
+    public static final Block LAVE_TILE = registerBlockInBlockset(LAVE_BLOCKS, "lave_tile", new Block(laveMaterial));
+    public static final Block LAVE_THICK = registerBlockInBlockset(LAVE_BLOCKS, "lave_thick", new Block(laveMaterial));
+    public static final Block LAVE_SECTION = registerBlockInBlockset(LAVE_BLOCKS, "lave_section", new Block(laveMaterial));
+    public static final Block LAVE_PANEL = registerBlockInBlockset(LAVE_BLOCKS, "lave_panel", new Block(laveMaterial));
+    public static final Block LAVE_LOW = registerBlockInBlockset(LAVE_BLOCKS, "lave_low", new Block(laveMaterial.mapColor(MapColor.CYAN)));
+    public static final Block LAVE_HEX = registerBlockInBlockset(LAVE_BLOCKS, "lave_hex", new Block(laveMaterial));
+    public static final Block LAVE_ELEVATE = registerBlockInBlockset(LAVE_BLOCKS, "lave_elevate", new PillarBlock(laveMaterial));
+    public static final Block LAVE_DIM = registerBlockInBlockset(LAVE_BLOCKS, "lave_dim", new Block(laveMaterial));
+    public static final Block LAVE_DARK = registerBlockInBlockset(LAVE_BLOCKS, "lave_dark", new Block(laveMaterial.mapColor(MapColor.CYAN)));
+    public static final Block LAVE_CROSSSECTION = registerBlockInBlockset(LAVE_BLOCKS, "lave_crosssection", new Block(laveMaterial));
+    public static final Block LAVE_BEAM = registerBlockInBlockset(LAVE_BLOCKS, "lave_beam", new PillarBlock(laveMaterial));
+    public static final Block LAVE = registerBlockInBlockset(LAVE_BLOCKS, "lave", new Block(laveMaterial));
+
+
     //</editor-fold>
     //<editor-fold desc ="Blocks - VEELD">
     //</editor-fold>

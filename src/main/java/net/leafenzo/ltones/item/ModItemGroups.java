@@ -34,5 +34,16 @@ public class ModItemGroups {
                         for(Block block : ModBlocks.REDDS_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.MINN_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.LAIR_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.KRYP_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.LAVE_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.VEELD_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.JELT_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.KORP_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.TANK_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.EXRI_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.AZUR_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.FLEQ_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.ISZM_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.MYST_BLOCKS) { entries.add(block); }
                     }).build());
 }

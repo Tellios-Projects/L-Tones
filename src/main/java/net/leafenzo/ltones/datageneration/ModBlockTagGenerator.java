@@ -23,11 +23,9 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         super(output, Registries.BLOCK.getKey(), registriesFuture);
     }
 
-
-   //BlockTags & ItemTags are vanilla
-
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
+        //<editor-fold desc ="BlockTags for Blocksets">
         for(Block block : ModBlocks.AGON_BLOCKS) {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
         }
@@ -61,8 +59,12 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         for(Block block : ModBlocks.LAIR_BLOCKS) {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
         }
+        for(Block block : ModBlocks.KRYP_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+        //</editor-fold>
 
-
+        //<editor-fold desc ="BlockTags for Individual Blocks">
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 //.add(ModBlocks.)
              ;
@@ -138,6 +140,7 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         getOrCreateTagBuilder(BlockTags.DEAD_BUSH_MAY_PLACE_ON)
         //.add(ModBlocks.)
         ;
+        //</editor-fold>
     }
 }
 

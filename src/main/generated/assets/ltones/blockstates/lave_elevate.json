@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ltones:block/lave_elevate",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ltones:block/lave_elevate"
+    },
+    "axis=z": {
+      "model": "ltones:block/lave_elevate",
+      "x": 90
+    }
+  }
+}
