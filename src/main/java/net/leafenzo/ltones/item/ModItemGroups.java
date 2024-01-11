@@ -23,7 +23,7 @@ public class ModItemGroups {
     public static ItemGroup LTONES = Registry.register(Registries.ITEM_GROUP, new Identifier(Super.MOD_ID, "ltones"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.ltones"))
                     .icon(() -> new ItemStack(ModBlocks.REDDS)).entries((displayContext, entries) -> {
-                        for(Block block : ModBlocks.AGON_BLOCKS.keySet()) { entries.add(block); }
+                        for(Block block : ModBlocks.AGON_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.FORT_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.GLAXX_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.CRAY_BLOCKS) { entries.add(block); }

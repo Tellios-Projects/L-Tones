@@ -28,7 +28,7 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        for(Block block : ModBlocks.AGON_BLOCKS.keySet()) {
+        for(Block block : ModBlocks.AGON_BLOCKS) {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
         }
         for(Block block : ModBlocks.FORT_BLOCKS) {

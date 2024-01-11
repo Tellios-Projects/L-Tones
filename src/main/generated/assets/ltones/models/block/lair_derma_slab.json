@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "ltones:block/lair_derma",
+    "side": "ltones:block/lair_derma",
+    "top": "ltones:block/lair_derma"
+  }
+}

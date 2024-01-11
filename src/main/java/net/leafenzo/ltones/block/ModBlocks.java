@@ -23,38 +23,63 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.function.ToIntFunction;
 
 public class ModBlocks {
-    private static final FabricBlockSettings agonMaterial = FabricBlockSettings.create()
-            .strength(0.3f)
-            .sounds(ModBlockSoundGroup.NEON)
-            .luminance(15);
-    public static final HashMap<Block, DyeColor> AGON_BLOCKS = registerHashMapOfColoredBlocks("agon", agonMaterial);
 
+    //<editor-fold desc ="Hashmaps & Arrays">
+    // The reason why it's <Block, Block> instead of <Block, StairBlock> is because sometimes there will be block classes that have all the behavior of stair blocks without actually being children of them. This assumption is made for the hashmaps here as well.
+    public static final HashMap<Block, Block> STAIR_FROM_BLOCK = new HashMap<Block, Block>();
+    public static final HashMap<Block, Block> SLAB_FROM_BLOCK = new HashMap<Block, Block>();
+
+    public static final ArrayList<Block> AGON_BLOCKS = registerBlocksetOfVanillaDyedBlocks("agon", FabricBlockSettings.create().strength(0.3f).sounds(ModBlockSoundGroup.NEON).luminance(state -> 15));
+    public static final ArrayList<Block> FORT_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> GLAXX_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> CRAY_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> CAST_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> HOST_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> ZANE_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> VECT_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> REDDS_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> MINN_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> LAIR_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> KRYP_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> LAVE_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> VEELD_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> JELT_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> KORP_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> TANK_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> EXRI_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> AZUR_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> FLEQ_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> ISZM_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> MYST_BLOCKS = new ArrayList<>();
+    //</editor-fold>
+
+    //<editor-fold desc ="Blocks - FORT">
     private static final FabricBlockSettings fortMaterial = FabricBlockSettings.create()
             .strength(1.0f)
             .sounds(ModBlockSoundGroup.METAL_STICKS);
-    public static final Block[] FORT_BLOCKS = {
-            registerBlock("fort", new Block(fortMaterial.mapColor(MapColor.WHITE_GRAY))),
-            registerBlock("bright_blue_fort", new Block(fortMaterial.mapColor(MapColor.BLUE))),
-            registerBlock("bright_red_fort", new Block(fortMaterial.mapColor(MapColor.DULL_RED))),
-            registerBlock("bright_violet_fort", new Block(fortMaterial.mapColor(MapColor.TERRACOTTA_BLUE))),
-            registerBlock("bright_yellow_fort", new Block(fortMaterial.mapColor(MapColor.YELLOW))),
-            registerBlock("dark_azure_fort", new Block(fortMaterial.mapColor(MapColor.LAPIS_BLUE))),
-            registerBlock("dark_red_fort", new Block(fortMaterial.mapColor(MapColor.RED))),
-            registerBlock("dark_turquoise_fort", new Block(fortMaterial.mapColor(MapColor.TEAL))),
-            registerBlock("earth_green_fort", new Block(fortMaterial.mapColor(MapColor.DARK_GREEN))),
-            registerBlock("earth_orange_fort", new Block(fortMaterial.mapColor(MapColor.TERRACOTTA_ORANGE))),
-            registerBlock("gray_fort", new Block(fortMaterial.mapColor(MapColor.IRON_GRAY))),
-            registerBlock("lime_fort", new Block(fortMaterial.mapColor(MapColor.LIME))),
-            registerBlock("medium_azure_fort", new Block(fortMaterial.mapColor(MapColor.DIAMOND_BLUE))),
-            registerBlock("orange_fort", new Block(fortMaterial.mapColor(MapColor.ORANGE))),
-            registerBlock("sand_blue_fort", new Block(fortMaterial.mapColor(MapColor.LIGHT_BLUE_GRAY))),
-            registerBlock("stone_gray_fort", new Block(fortMaterial.mapColor(MapColor.STONE_GRAY))),
-    };
-
+    public static final Block FORT = registerBlockInBlockset(FORT_BLOCKS, "fort", new Block(fortMaterial.mapColor(MapColor.WHITE_GRAY)));
+    public static final Block BRIGHT_BLUE_FORT = registerBlockInBlockset(FORT_BLOCKS, "bright_blue_fort", new Block(fortMaterial.mapColor(MapColor.BLUE)));
+    public static final Block BRIGHT_RED_FORT = registerBlockInBlockset(FORT_BLOCKS, "bright_red_fort", new Block(fortMaterial.mapColor(MapColor.DULL_RED)));
+    public static final Block BRIGHT_VIOLET_FORT = registerBlockInBlockset(FORT_BLOCKS, "bright_violet_fort", new Block(fortMaterial.mapColor(MapColor.TERRACOTTA_BLUE)));
+    public static final Block BRIGHT_YELLOW_FORT = registerBlockInBlockset(FORT_BLOCKS, "bright_yellow_fort", new Block(fortMaterial.mapColor(MapColor.YELLOW)));
+    public static final Block DARK_AZURE_FORT = registerBlockInBlockset(FORT_BLOCKS, "dark_azure_fort", new Block(fortMaterial.mapColor(MapColor.LAPIS_BLUE)));
+    public static final Block DARK_RED_FORT = registerBlockInBlockset(FORT_BLOCKS, "dark_red_fort", new Block(fortMaterial.mapColor(MapColor.RED)));
+    public static final Block DARK_TURQUOISE_FORT = registerBlockInBlockset(FORT_BLOCKS, "dark_turquoise_fort", new Block(fortMaterial.mapColor(MapColor.TEAL)));
+    public static final Block EARTH_GREEN_FORT = registerBlockInBlockset(FORT_BLOCKS, "earth_green_fort", new Block(fortMaterial.mapColor(MapColor.DARK_GREEN)));
+    public static final Block EARTH_ORANGE_FORT = registerBlockInBlockset(FORT_BLOCKS, "earth_orange_fort", new Block(fortMaterial.mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block GRAY_FORT = registerBlockInBlockset(FORT_BLOCKS, "gray_fort", new Block(fortMaterial.mapColor(MapColor.IRON_GRAY)));
+    public static final Block LIME_FORT = registerBlockInBlockset(FORT_BLOCKS, "lime_fort", new Block(fortMaterial.mapColor(MapColor.LIME)));
+    public static final Block MEDIUM_AZURE_FORT = registerBlockInBlockset(FORT_BLOCKS, "medium_azure_fort", new Block(fortMaterial.mapColor(MapColor.DIAMOND_BLUE)));
+    public static final Block ORANGE_FORT = registerBlockInBlockset(FORT_BLOCKS, "orange_fort", new Block(fortMaterial.mapColor(MapColor.ORANGE)));
+    public static final Block SAND_BLUE_FORT = registerBlockInBlockset(FORT_BLOCKS, "sand_blue_fort", new Block(fortMaterial.mapColor(MapColor.LIGHT_BLUE_GRAY)));
+    public static final Block STONE_GRAY_FORT = registerBlockInBlockset(FORT_BLOCKS, "stone_gray_fort", new Block(fortMaterial.mapColor(MapColor.STONE_GRAY)));
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - GLAXX">
     private static final FabricBlockSettings glaxxMaterial = FabricBlockSettings.create()
             .strength(0.3f)
             .sounds(BlockSoundGroup.STONE) // TODO custom sound
@@ -63,118 +88,244 @@ public class ModBlocks {
             .solidBlock(ModBlocks::never)
             .suffocates(ModBlocks::never)
             .blockVision(ModBlocks::never);
-    public static final Block[] GLAXX_BLOCKS = {
-            registerBlock("thyme_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.TERRACOTTA_GREEN))),
-            registerBlock("sassafras_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.BLUE))),
-            registerBlock("sandalwood_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.IRON_GRAY))),
-            registerBlock("sage_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.TERRACOTTA_LIME))),
-            registerBlock("rose_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.DULL_PINK))),
-            registerBlock("pine_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.SPRUCE_BROWN))),
-            registerBlock("mint_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.LICHEN_GREEN))),
-            registerBlock("licorice_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.STONE_GRAY))),
-            registerBlock("lemon_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.TERRACOTTA_YELLOW))),
-            registerBlock("lavender_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.TERRACOTTA_BLUE))),
-            registerBlock("incense_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.GRAY))),
-            registerBlock("eucalyptus_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.DARK_DULL_PINK))),
-            registerBlock("coconut_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.TERRACOTTA_CYAN))),
-            registerBlock("cinnimon_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.DARK_CRIMSON))),
-            registerBlock("citrus_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.DIRT_BROWN))),
-            registerBlock("brine_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.CYAN)))
-    };
-
+    public static final Block THYME_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "thyme_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.TERRACOTTA_GREEN)));
+    public static final Block SASSAFRAS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sassafras_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.BLUE)));
+    public static final Block SANDALWOOD_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sandalwood_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.IRON_GRAY)));
+    public static final Block SAGE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sage_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.TERRACOTTA_LIME)));
+    public static final Block ROSE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "rose_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.DULL_PINK)));
+    public static final Block PINE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "pine_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.SPRUCE_BROWN)));
+    public static final Block MINT_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "mint_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.LICHEN_GREEN)));
+    public static final Block LICORICE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "licorice_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.STONE_GRAY)));
+    public static final Block LEMON_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "lemon_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.TERRACOTTA_YELLOW)));
+    public static final Block LAVENDER_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "lavender_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.TERRACOTTA_BLUE)));
+    public static final Block INCENSE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "incense_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.GRAY)));
+    public static final Block EUCALYPTUS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "eucalyptus_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.DARK_DULL_PINK)));
+    public static final Block COCONUT_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "coconut_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.TERRACOTTA_CYAN)));
+    public static final Block CINNIMON_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "cinnimon_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.DARK_CRIMSON)));
+    public static final Block CITRUS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "citrus_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.DIRT_BROWN)));
+    public static final Block BRINE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "brine_glaxx", new GlassBlock(glaxxMaterial.mapColor(MapColor.CYAN)));
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - CRAY">
     private static final FabricBlockSettings crayMaterial = FabricBlockSettings.create()
             .strength(1.0f)
             .requiresTool()
             .sounds(BlockSoundGroup.DECORATED_POT) // perfect
             .nonOpaque();
-    public static final Block[] CRAY_BLOCKS = {
-            registerBlock("yellow_cray", new Block(crayMaterial.mapColor(MapColor.YELLOW))),
-            registerBlock("violet_cray", new Block(crayMaterial.mapColor(MapColor.PURPLE))),
-            registerBlock("red_cray", new Block(crayMaterial.mapColor(MapColor.RED))),
-            registerBlock("purple_cray", new Block(crayMaterial.mapColor(MapColor.PALE_PURPLE))),
-            registerBlock("orange_cray", new Block(crayMaterial.mapColor(MapColor.ORANGE))),
-            registerBlock("navy_cray", new Block(crayMaterial.mapColor(MapColor.LIGHT_BLUE))),
-            registerBlock("mint_cray", new Block(crayMaterial.mapColor(MapColor.BRIGHT_TEAL))),
-            registerBlock("magenta_cray", new Block(crayMaterial.mapColor(MapColor.MAGENTA))),
-            registerBlock("lime_cray", new Block(crayMaterial.mapColor(MapColor.LIME))),
-            registerBlock("green_cray", new Block(crayMaterial.mapColor(MapColor.EMERALD_GREEN))),
-            registerBlock("fuchsia_cray", new Block(crayMaterial.mapColor(MapColor.DULL_PINK))),
-            registerBlock("empty_cray", new Block(crayMaterial.mapColor(MapColor.LIGHT_GRAY))),
-            registerBlock("cyan_cray", new Block(crayMaterial.mapColor(MapColor.DARK_AQUA))),
-            registerBlock("blue_cray", new Block(crayMaterial.mapColor(MapColor.CYAN))),
-            registerBlock("amber_cray", new Block(crayMaterial.mapColor(MapColor.OAK_TAN))),
-            registerBlock("cray", new Block(crayMaterial.mapColor(MapColor.WHITE_GRAY)))
-    };
-
+    public static final Block YELLOW_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "yellow_cray", new Block(crayMaterial.mapColor(MapColor.YELLOW)));
+    public static final Block VIOLET_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "violet_cray", new Block(crayMaterial.mapColor(MapColor.PURPLE)));
+    public static final Block RED_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "red_cray", new Block(crayMaterial.mapColor(MapColor.RED)));
+    public static final Block PURPLE_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "purple_cray", new Block(crayMaterial.mapColor(MapColor.PALE_PURPLE)));
+    public static final Block ORANGE_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "orange_cray", new Block(crayMaterial.mapColor(MapColor.ORANGE)));
+    public static final Block NAVY_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "navy_cray", new Block(crayMaterial.mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block MINT_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "mint_cray", new Block(crayMaterial.mapColor(MapColor.BRIGHT_TEAL)));
+    public static final Block MAGENTA_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "magenta_cray", new Block(crayMaterial.mapColor(MapColor.MAGENTA)));
+    public static final Block LIME_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "lime_cray", new Block(crayMaterial.mapColor(MapColor.LIME)));
+    public static final Block GREEN_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "green_cray", new Block(crayMaterial.mapColor(MapColor.EMERALD_GREEN)));
+    public static final Block FUCHSIA_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "fuchsia_cray", new Block(crayMaterial.mapColor(MapColor.DULL_PINK)));
+    public static final Block EMPTY_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "empty_cray", new Block(crayMaterial.mapColor(MapColor.LIGHT_GRAY)));
+    public static final Block CYAN_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "cyan_cray", new Block(crayMaterial.mapColor(MapColor.DARK_AQUA)));
+    public static final Block BLUE_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "blue_cray", new Block(crayMaterial.mapColor(MapColor.CYAN)));
+    public static final Block AMBER_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "amber_cray", new Block(crayMaterial.mapColor(MapColor.OAK_TAN)));
+    public static final Block CRAY = registerBlockInBlockset(CRAY_BLOCKS, "cray", new Block(crayMaterial.mapColor(MapColor.WHITE_GRAY)));
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - CAST">
     private static final FabricBlockSettings castMaterial = FabricBlockSettings.create()
             .strength(1.0f)
             .sounds(ModBlockSoundGroup.METAL_STICKS); // TODO custom plastic sound
-    public static final Block[] CAST_BLOCKS = {
-            registerBlock("yellow_cast", new Block(castMaterial.mapColor(MapColor.YELLOW))),
-            registerBlock("vermilion_cast", new Block(castMaterial.mapColor(MapColor.BRIGHT_RED))),
-            registerBlock("velvet_cast", new Block(castMaterial.mapColor(MapColor.DULL_RED))),
-            registerBlock("red_cast", new Block(castMaterial.mapColor(MapColor.BRIGHT_RED))),
-            registerBlock("purple_cast", new Block(castMaterial.mapColor(MapColor.PURPLE))),
-            registerBlock("navy_cast", new Block(castMaterial.mapColor(MapColor.WATER_BLUE))),
-            registerBlock("magenta_cast", new Block(castMaterial.mapColor(MapColor.MAGENTA))),
-            registerBlock("lime_cast", new Block(castMaterial.mapColor(MapColor.LIME))),
-            registerBlock("green_cast", new Block(castMaterial.mapColor(MapColor.EMERALD_GREEN))),
-            registerBlock("empty_cast", new Block(castMaterial.mapColor(MapColor.BLACK))),
-            registerBlock("cyan_cast", new Block(castMaterial.mapColor(MapColor.CYAN))),
-            registerBlock("chartreuse_cast", new Block(castMaterial.mapColor(MapColor.PALE_GREEN))),
-            registerBlock("brown_cast", new Block(castMaterial.mapColor(MapColor.TERRACOTTA_ORANGE))),
-            registerBlock("blue_cast", new Block(castMaterial.mapColor(MapColor.LAPIS_BLUE))),
-            registerBlock("amber_cast", new Block(castMaterial.mapColor(MapColor.TERRACOTTA_YELLOW))),
-            registerBlock("cast", new Block(castMaterial.mapColor(MapColor.WHITE)))
-    };
-
+    public static final Block YELLOW_CAST = registerBlockInBlockset(CAST_BLOCKS, "yellow_cast", new Block(castMaterial.mapColor(MapColor.YELLOW)));
+    public static final Block VERMILION_CAST = registerBlockInBlockset(CAST_BLOCKS, "vermilion_cast", new Block(castMaterial.mapColor(MapColor.BRIGHT_RED)));
+    public static final Block VELVET_CAST = registerBlockInBlockset(CAST_BLOCKS, "velvet_cast", new Block(castMaterial.mapColor(MapColor.DULL_RED)));
+    public static final Block RED_CAST = registerBlockInBlockset(CAST_BLOCKS, "red_cast", new Block(castMaterial.mapColor(MapColor.BRIGHT_RED)));
+    public static final Block PURPLE_CAST = registerBlockInBlockset(CAST_BLOCKS, "purple_cast", new Block(castMaterial.mapColor(MapColor.PURPLE)));
+    public static final Block NAVY_CAST = registerBlockInBlockset(CAST_BLOCKS, "navy_cast", new Block(castMaterial.mapColor(MapColor.WATER_BLUE)));
+    public static final Block MAGENTA_CAST = registerBlockInBlockset(CAST_BLOCKS, "magenta_cast", new Block(castMaterial.mapColor(MapColor.MAGENTA)));
+    public static final Block LIME_CAST = registerBlockInBlockset(CAST_BLOCKS, "lime_cast", new Block(castMaterial.mapColor(MapColor.LIME)));
+    public static final Block GREEN_CAST = registerBlockInBlockset(CAST_BLOCKS, "green_cast", new Block(castMaterial.mapColor(MapColor.EMERALD_GREEN)));
+    public static final Block EMPTY_CAST = registerBlockInBlockset(CAST_BLOCKS, "empty_cast", new Block(castMaterial.mapColor(MapColor.BLACK)));
+    public static final Block CYAN_CAST = registerBlockInBlockset(CAST_BLOCKS, "cyan_cast", new Block(castMaterial.mapColor(MapColor.CYAN)));
+    public static final Block CHARTREUSE_CAST = registerBlockInBlockset(CAST_BLOCKS, "chartreuse_cast", new Block(castMaterial.mapColor(MapColor.PALE_GREEN)));
+    public static final Block BROWN_CAST = registerBlockInBlockset(CAST_BLOCKS, "brown_cast", new Block(castMaterial.mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block BLUE_CAST = registerBlockInBlockset(CAST_BLOCKS, "blue_cast", new Block(castMaterial.mapColor(MapColor.LAPIS_BLUE)));
+    public static final Block AMBER_CAST = registerBlockInBlockset(CAST_BLOCKS, "amber_cast", new Block(castMaterial.mapColor(MapColor.TERRACOTTA_YELLOW)));
+    public static final Block CAST = registerBlockInBlockset(CAST_BLOCKS, "cast", new Block(castMaterial.mapColor(MapColor.WHITE)));
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - HOST">
     private static final FabricBlockSettings hostMaterial = FabricBlockSettings.create()
             .strength(1.5f)
             .requiresTool()
             .sounds(BlockSoundGroup.COPPER);
-    public static final Block[] HOST_BLOCKS = {
-            registerBlock("yellow_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(7))),
-            registerBlock("violet_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(7))),
-            registerBlock("vermilion_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(7))),
-            registerBlock("red_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(7))),
-            registerBlock("purple_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(7))),
-            registerBlock("navy_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(7))),
-            registerBlock("mint_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(7))),
-            registerBlock("magenta_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(7))),
-            registerBlock("lime_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(7))),
-            registerBlock("green_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(7))),
-            registerBlock("fuchsia_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(7))),
-            registerBlock("empty_host", new Block(hostMaterial.mapColor(MapColor.BLACK))),
-            registerBlock("cyan_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(7))),
-            registerBlock("blue_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(7))),
-            registerBlock("amber_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(7))),
-            registerBlock("host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(3)))
-    };
-
+    public static final Block YELLOW_HOST = registerBlockInBlockset(HOST_BLOCKS, "yellow_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block VIOLET_HOST = registerBlockInBlockset(HOST_BLOCKS, "violet_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block VERMILION_HOST = registerBlockInBlockset(HOST_BLOCKS, "vermilion_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block RED_HOST = registerBlockInBlockset(HOST_BLOCKS, "red_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block PURPLE_HOST = registerBlockInBlockset(HOST_BLOCKS, "purple_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block NAVY_HOST = registerBlockInBlockset(HOST_BLOCKS, "navy_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block MINT_HOST = registerBlockInBlockset(HOST_BLOCKS, "mint_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block MAGENTA_HOST = registerBlockInBlockset(HOST_BLOCKS, "magenta_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block LIME_HOST = registerBlockInBlockset(HOST_BLOCKS, "lime_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block GREEN_HOST = registerBlockInBlockset(HOST_BLOCKS, "green_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block FUCHSIA_HOST = registerBlockInBlockset(HOST_BLOCKS, "fuchsia_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block EMPTY_HOST = registerBlockInBlockset(HOST_BLOCKS, "empty_host", new Block(hostMaterial.mapColor(MapColor.BLACK)));
+    public static final Block CYAN_HOST = registerBlockInBlockset(HOST_BLOCKS, "cyan_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block BLUE_HOST = registerBlockInBlockset(HOST_BLOCKS, "blue_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block AMBER_HOST = registerBlockInBlockset(HOST_BLOCKS, "amber_host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block HOST = registerBlockInBlockset(HOST_BLOCKS, "host", new Block(hostMaterial.mapColor(MapColor.GRAY).luminance(state -> 3)));
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - ZANE">
     private static final FabricBlockSettings zaneMaterial = FabricBlockSettings.create()
             .strength(0.75f)
             .requiresTool()
             .sounds(BlockSoundGroup.CALCITE);
-    public static final Block[] ZANE_BLOCKS = {
-            registerBlock("red_zane", new Block(zaneMaterial.mapColor(MapColor.RED))),
-            registerBlock("amber_zane", new Block(zaneMaterial.mapColor(MapColor.TERRACOTTA_ORANGE))),
-            registerBlock("empty_zane", new Block(zaneMaterial.mapColor(MapColor.BLACK))),
-            registerBlock("orange_zane", new Block(zaneMaterial.mapColor(MapColor.ORANGE))),
-            registerBlock("yellow_zane", new Block(zaneMaterial.mapColor(MapColor.YELLOW))),
-            registerBlock("purple_zane", new Block(zaneMaterial.mapColor(MapColor.PURPLE))),
-            registerBlock("navy_zane", new Block(zaneMaterial.mapColor(MapColor.BLUE))),
-            registerBlock("mint_zane", new Block(zaneMaterial.mapColor(MapColor.BRIGHT_TEAL))),
-            registerBlock("magenta_zane", new Block(zaneMaterial.mapColor(MapColor.MAGENTA))),
-            registerBlock("lime_zane", new Block(zaneMaterial.mapColor(MapColor.LIME))),
-            registerBlock("green_zane", new Block(zaneMaterial.mapColor(MapColor.GREEN))),
-            registerBlock("fuchsia_zane", new Block(zaneMaterial.mapColor(MapColor.DULL_PINK))),
-            registerBlock("cyan_zane", new Block(zaneMaterial.mapColor(MapColor.TEAL))),
-            registerBlock("cerulean_zane", new Block(zaneMaterial.mapColor(MapColor.LAPIS_BLUE))),
-            registerBlock("blue_zane", new Block(zaneMaterial.mapColor(MapColor.LIGHT_BLUE))),
-            registerBlock("zane", new Block(zaneMaterial.mapColor(MapColor.WHITE)))
-    };
+    public static final Block RED_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "red_zane", new Block(zaneMaterial.mapColor(MapColor.RED)));
+    public static final Block AMBER_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "amber_zane", new Block(zaneMaterial.mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block EMPTY_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "empty_zane", new Block(zaneMaterial.mapColor(MapColor.BLACK)));
+    public static final Block ORANGE_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "orange_zane", new Block(zaneMaterial.mapColor(MapColor.ORANGE)));
+    public static final Block YELLOW_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "yellow_zane", new Block(zaneMaterial.mapColor(MapColor.YELLOW)));
+    public static final Block PURPLE_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "purple_zane", new Block(zaneMaterial.mapColor(MapColor.PURPLE)));
+    public static final Block NAVY_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "navy_zane", new Block(zaneMaterial.mapColor(MapColor.BLUE)));
+    public static final Block MINT_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "mint_zane", new Block(zaneMaterial.mapColor(MapColor.BRIGHT_TEAL)));
+    public static final Block MAGENTA_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "magenta_zane", new Block(zaneMaterial.mapColor(MapColor.MAGENTA)));
+    public static final Block LIME_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "lime_zane", new Block(zaneMaterial.mapColor(MapColor.LIME)));
+    public static final Block GREEN_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "green_zane", new Block(zaneMaterial.mapColor(MapColor.GREEN)));
+    public static final Block FUCHSIA_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "fuchsia_zane", new Block(zaneMaterial.mapColor(MapColor.DULL_PINK)));
+    public static final Block CYAN_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "cyan_zane", new Block(zaneMaterial.mapColor(MapColor.TEAL)));
+    public static final Block CERULEAN_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "cerulean_zane", new Block(zaneMaterial.mapColor(MapColor.LAPIS_BLUE)));
+    public static final Block BLUE_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "blue_zane", new Block(zaneMaterial.mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block ZANE = registerBlockInBlockset(ZANE_BLOCKS, "zane", new Block(zaneMaterial.mapColor(MapColor.WHITE)));
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - VECT">
+    private static final FabricBlockSettings vectMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.YELLOW)
+            .requiresTool()
+            .strength(2.4f, 2.0f)
+            .sounds(BlockSoundGroup.METAL);
+    public static final Block VECT = registerBlockInBlockset(VECT_BLOCKS, "vect", new Block(vectMaterial));
+    public static final Block VECT_TILE = registerBlockInBlockset(VECT_BLOCKS, "vect_tile", new Block(vectMaterial));
+    public static final Block VECT_RIVET = registerBlockInBlockset(VECT_BLOCKS, "vect_rivet", new Block(vectMaterial));
+    public static final Block VECT_HUB = registerBlockInBlockset(VECT_BLOCKS, "vect_hub", new Block(vectMaterial));
+    public static final Block VECT_STRUT = registerBlockInBlockset(VECT_BLOCKS, "vect_strut", new PillarBlock(vectMaterial));
+    public static final Block VECT_PAD = registerBlockInBlockset(VECT_BLOCKS, "vect_pad", new ReversiblePillarBlock(vectMaterial));
+    public static final Block VECT_TRACKER = registerBlockInBlockset(VECT_BLOCKS, "vect_tracker", new Block(vectMaterial.mapColor(MapColor.BLACK)));
+    public static final Block VECT_CORE = registerBlockInBlockset(VECT_BLOCKS, "vect_core", new Block(vectMaterial.mapColor(MapColor.BLACK)));
+    public static final Block VECT_TREADPLATE = registerBlockInBlockset(VECT_BLOCKS, "vect_treadplate", new Block(vectMaterial));
+    public static final Block VECT_SHIELD = registerBlockInBlockset(VECT_BLOCKS, "vect_shield", new PillarBlock(vectMaterial));
+    public static final Block VECT_PANEL = registerBlockInBlockset(VECT_BLOCKS, "vect_panel", new Block(vectMaterial));
+    public static final Block VECT_RADIATOR = registerBlockInBlockset(VECT_BLOCKS, "vect_radiator", new Block(vectMaterial.mapColor(MapColor.GOLD)));
+    public static final Block VECT_BULKHEAD = registerBlockInBlockset(VECT_BLOCKS, "vect_bulkhead", new PillarBlock(vectMaterial));
+    public static final Block VECT_TANK = registerBlockInBlockset(VECT_BLOCKS, "vect_tank", new Block(vectMaterial.mapColor(MapColor.GOLD).strength(1.8f).sounds(ModBlockSoundGroup.FOIL)));
+    public static final Block VECT_NETWORK = registerBlockInBlockset(VECT_BLOCKS, "vect_network", new Block(vectMaterial.mapColor(MapColor.PALE_YELLOW)));
+    public static final Block VECT_FOIL = registerBlockInBlockset(VECT_BLOCKS, "vect_foil", new Block(vectMaterial.mapColor(MapColor.GOLD).strength(1.2f).sounds(ModBlockSoundGroup.FOIL)));
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - REDDS">
+    private static final FabricBlockSettings reddsMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.DARK_RED)
+            .requiresTool()
+            .strength(2.4f, 2.0f)
+            .sounds(ModBlockSoundGroup.POLYGON);
+    public static final Block REDDS = registerBlockInBlockset(REDDS_BLOCKS, "redds", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block REDDS_PICE = registerBlockInBlockset(REDDS_BLOCKS, "redds_pice", new LitBlock(reddsMaterial, null, null));
+    public static final Block REDDS_PICE_SLAB = registerBlock("redds_pice_slab", new LitSlabBlock(FabricBlockSettings.copyOf(REDDS_PICE), null, null)); static { SLAB_FROM_BLOCK.put(REDDS_PICE, REDDS_PICE_SLAB); }
+    public static final Block REDDS_PICE_STAIRS = registerBlock("redds_pice_stairs", new LitStairsBlock(REDDS_PICE.getDefaultState(), FabricBlockSettings.copyOf(REDDS_PICE), null, null)); static { STAIR_FROM_BLOCK.put(REDDS_PICE, REDDS_PICE_STAIRS); }
+    public static final Block REDDS_TRACT = registerBlockInBlockset(REDDS_BLOCKS, "redds_tract", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block REDDS_THOUGHT = registerBlockInBlockset(REDDS_BLOCKS, "redds_thought", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block REDDS_TILE = registerBlockInBlockset(REDDS_BLOCKS, "redds_tile", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block REDDS_MARK = registerBlockInBlockset(REDDS_BLOCKS, "redds_mark", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block REDDS_NEXUS = registerBlockInBlockset(REDDS_BLOCKS, "redds_nexus", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block REDDS_TAPE = registerBlockInBlockset(REDDS_BLOCKS, "redds_tape", new LitPillarBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block REDDS_GRATE = registerBlockInBlockset(REDDS_BLOCKS, "redds_grate", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block REDDS_HEART = registerBlockInBlockset(REDDS_BLOCKS, "redds_heart", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block REDDS_HOPPER = registerBlockInBlockset(REDDS_BLOCKS, "redds_hopper", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block REDDS_FRACTAL = registerBlockInBlockset(REDDS_BLOCKS, "redds_fractal", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block REDDS_FRAME = registerBlockInBlockset(REDDS_BLOCKS, "redds_frame", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block REDDS_GLAZED = registerBlockInBlockset(REDDS_BLOCKS, "redds_glazed", new LitGlazedTerracottaBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block REDDS_BALANCE = registerBlockInBlockset(REDDS_BLOCKS, "redds_balance", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block REDDS_CURRENT = registerBlockInBlockset(REDDS_BLOCKS, "redds_current", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - MINN">
+    private static final FabricBlockSettings minnMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.PALE_GREEN)
+            .requiresTool()
+            .strength(2.4f, 2.0f)
+            .sounds(ModBlockSoundGroup.POLYGON);
+    public static final Block MINN_TILES = registerBlockInBlockset(MINN_BLOCKS, "minn_tiles", new Block(minnMaterial));
+    public static final Block MINN_RESONANCE = registerBlockInBlockset(MINN_BLOCKS, "minn_resonance", new Block(minnMaterial));
+    public static final Block MINN_QUILT = registerBlockInBlockset(MINN_BLOCKS, "minn_quilt", new Block(minnMaterial));
+    public static final Block MINN_POFFNODE = registerBlockInBlockset(MINN_BLOCKS, "minn_poffnode", new Block(minnMaterial));
+    public static final Block MINN_POFFCAGE = registerBlockInBlockset(MINN_BLOCKS, "minn_poffcage", new Block(minnMaterial));
+    public static final Block MINN_POFF = registerBlockInBlockset(MINN_BLOCKS, "minn_poff", new Block(minnMaterial));
+    public static final Block MINN_PAD = registerBlockInBlockset(MINN_BLOCKS, "minn_pad", new Block(minnMaterial));
+    public static final Block MINN_NEXUS = registerBlockInBlockset(MINN_BLOCKS, "minn_nexus", new Block(minnMaterial));
+    public static final Block MINN_LINENODE = registerBlockInBlockset(MINN_BLOCKS, "minn_linenode", new Block(minnMaterial));
+    public static final Block MINN_LINE = registerBlockInBlockset(MINN_BLOCKS, "minn_line", new PillarBlock(minnMaterial));
+    public static final Block MINN_CIRCLE = registerBlockInBlockset(MINN_BLOCKS, "minn_circle", new Block(minnMaterial));
+    public static final Block MINN_CAGE = registerBlockInBlockset(MINN_BLOCKS, "minn_cage", new Block(minnMaterial));
+    public static final Block MINN_CUBES = registerBlockInBlockset(MINN_BLOCKS, "minn_cubes", new Block(minnMaterial));
+    public static final Block MINN_BLANK = registerBlockInBlockset(MINN_BLOCKS, "minn_blank", new Block(minnMaterial));
+    public static final Block MINN_BEVEL = registerBlockInBlockset(MINN_BLOCKS, "minn_bevel", new Block(minnMaterial));
+    public static final Block MINN = registerBlockInBlockset(MINN_BLOCKS, "minn", new Block(minnMaterial));
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - LAIR">
+    private static final FabricBlockSettings lairMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.RAW_IRON_PINK)
+            .requiresTool()
+            .strength(0.75f)
+            .sounds(ModBlockSoundGroup.LAIR);
+    public static final Block LAIR_STRUT = registerBlockInBlockset(LAIR_BLOCKS, "lair_strut", new Block(lairMaterial)); 
+    public static final Block LAIR_SMOOTH = registerBlockInBlockset(LAIR_BLOCKS, "lair_smooth", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON)));
+    public static final Block LAIR_RIGOR = registerBlockInBlockset(LAIR_BLOCKS, "lair_rigor", new Block(lairMaterial));
+    public static final Block LAIR_RIGOR_SLAB = registerBlockInBlockset(LAIR_BLOCKS, "lair_rigor_slab", new SlabBlock(FabricBlockSettings.copyOf(LAIR_RIGOR))); static { SLAB_FROM_BLOCK.put(LAIR_RIGOR, LAIR_RIGOR_SLAB); }
+    public static final Block LAIR_RIGOR_STAIRS = registerBlockInBlockset(LAIR_BLOCKS, "lair_rigor_stairs", new StairsBlock(LAIR_RIGOR.getDefaultState(), FabricBlockSettings.copyOf(LAIR_RIGOR))); static { STAIR_FROM_BLOCK.put(LAIR_RIGOR, LAIR_RIGOR_STAIRS); }
+    public static final Block LAIR_RIGID = registerBlockInBlockset(LAIR_BLOCKS, "lair_rigid", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON))); 
+    public static final Block LAIR_RIGID_SLAB = registerBlockInBlockset(LAIR_BLOCKS, "lair_rigid_slab", new SlabBlock(FabricBlockSettings.copyOf(LAIR_RIGID))); static { SLAB_FROM_BLOCK.put(LAIR_RIGID, LAIR_RIGID_SLAB); }
+    public static final Block LAIR_RIGID_STAIRS = registerBlockInBlockset(LAIR_BLOCKS, "lair_rigid_stairs", new StairsBlock(LAIR_RIGID.getDefaultState(), FabricBlockSettings.copyOf(LAIR_RIGID))); static { STAIR_FROM_BLOCK.put(LAIR_RIGID, LAIR_RIGID_STAIRS); }
+    public static final Block LAIR_MESS = registerBlockInBlockset(LAIR_BLOCKS, "lair_mess", new Block(lairMaterial)); 
+    public static final Block LAIR_MATTERTILES = registerBlockInBlockset(LAIR_BLOCKS, "lair_mattertiles", new Block(lairMaterial)); 
+    public static final Block LAIR_MATTER = registerBlockInBlockset(LAIR_BLOCKS, "lair_matter", new Block(lairMaterial)); 
+    public static final Block LAIR_JEWEL = registerBlockInBlockset(LAIR_BLOCKS, "lair_jewel", new Block(lairMaterial)); 
+    public static final Block LAIR_HEAL = registerBlockInBlockset(LAIR_BLOCKS, "lair_heal", new Block(lairMaterial)); 
+    public static final Block LAIR_DERMADENT = registerBlockInBlockset(LAIR_BLOCKS, "lair_dermadent", new Block(lairMaterial));
+    public static final Block LAIR_DERMA = registerBlockInBlockset(LAIR_BLOCKS, "lair_derma", new Block(lairMaterial));
+    public static final Block LAIR_DERMA_SLAB = registerBlockInBlockset(LAIR_BLOCKS, "lair_derma_slab", new SlabBlock(FabricBlockSettings.copyOf(LAIR_DERMA))); static { SLAB_FROM_BLOCK.put(LAIR_DERMA, LAIR_DERMA_SLAB); }
+    public static final Block LAIR_DERMA_STAIRS = registerBlockInBlockset(LAIR_BLOCKS, "lair_derma_stairs", new StairsBlock(LAIR_DERMA.getDefaultState(), FabricBlockSettings.copyOf(LAIR_DERMA))); static { STAIR_FROM_BLOCK.put(LAIR_DERMA, LAIR_DERMA_STAIRS); }
+    public static final Block LAIR_CROWNED = registerBlockInBlockset(LAIR_BLOCKS, "lair_crowned", new PillarBlock(lairMaterial)); 
+    public static final Block LAIR_CHUNK = registerBlockInBlockset(LAIR_BLOCKS, "lair_chunk", new ReversiblePillarBlock(lairMaterial.mapColor(MapColor.DARK_CRIMSON))); 
+    public static final Block LAIR_CELL = registerBlockInBlockset(LAIR_BLOCKS, "lair_cell", new Block(lairMaterial)); 
+    public static final Block LAIR_AGED = registerBlockInBlockset(LAIR_BLOCKS, "lair_aged", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON))); 
+    public static final Block LAIR = registerBlockInBlockset(LAIR_BLOCKS, "lair", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON)));
+    //</editor-fold>
 
-//    private static final FabricBlockSettings korpMaterial = FabricBlockSettings.create()
+    //<editor-fold desc ="Blocks - KRYP">
+//    private static final FabricBlockSettings krypMaterial = FabricBlockSettings.create()
+//            .mapColor()
+//            .requiresTool()
+//            .strength(3.0f, 6.0f)
+//            .sounds(BlockSoundGroup.COPPER);
+//    public static final Block KRYP_WIRE = registerBlockInBlockset(ZANE_BLOCKS, "kryp_wire", new Block(krypMaterial));
+//    public static final Block KRYP_SUPPORT = registerBlockInBlockset(ZANE_BLOCKS, "kryp_support", new Block(krypMaterial));
+//    public static final Block KRYP_STORAGE = registerBlockInBlockset(ZANE_BLOCKS, "kryp_storage", new Block(krypMaterial));
+//    public static final Block KRYP_SMOOTH = registerBlockInBlockset(ZANE_BLOCKS, "kryp_smooth", new Block(krypMaterial));
+//    public static final Block KRYP_SHEEN = registerBlockInBlockset(ZANE_BLOCKS, "kryp_sheen", new Block(krypMaterial));
+//    public static final Block KRYP_RUIN = registerBlockInBlockset(ZANE_BLOCKS, "kryp_ruin", new Block(krypMaterial));
+//    public static final Block KRYP_OMITTER = registerBlockInBlockset(ZANE_BLOCKS, "kryp_omitter", new Block(krypMaterial));
+//    public static final Block KRYP_LEVI = registerBlockInBlockset(ZANE_BLOCKS, "kryp_levi", new Block(krypMaterial));
+//    public static final Block KRYP_KUBT = registerBlockInBlockset(ZANE_BLOCKS, "kryp_kubt", new Block(krypMaterial));
+//    public static final Block KRYP_INFO = registerBlockInBlockset(ZANE_BLOCKS, "kryp_info", new Block(krypMaterial));
+//    public static final Block KRYP_DATA = registerBlockInBlockset(ZANE_BLOCKS, "kryp_data", new Block(krypMaterial));
+//    public static final Block KRYP_CONNECTOR = registerBlockInBlockset(ZANE_BLOCKS, "kryp_connector", new Block(krypMaterial));
+//    public static final Block KRYP_CHUNK = registerBlockInBlockset(ZANE_BLOCKS, "kryp_chunk", new Block(krypMaterial));
+//    public static final Block KRYP_BEAM = registerBlockInBlockset(ZANE_BLOCKS, "kryp_beam", new Block(krypMaterial));
+//    public static final Block KRYP_BASE = registerBlockInBlockset(ZANE_BLOCKS, "kryp_base", new Block(krypMaterial));
+//    public static final Block KRYP = registerBlockInBlockset(ZANE_BLOCKS, "kryp", new Block(krypMaterial));
+
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - LAVE">
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - VEELD">
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - JELT">
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - KORP">
+    //    private static final FabricBlockSettings korpMaterial = FabricBlockSettings.create()
 //                    .mapColor(MapColor.TERRACOTTA_BLACK)
 //                    .requiresTool()
 //                    .strength(4.0f, 6.0f)
@@ -188,263 +339,65 @@ public class ModBlocks {
 //        registerBlock("korp_pillar", new Block(korpMaterial.strength(2.0f, 3.0f))),
 //        registerBlock("korp_pillar", new Block(korpMaterial.strength(2.0f, 3.0f))),
 //    };
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - TANK">
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - EXRI">
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - AZUR">
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - FLEQ">
 
-    private static final FabricBlockSettings vectMaterial = FabricBlockSettings.create()
-            .mapColor(MapColor.YELLOW)
-            .requiresTool()
-            .strength(2.4f, 2.0f)
-            .sounds(BlockSoundGroup.METAL);
-    public static final Block[] VECT_BLOCKS = {
-        registerBlock("vect", new Block(vectMaterial)),
-        registerBlock("vect_tile", new Block(vectMaterial)),
-        registerBlock("vect_rivet", new Block(vectMaterial)),
-        registerBlock("vect_hub", new Block(vectMaterial)),
-        registerBlock("vect_strut", new PillarBlock(vectMaterial)),
-        registerBlock("vect_pad", new ReversiblePillarBlock(vectMaterial)),
-        registerBlock("vect_tracker", new Block(vectMaterial.mapColor(MapColor.BLACK))),
-        registerBlock("vect_core", new Block(vectMaterial.mapColor(MapColor.BLACK))),
-        registerBlock("vect_treadplate", new Block(vectMaterial)),
-        registerBlock("vect_shield", new PillarBlock(vectMaterial)),
-        registerBlock("vect_panel", new Block(vectMaterial)),
-        registerBlock("vect_radiator", new Block(vectMaterial.mapColor(MapColor.GOLD))),
-        registerBlock("vect_bulkhead", new PillarBlock(vectMaterial)),
-        registerBlock("vect_tank", new Block(vectMaterial.mapColor(MapColor.GOLD).strength(1.8f).sounds(ModBlockSoundGroup.FOIL))),
-        registerBlock("vect_network", new Block(vectMaterial.mapColor(MapColor.PALE_YELLOW))),
-        registerBlock("vect_foil", new Block(vectMaterial.mapColor(MapColor.GOLD).strength(1.2f).sounds(ModBlockSoundGroup.FOIL))),
-    };
-    public static Block VECT = VECT_BLOCKS[0];
-    public static Block VECT_TILE = VECT_BLOCKS[1];
-    public static Block VECT_RIVET = VECT_BLOCKS[2];
-    public static Block VECT_HUB = VECT_BLOCKS[3];
-    public static Block VECT_STRUT = VECT_BLOCKS[4];
-    public static Block VECT_PAD = VECT_BLOCKS[5];
-    public static Block VECT_TRACKER = VECT_BLOCKS[6];
-    public static Block VECT_CORE = VECT_BLOCKS[7];
-    public static Block VECT_TREADPLATE = VECT_BLOCKS[8];
-    public static Block VECT_SHIELD = VECT_BLOCKS[9];
-    public static Block VECT_PANEL = VECT_BLOCKS[10];
-    public static Block VECT_RADIATOR = VECT_BLOCKS[11];
-    public static Block VECT_BULKHEAD = VECT_BLOCKS[12];
-    public static Block VECT_TANK = VECT_BLOCKS[13];
-    public static Block VECT_NETWORK = VECT_BLOCKS[14];
-    public static Block VECT_FOIL = VECT_BLOCKS[15];
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - ISZM">
 
-    private static final FabricBlockSettings reddsMaterial = FabricBlockSettings.create()
-            .mapColor(MapColor.DARK_RED)
-            .requiresTool()
-            .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.POLYGON);
-    public static final Block[] REDDS_BLOCKS = {
-            registerBlock("redds", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
-            registerBlock("redds_pice", new LitBlock(reddsMaterial, null, null)),
-            null, // I'm the worst to have ever' done it.
-            null,
-            registerBlock("redds_tract", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
-            registerBlock("redds_thought", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
-            registerBlock("redds_tile", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
-            registerBlock("redds_mark", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
-            registerBlock("redds_nexus", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
-            registerBlock("redds_tape", new LitPillarBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
-            registerBlock("redds_grate", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
-            registerBlock("redds_heart", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
-            registerBlock("redds_hopper", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
-            registerBlock("redds_fractal", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
-            registerBlock("redds_frame", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
-            registerBlock("redds_glazed", new LitGlazedTerracottaBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
-            registerBlock("redds_balance", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
-            registerBlock("redds_current", new LitBlock(reddsMaterial.luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null)),
-    };
-    public static final Block REDDS = REDDS_BLOCKS[0];
-    public static final Block REDDS_PICE = REDDS_BLOCKS[1];
-    public static final Block REDDS_PICE_SLAB = registerBlock("redds_pice_slab", new LitSlabBlock(FabricBlockSettings.copyOf(REDDS_PICE), null, null));
-    static { REDDS_BLOCKS[2] = REDDS_PICE_SLAB;  } //ah, that's where that went.
-    public static final Block REDDS_PICE_STAIRS = registerBlock("redds_pice_stairs", new LitStairsBlock(REDDS_PICE.getDefaultState(), FabricBlockSettings.copyOf(REDDS_PICE), null, null));
-    static { REDDS_BLOCKS[3] = REDDS_PICE_STAIRS;  }
-    public static final Block REDDS_TRACT = REDDS_BLOCKS[4];
-    public static final Block REDDS_THOUGHT = REDDS_BLOCKS[5];
-    public static final Block REDDS_TILE = REDDS_BLOCKS[6];
-    public static final Block REDDS_MARK = REDDS_BLOCKS[7];
-    public static final Block REDDS_NEXUS = REDDS_BLOCKS[8];
-    public static final Block REDDS_TAPE = REDDS_BLOCKS[9];
-    public static final Block REDDS_GRATE = REDDS_BLOCKS[10];
-    public static final Block REDDS_HEART = REDDS_BLOCKS[11];
-    public static final Block REDDS_HOPPER = REDDS_BLOCKS[12];
-    public static final Block REDDS_FRACTAL = REDDS_BLOCKS[13];
-    public static final Block REDDS_FRAME = REDDS_BLOCKS[14];
-    public static final Block REDDS_GLAZED = REDDS_BLOCKS[15];
-    public static final Block REDDS_BALANCE = REDDS_BLOCKS[16];
-    public static final Block REDDS_CURRENT = REDDS_BLOCKS[17];
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - MYST">
 
-    private static final FabricBlockSettings minnMaterial = FabricBlockSettings.create()
-            .mapColor(MapColor.PALE_GREEN)
-            .requiresTool()
-            .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.POLYGON);
-    public static final Block[] MINN_BLOCKS = {
-            registerBlock("minn_tiles", new Block(minnMaterial)),
-            registerBlock("minn_resonance", new Block(minnMaterial)),
-            registerBlock("minn_quilt", new Block(minnMaterial)),
-            registerBlock("minn_poffnode", new Block(minnMaterial)),
-            registerBlock("minn_poffcage", new Block(minnMaterial)),
-            registerBlock("minn_poff", new Block(minnMaterial)),
-            registerBlock("minn_pad", new Block(minnMaterial)),
-            registerBlock("minn_nexus", new Block(minnMaterial)),
-            registerBlock("minn_linenode", new Block(minnMaterial)),
-            registerBlock("minn_line", new PillarBlock(minnMaterial)),
-            registerBlock("minn_circle", new Block(minnMaterial)),
-            registerBlock("minn_cage", new Block(minnMaterial)),
-            registerBlock("minn_cubes", new Block(minnMaterial)),
-            registerBlock("minn_blank", new Block(minnMaterial)),
-            registerBlock("minn_bevel", new Block(minnMaterial)),
-            registerBlock("minn", new Block(minnMaterial))
-    };
-    public static final Block MINN_TILES = MINN_BLOCKS[0];
-    public static final Block MINN_RESONANCE = MINN_BLOCKS[1];
-    public static final Block MINN_QUILT = MINN_BLOCKS[2];
-    public static final Block MINN_POFFNODE = MINN_BLOCKS[3];
-    public static final Block MINN_POFFCAGE = MINN_BLOCKS[4];
-    public static final Block MINN_POFF = MINN_BLOCKS[5];
-    public static final Block MINN_PAD = MINN_BLOCKS[6];
-    public static final Block MINN_NEXUS = MINN_BLOCKS[7];
-    public static final Block MINN_LINENODE = MINN_BLOCKS[8];
-    public static final Block MINN_LINE = MINN_BLOCKS[9];
-    public static final Block MINN_CIRCLE = MINN_BLOCKS[10];
-    public static final Block MINN_CAGE = MINN_BLOCKS[11];
-    public static final Block MINN_CUBES = MINN_BLOCKS[12];
-    public static final Block MINN_BLANK = MINN_BLOCKS[13];
-    public static final Block MINN_BEVEL = MINN_BLOCKS[14];
-    public static final Block MINN = MINN_BLOCKS[15];
+    //</editor-fold>
 
 
-    private static final FabricBlockSettings lairMaterial = FabricBlockSettings.create()
-            .mapColor(MapColor.RAW_IRON_PINK)
-            .requiresTool()
-            .strength(0.75f)
-            .sounds(ModBlockSoundGroup.LAIR);
-    public static final Block[] LAIR_BLOCKS = {
-            registerBlock("lair_strut", new Block(lairMaterial)),
-            registerBlock("lair_smooth", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON))),
-            registerBlock("lair_rigor", new Block(lairMaterial)),
-            registerBlock("lair_rigid", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON))),
-            registerBlock("lair_mess", new Block(lairMaterial)),
-            registerBlock("lair_mattertiles", new Block(lairMaterial)),
-            registerBlock("lair_matter", new Block(lairMaterial)),
-            registerBlock("lair_jewel", new Block(lairMaterial)),
-            registerBlock("lair_heal", new Block(lairMaterial)),
-            registerBlock("lair_dermadent", new Block(lairMaterial)),
-            registerBlock("lair_derma", new Block(lairMaterial)),
-            registerBlock("lair_crowned", new PillarBlock(lairMaterial)),
-            registerBlock("lair_chunk", new ReversiblePillarBlock(lairMaterial.mapColor(MapColor.DARK_CRIMSON))),
-            registerBlock("lair_cell", new Block(lairMaterial)),
-            registerBlock("lair_aged", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON))),
-            registerBlock("lair", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON)))
-    };
-    public static final Block LAIR_STRUT = LAIR_BLOCKS[0];
-    public static final Block LAIR_SMOOTH = LAIR_BLOCKS[1];
-    public static final Block LAIR_RIGOR = LAIR_BLOCKS[2];
-    public static final Block LAIR_RIGID = LAIR_BLOCKS[3];
-    public static final Block LAIR_MESS = LAIR_BLOCKS[4];
-    public static final Block LAIR_MATTERTILES = LAIR_BLOCKS[5];
-    public static final Block LAIR_MATTER = LAIR_BLOCKS[6];
-    public static final Block LAIR_JEWEL = LAIR_BLOCKS[7];
-    public static final Block LAIR_HEAL = LAIR_BLOCKS[8];
-    public static final Block LAIR_DERMADENT = LAIR_BLOCKS[9];
-    public static final Block LAIR_DERMA = LAIR_BLOCKS[10];
-    public static final Block LAIR_CROWNED = LAIR_BLOCKS[11];
-    public static final Block LAIR_CHUNK = LAIR_BLOCKS[12];
-    public static final Block LAIR_CELL = LAIR_BLOCKS[13];
-    public static final Block LAIR_AGED = LAIR_BLOCKS[14];
-    public static final Block LAIR = LAIR_BLOCKS[15];
 
-//    public static Block[] registerSetOfColoredBlocks(String name, FabricBlockSettings settings) {
-//        DyeColor[] colors = ModUtil.VANILLA_DYE_COLORS;
-//        Block[] blocks = new Block[colors.length];
-//        for (int i = 0; i < colors.length; i++) {
-//            DyeColor color = colors[i];
-//            blocks[i] = registerBlock(color.getName() + "_" + name, new Block(settings.mapColor(color)));
-//        }
-//        return blocks;
-//    }
-    public static HashMap<Block, DyeColor> registerHashMapOfColoredBlocks(String name, FabricBlockSettings settings) {
-        HashMap<Block, DyeColor> hashMap = new HashMap<Block, DyeColor>();
+    //<editor-fold desc ="Registration">
+    public static ArrayList<Block> registerBlocksetOfVanillaDyedBlocks(String name, FabricBlockSettings settings) {
+        ArrayList<Block> blocks = new ArrayList<>();
         DyeColor[] colors = ModUtil.VANILLA_DYE_COLORS;
         for (int i = 0; i < colors.length; i++) {
             DyeColor color = colors[i];
             Block block = registerBlock(color.getName() + "_" + name, new Block(settings.mapColor(color)));
-            hashMap.put(block, color);
+            blocks.add(block);
         }
-        return hashMap;
+        return blocks;
     }
-//    public static final HashMap<DyeColor, String> AGON_NAME_FROM_COLOR = new HashMap<DyeColor, String>(); static {
-//        AGON_NAME_FROM_COLOR.put(DyeColor.WHITE, "sandalwood_agon");
-//        AGON_NAME_FROM_COLOR.put(DyeColor.ORANGE, "_agon");
-//        AGON_NAME_FROM_COLOR.put(DyeColor.MAGENTA, "_agon");
-//        AGON_NAME_FROM_COLOR.put(DyeColor.LIGHT_BLUE, "_agon");
-//        AGON_NAME_FROM_COLOR.put(DyeColor.YELLOW, "_agon");
-//        AGON_NAME_FROM_COLOR.put(DyeColor.LIME, "_agon");
-//        AGON_NAME_FROM_COLOR.put(DyeColor.PINK, "_agon");
-//        AGON_NAME_FROM_COLOR.put(DyeColor.GRAY, "_agon");
-//        AGON_NAME_FROM_COLOR.put(DyeColor.LIGHT_GRAY, "_agon");
-//        AGON_NAME_FROM_COLOR.put(DyeColor.CYAN, "_agon");
-//        AGON_NAME_FROM_COLOR.put(DyeColor.PURPLE, "_agon");
-//        AGON_NAME_FROM_COLOR.put(DyeColor.BLUE, "_agon");
-//        AGON_NAME_FROM_COLOR.put(DyeColor.BROWN, "_agon");
-//        AGON_NAME_FROM_COLOR.put(DyeColor.GREEN, "_agon");
-//        AGON_NAME_FROM_COLOR.put(DyeColor.RED, "_agon");
-//        AGON_NAME_FROM_COLOR.put(DyeColor.BLACK, "_agon");
-//    }
-//    public static Block[] registerSetOfColoredBlocks(HashMap<DyeColor, String> nameMap, FabricBlockSettings settings) {
-//        DyeColor[] colors = ModUtil.VANILLA_DYE_COLORS;
-//        Block[] blocks = new Block[colors.length];
-//        for (int i = 0; i < colors.length; i++) {
-//            DyeColor color = colors[i];
-//            blocks[i] = registerBlock(color.getName() + "_" + name, new Block(settings.mapColor(color)));
-//        }
-//        return blocks;
-//    }
-
-//    public static class BlockSet {
-//        public final String name;
-//        public Block[] Blocks;
-//
-//        public BlockSet(String name, Block[] blocks) {
-//            this.name = name;
-//            this.Blocks = blocks;
-//        }
-//    }
-
-//    public static Block registerBlockInBlockSet(BlockSet blockSet, String name, Block block, ItemGroup group) {
-//        Block block1 = registerBlock(name, block, group);
-//        blockSet.Blocks.add(block1);
-//        return block1;
-//    }
-
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         return registerBlock(name, block);
     }
-
+    public static Block registerBlockInBlockset(ArrayList<Block> blockset, String name, Block block) {
+        blockset.add(block);
+        return registerBlock(name, block);
+    }
     public static Block registerBlock(String name, Block block) {
         registerBlockItem(name,block);
         return Registry.register(Registries.BLOCK, new Identifier(Super.MOD_ID, name), block);
     }
-
-    private static boolean never(BlockState blockState, BlockView blockView, BlockPos blockPos) {
-        return false;
-    }
-
-    public static boolean never(BlockState state, BlockView world, BlockPos pos, EntityType<?> type) {
-        return false;
-    }
-
-    private static ToIntFunction<BlockState> createLightLevelFromProperty(int litLevel, BooleanProperty property) {
-        return state -> state.get(property) != false ? litLevel : 0;
-    }
-
     private static Item registerBlockItem(String name, Block block) {
         BlockItem blockItem = new BlockItem(block, new FabricItemSettings());
         //ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(blockItem));
         return Registry.register(Registries.ITEM, new Identifier(Super.MOD_ID, name), blockItem);
     }
+    //</editor-fold>
+
+    //<editor-fold desc ="Attribute Util">
+    private static boolean never(BlockState blockState, BlockView blockView, BlockPos blockPos) {
+        return false;
+    }
+    public static boolean never(BlockState state, BlockView world, BlockPos pos, EntityType<?> type) {
+        return false;
+    }
+    private static ToIntFunction<BlockState> createLightLevelFromProperty(int litLevel, BooleanProperty property) {
+        return state -> state.get(property) != false ? litLevel : 0;
+    }
+    //</editor-fold>
 
     public static void registerModBlocks() {
         ModInit.LOGGER.debug("Registering mod blocks for " + Super.MOD_ID);

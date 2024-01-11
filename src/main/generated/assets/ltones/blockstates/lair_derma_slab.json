@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ltones:block/lair_derma_slab"
+    },
+    "type=double": {
+      "model": "ltones:block/lair_derma"
+    },
+    "type=top": {
+      "model": "ltones:block/lair_derma_slab_top"
+    }
+  }
+}

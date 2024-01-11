@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ltones:block/lair_rigor_slab"
+    },
+    "type=double": {
+      "model": "ltones:block/lair_rigor"
+    },
+    "type=top": {
+      "model": "ltones:block/lair_rigor_slab_top"
+    }
+  }
+}

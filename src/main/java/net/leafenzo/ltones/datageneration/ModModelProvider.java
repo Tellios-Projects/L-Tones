@@ -58,7 +58,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         //  AGON
-        for(Block block : ModBlocks.AGON_BLOCKS.keySet()) {
+        for(Block block : ModBlocks.AGON_BLOCKS) {
             blockStateModelGenerator.registerCubeAllModelTexturePool(block);
         }
         //  FORT
@@ -145,19 +145,27 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_BEVEL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN);
 
-
         //  LAIR
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_STRUT);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_SMOOTH);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_RIGOR);
+        BlockStateModelGenerator.BlockTexturePool lairRigorTexturePool =
+                blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_RIGOR);
+            lairRigorTexturePool.slab(ModBlocks.LAIR_RIGOR_SLAB);
+            lairRigorTexturePool.stairs(ModBlocks.LAIR_RIGOR_STAIRS);
+        BlockStateModelGenerator.BlockTexturePool lairRigidTexturePool  =
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_RIGID);
+            lairRigidTexturePool.slab(ModBlocks.LAIR_RIGID_SLAB);
+            lairRigidTexturePool.stairs(ModBlocks.LAIR_RIGID_STAIRS);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_MESS);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_MATTERTILES);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_MATTER);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_JEWEL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_HEAL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_DERMADENT);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_DERMA);
+        BlockStateModelGenerator.BlockTexturePool lairDermaTexturePool =
+            blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_DERMA);
+            lairDermaTexturePool.slab(ModBlocks.LAIR_DERMA_SLAB);
+            lairDermaTexturePool.stairs(ModBlocks.LAIR_DERMA_STAIRS);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.LAIR_CROWNED, TexturedModel.CUBE_ALL);
         registerUpDefaultOrientable(blockStateModelGenerator, ModBlocks.LAIR_CHUNK, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_CELL);

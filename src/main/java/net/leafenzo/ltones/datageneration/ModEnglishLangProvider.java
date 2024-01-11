@@ -73,13 +73,6 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
     public void generateTranslations(TranslationBuilder translationBuilder) {
         //Manual
 
-
-
-        for(Block block : ModBlocks.AGON_BLOCKS.keySet()) {
-              generateTranslation(translationBuilder, block, "");
-//            generateTranslation(translationBuilder, ModBlocks.WAXCAP_GILLS, "Waxcap Gill Block");
-        }
-
         //Fallback
         for(Identifier id : ModUtil.allBlockIdsInNamespace(Super.MOD_ID)) {
             String key = Registries.BLOCK.get(id).getTranslationKey();

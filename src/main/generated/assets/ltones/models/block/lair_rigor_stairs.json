@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "ltones:block/lair_rigor",
+    "side": "ltones:block/lair_rigor",
+    "top": "ltones:block/lair_rigor"
+  }
+}
