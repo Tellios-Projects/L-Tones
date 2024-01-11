@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ltones:block/tank_cannon",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "ltones:block/tank_cannon",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "ltones:block/tank_cannon"
+    },
+    "facing=west": {
+      "model": "ltones:block/tank_cannon",
+      "y": 90
+    }
+  }
+}

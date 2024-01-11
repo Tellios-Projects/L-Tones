@@ -256,6 +256,25 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.JELT_EXHAUST, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.JELT_PATHJOINT);
 
+        // TANK
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_ZIZER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_WINDOW);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_TREAD);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_TILES);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_SECURE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_RIVET);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_RIGID);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_FUNCTION);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_FORTIFIED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_FLEXI);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_CONJUNCTION);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_BAND);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_ARMOR);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK);
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.TANK_BEAM, "block/tank_secure");
+        blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.TANK_CANNON);
+
+
     // Block Models
         // Cube with all sides the same texture, IE Dirt
         // blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_STONE);

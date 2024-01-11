@@ -385,7 +385,7 @@ public class ModBlocks {
     public static final Block JELT_ENERGY = registerBlockInBlockset(JELT_BLOCKS, "jelt_energy", new Block(jeltMaterial));
     public static final Block JELT_EMBOSS = registerBlockInBlockset(JELT_BLOCKS, "jelt_emboss", new Block(jeltMaterial));
     public static final Block JELT_DESTINE = registerBlockInBlockset(JELT_BLOCKS, "jelt_destine", new Block(jeltMaterial));
-    public static final Block JELT_CONFINE = registerBlockInBlockset(JELT_BLOCKS, "jelt_confine", new Block(jeltMaterial));
+    public static final Block JELT_CONFINE = registerBlockInBlockset(JELT_BLOCKS, "jelt_confine", new Block(jeltMaterial.mapColor(MapColor.BLACK)));
     public static final Block JELT_ATWAL = registerBlockInBlockset(JELT_BLOCKS, "jelt_atwal", new Block(jeltMaterial));
     public static final Block JELT = registerBlockInBlockset(JELT_BLOCKS, "jelt", new Block(jeltMaterial));
     //</editor-fold>
@@ -406,22 +406,38 @@ public class ModBlocks {
 //    };
     //</editor-fold>
     //<editor-fold desc ="Blocks - TANK">
+    private static final FabricBlockSettings tankMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.LIGHT_GRAY)
+            .requiresTool()
+            .strength(2.4f, 2.0f)
+            .sounds(ModBlockSoundGroup.POLYGON);
+    public static final Block TANK_ZIZER = registerBlockInBlockset(TANK_BLOCKS, "tank_zizer", new Block(tankMaterial));
+    public static final Block TANK_WINDOW = registerBlockInBlockset(TANK_BLOCKS, "tank_window", new Block(tankMaterial));
+    public static final Block TANK_TREAD = registerBlockInBlockset(TANK_BLOCKS, "tank_tread", new Block(tankMaterial));
+    public static final Block TANK_TILES = registerBlockInBlockset(TANK_BLOCKS, "tank_tiles", new Block(tankMaterial));
+    public static final Block TANK_SECURE = registerBlockInBlockset(TANK_BLOCKS, "tank_secure", new Block(tankMaterial));
+    public static final Block TANK_RIVET = registerBlockInBlockset(TANK_BLOCKS, "tank_rivet", new Block(tankMaterial));
+    public static final Block TANK_RIGID = registerBlockInBlockset(TANK_BLOCKS, "tank_rigid", new Block(tankMaterial));
+    public static final Block TANK_FUNCTION = registerBlockInBlockset(TANK_BLOCKS, "tank_function", new Block(tankMaterial));
+    public static final Block TANK_FORTIFIED = registerBlockInBlockset(TANK_BLOCKS, "tank_fortified", new Block(tankMaterial));
+    public static final Block TANK_FLEXI = registerBlockInBlockset(TANK_BLOCKS, "tank_flexi", new Block(tankMaterial.mapColor(MapColor.GRAY)));
+    public static final Block TANK_CONJUNCTION = registerBlockInBlockset(TANK_BLOCKS, "tank_conjunction", new Block(tankMaterial));
+    public static final Block TANK_CANNON = registerBlockInBlockset(TANK_BLOCKS, "tank_cannon", new GlazedTerracottaBlock(tankMaterial));
+    public static final Block TANK_BEAM = registerBlockInBlockset(TANK_BLOCKS, "tank_beam", new PillarBlock(tankMaterial));
+    public static final Block TANK_BAND = registerBlockInBlockset(TANK_BLOCKS, "tank_band", new Block(tankMaterial.mapColor(MapColor.GRAY)));
+    public static final Block TANK_ARMOR = registerBlockInBlockset(TANK_BLOCKS, "tank_armor", new Block(tankMaterial));
+    public static final Block TANK = registerBlockInBlockset(TANK_BLOCKS, "tank", new Block(tankMaterial));
     //</editor-fold>
     //<editor-fold desc ="Blocks - EXRI">
     //</editor-fold>
     //<editor-fold desc ="Blocks - AZUR">
     //</editor-fold>
     //<editor-fold desc ="Blocks - FLEQ">
-
     //</editor-fold>
     //<editor-fold desc ="Blocks - ISZM">
-
     //</editor-fold>
     //<editor-fold desc ="Blocks - MYST">
-
     //</editor-fold>
-
-
 
     //<editor-fold desc ="Registration">
     public static ArrayList<Block> registerBlocksetOfVanillaDyedBlocks(String name, FabricBlockSettings settings) {
