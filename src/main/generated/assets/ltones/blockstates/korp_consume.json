@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ltones:block/korp_consume",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "ltones:block/korp_consume",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "ltones:block/korp_consume"
+    },
+    "facing=west": {
+      "model": "ltones:block/korp_consume",
+      "y": 90
+    }
+  }
+}

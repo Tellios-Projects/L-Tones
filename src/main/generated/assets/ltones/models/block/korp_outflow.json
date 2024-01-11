@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ltones:block/korp_regulate",
+    "east": "ltones:block/korp_outflow",
+    "north": "ltones:block/korp_outflow",
+    "particle": "ltones:block/korp_outflow",
+    "south": "ltones:block/korp_outflow",
+    "up": "ltones:block/korp_regulate",
+    "west": "ltones:block/korp_outflow"
+  }
+}

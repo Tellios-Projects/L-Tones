@@ -390,19 +390,27 @@ public class ModBlocks {
     public static final Block JELT = registerBlockInBlockset(JELT_BLOCKS, "jelt", new Block(jeltMaterial));
     //</editor-fold>
     //<editor-fold desc ="Blocks - KORP">
-    //    private static final FabricBlockSettings korpMaterial = FabricBlockSettings.create()
-//                    .mapColor(MapColor.TERRACOTTA_BLACK)
-//                    .requiresTool()
-//                    .strength(4.0f, 6.0f)
-//                    .sounds(BlockSoundGroup.METAL);
-//    public static final Block[] KORP_BLOCKS = {
-//        registerBlock("enchained_korp", new Block(korpMaterial.strength(2.0f, 3.0f))),
-//        registerBlock("rough_korp", new Block(korpMaterial.strength(1.6f))),
-//        registerBlock("smooth_korp", new Block(korpMaterial.strength(2.0f, 3.0f))),
-//        registerBlock("polished_korp", new Block(korpMaterial.strength(2.0f, 3.0f))),
-//        registerBlock("korp_vent", new Block(korpMaterial.strength(2.0f, 3.0f))),
-//        registerBlock("korp_pillar", new Block(korpMaterial.strength(2.0f, 3.0f))),
-//        registerBlock("korp_pillar", new Block(korpMaterial.strength(2.0f, 3.0f))),
+    private static final FabricBlockSettings korpMaterial = FabricBlockSettings.create()
+                    .mapColor(MapColor.TERRACOTTA_BLACK)
+                    .requiresTool()
+                    .strength(2.0f, 6.0f)
+                    .sounds(BlockSoundGroup.METAL);
+    public static final Block KORP_WALL = registerBlockInBlockset(KORP_BLOCKS, "korp_wall", new Block(korpMaterial));
+    public static final Block KORP_VEST = registerBlockInBlockset(KORP_BLOCKS, "korp_vest", new Block(korpMaterial));
+    public static final Block KORP_SECURE = registerBlockInBlockset(KORP_BLOCKS, "korp_secure", new Block(korpMaterial));
+    public static final Block KORP_RUPT = registerBlockInBlockset(KORP_BLOCKS, "korp_rupt", new PillarBlock(korpMaterial));
+    public static final Block KORP_RESOURCE = registerBlockInBlockset(KORP_BLOCKS, "korp_resource", new PillarBlock(korpMaterial.mapColor(MapColor.DIAMOND_BLUE).luminance(state -> 15)));
+    public static final Block KORP_REGULATE = registerBlockInBlockset(KORP_BLOCKS, "korp_regulate", new Block(korpMaterial));
+    public static final Block KORP_OUTFLOW = registerBlockInBlockset(KORP_BLOCKS, "korp_outflow", new PillarBlock(korpMaterial));
+    public static final Block KORP_MARK = registerBlockInBlockset(KORP_BLOCKS, "korp_mark", new Block(korpMaterial));
+    public static final Block KORP_HOLDING = registerBlockInBlockset(KORP_BLOCKS, "korp_holding", new Block(korpMaterial));
+    public static final Block KORP_GROWTH = registerBlockInBlockset(KORP_BLOCKS, "korp_growth", new Block(korpMaterial));
+    public static final Block KORP_FLOW = registerBlockInBlockset(KORP_BLOCKS, "korp_flow", new PillarBlock(korpMaterial.luminance(state -> 11)));
+    public static final Block KORP_CONSUME = registerBlockInBlockset(KORP_BLOCKS, "korp_consume", new GlazedTerracottaBlock(korpMaterial.luminance(state -> 7)));
+    public static final Block KORP_COMMAND = registerBlockInBlockset(KORP_BLOCKS, "korp_command", new Block(korpMaterial));
+    public static final Block KORP_BANK = registerBlockInBlockset(KORP_BLOCKS, "korp_bank", new Block(korpMaterial.mapColor(MapColor.DIAMOND_BLUE).luminance(state -> 15)));
+    public static final Block KORP_ASSET = registerBlockInBlockset(KORP_BLOCKS, "korp_asset", new Block(korpMaterial));
+    public static final Block KORP = registerBlockInBlockset(KORP_BLOCKS, "korp", new Block(korpMaterial));
 //    };
     //</editor-fold>
     //<editor-fold desc ="Blocks - TANK">

@@ -256,6 +256,24 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.JELT_EXHAUST, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.JELT_PATHJOINT);
 
+        // KORP
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_WALL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_VEST);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_SECURE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_REGULATE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_MARK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_HOLDING);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_GROWTH);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_COMMAND);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_BANK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_ASSET);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.KORP_RUPT, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.KORP_RESOURCE, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.KORP_FLOW, TexturedModel.CUBE_ALL);
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.KORP_OUTFLOW, "block/korp_regulate");
+        blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.KORP_CONSUME);
+
         // TANK
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_ZIZER);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_WINDOW);
