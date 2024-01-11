@@ -214,6 +214,22 @@
     "ltones:lave_dark",
     "ltones:lave_crosssection",
     "ltones:lave_beam",
-    "ltones:lave"
+    "ltones:lave",
+    "ltones:veeld_wet",
+    "ltones:veeld_traction",
+    "ltones:veeld_structure",
+    "ltones:veeld_riveted",
+    "ltones:veeld_ripple",
+    "ltones:veeld_rigidbrick",
+    "ltones:veeld_rigid",
+    "ltones:veeld_pipeweave",
+    "ltones:veeld_patterned",
+    "ltones:veeld_panel",
+    "ltones:veeld_etched",
+    "ltones:veeld_embossed",
+    "ltones:veeld_drill",
+    "ltones:veeld_core",
+    "ltones:veeld_brick",
+    "ltones:veeld"
   ]
 }

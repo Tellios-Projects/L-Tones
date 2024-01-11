@@ -220,6 +220,23 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.LAVE_ELEVATE, TexturedModel.CUBE_ALL);
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.LAVE_BEAM, "block/lave_panel");
 
+        // VEELD
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_WET);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_RIVETED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_RIPPLE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_RIGIDBRICK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_RIGID);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_PIPEWEAVE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_PANEL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_ETCHED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_EMBOSSED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_CORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_BRICK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.VEELD_TRACTION, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.VEELD_STRUCTURE, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.VEELD_DRILL, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.VEELD_PATTERNED);
 
     // Block Models
         // Cube with all sides the same texture, IE Dirt

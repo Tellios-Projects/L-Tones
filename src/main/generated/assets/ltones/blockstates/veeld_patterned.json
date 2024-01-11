@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ltones:block/veeld_patterned",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "ltones:block/veeld_patterned",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "ltones:block/veeld_patterned"
+    },
+    "facing=west": {
+      "model": "ltones:block/veeld_patterned",
+      "y": 90
+    }
+  }
+}

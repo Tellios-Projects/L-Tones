@@ -9,6 +9,7 @@ import net.leafenzo.ltones.sound.ModBlockSoundGroup;
 import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -174,6 +175,7 @@ public class ModBlocks {
     private static final FabricBlockSettings zaneMaterial = FabricBlockSettings.create()
             .strength(0.75f)
             .requiresTool()
+            .instrument(Instrument.BASEDRUM)
             .sounds(BlockSoundGroup.CALCITE);
     public static final Block RED_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "red_zane", new Block(zaneMaterial.mapColor(MapColor.RED)));
     public static final Block AMBER_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "amber_zane", new Block(zaneMaterial.mapColor(MapColor.TERRACOTTA_ORANGE)));
@@ -268,6 +270,7 @@ public class ModBlocks {
             .mapColor(MapColor.RAW_IRON_PINK)
             .requiresTool()
             .strength(0.75f)
+            .instrument(Instrument.BASEDRUM)
             .sounds(ModBlockSoundGroup.LAIR);
     public static final Block LAIR_STRUT = registerBlockInBlockset(LAIR_BLOCKS, "lair_strut", new Block(lairMaterial)); 
     public static final Block LAIR_SMOOTH = registerBlockInBlockset(LAIR_BLOCKS, "lair_smooth", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON)));
@@ -318,6 +321,7 @@ public class ModBlocks {
     //<editor-fold desc ="Blocks - LAVE">
     private static final FabricBlockSettings laveMaterial = FabricBlockSettings.create()
             .mapColor(MapColor.LIGHT_BLUE_GRAY)
+            .instrument(Instrument.BASEDRUM)
             .requiresTool()
             .strength(0.8f)
             .sounds(BlockSoundGroup.DECORATED_POT);
@@ -337,10 +341,30 @@ public class ModBlocks {
     public static final Block LAVE_CROSSSECTION = registerBlockInBlockset(LAVE_BLOCKS, "lave_crosssection", new Block(laveMaterial));
     public static final Block LAVE_BEAM = registerBlockInBlockset(LAVE_BLOCKS, "lave_beam", new PillarBlock(laveMaterial));
     public static final Block LAVE = registerBlockInBlockset(LAVE_BLOCKS, "lave", new Block(laveMaterial));
-
-
     //</editor-fold>
     //<editor-fold desc ="Blocks - VEELD">
+    private static final FabricBlockSettings veeldMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.LICHEN_GREEN)
+            .instrument(Instrument.BASEDRUM)
+            .requiresTool()
+            .strength(2.0f, 6.0f)
+            .sounds(BlockSoundGroup.STONE);
+    public static final Block VEELD_WET = registerBlockInBlockset(VEELD_BLOCKS, "veeld_wet", new Block(veeldMaterial.mapColor(MapColor.GREEN)));
+    public static final Block VEELD_TRACTION = registerBlockInBlockset(VEELD_BLOCKS, "veeld_traction", new PillarBlock(veeldMaterial));
+    public static final Block VEELD_STRUCTURE = registerBlockInBlockset(VEELD_BLOCKS, "veeld_structure", new PillarBlock(veeldMaterial));
+    public static final Block VEELD_RIVETED = registerBlockInBlockset(VEELD_BLOCKS, "veeld_riveted", new Block(veeldMaterial));
+    public static final Block VEELD_RIPPLE = registerBlockInBlockset(VEELD_BLOCKS, "veeld_ripple", new Block(veeldMaterial));
+    public static final Block VEELD_RIGIDBRICK = registerBlockInBlockset(VEELD_BLOCKS, "veeld_rigidbrick", new Block(veeldMaterial));
+    public static final Block VEELD_RIGID = registerBlockInBlockset(VEELD_BLOCKS, "veeld_rigid", new Block(veeldMaterial));
+    public static final Block VEELD_PIPEWEAVE = registerBlockInBlockset(VEELD_BLOCKS, "veeld_pipeweave", new Block(veeldMaterial));
+    public static final Block VEELD_PATTERNED = registerBlockInBlockset(VEELD_BLOCKS, "veeld_patterned", new GlazedTerracottaBlock(veeldMaterial));
+    public static final Block VEELD_PANEL = registerBlockInBlockset(VEELD_BLOCKS, "veeld_panel", new Block(veeldMaterial));
+    public static final Block VEELD_ETCHED = registerBlockInBlockset(VEELD_BLOCKS, "veeld_etched", new Block(veeldMaterial.mapColor(MapColor.GREEN)));
+    public static final Block VEELD_EMBOSSED = registerBlockInBlockset(VEELD_BLOCKS, "veeld_embossed", new Block(veeldMaterial.mapColor(MapColor.GREEN)));
+    public static final Block VEELD_DRILL = registerBlockInBlockset(VEELD_BLOCKS, "veeld_drill", new PillarBlock(veeldMaterial));
+    public static final Block VEELD_CORE = registerBlockInBlockset(VEELD_BLOCKS, "veeld_core", new Block(veeldMaterial));
+    public static final Block VEELD_BRICK = registerBlockInBlockset(VEELD_BLOCKS, "veeld_brick", new Block(veeldMaterial));
+    public static final Block VEELD = registerBlockInBlockset(VEELD_BLOCKS, "veeld", new Block(veeldMaterial.mapColor(MapColor.GREEN)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - JELT">
     //</editor-fold>
