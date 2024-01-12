@@ -437,6 +437,27 @@ public class ModBlocks {
     public static final Block TANK = registerBlockInBlockset(TANK_BLOCKS, "tank", new Block(tankMaterial));
     //</editor-fold>
     //<editor-fold desc ="Blocks - EXRI">
+    private static final FabricBlockSettings exriMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.GRAY)
+            .requiresTool()
+            .strength(1.8f)
+            .sounds(BlockSoundGroup.COPPER);
+    public static final Block EXRI_LEVEL = registerBlockInBlockset(EXRI_BLOCKS, "exri_level", new RedstoneLampBlock(exriMaterial));
+    public static final Block EXRI_TECT = registerBlockInBlockset(EXRI_BLOCKS, "exri_tect", new Block(exriMaterial));
+    public static final Block EXRI_STEM = registerBlockInBlockset(EXRI_BLOCKS, "exri_stem", new Block(exriMaterial));
+    public static final Block EXRI_STEEL = registerBlockInBlockset(EXRI_BLOCKS, "exri_steel", new Block(exriMaterial));
+    public static final Block EXRI_SERVE = registerBlockInBlockset(EXRI_BLOCKS, "exri_serve", new RedstoneLampBlock(exriMaterial));
+    public static final Block EXRI_SEAL = registerBlockInBlockset(EXRI_BLOCKS, "exri_seal", new Block(exriMaterial));
+    public static final Block EXRI_SCREEN = registerBlockInBlockset(EXRI_BLOCKS, "exri_screen", new Block(exriMaterial));
+    public static final Block EXRI_ROGEN = registerBlockInBlockset(EXRI_BLOCKS, "exri_rogen", new Block(exriMaterial));
+    public static final Block EXRI_MESH = registerBlockInBlockset(EXRI_BLOCKS, "exri_mesh", new Block(exriMaterial));
+    public static final Block EXRI_FLOW = registerBlockInBlockset(EXRI_BLOCKS, "exri_flow", new RedstoneLampBlock(exriMaterial));
+    public static final Block EXRI_DIVIDE = registerBlockInBlockset(EXRI_BLOCKS, "exri_divide", new Block(exriMaterial));
+    public static final Block EXRI_DISPLAY = registerBlockInBlockset(EXRI_BLOCKS, "exri_display", new RedstoneLampBlock(exriMaterial));
+    public static final Block EXRI_CURRENT = registerBlockInBlockset(EXRI_BLOCKS, "exri_current", new RedstoneLampBlock(exriMaterial));
+    public static final Block EXRI_CRITICAL = registerBlockInBlockset(EXRI_BLOCKS, "exri_critical", new RedstoneLampBlock(exriMaterial));
+    public static final Block EXRI_CONTROL = registerBlockInBlockset(EXRI_BLOCKS, "exri_control", new RedstoneLampBlock(exriMaterial));
+    public static final Block EXRI = registerBlockInBlockset(EXRI_BLOCKS, "exri", new Block(exriMaterial));
     //</editor-fold>
     //<editor-fold desc ="Blocks - AZUR">
     //</editor-fold>
