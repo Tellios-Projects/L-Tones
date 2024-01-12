@@ -292,6 +292,24 @@ public class ModModelProvider extends FabricModelProvider {
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.TANK_BEAM, "block/tank_secure");
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.TANK_CANNON);
 
+        // EXRI
+        // TODO ask eliza how she prefers the side textures / potential horizontal-ness of these to work
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_TECT);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_STEM);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_STEEL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_SEAL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_SCREEN);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_ROGEN);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_MESH);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_DIVIDE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_FLOW, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_SERVE, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_DISPLAY, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_CURRENT, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_CRITICAL, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_CONTROL, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_LEVEL, Models.CUBE_ALL, TextureMap::all);
 
     // Block Models
         // Cube with all sides the same texture, IE Dirt

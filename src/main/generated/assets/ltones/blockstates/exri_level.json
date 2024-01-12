@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ltones:block/exri_level"
+    },
+    "lit=true": {
+      "model": "ltones:block/exri_level_on"
+    }
+  }
+}
