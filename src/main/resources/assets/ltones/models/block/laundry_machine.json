@@ -1,0 +1,39 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "ltones:block/laundry_machine_bottom",
+		"1": "ltones:block/laundry_machine_top",
+		"2": "ltones:block/laundry_machine_back",
+		"3": "ltones:block/laundry_machine_side",
+		"4": "ltones:block/laundry_machine_front",
+		"5": "ltones:block/laundry_machine_door",
+		"particle": "ltones:block/laundry_machine_bottom"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [3, 2, -1.001],
+			"to": [13, 12, 0.999],
+			"rotation": {"angle": 0, "axis": "y", "origin": [13, 7, -0.001]},
+			"faces": {
+				"north": {"uv": [0, 0, 10, 10], "texture": "#5"},
+				"east": {"uv": [14, 0, 16, 10], "texture": "#5"},
+				"south": {"uv": [0, 0, 10, 10], "texture": "#5"},
+				"west": {"uv": [14, 0, 16, 10], "texture": "#5"},
+				"up": {"uv": [0, 14, 10, 16], "texture": "#5"},
+				"down": {"uv": [10, 16, 0, 14], "texture": "#5"}
+			}
+		}
+	]
+}
