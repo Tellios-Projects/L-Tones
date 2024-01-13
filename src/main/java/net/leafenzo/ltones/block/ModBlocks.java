@@ -414,16 +414,16 @@ public class ModBlocks {
     public static final Block KORP_VEST = registerBlockInBlockset(KORP_BLOCKS, "korp_vest", new PillarBlock(FabricBlockSettings.copyOf(korpMaterial)));
     public static final Block KORP_SECURE = registerBlockInBlockset(KORP_BLOCKS, "korp_secure", new Block(FabricBlockSettings.copyOf(korpMaterial)));
     public static final Block KORP_RUPT = registerBlockInBlockset(KORP_BLOCKS, "korp_rupt", new PillarBlock(FabricBlockSettings.copyOf(korpMaterial)));
-    public static final Block KORP_RESOURCE = registerBlockInBlockset(KORP_BLOCKS, "korp_resource", new PillarBlock(FabricBlockSettings.copyOf(korpMaterial).mapColor(MapColor.DIAMOND_BLUE).luminance(state -> 15)));
+    public static final Block KORP_RESOURCE = registerBlockInBlockset(KORP_BLOCKS, "korp_resource", new PillarBlock(FabricBlockSettings.copyOf(korpMaterial).mapColor(MapColor.DIAMOND_BLUE).luminance(state -> 11)));
     public static final Block KORP_REGULATE = registerBlockInBlockset(KORP_BLOCKS, "korp_regulate", new Block(FabricBlockSettings.copyOf(korpMaterial)));
     public static final Block KORP_OUTFLOW = registerBlockInBlockset(KORP_BLOCKS, "korp_outflow", new PillarBlock(FabricBlockSettings.copyOf(korpMaterial)));
     public static final Block KORP_MARK = registerBlockInBlockset(KORP_BLOCKS, "korp_mark", new Block(FabricBlockSettings.copyOf(korpMaterial)));
     public static final Block KORP_HOLDING = registerBlockInBlockset(KORP_BLOCKS, "korp_holding", new Block(FabricBlockSettings.copyOf(korpMaterial)));
     public static final Block KORP_GROWTH = registerBlockInBlockset(KORP_BLOCKS, "korp_growth", new Block(FabricBlockSettings.copyOf(korpMaterial)));
-    public static final Block KORP_FLOW = registerBlockInBlockset(KORP_BLOCKS, "korp_flow", new PillarBlock(FabricBlockSettings.copyOf(korpMaterial).luminance(state -> 11)));
+    public static final Block KORP_FLOW = registerBlockInBlockset(KORP_BLOCKS, "korp_flow", new PillarBlock(FabricBlockSettings.copyOf(korpMaterial).luminance(state -> 7)));
     public static final Block KORP_CONSUME = registerBlockInBlockset(KORP_BLOCKS, "korp_consume", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(korpMaterial).luminance(state -> 7)));
     public static final Block KORP_COMMAND = registerBlockInBlockset(KORP_BLOCKS, "korp_command", new Block(FabricBlockSettings.copyOf(korpMaterial)));
-    public static final Block KORP_BANK = registerBlockInBlockset(KORP_BLOCKS, "korp_bank", new Block(FabricBlockSettings.copyOf(korpMaterial).mapColor(MapColor.DIAMOND_BLUE).luminance(state -> 15)));
+    public static final Block KORP_BANK = registerBlockInBlockset(KORP_BLOCKS, "korp_bank", new Block(FabricBlockSettings.copyOf(korpMaterial).mapColor(MapColor.DIAMOND_BLUE).luminance(state -> 11)));
     public static final Block KORP_ASSET = registerBlockInBlockset(KORP_BLOCKS, "korp_asset", new Block(FabricBlockSettings.copyOf(korpMaterial)));
     public static final Block KORP = registerBlockInBlockset(KORP_BLOCKS, "korp", new Block(FabricBlockSettings.copyOf(korpMaterial)));
 //    };
@@ -475,6 +475,8 @@ public class ModBlocks {
     public static final Block EXRI_CRITICAL = registerBlockInBlockset(EXRI_BLOCKS, "exri_critical", new RedstoneLampBlock(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_CONTROL = registerBlockInBlockset(EXRI_BLOCKS, "exri_control", new RedstoneLampBlock(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI = registerBlockInBlockset(EXRI_BLOCKS, "exri", new Block(FabricBlockSettings.copyOf(exriMaterial)));
+
+    //TODO bit blockset always emits a redstone level of 1   
     //</editor-fold>
     //<editor-fold desc ="Blocks - AZUR">
     //</editor-fold>
