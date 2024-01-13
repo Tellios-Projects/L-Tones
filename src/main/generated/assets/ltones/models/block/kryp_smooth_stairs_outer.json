@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "ltones:block/kryp_smooth",
+    "side": "ltones:block/kryp_smooth",
+    "top": "ltones:block/kryp_smooth"
+  }
+}

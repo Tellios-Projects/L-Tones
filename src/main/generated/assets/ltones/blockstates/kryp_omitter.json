@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "lit=false": {
       "model": "ltones:block/kryp_omitter"
+    },
+    "lit=true": {
+      "model": "ltones:block/kryp_omitter_on"
     }
   }
 }

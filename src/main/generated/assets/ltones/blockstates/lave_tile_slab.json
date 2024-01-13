@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ltones:block/lave_tile_slab"
+    },
+    "type=double": {
+      "model": "ltones:block/lave_tile"
+    },
+    "type=top": {
+      "model": "ltones:block/lave_tile_slab_top"
+    }
+  }
+}

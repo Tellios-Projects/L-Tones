@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ltones:block/exri_divide_slab"
+    },
+    "type=double": {
+      "model": "ltones:block/exri_divide"
+    },
+    "type=top": {
+      "model": "ltones:block/exri_divide_slab_top"
+    }
+  }
+}

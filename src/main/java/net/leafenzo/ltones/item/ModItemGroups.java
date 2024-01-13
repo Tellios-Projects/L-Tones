@@ -45,5 +45,6 @@ public class ModItemGroups {
                         for(Block block : ModBlocks.FLEQ_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.ISZM_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.MYST_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.SYNC_BLOCKS) { entries.add(block); }
                     }).build());
 }

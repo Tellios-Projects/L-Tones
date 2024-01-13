@@ -186,18 +186,24 @@ public class ModModelProvider extends FabricModelProvider {
 
         //   KRYP
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_WIRE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_STORAGE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_SMOOTH);
+        BlockStateModelGenerator.BlockTexturePool krypStorageTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_STORAGE);
+        krypStorageTexturePool.slab(ModBlocks.KRYP_STORAGE_SLAB);
+        krypStorageTexturePool.stairs(ModBlocks.KRYP_STORAGE_STAIRS);
+        BlockStateModelGenerator.BlockTexturePool krypSmoothTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_SMOOTH);
+        krypSmoothTexturePool.slab(ModBlocks.KRYP_SMOOTH_SLAB);
+        krypSmoothTexturePool.stairs(ModBlocks.KRYP_SMOOTH_STAIRS);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_SHEEN);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_RUIN);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_OMITTER);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.KRYP_OMITTER, Models.CUBE_ALL, TextureMap::all);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_LEVI);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_INFO);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_DATA);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_CONNECTOR);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_BEAM);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_BASE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP);
+        BlockStateModelGenerator.BlockTexturePool krypTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP);
+        krypTexturePool.slab(ModBlocks.KRYP_SLAB);
+        krypTexturePool.stairs(ModBlocks.KRYP_STAIRS);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.KRYP_SUPPORT, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.KRYP_KUBT, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.KRYP_CHUNK);
@@ -206,9 +212,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_WINDOW);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_VENT);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_UNEVEN);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_TILE);
+        BlockStateModelGenerator.BlockTexturePool laveTileTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_TILE);
+        laveTileTexturePool.slab(ModBlocks.LAVE_TILE_SLAB);
+        laveTileTexturePool.stairs(ModBlocks.LAVE_TILE_STAIRS);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_THICK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_SECTION);
+        BlockStateModelGenerator.BlockTexturePool laveSectionTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_SECTION);
+        laveSectionTexturePool.slab(ModBlocks.LAVE_SECTION_SLAB);
+        laveSectionTexturePool.stairs(ModBlocks.LAVE_SECTION_STAIRS);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_PANEL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_LOW);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_HEX);
@@ -231,8 +241,12 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_ETCHED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_EMBOSSED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_CORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_BRICK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD);
+        BlockStateModelGenerator.BlockTexturePool veeldBrickTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_BRICK);
+        veeldBrickTexturePool.slab(ModBlocks.VEELD_BRICK_SLAB);
+        veeldBrickTexturePool.stairs(ModBlocks.VEELD_BRICK_STAIRS);
+        BlockStateModelGenerator.BlockTexturePool veeldTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD);
+        veeldTexturePool.slab(ModBlocks.VEELD_SLAB);
+        veeldTexturePool.stairs(ModBlocks.VEELD_STAIRS);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.VEELD_TRACTION, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.VEELD_STRUCTURE, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.VEELD_DRILL, TexturedModel.CUBE_ALL);
@@ -258,7 +272,6 @@ public class ModModelProvider extends FabricModelProvider {
 
         // KORP
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_WALL);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_VEST);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_SECURE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_REGULATE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_MARK);
@@ -268,6 +281,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_BANK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_ASSET);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.KORP_VEST, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.KORP_RUPT, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.KORP_RESOURCE, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.KORP_FLOW, TexturedModel.CUBE_ALL);
@@ -281,7 +295,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_TILES);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_SECURE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_RIVET);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_RIGID);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_FUNCTION);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_FORTIFIED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_FLEXI);
@@ -289,6 +302,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_BAND);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_ARMOR);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.TANK_RIGID, TexturedModel.CUBE_ALL);
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.TANK_BEAM, "block/tank_secure");
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.TANK_CANNON);
 
@@ -301,7 +315,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_SCREEN);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_ROGEN);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_MESH);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_DIVIDE);
+        BlockStateModelGenerator.BlockTexturePool exriDivideTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_DIVIDE);
+        exriDivideTexturePool.slab(ModBlocks.EXRI_DIVIDE_SLAB);
+        exriDivideTexturePool.stairs(ModBlocks.EXRI_DIVIDE_STAIRS);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_FLOW, Models.CUBE_ALL, TextureMap::all);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_SERVE, Models.CUBE_ALL, TextureMap::all);

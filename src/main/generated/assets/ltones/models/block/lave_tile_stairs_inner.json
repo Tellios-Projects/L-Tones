@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "ltones:block/lave_tile",
+    "side": "ltones:block/lave_tile",
+    "top": "ltones:block/lave_tile"
+  }
+}

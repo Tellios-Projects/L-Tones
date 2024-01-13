@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ltones:block/kryp_slab"
+    },
+    "type=double": {
+      "model": "ltones:block/kryp"
+    },
+    "type=top": {
+      "model": "ltones:block/kryp_slab_top"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "ltones:block/veeld_slab"
+    },
+    "type=double": {
+      "model": "ltones:block/veeld"
+    },
+    "type=top": {
+      "model": "ltones:block/veeld_slab_top"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "ltones:block/exri_divide",
+    "side": "ltones:block/exri_divide",
+    "top": "ltones:block/exri_divide"
+  }
+}
