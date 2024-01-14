@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ltones:block/sync_force"
+    }
+  }
+}

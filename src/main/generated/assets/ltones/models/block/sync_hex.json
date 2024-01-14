@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ltones:block/sync_junction",
+    "east": "ltones:block/sync_hex",
+    "north": "ltones:block/sync_hex",
+    "particle": "ltones:block/sync_hex",
+    "south": "ltones:block/sync_hex",
+    "up": "ltones:block/sync_junction",
+    "west": "ltones:block/sync_hex"
+  }
+}

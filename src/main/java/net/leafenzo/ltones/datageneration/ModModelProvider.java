@@ -377,6 +377,26 @@ public class ModModelProvider extends FabricModelProvider {
             blockStateModelGenerator.registerCubeAllModelTexturePool(block);
         }
         //</editor-fold>
+        //<editor-fold desc = "Models - sync">
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC_SHIELDING);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC_SAFE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC_MESS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC_LEADED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC_JUNCTION);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC_HAZARD);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC_HATCH);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC_FRAMED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC_FORCE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC_DATA);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC_CONTAIN);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC);
+//        blockStateModelGenerator.registerAxisRotated(ModBlocks.SYNC_TANK, TexturedModel.CUBE_ALL);
+//        blockStateModelGenerator.registerAxisRotated(ModBlocks.SYNC_CAUTION, TexturedModel.CUBE_ALL);
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.SYNC_TANK, "block/sync_shielding"); // TODO make sure these are ok with el
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.SYNC_HEX, "block/sync_junction");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.SYNC_CAUTION, "block/sync_shielding");
+        blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.SYNC_MIZMER);
+        //</editor-fold>
 
         // Block Models
         // Cube with all sides the same texture, IE Dirt

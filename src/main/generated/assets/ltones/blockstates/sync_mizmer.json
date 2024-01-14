@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ltones:block/sync_mizmer",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "ltones:block/sync_mizmer",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "ltones:block/sync_mizmer"
+    },
+    "facing=west": {
+      "model": "ltones:block/sync_mizmer",
+      "y": 90
+    }
+  }
+}

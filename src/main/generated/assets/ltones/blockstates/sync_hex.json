@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ltones:block/sync_hex",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ltones:block/sync_hex"
+    },
+    "axis=z": {
+      "model": "ltones:block/sync_hex",
+      "x": 90
+    }
+  }
+}
