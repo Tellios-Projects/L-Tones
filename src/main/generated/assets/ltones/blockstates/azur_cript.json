@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ltones:block/azur_cript",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ltones:block/azur_cript"
+    },
+    "axis=z": {
+      "model": "ltones:block/azur_cript",
+      "x": 90
+    }
+  }
+}

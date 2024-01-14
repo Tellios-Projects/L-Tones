@@ -327,7 +327,25 @@ public class ModModelProvider extends FabricModelProvider {
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_CONTROL, Models.CUBE_ALL, TextureMap::all);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_LEVEL, Models.CUBE_ALL, TextureMap::all);
 
-    // Block Models
+        // AZUR
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR_CUBE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR_KINETIC);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR_NEURON);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR_PAVE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR_PERATION);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR_PLUG);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR_RIPPLE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR_RUN);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR_SCRAPE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR_SENSORY);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR_SIGN);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.AZUR_CRIPT, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.AZUR_CYBER, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.AZUR_GUIDE, TexturedModel.CUBE_ALL);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.AZUR_SIGNAL, TexturedModel.CUBE_ALL);
+
+        // Block Models
         // Cube with all sides the same texture, IE Dirt
         // blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_STONE);
 

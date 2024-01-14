@@ -80,9 +80,10 @@ public class ModBlocks {
     public static final Block ORANGE_FORT = registerBlockInBlockset(FORT_BLOCKS, "orange_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.ORANGE)));
     public static final Block SAND_BLUE_FORT = registerBlockInBlockset(FORT_BLOCKS, "sand_blue_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.LIGHT_BLUE_GRAY)));
     public static final Block STONE_GRAY_FORT = registerBlockInBlockset(FORT_BLOCKS, "stone_gray_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.STONE_GRAY)));
-    //</editor-fold>
+    //</editor-fold> 
     //<editor-fold desc ="Blocks - GLAXX">
     private static final FabricBlockSettings glaxxMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.CLEAR)
             .strength(0.3f)
             .sounds(BlockSoundGroup.STONE) // TODO custom sound
             .nonOpaque()
@@ -90,22 +91,22 @@ public class ModBlocks {
             .solidBlock(ModBlocks::never)
             .suffocates(ModBlocks::never)
             .blockVision(ModBlocks::never);
-    public static final Block THYME_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "thyme_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.TERRACOTTA_GREEN)));
-    public static final Block SASSAFRAS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sassafras_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.BLUE)));
-    public static final Block SANDALWOOD_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sandalwood_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.IRON_GRAY)));
-    public static final Block SAGE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sage_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.TERRACOTTA_LIME)));
-    public static final Block ROSE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "rose_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.DULL_PINK)));
-    public static final Block PINE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "pine_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.SPRUCE_BROWN)));
-    public static final Block MINT_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "mint_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.LICHEN_GREEN)));
-    public static final Block LICORICE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "licorice_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.STONE_GRAY)));
-    public static final Block LEMON_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "lemon_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.TERRACOTTA_YELLOW)));
-    public static final Block LAVENDER_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "lavender_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.TERRACOTTA_BLUE)));
-    public static final Block INCENSE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "incense_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.GRAY)));
-    public static final Block EUCALYPTUS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "eucalyptus_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.DARK_DULL_PINK)));
-    public static final Block COCONUT_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "coconut_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.TERRACOTTA_CYAN)));
-    public static final Block CINNIMON_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "cinnimon_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.DARK_CRIMSON)));
-    public static final Block CITRUS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "citrus_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.DIRT_BROWN)));
-    public static final Block BRINE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "brine_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial).mapColor(MapColor.CYAN)));
+    public static final Block THYME_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "thyme_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_GREEN)*/));
+    public static final Block SASSAFRAS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sassafras_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.BLUE)*/));
+    public static final Block SANDALWOOD_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sandalwood_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.IRON_GRAY)*/));
+    public static final Block SAGE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sage_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_LIME)*/));
+    public static final Block ROSE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "rose_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.DULL_PINK)*/));
+    public static final Block PINE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "pine_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.SPRUCE_BROWN)*/));
+    public static final Block MINT_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "mint_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.LICHEN_GREEN)*/));
+    public static final Block LICORICE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "licorice_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.STONE_GRAY)*/));
+    public static final Block LEMON_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "lemon_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_YELLOW)*/));
+    public static final Block LAVENDER_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "lavender_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_BLUE)*/));
+    public static final Block INCENSE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "incense_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.GRAY)*/));
+    public static final Block EUCALYPTUS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "eucalyptus_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.DARK_DULL_PINK)*/));
+    public static final Block COCONUT_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "coconut_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_CYAN)*/));
+    public static final Block CINNIMON_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "cinnimon_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.DARK_CRIMSON)*/));
+    public static final Block CITRUS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "citrus_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.DIRT_BROWN)*/));
+    public static final Block BRINE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "brine_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.CYAN)*/));
     //</editor-fold>
     //<editor-fold desc ="Blocks - CRAY">
     private static final FabricBlockSettings crayMaterial = FabricBlockSettings.create()
@@ -479,6 +480,27 @@ public class ModBlocks {
     //TODO bit blockset always emits a redstone level of 1   
     //</editor-fold>
     //<editor-fold desc ="Blocks - AZUR">
+    private static final FabricBlockSettings azurMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.LAPIS_BLUE)
+            .requiresTool()
+            .strength(2.4f, 2.0f)
+            .sounds(ModBlockSoundGroup.POLYGON);
+    public static final Block AZUR_CRIPT = registerBlockInBlockset(AZUR_BLOCKS, "azur_cript", new PillarBlock(FabricBlockSettings.copyOf(azurMaterial)));
+    public static final Block AZUR_CUBE = registerBlockInBlockset(AZUR_BLOCKS, "azur_cube", new Block(FabricBlockSettings.copyOf(azurMaterial)));
+    public static final Block AZUR_CYBER = registerBlockInBlockset(AZUR_BLOCKS, "azur_cyber", new PillarBlock(FabricBlockSettings.copyOf(azurMaterial)));
+    public static final Block AZUR_GUIDE = registerBlockInBlockset(AZUR_BLOCKS, "azur_guide", new PillarBlock(FabricBlockSettings.copyOf(azurMaterial)));
+    public static final Block AZUR_KINETIC = registerBlockInBlockset(AZUR_BLOCKS, "azur_kinetic", new Block(FabricBlockSettings.copyOf(azurMaterial)));
+    public static final Block AZUR_NEURON = registerBlockInBlockset(AZUR_BLOCKS, "azur_neuron", new Block(FabricBlockSettings.copyOf(azurMaterial)));
+    public static final Block AZUR_PAVE = registerBlockInBlockset(AZUR_BLOCKS, "azur_pave", new Block(FabricBlockSettings.copyOf(azurMaterial)));
+    public static final Block AZUR_PERATION = registerBlockInBlockset(AZUR_BLOCKS, "azur_peration", new Block(FabricBlockSettings.copyOf(azurMaterial)));
+    public static final Block AZUR_PLUG = registerBlockInBlockset(AZUR_BLOCKS, "azur_plug", new Block(FabricBlockSettings.copyOf(azurMaterial)));
+    public static final Block AZUR_RIPPLE = registerBlockInBlockset(AZUR_BLOCKS, "azur_ripple", new Block(FabricBlockSettings.copyOf(azurMaterial)));
+    public static final Block AZUR_RUN = registerBlockInBlockset(AZUR_BLOCKS, "azur_run", new Block(FabricBlockSettings.copyOf(azurMaterial)));
+    public static final Block AZUR_SCRAPE = registerBlockInBlockset(AZUR_BLOCKS, "azur_scrape", new Block(FabricBlockSettings.copyOf(azurMaterial)));
+    public static final Block AZUR_SENSORY = registerBlockInBlockset(AZUR_BLOCKS, "azur_sensory", new Block(FabricBlockSettings.copyOf(azurMaterial)));
+    public static final Block AZUR_SIGN = registerBlockInBlockset(AZUR_BLOCKS, "azur_sign", new Block(FabricBlockSettings.copyOf(azurMaterial)));
+    public static final Block AZUR_SIGNAL = registerBlockInBlockset(AZUR_BLOCKS, "azur_signal", new PillarBlock(FabricBlockSettings.copyOf(azurMaterial)));
+    public static final Block AZUR = registerBlockInBlockset(AZUR_BLOCKS, "azur", new Block(FabricBlockSettings.copyOf(azurMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - FLEQ">
     //</editor-fold>
