@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ltones:block/cerulean_nurr",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ltones:block/cerulean_nurr"
+    },
+    "axis=z": {
+      "model": "ltones:block/cerulean_nurr",
+      "x": 90
+    }
+  }
+}

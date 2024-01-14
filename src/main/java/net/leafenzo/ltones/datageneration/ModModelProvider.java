@@ -397,6 +397,11 @@ public class ModModelProvider extends FabricModelProvider {
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.SYNC_CAUTION, "block/sync_shielding");
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.SYNC_MIZMER);
         //</editor-fold>
+        //<editor-fold desc = "Models - nurr">
+        for(Block block : ModBlocks.NURR_BLOCKS) {
+            blockStateModelGenerator.registerAxisRotated(block, TexturedModel.CUBE_ALL);
+        }
+        //</editor-fold>
 
         // Block Models
         // Cube with all sides the same texture, IE Dirt

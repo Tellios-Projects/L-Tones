@@ -58,6 +58,9 @@ public class ModBlocks {
     public static final ArrayList<Block> ISZM_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> MYST_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> SYNC_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> NURR_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> TYEL_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> ROEN_BLOCKS = new ArrayList<>();
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - FORT">
@@ -274,28 +277,28 @@ public class ModBlocks {
             .strength(0.75f)
             .instrument(Instrument.BASEDRUM)
             .sounds(ModBlockSoundGroup.LAIR);
-    public static final Block LAIR_STRUT = registerBlockInBlockset(LAIR_BLOCKS, "lair_strut", new Block(lairMaterial)); 
-    public static final Block LAIR_SMOOTH = registerBlockInBlockset(LAIR_BLOCKS, "lair_smooth", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON)));
-    public static final Block LAIR_RIGOR = registerBlockInBlockset(LAIR_BLOCKS, "lair_rigor", new Block(lairMaterial));
+    public static final Block LAIR_STRUT = registerBlockInBlockset(LAIR_BLOCKS, "lair_strut", new Block(FabricBlockSettings.copyOf(lairMaterial))); 
+    public static final Block LAIR_SMOOTH = registerBlockInBlockset(LAIR_BLOCKS, "lair_smooth", new Block(FabricBlockSettings.copyOf(lairMaterial).mapColor(MapColor.DARK_CRIMSON)));
+    public static final Block LAIR_RIGOR = registerBlockInBlockset(LAIR_BLOCKS, "lair_rigor", new Block(FabricBlockSettings.copyOf(lairMaterial)));
     public static final Block LAIR_RIGOR_STAIRS = registerBlockInBlockset(LAIR_BLOCKS, "lair_rigor_stairs", new StairsBlock(LAIR_RIGOR.getDefaultState(), FabricBlockSettings.copyOf(LAIR_RIGOR))); static { STAIR_FROM_BLOCK.put(LAIR_RIGOR, LAIR_RIGOR_STAIRS); }
     public static final Block LAIR_RIGOR_SLAB = registerBlockInBlockset(LAIR_BLOCKS, "lair_rigor_slab", new SlabBlock(FabricBlockSettings.copyOf(LAIR_RIGOR))); static { SLAB_FROM_BLOCK.put(LAIR_RIGOR, LAIR_RIGOR_SLAB); }
-    public static final Block LAIR_RIGID = registerBlockInBlockset(LAIR_BLOCKS, "lair_rigid", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON)));
+    public static final Block LAIR_RIGID = registerBlockInBlockset(LAIR_BLOCKS, "lair_rigid", new Block(FabricBlockSettings.copyOf(lairMaterial).mapColor(MapColor.DARK_CRIMSON)));
     public static final Block LAIR_RIGID_STAIRS = registerBlockInBlockset(LAIR_BLOCKS, "lair_rigid_stairs", new StairsBlock(LAIR_RIGID.getDefaultState(), FabricBlockSettings.copyOf(LAIR_RIGID))); static { STAIR_FROM_BLOCK.put(LAIR_RIGID, LAIR_RIGID_STAIRS); }
     public static final Block LAIR_RIGID_SLAB = registerBlockInBlockset(LAIR_BLOCKS, "lair_rigid_slab", new SlabBlock(FabricBlockSettings.copyOf(LAIR_RIGID))); static { SLAB_FROM_BLOCK.put(LAIR_RIGID, LAIR_RIGID_SLAB); }
-    public static final Block LAIR_MESS = registerBlockInBlockset(LAIR_BLOCKS, "lair_mess", new Block(lairMaterial));
-    public static final Block LAIR_MATTERTILES = registerBlockInBlockset(LAIR_BLOCKS, "lair_mattertiles", new Block(lairMaterial)); 
-    public static final Block LAIR_MATTER = registerBlockInBlockset(LAIR_BLOCKS, "lair_matter", new Block(lairMaterial)); 
-    public static final Block LAIR_JEWEL = registerBlockInBlockset(LAIR_BLOCKS, "lair_jewel", new Block(lairMaterial)); 
-    public static final Block LAIR_HEAL = registerBlockInBlockset(LAIR_BLOCKS, "lair_heal", new Block(lairMaterial)); 
-    public static final Block LAIR_DERMADENT = registerBlockInBlockset(LAIR_BLOCKS, "lair_dermadent", new Block(lairMaterial));
-    public static final Block LAIR_DERMA = registerBlockInBlockset(LAIR_BLOCKS, "lair_derma", new Block(lairMaterial));
+    public static final Block LAIR_MESS = registerBlockInBlockset(LAIR_BLOCKS, "lair_mess", new Block(FabricBlockSettings.copyOf(lairMaterial)));
+    public static final Block LAIR_MATTERTILES = registerBlockInBlockset(LAIR_BLOCKS, "lair_mattertiles", new Block(FabricBlockSettings.copyOf(lairMaterial))); 
+    public static final Block LAIR_MATTER = registerBlockInBlockset(LAIR_BLOCKS, "lair_matter", new Block(FabricBlockSettings.copyOf(lairMaterial))); 
+    public static final Block LAIR_JEWEL = registerBlockInBlockset(LAIR_BLOCKS, "lair_jewel", new Block(FabricBlockSettings.copyOf(lairMaterial))); 
+    public static final Block LAIR_HEAL = registerBlockInBlockset(LAIR_BLOCKS, "lair_heal", new Block(FabricBlockSettings.copyOf(lairMaterial))); 
+    public static final Block LAIR_DERMADENT = registerBlockInBlockset(LAIR_BLOCKS, "lair_dermadent", new Block(FabricBlockSettings.copyOf(lairMaterial)));
+    public static final Block LAIR_DERMA = registerBlockInBlockset(LAIR_BLOCKS, "lair_derma", new Block(FabricBlockSettings.copyOf(lairMaterial)));
     public static final Block LAIR_DERMA_STAIRS = registerBlockInBlockset(LAIR_BLOCKS, "lair_derma_stairs", new StairsBlock(LAIR_DERMA.getDefaultState(), FabricBlockSettings.copyOf(LAIR_DERMA))); static { STAIR_FROM_BLOCK.put(LAIR_DERMA, LAIR_DERMA_STAIRS); }
     public static final Block LAIR_DERMA_SLAB = registerBlockInBlockset(LAIR_BLOCKS, "lair_derma_slab", new SlabBlock(FabricBlockSettings.copyOf(LAIR_DERMA))); static { SLAB_FROM_BLOCK.put(LAIR_DERMA, LAIR_DERMA_SLAB); }
-    public static final Block LAIR_CROWNED = registerBlockInBlockset(LAIR_BLOCKS, "lair_crowned", new PillarBlock(lairMaterial));
-    public static final Block LAIR_CHUNK = registerBlockInBlockset(LAIR_BLOCKS, "lair_chunk", new ReversiblePillarBlock(lairMaterial.mapColor(MapColor.DARK_CRIMSON))); 
-    public static final Block LAIR_CELL = registerBlockInBlockset(LAIR_BLOCKS, "lair_cell", new Block(lairMaterial)); 
-    public static final Block LAIR_AGED = registerBlockInBlockset(LAIR_BLOCKS, "lair_aged", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON))); 
-    public static final Block LAIR = registerBlockInBlockset(LAIR_BLOCKS, "lair", new Block(lairMaterial.mapColor(MapColor.DARK_CRIMSON)));
+    public static final Block LAIR_CROWNED = registerBlockInBlockset(LAIR_BLOCKS, "lair_crowned", new PillarBlock(FabricBlockSettings.copyOf(lairMaterial)));
+    public static final Block LAIR_CHUNK = registerBlockInBlockset(LAIR_BLOCKS, "lair_chunk", new ReversiblePillarBlock(FabricBlockSettings.copyOf(lairMaterial).mapColor(MapColor.DARK_CRIMSON))); 
+    public static final Block LAIR_CELL = registerBlockInBlockset(LAIR_BLOCKS, "lair_cell", new Block(FabricBlockSettings.copyOf(lairMaterial))); 
+    public static final Block LAIR_AGED = registerBlockInBlockset(LAIR_BLOCKS, "lair_aged", new Block(FabricBlockSettings.copyOf(lairMaterial).mapColor(MapColor.DARK_CRIMSON))); 
+    public static final Block LAIR = registerBlockInBlockset(LAIR_BLOCKS, "lair", new Block(FabricBlockSettings.copyOf(lairMaterial).mapColor(MapColor.DARK_CRIMSON)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - KRYP">
     private static final FabricBlockSettings krypMaterial = FabricBlockSettings.create()
@@ -597,6 +600,32 @@ public class ModBlocks {
     public static final Block SYNC_CONTAIN = registerBlockInBlockset(SYNC_BLOCKS, "sync_contain", new Block(FabricBlockSettings.copyOf(syncMaterial)));
     public static final Block SYNC_CAUTION = registerBlockInBlockset(SYNC_BLOCKS, "sync_caution", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial)));
     public static final Block SYNC = registerBlockInBlockset(SYNC_BLOCKS, "sync", new Block(FabricBlockSettings.copyOf(syncMaterial)));
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - NURR">
+    private static final FabricBlockSettings nurrMaterial = FabricBlockSettings.create()
+            .requiresTool()
+            .strength(2.4f, 2.0f) // For some reason luminance functions in a default material like this act weird when overwritten (even if it's just a .copyOf???). I got to just be being silly, there's no way.
+            .sounds(ModBlockSoundGroup.NEON);
+    public static final Block NURR_EMPTY = registerBlockInBlockset(NURR_BLOCKS, "empty_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
+    public static final Block NURR = registerBlockInBlockset(NURR_BLOCKS, "nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.GRAY).luminance(state -> 11)));
+    public static final Block NAVY_NURR = registerBlockInBlockset(NURR_BLOCKS, "navy_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.TERRACOTTA_BLUE).luminance(state -> 11)));
+    public static final Block MINT_NURR = registerBlockInBlockset(NURR_BLOCKS, "mint_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BRIGHT_TEAL).luminance(state -> 11)));
+    public static final Block MAGENTA_NURR = registerBlockInBlockset(NURR_BLOCKS, "magenta_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.MAGENTA).luminance(state -> 11)));
+    public static final Block LIME_NURR = registerBlockInBlockset(NURR_BLOCKS, "lime_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.LIME).luminance(state -> 11)));
+    public static final Block GREEN_NURR = registerBlockInBlockset(NURR_BLOCKS, "green_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.EMERALD_GREEN).luminance(state -> 11)));
+    public static final Block FUCHSIA_NURR = registerBlockInBlockset(NURR_BLOCKS, "fuchsia_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.TERRACOTTA_MAGENTA).luminance(state -> 11)));
+    public static final Block CYAN_NURR = registerBlockInBlockset(NURR_BLOCKS, "cyan_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.DIAMOND_BLUE).luminance(state -> 11)));
+    public static final Block CERULEAN_NURR = registerBlockInBlockset(NURR_BLOCKS, "cerulean_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.LIGHT_BLUE).luminance(state -> 11)));
+    public static final Block BLUE_NURR = registerBlockInBlockset(NURR_BLOCKS, "blue_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLUE).luminance(state -> 11)));
+    public static final Block AMBER_NURR = registerBlockInBlockset(NURR_BLOCKS, "amber_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.TERRACOTTA_YELLOW).luminance(state -> 11)));
+    public static final Block YELLOW_NURR = registerBlockInBlockset(NURR_BLOCKS, "yellow_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.YELLOW).luminance(state -> 11)));
+    public static final Block RED_NURR = registerBlockInBlockset(NURR_BLOCKS, "red_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.RED).luminance(state -> 11)));
+    public static final Block PURPLE_NURR = registerBlockInBlockset(NURR_BLOCKS, "purple_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.PURPLE).luminance(state -> 11)));
+    public static final Block ORANGE_NURR = registerBlockInBlockset(NURR_BLOCKS, "orange_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.ORANGE).luminance(state -> 11)));
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - TYEL">
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - ROEN">
     //</editor-fold>
 
     //<editor-fold desc ="Registration">

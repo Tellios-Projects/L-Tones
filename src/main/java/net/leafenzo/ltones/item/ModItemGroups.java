@@ -30,6 +30,10 @@ public class ModItemGroups {
                         for(Block block : ModBlocks.CAST_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.HOST_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.ZANE_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.ISZM_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.MYST_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.NURR_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.TYEL_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.VECT_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.REDDS_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.MINN_BLOCKS) { entries.add(block); }
@@ -43,8 +47,7 @@ public class ModItemGroups {
                         for(Block block : ModBlocks.EXRI_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.AZUR_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.FLEQ_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.ISZM_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.MYST_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.SYNC_BLOCKS) { entries.add(block); }
+                        for(Block block : ModBlocks.ROEN_BLOCKS) { entries.add(block); }
                     }).build());
 }
