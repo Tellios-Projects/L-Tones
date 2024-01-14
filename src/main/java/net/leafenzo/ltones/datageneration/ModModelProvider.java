@@ -367,6 +367,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.FLEQ_LARVAE);
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.FLEQ_PIPE);
         //</editor-fold>
+        //<editor-fold desc = "Models - iszm">
+        for(Block block : ModBlocks.ISZM_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        //</editor-fold>
 
         // Block Models
         // Cube with all sides the same texture, IE Dirt
