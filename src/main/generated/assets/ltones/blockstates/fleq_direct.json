@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ltones:block/fleq_direct",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ltones:block/fleq_direct"
+    },
+    "axis=z": {
+      "model": "ltones:block/fleq_direct",
+      "x": 90
+    }
+  }
+}

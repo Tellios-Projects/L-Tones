@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ltones:block/fleq_larvae",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "ltones:block/fleq_larvae",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "ltones:block/fleq_larvae"
+    },
+    "facing=west": {
+      "model": "ltones:block/fleq_larvae",
+      "y": 90
+    }
+  }
+}

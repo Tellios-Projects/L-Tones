@@ -80,7 +80,7 @@ public class ModBlocks {
     public static final Block ORANGE_FORT = registerBlockInBlockset(FORT_BLOCKS, "orange_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.ORANGE)));
     public static final Block SAND_BLUE_FORT = registerBlockInBlockset(FORT_BLOCKS, "sand_blue_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.LIGHT_BLUE_GRAY)));
     public static final Block STONE_GRAY_FORT = registerBlockInBlockset(FORT_BLOCKS, "stone_gray_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.STONE_GRAY)));
-    //</editor-fold> 
+    //</editor-fold>
     //<editor-fold desc ="Blocks - GLAXX">
     private static final FabricBlockSettings glaxxMaterial = FabricBlockSettings.create()
             .mapColor(MapColor.CLEAR)
@@ -503,6 +503,27 @@ public class ModBlocks {
     public static final Block AZUR = registerBlockInBlockset(AZUR_BLOCKS, "azur", new Block(FabricBlockSettings.copyOf(azurMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - FLEQ">
+    private static final FabricBlockSettings fleqMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.DARK_AQUA)
+            .requiresTool()
+            .strength(2.4f, 2.0f)
+            .sounds(ModBlockSoundGroup.POLYGON);
+    public static final Block FLEQ_WET = registerBlockInBlockset(AZUR_BLOCKS, "fleq_wet", new Block(FabricBlockSettings.copyOf(fleqMaterial)));
+    public static final Block FLEQ_VALVE = registerBlockInBlockset(AZUR_BLOCKS, "fleq_valve", new Block(FabricBlockSettings.copyOf(fleqMaterial)));
+    public static final Block FLEQ_TUBE = registerBlockInBlockset(AZUR_BLOCKS, "fleq_tube", new PillarBlock(FabricBlockSettings.copyOf(fleqMaterial)));
+    public static final Block FLEQ_STACK = registerBlockInBlockset(AZUR_BLOCKS, "fleq_stack", new Block(FabricBlockSettings.copyOf(fleqMaterial)));
+    public static final Block FLEQ_RUBBLE = registerBlockInBlockset(AZUR_BLOCKS, "fleq_rubble", new Block(FabricBlockSettings.copyOf(fleqMaterial).mapColor(MapColor.TERRACOTTA_GRAY)));
+    public static final Block FLEQ_RECK = registerBlockInBlockset(AZUR_BLOCKS, "fleq_reck", new Block(FabricBlockSettings.copyOf(fleqMaterial).mapColor(MapColor.TERRACOTTA_GRAY)));
+    public static final Block FLEQ_PIPE = registerBlockInBlockset(AZUR_BLOCKS, "fleq_pipe", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(fleqMaterial)));
+    public static final Block FLEQ_LENT = registerBlockInBlockset(AZUR_BLOCKS, "fleq_lent", new Block(FabricBlockSettings.copyOf(fleqMaterial)));
+    public static final Block FLEQ_LARVAE = registerBlockInBlockset(AZUR_BLOCKS, "fleq_larvae", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(fleqMaterial)));
+    public static final Block FLEQ_ILLUSION = registerBlockInBlockset(AZUR_BLOCKS, "fleq_illusion", new Block(FabricBlockSettings.copyOf(fleqMaterial)));
+    public static final Block FLEQ_ERODE = registerBlockInBlockset(AZUR_BLOCKS, "fleq_erode", new Block(FabricBlockSettings.copyOf(fleqMaterial).mapColor(MapColor.TERRACOTTA_GRAY)));
+    public static final Block FLEQ_DIRECT = registerBlockInBlockset(AZUR_BLOCKS, "fleq_direct", new PillarBlock(FabricBlockSettings.copyOf(fleqMaterial)));
+    public static final Block FLEQ_BUBBLE = registerBlockInBlockset(AZUR_BLOCKS, "fleq_bubble", new Block(FabricBlockSettings.copyOf(fleqMaterial)));
+    public static final Block FLEQ_BOLDEN = registerBlockInBlockset(AZUR_BLOCKS, "fleq_bolden", new Block(FabricBlockSettings.copyOf(fleqMaterial)));
+    public static final Block FLEQ_ABODE = registerBlockInBlockset(AZUR_BLOCKS, "fleq_abode", new Block(FabricBlockSettings.copyOf(fleqMaterial)));
+    public static final Block FLEQ = registerBlockInBlockset(AZUR_BLOCKS, "fleq", new Block(FabricBlockSettings.copyOf(fleqMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - ISZM">
     //</editor-fold>

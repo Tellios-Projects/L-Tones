@@ -312,6 +312,22 @@
     "ltones:azur_sensory",
     "ltones:azur_sign",
     "ltones:azur_signal",
-    "ltones:azur"
+    "ltones:azur",
+    "ltones:fleq_wet",
+    "ltones:fleq_valve",
+    "ltones:fleq_tube",
+    "ltones:fleq_stack",
+    "ltones:fleq_rubble",
+    "ltones:fleq_reck",
+    "ltones:fleq_pipe",
+    "ltones:fleq_lent",
+    "ltones:fleq_larvae",
+    "ltones:fleq_illusion",
+    "ltones:fleq_erode",
+    "ltones:fleq_direct",
+    "ltones:fleq_bubble",
+    "ltones:fleq_bolden",
+    "ltones:fleq_abode",
+    "ltones:fleq"
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ltones:block/fleq_valve",
+    "east": "ltones:block/fleq_tube",
+    "north": "ltones:block/fleq_tube",
+    "particle": "ltones:block/fleq_tube",
+    "south": "ltones:block/fleq_tube",
+    "up": "ltones:block/fleq_valve",
+    "west": "ltones:block/fleq_tube"
+  }
+}

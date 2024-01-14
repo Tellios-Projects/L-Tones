@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ltones:block/fleq_pipe",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "ltones:block/fleq_pipe",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "ltones:block/fleq_pipe"
+    },
+    "facing=west": {
+      "model": "ltones:block/fleq_pipe",
+      "y": 90
+    }
+  }
+}

@@ -69,36 +69,42 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        //  AGON
+        //<editor-fold desc = "Models - agon">
         for(Block block : ModBlocks.AGON_BLOCKS) {
             blockStateModelGenerator.registerCubeAllModelTexturePool(block);
         }
-        //  FORT
+        //</editor-fold>
+        //<editor-fold desc = "Models - fort">
         for(Block block : ModBlocks.FORT_BLOCKS) {
             blockStateModelGenerator.registerCubeAllModelTexturePool(block);
         }
-        //  GLAXX
+        //</editor-fold>
+        //<editor-fold desc = "Models - glaxx">
         for(Block block : ModBlocks.GLAXX_BLOCKS) {
             blockStateModelGenerator.registerCubeAllModelTexturePool(block);
         }
-        //  CRAY
+        //</editor-fold>
+        //<editor-fold desc = "Models - cray">
         for(Block block : ModBlocks.CRAY_BLOCKS) {
             blockStateModelGenerator.registerCubeAllModelTexturePool(block);
         }
-        //  CAST
+        //</editor-fold>
+        //<editor-fold desc = "Models - cast">
         for(Block block : ModBlocks.CAST_BLOCKS) {
             blockStateModelGenerator.registerCubeAllModelTexturePool(block);
         }
-        //  HOST
+        //</editor-fold>
+        //<editor-fold desc = "Models - host">
         for(Block block : ModBlocks.HOST_BLOCKS) {
             blockStateModelGenerator.registerCubeAllModelTexturePool(block);
         }
-        //  ZANE
+        //</editor-fold>
+        //<editor-fold desc = "Models - zane">
         for(Block block : ModBlocks.ZANE_BLOCKS) {
             blockStateModelGenerator.registerCubeAllModelTexturePool(block);
         }
-
-        //  REDDS
+        //</editor-fold>
+        //<editor-fold desc = "Models - redds">
         BlockStateModelGenerator.BlockTexturePool reddsPiceTexturePool =
                 blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.REDDS_PICE);
         reddsPiceTexturePool.slab(ModBlocks.REDDS_PICE_SLAB);
@@ -118,8 +124,8 @@ public class ModModelProvider extends FabricModelProvider {
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_CURRENT, Models.CUBE_ALL, TextureMap::all);
         registerLitOnOffAxisRotatedBlock(blockStateModelGenerator, ModBlocks.REDDS_TAPE, Models.CUBE_ALL, TextureMap::all);
         registerLitOnOffGlazedTerracottaBlock(blockStateModelGenerator, ModBlocks.REDDS_GLAZED, Models.CUBE_ALL, TextureMap::all);
-
-        //  VECT
+        //</editor-fold>
+        //<editor-fold desc = "Models - vect">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_TILE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_RIVET);
@@ -136,14 +142,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_TANK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_NETWORK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_FOIL);
-
-        //  MINN
+        //</editor-fold>
+        //<editor-fold desc = "Models - minn">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_TILES);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_RESONANCE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_QUILT);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_POFFNODE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_POFFCAGE);
-//        registerUpDefaultOrientable(blockStateModelGenerator, ModBlocks.MINN_POFFCAGE, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_POFF);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_PAD);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_NEXUS);
@@ -151,13 +156,12 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.MINN_LINE, TexturedModel.CUBE_ALL); ;
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_CIRCLE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_CAGE);
-//        registerUpDefaultOrientable(blockStateModelGenerator, ModBlocks.MINN_CAGE, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_CUBES);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_BLANK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_BEVEL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN);
-
-        //  LAIR
+        //</editor-fold>
+        //<editor-fold desc = "Models - lair">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_STRUT);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_SMOOTH);
         BlockStateModelGenerator.BlockTexturePool lairRigorTexturePool =
@@ -183,8 +187,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_CELL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_AGED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR);
-
-        //   KRYP
+        //</editor-fold>
+        //<editor-fold desc = "Models - kryp">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_WIRE);
         BlockStateModelGenerator.BlockTexturePool krypStorageTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_STORAGE);
         krypStorageTexturePool.slab(ModBlocks.KRYP_STORAGE_SLAB);
@@ -207,8 +211,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.KRYP_SUPPORT, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.KRYP_KUBT, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.KRYP_CHUNK);
-
-        //   LAVE
+        //</editor-fold>
+        //<editor-fold desc = "Models - lave">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_WINDOW);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_VENT);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_UNEVEN);
@@ -229,8 +233,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.LAVE_TRACKPAD, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.LAVE_ELEVATE, TexturedModel.CUBE_ALL);
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.LAVE_BEAM, "block/lave_panel");
-
-        // VEELD
+        //</editor-fold>
+        //<editor-fold desc = "Models - veeld">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_WET);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_RIVETED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_RIPPLE);
@@ -251,8 +255,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.VEELD_STRUCTURE, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.VEELD_DRILL, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.VEELD_PATTERNED);
-
-        // JELT
+        //</editor-fold>
+        //<editor-fold desc = "Models - jelt">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT_SUPPLY);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT_POKE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JELT_ORGANIZE);
@@ -269,8 +273,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.JELT_PATH, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.JELT_EXHAUST, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.JELT_PATHJOINT);
-
-        // KORP
+        //</editor-fold>
+        //<editor-fold desc = "Models - korp">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_WALL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_SECURE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KORP_REGULATE);
@@ -287,8 +291,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.KORP_FLOW, TexturedModel.CUBE_ALL);
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.KORP_OUTFLOW, "block/korp_regulate");
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.KORP_CONSUME);
-
-        // TANK
+        //</editor-fold>
+        //<editor-fold desc = "Models - tank">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_ZIZER);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_WINDOW);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_TREAD);
@@ -305,8 +309,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.TANK_RIGID, TexturedModel.CUBE_ALL);
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.TANK_BEAM, "block/tank_secure");
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.TANK_CANNON);
-
-        // EXRI
+        //</editor-fold>
+        //<editor-fold desc = "Models - axri">
         // TODO ask eliza how she prefers the side textures / potential horizontal-ness of these to work
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_TECT);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_STEM);
@@ -326,8 +330,8 @@ public class ModModelProvider extends FabricModelProvider {
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_CRITICAL, Models.CUBE_ALL, TextureMap::all);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_CONTROL, Models.CUBE_ALL, TextureMap::all);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_LEVEL, Models.CUBE_ALL, TextureMap::all);
-
-        // AZUR
+        //</editor-fold>
+        //<editor-fold desc = "Models - azur">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR_CUBE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR_KINETIC);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR_NEURON);
@@ -344,6 +348,25 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.AZUR_CYBER, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.AZUR_GUIDE, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.AZUR_SIGNAL, TexturedModel.CUBE_ALL);
+        //</editor-fold>
+        //<editor-fold desc = "Models - fleq">
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FLEQ_WET);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FLEQ_VALVE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FLEQ_STACK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FLEQ_RUBBLE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FLEQ_RECK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FLEQ_LENT);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FLEQ_ILLUSION);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FLEQ_ERODE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FLEQ_BUBBLE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FLEQ_BOLDEN);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FLEQ_ABODE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FLEQ);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.FLEQ_DIRECT, TexturedModel.CUBE_ALL);
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.FLEQ_TUBE, "block/fleq_valve");
+        blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.FLEQ_LARVAE);
+        blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.FLEQ_PIPE);
+        //</editor-fold>
 
         // Block Models
         // Cube with all sides the same texture, IE Dirt
