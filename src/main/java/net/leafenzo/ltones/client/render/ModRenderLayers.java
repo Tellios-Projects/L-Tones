@@ -15,5 +15,8 @@ public class ModRenderLayers {
         for(Block block : ModBlocks.GLAXX_BLOCKS) {
             BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getTranslucent());
         }
+        for(Block block : ModBlocks.MYST_BLOCKS) {
+            BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getTranslucent());
+        }
     }
 }

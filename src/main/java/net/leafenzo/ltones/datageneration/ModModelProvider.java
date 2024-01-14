@@ -372,6 +372,11 @@ public class ModModelProvider extends FabricModelProvider {
             blockStateModelGenerator.registerCubeAllModelTexturePool(block);
         }
         //</editor-fold>
+        //<editor-fold desc = "Models - myst">
+        for(Block block : ModBlocks.MYST_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        //</editor-fold>
 
         // Block Models
         // Cube with all sides the same texture, IE Dirt
