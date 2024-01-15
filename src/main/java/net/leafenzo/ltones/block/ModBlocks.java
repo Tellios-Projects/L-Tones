@@ -604,26 +604,49 @@ public class ModBlocks {
     //<editor-fold desc ="Blocks - NURR">
     private static final FabricBlockSettings nurrMaterial = FabricBlockSettings.create()
             .requiresTool()
-            .strength(2.4f, 2.0f) // For some reason luminance functions in a default material like this act weird when overwritten (even if it's just a .copyOf???). I got to just be being silly, there's no way.
+            .strength(1.2f)
+            .luminance(state -> 11)
             .sounds(ModBlockSoundGroup.NEON);
-    public static final Block NURR_EMPTY = registerBlockInBlockset(NURR_BLOCKS, "empty_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
-    public static final Block NURR = registerBlockInBlockset(NURR_BLOCKS, "nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.GRAY).luminance(state -> 11)));
-    public static final Block NAVY_NURR = registerBlockInBlockset(NURR_BLOCKS, "navy_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.TERRACOTTA_BLUE).luminance(state -> 11)));
-    public static final Block MINT_NURR = registerBlockInBlockset(NURR_BLOCKS, "mint_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BRIGHT_TEAL).luminance(state -> 11)));
-    public static final Block MAGENTA_NURR = registerBlockInBlockset(NURR_BLOCKS, "magenta_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.MAGENTA).luminance(state -> 11)));
-    public static final Block LIME_NURR = registerBlockInBlockset(NURR_BLOCKS, "lime_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.LIME).luminance(state -> 11)));
-    public static final Block GREEN_NURR = registerBlockInBlockset(NURR_BLOCKS, "green_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.EMERALD_GREEN).luminance(state -> 11)));
-    public static final Block FUCHSIA_NURR = registerBlockInBlockset(NURR_BLOCKS, "fuchsia_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.TERRACOTTA_MAGENTA).luminance(state -> 11)));
-    public static final Block CYAN_NURR = registerBlockInBlockset(NURR_BLOCKS, "cyan_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.DIAMOND_BLUE).luminance(state -> 11)));
-    public static final Block CERULEAN_NURR = registerBlockInBlockset(NURR_BLOCKS, "cerulean_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.LIGHT_BLUE).luminance(state -> 11)));
-    public static final Block BLUE_NURR = registerBlockInBlockset(NURR_BLOCKS, "blue_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLUE).luminance(state -> 11)));
-    public static final Block AMBER_NURR = registerBlockInBlockset(NURR_BLOCKS, "amber_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.TERRACOTTA_YELLOW).luminance(state -> 11)));
-    public static final Block YELLOW_NURR = registerBlockInBlockset(NURR_BLOCKS, "yellow_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.YELLOW).luminance(state -> 11)));
-    public static final Block RED_NURR = registerBlockInBlockset(NURR_BLOCKS, "red_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.RED).luminance(state -> 11)));
-    public static final Block PURPLE_NURR = registerBlockInBlockset(NURR_BLOCKS, "purple_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.PURPLE).luminance(state -> 11)));
-    public static final Block ORANGE_NURR = registerBlockInBlockset(NURR_BLOCKS, "orange_nurr", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.ORANGE).luminance(state -> 11)));
+    public static final Block NURR_EMPTY = registerBlockInBlockset(NURR_BLOCKS, "empty_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.BLACK).luminance(state -> 0)));
+    public static final Block NURR = registerBlockInBlockset(NURR_BLOCKS, "nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.GRAY)));
+    public static final Block NAVY_NURR = registerBlockInBlockset(NURR_BLOCKS, "navy_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.TERRACOTTA_BLUE)));
+    public static final Block MINT_NURR = registerBlockInBlockset(NURR_BLOCKS, "mint_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.BRIGHT_TEAL)));
+    public static final Block MAGENTA_NURR = registerBlockInBlockset(NURR_BLOCKS, "magenta_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.MAGENTA)));
+    public static final Block LIME_NURR = registerBlockInBlockset(NURR_BLOCKS, "lime_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.LIME)));
+    public static final Block GREEN_NURR = registerBlockInBlockset(NURR_BLOCKS, "green_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.EMERALD_GREEN)));
+    public static final Block FUCHSIA_NURR = registerBlockInBlockset(NURR_BLOCKS, "fuchsia_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.TERRACOTTA_MAGENTA)));
+    public static final Block CYAN_NURR = registerBlockInBlockset(NURR_BLOCKS, "cyan_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.DIAMOND_BLUE)));
+    public static final Block CERULEAN_NURR = registerBlockInBlockset(NURR_BLOCKS, "cerulean_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block BLUE_NURR = registerBlockInBlockset(NURR_BLOCKS, "blue_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.BLUE)));
+    public static final Block AMBER_NURR = registerBlockInBlockset(NURR_BLOCKS, "amber_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.TERRACOTTA_YELLOW)));
+    public static final Block YELLOW_NURR = registerBlockInBlockset(NURR_BLOCKS, "yellow_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.YELLOW)));
+    public static final Block RED_NURR = registerBlockInBlockset(NURR_BLOCKS, "red_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.RED)));
+    public static final Block PURPLE_NURR = registerBlockInBlockset(NURR_BLOCKS, "purple_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.PURPLE)));
+    public static final Block ORANGE_NURR = registerBlockInBlockset(NURR_BLOCKS, "orange_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.ORANGE)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - TYEL">
+
+    private static final FabricBlockSettings tyelMaterial = FabricBlockSettings.create()
+            .requiresTool()
+            .strength(1.4f)
+            .sounds(BlockSoundGroup.STONE);
+    public static final Block TAN_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "tan_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.RAW_IRON_PINK)));
+    public static final Block RED_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "red_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.RED)));
+    public static final Block PURPLE_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "purple_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.PURPLE)));
+    public static final Block MAGENTA_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "magenta_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.MAGENTA)));
+    public static final Block LIME_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "lime_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.LIME)));
+    public static final Block GREEN_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "green_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.GREEN)));
+    public static final Block FUCHSIA_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "fuchsia_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.DULL_PINK)));
+    public static final Block CYAN_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "cyan_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.DIAMOND_BLUE)));
+    public static final Block CHARTREUSE_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "chartreuse_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.LIME)));
+    public static final Block CERULEAN_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "cerulean_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block BLUE_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "blue_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.BLUE)));
+    public static final Block AMBER_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "amber_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.TERRACOTTA_YELLOW)));
+    public static final Block YELLOW_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "yellow_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.YELLOW)));
+    public static final Block VERMILION_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "vermilion_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block TYEL_EMPTY = registerBlockInBlockset(TYEL_BLOCKS, "tyel_empty", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.BLACK)));
+    public static final Block TYEL = registerBlockInBlockset(TYEL_BLOCKS, "tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.WHITE_GRAY)));
+
     //</editor-fold>
     //<editor-fold desc ="Blocks - ROEN">
     //</editor-fold>

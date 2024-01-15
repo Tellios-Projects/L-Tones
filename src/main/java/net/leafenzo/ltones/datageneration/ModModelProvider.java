@@ -402,6 +402,12 @@ public class ModModelProvider extends FabricModelProvider {
             blockStateModelGenerator.registerAxisRotated(block, TexturedModel.CUBE_ALL);
         }
         //</editor-fold>
+        //<editor-fold desc = "Models - tyel">
+        for(Block block : ModBlocks.TYEL_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        //</editor-fold>
+
 
         // Block Models
         // Cube with all sides the same texture, IE Dirt

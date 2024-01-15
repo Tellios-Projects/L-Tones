@@ -86,6 +86,9 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         for(Block block : ModBlocks.NURR_BLOCKS) {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
         }
+        for(Block block : ModBlocks.TYEL_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
         //</editor-fold>
 
         //<editor-fold desc ="BlockTags for Individual Blocks">

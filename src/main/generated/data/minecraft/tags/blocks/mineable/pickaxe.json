@@ -344,6 +344,22 @@
     "ltones:yellow_nurr",
     "ltones:red_nurr",
     "ltones:purple_nurr",
-    "ltones:orange_nurr"
+    "ltones:orange_nurr",
+    "ltones:tan_tyel",
+    "ltones:red_tyel",
+    "ltones:purple_tyel",
+    "ltones:magenta_tyel",
+    "ltones:lime_tyel",
+    "ltones:green_tyel",
+    "ltones:fuchsia_tyel",
+    "ltones:cyan_tyel",
+    "ltones:chartreuse_tyel",
+    "ltones:cerulean_tyel",
+    "ltones:blue_tyel",
+    "ltones:amber_tyel",
+    "ltones:yellow_tyel",
+    "ltones:vermilion_tyel",
+    "ltones:tyel_empty",
+    "ltones:tyel"
   ]
 }
