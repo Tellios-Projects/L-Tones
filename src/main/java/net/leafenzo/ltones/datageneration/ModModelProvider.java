@@ -189,10 +189,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR);
         //</editor-fold>
         //<editor-fold desc = "Models - kryp">
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_WIRE);
-        BlockStateModelGenerator.BlockTexturePool krypStorageTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_STORAGE);
-        krypStorageTexturePool.slab(ModBlocks.KRYP_STORAGE_SLAB);
-        krypStorageTexturePool.stairs(ModBlocks.KRYP_STORAGE_STAIRS);
+        BlockStateModelGenerator.BlockTexturePool krypWireTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_WIRE);
+        krypWireTexturePool.slab(ModBlocks.KRYP_WIRE_SLAB);
+        krypWireTexturePool.stairs(ModBlocks.KRYP_WIRE_STAIRS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_STORAGE);
         BlockStateModelGenerator.BlockTexturePool krypSmoothTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_SMOOTH);
         krypSmoothTexturePool.slab(ModBlocks.KRYP_SMOOTH_SLAB);
         krypSmoothTexturePool.stairs(ModBlocks.KRYP_SMOOTH_STAIRS);
@@ -220,9 +220,7 @@ public class ModModelProvider extends FabricModelProvider {
         laveTileTexturePool.slab(ModBlocks.LAVE_TILE_SLAB);
         laveTileTexturePool.stairs(ModBlocks.LAVE_TILE_STAIRS);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_THICK);
-        BlockStateModelGenerator.BlockTexturePool laveSectionTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_SECTION);
-        laveSectionTexturePool.slab(ModBlocks.LAVE_SECTION_SLAB);
-        laveSectionTexturePool.stairs(ModBlocks.LAVE_SECTION_STAIRS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_SECTION);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_PANEL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_LOW);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAVE_HEX);
@@ -245,9 +243,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_ETCHED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_EMBOSSED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_CORE);
-        BlockStateModelGenerator.BlockTexturePool veeldBrickTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_BRICK);
-        veeldBrickTexturePool.slab(ModBlocks.VEELD_BRICK_SLAB);
-        veeldBrickTexturePool.stairs(ModBlocks.VEELD_BRICK_STAIRS);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_BRICK);
         BlockStateModelGenerator.BlockTexturePool veeldTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD);
         veeldTexturePool.slab(ModBlocks.VEELD_SLAB);
         veeldTexturePool.stairs(ModBlocks.VEELD_STAIRS);

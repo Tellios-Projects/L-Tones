@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "ltones:block/veeld_brick",
-    "side": "ltones:block/veeld_brick",
-    "top": "ltones:block/veeld_brick"
-  }
-}

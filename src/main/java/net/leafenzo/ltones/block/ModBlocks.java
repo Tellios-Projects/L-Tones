@@ -307,10 +307,10 @@ public class ModBlocks {
             .strength(3.0f, 6.0f)
             .sounds(BlockSoundGroup.COPPER);
     public static final Block KRYP_WIRE = registerBlockInBlockset(KRYP_BLOCKS, "kryp_wire", new Block(FabricBlockSettings.copyOf(krypMaterial)));
+    public static final Block KRYP_WIRE_STAIRS = registerBlockInBlockset(KRYP_BLOCKS, "kryp_wire_stairs", new StairsBlock(KRYP_WIRE.getDefaultState(), FabricBlockSettings.copyOf(KRYP_WIRE))); static { STAIR_FROM_BLOCK.put(KRYP_WIRE, KRYP_WIRE_STAIRS); }
+    public static final Block KRYP_WIRE_SLAB = registerBlockInBlockset(KRYP_BLOCKS, "kryp_wire_slab", new SlabBlock(FabricBlockSettings.copyOf(KRYP_WIRE))); static { SLAB_FROM_BLOCK.put(KRYP_WIRE, KRYP_WIRE_SLAB); }
     public static final Block KRYP_SUPPORT = registerBlockInBlockset(KRYP_BLOCKS, "kryp_support", new PillarBlock(FabricBlockSettings.copyOf(krypMaterial)));
     public static final Block KRYP_STORAGE = registerBlockInBlockset(KRYP_BLOCKS, "kryp_storage", new Block(FabricBlockSettings.copyOf(krypMaterial)));
-    public static final Block KRYP_STORAGE_STAIRS = registerBlockInBlockset(KRYP_BLOCKS, "kryp_storage_stairs", new StairsBlock(KRYP_STORAGE.getDefaultState(), FabricBlockSettings.copyOf(KRYP_STORAGE))); static { STAIR_FROM_BLOCK.put(KRYP_STORAGE, KRYP_STORAGE_STAIRS); }
-    public static final Block KRYP_STORAGE_SLAB = registerBlockInBlockset(KRYP_BLOCKS, "kryp_storage_slab", new SlabBlock(FabricBlockSettings.copyOf(KRYP_STORAGE))); static { SLAB_FROM_BLOCK.put(KRYP_STORAGE, KRYP_STORAGE_SLAB); }
     public static final Block KRYP_SMOOTH = registerBlockInBlockset(KRYP_BLOCKS, "kryp_smooth", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(BlockSoundGroup.CALCITE)));
     public static final Block KRYP_SMOOTH_STAIRS = registerBlockInBlockset(KRYP_BLOCKS, "kryp_smooth_stairs", new StairsBlock(KRYP_SMOOTH.getDefaultState(), FabricBlockSettings.copyOf(KRYP_SMOOTH))); static { STAIR_FROM_BLOCK.put(KRYP_SMOOTH, KRYP_SMOOTH_STAIRS); }
     public static final Block KRYP_SMOOTH_SLAB = registerBlockInBlockset(KRYP_BLOCKS, "kryp_smooth_slab", new SlabBlock(FabricBlockSettings.copyOf(KRYP_SMOOTH))); static { SLAB_FROM_BLOCK.put(KRYP_SMOOTH, KRYP_SMOOTH_SLAB); }
@@ -345,8 +345,6 @@ public class ModBlocks {
     public static final Block LAVE_TILE_SLAB = registerBlockInBlockset(LAVE_BLOCKS, "lave_tile_slab", new SlabBlock(FabricBlockSettings.copyOf(LAVE_TILE))); static { SLAB_FROM_BLOCK.put(LAVE_TILE, LAVE_TILE_SLAB); }
     public static final Block LAVE_THICK = registerBlockInBlockset(LAVE_BLOCKS, "lave_thick", new Block(FabricBlockSettings.copyOf(laveMaterial)));
     public static final Block LAVE_SECTION = registerBlockInBlockset(LAVE_BLOCKS, "lave_section", new Block(FabricBlockSettings.copyOf(laveMaterial)));
-    public static final Block LAVE_SECTION_STAIRS = registerBlockInBlockset(LAVE_BLOCKS, "lave_section_stairs", new StairsBlock(LAVE_SECTION.getDefaultState(), FabricBlockSettings.copyOf(LAVE_SECTION))); static { STAIR_FROM_BLOCK.put(LAVE_SECTION, LAVE_SECTION_STAIRS); }
-    public static final Block LAVE_SECTION_SLAB = registerBlockInBlockset(LAVE_BLOCKS, "lave_section_slab", new SlabBlock(FabricBlockSettings.copyOf(LAVE_SECTION))); static { SLAB_FROM_BLOCK.put(LAVE_SECTION, LAVE_SECTION_SLAB); }
     public static final Block LAVE_PANEL = registerBlockInBlockset(LAVE_BLOCKS, "lave_panel", new Block(FabricBlockSettings.copyOf(laveMaterial)));
     public static final Block LAVE_LOW = registerBlockInBlockset(LAVE_BLOCKS, "lave_low", new Block(FabricBlockSettings.copyOf(laveMaterial).mapColor(MapColor.CYAN)));
     public static final Block LAVE_HEX = registerBlockInBlockset(LAVE_BLOCKS, "lave_hex", new Block(FabricBlockSettings.copyOf(laveMaterial)));
@@ -379,8 +377,6 @@ public class ModBlocks {
     public static final Block VEELD_DRILL = registerBlockInBlockset(VEELD_BLOCKS, "veeld_drill", new PillarBlock(FabricBlockSettings.copyOf(veeldMaterial)));
     public static final Block VEELD_CORE = registerBlockInBlockset(VEELD_BLOCKS, "veeld_core", new Block(FabricBlockSettings.copyOf(veeldMaterial)));
     public static final Block VEELD_BRICK = registerBlockInBlockset(VEELD_BLOCKS, "veeld_brick", new Block(FabricBlockSettings.copyOf(veeldMaterial)));
-    public static final Block VEELD_BRICK_STAIRS = registerBlockInBlockset(VEELD_BLOCKS, "veeld_brick_stairs", new StairsBlock(VEELD_BRICK.getDefaultState(), FabricBlockSettings.copyOf(VEELD_BRICK))); static { STAIR_FROM_BLOCK.put(VEELD_BRICK, VEELD_BRICK_STAIRS); }
-    public static final Block VEELD_BRICK_SLAB = registerBlockInBlockset(VEELD_BLOCKS, "veeld_brick_slab", new SlabBlock(FabricBlockSettings.copyOf(VEELD_BRICK))); static { SLAB_FROM_BLOCK.put(VEELD_BRICK, VEELD_BRICK_SLAB); }
     public static final Block VEELD = registerBlockInBlockset(VEELD_BLOCKS, "veeld", new Block(FabricBlockSettings.copyOf(veeldMaterial).mapColor(MapColor.GREEN)));
     public static final Block VEELD_STAIRS = registerBlockInBlockset(VEELD_BLOCKS, "veeld_stairs", new StairsBlock(VEELD.getDefaultState(), FabricBlockSettings.copyOf(VEELD))); static { STAIR_FROM_BLOCK.put(VEELD, VEELD_STAIRS); }
     public static final Block VEELD_SLAB = registerBlockInBlockset(VEELD_BLOCKS, "veeld_slab", new SlabBlock(FabricBlockSettings.copyOf(VEELD))); static { SLAB_FROM_BLOCK.put(VEELD, VEELD_SLAB); }

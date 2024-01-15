@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "ltones:block/lave_section",
-    "side": "ltones:block/lave_section",
-    "top": "ltones:block/lave_section"
-  }
-}

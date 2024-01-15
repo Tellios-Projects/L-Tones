@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ltones:kryp_storage_stairs"
+          "name": "ltones:kryp_wire_slab"
         }
       ],
       "rolls": 1.0

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "ltones:block/kryp_storage",
-    "side": "ltones:block/kryp_storage",
-    "top": "ltones:block/kryp_storage"
-  }
-}
