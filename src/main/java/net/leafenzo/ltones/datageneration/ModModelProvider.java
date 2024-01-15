@@ -311,7 +311,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.TANK_CANNON);
         //</editor-fold>
         //<editor-fold desc = "Models - axri">
-        // TODO ask eliza how she prefers the side textures / potential horizontal-ness of these to work
+        // TODO horizontal placement and exri_seal sides
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_TECT);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_STEM);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_STEEL);
@@ -392,7 +392,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC);
 //        blockStateModelGenerator.registerAxisRotated(ModBlocks.SYNC_TANK, TexturedModel.CUBE_ALL);
 //        blockStateModelGenerator.registerAxisRotated(ModBlocks.SYNC_CAUTION, TexturedModel.CUBE_ALL);
-        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.SYNC_TANK, "block/sync_shielding"); // TODO make sure these are ok with el
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.SYNC_TANK, "block/sync_shielding");
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.SYNC_HEX, "block/sync_junction");
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.SYNC_CAUTION, "block/sync_shielding");
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.SYNC_MIZMER);
@@ -421,7 +421,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROEN);
 //        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROEN_LESION, "block/roen_dessicate");
         blockStateModelGenerator.registerAxisRotated(ModBlocks.ROEN_LESION, TexturedModel.CUBE_ALL);
-        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROEN_TRACT, "block/roen_assay"); //TODO check if el likes these
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROEN_TRACT, "block/roen_assay");
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROEN_BACILLUS, "block/roen_agar");
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROEN_OPERON, "block/roen_film");
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.ROEN_KINESIN);

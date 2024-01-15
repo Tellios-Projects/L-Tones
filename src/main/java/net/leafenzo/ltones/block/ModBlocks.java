@@ -551,7 +551,7 @@ public class ModBlocks {
     public static final Block ISZM = registerBlockInBlockset(ISZM_BLOCKS, "iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.GRAY)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - MYST">
-    private static final FabricBlockSettings mystMaterial = FabricBlockSettings.create() // TODO, roiling animation
+    private static final FabricBlockSettings mystMaterial = FabricBlockSettings.create() // TODO, color based scrolling animation
             .strength(0.3f)
             .mapColor(MapColor.CLEAR)
             .nonOpaque()
@@ -559,8 +559,7 @@ public class ModBlocks {
             .solidBlock(ModBlocks::never)
             .suffocates(ModBlocks::never)
             .blockVision(ModBlocks::never)
-//            .collidable(false)  //TODO ask eliza if these should have collision (no collision would be hard (but not impossible) to implement)
-            .sounds(BlockSoundGroup.SNOW); // TODO custom sound
+            .sounds(BlockSoundGroup.SNOW);
     public static final Block RED_MYST = registerBlockInBlockset(MYST_BLOCKS, "red_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
     public static final Block PURPLE_MYST = registerBlockInBlockset(MYST_BLOCKS, "purple_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
     public static final Block PINK_MYST = registerBlockInBlockset(MYST_BLOCKS, "pink_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
@@ -587,7 +586,7 @@ public class ModBlocks {
     public static final Block SYNC_TANK = registerBlockInBlockset(SYNC_BLOCKS, "sync_tank", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial)));
     public static final Block SYNC_SHIELDING = registerBlockInBlockset(SYNC_BLOCKS, "sync_shielding", new Block(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
     public static final Block SYNC_SAFE = registerBlockInBlockset(SYNC_BLOCKS, "sync_safe", new Block(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
-    public static final Block SYNC_MIZMER = registerBlockInBlockset(SYNC_BLOCKS, "sync_mizmer", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(syncMaterial))); // TODO ask el about the contrast on this
+    public static final Block SYNC_MIZMER = registerBlockInBlockset(SYNC_BLOCKS, "sync_mizmer", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(syncMaterial)));
     public static final Block SYNC_MESS = registerBlockInBlockset(SYNC_BLOCKS, "sync_mess", new Block(FabricBlockSettings.copyOf(syncMaterial)));
     public static final Block SYNC_LEADED = registerBlockInBlockset(SYNC_BLOCKS, "sync_leaded", new Block(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
     public static final Block SYNC_JUNCTION = registerBlockInBlockset(SYNC_BLOCKS, "sync_junction", new Block(FabricBlockSettings.copyOf(syncMaterial)));
@@ -650,9 +649,9 @@ public class ModBlocks {
     private static final FabricBlockSettings roenMaterial = FabricBlockSettings.create()
             .mapColor(MapColor.LICHEN_GREEN)
             .strength(0.6f)
-            .sounds(BlockSoundGroup.CORAL);
+            .sounds(ModBlockSoundGroup.LAIR);
     public static final Block ROEN_DESSICATE = registerBlockInBlockset(ROEN_BLOCKS, "roen_dessicate", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.RAW_IRON_PINK)));
-    public static final Block ROEN_LESION = registerBlockInBlockset(ROEN_BLOCKS, "roen_lesion", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.RED)));
+    public static final Block ROEN_LESION = registerBlockInBlockset(ROEN_BLOCKS, "roen_lesion", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.RED))); //TODO custom top texture
     public static final Block ROEN_TRACT = registerBlockInBlockset(ROEN_BLOCKS, "roen_tract", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.PURPLE)));
     public static final Block ROEN_AGAR = registerBlockInBlockset(ROEN_BLOCKS, "roen_agar", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.MAGENTA)));
     public static final Block ROEN_KINESIN = registerBlockInBlockset(ROEN_BLOCKS, "roen_kinesin", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.GREEN)));
@@ -663,7 +662,7 @@ public class ModBlocks {
     public static final Block ROEN_ARRAY = registerBlockInBlockset(ROEN_BLOCKS, "roen_array", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.BLUE)));
     public static final Block ROEN_BACILLUS = registerBlockInBlockset(ROEN_BLOCKS, "roen_bacillus", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.TERRACOTTA_YELLOW)));
     public static final Block ROEN_ASSAY = registerBlockInBlockset(ROEN_BLOCKS, "roen_assay", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.YELLOW)));
-    public static final Block ROEN_OPERON = registerBlockInBlockset(ROEN_BLOCKS, "roen_operon", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block ROEN_OPERON = registerBlockInBlockset(ROEN_BLOCKS, "roen_operon", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.TERRACOTTA_ORANGE))); //TODO custom top texture
     public static final Block ROEN_ONCOGENE = registerBlockInBlockset(ROEN_BLOCKS, "roen_oncogene", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.BLACK)));
     public static final Block ROEN_GROUT = registerBlockInBlockset(ROEN_BLOCKS, "roen_grout", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.WHITE_GRAY)));
     public static final Block ROEN = registerBlockInBlockset(ROEN_BLOCKS, "roen", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.LIME)));
