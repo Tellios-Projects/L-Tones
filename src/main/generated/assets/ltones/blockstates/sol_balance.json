@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ltones:block/sol_balance"
+    },
+    "lit=true": {
+      "model": "ltones:block/sol_balance_on"
+    }
+  }
+}

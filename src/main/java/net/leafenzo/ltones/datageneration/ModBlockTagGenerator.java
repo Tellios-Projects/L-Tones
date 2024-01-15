@@ -90,7 +90,10 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
         }
         for(Block block : ModBlocks.ROEN_BLOCKS) {
-            getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE).add(block);
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+        for(Block block : ModBlocks.SOL_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
         }
         //</editor-fold>
 

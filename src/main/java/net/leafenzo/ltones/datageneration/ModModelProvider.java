@@ -415,12 +415,29 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROEN_ONCOGENE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROEN_GROUT);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROEN);
-//        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROEN_LESION, "block/roen_dessicate");
         blockStateModelGenerator.registerAxisRotated(ModBlocks.ROEN_LESION, TexturedModel.CUBE_ALL);
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROEN_TRACT, "block/roen_assay");
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROEN_BACILLUS, "block/roen_agar");
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROEN_OPERON, "block/roen_film");
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.ROEN_KINESIN);
+        //</editor-fold>
+        //<editor-fold desc = "Models - sol">
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_PHOTO, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_ELECTRON, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_MAX, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_MIN, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_CHROMA, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_FLARE, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_BLIND, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_PROTON, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_BALANCE, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_GLARE, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_FIELD, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_NUCLEI, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_CORONA, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffAxisRotatedBlock(blockStateModelGenerator, ModBlocks.SOL_SPECTRA, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffGlazedTerracottaBlock(blockStateModelGenerator, ModBlocks.SOL_BLAZAR,  Models.CUBE_ALL, TextureMap::all);
         //</editor-fold>
 
 

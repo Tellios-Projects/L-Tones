@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "axis=x,lit=false": {
+      "model": "ltones:block/sol_spectra",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,lit=true": {
+      "model": "ltones:block/sol_spectra_on",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,lit=false": {
+      "model": "ltones:block/sol_spectra"
+    },
+    "axis=y,lit=true": {
+      "model": "ltones:block/sol_spectra_on"
+    },
+    "axis=z,lit=false": {
+      "model": "ltones:block/sol_spectra",
+      "x": 90
+    },
+    "axis=z,lit=true": {
+      "model": "ltones:block/sol_spectra_on",
+      "x": 90
+    }
+  }
+}

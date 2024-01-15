@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ltones:block/sol_proton"
+    },
+    "lit=true": {
+      "model": "ltones:block/sol_proton_on"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ltones:block/sol_field"
+    },
+    "lit=true": {
+      "model": "ltones:block/sol_field_on"
+    }
+  }
+}

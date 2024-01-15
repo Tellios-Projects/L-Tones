@@ -61,6 +61,7 @@ public class ModBlocks {
     public static final ArrayList<Block> NURR_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> TYEL_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> ROEN_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> SOL_BLOCKS = new ArrayList<>();
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - FORT">
@@ -662,6 +663,36 @@ public class ModBlocks {
     public static final Block ROEN_ONCOGENE = registerBlockInBlockset(ROEN_BLOCKS, "roen_oncogene", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.BLACK)));
     public static final Block ROEN_GROUT = registerBlockInBlockset(ROEN_BLOCKS, "roen_grout", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.WHITE_GRAY)));
     public static final Block ROEN = registerBlockInBlockset(ROEN_BLOCKS, "roen", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.LIME)));
+    //</editor-fold>
+    //<editor-fold desc ="Blocks - SOL">
+    private static final FabricBlockSettings solMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.TERRACOTTA_YELLOW)
+            .strength(0.3f)
+            .luminance(createLightLevelFromProperty(15, Properties.LIT))
+            .mapColor(state -> state.get(Properties.LIT) ? MapColor.OFF_WHITE : MapColor.TERRACOTTA_YELLOW)
+            .sounds(ModBlockSoundGroup.SOL);
+    private static final FabricBlockSettings solMaterialDim = FabricBlockSettings.create()
+            .mapColor(MapColor.TERRACOTTA_YELLOW)
+            .strength(0.3f)
+            .luminance(createLightLevelFromProperty(11, Properties.LIT))
+            .mapColor(state -> state.get(Properties.LIT) ? MapColor.YELLOW : MapColor.TERRACOTTA_ORANGE)
+            .sounds(ModBlockSoundGroup.SOL);
+    public static final Block SOL_PHOTO = registerBlockInBlockset(SOL_BLOCKS, "sol_photo", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null));
+    public static final Block SOL_ELECTRON = registerBlockInBlockset(SOL_BLOCKS, "sol_electron", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null));
+    public static final Block SOL_MAX = registerBlockInBlockset(SOL_BLOCKS, "sol_max", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null));
+    public static final Block SOL_MIN = registerBlockInBlockset(SOL_BLOCKS, "sol_min", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null));
+    public static final Block SOL_CHROMA = registerBlockInBlockset(SOL_BLOCKS, "sol_chroma", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null));
+    public static final Block SOL_FLARE = registerBlockInBlockset(SOL_BLOCKS, "sol_flare", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null));
+    public static final Block SOL_BLIND = registerBlockInBlockset(SOL_BLOCKS, "sol_blind", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null));
+    public static final Block SOL_PROTON = registerBlockInBlockset(SOL_BLOCKS, "sol_proton", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null));
+    public static final Block SOL_BALANCE = registerBlockInBlockset(SOL_BLOCKS, "sol_balance", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null));
+    public static final Block SOL_GLARE = registerBlockInBlockset(SOL_BLOCKS, "sol_glare", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null));
+    public static final Block SOL_SPECTRA = registerBlockInBlockset(SOL_BLOCKS, "sol_spectra", new LitPillarBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null));
+    public static final Block SOL_BLAZAR = registerBlockInBlockset(SOL_BLOCKS, "sol_blazar", new LitGlazedTerracottaBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null));
+    public static final Block SOL_FIELD = registerBlockInBlockset(SOL_BLOCKS, "sol_field", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null));
+    public static final Block SOL_NUCLEI = registerBlockInBlockset(SOL_BLOCKS, "sol_nuclei", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null));
+    public static final Block SOL_CORONA = registerBlockInBlockset(SOL_BLOCKS, "sol_corona", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null));
+    public static final Block SOL = registerBlockInBlockset(SOL_BLOCKS, "sol", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null));
     //</editor-fold>
 
     //<editor-fold desc ="Registration">
