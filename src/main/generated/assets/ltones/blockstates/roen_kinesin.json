@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ltones:block/roen_kinesin",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "ltones:block/roen_kinesin",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "ltones:block/roen_kinesin"
+    },
+    "facing=west": {
+      "model": "ltones:block/roen_kinesin",
+      "y": 90
+    }
+  }
+}

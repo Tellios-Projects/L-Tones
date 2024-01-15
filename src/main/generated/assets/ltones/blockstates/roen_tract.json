@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ltones:block/roen_tract",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ltones:block/roen_tract"
+    },
+    "axis=z": {
+      "model": "ltones:block/roen_tract",
+      "x": 90
+    }
+  }
+}

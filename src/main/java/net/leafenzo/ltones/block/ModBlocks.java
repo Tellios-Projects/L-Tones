@@ -625,7 +625,6 @@ public class ModBlocks {
     public static final Block ORANGE_NURR = registerBlockInBlockset(NURR_BLOCKS, "orange_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.ORANGE)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - TYEL">
-
     private static final FabricBlockSettings tyelMaterial = FabricBlockSettings.create()
             .requiresTool()
             .strength(1.4f)
@@ -646,9 +645,28 @@ public class ModBlocks {
     public static final Block VERMILION_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "vermilion_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
     public static final Block TYEL_EMPTY = registerBlockInBlockset(TYEL_BLOCKS, "tyel_empty", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.BLACK)));
     public static final Block TYEL = registerBlockInBlockset(TYEL_BLOCKS, "tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.WHITE_GRAY)));
-
     //</editor-fold>
     //<editor-fold desc ="Blocks - ROEN">
+    private static final FabricBlockSettings roenMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.LICHEN_GREEN)
+            .strength(0.6f)
+            .sounds(BlockSoundGroup.CORAL);
+    public static final Block ROEN_DESSICATE = registerBlockInBlockset(ROEN_BLOCKS, "roen_dessicate", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.RAW_IRON_PINK)));
+    public static final Block ROEN_LESION = registerBlockInBlockset(ROEN_BLOCKS, "roen_lesion", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.RED)));
+    public static final Block ROEN_TRACT = registerBlockInBlockset(ROEN_BLOCKS, "roen_tract", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.PURPLE)));
+    public static final Block ROEN_AGAR = registerBlockInBlockset(ROEN_BLOCKS, "roen_agar", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.MAGENTA)));
+    public static final Block ROEN_KINESIN = registerBlockInBlockset(ROEN_BLOCKS, "roen_kinesin", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.GREEN)));
+    public static final Block ROEN_GEL = registerBlockInBlockset(ROEN_BLOCKS, "roen_gel", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.DULL_PINK)));
+    public static final Block ROEN_STRAND = registerBlockInBlockset(ROEN_BLOCKS, "roen_strand", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.DIAMOND_BLUE)));
+    public static final Block ROEN_MEMB = registerBlockInBlockset(ROEN_BLOCKS, "roen_memb", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.LIME)));
+    public static final Block ROEN_FILM = registerBlockInBlockset(ROEN_BLOCKS, "roen_film", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block ROEN_ARRAY = registerBlockInBlockset(ROEN_BLOCKS, "roen_array", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.BLUE)));
+    public static final Block ROEN_BACILLUS = registerBlockInBlockset(ROEN_BLOCKS, "roen_bacillus", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.TERRACOTTA_YELLOW)));
+    public static final Block ROEN_ASSAY = registerBlockInBlockset(ROEN_BLOCKS, "roen_assay", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.YELLOW)));
+    public static final Block ROEN_OPERON = registerBlockInBlockset(ROEN_BLOCKS, "roen_operon", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block ROEN_ONCOGENE = registerBlockInBlockset(ROEN_BLOCKS, "roen_oncogene", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.BLACK)));
+    public static final Block ROEN_GROUT = registerBlockInBlockset(ROEN_BLOCKS, "roen_grout", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.WHITE_GRAY)));
+    public static final Block ROEN = registerBlockInBlockset(ROEN_BLOCKS, "roen", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.LIME)));
     //</editor-fold>
 
     //<editor-fold desc ="Registration">

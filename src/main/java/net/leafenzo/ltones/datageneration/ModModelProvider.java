@@ -407,6 +407,25 @@ public class ModModelProvider extends FabricModelProvider {
             blockStateModelGenerator.registerCubeAllModelTexturePool(block);
         }
         //</editor-fold>
+        //<editor-fold desc = "Models - roen">
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROEN_DESSICATE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROEN_AGAR);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROEN_GEL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROEN_STRAND);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROEN_MEMB);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROEN_FILM);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROEN_ARRAY);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROEN_ASSAY);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROEN_ONCOGENE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROEN_GROUT);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROEN);
+//        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROEN_LESION, "block/roen_dessicate");
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.ROEN_LESION, TexturedModel.CUBE_ALL);
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROEN_TRACT, "block/roen_assay"); //TODO check if el likes these
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROEN_BACILLUS, "block/roen_agar");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROEN_OPERON, "block/roen_film");
+        blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.ROEN_KINESIN);
+        //</editor-fold>
 
 
         // Block Models

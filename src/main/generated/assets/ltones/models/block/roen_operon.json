@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ltones:block/roen_film",
+    "east": "ltones:block/roen_operon",
+    "north": "ltones:block/roen_operon",
+    "particle": "ltones:block/roen_operon",
+    "south": "ltones:block/roen_operon",
+    "up": "ltones:block/roen_film",
+    "west": "ltones:block/roen_operon"
+  }
+}

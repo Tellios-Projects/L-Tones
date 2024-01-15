@@ -1,4 +1,21 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "ltones:roen_dessicate",
+    "ltones:roen_lesion",
+    "ltones:roen_tract",
+    "ltones:roen_agar",
+    "ltones:roen_kinesin",
+    "ltones:roen_gel",
+    "ltones:roen_strand",
+    "ltones:roen_memb",
+    "ltones:roen_film",
+    "ltones:roen_array",
+    "ltones:roen_bacillus",
+    "ltones:roen_assay",
+    "ltones:roen_operon",
+    "ltones:roen_oncogene",
+    "ltones:roen_grout",
+    "ltones:roen"
+  ]
 }
