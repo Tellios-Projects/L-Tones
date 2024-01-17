@@ -50,5 +50,39 @@ public class ModItemGroups {
                         for(Block block : ModBlocks.SYNC_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.ROEN_BLOCKS) { entries.add(block); }
                         for(Block block : ModBlocks.SOL_BLOCKS) { entries.add(block); }
+                        entries.add(ModItems.MOULDING);
+                        entries.add(ModItems.NETWORKING);
+                        entries.add(ModItems.OIL);
+                        entries.add(ModItems.ORGANIC_BRASS);
+                        entries.add(ModItems.PLAQUE);
+                        entries.add(ModItems.POLYCARBONATE);
+                        entries.add(ModItems.POLYMER);
+                        entries.add(ModItems.PORCELAIN);
+                        entries.add(ModItems.RADIUM_PAINT);
+                        entries.add(ModItems.RAW_LITHIUM);
+                        entries.add(ModItems.SCARLET_MEMBRANE);
+                        entries.add(ModItems.SCREEN);
+                        entries.add(ModItems.SHADE);
+                        entries.add(ModItems.SHEETING);
+                        entries.add(ModItems.SLAG);
+                        entries.add(ModItems.TAWSINE);
+                        entries.add(ModItems.THINKING_METAL);
+                        entries.add(ModItems.AMALGUM);
+                        entries.add(ModItems.ANTIBRASS);
+                        entries.add(ModItems.ARGON);
+                        entries.add(ModItems.AZURE_RIVET);
+                        entries.add(ModItems.CONDUCTIUM);
+                        entries.add(ModItems.CORPOREAL_VAPOR);
+                        entries.add(ModItems.DIODE);
+                        entries.add(ModItems.FIBROUS_POWDER);
+                        entries.add(ModItems.FLAKES);
+                        entries.add(ModItems.G2V);
+                        entries.add(ModItems.GAS_TUBE);
+                        entries.add(ModItems.GLEAM);
+                        entries.add(ModItems.JELLY);
+                        entries.add(ModItems.KERBESIUM);
+                        entries.add(ModItems.LITHIUM_CHUNK);
+                        entries.add(ModItems.LITHIUM_INGOT);
+                        entries.add(ModItems.MIDASIUM);
                     }).build());
 }
