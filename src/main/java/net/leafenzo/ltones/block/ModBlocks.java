@@ -695,6 +695,16 @@ public class ModBlocks {
     public static final Block SOL = registerBlockInBlockset(SOL_BLOCKS, "sol", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null));
     //</editor-fold>
 
+    //<editor-fold desc ="Other Blocks">
+    //</editor-fold>
+    public static final Block AURORA = registerBlock("aurora", new AuroraBlock(FabricBlockSettings.create()
+            .mapColor(MapColor.TERRACOTTA_CYAN)
+            .breakInstantly()
+            .sounds(BlockSoundGroup.SNOW)
+            .luminance(createLightLevelFromProperty(11, Properties.LIT))
+    ));
+
+
     //<editor-fold desc ="Registration">
     public static ArrayList<Block> registerBlocksetOfVanillaDyedBlocks(String name, FabricBlockSettings settings) {
         ArrayList<Block> blocks = new ArrayList<>();

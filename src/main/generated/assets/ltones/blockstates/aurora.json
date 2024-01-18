@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ltones:block/aurora"
+    },
+    "lit=true": {
+      "model": "ltones:block/aurora_on"
+    }
+  }
+}

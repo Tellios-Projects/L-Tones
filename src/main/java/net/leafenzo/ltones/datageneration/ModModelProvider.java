@@ -442,6 +442,10 @@ public class ModModelProvider extends FabricModelProvider {
         //</editor-fold>
 
 
+        //<editor-fold desc = "Models - Other Blocks">
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.AURORA, Models.CUBE_ALL, TextureMap::all);
+
+
         // Block Models
         // Cube with all sides the same texture, IE Dirt
         // blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COMPRESSED_STONE);

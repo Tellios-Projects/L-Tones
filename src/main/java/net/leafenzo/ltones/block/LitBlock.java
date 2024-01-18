@@ -58,7 +58,7 @@ public class LitBlock extends Block {
         }
     }
 
-    public void toggleLit(BlockState state, World world, BlockPos pos) {
+    protected void toggleLit(BlockState state, World world, BlockPos pos) {
         if(state.get(LIT).booleanValue()) {
             if(turnOffSound != null) world.playSound(null, pos, this.turnOffSound, SoundCategory.BLOCKS, 1.0f, 1.0f);
         }
