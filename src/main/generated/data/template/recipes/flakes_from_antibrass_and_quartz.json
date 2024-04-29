@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesflakes",
+  "ingredients": [
+    {
+      "item": "ltones:antibrass"
+    },
+    {
+      "item": "minecraft:quartz"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "ltones:flakes"
+  }
+}

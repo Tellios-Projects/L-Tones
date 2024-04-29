@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:ztone",
     "ltones:white_agon",
     "ltones:orange_agon",
     "ltones:magenta_agon",

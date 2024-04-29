@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesantibrass",
+  "ingredients": [
+    {
+      "item": "ltones:lithium_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ltones:antibrass"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesplaque",
+  "ingredients": [
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "item": "ltones:oil"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "ltones:plaque"
+  }
+}

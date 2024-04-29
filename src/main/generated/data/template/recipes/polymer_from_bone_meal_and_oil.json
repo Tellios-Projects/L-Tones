@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonespolymer",
+  "ingredients": [
+    {
+      "item": "minecraft:bone_meal"
+    },
+    {
+      "item": "ltones:oil"
+    }
+  ],
+  "result": {
+    "item": "ltones:polymer"
+  }
+}

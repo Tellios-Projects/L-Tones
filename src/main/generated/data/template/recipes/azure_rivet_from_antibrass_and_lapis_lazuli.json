@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesazure_rivet",
+  "ingredients": [
+    {
+      "item": "ltones:antibrass"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ltones:azure_rivet"
+  }
+}

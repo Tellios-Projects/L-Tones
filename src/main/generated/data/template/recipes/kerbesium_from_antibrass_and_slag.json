@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltoneskerbesium",
+  "ingredients": [
+    {
+      "item": "ltones:antibrass"
+    },
+    {
+      "item": "ltones:slag"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ltones:kerbesium"
+  }
+}

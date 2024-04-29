@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.leafenzo.ltones.ModInit;
 import net.leafenzo.ltones.Super;
+import net.leafenzo.ltones.block.custom.*;
 import net.leafenzo.ltones.sound.ModBlockSoundGroup;
 import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.leafenzo.ltones.util.ModUtil;
@@ -34,6 +35,8 @@ public class ModBlocks {
     // The reason why it's <Block, Block> instead of <Block, StairBlock> is because sometimes there will be block classes that have all the behavior of stair blocks without actually being children of them. This assumption is made for the hashmaps here as well.
     public static final HashMap<Block, Block> STAIR_FROM_BLOCK = new HashMap<Block, Block>();
     public static final HashMap<Block, Block> SLAB_FROM_BLOCK = new HashMap<Block, Block>();
+
+    public static final Block ZTONE = registerBlock("ztone", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
 
     public static final ArrayList<Block> AGON_BLOCKS = registerBlocksetOfVanillaDyedBlocks("agon", FabricBlockSettings.create().strength(0.3f).sounds(ModBlockSoundGroup.NEON).luminance(state -> 15));
     public static final ArrayList<Block> FORT_BLOCKS = new ArrayList<>();

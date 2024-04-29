@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesmidasium",
+  "ingredients": [
+    {
+      "item": "ltones:lithium_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ltones:midasium"
+  }
+}

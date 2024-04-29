@@ -1,0 +1,46 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fibre": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "ltones:fibre"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_slag": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:slag"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:fibrous_powder_from_slag_and_fibre"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_slag",
+      "has_fibre",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:fibrous_powder_from_slag_and_fibre"
+    ]
+  },
+  "sends_telemetry_event": false
+}

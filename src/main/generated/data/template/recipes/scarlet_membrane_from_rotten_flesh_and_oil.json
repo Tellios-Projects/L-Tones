@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesscarlet_membrane",
+  "ingredients": [
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "ltones:oil"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ltones:scarlet_membrane"
+  }
+}

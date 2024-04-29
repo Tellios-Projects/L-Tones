@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesscreen",
+  "ingredients": [
+    {
+      "item": "ltones:gleam"
+    },
+    {
+      "item": "ltones:diode"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "ltones:screen"
+  }
+}

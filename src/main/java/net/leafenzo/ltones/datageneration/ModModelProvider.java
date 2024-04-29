@@ -3,7 +3,7 @@ package net.leafenzo.ltones.datageneration;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.leafenzo.ltones.Super;
-import net.leafenzo.ltones.block.LitSlabBlock;
+import net.leafenzo.ltones.block.custom.LitSlabBlock;
 import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.item.ModItems;
 import net.leafenzo.ltones.util.ModUtil;
@@ -70,6 +70,8 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ZTONE);
+
         //<editor-fold desc = "Models - agon">
         for(Block block : ModBlocks.AGON_BLOCKS) {
             blockStateModelGenerator.registerCubeAllModelTexturePool(block);
@@ -485,7 +487,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SLAG, Models.GENERATED);
         itemModelGenerator.register(ModItems.TAWSINE, Models.GENERATED);
         itemModelGenerator.register(ModItems.THINKING_METAL, Models.GENERATED);
-        itemModelGenerator.register(ModItems.AMALGUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AMALGAM, Models.GENERATED);
         itemModelGenerator.register(ModItems.ANTIBRASS, Models.GENERATED);
         itemModelGenerator.register(ModItems.ARGON, Models.GENERATED);
         itemModelGenerator.register(ModItems.AZURE_RIVET, Models.GENERATED);

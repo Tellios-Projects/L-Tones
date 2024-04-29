@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polymer": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:polymer"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:sheeting_from_polymer_and_diode_and_polymer"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_polymer",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:sheeting_from_polymer_and_diode_and_polymer"
+    ]
+  },
+  "sends_telemetry_event": false
+}

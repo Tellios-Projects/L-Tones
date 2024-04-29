@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesthinking_metal",
+  "ingredients": [
+    {
+      "item": "ltones:diode"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "ltones:diode"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ltones:thinking_metal"
+  }
+}

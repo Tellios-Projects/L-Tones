@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonespolycarbonate",
+  "ingredients": [
+    {
+      "item": "ltones:antibrass"
+    },
+    {
+      "item": "ltones:polymer"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ltones:polycarbonate"
+  }
+}

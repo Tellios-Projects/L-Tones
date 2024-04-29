@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesconductium",
+  "ingredients": [
+    {
+      "item": "ltones:antibrass"
+    },
+    {
+      "item": "minecraft:gold_nugget"
+    }
+  ],
+  "result": {
+    "item": "ltones:conductium"
+  }
+}

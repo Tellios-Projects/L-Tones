@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesargon",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "tag": "ltones:igneous_rocks"
+    }
+  ],
+  "result": {
+    "item": "ltones:argon"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesgas_tube",
+  "ingredients": [
+    {
+      "item": "ltones:polymer"
+    },
+    {
+      "item": "ltones:argon"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ltones:gas_tube"
+  }
+}

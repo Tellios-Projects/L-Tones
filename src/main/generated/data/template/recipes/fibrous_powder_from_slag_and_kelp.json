@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesfibrous_powder",
+  "ingredients": [
+    {
+      "item": "ltones:slag"
+    },
+    {
+      "item": "minecraft:kelp"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ltones:fibrous_powder"
+  }
+}

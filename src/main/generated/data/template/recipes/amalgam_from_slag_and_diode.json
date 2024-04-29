@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesamalgam",
+  "ingredients": [
+    {
+      "item": "ltones:slag"
+    },
+    {
+      "item": "ltones:diode"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ltones:amalgam"
+  }
+}

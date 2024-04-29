@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonescorporeal_vapor",
+  "ingredients": [
+    {
+      "item": "minecraft:amethyst_shard"
+    },
+    {
+      "item": "ltones:argon"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "ltones:corporeal_vapor"
+  }
+}

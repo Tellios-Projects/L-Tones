@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesshade",
+  "ingredients": [
+    {
+      "item": "ltones:gleam"
+    },
+    {
+      "item": "ltones:argon"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "ltones:shade"
+  }
+}

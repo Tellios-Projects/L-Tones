@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesjelly",
+  "ingredients": [
+    {
+      "item": "minecraft:slime_ball"
+    },
+    {
+      "item": "ltones:oil"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ltones:jelly"
+  }
+}

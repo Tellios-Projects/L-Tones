@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_antibrass": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:antibrass"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:kerbesium_from_antibrass_and_slag"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_antibrass",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:kerbesium_from_antibrass_and_slag"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesradium_paint",
+  "ingredients": [
+    {
+      "item": "minecraft:blackstone"
+    },
+    {
+      "item": "ltones:slag"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "ltones:radium_paint"
+  }
+}

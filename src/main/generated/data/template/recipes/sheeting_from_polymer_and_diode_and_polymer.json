@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonessheeting",
+  "ingredients": [
+    {
+      "item": "ltones:polymer"
+    },
+    {
+      "item": "ltones:diode"
+    },
+    {
+      "item": "ltones:polymer"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ltones:sheeting"
+  }
+}
