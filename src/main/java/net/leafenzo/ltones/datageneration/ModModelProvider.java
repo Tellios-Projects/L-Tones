@@ -1,5 +1,6 @@
 package net.leafenzo.ltones.datageneration;
 
+import com.mojang.datafixers.util.Pair;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.leafenzo.ltones.Super;
@@ -8,12 +9,15 @@ import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.item.ModItems;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.data.client.*;
 import net.minecraft.registry.Registries;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
 import net.minecraft.util.math.Direction;
 
 import java.util.ArrayList;
@@ -68,9 +72,40 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createAxisRotatedVariantMap()));
     }
 
+    public final void registerWallDecor(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+//        Identifier identifier = model.up
+                
+
+                // ModelIds.getBlockSubModelId(block, "_floor");
+//        Identifier identifier2 = ModelIds.getBlockSubModelId(block, "_wall");
+
+//        blockStateModelGenerator.modelCollector.accept();
+
+        MultipartBlockStateSupplier multipartBlockStateSupplier = MultipartBlockStateSupplier.create(block);
+        When.PropertyCondition propertyCondition2 = Util.make(When.create(), propertyCondition -> blockStateModelGenerator.CONNECTION_VARIANT_FUNCTIONS.stream().map(Pair::getFirst).forEach(property -> {
+            if (block.getDefaultState().contains(property)) {
+                propertyCondition.set(property, false);
+            }
+        }));
+        for (Pair<BooleanProperty, Function<Identifier, BlockStateVariant>> pair : blockStateModelGenerator.CONNECTION_VARIANT_FUNCTIONS) {
+            BooleanProperty booleanProperty = pair.getFirst();
+            Function<Identifier, BlockStateVariant> function = pair.getSecond();
+            if (!block.getDefaultState().contains(booleanProperty)) continue;
+            multipartBlockStateSupplier.with((When)When.create().set(booleanProperty, true), function.apply(identifier));
+            multipartBlockStateSupplier.with((When)propertyCondition2, function.apply(identifier));
+        }
+        blockStateModelGenerator.blockStateCollector.accept(multipartBlockStateSupplier);
+    }
+
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ZTONE);
+
+        //<editor-fold desc = "Models - decals">
+        this.registerWallDecor(blockStateModelGenerator, ModBlocks.DECAL_AMALGAM);
+
+
+        //</editor-fold>
 
         //<editor-fold desc = "Models - agon">
         for(Block block : ModBlocks.AGON_BLOCKS) {
@@ -470,40 +505,41 @@ public class ModModelProvider extends FabricModelProvider {
     }
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.MOULDING, Models.GENERATED);
-        itemModelGenerator.register(ModItems.NETWORKING, Models.GENERATED);
-        itemModelGenerator.register(ModItems.OIL, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ORGANIC_BRASS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PLAQUE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.POLYCARBONATE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.POLYMER, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PORCELAIN, Models.GENERATED);
-        itemModelGenerator.register(ModItems.RADIUM_PAINT, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_LITHIUM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SCARLET_MEMBRANE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SCREEN, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SHADE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SHEETING, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SLAG, Models.GENERATED);
-        itemModelGenerator.register(ModItems.TAWSINE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.THINKING_METAL, Models.GENERATED);
-        itemModelGenerator.register(ModItems.AMALGAM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ANTIBRASS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ARGON, Models.GENERATED);
-        itemModelGenerator.register(ModItems.AZURE_RIVET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CONDUCTIUM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CORPOREAL_VAPOR, Models.GENERATED);
-        itemModelGenerator.register(ModItems.DIODE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.FIBROUS_POWDER, Models.GENERATED);
-        itemModelGenerator.register(ModItems.FLAKES, Models.GENERATED);
-        itemModelGenerator.register(ModItems.G2V, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GAS_TUBE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GLEAM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.JELLY, Models.GENERATED);
-        itemModelGenerator.register(ModItems.KERBESIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.LITHIUM_CHUNK, Models.GENERATED);
         itemModelGenerator.register(ModItems.LITHIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MIDASIUM, Models.GENERATED);
+
+//        itemModelGenerator.register(ModItems.MOULDING, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.NETWORKING, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.OIL, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.ORGANIC_BRASS, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.PLAQUE, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.POLYCARBONATE, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.POLYMER, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.PORCELAIN, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.RADIUM_PAINT, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.SCARLET_MEMBRANE, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.SCREEN, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.SHADE, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.SHEETING, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.SLAG, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.TAWSINE, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.THINKING_METAL, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.AMALGAM, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.ANTIBRASS, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.ARGON, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.AZURE_RIVET, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.CONDUCTIUM, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.CORPOREAL_VAPOR, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.DIODE, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.FIBROUS_POWDER, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.FLAKES, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.G2V, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.GAS_TUBE, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.GLEAM, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.JELLY, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.KERBESIUM, Models.GENERATED);
+//        itemModelGenerator.register(ModItems.MIDASIUM, Models.GENERATED);
     }
 
     public ArrayList<Identifier> usedBlockItems = new ArrayList<Identifier>();

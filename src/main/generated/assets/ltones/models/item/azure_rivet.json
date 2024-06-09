@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "ltones:item/azure_rivet"
-  }
+  "parent": "ltones:block/decal_azure_rivet"
 }
