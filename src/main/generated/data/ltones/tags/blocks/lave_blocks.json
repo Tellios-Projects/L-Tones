@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:lave_window",
+    "ltones:lave_vent",
+    "ltones:lave_uneven",
+    "ltones:lave_trackpad",
+    "ltones:lave_tile",
+    "ltones:lave_tile_stairs",
+    "ltones:lave_tile_slab",
+    "ltones:lave_thick",
+    "ltones:lave_section",
+    "ltones:lave_panel",
+    "ltones:lave_low",
+    "ltones:lave_hex",
+    "ltones:lave_elevate",
+    "ltones:lave_dim",
+    "ltones:lave_dark",
+    "ltones:lave_crosssection",
+    "ltones:lave_beam",
+    "ltones:lave"
+  ]
+}

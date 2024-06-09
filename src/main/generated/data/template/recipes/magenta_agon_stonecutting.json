@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:agon_blocks"
+  },
+  "result": "ltones:magenta_agon"
+}

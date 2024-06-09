@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:sync_tank",
+    "ltones:sync_shielding",
+    "ltones:sync_safe",
+    "ltones:sync_mizmer",
+    "ltones:sync_mess",
+    "ltones:sync_leaded",
+    "ltones:sync_junction",
+    "ltones:sync_hex",
+    "ltones:sync_hazard",
+    "ltones:sync_hatch",
+    "ltones:sync_framed",
+    "ltones:sync_force",
+    "ltones:sync_data",
+    "ltones:sync_contain",
+    "ltones:sync_caution",
+    "ltones:sync"
+  ]
+}

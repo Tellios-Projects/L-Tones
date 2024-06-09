@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_any_block_from_iszm_blocks": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "ltones:iszm_blocks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:faded_iszm_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_any_block_from_iszm_blocks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:faded_iszm_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

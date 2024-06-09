@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:zane_blocks"
+  },
+  "result": "ltones:amber_zane"
+}

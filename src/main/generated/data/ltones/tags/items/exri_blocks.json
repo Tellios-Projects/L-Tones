@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:exri_level",
+    "ltones:exri_tect",
+    "ltones:exri_stem",
+    "ltones:exri_steel",
+    "ltones:exri_serve",
+    "ltones:exri_seal",
+    "ltones:exri_screen",
+    "ltones:exri_rogen",
+    "ltones:exri_mesh",
+    "ltones:exri_flow",
+    "ltones:exri_divide",
+    "ltones:exri_divide_stairs",
+    "ltones:exri_divide_slab",
+    "ltones:exri_display",
+    "ltones:exri_current",
+    "ltones:exri_critical",
+    "ltones:exri_control",
+    "ltones:exri"
+  ]
+}

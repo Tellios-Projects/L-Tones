@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:iszm_blocks"
+  },
+  "result": "ltones:vibrant_iszm"
+}

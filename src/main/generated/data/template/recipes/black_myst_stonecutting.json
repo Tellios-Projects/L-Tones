@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:myst_blocks"
+  },
+  "result": "ltones:black_myst"
+}

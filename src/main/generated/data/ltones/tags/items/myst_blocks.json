@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:red_myst",
+    "ltones:purple_myst",
+    "ltones:pink_myst",
+    "ltones:orange_myst",
+    "ltones:magenta_myst",
+    "ltones:lime_myst",
+    "ltones:light_gray_myst",
+    "ltones:light_blue_myst",
+    "ltones:green_myst",
+    "ltones:gray_myst",
+    "ltones:cyan_myst",
+    "ltones:brown_myst",
+    "ltones:blue_myst",
+    "ltones:black_myst",
+    "ltones:yellow_myst",
+    "ltones:white_myst"
+  ]
+}

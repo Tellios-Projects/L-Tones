@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:tank_blocks"
+  },
+  "result": "ltones:tank_zizer"
+}

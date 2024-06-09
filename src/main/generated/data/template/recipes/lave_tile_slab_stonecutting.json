@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:lave_blocks"
+  },
+  "result": "ltones:lave_tile_slab"
+}

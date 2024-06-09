@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_any_block_from_fleq_blocks": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "ltones:fleq_blocks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:fleq_rubble_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_any_block_from_fleq_blocks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:fleq_rubble_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

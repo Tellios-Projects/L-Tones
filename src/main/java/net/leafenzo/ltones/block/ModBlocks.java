@@ -31,7 +31,7 @@ import java.util.function.ToIntFunction;
 
 public class ModBlocks {
 
-    //<editor-fold desc ="Hashmaps & Arrays">
+    //<editor-fold desc ="Hashmaps & BlockSets">
     // The reason why it's <Block, Block> instead of <Block, StairBlock> is because sometimes there will be block classes that have all the behavior of stair blocks without actually being children of them. This assumption is made for the hashmaps here as well.
     public static final HashMap<Block, Block> STAIR_FROM_BLOCK = new HashMap<Block, Block>();
     public static final HashMap<Block, Block> SLAB_FROM_BLOCK = new HashMap<Block, Block>();
@@ -65,6 +65,40 @@ public class ModBlocks {
     public static final ArrayList<Block> TYEL_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> ROEN_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> SOL_BLOCKS = new ArrayList<>();
+
+    public static ArrayList<BlockSet> BLOCKSETS = new ArrayList<BlockSet>();
+
+    public static final BlockSet AGON_BLOCKSET = registerBlockSet(AGON_BLOCKS, "agon_blocks");
+    public static final BlockSet FORT_BLOCKSET = registerBlockSet(FORT_BLOCKS, "fort_blocks");
+    public static final BlockSet GLAXX_BLOCKSET = registerBlockSet(GLAXX_BLOCKS, "glaxx_blocks");
+    public static final BlockSet CRAY_BLOCKSET = registerBlockSet(CRAY_BLOCKS, "cray_blocks");
+    public static final BlockSet CAST_BLOCKSET = registerBlockSet(CAST_BLOCKS, "cast_blocks");
+    public static final BlockSet HOST_BLOCKSET = registerBlockSet(HOST_BLOCKS, "host_blocks");
+    public static final BlockSet ZANE_BLOCKSET = registerBlockSet(ZANE_BLOCKS, "zane_blocks");
+    public static final BlockSet VECT_BLOCKSET = registerBlockSet(VECT_BLOCKS, "vect_blocks");
+    public static final BlockSet REDDS_BLOCKSET = registerBlockSet(REDDS_BLOCKS, "redds_blocks");
+    public static final BlockSet MINN_BLOCKSET = registerBlockSet(MINN_BLOCKS, "minn_blocks");
+    public static final BlockSet LAIR_BLOCKSET = registerBlockSet(LAIR_BLOCKS, "lair_blocks");
+    public static final BlockSet KRYP_BLOCKSET = registerBlockSet(KRYP_BLOCKS, "kryp_blocks");
+    public static final BlockSet LAVE_BLOCKSET = registerBlockSet(LAVE_BLOCKS, "lave_blocks");
+    public static final BlockSet VEELD_BLOCKSET = registerBlockSet(VEELD_BLOCKS, "veeld_blocks");
+    public static final BlockSet JELT_BLOCKSET = registerBlockSet(JELT_BLOCKS, "jelt_blocks");
+    public static final BlockSet KORP_BLOCKSET = registerBlockSet(KORP_BLOCKS, "korp_blocks");
+    public static final BlockSet TANK_BLOCKSET = registerBlockSet(TANK_BLOCKS, "tank_blocks");
+    public static final BlockSet EXRI_BLOCKSET = registerBlockSet(EXRI_BLOCKS, "exri_blocks");
+    public static final BlockSet AZUR_BLOCKSET = registerBlockSet(AZUR_BLOCKS, "azur_blocks");
+    public static final BlockSet FLEQ_BLOCKSET = registerBlockSet(FLEQ_BLOCKS, "fleq_blocks");
+    public static final BlockSet ISZM_BLOCKSET = registerBlockSet(ISZM_BLOCKS, "iszm_blocks");
+    public static final BlockSet MYST_BLOCKSET = registerBlockSet(MYST_BLOCKS, "myst_blocks");
+    public static final BlockSet SYNC_BLOCKSET = registerBlockSet(SYNC_BLOCKS, "sync_blocks");
+    public static final BlockSet NURR_BLOCKSET = registerBlockSet(NURR_BLOCKS, "nurr_blocks");
+    public static final BlockSet TYEL_BLOCKSET = registerBlockSet(TYEL_BLOCKS, "tyel_blocks");
+    public static final BlockSet ROEN_BLOCKSET = registerBlockSet(ROEN_BLOCKS, "roen_blocks");
+    public static final BlockSet SOL_BLOCKSET = registerBlockSet(SOL_BLOCKS, "sol_blocks");
+
+
+
+
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - FORT">
@@ -707,8 +741,13 @@ public class ModBlocks {
             .luminance(createLightLevelFromProperty(11, Properties.LIT))
     ));
 
-
     //<editor-fold desc ="Registration">
+    public static BlockSet registerBlockSet(ArrayList<Block> blocks, String tagName) {
+        BlockSet blockset = new BlockSet(blocks, tagName);
+        BLOCKSETS.add(blockset);
+        return blockset;
+    }
+
     public static ArrayList<Block> registerBlocksetOfVanillaDyedBlocks(String name, FabricBlockSettings settings) {
         ArrayList<Block> blocks = new ArrayList<>();
         DyeColor[] colors = ModUtil.VANILLA_DYE_COLORS;

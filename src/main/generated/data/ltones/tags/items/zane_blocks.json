@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:red_zane",
+    "ltones:amber_zane",
+    "ltones:empty_zane",
+    "ltones:orange_zane",
+    "ltones:yellow_zane",
+    "ltones:purple_zane",
+    "ltones:navy_zane",
+    "ltones:mint_zane",
+    "ltones:magenta_zane",
+    "ltones:lime_zane",
+    "ltones:green_zane",
+    "ltones:fuchsia_zane",
+    "ltones:cyan_zane",
+    "ltones:cerulean_zane",
+    "ltones:blue_zane",
+    "ltones:zane"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:nurr_blocks"
+  },
+  "result": "ltones:mint_nurr"
+}

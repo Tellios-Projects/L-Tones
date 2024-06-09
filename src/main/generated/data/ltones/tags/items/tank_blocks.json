@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:tank_zizer",
+    "ltones:tank_window",
+    "ltones:tank_tread",
+    "ltones:tank_tiles",
+    "ltones:tank_secure",
+    "ltones:tank_rivet",
+    "ltones:tank_rigid",
+    "ltones:tank_function",
+    "ltones:tank_fortified",
+    "ltones:tank_flexi",
+    "ltones:tank_conjunction",
+    "ltones:tank_cannon",
+    "ltones:tank_beam",
+    "ltones:tank_band",
+    "ltones:tank_armor",
+    "ltones:tank"
+  ]
+}

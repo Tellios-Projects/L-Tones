@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:vect",
+    "ltones:vect_tile",
+    "ltones:vect_rivet",
+    "ltones:vect_hub",
+    "ltones:vect_strut",
+    "ltones:vect_pad",
+    "ltones:vect_tracker",
+    "ltones:vect_core",
+    "ltones:vect_treadplate",
+    "ltones:vect_shield",
+    "ltones:vect_panel",
+    "ltones:vect_radiator",
+    "ltones:vect_bulkhead",
+    "ltones:vect_tank",
+    "ltones:vect_network",
+    "ltones:vect_foil"
+  ]
+}

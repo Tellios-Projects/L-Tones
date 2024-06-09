@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:yellow_cray",
+    "ltones:violet_cray",
+    "ltones:red_cray",
+    "ltones:purple_cray",
+    "ltones:orange_cray",
+    "ltones:navy_cray",
+    "ltones:mint_cray",
+    "ltones:magenta_cray",
+    "ltones:lime_cray",
+    "ltones:green_cray",
+    "ltones:fuchsia_cray",
+    "ltones:empty_cray",
+    "ltones:cyan_cray",
+    "ltones:blue_cray",
+    "ltones:amber_cray",
+    "ltones:cray"
+  ]
+}

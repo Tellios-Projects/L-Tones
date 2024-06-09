@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:veeld_blocks"
+  },
+  "result": "ltones:veeld_rigidbrick"
+}

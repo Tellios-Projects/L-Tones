@@ -3,17 +3,28 @@ package net.leafenzo.ltones.datageneration;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.leafenzo.ltones.Super;
+import net.leafenzo.ltones.block.BlockSet;
+import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.item.ModItems;
 import net.leafenzo.ltones.registry.tag.ModTags;
+import net.minecraft.block.Block;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.SingleItemRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.function.Consumer;
 
 
@@ -85,6 +96,33 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerShapelessRecipe(exporter, recipeCategory, output, input, input2, Super.MOD_ID + output.toString(), outputCount);
     }
 
+    public static void offerStonecuttingRecipesForBlockSet(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, BlockSet blockSet) {
+        ArrayList<Block> outputs = blockSet.blocks;
+        TagKey<Item> inputs = blockSet.itemTag;
+
+        for(ItemConvertible output : outputs) {
+            SingleItemRecipeJsonBuilder.createStonecutting(Ingredient.fromTag(inputs), recipeCategory, output, 1)
+                    .criterion("has_any_block_from_" + blockSet.name, RecipeProvider.conditionsFromTag(inputs))
+                    .offerTo(exporter, RecipeProvider.getItemPath(output) + "_stonecutting");
+        }
+    }
+
+    public static void offerStonecuttingRecipes(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ArrayList<Block> outputs, ArrayList<Block> inputs) {
+        for (ItemConvertible input : inputs) {
+            for (ItemConvertible output : outputs) {
+                if(output != input) {
+                    offerStonecuttingRecipe(exporter, recipeCategory, output, input, 1);
+                }
+            }
+        }
+    }
+
+    public static void offerStonecuttingRecipes(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible input, ArrayList<Block> outputs) {
+        for (ItemConvertible output : outputs) {
+            offerStonecuttingRecipe(exporter, recipeCategory, output, input, 1);
+        }
+    }
+
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         //<- put ZTONE here when that exists
@@ -120,6 +158,44 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.GAS_TUBE, ModItems.POLYMER, ModItems.ARGON,2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.NETWORKING, ModTags.Items.MUSHROOMS, ModItems.ARGON,2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.JELLY, Items.SLIME_BALL, ModItems.OIL,2);
+
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AGON_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FORT_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLAXX_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRAY_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CAST_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.HOST_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ZANE_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VECT_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.REDDS_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MINN_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LAIR_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KRYP_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LAVE_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VEELD_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.JELT_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KORP_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TANK_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EXRI_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZUR_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FLEQ_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ISZM_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MYST_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SYNC_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NURR_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TYEL_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROEN_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOL_BLOCKSET);
+
+
+//        offerStairsRecipe(exporter, ModBlocks.LAVENDER_BRICK_STAIRS, ModBlocks.LAVENDER_BRICKS);
+//        offerSlabRecipe(exporter, ModBlocks.LAVENDER_BRICK_SLAB, ModBlocks.LAVENDER_BRICKS);
+//        offerWallRecipe(exporter, ModBlocks.LAVENDER_BRICK_WALL, ModBlocks.LAVENDER_BRICKS);
+//        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LAVENDER_BRICK_STAIRS, ModBlocks.LAVENDER_BRICKS);
+//        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LAVENDER_BRICK_SLAB, ModBlocks.LAVENDER_BRICKS, 2);
+//        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LAVENDER_BRICK_WALL, ModBlocks.LAVENDER_BRICKS);
+
+
     }
 }
 

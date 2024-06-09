@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:roen_blocks"
+  },
+  "result": "ltones:roen_kinesin"
+}

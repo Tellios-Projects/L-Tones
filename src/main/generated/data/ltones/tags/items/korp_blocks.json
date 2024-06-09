@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:korp_wall",
+    "ltones:korp_vest",
+    "ltones:korp_secure",
+    "ltones:korp_rupt",
+    "ltones:korp_resource",
+    "ltones:korp_regulate",
+    "ltones:korp_outflow",
+    "ltones:korp_mark",
+    "ltones:korp_holding",
+    "ltones:korp_growth",
+    "ltones:korp_flow",
+    "ltones:korp_consume",
+    "ltones:korp_command",
+    "ltones:korp_bank",
+    "ltones:korp_asset",
+    "ltones:korp"
+  ]
+}

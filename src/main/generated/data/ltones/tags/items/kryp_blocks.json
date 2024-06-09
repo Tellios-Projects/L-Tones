@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:kryp_wire",
+    "ltones:kryp_wire_stairs",
+    "ltones:kryp_wire_slab",
+    "ltones:kryp_support",
+    "ltones:kryp_storage",
+    "ltones:kryp_smooth",
+    "ltones:kryp_smooth_stairs",
+    "ltones:kryp_smooth_slab",
+    "ltones:kryp_sheen",
+    "ltones:kryp_ruin",
+    "ltones:kryp_omitter",
+    "ltones:kryp_levi",
+    "ltones:kryp_kubt",
+    "ltones:kryp_info",
+    "ltones:kryp_data",
+    "ltones:kryp_connector",
+    "ltones:kryp_chunk",
+    "ltones:kryp_beam",
+    "ltones:kryp_base",
+    "ltones:kryp",
+    "ltones:kryp_stairs",
+    "ltones:kryp_slab"
+  ]
+}

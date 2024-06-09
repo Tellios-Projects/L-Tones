@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:yellow_cast",
+    "ltones:vermilion_cast",
+    "ltones:velvet_cast",
+    "ltones:red_cast",
+    "ltones:purple_cast",
+    "ltones:navy_cast",
+    "ltones:magenta_cast",
+    "ltones:lime_cast",
+    "ltones:green_cast",
+    "ltones:empty_cast",
+    "ltones:cyan_cast",
+    "ltones:chartreuse_cast",
+    "ltones:brown_cast",
+    "ltones:blue_cast",
+    "ltones:amber_cast",
+    "ltones:cast"
+  ]
+}

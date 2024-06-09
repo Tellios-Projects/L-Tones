@@ -1,13 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_iron_ingot": {
+    "has_any_block_from_fleq_blocks": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:iron_ingot"
-            ]
+            "tag": "ltones:fleq_blocks"
           }
         ]
       },
@@ -15,20 +13,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:slag_from_iron_ingot_and_oil"
+        "recipe": "minecraft:fleq_larvae_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_iron_ingot",
+      "has_any_block_from_fleq_blocks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:slag_from_iron_ingot_and_oil"
+      "minecraft:fleq_larvae_stonecutting"
     ]
   },
   "sends_telemetry_event": false

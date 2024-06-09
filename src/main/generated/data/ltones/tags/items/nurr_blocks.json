@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:empty_nurr",
+    "ltones:nurr",
+    "ltones:navy_nurr",
+    "ltones:mint_nurr",
+    "ltones:magenta_nurr",
+    "ltones:lime_nurr",
+    "ltones:green_nurr",
+    "ltones:fuchsia_nurr",
+    "ltones:cyan_nurr",
+    "ltones:cerulean_nurr",
+    "ltones:blue_nurr",
+    "ltones:amber_nurr",
+    "ltones:yellow_nurr",
+    "ltones:red_nurr",
+    "ltones:purple_nurr",
+    "ltones:orange_nurr"
+  ]
+}

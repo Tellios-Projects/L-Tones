@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:minn_tiles",
+    "ltones:minn_resonance",
+    "ltones:minn_quilt",
+    "ltones:minn_poffnode",
+    "ltones:minn_poffcage",
+    "ltones:minn_poff",
+    "ltones:minn_pad",
+    "ltones:minn_nexus",
+    "ltones:minn_linenode",
+    "ltones:minn_line",
+    "ltones:minn_circle",
+    "ltones:minn_cage",
+    "ltones:minn_cubes",
+    "ltones:minn_blank",
+    "ltones:minn_bevel",
+    "ltones:minn"
+  ]
+}

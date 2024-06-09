@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:glaxx_blocks"
+  },
+  "result": "ltones:cinnimon_glaxx"
+}

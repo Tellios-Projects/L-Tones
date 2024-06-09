@@ -1,6 +1,9 @@
 package net.leafenzo.ltones.datageneration;
 
+import net.leafenzo.ltones.block.BlockSet;
+import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.registry.tag.ModTags;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 
@@ -25,6 +28,16 @@ public class ModItemTagGenerator extends FabricTagProvider<Item> {
     }
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
+
+        // For Blocksets
+        for(BlockSet blockSet : ModBlocks.BLOCKSETS) {
+            if(blockSet.itemTag != null) {
+                for(Block block : blockSet.blocks) {
+                    getOrCreateTagBuilder(blockSet.itemTag).add(block.asItem());
+                }
+            }
+        }
+
         // Vanilla
         getOrCreateTagBuilder(ModTags.Items.IGNEOUS_ROCKS)
                 .add(Items.GRANITE)

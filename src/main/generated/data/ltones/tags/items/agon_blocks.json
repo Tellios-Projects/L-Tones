@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:white_agon",
+    "ltones:orange_agon",
+    "ltones:magenta_agon",
+    "ltones:light_blue_agon",
+    "ltones:yellow_agon",
+    "ltones:lime_agon",
+    "ltones:pink_agon",
+    "ltones:gray_agon",
+    "ltones:light_gray_agon",
+    "ltones:cyan_agon",
+    "ltones:purple_agon",
+    "ltones:blue_agon",
+    "ltones:brown_agon",
+    "ltones:green_agon",
+    "ltones:red_agon",
+    "ltones:black_agon"
+  ]
+}

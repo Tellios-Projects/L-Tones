@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:cray_blocks"
+  },
+  "result": "ltones:empty_cray"
+}

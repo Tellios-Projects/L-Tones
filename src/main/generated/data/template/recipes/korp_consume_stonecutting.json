@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:korp_blocks"
+  },
+  "result": "ltones:korp_consume"
+}

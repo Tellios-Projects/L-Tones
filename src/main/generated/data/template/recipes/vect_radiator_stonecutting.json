@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:vect_blocks"
+  },
+  "result": "ltones:vect_radiator"
+}

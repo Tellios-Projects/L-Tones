@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:yellow_host",
+    "ltones:violet_host",
+    "ltones:vermilion_host",
+    "ltones:red_host",
+    "ltones:purple_host",
+    "ltones:navy_host",
+    "ltones:mint_host",
+    "ltones:magenta_host",
+    "ltones:lime_host",
+    "ltones:green_host",
+    "ltones:fuchsia_host",
+    "ltones:empty_host",
+    "ltones:cyan_host",
+    "ltones:blue_host",
+    "ltones:amber_host",
+    "ltones:host"
+  ]
+}
