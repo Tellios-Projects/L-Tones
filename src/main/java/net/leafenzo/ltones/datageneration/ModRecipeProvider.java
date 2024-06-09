@@ -129,7 +129,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.OIL, Items.GLASS_BOTTLE, Items.COAL, 1);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.POLYMER, Items.BONE_MEAL, ModItems.OIL, 1);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.ARGON, Items.GLASS_BOTTLE, ModTags.Items.IGNEOUS_ROCKS,1);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SLAG, Items.IRON_INGOT, ModItems.OIL, 2);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SLAG, ModItems.LITHIUM_INGOT, ModItems.OIL, 2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.ANTIBRASS, ModItems.LITHIUM_INGOT, Items.COPPER_INGOT, 2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.DIODE, ModItems.LITHIUM_INGOT, Items.REDSTONE, 1);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.GLEAM, ModItems.LITHIUM_INGOT, Items.GLOWSTONE_DUST, 4);
