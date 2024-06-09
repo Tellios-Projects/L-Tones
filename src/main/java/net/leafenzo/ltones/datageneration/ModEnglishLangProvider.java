@@ -72,6 +72,13 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
         //Manual
+        for(Block block : ModBlocks.FORT_BLOCKS) {
+            Identifier id = Registries.BLOCK.getId(block);
+            String key = Registries.BLOCK.get(id).getTranslationKey();
+            if(usedTranslationKeys.contains(key)) { continue; } //Skip over duplicate translation keys
+            usedTranslationKeys.add(key);
+            translationBuilder.add(key, toSentanceCase(id.getPath().replaceAll("fort", "fortt")));
+        }
 
         //Fallback
         for(Identifier id : ModUtil.allBlockIdsInNamespace(Super.MOD_ID)) {
