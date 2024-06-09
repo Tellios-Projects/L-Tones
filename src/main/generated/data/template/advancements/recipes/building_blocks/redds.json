@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:redds"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_thinking_metal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:thinking_metal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ztone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:ztone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_thinking_metal",
+      "has_ztone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:redds"
+    ]
+  },
+  "sends_telemetry_event": false
+}

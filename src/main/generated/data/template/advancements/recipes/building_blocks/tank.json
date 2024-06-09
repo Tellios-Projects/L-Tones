@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_tawsine": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:tawsine"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:tank"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_ztone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:ztone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_ztone",
+      "has_tawsine",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:tank"
+    ]
+  },
+  "sends_telemetry_event": false
+}

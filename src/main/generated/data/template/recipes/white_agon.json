@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "O": {
+      "item": "ltones:argon"
+    },
+    "X": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    "XO",
+    "OX"
+  ],
+  "result": {
+    "count": 4,
+    "item": "ltones:white_agon"
+  },
+  "show_notification": true
+}

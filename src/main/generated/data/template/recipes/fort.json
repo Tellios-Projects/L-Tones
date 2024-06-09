@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "O": {
+      "item": "ltones:polycarbonate"
+    },
+    "X": {
+      "item": "ltones:ztone"
+    }
+  },
+  "pattern": [
+    "XO",
+    "OX"
+  ],
+  "result": {
+    "count": 4,
+    "item": "ltones:fort"
+  },
+  "show_notification": true
+}

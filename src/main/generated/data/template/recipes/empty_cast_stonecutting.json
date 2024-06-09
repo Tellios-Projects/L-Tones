@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "tag": "ltones:cast_blocks"
-  },
-  "result": "ltones:empty_cast"
-}

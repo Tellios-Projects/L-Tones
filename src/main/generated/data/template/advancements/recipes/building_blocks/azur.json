@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_azure_rivet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:azure_rivet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:azur"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_ztone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:ztone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_ztone",
+      "has_azure_rivet",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:azur"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -13,41 +13,54 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
+import java.util.ArrayList;
+
 public class ModItemGroups {
     public static void registerModItemGroups() {
         ModInit.LOGGER.debug("Registering item groups for " + Super.MOD_ID);
     }
 
+    public static ArrayList<Block> includeVariants(ArrayList<Block> inputs) {
+        ArrayList<Block> blocks = new ArrayList<Block>();
+        for(Block block : inputs) {
+            blocks.add(block);
+            if (ModBlocks.STAIRS_FROM_BLOCK.get(block) != null) { blocks.add(ModBlocks.STAIRS_FROM_BLOCK.get(block)); }
+            if (ModBlocks.SLAB_FROM_BLOCK.get(block) != null) { blocks.add(ModBlocks.SLAB_FROM_BLOCK.get(block)); }
+        }
+        return blocks;
+    }
+
     public static ItemGroup LTONES = Registry.register(Registries.ITEM_GROUP, new Identifier(Super.MOD_ID, "ltones"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.ltones"))
                     .icon(() -> new ItemStack(ModBlocks.REDDS_TILE)).entries((displayContext, entries) -> {
-                        for(Block block : ModBlocks.AGON_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.FORT_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.GLAXX_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.CRAY_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.CAST_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.HOST_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.ZANE_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.ISZM_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.MYST_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.NURR_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.TYEL_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.VECT_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.REDDS_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.MINN_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.LAIR_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.KRYP_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.LAVE_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.VEELD_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.JELT_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.KORP_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.TANK_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.EXRI_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.AZUR_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.FLEQ_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.SYNC_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.ROEN_BLOCKS) { entries.add(block); }
-                        for(Block block : ModBlocks.SOL_BLOCKS) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.AGON_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.FORT_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.GLAXX_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.CRAY_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.CAST_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.HOST_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.ZANE_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.ISZM_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.MYST_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.NURR_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.TYEL_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.VECT_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.REDDS_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.MINN_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.LAIR_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.KRYP_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.LAVE_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.VEELD_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.JELT_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.KORP_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.TANK_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.EXRI_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.AZUR_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.FLEQ_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.SYNC_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.ROEN_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.SOL_BLOCKS)) { entries.add(block); }
+
                         entries.add(ModBlocks.ZTONE);
                         entries.add(ModItems.RAW_LITHIUM);
                         entries.add(ModItems.LITHIUM_INGOT);

@@ -16,8 +16,6 @@
     "ltones:veeld_drill",
     "ltones:veeld_core",
     "ltones:veeld_brick",
-    "ltones:veeld",
-    "ltones:veeld_stairs",
-    "ltones:veeld_slab"
+    "ltones:veeld"
   ]
 }

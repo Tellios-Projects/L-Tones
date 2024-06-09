@@ -23,6 +23,7 @@ public class ModTags {
         public static final TagKey<Item> IGNEOUS_ROCKS = getOrCreateTag("igneous_rocks");
         public static final TagKey<Item> FIBRE = getOrCreateTag("fibre");
         public static final TagKey<Item> MUSHROOMS = getOrCreateCommonTag("mushrooms");
+        public static final TagKey<Item> GLASS_PANES = getOrCreateCommonTag("glass_panes");
 
         public static final TagKey<Item> AGON_BLOCKS = getOrCreateTag("agon_blocks");
         public static final TagKey<Item> FORT_BLOCKS = getOrCreateTag("fort_blocks");

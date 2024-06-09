@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "O": {
+      "item": "ltones:scarlet_membrane"
+    },
+    "X": {
+      "item": "minecraft:netherrack"
+    }
+  },
+  "pattern": [
+    "XO",
+    "OX"
+  ],
+  "result": {
+    "count": 4,
+    "item": "ltones:lair"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_networking": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:networking"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_slag": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:slag"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:empty_host"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_slag",
+      "has_networking",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:empty_host"
+    ]
+  },
+  "sends_telemetry_event": false
+}

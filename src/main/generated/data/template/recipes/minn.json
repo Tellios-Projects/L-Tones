@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "O": {
+      "item": "ltones:fibrous_powder"
+    },
+    "X": {
+      "item": "ltones:ztone"
+    }
+  },
+  "pattern": [
+    "XO",
+    "OX"
+  ],
+  "result": {
+    "count": 4,
+    "item": "ltones:minn"
+  },
+  "show_notification": true
+}

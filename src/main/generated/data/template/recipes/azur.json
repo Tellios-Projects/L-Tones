@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "O": {
+      "item": "ltones:azure_rivet"
+    },
+    "X": {
+      "item": "ltones:ztone"
+    }
+  },
+  "pattern": [
+    "XO",
+    "OX"
+  ],
+  "result": {
+    "count": 4,
+    "item": "ltones:azur"
+  },
+  "show_notification": true
+}

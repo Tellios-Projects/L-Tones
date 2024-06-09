@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polycarbonate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:polycarbonate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:fort"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_ztone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:ztone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_ztone",
+      "has_polycarbonate",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:fort"
+    ]
+  },
+  "sends_telemetry_event": false
+}

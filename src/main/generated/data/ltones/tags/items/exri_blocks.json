@@ -12,8 +12,6 @@
     "ltones:exri_mesh",
     "ltones:exri_flow",
     "ltones:exri_divide",
-    "ltones:exri_divide_stairs",
-    "ltones:exri_divide_slab",
     "ltones:exri_display",
     "ltones:exri_current",
     "ltones:exri_critical",
