@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "template",
+  "id": "ltones",
   "version": "${version}",
 
-  "name": "Template",
+  "name": "LTONES",
   "description": "ADDME",
   "authors": [
     "Leah (@leafenzio), Tellio (@tellioaridoitsu)"
