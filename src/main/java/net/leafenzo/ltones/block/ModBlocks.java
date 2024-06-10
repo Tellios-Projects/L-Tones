@@ -11,6 +11,7 @@ import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -33,10 +34,14 @@ public class ModBlocks {
 
     //<editor-fold desc ="Hashmaps & BlockSets">
     // The reason why it's <Block, Block> instead of <Block, StairBlock> is because sometimes there will be block classes that have all the behavior of stair blocks without actually being children of them. This assumption is made for the hashmaps here as well.
+    public static final ArrayList<Block> RENDER_LAYER_CUTOUT = new ArrayList<Block>();
+    public static final ArrayList<Block> RENDER_LAYER_CUTOUT_MIPPED = new ArrayList<Block>();
+    public static final ArrayList<Block> RENDER_LAYER_TRANSLUCENT = new ArrayList<Block>();
+    public static final ArrayList<Block> HAS_FOLIAGE_COLOR_PROVIDER = new ArrayList<Block>();
+    public static final ArrayList<Block> HAS_GRASS_COLOR_PROVIDER = new ArrayList<Block>();
+    public static final ArrayList<Block> DECAL_BLOCKS = new ArrayList<Block>();
     public static final HashMap<Block, Block> STAIRS_FROM_BLOCK = new HashMap<Block, Block>();
     public static final HashMap<Block, Block> SLAB_FROM_BLOCK = new HashMap<Block, Block>();
-
-    public static final Block ZTONE = registerBlock("ztone", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
 
     public static final ArrayList<Block> AGON_BLOCKS = registerBlocksetOfVanillaDyedBlocks("agon", FabricBlockSettings.create().strength(0.3f).sounds(ModBlockSoundGroup.NEON).luminance(state -> 15));
     public static final ArrayList<Block> FORT_BLOCKS = new ArrayList<>();
@@ -95,10 +100,6 @@ public class ModBlocks {
     public static final BlockSet TYEL_BLOCKSET = registerBlockSet(TYEL_BLOCKS, "tyel_blocks");
     public static final BlockSet ROEN_BLOCKSET = registerBlockSet(ROEN_BLOCKS, "roen_blocks");
     public static final BlockSet SOL_BLOCKSET = registerBlockSet(SOL_BLOCKS, "sol_blocks");
-
-
-
-
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - FORT">
@@ -732,14 +733,62 @@ public class ModBlocks {
     public static final Block SOL = registerBlockInBlockset(SOL_BLOCKS, "sol", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null));
     //</editor-fold>
 
-    //<editor-fold desc ="Other Blocks">
-    //</editor-fold>
+    //<editor-fold desc ="Blocks - Other">
+    public static final Block ZTONE = registerBlock("ztone", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)
+            .mapColor(MapColor.LIGHT_GRAY)
+    ));
+
     public static final Block AURORA = registerBlock("aurora", new AuroraBlock(FabricBlockSettings.create()
             .mapColor(MapColor.TERRACOTTA_CYAN)
             .breakInstantly()
             .sounds(BlockSoundGroup.SNOW)
             .luminance(createLightLevelFromProperty(11, Properties.LIT))
     ));
+    //</editor-fold>
+
+    //<editor-fold desc ="Blocks - Decals">
+    private static final Block registerDecalBlock(String name, Block block) {
+        Block b = registerBlockWithoutBlockItem(name, block);
+        DECAL_BLOCKS.add(b);
+        return b;
+    }
+    private static final FabricBlockSettings decalMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.CLEAR)
+            .strength(0.1f)
+            .nonOpaque()
+            .noCollision()
+            .pistonBehavior(PistonBehavior.DESTROY);
+    public static final Block DECAL_CONDUCTIUM = registerDecalBlock("decal_conductium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_CONDUCTIUM); }
+    public static final Block DECAL_KERBESIUM = registerDecalBlock("decal_kerbesium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_KERBESIUM); }
+    public static final Block DECAL_ORGANIC_BRASS = registerDecalBlock("decal_organic_brass", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_ORGANIC_BRASS); }
+    public static final Block DECAL_MIDASIUM = registerDecalBlock("decal_midasium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_MIDASIUM); }
+    public static final Block DECAL_TAWSINE = registerDecalBlock("decal_tawsine", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_TAWSINE); }
+    public static final Block DECAL_THINKING_METAL = registerDecalBlock("decal_thinking_metal", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_THINKING_METAL); }
+    public static final Block DECAL_ARGON = registerDecalBlock("decal_argon", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_ARGON); }
+    public static final Block DECAL_OIL = registerDecalBlock("decal_oil", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_OIL); }
+    public static final Block DECAL_DIODE = registerDecalBlock("decal_diode", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_DIODE); }
+    public static final Block DECAL_POLYMER = registerDecalBlock("decal_polymer", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_POLYMER); }
+    public static final Block DECAL_SHEETING = registerDecalBlock("decal_sheeting", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_SHEETING); }
+    public static final Block DECAL_POLYCARBONATE = registerDecalBlock("decal_polycarbonate", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_POLYCARBONATE); }
+    public static final Block DECAL_GAS_TUBE = registerDecalBlock("decal_gas_tube", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_GAS_TUBE); }
+    public static final Block DECAL_AZURE_RIVET = registerDecalBlock("decal_azure_rivet", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_AZURE_RIVET); }
+    public static final Block DECAL_GLEAM = registerDecalBlock("decal_gleam", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_GLEAM); }
+    public static final Block DECAL_G2V = registerDecalBlock("decal_g2v", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_G2V); }
+    public static final Block DECAL_SLAG = registerDecalBlock("decal_slag", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_SLAG); }
+    public static final Block DECAL_RADIUM_PAINT = registerDecalBlock("decal_radium_paint", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_RADIUM_PAINT); }
+    public static final Block DECAL_FIBROUS_POWDER = registerDecalBlock("decal_fibrous_powder", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_FIBROUS_POWDER); }
+    public static final Block DECAL_AMALGAM = registerDecalBlock("decal_amalgam", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_AMALGAM); }
+    public static final Block DECAL_PORCELAIN = registerDecalBlock("decal_porcelain", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_PORCELAIN); }
+    public static final Block DECAL_SHADE = registerDecalBlock("decal_shade", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_SHADE); }
+    public static final Block DECAL_SCREEN = registerDecalBlock("decal_screen", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_SCREEN); }
+    public static final Block DECAL_SCARLET_MEMBRANE = registerDecalBlock("decal_scarlet_membrane", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_SCARLET_MEMBRANE); }
+    public static final Block DECAL_MOULDING = registerDecalBlock("decal_moulding", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_MOULDING); }
+    public static final Block DECAL_PLAQUE = registerDecalBlock("decal_plaque", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_PLAQUE); }
+    public static final Block DECAL_JELLY = registerDecalBlock("decal_jelly", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_JELLY); }
+    public static final Block DECAL_CORPOREAL_VAPOR = registerDecalBlock("decal_corporeal_vapor", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_CORPOREAL_VAPOR); }
+    public static final Block DECAL_FLAKES = registerDecalBlock("decal_flakes", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_FLAKES); }
+    public static final Block DECAL_NETWORKING = registerDecalBlock("decal_networking", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_NETWORKING); }
+    //</editor-fold>
 
     //<editor-fold desc ="Registration">
     public static BlockSet registerBlockSet(ArrayList<Block> blocks, String tagName) {
@@ -778,6 +827,9 @@ public class ModBlocks {
 
     public static Block registerBlock(String name, Block block) {
         registerBlockItem(name,block);
+        return Registry.register(Registries.BLOCK, new Identifier(Super.MOD_ID, name), block);
+    }
+    public static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(Super.MOD_ID, name), block);
     }
     private static Item registerBlockItem(String name, Block block) {

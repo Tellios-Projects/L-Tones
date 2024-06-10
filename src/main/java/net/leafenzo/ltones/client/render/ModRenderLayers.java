@@ -7,11 +7,10 @@ import net.minecraft.client.render.RenderLayer;
 
 public class ModRenderLayers {
     public static void registerBlockCutouts() {
-//        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutoutMipped(),
-//                ModBlocks.COMPRESSED_SPONGE
-//        );
-//        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getTranslucent(),
-//        );
+        for(Block block : ModBlocks.RENDER_LAYER_CUTOUT) { BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout()); }
+        for(Block block : ModBlocks.RENDER_LAYER_CUTOUT_MIPPED) { BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutoutMipped()); }
+        for(Block block : ModBlocks.RENDER_LAYER_TRANSLUCENT) { BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getTranslucent()); }
+
         for(Block block : ModBlocks.GLAXX_BLOCKS) {
             BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getTranslucent());
         }

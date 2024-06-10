@@ -1,10 +1,13 @@
 package net.leafenzo.ltones.datageneration;
 
+import com.mojang.datafixers.util.Pair;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.leafenzo.ltones.Super;
+import net.leafenzo.ltones.block.custom.DecalBlock;
 import net.leafenzo.ltones.block.custom.LitSlabBlock;
 import net.leafenzo.ltones.block.ModBlocks;
+import net.leafenzo.ltones.data.client.ModModels;
 import net.leafenzo.ltones.item.ModItems;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.Block;
@@ -12,11 +15,14 @@ import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.data.client.*;
 import net.minecraft.registry.Registries;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
 import net.minecraft.util.math.Direction;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.function.Function;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -68,9 +74,92 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createAxisRotatedVariantMap()));
     }
 
+    public final void registerMultiStateDecal(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        blockStateModelGenerator.registerItemModel(block.asItem());
+
+        Identifier identifier = blockStateModelGenerator.createSubModel(block, "_floor", ModModels.DECAL, TextureMap::all);
+        Identifier identifier2 = blockStateModelGenerator.createSubModel(block, "_wall", ModModels.DECAL, TextureMap::all);
+
+        MultipartBlockStateSupplier multipartBlockStateSupplier = MultipartBlockStateSupplier.create(block);
+        When.PropertyCondition propertyCondition2 = Util.make(When.create(), propertyCondition -> blockStateModelGenerator.CONNECTION_VARIANT_FUNCTIONS.stream().map(Pair::getFirst).forEach(property -> {
+            if (block.getDefaultState().contains(property)) {
+                propertyCondition.set(property, false);
+            }
+        }));
+        for (Pair<BooleanProperty, Function<Identifier, BlockStateVariant>> pair : blockStateModelGenerator.CONNECTION_VARIANT_FUNCTIONS) {
+            BooleanProperty booleanProperty = pair.getFirst();
+            Function<Identifier, BlockStateVariant> function = pair.getSecond();
+            if (!block.getDefaultState().contains(booleanProperty)) continue;
+
+            if(Objects.equals(booleanProperty.getName(), "up") || Objects.equals(booleanProperty.getName(), "down")) {
+                multipartBlockStateSupplier.with((When)When.create().set(booleanProperty, true), function.apply(identifier));
+                multipartBlockStateSupplier.with((When)propertyCondition2, function.apply(identifier));
+            }
+            else {
+                multipartBlockStateSupplier.with((When)When.create().set(booleanProperty, true), function.apply(identifier2));
+                multipartBlockStateSupplier.with((When)propertyCondition2, function.apply(identifier2));
+            }
+        }
+        blockStateModelGenerator.blockStateCollector.accept(multipartBlockStateSupplier);
+    }
+    public final void registerSingleStateDecal(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        blockStateModelGenerator.registerItemModel(block.asItem());
+        Identifier identifier = blockStateModelGenerator.createSubModel(block, "", ModModels.DECAL, TextureMap::all);
+
+        MultipartBlockStateSupplier multipartBlockStateSupplier = MultipartBlockStateSupplier.create(block);
+        When.PropertyCondition propertyCondition2 = Util.make(When.create(), propertyCondition -> blockStateModelGenerator.CONNECTION_VARIANT_FUNCTIONS.stream().map(Pair::getFirst).forEach(property -> {
+            if (block.getDefaultState().contains(property)) {
+                propertyCondition.set(property, false);
+            }
+        }));
+        for (Pair<BooleanProperty, Function<Identifier, BlockStateVariant>> pair : blockStateModelGenerator.CONNECTION_VARIANT_FUNCTIONS) {
+            BooleanProperty booleanProperty = pair.getFirst();
+            Function<Identifier, BlockStateVariant> function = pair.getSecond();
+            if (!block.getDefaultState().contains(booleanProperty)) continue;
+            multipartBlockStateSupplier.with((When)When.create().set(booleanProperty, true), function.apply(identifier));
+            multipartBlockStateSupplier.with((When)propertyCondition2, function.apply(identifier));
+        }
+        blockStateModelGenerator.blockStateCollector.accept(multipartBlockStateSupplier);
+    }
+
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        //<editor-fold desc = "Models - Other Blocks">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ZTONE);
+        //</editor-fold>
+
+        //<editor-fold desc = "Models - decals">
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_CONDUCTIUM);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_KERBESIUM);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_ORGANIC_BRASS);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_MIDASIUM);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_TAWSINE);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_THINKING_METAL);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_ARGON);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_OIL);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_DIODE);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_POLYMER);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_SHEETING);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_POLYCARBONATE);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_GAS_TUBE);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_AZURE_RIVET);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_GLEAM);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_G2V);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_SLAG);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_RADIUM_PAINT);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_FIBROUS_POWDER);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_AMALGAM);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_PORCELAIN);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_SHADE);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_SCREEN);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_SCARLET_MEMBRANE);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_MOULDING);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_PLAQUE);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_JELLY);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_CORPOREAL_VAPOR);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_FLAKES);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_NETWORKING);
+        //</editor-fold>
 
         //<editor-fold desc = "Models - agon">
         for(Block block : ModBlocks.AGON_BLOCKS) {
@@ -470,40 +559,10 @@ public class ModModelProvider extends FabricModelProvider {
     }
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.MOULDING, Models.GENERATED);
-        itemModelGenerator.register(ModItems.NETWORKING, Models.GENERATED);
-        itemModelGenerator.register(ModItems.OIL, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ORGANIC_BRASS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PLAQUE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.POLYCARBONATE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.POLYMER, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PORCELAIN, Models.GENERATED);
-        itemModelGenerator.register(ModItems.RADIUM_PAINT, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_LITHIUM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SCARLET_MEMBRANE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SCREEN, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SHADE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SHEETING, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SLAG, Models.GENERATED);
-        itemModelGenerator.register(ModItems.TAWSINE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.THINKING_METAL, Models.GENERATED);
-        itemModelGenerator.register(ModItems.AMALGAM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ANTIBRASS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ARGON, Models.GENERATED);
-        itemModelGenerator.register(ModItems.AZURE_RIVET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CONDUCTIUM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CORPOREAL_VAPOR, Models.GENERATED);
-        itemModelGenerator.register(ModItems.DIODE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.FIBROUS_POWDER, Models.GENERATED);
-        itemModelGenerator.register(ModItems.FLAKES, Models.GENERATED);
-        itemModelGenerator.register(ModItems.G2V, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GAS_TUBE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GLEAM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.JELLY, Models.GENERATED);
-        itemModelGenerator.register(ModItems.KERBESIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.LITHIUM_CHUNK, Models.GENERATED);
         itemModelGenerator.register(ModItems.LITHIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MIDASIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ANTIBRASS, Models.GENERATED);
     }
 
     public ArrayList<Identifier> usedBlockItems = new ArrayList<Identifier>();
@@ -516,7 +575,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateFallbackBlockItemModels(BlockStateModelGenerator blockStateModelGenerator) {
         for (Identifier id : ModUtil.allBlockIdsInNamespace(Super.MOD_ID)) {
             Block block = Registries.BLOCK.get(id);
-            if(block instanceof StairsBlock || block instanceof LitSlabBlock || block instanceof SlabBlock) continue; //Jank but it works
+            if(block instanceof StairsBlock || block instanceof LitSlabBlock || block instanceof SlabBlock || block instanceof DecalBlock) continue; //Jank but it works // WOW this sucks -me, months later
             registerParentedBlockItemModel(blockStateModelGenerator, Registries.BLOCK.get(id), Super.asResource("block/" + id.getPath()));
         }
     }

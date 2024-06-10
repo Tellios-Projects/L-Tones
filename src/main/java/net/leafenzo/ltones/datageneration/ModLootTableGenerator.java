@@ -3,12 +3,24 @@ package net.leafenzo.ltones.datageneration;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.leafenzo.ltones.Super;
+import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.Block;
+import net.minecraft.block.MultifaceGrowthBlock;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.loot.condition.LootCondition;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.entry.LeafEntry;
+import net.minecraft.loot.entry.LootPoolEntry;
+import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
 import java.util.ArrayList;
 import java.util.function.Function;
@@ -37,15 +49,24 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         super(dataOutput);
     }
 
+    public LootTable.Builder decalDrops(Block drop) { // similar to BlockLootTableGenerator.multifaceGrowthDrops
+        return LootTable.builder().pool(LootPool.builder()
+                .with((LootPoolEntry.Builder)this.applyExplosionDecay(drop, ((LeafEntry.Builder)((LeafEntry.Builder) ItemEntry.builder(drop))
+                        .apply(Direction.values(), direction -> SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f), true)
+                        .conditionally(BlockStatePropertyLootCondition.builder(drop).properties(StatePredicate.Builder.create().exactMatch(MultifaceGrowthBlock.getProperty((Direction) direction), true)))))
+                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(-1.0f), true)))));
+    }
+
+
     @Override
     public void generate() {
-        //Manual
+        for(Block block : ModBlocks.DECAL_BLOCKS) {
+            this.addDrop(block, (Block b) -> this.decalDrops((Block) b));
+        }
 
-        //this.addDrop(ModBlocks.BLAZE_ROD_BLOCK);
-        //this.addDrop(ModBlocks.GRASS_CLIPPINGS_BLOCK, (Block block) -> this.drops((Block)block, block));
-        //this.addDrop(ModBlocks.BOOK_BLOCK, (Block block) -> this.drops((Block)block, Items.BOOK, ConstantLootNumberProvider.create(9.0f)));
-        //this.addDrop(ModBlocks.COMPRESSED_OAK_LEAVES, (Block block) -> this.leavesDrops((Block)block, Blocks.OAK_SAPLING, SAPLING_DROP_CHANCE));
-        //this.addDropWithSilkTouch(ModBlocks.EGG_BLOCK);
+        for(Block block : ModBlocks.SLAB_FROM_BLOCK.values()) {
+            this.addDrop(block, (Block b) -> this.slabDrops((Block) b));
+        }
 
         //Fallback
         for(Identifier id : ModUtil.allBlockIdsInNamespace(Super.MOD_ID)) {
