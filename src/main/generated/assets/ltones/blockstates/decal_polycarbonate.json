@@ -2,7 +2,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "ltones:block/decal_polycarbonate_floor"
+        "model": "ltones:block/decal_polycarbonate_wall"
       },
       "when": {
         "north": "true"
@@ -23,7 +23,7 @@
     },
     {
       "apply": {
-        "model": "ltones:block/decal_polycarbonate_floor",
+        "model": "ltones:block/decal_polycarbonate_wall",
         "uvlock": true,
         "y": 90
       },
@@ -48,7 +48,7 @@
     },
     {
       "apply": {
-        "model": "ltones:block/decal_polycarbonate_floor",
+        "model": "ltones:block/decal_polycarbonate_wall",
         "uvlock": true,
         "y": 180
       },
@@ -73,7 +73,7 @@
     },
     {
       "apply": {
-        "model": "ltones:block/decal_polycarbonate_floor",
+        "model": "ltones:block/decal_polycarbonate_wall",
         "uvlock": true,
         "y": 270
       },
@@ -108,7 +108,7 @@
     },
     {
       "apply": {
-        "model": "ltones:block/decal_polycarbonate_wall",
+        "model": "ltones:block/decal_polycarbonate_floor",
         "uvlock": true,
         "x": 270
       },
@@ -133,7 +133,7 @@
     },
     {
       "apply": {
-        "model": "ltones:block/decal_polycarbonate_wall",
+        "model": "ltones:block/decal_polycarbonate_floor",
         "uvlock": true,
         "x": 90
       },

@@ -22,6 +22,7 @@ import net.minecraft.util.Util;
 import net.minecraft.util.math.Direction;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.function.Function;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -76,7 +77,6 @@ public class ModModelProvider extends FabricModelProvider {
     public final void registerMultiStateDecal(BlockStateModelGenerator blockStateModelGenerator, Block block) {
         blockStateModelGenerator.registerItemModel(block.asItem());
 
-        // TODO FIXME!
         Identifier identifier = blockStateModelGenerator.createSubModel(block, "_floor", ModModels.DECAL, TextureMap::all);
         Identifier identifier2 = blockStateModelGenerator.createSubModel(block, "_wall", ModModels.DECAL, TextureMap::all);
 
@@ -90,8 +90,15 @@ public class ModModelProvider extends FabricModelProvider {
             BooleanProperty booleanProperty = pair.getFirst();
             Function<Identifier, BlockStateVariant> function = pair.getSecond();
             if (!block.getDefaultState().contains(booleanProperty)) continue;
-            multipartBlockStateSupplier.with((When)When.create().set(booleanProperty, true), function.apply(identifier));
-            multipartBlockStateSupplier.with((When)propertyCondition2, function.apply(identifier2));
+
+            if(Objects.equals(booleanProperty.getName(), "up") || Objects.equals(booleanProperty.getName(), "down")) {
+                multipartBlockStateSupplier.with((When)When.create().set(booleanProperty, true), function.apply(identifier));
+                multipartBlockStateSupplier.with((When)propertyCondition2, function.apply(identifier));
+            }
+            else {
+                multipartBlockStateSupplier.with((When)When.create().set(booleanProperty, true), function.apply(identifier2));
+                multipartBlockStateSupplier.with((When)propertyCondition2, function.apply(identifier2));
+            }
         }
         blockStateModelGenerator.blockStateCollector.accept(multipartBlockStateSupplier);
     }
