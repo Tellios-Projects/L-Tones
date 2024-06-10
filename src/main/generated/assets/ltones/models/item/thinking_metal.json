@@ -1,3 +1,6 @@
 {
-  "parent": "ltones:block/decal_thinking_metal"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ltones:item/thinking_metal"
+  }
 }

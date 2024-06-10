@@ -30,7 +30,16 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
 
-        // For Blocksets
+        // Automatic
+        for(Block block : ModBlocks.SLAB_FROM_BLOCK.values()) {
+            getOrCreateTagBuilder(BlockTags.SLABS).add(block);
+        }
+
+        for(Block block : ModBlocks.STAIRS_FROM_BLOCK.values()) {
+            getOrCreateTagBuilder(BlockTags.STAIRS).add(block);
+        }
+
+        // For BlockSets
         for(BlockSet blockSet : ModBlocks.BLOCKSETS) {
             if(blockSet.blockTag != null) {
                 for(Block block : blockSet.blocks) {

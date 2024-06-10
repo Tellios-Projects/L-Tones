@@ -1,3 +1,6 @@
 {
-  "parent": "ltones:block/decal_organic_brass"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ltones:item/organic_brass"
+  }
 }

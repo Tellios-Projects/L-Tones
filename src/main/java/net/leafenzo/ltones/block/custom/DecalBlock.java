@@ -126,9 +126,9 @@ public class DecalBlock extends Block implements Waterloggable {
         return bl;
     }
 
-//    public boolean canReplace(BlockState state, ItemPlacementContext context) { //TODO figure out if we want to keep this disabled
-//        return isNotFullBlock(state);
-//    }
+    public boolean canReplace(BlockState state, ItemPlacementContext context) {
+        return context.getStack().isOf(asItem()); // only replace when the replacement is of this
+    }
 
     @Nullable
     public BlockState getPlacementState(ItemPlacementContext ctx) {

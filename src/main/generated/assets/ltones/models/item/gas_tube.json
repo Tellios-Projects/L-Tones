@@ -1,3 +1,6 @@
 {
-  "parent": "ltones:block/decal_gas_tube"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ltones:item/gas_tube"
+  }
 }

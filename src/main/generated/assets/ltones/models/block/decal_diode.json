@@ -1,0 +1,7 @@
+{
+  "parent": "ltones:block/decal",
+  "textures": {
+    "all": "ltones:block/decal_diode",
+    "particle": "ltones:block/decal_diode"
+  }
+}

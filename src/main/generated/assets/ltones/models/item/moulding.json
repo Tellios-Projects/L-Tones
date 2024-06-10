@@ -1,3 +1,6 @@
 {
-  "parent": "ltones:block/decal_moulding"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ltones:item/moulding"
+  }
 }

@@ -1,3 +1,6 @@
 {
-  "parent": "ltones:block/decal_fibrous_powder"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ltones:item/fibrous_powder"
+  }
 }
