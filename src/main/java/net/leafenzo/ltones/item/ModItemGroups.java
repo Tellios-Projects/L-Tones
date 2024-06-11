@@ -62,7 +62,13 @@ public class ModItemGroups {
                         for(Block block : includeVariants(ModBlocks.SOL_BLOCKS)) { entries.add(block); }
 
                         entries.add(ModBlocks.ZTONE);
+                        entries.add(ModBlocks.AURORA);
+                        entries.add(ModBlocks.LITHIUM_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_LITHIUM_ORE);
+                        entries.add(ModBlocks.ENDSTONE_LITHIUM_ORE);
+                        entries.add(ModBlocks.RAW_LITHIUM_BLOCK);
                         entries.add(ModItems.RAW_LITHIUM);
+                        entries.add(ModBlocks.LITHIUM_BLOCK);
                         entries.add(ModItems.LITHIUM_INGOT);
                         entries.add(ModItems.LITHIUM_CHUNK);
                         entries.add(ModItems.ANTIBRASS);

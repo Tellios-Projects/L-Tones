@@ -24,6 +24,7 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.BlockView;
 
 import java.util.ArrayList;
@@ -737,13 +738,17 @@ public class ModBlocks {
     public static final Block ZTONE = registerBlock("ztone", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)
             .mapColor(MapColor.LIGHT_GRAY)
     ));
-
     public static final Block AURORA = registerBlock("aurora", new AuroraBlock(FabricBlockSettings.create()
             .mapColor(MapColor.TERRACOTTA_CYAN)
             .breakInstantly()
             .sounds(BlockSoundGroup.SNOW)
             .luminance(createLightLevelFromProperty(11, Properties.LIT))
     ));
+    public static final Block RAW_LITHIUM_BLOCK = registerBlock("raw_lithium_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block LITHIUM_BLOCK = registerBlock("lithium_block", new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block LITHIUM_ORE = registerBlock("lithium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
+    public static final Block DEEPSLATE_LITHIUM_ORE = registerBlock("deepslate_lithium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_IRON_ORE)));
+    public static final Block ENDSTONE_LITHIUM_ORE = registerBlock("endstone_lithium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).strength(3.5f, 9.0f), UniformIntProvider.create(0, 1)));
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - Decals">

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:raw_lithium_block",
+    "ltones:lithium_block",
+    "ltones:lithium_ore",
+    "ltones:deepslate_lithium_ore",
+    "ltones:endstone_lithium_ore"
+  ]
+}

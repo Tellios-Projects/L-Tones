@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "ltones:ztone",
     "ltones:white_agon",
     "ltones:orange_agon",
     "ltones:magenta_agon",
@@ -369,6 +368,12 @@
     "ltones:sol_field",
     "ltones:sol_nuclei",
     "ltones:sol_corona",
-    "ltones:sol"
+    "ltones:sol",
+    "ltones:ztone",
+    "ltones:raw_lithium_block",
+    "ltones:lithium_block",
+    "ltones:lithium_ore",
+    "ltones:deepslate_lithium_ore",
+    "ltones:endstone_lithium_ore"
   ]
 }

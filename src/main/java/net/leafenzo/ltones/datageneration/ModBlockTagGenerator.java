@@ -29,17 +29,15 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-
-        // Automatic
-        for(Block block : ModBlocks.SLAB_FROM_BLOCK.values()) {
-            getOrCreateTagBuilder(BlockTags.SLABS).add(block);
-        }
-
-        for(Block block : ModBlocks.STAIRS_FROM_BLOCK.values()) {
-            getOrCreateTagBuilder(BlockTags.STAIRS).add(block);
-        }
-
-        // For BlockSets
+        //<editor-fold desc ="BlockTags - Vanilla Blocks">
+        getOrCreateTagBuilder(ModTags.Blocks.IGNEOUS_ROCKS)
+                .add(Blocks.GRANITE)
+                .add(Blocks.ANDESITE)
+                .add(Blocks.DIORITE)
+                .add(Blocks.BASALT)
+        ;
+        //</editor-fold
+        //<editor-fold desc ="BlockTags - BlockSet Self-tags">
         for(BlockSet blockSet : ModBlocks.BLOCKSETS) {
             if(blockSet.blockTag != null) {
                 for(Block block : blockSet.blocks) {
@@ -47,20 +45,8 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
                 }
             }
         }
-
-        // Vanilla
-        getOrCreateTagBuilder(ModTags.Blocks.IGNEOUS_ROCKS)
-                .add(Blocks.GRANITE)
-                .add(Blocks.ANDESITE)
-                .add(Blocks.DIORITE)
-                .add(Blocks.BASALT)
-        ;
-
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(ModBlocks.ZTONE)
-        ;
-
-        //<editor-fold desc ="BlockTags for Blocksets">
+        //</editor-fold
+        //<editor-fold desc ="BlockTags - Blockset Specific">
         for(Block block : ModBlocks.AGON_BLOCKS) {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
         }
@@ -130,9 +116,16 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         for(Block block : ModBlocks.SOL_BLOCKS) {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
         }
-        //</editor-fold>
+        //</editor-fold
+        //<editor-fold desc ="BlockTags - Individual Blocks">
+        getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
+            .add(ModBlocks.RAW_LITHIUM_BLOCK)
+            .add(ModBlocks.LITHIUM_BLOCK)
+            .add(ModBlocks.LITHIUM_ORE)
+            .add(ModBlocks.DEEPSLATE_LITHIUM_ORE)
+            .add(ModBlocks.ENDSTONE_LITHIUM_ORE)
+        ;
 
-        //<editor-fold desc ="BlockTags for Individual Blocks">
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 //.add(ModBlocks.)
              ;
@@ -150,7 +143,12 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         ;
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-        //.add(ModBlocks.)
+                .add(ModBlocks.ZTONE)
+                .add(ModBlocks.RAW_LITHIUM_BLOCK)
+                .add(ModBlocks.LITHIUM_BLOCK)
+                .add(ModBlocks.LITHIUM_ORE)
+                .add(ModBlocks.DEEPSLATE_LITHIUM_ORE)
+                .add(ModBlocks.ENDSTONE_LITHIUM_ORE)
         ;
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
@@ -209,6 +207,15 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         //.add(ModBlocks.)
         ;
         //</editor-fold>
+        //<editor-fold desc ="BlockTags - Automatic Slabs & Stairs">
+        for(Block block : ModBlocks.SLAB_FROM_BLOCK.values()) {
+            getOrCreateTagBuilder(BlockTags.SLABS).add(block);
+        }
+
+        for(Block block : ModBlocks.STAIRS_FROM_BLOCK.values()) {
+            getOrCreateTagBuilder(BlockTags.STAIRS).add(block);
+        }
+        //</editor-fold
     }
 }
 

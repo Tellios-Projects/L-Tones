@@ -1,5 +1,6 @@
 package net.leafenzo.ltones.datageneration;
 
+import com.google.common.collect.ImmutableList;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.leafenzo.ltones.Super;
@@ -15,6 +16,7 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.Registries;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
@@ -220,9 +222,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
     }
 
+    public static void offerReversible2x2CompactingRecipesWithCompactingRecipeGroup(Consumer<RecipeJsonProvider> exporter, RecipeCategory reverseCategory, ItemConvertible baseItem, RecipeCategory compactingCategory, ItemConvertible compactItem, String compactingId, String compactingGroup) {
+        offerReversible2x2CompactingRecipes(exporter, reverseCategory, baseItem, compactingCategory, compactItem, compactingId, compactingGroup, RecipeProvider.getRecipeName(baseItem), null);
+    }
+    public static void offerReversible2x2CompactingRecipes(Consumer<RecipeJsonProvider> exporter, RecipeCategory reverseCategory, ItemConvertible baseItem, RecipeCategory compactingCategory, ItemConvertible compactItem, String compactingId, @Nullable String compactingGroup, String reverseId, @Nullable String reverseGroup) {
+        ShapelessRecipeJsonBuilder.create(reverseCategory, baseItem, 4).input(compactItem).group(reverseGroup).criterion(RecipeProvider.hasItem(compactItem), RecipeProvider.conditionsFromItem(compactItem)).offerTo(exporter, new Identifier(reverseId+"_from_"+compactingId));
+        ShapedRecipeJsonBuilder.create(compactingCategory, compactItem)
+                .input(Character.valueOf('#'), baseItem)
+                .pattern("##")
+                .pattern("##")
+                .group(compactingGroup)
+                .criterion(FabricRecipeProvider.hasItem(baseItem), FabricRecipeProvider.conditionsFromItem(baseItem))
+                .offerTo(exporter, new Identifier(compactingId+"_from_"+reverseId));
+    }
+    public static void offerReversible2x2CompactingRecipes(Consumer<RecipeJsonProvider> exporter, RecipeCategory reverseCategory, ItemConvertible baseItem, RecipeCategory compactingCategory, ItemConvertible compactItem) {
+        offerReversible2x2CompactingRecipes(exporter, reverseCategory, baseItem, compactingCategory, compactItem, RecipeProvider.getRecipeName(compactItem), Super.MOD_ID + ":" + Registries.ITEM.getId(baseItem.asItem()).getPath(), RecipeProvider.getRecipeName(baseItem), Super.MOD_ID + ":" + Registries.ITEM.getId(baseItem.asItem()).getPath() + "_reverse");
+    }
+
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        //<- put ZTONE here when that exists
+        // Item Recipes
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.OIL, Items.GLASS_BOTTLE, Items.COAL, 1);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.POLYMER, Items.BONE_MEAL, ModItems.OIL, 1);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.ARGON, Items.GLASS_BOTTLE, ModTags.Items.IGNEOUS_ROCKS,1);
@@ -256,6 +275,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.NETWORKING, ModTags.Items.MUSHROOMS, ModItems.ARGON,2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.JELLY, Items.SLIME_BALL, ModItems.OIL,2);
 
+        // Blockset Base Recipes
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AGON_BLOCKS.get(0), Blocks.GLASS, ModItems.ARGON, 4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FORT_BLOCKS.get(0), ModBlocks.ZTONE, ModItems.POLYCARBONATE, 4);
         offerSurroundedRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LICORICE_GLAXX, ModItems.SHADE, Items.GLASS_PANE, 8);
@@ -284,6 +304,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROEN, ModItems.PLAQUE,4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOL, ModBlocks.ZTONE, ModItems.G2V,4);
 
+        // Blockset Stonecutting Recipes
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AGON_BLOCKSET);
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FORT_BLOCKSET);
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLAXX_BLOCKSET);
@@ -311,6 +332,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TYEL_BLOCKSET);
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROEN_BLOCKSET);
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOL_BLOCKSET);
+
+        // Other Recipes
+        offerSmelting(exporter, ImmutableList.of(ModItems.RAW_LITHIUM, ModBlocks.LITHIUM_ORE, ModBlocks.DEEPSLATE_LITHIUM_ORE, ModBlocks.ENDSTONE_LITHIUM_ORE), RecipeCategory.MISC, ModItems.LITHIUM_INGOT, 0.7f, 200, "lithium_ingot");
+        offerBlasting(exporter, ImmutableList.of(ModItems.RAW_LITHIUM, ModBlocks.LITHIUM_ORE, ModBlocks.DEEPSLATE_LITHIUM_ORE, ModBlocks.ENDSTONE_LITHIUM_ORE), RecipeCategory.MISC, ModItems.LITHIUM_INGOT, 0.7f, 100, "lithium_ingot");
+        offerReversible2x2CompactingRecipesWithCompactingRecipeGroup(exporter, RecipeCategory.MISC, ModItems.LITHIUM_CHUNK, RecipeCategory.MISC, ModItems.LITHIUM_INGOT, "lithium_ingot_from_lithium_chunks", "lithium_ingot");
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.RAW_LITHIUM, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_LITHIUM_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.LITHIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LITHIUM_BLOCK);
+        
+        //TODO ztone recipe
+        //TODO aurora recipe
 
         // Automatic Stairs & Slab Recipes
         for (Block block : ModBlocks.STAIRS_FROM_BLOCK.keySet()) {

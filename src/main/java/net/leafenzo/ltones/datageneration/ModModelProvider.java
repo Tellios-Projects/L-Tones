@@ -124,10 +124,6 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        //<editor-fold desc = "Models - Other Blocks">
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ZTONE);
-        //</editor-fold>
-
         //<editor-fold desc = "Models - decals">
         this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_CONDUCTIUM);
         this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_KERBESIUM);
@@ -532,10 +528,15 @@ public class ModModelProvider extends FabricModelProvider {
         registerLitOnOffGlazedTerracottaBlock(blockStateModelGenerator, ModBlocks.SOL_BLAZAR,  Models.CUBE_ALL, TextureMap::all);
         //</editor-fold>
 
-
         //<editor-fold desc = "Models - Other Blocks">
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.AURORA, Models.CUBE_ALL, TextureMap::all);
-
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ZTONE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_LITHIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LITHIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LITHIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_LITHIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ENDSTONE_LITHIUM_ORE);
+        //</editor-fold>
 
         // Block Models
         // Cube with all sides the same texture, IE Dirt

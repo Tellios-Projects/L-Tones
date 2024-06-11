@@ -72,15 +72,16 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
         //Manual
+        //<editor-fold desc ="EnglishLang - Manual Translations">
+        generateTranslation(translationBuilder, ModBlocks.RAW_LITHIUM_BLOCK, "Block of Raw Lithium");
+
         for(Block block : ModBlocks.FORT_BLOCKS) {
             Identifier id = Registries.BLOCK.getId(block);
             String key = Registries.BLOCK.get(id).getTranslationKey();
-            if(usedTranslationKeys.contains(key)) { continue; } //Skip over duplicate translation keys
-            usedTranslationKeys.add(key);
-            translationBuilder.add(key, toSentanceCase(id.getPath().replaceAll("fort", "fortt")));
+            generateTranslation(translationBuilder, key, toSentanceCase(id.getPath().replaceAll("fort", "fortt")));
         }
-
-        //Fallback
+        //</editor-fold
+        //<editor-fold desc ="EnglishLang - Fallback">
         for(Identifier id : ModUtil.allBlockIdsInNamespace(Super.MOD_ID)) {
             String key = Registries.BLOCK.get(id).getTranslationKey();
             if(usedTranslationKeys.contains(key)) { continue; } //Skip over duplicate translation keys
@@ -105,7 +106,6 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
             usedTranslationKeys.add(key);
             translationBuilder.add(key, toSentanceCase(id.getPath()));
         }
-
         // This is a mess, just do this part manually for now.
         // Effects, Potions, and Tipped arrows
 //        for(Identifier id : ModUtil.allPotionIdsInNamespace(Super.MOD_ID)) {
@@ -123,5 +123,6 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
 //            arrowKey = arrowKey.concat(Pattern.compile("(?<=potion\\.)[^.]+").matcher(key).toString());
 //            translationBuilder.add(arrowKey, "Arrow of " + toSentanceCase(effectName));
 //        }
+        //</editor-fold
     }
 }
