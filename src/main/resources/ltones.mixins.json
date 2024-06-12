@@ -6,8 +6,6 @@
   "mixins": [
   ],
   "client": [
-    "BlockStateProviderMixin",
-    "ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1

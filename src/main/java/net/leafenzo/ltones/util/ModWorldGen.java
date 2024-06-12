@@ -4,8 +4,6 @@ import com.mojang.serialization.Codec;
 import net.leafenzo.ltones.ModInit;
 import net.leafenzo.ltones.Super;
 import net.leafenzo.ltones.datageneration.ModPlacedFeatures;
-import net.leafenzo.ltones.mixin.BlockStateProviderMixin;
-import net.leafenzo.ltones.world.ModSimpleBlockStateProvider;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -23,7 +21,7 @@ public class ModWorldGen {
 //    public static final TreeDecoratorType<MushroomBlockDirectionDecorator> MUSHROOM_BLOCK_DIRECTION_DECORATOR = registerTreeDecorator("mushroom_block_direction_decorator", MushroomBlockDirectionDecorator.CODEC);
 //    public static final FoliagePlacerType<HugeWaxcapMushroomFoliagePlacer> HUGE_WAXCAP_MUSHROOM_FOLIAGE_PLACER = registerFoliagePlacer("huge_waxcap_mushroom_foliage_placer", HugeWaxcapMushroomFoliagePlacer.CODEC);
 
-    public static final BlockStateProviderType<ModSimpleBlockStateProvider> MOD_SIMPLE_BLOCK_STATE_PROVIDER = BlockStateProviderMixin.callRegister("mod_simple_block_state_provider", ModSimpleBlockStateProvider.CODEC);
+//    public static final BlockStateProviderType<ModSimpleBlockStateProvider> MOD_SIMPLE_BLOCK_STATE_PROVIDER = BlockStateProviderMixin.callRegister("mod_simple_block_state_provider", ModSimpleBlockStateProvider.CODEC);
 
     private static <P extends FoliagePlacer> FoliagePlacerType<P> registerFoliagePlacer(String id, Codec<P> codec) {
         return (FoliagePlacerType) Registry.register(Registries.FOLIAGE_PLACER_TYPE, new Identifier(Super.MOD_ID, id), new FoliagePlacerType(codec));
