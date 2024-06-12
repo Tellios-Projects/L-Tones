@@ -1,0 +1,10 @@
+{
+  "parent": "ltones:block/crt_template",
+  "textures": {
+    "back": "ltones:block/aged_crt_back",
+    "bottom": "ltones:block/aged_crt_bottom",
+    "front": "ltones:block/aged_crt_front_on",
+    "side": "ltones:block/aged_crt_side",
+    "top": "ltones:block/aged_crt_top"
+  }
+}

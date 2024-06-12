@@ -74,6 +74,10 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         //Manual
         //<editor-fold desc ="EnglishLang - Manual Translations">
         generateTranslation(translationBuilder, ModBlocks.RAW_LITHIUM_BLOCK, "Block of Raw Lithium");
+        generateTranslation(translationBuilder, ModBlocks.CRT, "CRT Monitor");
+        generateTranslation(translationBuilder, ModBlocks.AGED_CRT, "Aged CRT Monitor");
+        generateTranslation(translationBuilder, ModBlocks.BLACK_CRT, "Black CRT Monitor");
+        generateTranslation(translationBuilder, ModBlocks.GRAY_CRT, "Gray CRT Monitor");
 
         for(Block block : ModBlocks.FORT_BLOCKS) {
             Identifier id = Registries.BLOCK.getId(block);

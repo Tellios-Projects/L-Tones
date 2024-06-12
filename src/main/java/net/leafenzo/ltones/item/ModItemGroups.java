@@ -69,6 +69,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FRAMED_TONE_BRICKS);
                         entries.add(ModBlocks.ZTONE);
                         entries.add(ModBlocks.AURORA);
+                        entries.add(ModBlocks.CRT);
+                        entries.add(ModBlocks.AGED_CRT);
+                        entries.add(ModBlocks.BLACK_CRT);
+                        entries.add(ModBlocks.GRAY_CRT);
                         entries.add(ModBlocks.LITHIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_LITHIUM_ORE);
                         entries.add(ModBlocks.ENDSTONE_LITHIUM_ORE);

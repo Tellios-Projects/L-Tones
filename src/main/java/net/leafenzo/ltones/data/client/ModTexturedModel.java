@@ -1,17 +1,22 @@
 package net.leafenzo.ltones.data.client;
 
+import net.minecraft.block.Block;
+import net.minecraft.data.client.TextureKey;
+import net.minecraft.data.client.TextureMap;
+import net.minecraft.data.client.TexturedModel;
+
 public class ModTexturedModel {
 
-//    public static final TexturedModel.Factory LOG_PILE = TexturedModel.makeFactory(ModTexturedModel::logPile, ModModels.CUBE_DIRECTIONAL_DOWN_ROTATED);
-//    public static TextureMap logPile(Block block) {
-//        return  new TextureMap()
-//                .put(TextureKey.PARTICLE, TextureMap.getSubId(block, "_side"))
-//                .put(TextureKey.NORTH, TextureMap.getSubId(block, "_side"))
-//                .put(TextureKey.SOUTH, TextureMap.getSubId(block, "_side"))
-//                .put(TextureKey.EAST, TextureMap.getSubId(block, "_bottom"))
-//                .put(TextureKey.WEST, TextureMap.getSubId(block, "_bottom"))
-//                .put(TextureKey.UP, TextureMap.getSubId(block, "_top"))
-//                .put(TextureKey.DOWN, TextureMap.getSubId(block, "_top"))
-//                ;
-//    }
+    public static final TexturedModel.Factory ORIENTABLE_TOP_BOTTOM_SIDE_BACK = TexturedModel.makeFactory(ModTexturedModel::orientableTopBottomSideBack, ModModels.ORIENTABLE_TOP_BOTTOM_SIDE_BACK);
+    public static final TexturedModel.Factory CRT = TexturedModel.makeFactory(ModTexturedModel::orientableTopBottomSideBack, ModModels.CRT);
+
+    public static TextureMap orientableTopBottomSideBack(Block block) {
+        return  new TextureMap()
+                .put(TextureKey.TOP, TextureMap.getSubId(block, "_top"))
+                .put(TextureKey.BOTTOM, TextureMap.getSubId(block, "_bottom"))
+                .put(TextureKey.SIDE, TextureMap.getSubId(block, "_side"))
+                .put(TextureKey.FRONT, TextureMap.getSubId(block, "_front"))
+                .put(TextureKey.BACK, TextureMap.getSubId(block, "_back"))
+                ;
+    }
 }

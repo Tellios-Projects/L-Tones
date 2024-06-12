@@ -3,13 +3,13 @@
   "values": [
     "ltones:lair_rigor_stairs",
     "ltones:lair_derma_stairs",
-    "ltones:kryp_smooth_stairs",
+    "ltones:exri_divide_stairs",
+    "ltones:redds_pice_stairs",
     "ltones:lair_rigid_stairs",
     "ltones:kryp_wire_stairs",
     "ltones:kryp_stairs",
-    "ltones:lave_tile_stairs",
-    "ltones:redds_pice_stairs",
+    "ltones:kryp_smooth_stairs",
     "ltones:veeld_stairs",
-    "ltones:exri_divide_stairs"
+    "ltones:lave_tile_stairs"
   ]
 }

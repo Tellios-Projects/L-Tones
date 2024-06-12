@@ -8,6 +8,7 @@ import net.leafenzo.ltones.block.custom.DecalBlock;
 import net.leafenzo.ltones.block.custom.LitSlabBlock;
 import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.data.client.ModModels;
+import net.leafenzo.ltones.data.client.ModTexturedModel;
 import net.leafenzo.ltones.item.ModItems;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.Block;
@@ -120,6 +121,24 @@ public class ModModelProvider extends FabricModelProvider {
             multipartBlockStateSupplier.with((When)propertyCondition2, function.apply(identifier));
         }
         blockStateModelGenerator.blockStateCollector.accept(multipartBlockStateSupplier);
+    }
+    public final void registerCRT(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        TexturedModel.Factory modelFactory = ModTexturedModel.CRT;
+        Identifier identifier = modelFactory.upload(block, blockStateModelGenerator.modelCollector);
+
+        TextureMap map = new TextureMap()
+                .put(TextureKey.TOP, TextureMap.getSubId(block, "_top"))
+                .put(TextureKey.BOTTOM, TextureMap.getSubId(block, "_bottom"))
+                .put(TextureKey.SIDE, TextureMap.getSubId(block, "_side"))
+                .put(TextureKey.FRONT, TextureMap.getSubId(block, "_front_on"))
+                .put(TextureKey.BACK, TextureMap.getSubId(block, "_back"))
+                ;
+        Model model = ModModels.CRT;
+        Identifier identifier2 = model.upload(block, "_on", map, blockStateModelGenerator.modelCollector);
+
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates())
+                .coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.LIT, identifier2, identifier)));
     }
 
     @Override
@@ -542,6 +561,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABSTRACT_TONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FRAMED_TONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FRAMED_TONE_BRICKS);
+
+        registerCRT(blockStateModelGenerator, ModBlocks.CRT);
+        registerCRT(blockStateModelGenerator, ModBlocks.AGED_CRT);
+        registerCRT(blockStateModelGenerator, ModBlocks.BLACK_CRT);
+        registerCRT(blockStateModelGenerator, ModBlocks.GRAY_CRT);
 
         //</editor-fold>
 

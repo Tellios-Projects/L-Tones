@@ -755,6 +755,12 @@ public class ModBlocks {
     public static final Block ABSTRACT_TONE = registerBlock("abstract_tone", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY)));
     public static final Block FRAMED_TONE = registerBlock("framed_tone", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY)));
     public static final Block FRAMED_TONE_BRICKS = registerBlock("framed_tone_bricks", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY)));
+
+    //TODO better CRT sfx
+    public static final Block CRT = registerBlock("crt", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(nurrMaterial).luminance(createLightLevelFromProperty(7, Properties.LIT)).strength(0.5f).mapColor(DyeColor.WHITE), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block AGED_CRT = registerBlock("aged_crt", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).mapColor(DyeColor.YELLOW), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block BLACK_CRT = registerBlock("black_crt", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).mapColor(DyeColor.BLACK), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block GRAY_CRT = registerBlock("gray_crt", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).mapColor(DyeColor.GRAY), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - Decals">
