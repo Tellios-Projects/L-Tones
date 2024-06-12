@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "ltones:lithium_chunk"
+    },
+    "X": {
+      "item": "ltones:tone"
+    }
+  },
+  "pattern": [
+    "X#X",
+    "#X#",
+    "X#X"
+  ],
+  "result": {
+    "count": 5,
+    "item": "ltones:ztone"
+  },
+  "show_notification": true
+}

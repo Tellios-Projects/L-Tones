@@ -149,6 +149,12 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
                 .add(ModBlocks.LITHIUM_ORE)
                 .add(ModBlocks.DEEPSLATE_LITHIUM_ORE)
                 .add(ModBlocks.ENDSTONE_LITHIUM_ORE)
+                .add(ModBlocks.TONE)
+                .add(ModBlocks.TONE_BRICKS)
+                .add(ModBlocks.POLISHED_TONE)
+                .add(ModBlocks.ABSTRACT_TONE)
+                .add(ModBlocks.FRAMED_TONE)
+                .add(ModBlocks.FRAMED_TONE_BRICKS)
         ;
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)

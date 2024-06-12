@@ -63,6 +63,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter, getRecipePath(output, input, input2));
     }
+    public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, @Nullable String group, int outputCount) {
+        ShapelessRecipeJsonBuilder
+                .create(recipeCategory, output, outputCount)
+                .input(input)
+                .group(group)
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter, getRecipePath(output, input));
+    }
     public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, ItemConvertible input2, ItemConvertible input3, @Nullable String group, int outputCount) {
         ShapelessRecipeJsonBuilder
                 .create(recipeCategory, output, outputCount)
@@ -130,7 +138,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         }
     }
 
-    public static void offerStonecuttingRecipes(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ArrayList<Block> outputs, ArrayList<Block> inputs) {
+    public static void offerStonecuttingRecipes(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ImmutableList<ItemConvertible> outputs, ImmutableList<ItemConvertible>  inputs) {
         for (ItemConvertible input : inputs) {
             for (ItemConvertible output : outputs) {
                 if(output != input) {
@@ -139,8 +147,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             }
         }
     }
-
-    public static void offerStonecuttingRecipes(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ArrayList<Block> outputs, ItemConvertible input) {
+    public static void offerStonecuttingRecipes(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ImmutableList<ItemConvertible> outputs, ItemConvertible input) {
         for (ItemConvertible output : outputs) {
             offerStonecuttingRecipe(exporter, recipeCategory, output, input, 1);
         }
@@ -339,8 +346,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerReversible2x2CompactingRecipesWithCompactingRecipeGroup(exporter, RecipeCategory.MISC, ModItems.LITHIUM_CHUNK, RecipeCategory.MISC, ModItems.LITHIUM_INGOT, "lithium_ingot_from_lithium_chunks", "lithium_ingot");
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.RAW_LITHIUM, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_LITHIUM_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.LITHIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LITHIUM_BLOCK);
-        
-        //TODO ztone recipe
+
+        offerSurroundedRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABSTRACT_TONE, ModItems.OIL, ModBlocks.TONE, 8);
+        offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TONE, ModBlocks.TONE, 4);
+        offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FRAMED_TONE, ModBlocks.ABSTRACT_TONE, 4);
+        offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TONE_BRICKS, ModBlocks.POLISHED_TONE, 4);
+        offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FRAMED_TONE_BRICKS, ModBlocks.FRAMED_TONE, 4);
+        offerStonecuttingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ImmutableList.of(ModBlocks.ABSTRACT_TONE, ModBlocks.FRAMED_TONE, ModBlocks.FRAMED_TONE_BRICKS), ImmutableList.of(ModBlocks.ABSTRACT_TONE, ModBlocks.FRAMED_TONE, ModBlocks.FRAMED_TONE_BRICKS));
+        offerStonecuttingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ImmutableList.of(ModBlocks.TONE, ModBlocks.POLISHED_TONE, ModBlocks.TONE_BRICKS), ImmutableList.of(ModBlocks.TONE, ModBlocks.POLISHED_TONE, ModBlocks.TONE_BRICKS));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ZTONE, 5)
+                .input(Character.valueOf('X'), ModBlocks.TONE)
+                .input(Character.valueOf('#'), ModItems.LITHIUM_CHUNK)
+                .pattern("X#X")
+                .pattern("#X#")
+                .pattern("X#X")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.TONE), FabricRecipeProvider.conditionsFromItem(ModBlocks.TONE))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.LITHIUM_CHUNK), FabricRecipeProvider.conditionsFromItem(ModItems.LITHIUM_CHUNK))
+                .offerTo(exporter);
+
         //TODO aurora recipe
 
         // Automatic Stairs & Slab Recipes

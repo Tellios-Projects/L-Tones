@@ -374,6 +374,12 @@
     "ltones:lithium_block",
     "ltones:lithium_ore",
     "ltones:deepslate_lithium_ore",
-    "ltones:endstone_lithium_ore"
+    "ltones:endstone_lithium_ore",
+    "ltones:tone",
+    "ltones:tone_bricks",
+    "ltones:polished_tone",
+    "ltones:abstract_tone",
+    "ltones:framed_tone",
+    "ltones:framed_tone_bricks"
   ]
 }

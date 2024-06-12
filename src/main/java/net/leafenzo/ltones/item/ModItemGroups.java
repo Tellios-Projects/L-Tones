@@ -61,6 +61,12 @@ public class ModItemGroups {
                         for(Block block : includeVariants(ModBlocks.ROEN_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.SOL_BLOCKS)) { entries.add(block); }
 
+                        entries.add(ModBlocks.TONE);
+                        entries.add(ModBlocks.TONE_BRICKS);
+                        entries.add(ModBlocks.POLISHED_TONE);
+                        entries.add(ModBlocks.ABSTRACT_TONE);
+                        entries.add(ModBlocks.FRAMED_TONE);
+                        entries.add(ModBlocks.FRAMED_TONE_BRICKS);
                         entries.add(ModBlocks.ZTONE);
                         entries.add(ModBlocks.AURORA);
                         entries.add(ModBlocks.LITHIUM_ORE);

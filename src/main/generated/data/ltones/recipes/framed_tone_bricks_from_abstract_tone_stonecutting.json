@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "ltones:abstract_tone"
+  },
+  "result": "ltones:framed_tone_bricks"
+}

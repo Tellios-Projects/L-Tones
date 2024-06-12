@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_oil": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:oil"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:abstract_tone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:tone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_oil",
+      "has_tone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:abstract_tone"
+    ]
+  },
+  "sends_telemetry_event": false
+}
