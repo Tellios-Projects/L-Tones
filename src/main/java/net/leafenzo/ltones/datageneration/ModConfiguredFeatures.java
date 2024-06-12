@@ -42,7 +42,7 @@ public class ModConfiguredFeatures {
                 OreFeatureConfig.createTarget(isStone, ModBlocks.LITHIUM_ORE.getDefaultState()),
                 OreFeatureConfig.createTarget(isDeepslate, ModBlocks.DEEPSLATE_LITHIUM_ORE.getDefaultState())
         );
-        register(context, ORE_LITHIUM, Feature.ORE, new OreFeatureConfig(overworldLithiumTargets, 5, 1));
+        register(context, ORE_LITHIUM, Feature.ORE, new OreFeatureConfig(overworldLithiumTargets, 5));
 
         List<OreFeatureConfig.Target> endLithiumTargets = List.of(
                 OreFeatureConfig.createTarget(isEndstone, ModBlocks.ENDSTONE_LITHIUM_ORE.getDefaultState())
