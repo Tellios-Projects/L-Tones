@@ -22,6 +22,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> ORE_LITHIUM_PLACED = registerKey("ore_lithium_placed");
     public static final RegistryKey<PlacedFeature> ORE_LITHIUM_LOWER_PLACED = registerKey("ore_lithium_lower_placed");
     public static final RegistryKey<PlacedFeature> ORE_LITHIUM_END_PLACED = registerKey("ore_lithium_end_placed");
+    public static final RegistryKey<PlacedFeature> ORE_TONE_PLACED = registerKey("ore_tone_placed");
 
     private static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {
         return List.of(countModifier, SquarePlacementModifier.of(), heightModifier, BiomePlacementModifier.of());
@@ -47,6 +48,10 @@ public class ModPlacedFeatures {
         registerKey(context, ORE_LITHIUM_END_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ORE_LITHIUM_END),
                 modifiersWithCount(123, HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(40)))
         );
+
+        registerKey(context, ORE_TONE_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ORE_TONE),
+                modifiersWithRarity(6, HeightRangePlacementModifier.uniform(YOffset.fixed(64), YOffset.fixed(128)))
+        );
     }
 
     public static void registerModifications() {
@@ -58,6 +63,10 @@ public class ModPlacedFeatures {
                 .add(ModificationPhase.ADDITIONS,
                         BiomeSelectors.foundInOverworld(),
                         context -> { context.getGenerationSettings().addFeature(GenerationStep.Feature.UNDERGROUND_ORES, ORE_LITHIUM_LOWER_PLACED); }
+                )
+                .add(ModificationPhase.ADDITIONS,
+                        BiomeSelectors.foundInOverworld(),
+                        context -> { context.getGenerationSettings().addFeature(GenerationStep.Feature.UNDERGROUND_ORES, ORE_TONE_PLACED); }
                 );
 
         BiomeModifications.create(new Identifier(Super.MOD_ID, "end_additions"))

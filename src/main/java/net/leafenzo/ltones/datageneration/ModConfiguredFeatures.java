@@ -24,6 +24,7 @@ public class ModConfiguredFeatures {
 
     public static final RegistryKey <ConfiguredFeature <?, ?>> ORE_LITHIUM = registerKey("ore_lithium");
     public static final RegistryKey <ConfiguredFeature <?, ?>> ORE_LITHIUM_END = registerKey("ore_lithium_end");
+    public static final RegistryKey <ConfiguredFeature <?, ?>> ORE_TONE = registerKey("ore_tone");
 
 
     public static void bootstrap(Registerable <ConfiguredFeature <?, ?>> context) {
@@ -41,12 +42,17 @@ public class ModConfiguredFeatures {
                 OreFeatureConfig.createTarget(isStone, ModBlocks.LITHIUM_ORE.getDefaultState()),
                 OreFeatureConfig.createTarget(isDeepslate, ModBlocks.DEEPSLATE_LITHIUM_ORE.getDefaultState())
         );
-        register(context, ORE_LITHIUM, Feature.ORE, new OreFeatureConfig(overworldLithiumTargets, 5));
+        register(context, ORE_LITHIUM, Feature.ORE, new OreFeatureConfig(overworldLithiumTargets, 5, 1));
 
         List<OreFeatureConfig.Target> endLithiumTargets = List.of(
                 OreFeatureConfig.createTarget(isEndstone, ModBlocks.ENDSTONE_LITHIUM_ORE.getDefaultState())
         );
         register(context, ORE_LITHIUM_END, Feature.ORE, new OreFeatureConfig(endLithiumTargets, 5));
+
+        List<OreFeatureConfig.Target> toneTargets = List.of(
+                OreFeatureConfig.createTarget(isBaseStoneOverworld, ModBlocks.TONE.getDefaultState())
+        );
+        register(context, ORE_TONE, Feature.ORE, new OreFeatureConfig(toneTargets, 64));
 
     }
     private static <FC extends FeatureConfig, F extends Feature <FC>> void register(Registerable <ConfiguredFeature <?, ?>> context, RegistryKey <ConfiguredFeature <?, ?>> key, F feature, FC configuration) {
