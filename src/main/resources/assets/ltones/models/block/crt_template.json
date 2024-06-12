@@ -1,5 +1,5 @@
 {
-  "parent": "mint:block/orientable_top_bottom_side_back",
+  "parent": "ltones:block/orientable_top_bottom_side_back",
   "textures": {
     "particle": "#front",
     "down": "#bottom",
