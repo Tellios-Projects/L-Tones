@@ -213,13 +213,17 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         //.add(ModBlocks.)
         ;
         //</editor-fold>
-        //<editor-fold desc ="BlockTags - Automatic Slabs & Stairs">
+        //<editor-fold desc ="BlockTags - Automatic Slabs, Stairs & Doors">
         for(Block block : ModBlocks.SLAB_FROM_BLOCK.values()) {
             getOrCreateTagBuilder(BlockTags.SLABS).add(block);
         }
 
         for(Block block : ModBlocks.STAIRS_FROM_BLOCK.values()) {
             getOrCreateTagBuilder(BlockTags.STAIRS).add(block);
+        }
+
+        for(Block block : ModBlocks.DOORS) {
+            getOrCreateTagBuilder(BlockTags.DOORS).add(block);
         }
         //</editor-fold
     }

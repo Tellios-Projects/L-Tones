@@ -60,7 +60,22 @@ public class ModItemGroups {
                         for(Block block : includeVariants(ModBlocks.SYNC_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.ROEN_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.SOL_BLOCKS)) { entries.add(block); }
-
+                        entries.add(ModBlocks.DOOR_POWER);
+                        entries.add(ModBlocks.DOOR_HEAVY);
+                        entries.add(ModBlocks.DOOR_END);
+                        entries.add(ModBlocks.DOOR_CONFINE);
+                        entries.add(ModBlocks.DOOR_TEST);
+                        entries.add(ModBlocks.DOOR_GROWN);
+                        entries.add(ModBlocks.DOOR_SAFE);
+                        entries.add(ModBlocks.DOOR_VACUUM);
+                        entries.add(ModBlocks.DOOR_WORK);
+                        entries.add(ModBlocks.DOOR_TOY);
+                        entries.add(ModBlocks.DOOR_KNET);
+                        entries.add(ModBlocks.DOOR_NEON);
+                        entries.add(ModBlocks.DOOR_BUNKER);
+                        entries.add(ModBlocks.DOOR_STEAK);
+                        entries.add(ModBlocks.DOOR_PETRI);
+                        entries.add(ModBlocks.DOOR_BARS);
                         entries.add(ModBlocks.TONE);
                         entries.add(ModBlocks.TONE_BRICKS);
                         entries.add(ModBlocks.POLISHED_TONE);

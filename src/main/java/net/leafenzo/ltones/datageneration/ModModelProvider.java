@@ -12,6 +12,7 @@ import net.leafenzo.ltones.data.client.ModTexturedModel;
 import net.leafenzo.ltones.item.ModItems;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.Block;
+import net.minecraft.block.DoorBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.data.client.*;
@@ -566,7 +567,6 @@ public class ModModelProvider extends FabricModelProvider {
         registerCRT(blockStateModelGenerator, ModBlocks.AGED_CRT);
         registerCRT(blockStateModelGenerator, ModBlocks.BLACK_CRT);
         registerCRT(blockStateModelGenerator, ModBlocks.GRAY_CRT);
-
         //</editor-fold>
 
         // Block Models
@@ -585,8 +585,12 @@ public class ModModelProvider extends FabricModelProvider {
         // Leaves Like Blocks, includes things that sample from Biome Color maps.
         //blockStateModelGenerator.registerSingleton(ModBlocks.GRASS_CLIPPINGS_BLOCK, TexturedModel.LEAVES);
 
+        // Door Models
+        for (Block block : ModBlocks.DOORS) {
+            blockStateModelGenerator.registerDoor(block);
+        }
 
-        // BlockItem Models // Fallback
+        // Fallback BlockItem Models
         generateFallbackBlockItemModels(blockStateModelGenerator);
     }
     @Override
@@ -607,7 +611,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateFallbackBlockItemModels(BlockStateModelGenerator blockStateModelGenerator) {
         for (Identifier id : ModUtil.allBlockIdsInNamespace(Super.MOD_ID)) {
             Block block = Registries.BLOCK.get(id);
-            if(block instanceof StairsBlock || block instanceof LitSlabBlock || block instanceof SlabBlock || block instanceof DecalBlock) continue; //Jank but it works // WOW this sucks -me, months later
+            if(block instanceof StairsBlock || block instanceof LitSlabBlock || block instanceof SlabBlock || block instanceof DecalBlock || block instanceof DoorBlock) continue; //Jank but it works // WOW this sucks -me, months later
             registerParentedBlockItemModel(blockStateModelGenerator, Registries.BLOCK.get(id), Super.asResource("block/" + id.getPath()));
         }
     }

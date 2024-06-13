@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "textures": {
+    "bottom": "ltones:block/door_bars_bottom",
+    "top": "ltones:block/door_bars_top"
+  }
+}

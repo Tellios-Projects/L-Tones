@@ -367,6 +367,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         //TODO aurora recipe
 
+        //TODO door recipes
+
         // Automatic Stairs & Slab Recipes
         for (Block block : ModBlocks.STAIRS_FROM_BLOCK.keySet()) {
 //            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.STAIR_FROM_BLOCK.get(block), block, 1); // handled by offerStonecuttingRecipesForBlockSet

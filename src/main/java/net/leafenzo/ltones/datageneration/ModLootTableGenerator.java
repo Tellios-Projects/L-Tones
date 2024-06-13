@@ -79,6 +79,10 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
             this.addDrop(block, (Block b) -> this.slabDrops((Block) b));
         }
 
+        for(Block block : ModBlocks.DOORS) {
+            this.addDrop(block, (Block b) -> this.doorDrops((Block) b));
+        }
+
         //Fallback
         for(Identifier id : ModUtil.allBlockIdsInNamespace(Super.MOD_ID)) {
             Block block = Registries.BLOCK.get(id);

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "textures": {
+    "bottom": "ltones:block/door_confine_bottom",
+    "top": "ltones:block/door_confine_top"
+  }
+}
