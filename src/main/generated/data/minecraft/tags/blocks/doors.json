@@ -1,21 +1,21 @@
 {
   "replace": false,
   "values": [
+    "ltones:door_steak",
+    "ltones:door_neon",
+    "ltones:door_toy",
     "ltones:door_power",
-    "ltones:door_heavy",
-    "ltones:door_end",
+    "ltones:door_vacuum",
     "ltones:door_confine",
+    "ltones:door_end",
+    "ltones:door_heavy",
     "ltones:door_test",
     "ltones:door_grown",
-    "ltones:door_safe",
-    "ltones:door_vacuum",
-    "ltones:door_work",
-    "ltones:door_toy",
     "ltones:door_knet",
-    "ltones:door_neon",
-    "ltones:door_bunker",
-    "ltones:door_steak",
+    "ltones:door_work",
+    "ltones:door_safe",
     "ltones:door_petri",
-    "ltones:door_bars"
+    "ltones:door_bunker",
+    "ltones:iron_bar_door"
   ]
 }

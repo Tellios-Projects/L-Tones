@@ -229,6 +229,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                     .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
     }
 
+    public static void offerDoorRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
+        createDoorRecipe(output, Ingredient.ofItems(input))
+                .criterion(FabricRecipeProvider.hasItem(input), FabricRecipeProvider.conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+
     public static void offerReversible2x2CompactingRecipesWithCompactingRecipeGroup(Consumer<RecipeJsonProvider> exporter, RecipeCategory reverseCategory, ItemConvertible baseItem, RecipeCategory compactingCategory, ItemConvertible compactItem, String compactingId, String compactingGroup) {
         offerReversible2x2CompactingRecipes(exporter, reverseCategory, baseItem, compactingCategory, compactItem, compactingId, compactingGroup, RecipeProvider.getRecipeName(baseItem), null);
     }
@@ -368,6 +374,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         //TODO aurora recipe
 
         //TODO door recipes
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_STEAK, ModItems.);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_NEON, ModItems.);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_TOY, ModItems.);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_POWER, ModItems.);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_VACUUM, ModItems.);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_CONFINE, ModItems.);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_END, ModItems.);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_HEAVY, ModItems.);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_TEST, ModItems.);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_GROWN, ModItems.);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_KNET, ModItems.);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_WORK, ModItems.);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_SAFE, ModItems.);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_PETRI, ModItems.);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_BUNKER, ModItems.);
+//        offerDoorRecipe(exporter, ModBlocks.IRON_BAR_DOOR, Items.IRON_BARS);
+//        offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.IRON_BAR_DOOR, Blocks.IRON_DOOR);
 
         // Automatic Stairs & Slab Recipes
         for (Block block : ModBlocks.STAIRS_FROM_BLOCK.keySet()) {
