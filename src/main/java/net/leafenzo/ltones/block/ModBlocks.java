@@ -104,26 +104,26 @@ public class ModBlocks {
     public static final BlockSet SOL_BLOCKSET = registerBlockSet(SOL_BLOCKS, "sol_blocks");
     //</editor-fold>
 
-    //<editor-fold desc ="Blocks - FORT">
-    private static final FabricBlockSettings fortMaterial = FabricBlockSettings.create()
+    //<editor-fold desc ="Blocks - FORTT">
+    private static final FabricBlockSettings forttMaterial = FabricBlockSettings.create()
             .strength(1.0f)
             .sounds(ModBlockSoundGroup.METAL_STICKS);  // TODO make sound less metal-y and more plastic-y
-    public static final Block FORT = registerBlockInBlockset(FORT_BLOCKS, "fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.WHITE_GRAY)));
-    public static final Block BRIGHT_BLUE_FORT = registerBlockInBlockset(FORT_BLOCKS, "bright_blue_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.BLUE)));
-    public static final Block BRIGHT_RED_FORT = registerBlockInBlockset(FORT_BLOCKS, "bright_red_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.DULL_RED)));
-    public static final Block BRIGHT_VIOLET_FORT = registerBlockInBlockset(FORT_BLOCKS, "bright_violet_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.TERRACOTTA_BLUE)));
-    public static final Block BRIGHT_YELLOW_FORT = registerBlockInBlockset(FORT_BLOCKS, "bright_yellow_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.YELLOW)));
-    public static final Block DARK_AZURE_FORT = registerBlockInBlockset(FORT_BLOCKS, "dark_azure_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.LAPIS_BLUE)));
-    public static final Block DARK_RED_FORT = registerBlockInBlockset(FORT_BLOCKS, "dark_red_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.RED)));
-    public static final Block DARK_TURQUOISE_FORT = registerBlockInBlockset(FORT_BLOCKS, "dark_turquoise_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.TEAL)));
-    public static final Block EARTH_GREEN_FORT = registerBlockInBlockset(FORT_BLOCKS, "earth_green_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.DARK_GREEN)));
-    public static final Block EARTH_ORANGE_FORT = registerBlockInBlockset(FORT_BLOCKS, "earth_orange_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
-    public static final Block GRAY_FORT = registerBlockInBlockset(FORT_BLOCKS, "gray_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.IRON_GRAY)));
-    public static final Block LIME_FORT = registerBlockInBlockset(FORT_BLOCKS, "lime_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.LIME)));
-    public static final Block MEDIUM_AZURE_FORT = registerBlockInBlockset(FORT_BLOCKS, "medium_azure_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.DIAMOND_BLUE)));
-    public static final Block ORANGE_FORT = registerBlockInBlockset(FORT_BLOCKS, "orange_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.ORANGE)));
-    public static final Block SAND_BLUE_FORT = registerBlockInBlockset(FORT_BLOCKS, "sand_blue_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.LIGHT_BLUE_GRAY)));
-    public static final Block STONE_GRAY_FORT = registerBlockInBlockset(FORT_BLOCKS, "stone_gray_fort", new Block(FabricBlockSettings.copyOf(fortMaterial).mapColor(MapColor.STONE_GRAY)));
+    public static final Block FORTT = registerBlockInBlockset(FORTT_BLOCKS, "fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.WHITE_GRAY)));
+    public static final Block BRIGHT_BLUE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_blue_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.BLUE)));
+    public static final Block BRIGHT_RED_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_red_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DULL_RED)));
+    public static final Block BRIGHT_VIOLET_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_violet_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.TERRACOTTA_BLUE)));
+    public static final Block BRIGHT_YELLOW_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_yellow_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.YELLOW)));
+    public static final Block DARK_AZURE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "dark_azure_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.LAPIS_BLUE)));
+    public static final Block DARK_RED_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "dark_red_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.RED)));
+    public static final Block DARK_TURQUOISE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "dark_turquoise_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.TEAL)));
+    public static final Block EARTH_GREEN_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "earth_green_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DARK_GREEN)));
+    public static final Block EARTH_ORANGE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "earth_orange_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block GRAY_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "gray_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.IRON_GRAY)));
+    public static final Block LIME_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "lime_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.LIME)));
+    public static final Block MEDIUM_AZURE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "medium_azure_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DIAMOND_BLUE)));
+    public static final Block ORANGE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "orange_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.ORANGE)));
+    public static final Block SAND_BLUE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "sand_blue_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.LIGHT_BLUE_GRAY)));
+    public static final Block STONE_GRAY_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "stone_gray_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.STONE_GRAY)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - GLAXX">
     private static final FabricBlockSettings glaxxMaterial = FabricBlockSettings.create()

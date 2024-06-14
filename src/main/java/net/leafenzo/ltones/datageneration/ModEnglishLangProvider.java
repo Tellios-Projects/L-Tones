@@ -79,11 +79,10 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         generateTranslation(translationBuilder, ModBlocks.BLACK_CRT, "Black CRT Monitor");
         generateTranslation(translationBuilder, ModBlocks.GRAY_CRT, "Gray CRT Monitor");
 
-        for(Block block : ModBlocks.FORT_BLOCKS) {
-            Identifier id = Registries.BLOCK.getId(block);
-            String key = Registries.BLOCK.get(id).getTranslationKey();
-            generateTranslation(translationBuilder, key, toSentanceCase(id.getPath().replaceAll("fort", "fortt")));
-        }
+
+
+
+
         //</editor-fold
         //<editor-fold desc ="EnglishLang - Fallback">
         for(Identifier id : ModUtil.allBlockIdsInNamespace(Super.MOD_ID)) {

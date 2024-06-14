@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:fortt_blocks"
+  },
+  "result": "ltones:stone_gray_fortt"
+}

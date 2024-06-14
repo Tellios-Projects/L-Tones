@@ -27,7 +27,7 @@ public class ModTags {
 //        public static final TagKey<Item> MULTIFACE_BLOCKS = getOrCreateCommonTag("multiface_blocks");
 
         public static final TagKey<Item> AGON_BLOCKS = getOrCreateTag("agon_blocks");
-        public static final TagKey<Item> FORT_BLOCKS = getOrCreateTag("fort_blocks");
+        public static final TagKey<Item> FORTT_BLOCKS = getOrCreateTag("fortt_blocks");
         public static final TagKey<Item> GLAXX_BLOCKS = getOrCreateTag("glaxx_blocks");
         public static final TagKey<Item> CRAY_BLOCKS = getOrCreateTag("cray_blocks");
         public static final TagKey<Item> CAST_BLOCKS = getOrCreateTag("cast_blocks");

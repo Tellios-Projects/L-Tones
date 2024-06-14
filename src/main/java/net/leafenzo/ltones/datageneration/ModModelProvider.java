@@ -182,8 +182,8 @@ public class ModModelProvider extends FabricModelProvider {
             blockStateModelGenerator.registerCubeAllModelTexturePool(block);
         }
         //</editor-fold>
-        //<editor-fold desc = "Models - fort">
-        for(Block block : ModBlocks.FORT_BLOCKS) {
+        //<editor-fold desc = "Models - fortt">
+        for(Block block : ModBlocks.FORTT_BLOCKS) {
             blockStateModelGenerator.registerCubeAllModelTexturePool(block);
         }
         //</editor-fold>

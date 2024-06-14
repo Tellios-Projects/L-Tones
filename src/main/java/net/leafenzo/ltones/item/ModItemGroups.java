@@ -34,7 +34,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.ltones"))
                     .icon(() -> new ItemStack(ModBlocks.REDDS_TILE)).entries((displayContext, entries) -> {
                         for(Block block : includeVariants(ModBlocks.AGON_BLOCKS)) { entries.add(block); }
-                        for(Block block : includeVariants(ModBlocks.FORT_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.FORTT_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.GLAXX_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.CRAY_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.CAST_BLOCKS)) { entries.add(block); }

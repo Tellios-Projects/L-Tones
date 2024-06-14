@@ -290,7 +290,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         // Blockset Base Recipes
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AGON_BLOCKS.get(0), Blocks.GLASS, ModItems.ARGON, 4);
-        offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FORT_BLOCKS.get(0), ModBlocks.ZTONE, ModItems.POLYCARBONATE, 4);
+        offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FORTT_BLOCKS.get(0), ModBlocks.ZTONE, ModItems.POLYCARBONATE, 4);
         offerSurroundedRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LICORICE_GLAXX, ModItems.SHADE, Items.GLASS_PANE, 8);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRAY, ModBlocks.ZTONE, ModItems.MOULDING, 4);
         offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CAST, ModItems.POLYMER, 4);
@@ -319,7 +319,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         // Blockset Stonecutting Recipes
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AGON_BLOCKSET);
-        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FORT_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FORTT_BLOCKSET);
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLAXX_BLOCKSET);
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRAY_BLOCKSET);
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CAST_BLOCKSET);
