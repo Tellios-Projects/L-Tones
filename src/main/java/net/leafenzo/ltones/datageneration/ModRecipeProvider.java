@@ -370,27 +370,28 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.TONE), FabricRecipeProvider.conditionsFromItem(ModBlocks.TONE))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.LITHIUM_CHUNK), FabricRecipeProvider.conditionsFromItem(ModItems.LITHIUM_CHUNK))
                 .offerTo(exporter);
-
         //TODO aurora recipe
 
-        //TODO door recipes
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_STEAK, ModItems.);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_NEON, ModItems.);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_TOY, ModItems.);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_POWER, ModItems.);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_VACUUM, ModItems.);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_CONFINE, ModItems.);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_END, ModItems.);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_HEAVY, ModItems.);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_TEST, ModItems.);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_GROWN, ModItems.);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_KNET, ModItems.);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_WORK, ModItems.);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_SAFE, ModItems.);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_PETRI, ModItems.);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_BUNKER, ModItems.);
-//        offerDoorRecipe(exporter, ModBlocks.IRON_BAR_DOOR, Items.IRON_BARS);
-//        offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.IRON_BAR_DOOR, Blocks.IRON_DOOR);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_STEAK, ModItems.POLYCARBONATE);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_NEON, ModItems.MOULDING);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_TOY, ModItems.POLYMER);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_POWER, ModItems.GAS_TUBE);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_POWER, ModBlocks.NURR);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_VACUUM, ModItems.KERBESIUM);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_CONFINE, ModItems.FIBROUS_POWDER);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_CONFINE, ModBlocks.MINN_POFFCAGE);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_END, ModItems.SCARLET_MEMBRANE);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_HEAVY, ModItems.CONDUCTIUM);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_TEST, ModItems.SHEETING);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_GROWN, ModItems.ORGANIC_BRASS);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_KNET, ModItems.SLAG);
+//        offerDoorRecipe(exporter, ModBlocks.DOOR_KNET, ModBlocks.KORP);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_WORK, ModItems.TAWSINE);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_SAFE, ModItems.AMALGAM);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_PETRI, ModItems.PLAQUE);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_BUNKER, ModBlocks.ABSTRACT_TONE);
+        offerDoorRecipe(exporter, ModBlocks.IRON_BAR_DOOR, Items.IRON_BARS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.IRON_BAR_DOOR, Blocks.IRON_DOOR);
 
         // Automatic Stairs & Slab Recipes
         for (Block block : ModBlocks.STAIRS_FROM_BLOCK.keySet()) {
