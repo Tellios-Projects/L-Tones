@@ -75,6 +75,19 @@ public class ModModelProvider extends FabricModelProvider {
         Identifier identifier = Models.CUBE.upload(block, map, blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createAxisRotatedVariantMap()));
     }
+    private void registerAxisRotatedBlockWithCustomTexturePaths(BlockStateModelGenerator blockStateModelGenerator, Block block, String topTexturePath, String sideTexturePath) {
+        TextureMap map = new TextureMap()
+                .put(TextureKey.PARTICLE, Super.asResource(sideTexturePath))
+                .put(TextureKey.NORTH, Super.asResource(sideTexturePath))
+                .put(TextureKey.SOUTH, Super.asResource(sideTexturePath))
+                .put(TextureKey.EAST, Super.asResource(sideTexturePath))
+                .put(TextureKey.WEST, Super.asResource(sideTexturePath))
+                .put(TextureKey.UP, Super.asResource(topTexturePath))
+                .put(TextureKey.DOWN, Super.asResource(topTexturePath));
+
+        Identifier identifier = Models.CUBE.upload(block, map, blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createAxisRotatedVariantMap()));
+    }
 
     public final void registerMultiStateDecal(BlockStateModelGenerator blockStateModelGenerator, Block block) {
         blockStateModelGenerator.registerItemModel(block.asItem());
@@ -567,6 +580,8 @@ public class ModModelProvider extends FabricModelProvider {
         registerCRT(blockStateModelGenerator, ModBlocks.AGED_CRT);
         registerCRT(blockStateModelGenerator, ModBlocks.BLACK_CRT);
         registerCRT(blockStateModelGenerator, ModBlocks.GRAY_CRT);
+        registerAxisRotatedBlockWithCustomTexturePaths(blockStateModelGenerator, ModBlocks.TIRE, "block/tire_top", "block/tire_side");
+        registerAxisRotatedBlockWithCustomTexturePaths(blockStateModelGenerator, ModBlocks.EMPTY_TIRE, "block/empty_tire_top", "block/tire_side");
         //</editor-fold>
 
         // Block Models

@@ -88,6 +88,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.AGED_CRT);
                         entries.add(ModBlocks.BLACK_CRT);
                         entries.add(ModBlocks.GRAY_CRT);
+                        entries.add(ModBlocks.EMPTY_TIRE);
+                        entries.add(ModBlocks.TIRE);
                         entries.add(ModBlocks.LITHIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_LITHIUM_ORE);
                         entries.add(ModBlocks.ENDSTONE_LITHIUM_ORE);

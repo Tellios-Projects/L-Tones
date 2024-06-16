@@ -762,6 +762,9 @@ public class ModBlocks {
     public static final Block AGED_CRT = registerBlock("aged_crt", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).mapColor(DyeColor.YELLOW), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
     public static final Block BLACK_CRT = registerBlock("black_crt", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).mapColor(DyeColor.BLACK), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
     public static final Block GRAY_CRT = registerBlock("gray_crt", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).mapColor(DyeColor.GRAY), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+
+    public static final Block EMPTY_TIRE = registerBlock("empty_tire", new PillarBlock(FabricBlockSettings.create().mapColor(MapColor.BLACK).instrument(Instrument.BASS).strength(0.2f).sounds(BlockSoundGroup.SHROOMLIGHT)));
+    public static final Block TIRE = registerBlock("tire", new PillarBlock(FabricBlockSettings.copyOf(EMPTY_TIRE).strength(1.0f).requiresTool()));
     //</editor-fold>
 
 
@@ -832,6 +835,8 @@ public class ModBlocks {
     public static final Block DECAL_CORPOREAL_VAPOR = registerDecalBlock("decal_corporeal_vapor", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_CORPOREAL_VAPOR); }
     public static final Block DECAL_FLAKES = registerDecalBlock("decal_flakes", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_FLAKES); }
     public static final Block DECAL_NETWORKING = registerDecalBlock("decal_networking", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.WOOL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_NETWORKING); }
+    // TODO proper decal soundgroups
+
     //</editor-fold>
 
     //<editor-fold desc ="Registration">
