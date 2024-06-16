@@ -32,6 +32,10 @@ public class LitSlabBlock extends LitBlock implements Waterloggable {
         super(settings, turnOnSound, turnOffSound);
         this.setDefaultState((BlockState)((BlockState)this.getDefaultState().with(TYPE, SlabType.BOTTOM)).with(WATERLOGGED, false).with(LIT, false));
     }
+    public LitSlabBlock(AbstractBlock.Settings settings) {
+        super(settings, null, null);
+        this.setDefaultState((BlockState)((BlockState)this.getDefaultState().with(TYPE, SlabType.BOTTOM)).with(WATERLOGGED, false).with(LIT, false));
+    }
 
     @Override
     public boolean hasSidedTransparency(BlockState state) {

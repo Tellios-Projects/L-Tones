@@ -24,6 +24,12 @@ public class LitStairsBlock extends StairsBlock {
         this.turnOffSound = turnOffSound;
         this.setDefaultState((BlockState)this.getDefaultState().with(LIT, false));
     }
+    public LitStairsBlock(BlockState baseBlockState, AbstractBlock.Settings settings) {
+        super(baseBlockState, settings);
+        this.turnOnSound = null;
+        this.turnOffSound = null;
+        this.setDefaultState((BlockState)this.getDefaultState().with(LIT, false));
+    }
 
     @Override
     @Nullable

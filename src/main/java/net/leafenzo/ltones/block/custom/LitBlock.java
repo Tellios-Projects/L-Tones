@@ -26,6 +26,12 @@ public class LitBlock extends Block {
         this.turnOffSound = turnOffSound;
         this.setDefaultState((BlockState)this.getDefaultState().with(LIT, false));
     }
+    public LitBlock(AbstractBlock.Settings settings) {
+        super(settings);
+        this.turnOnSound = null;
+        this.turnOffSound = null;
+        this.setDefaultState((BlockState)this.getDefaultState().with(LIT, false));
+    }
 
     @Override
     @Nullable

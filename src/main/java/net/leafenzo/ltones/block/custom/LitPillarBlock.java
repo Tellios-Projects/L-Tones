@@ -17,6 +17,10 @@ public class LitPillarBlock extends LitBlock {
         super(settings, turnOnSound, turnOffSound);
         this.setDefaultState((BlockState)this.getDefaultState().with(AXIS, Direction.Axis.Y));
     }
+    public LitPillarBlock(Settings settings) {
+        super(settings, null, null);
+        this.setDefaultState((BlockState)this.getDefaultState().with(AXIS, Direction.Axis.Y));
+    }
 
     @Override
     public BlockState rotate(BlockState state, BlockRotation rotation) {

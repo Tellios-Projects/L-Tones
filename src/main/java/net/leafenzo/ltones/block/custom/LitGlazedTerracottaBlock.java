@@ -17,6 +17,9 @@ public class LitGlazedTerracottaBlock extends LitBlock {
     public LitGlazedTerracottaBlock(Settings settings, @Nullable SoundEvent turnOnSound, @Nullable SoundEvent turnOffSound) {
         super(settings, turnOnSound, turnOffSound);
     }
+    public LitGlazedTerracottaBlock(Settings settings) {
+        super(settings, null, null);
+    }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {

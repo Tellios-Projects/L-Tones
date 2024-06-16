@@ -27,6 +27,12 @@ public class LitHorizontalFacingBlock extends HorizontalFacingBlock {
         this.turnOffSound = turnOffSound;
         this.setDefaultState((BlockState)this.getDefaultState().with(LIT, false));
     }
+    public LitHorizontalFacingBlock(AbstractBlock.Settings settings) {
+        super(settings);
+        this.turnOnSound = null;
+        this.turnOffSound = null;
+        this.setDefaultState((BlockState)this.getDefaultState().with(LIT, false));
+    }
 
     @Override
     @Nullable
