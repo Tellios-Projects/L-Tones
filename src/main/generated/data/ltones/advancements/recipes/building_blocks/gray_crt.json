@@ -13,12 +13,12 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_polymer": {
+    "has_kerbesium": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ltones:polymer"
+              "ltones:kerbesium"
             ]
           }
         ]
@@ -39,14 +39,14 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ltones:empty_tire"
+        "recipe": "ltones:gray_crt"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_polymer",
+      "has_kerbesium",
       "has_diode",
       "has_screen",
       "has_the_recipe"
@@ -54,7 +54,7 @@
   ],
   "rewards": {
     "recipes": [
-      "ltones:empty_tire"
+      "ltones:gray_crt"
     ]
   },
   "sends_telemetry_event": false

@@ -1,7 +1,7 @@
 {
   "parent": "ltones:block/orientable_top_bottom_side_back",
   "textures": {
-    "particle": "#front",
+    "particle": "#side",
     "down": "#bottom",
     "up": "#top",
     "north": "#front",

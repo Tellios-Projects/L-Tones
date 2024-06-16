@@ -588,7 +588,7 @@ public class ModBlocks {
     public static final Block ISZM = registerBlockInBlockset(ISZM_BLOCKS, "iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.GRAY)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - MYST">
-    private static final FabricBlockSettings mystMaterial = FabricBlockSettings.create() // TODO, color based scrolling animation
+    private static final FabricBlockSettings mystMaterial = FabricBlockSettings.create() // TODO, color based scrolling animation // what did i MEAN by this grrgrjgjrglerkgjer;kgkj;ekgrj
             .strength(0.3f)
             .mapColor(MapColor.CLEAR)
             .nonOpaque()
@@ -688,7 +688,7 @@ public class ModBlocks {
             .strength(0.6f)
             .sounds(ModBlockSoundGroup.LAIR);
     public static final Block ROEN_DESSICATE = registerBlockInBlockset(ROEN_BLOCKS, "roen_dessicate", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.RAW_IRON_PINK)));
-    public static final Block ROEN_LESION = registerBlockInBlockset(ROEN_BLOCKS, "roen_lesion", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.RED))); //TODO custom top texture
+    public static final Block ROEN_LESION = registerBlockInBlockset(ROEN_BLOCKS, "roen_lesion", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.RED)));
     public static final Block ROEN_TRACT = registerBlockInBlockset(ROEN_BLOCKS, "roen_tract", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.PURPLE)));
     public static final Block ROEN_AGAR = registerBlockInBlockset(ROEN_BLOCKS, "roen_agar", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.MAGENTA)));
     public static final Block ROEN_KINESIN = registerBlockInBlockset(ROEN_BLOCKS, "roen_kinesin", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.GREEN)));
@@ -699,7 +699,7 @@ public class ModBlocks {
     public static final Block ROEN_ARRAY = registerBlockInBlockset(ROEN_BLOCKS, "roen_array", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.BLUE)));
     public static final Block ROEN_BACILLUS = registerBlockInBlockset(ROEN_BLOCKS, "roen_bacillus", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.TERRACOTTA_YELLOW)));
     public static final Block ROEN_ASSAY = registerBlockInBlockset(ROEN_BLOCKS, "roen_assay", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.YELLOW)));
-    public static final Block ROEN_OPERON = registerBlockInBlockset(ROEN_BLOCKS, "roen_operon", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.TERRACOTTA_ORANGE))); //TODO custom top texture
+    public static final Block ROEN_OPERON = registerBlockInBlockset(ROEN_BLOCKS, "roen_operon", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
     public static final Block ROEN_ONCOGENE = registerBlockInBlockset(ROEN_BLOCKS, "roen_oncogene", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.BLACK)));
     public static final Block ROEN_GROUT = registerBlockInBlockset(ROEN_BLOCKS, "roen_grout", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.WHITE_GRAY)));
     public static final Block ROEN = registerBlockInBlockset(ROEN_BLOCKS, "roen", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.LIME)));
@@ -758,6 +758,7 @@ public class ModBlocks {
     public static final Block FRAMED_TONE_BRICKS = registerBlock("framed_tone_bricks", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY)));
 
     //TODO better CRT sfx
+    //CRT block entity and screen display
     public static final Block CRT = registerBlock("crt", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(nurrMaterial).luminance(createLightLevelFromProperty(7, Properties.LIT)).strength(0.5f).mapColor(DyeColor.WHITE), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
     public static final Block AGED_CRT = registerBlock("aged_crt", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).mapColor(DyeColor.YELLOW), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
     public static final Block BLACK_CRT = registerBlock("black_crt", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).mapColor(DyeColor.BLACK), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
@@ -835,7 +836,6 @@ public class ModBlocks {
     public static final Block DECAL_CORPOREAL_VAPOR = registerDecalBlock("decal_corporeal_vapor", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.POWDER_SNOW))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_CORPOREAL_VAPOR); }
     public static final Block DECAL_FLAKES = registerDecalBlock("decal_flakes", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.CANDLE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_FLAKES); }
     public static final Block DECAL_NETWORKING = registerDecalBlock("decal_networking", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).sounds(BlockSoundGroup.CANDLE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_NETWORKING); }
-
     //</editor-fold>
 
     //<editor-fold desc ="Registration">

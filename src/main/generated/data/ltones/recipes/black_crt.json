@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "crt",
+  "group": "black_crt",
   "key": {
     "D": {
       "item": "ltones:diode"
     },
     "F": {
-      "item": "ltones:polymer"
+      "item": "ltones:amalgam"
     },
     "S": {
       "item": "ltones:screen"
@@ -19,7 +19,7 @@
     "FFF"
   ],
   "result": {
-    "item": "ltones:empty_tire"
+    "item": "ltones:black_crt"
   },
   "show_notification": true
 }

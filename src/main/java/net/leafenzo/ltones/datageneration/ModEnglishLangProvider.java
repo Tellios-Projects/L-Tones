@@ -33,7 +33,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
     }
     private void generateTranslation(TranslationBuilder translationBuilder, String key, String translation) {
         if(usedTranslationKeys.contains(key)) {
-            //("Duplicate translation key " + key + "ignored"); //TODO, figure out how the heck do we print to debug from datagen?
+            //("Duplicate translation key " + key + "ignored");
             return;
         }
         translationBuilder.add(key, translation);

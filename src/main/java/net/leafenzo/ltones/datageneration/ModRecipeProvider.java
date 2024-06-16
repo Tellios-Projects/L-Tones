@@ -251,6 +251,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public static void offerReversible2x2CompactingRecipes(Consumer<RecipeJsonProvider> exporter, RecipeCategory reverseCategory, ItemConvertible baseItem, RecipeCategory compactingCategory, ItemConvertible compactItem) {
         offerReversible2x2CompactingRecipes(exporter, reverseCategory, baseItem, compactingCategory, compactItem, RecipeProvider.getRecipeName(compactItem), Super.MOD_ID + ":" + Registries.ITEM.getId(baseItem.asItem()).getPath(), RecipeProvider.getRecipeName(baseItem), Super.MOD_ID + ":" + Registries.ITEM.getId(baseItem.asItem()).getPath() + "_reverse");
     }
+    public static void offerCRTRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible frameItem) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 1)
+                .input(Character.valueOf('F'), frameItem)
+                .input(Character.valueOf('D'), ModItems.DIODE)
+                .input(Character.valueOf('S'), ModItems.SCREEN)
+                .pattern("FSF")
+                .pattern("FDF")
+                .pattern("FFF")
+                .criterion(FabricRecipeProvider.hasItem(frameItem), FabricRecipeProvider.conditionsFromItem(frameItem))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.DIODE), FabricRecipeProvider.conditionsFromItem(ModItems.DIODE))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.SCREEN), FabricRecipeProvider.conditionsFromItem(ModItems.SCREEN))
+                .group(FabricRecipeProvider.getRecipeName(output))
+                .offerTo(exporter);
+    }
+
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
@@ -346,13 +361,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROEN_BLOCKSET);
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOL_BLOCKSET);
 
-        // Other Recipes
+        // Lithium
         offerSmelting(exporter, ImmutableList.of(ModItems.RAW_LITHIUM, ModBlocks.LITHIUM_ORE, ModBlocks.DEEPSLATE_LITHIUM_ORE, ModBlocks.ENDSTONE_LITHIUM_ORE), RecipeCategory.MISC, ModItems.LITHIUM_INGOT, 0.7f, 200, "lithium_ingot");
         offerBlasting(exporter, ImmutableList.of(ModItems.RAW_LITHIUM, ModBlocks.LITHIUM_ORE, ModBlocks.DEEPSLATE_LITHIUM_ORE, ModBlocks.ENDSTONE_LITHIUM_ORE), RecipeCategory.MISC, ModItems.LITHIUM_INGOT, 0.7f, 100, "lithium_ingot");
         offerReversible2x2CompactingRecipesWithCompactingRecipeGroup(exporter, RecipeCategory.MISC, ModItems.LITHIUM_CHUNK, RecipeCategory.MISC, ModItems.LITHIUM_INGOT, "lithium_ingot_from_lithium_chunks", "lithium_ingot");
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.RAW_LITHIUM, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_LITHIUM_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.LITHIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LITHIUM_BLOCK);
 
+        // Tone
         offerSurroundedRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABSTRACT_TONE, ModItems.OIL, ModBlocks.TONE, 8);
         offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TONE, ModBlocks.TONE, 4);
         offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FRAMED_TONE, ModBlocks.ABSTRACT_TONE, 4);
@@ -360,7 +376,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FRAMED_TONE_BRICKS, ModBlocks.FRAMED_TONE, 4);
         offerStonecuttingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ImmutableList.of(ModBlocks.ABSTRACT_TONE, ModBlocks.FRAMED_TONE, ModBlocks.FRAMED_TONE_BRICKS), ImmutableList.of(ModBlocks.ABSTRACT_TONE, ModBlocks.FRAMED_TONE, ModBlocks.FRAMED_TONE_BRICKS));
         offerStonecuttingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ImmutableList.of(ModBlocks.TONE, ModBlocks.POLISHED_TONE, ModBlocks.TONE_BRICKS), ImmutableList.of(ModBlocks.TONE, ModBlocks.POLISHED_TONE, ModBlocks.TONE_BRICKS));
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ZTONE, 5)
                 .input(Character.valueOf('X'), ModBlocks.TONE)
                 .input(Character.valueOf('#'), ModItems.LITHIUM_CHUNK)
@@ -370,8 +385,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.TONE), FabricRecipeProvider.conditionsFromItem(ModBlocks.TONE))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.LITHIUM_CHUNK), FabricRecipeProvider.conditionsFromItem(ModItems.LITHIUM_CHUNK))
                 .offerTo(exporter);
-        //TODO aurora recipe
 
+        // Aurora Block
+        offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AURORA, ModItems.SHADE, ModItems.GLEAM, 4);
+
+        // CRTs
+        offerCRTRecipe(exporter, ModBlocks.CRT, ModItems.POLYMER);
+        offerCRTRecipe(exporter, ModBlocks.AGED_CRT, ModItems.CONDUCTIUM);
+        offerCRTRecipe(exporter, ModBlocks.BLACK_CRT, ModItems.AMALGAM);
+        offerCRTRecipe(exporter, ModBlocks.GRAY_CRT, ModItems.KERBESIUM);
+
+        // Tires
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMPTY_TIRE, 1)
                 .input(Character.valueOf('#'), ModItems.AMALGAM)
                 .pattern("###")
@@ -390,20 +414,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
 //        offerShapelessRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIRE, ModBlocks.EMPTY_TIRE, Items.IRON_INGOT, 1);
 
+        // Doors
         offerDoorRecipe(exporter, ModBlocks.DOOR_STEAK, ModItems.POLYCARBONATE);
         offerDoorRecipe(exporter, ModBlocks.DOOR_NEON, ModItems.MOULDING);
         offerDoorRecipe(exporter, ModBlocks.DOOR_TOY, ModItems.POLYMER);
-        offerDoorRecipe(exporter, ModBlocks.DOOR_POWER, ModItems.GAS_TUBE);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_POWER, ModBlocks.NURR);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_POWER, ModItems.GAS_TUBE); // offerDoorRecipe(exporter, ModBlocks.DOOR_POWER, ModBlocks.NURR);
         offerDoorRecipe(exporter, ModBlocks.DOOR_VACUUM, ModItems.KERBESIUM);
-        offerDoorRecipe(exporter, ModBlocks.DOOR_CONFINE, ModItems.FIBROUS_POWDER);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_CONFINE, ModBlocks.MINN_POFFCAGE);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_CONFINE, ModItems.FIBROUS_POWDER); // offerDoorRecipe(exporter, ModBlocks.DOOR_CONFINE, ModBlocks.MINN_POFFCAGE);
         offerDoorRecipe(exporter, ModBlocks.DOOR_END, ModItems.SCARLET_MEMBRANE);
         offerDoorRecipe(exporter, ModBlocks.DOOR_HEAVY, ModItems.CONDUCTIUM);
         offerDoorRecipe(exporter, ModBlocks.DOOR_TEST, ModItems.SHEETING);
         offerDoorRecipe(exporter, ModBlocks.DOOR_GROWN, ModItems.ORGANIC_BRASS);
-        offerDoorRecipe(exporter, ModBlocks.DOOR_KNET, ModItems.SLAG);
-//        offerDoorRecipe(exporter, ModBlocks.DOOR_KNET, ModBlocks.KORP);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_KNET, ModItems.SLAG); // offerDoorRecipe(exporter, ModBlocks.DOOR_KNET, ModBlocks.KORP);
         offerDoorRecipe(exporter, ModBlocks.DOOR_WORK, ModItems.TAWSINE);
         offerDoorRecipe(exporter, ModBlocks.DOOR_SAFE, ModItems.AMALGAM);
         offerDoorRecipe(exporter, ModBlocks.DOOR_PETRI, ModItems.PLAQUE);

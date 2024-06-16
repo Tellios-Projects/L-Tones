@@ -39,7 +39,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ltones:empty_tire"
+        "recipe": "ltones:crt"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -54,7 +54,7 @@
   ],
   "rewards": {
     "recipes": [
-      "ltones:empty_tire"
+      "ltones:crt"
     ]
   },
   "sends_telemetry_event": false
