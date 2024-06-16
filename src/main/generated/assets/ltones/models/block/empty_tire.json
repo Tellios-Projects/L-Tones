@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ltones:block/empty_tire_top",
+    "east": "ltones:block/tire_side",
+    "north": "ltones:block/tire_side",
+    "particle": "ltones:block/tire_side",
+    "south": "ltones:block/tire_side",
+    "up": "ltones:block/empty_tire_top",
+    "west": "ltones:block/tire_side"
+  }
+}

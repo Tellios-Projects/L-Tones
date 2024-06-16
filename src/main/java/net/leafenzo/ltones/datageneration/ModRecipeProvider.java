@@ -372,6 +372,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
         //TODO aurora recipe
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMPTY_TIRE, 1)
+                .input(Character.valueOf('#'), ModItems.AMALGAM)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###")
+                .criterion(FabricRecipeProvider.hasItem(ModItems.AMALGAM), FabricRecipeProvider.conditionsFromItem(ModItems.AMALGAM))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIRE, 1)
+                .input(Character.valueOf('#'), ModItems.AMALGAM)
+                .input(Character.valueOf('O'), Items.IRON_INGOT)
+                .pattern("###")
+                .pattern("#O#")
+                .pattern("###")
+                .criterion(FabricRecipeProvider.hasItem(ModItems.AMALGAM), FabricRecipeProvider.conditionsFromItem(ModItems.AMALGAM))
+                .criterion(FabricRecipeProvider.hasItem(Items.IRON_INGOT), FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter);
+//        offerShapelessRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIRE, ModBlocks.EMPTY_TIRE, Items.IRON_INGOT, 1);
+
         offerDoorRecipe(exporter, ModBlocks.DOOR_STEAK, ModItems.POLYCARBONATE);
         offerDoorRecipe(exporter, ModBlocks.DOOR_NEON, ModItems.MOULDING);
         offerDoorRecipe(exporter, ModBlocks.DOOR_TOY, ModItems.POLYMER);

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ltones:block/empty_tire",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ltones:block/empty_tire"
+    },
+    "axis=z": {
+      "model": "ltones:block/empty_tire",
+      "x": 90
+    }
+  }
+}
