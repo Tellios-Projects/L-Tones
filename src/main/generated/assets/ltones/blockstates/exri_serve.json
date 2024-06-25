@@ -1,10 +1,28 @@
 {
   "variants": {
-    "lit=false": {
+    "axis=x,lit=false": {
+      "model": "ltones:block/exri_serve",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,lit=true": {
+      "model": "ltones:block/exri_serve_on",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,lit=false": {
       "model": "ltones:block/exri_serve"
     },
-    "lit=true": {
+    "axis=y,lit=true": {
       "model": "ltones:block/exri_serve_on"
+    },
+    "axis=z,lit=false": {
+      "model": "ltones:block/exri_serve",
+      "x": 90
+    },
+    "axis=z,lit=true": {
+      "model": "ltones:block/exri_serve_on",
+      "x": 90
     }
   }
 }

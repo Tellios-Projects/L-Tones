@@ -11,10 +11,7 @@ import net.leafenzo.ltones.data.client.ModModels;
 import net.leafenzo.ltones.data.client.ModTexturedModel;
 import net.leafenzo.ltones.item.ModItems;
 import net.leafenzo.ltones.util.ModUtil;
-import net.minecraft.block.Block;
-import net.minecraft.block.DoorBlock;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.StairsBlock;
+import net.minecraft.block.*;
 import net.minecraft.data.client.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.state.property.BooleanProperty;
@@ -155,6 +152,48 @@ public class ModModelProvider extends FabricModelProvider {
                 .coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.LIT, identifier2, identifier)));
     }
 
+    public final void registerGlazedTerracottaCubeWithCustomTexturePaths(BlockStateModelGenerator blockStateModelGenerator, Block block, String northTexture, String southTexture, String eastTexture, String westTexture, String upTexture, String downTexture, String particleTexture) {
+        TextureMap map = new TextureMap()
+                .put(TextureKey.NORTH, Super.asResource(northTexture))
+                .put(TextureKey.SOUTH, Super.asResource(southTexture))
+                .put(TextureKey.EAST, Super.asResource(eastTexture))
+                .put(TextureKey.WEST, Super.asResource(westTexture))
+                .put(TextureKey.UP, Super.asResource(upTexture))
+                .put(TextureKey.DOWN, Super.asResource(downTexture))
+                .put(TextureKey.PARTICLE, Super.asResource(particleTexture))
+                ;
+        Identifier identifier = Models.CUBE.upload(block, map, blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createSouthDefaultHorizontalRotationStates()));
+    }
+    public final void registerGlazedTerracottaCubeWithCustomTexturePaths(BlockStateModelGenerator blockStateModelGenerator, Block block, String northTexture, String southTexture, String eastTexture, String westTexture, String upTexture, String downTexture) {
+        registerGlazedTerracottaCubeWithCustomTexturePaths(blockStateModelGenerator, block, northTexture, southTexture, eastTexture, westTexture, upTexture, downTexture, northTexture);
+    }
+
+    public final void registerLitHorizontalFacingCubeWithCustomTexturePaths(BlockStateModelGenerator blockStateModelGenerator, Block block, TextureMap offMap, TextureMap onMap) {
+        Identifier identifier = Models.CUBE.upload(block, offMap, blockStateModelGenerator.modelCollector);
+        Identifier identifier2 = Models.CUBE.upload(block, "_on", onMap, blockStateModelGenerator.modelCollector);
+
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier))
+                .coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates())
+                .coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.LIT, identifier2, identifier)));
+    }
+
+    public final void registerHorizontalFacingCubeWithCustomTexturePaths(BlockStateModelGenerator blockStateModelGenerator, Block block, String northTexture, String southTexture, String eastTexture, String westTexture, String upTexture, String downTexture, String particleTexture) {
+        TextureMap map = new TextureMap()
+                .put(TextureKey.NORTH, Super.asResource(northTexture))
+                .put(TextureKey.SOUTH, Super.asResource(southTexture))
+                .put(TextureKey.EAST, Super.asResource(eastTexture))
+                .put(TextureKey.WEST, Super.asResource(westTexture))
+                .put(TextureKey.UP, Super.asResource(upTexture))
+                .put(TextureKey.DOWN, Super.asResource(downTexture))
+                .put(TextureKey.PARTICLE, Super.asResource(particleTexture))
+                ;
+        Identifier identifier = Models.CUBE.upload(block, map, blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
+    }
+    public final void registerHorizontalFacingCubeWithCustomTexturePaths(BlockStateModelGenerator blockStateModelGenerator, Block block, String northTexture, String southTexture, String eastTexture, String westTexture, String upTexture, String downTexture) {
+        registerHorizontalFacingCubeWithCustomTexturePaths(blockStateModelGenerator, block, northTexture, southTexture, eastTexture, westTexture, upTexture, downTexture, northTexture);
+    }
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         //<editor-fold desc = "Models - decals">
@@ -428,7 +467,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.TANK_CANNON);
         //</editor-fold>
         //<editor-fold desc = "Models - axri">
-        // TODO horizontal placement and exri_seal sides
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_TECT);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_STEM);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_STEEL);
@@ -441,8 +479,26 @@ public class ModModelProvider extends FabricModelProvider {
         exriDivideTexturePool.stairs(ModBlocks.EXRI_DIVIDE_STAIRS);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_FLOW, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_SERVE, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_DISPLAY, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffAxisRotatedBlock(blockStateModelGenerator, ModBlocks.EXRI_SERVE, Models.CUBE_ALL, TextureMap::all);
+
+        registerLitHorizontalFacingCubeWithCustomTexturePaths(blockStateModelGenerator, ModBlocks.EXRI_DISPLAY,
+                new TextureMap()
+                        .put(TextureKey.NORTH, Super.asResource("block/exri_display"))
+                        .put(TextureKey.SOUTH, Super.asResource("block/exri_stem"))
+                        .put(TextureKey.EAST, Super.asResource("block/exri_flow"))
+                        .put(TextureKey.WEST, Super.asResource("block/exri_flow"))
+                        .put(TextureKey.UP, Super.asResource("block/exri_seal"))
+                        .put(TextureKey.DOWN, Super.asResource("block/exri_seal"))
+                        .put(TextureKey.PARTICLE, Super.asResource("block/exri_tect")),
+                new TextureMap()
+                        .put(TextureKey.NORTH, Super.asResource("block/exri_display_on"))
+                        .put(TextureKey.SOUTH, Super.asResource("block/exri_stem"))
+                        .put(TextureKey.EAST, Super.asResource("block/exri_flow_on"))
+                        .put(TextureKey.WEST, Super.asResource("block/exri_flow_on"))
+                        .put(TextureKey.UP, Super.asResource("block/exri_seal"))
+                        .put(TextureKey.DOWN, Super.asResource("block/exri_seal"))
+                        .put(TextureKey.PARTICLE, Super.asResource("block/exri_tect"))
+        );
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_CURRENT, Models.CUBE_ALL, TextureMap::all);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_CRITICAL, Models.CUBE_ALL, TextureMap::all);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_CONTROL, Models.CUBE_ALL, TextureMap::all);

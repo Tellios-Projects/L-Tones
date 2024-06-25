@@ -498,23 +498,23 @@ public class ModBlocks {
             .requiresTool()
             .strength(1.8f)
             .sounds(BlockSoundGroup.COPPER);
-    public static final Block EXRI_LEVEL = registerBlockInBlockset(EXRI_BLOCKS, "exri_level", new RedstoneLampBlock(FabricBlockSettings.copyOf(exriMaterial)));
+    public static final Block EXRI_LEVEL = registerBlockInBlockset(EXRI_BLOCKS, "exri_level", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_TECT = registerBlockInBlockset(EXRI_BLOCKS, "exri_tect", new Block(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_STEM = registerBlockInBlockset(EXRI_BLOCKS, "exri_stem", new Block(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_STEEL = registerBlockInBlockset(EXRI_BLOCKS, "exri_steel", new Block(FabricBlockSettings.copyOf(exriMaterial)));
-    public static final Block EXRI_SERVE = registerBlockInBlockset(EXRI_BLOCKS, "exri_serve", new RedstoneLampBlock(FabricBlockSettings.copyOf(exriMaterial)));
+    public static final Block EXRI_SERVE = registerBlockInBlockset(EXRI_BLOCKS, "exri_serve", new LitPillarBlock(FabricBlockSettings.copyOf(exriMaterial))); //TODO lit/unlit textures/anim
     public static final Block EXRI_SEAL = registerBlockInBlockset(EXRI_BLOCKS, "exri_seal", new Block(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_SCREEN = registerBlockInBlockset(EXRI_BLOCKS, "exri_screen", new Block(FabricBlockSettings.copyOf(exriMaterial).sounds(ModBlockSoundGroup.NEON)));
     public static final Block EXRI_ROGEN = registerBlockInBlockset(EXRI_BLOCKS, "exri_rogen", new Block(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_MESH = registerBlockInBlockset(EXRI_BLOCKS, "exri_mesh", new Block(FabricBlockSettings.copyOf(exriMaterial)));
-    public static final Block EXRI_FLOW = registerBlockInBlockset(EXRI_BLOCKS, "exri_flow", new RedstoneLampBlock(FabricBlockSettings.copyOf(exriMaterial)));
+    public static final Block EXRI_FLOW = registerBlockInBlockset(EXRI_BLOCKS, "exri_flow", new LitBlock(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_DIVIDE = registerBlockInBlockset(EXRI_BLOCKS, "exri_divide", new Block(FabricBlockSettings.copyOf(exriMaterial)));
         public static final Block EXRI_DIVIDE_STAIRS = registerStairs(EXRI_DIVIDE,"exri_divide_stairs", new StairsBlock(EXRI_DIVIDE.getDefaultState(), FabricBlockSettings.copyOf(EXRI_DIVIDE))); static { STAIRS_FROM_BLOCK.put(EXRI_DIVIDE, EXRI_DIVIDE_STAIRS); }
         public static final Block EXRI_DIVIDE_SLAB = registerSlab(EXRI_DIVIDE,"exri_divide_slab", new SlabBlock(FabricBlockSettings.copyOf(EXRI_DIVIDE))); static { SLAB_FROM_BLOCK.put(EXRI_DIVIDE, EXRI_DIVIDE_SLAB); }
-    public static final Block EXRI_DISPLAY = registerBlockInBlockset(EXRI_BLOCKS, "exri_display", new RedstoneLampBlock(FabricBlockSettings.copyOf(exriMaterial)));
-    public static final Block EXRI_CURRENT = registerBlockInBlockset(EXRI_BLOCKS, "exri_current", new RedstoneLampBlock(FabricBlockSettings.copyOf(exriMaterial)));
-    public static final Block EXRI_CRITICAL = registerBlockInBlockset(EXRI_BLOCKS, "exri_critical", new RedstoneLampBlock(FabricBlockSettings.copyOf(exriMaterial)));
-    public static final Block EXRI_CONTROL = registerBlockInBlockset(EXRI_BLOCKS, "exri_control", new RedstoneLampBlock(FabricBlockSettings.copyOf(exriMaterial)));
+    public static final Block EXRI_DISPLAY = registerBlockInBlockset(EXRI_BLOCKS, "exri_display", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
+    public static final Block EXRI_CURRENT = registerBlockInBlockset(EXRI_BLOCKS, "exri_current", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
+    public static final Block EXRI_CRITICAL = registerBlockInBlockset(EXRI_BLOCKS, "exri_critical", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
+    public static final Block EXRI_CONTROL = registerBlockInBlockset(EXRI_BLOCKS, "exri_control", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI = registerBlockInBlockset(EXRI_BLOCKS, "exri", new Block(FabricBlockSettings.copyOf(exriMaterial)));
 
     //TODO bit blockset always emits a redstone level of 1   
@@ -767,7 +767,6 @@ public class ModBlocks {
     public static final Block EMPTY_TIRE = registerBlock("empty_tire", new PillarBlock(FabricBlockSettings.create().mapColor(MapColor.BLACK).instrument(Instrument.BASS).strength(0.2f).sounds(BlockSoundGroup.SHROOMLIGHT)));
     public static final Block TIRE = registerBlock("tire", new PillarBlock(FabricBlockSettings.copyOf(EMPTY_TIRE).strength(1.0f).requiresTool()));
     //</editor-fold>
-
 
     //<editor-fold desc ="Blocks - Doors">
     public static Block registerDoor(String name, Block block) {

@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "ltones:block/exri_display_on"
+    "down": "ltones:block/exri_seal",
+    "east": "ltones:block/exri_flow_on",
+    "north": "ltones:block/exri_display_on",
+    "particle": "ltones:block/exri_tect",
+    "south": "ltones:block/exri_stem",
+    "up": "ltones:block/exri_seal",
+    "west": "ltones:block/exri_flow_on"
   }
 }
