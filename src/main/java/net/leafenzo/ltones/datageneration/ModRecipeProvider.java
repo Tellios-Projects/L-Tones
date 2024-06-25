@@ -413,6 +413,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.IRON_INGOT), FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter);
 //        offerShapelessRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIRE, ModBlocks.EMPTY_TIRE, Items.IRON_INGOT, 1);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRATE, 1)
+                .input(Character.valueOf('#'), ModItems.SLAG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###")
+                .criterion(FabricRecipeProvider.hasItem(ModItems.SLAG), FabricRecipeProvider.conditionsFromItem(ModItems.SLAG))
+                .offerTo(exporter);
 
         // Doors
         offerDoorRecipe(exporter, ModBlocks.DOOR_STEAK, ModItems.POLYCARBONATE);

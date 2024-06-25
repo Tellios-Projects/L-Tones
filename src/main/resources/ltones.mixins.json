@@ -4,6 +4,7 @@
   "package": "net.leafenzo.ltones.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "accessor.StatsAccessor"
   ],
   "client": [
   ],

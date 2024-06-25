@@ -1,7 +1,6 @@
 {
-  "parent": "minecraft:block/cube_bottom_top",
+  "parent": "minecraft:block/cube_top",
   "textures": {
-    "bottom": "ltones:block/crate_bottom",
     "side": "ltones:block/crate_side",
     "top": "ltones:block/crate_top"
   }

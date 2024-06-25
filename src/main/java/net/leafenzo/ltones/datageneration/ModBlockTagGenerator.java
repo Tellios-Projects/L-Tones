@@ -156,6 +156,7 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
                 .add(ModBlocks.FRAMED_TONE)
                 .add(ModBlocks.FRAMED_TONE_BRICKS)
                 .add(ModBlocks.TIRE)
+                .add(ModBlocks.CRATE)
         ;
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)

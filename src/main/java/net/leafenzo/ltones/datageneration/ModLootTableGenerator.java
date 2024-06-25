@@ -70,6 +70,7 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         this.addDrop(ModBlocks.LITHIUM_ORE, (Block block) -> this.oreDrops((Block)block, ModItems.RAW_LITHIUM));
         this.addDrop(ModBlocks.DEEPSLATE_LITHIUM_ORE, (Block block) -> this.oreDrops((Block)block, ModItems.RAW_LITHIUM));
         this.addDrop(ModBlocks.ENDSTONE_LITHIUM_ORE, (Block block) -> VanillaBlockLootTableGenerator.dropsWithSilkTouch(block, (LootPoolEntry.Builder)this.applyExplosionDecay((ItemConvertible)block, ((LeafEntry.Builder)ItemEntry.builder(ModItems.LITHIUM_CHUNK).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 6.0f)))).apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE)))));
+        this.addDrop(ModBlocks.CRATE, (Block block) -> this.nameableContainerDrops((Block)block));
 
         for(Block block : ModBlocks.DECAL_BLOCKS) {
             this.addDrop(block, (Block b) -> this.decalDrops((Block) b));

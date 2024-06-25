@@ -78,10 +78,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         generateTranslation(translationBuilder, ModBlocks.AGED_CRT, "Aged CRT Monitor");
         generateTranslation(translationBuilder, ModBlocks.BLACK_CRT, "Black CRT Monitor");
         generateTranslation(translationBuilder, ModBlocks.GRAY_CRT, "Gray CRT Monitor");
-
-
-
-
+        generateTranslation(translationBuilder, "container.crate", "Crate");
 
         //</editor-fold
         //<editor-fold desc ="EnglishLang - Fallback">

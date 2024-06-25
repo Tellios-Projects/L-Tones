@@ -381,6 +381,7 @@
     "ltones:abstract_tone",
     "ltones:framed_tone",
     "ltones:framed_tone_bricks",
-    "ltones:tire"
+    "ltones:tire",
+    "ltones:crate"
   ]
 }
