@@ -85,9 +85,13 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ZTONE);
                         entries.add(ModBlocks.AURORA);
                         entries.add(ModBlocks.CRT);
+                        entries.add(ModBlocks.KEYBOARD);
                         entries.add(ModBlocks.AGED_CRT);
+                        entries.add(ModBlocks.AGED_KEYBOARD);
                         entries.add(ModBlocks.BLACK_CRT);
+                        entries.add(ModBlocks.BLACK_KEYBOARD);
                         entries.add(ModBlocks.GRAY_CRT);
+                        entries.add(ModBlocks.GRAY_KEYBOARD);
                         entries.add(ModBlocks.EMPTY_TIRE);
                         entries.add(ModBlocks.TIRE);
                         entries.add(ModBlocks.CRATE);

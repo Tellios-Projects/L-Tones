@@ -12,3 +12,4 @@ l-tones is meant to be a successor to the original [ZTones](https://www.minecraf
 Textures are made by Tellio-Aridoitsu (Eliza) based off the original Ztones textures, with programming done by Leafenzo (Leah). 
 
 </h4>
+</h1>

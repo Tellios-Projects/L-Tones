@@ -48,10 +48,6 @@ public class ModItems {
     public static final Item NETWORKING = registerItem("networking", new AliasedBlockItem(ModBlocks.DECAL_NETWORKING, new FabricItemSettings()));
     //</editor-fold>
 
-//    private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) { // I have no idea what this is or what it does
-//
-//    }
-
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Super.MOD_ID, name), item);
     }
