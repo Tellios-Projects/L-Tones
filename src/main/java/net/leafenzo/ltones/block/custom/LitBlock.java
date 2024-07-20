@@ -54,9 +54,42 @@ public class LitBlock extends Block {
         }
     }
 
+    //TODO learn a better way to do this from Derelict
+    @Override
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        boolean bl = state.get(LIT);
+        if (bl /* && world.getRecievedRedstonePower(pos) == 1 */) {
+            world.scheduleBlockTick(pos, this, 2);
+            world.setBlockState(pos, (BlockState)state.cycle(LIT), Block.NOTIFY_LISTENERS); // Bypass sound
+//            toggleLit(state, world, pos);
+        }
+    }
+    @Override
+    public boolean hasRandomTicks(BlockState state) {
+        return true;
+    }
+
+    // This is client side I believe. but it also makes it so that the blocks only close to the player update, which is neat, but I really don't know how this would behave in a server
+//    @Override
+//    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+//        boolean bl = state.get(LIT);
+//        if (bl == world.isReceivingRedstonePower(pos) /* && world.getReceivedRedstonePower(pos) == 1 */) {
+//            toggleLit(state, world, pos);
+//        }
+//    }
+
+    // Interesting
+//    @Override
+//    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+//        boolean bl = state.get(LIT);
+//        if (bl == world.isReceivingRedstonePower(pos) /* && world.getReceivedRedstonePower(pos) == 1 */) {
+//            toggleLit(state, world, pos);
+//        }
+//    }
+
     @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (state.get(LIT).booleanValue() && !world.isReceivingRedstonePower(pos)) {
+        if (state.get(LIT) != world.isReceivingRedstonePower(pos)) {
             toggleLit(state, world, pos);
         }
     }
