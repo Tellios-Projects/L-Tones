@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "aged_keyboard",
+  "key": {
+    "F": {
+      "item": "ltones:conductium"
+    },
+    "S": {
+      "item": "minecraft:stone_button"
+    }
+  },
+  "pattern": [
+    "SS",
+    "FF"
+  ],
+  "result": {
+    "item": "ltones:aged_keyboard"
+  },
+  "show_notification": true
+}

@@ -381,7 +381,15 @@
     "ltones:abstract_tone",
     "ltones:framed_tone",
     "ltones:framed_tone_bricks",
+    "ltones:crt",
+    "ltones:aged_crt",
+    "ltones:black_crt",
+    "ltones:gray_crt",
     "ltones:tire",
-    "ltones:crate"
+    "ltones:crate",
+    "ltones:keyboard",
+    "ltones:aged_keyboard",
+    "ltones:black_keyboard",
+    "ltones:gray_keyboard"
   ]
 }

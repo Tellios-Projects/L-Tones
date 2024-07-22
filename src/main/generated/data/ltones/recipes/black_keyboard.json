@@ -1,18 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "black_keyboard",
   "key": {
-    "#": {
+    "F": {
       "item": "ltones:amalgam"
+    },
+    "S": {
+      "item": "minecraft:stone_button"
     }
   },
   "pattern": [
-    "###",
-    "# #",
-    "###"
+    "SS",
+    "FF"
   ],
   "result": {
-    "item": "ltones:empty_tire"
+    "item": "ltones:black_keyboard"
   },
   "show_notification": true
 }

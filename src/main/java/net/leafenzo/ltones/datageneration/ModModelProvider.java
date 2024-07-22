@@ -151,7 +151,6 @@ public class ModModelProvider extends FabricModelProvider {
                 .put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates())
                 .coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.LIT, identifier2, identifier)));
     }
-
     public final void registerGlazedTerracottaCubeWithCustomTexturePaths(BlockStateModelGenerator blockStateModelGenerator, Block block, String northTexture, String southTexture, String eastTexture, String westTexture, String upTexture, String downTexture, String particleTexture) {
         TextureMap map = new TextureMap()
                 .put(TextureKey.NORTH, Super.asResource(northTexture))
@@ -168,7 +167,6 @@ public class ModModelProvider extends FabricModelProvider {
     public final void registerGlazedTerracottaCubeWithCustomTexturePaths(BlockStateModelGenerator blockStateModelGenerator, Block block, String northTexture, String southTexture, String eastTexture, String westTexture, String upTexture, String downTexture) {
         registerGlazedTerracottaCubeWithCustomTexturePaths(blockStateModelGenerator, block, northTexture, southTexture, eastTexture, westTexture, upTexture, downTexture, northTexture);
     }
-
     public final void registerLitHorizontalFacingCubeWithCustomTexturePaths(BlockStateModelGenerator blockStateModelGenerator, Block block, TextureMap offMap, TextureMap onMap) {
         Identifier identifier = Models.CUBE.upload(block, offMap, blockStateModelGenerator.modelCollector);
         Identifier identifier2 = Models.CUBE.upload(block, "_on", onMap, blockStateModelGenerator.modelCollector);
@@ -177,7 +175,6 @@ public class ModModelProvider extends FabricModelProvider {
                 .coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates())
                 .coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.LIT, identifier2, identifier)));
     }
-
     public final void registerHorizontalFacingCubeWithCustomTexturePaths(BlockStateModelGenerator blockStateModelGenerator, Block block, String northTexture, String southTexture, String eastTexture, String westTexture, String upTexture, String downTexture, String particleTexture) {
         TextureMap map = new TextureMap()
                 .put(TextureKey.NORTH, Super.asResource(northTexture))
@@ -197,6 +194,11 @@ public class ModModelProvider extends FabricModelProvider {
     private void registerCrate(BlockStateModelGenerator blockStateModelGenerator, Block block) {
         Identifier identifier = TextureMap.getSubId(block, "_top_open");
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(blockStateModelGenerator.createUpDefaultFacingVariantMap()).coordinate(BlockStateVariantMap.create(Properties.OPEN).register((Boolean)false, BlockStateVariant.create().put(VariantSettings.MODEL, TexturedModel.CUBE_TOP.upload(block, blockStateModelGenerator.modelCollector))).register((Boolean)true, BlockStateVariant.create().put(VariantSettings.MODEL, TexturedModel.CUBE_TOP.get(block).textures(textureMap -> textureMap.put(TextureKey.TOP, identifier)).upload(block, "_open", blockStateModelGenerator.modelCollector)))));
+    }
+    private void registerKeyboardBlock(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        Identifier identifier = blockStateModelGenerator.createSubModel(block, "", ModModels.KEYBOARD, TextureMap::all);
+//        blockStateModelGenerator.registerItemModel(block.asItem());
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
     }
 
     @Override
@@ -644,6 +646,10 @@ public class ModModelProvider extends FabricModelProvider {
         registerAxisRotatedBlockWithCustomTexturePaths(blockStateModelGenerator, ModBlocks.TIRE, "block/tire_top", "block/tire_side");
         registerAxisRotatedBlockWithCustomTexturePaths(blockStateModelGenerator, ModBlocks.EMPTY_TIRE, "block/empty_tire_top", "block/tire_side");
         registerCrate(blockStateModelGenerator, ModBlocks.CRATE);
+        registerKeyboardBlock(blockStateModelGenerator, ModBlocks.KEYBOARD);
+        registerKeyboardBlock(blockStateModelGenerator, ModBlocks.AGED_KEYBOARD);
+        registerKeyboardBlock(blockStateModelGenerator, ModBlocks.BLACK_KEYBOARD);
+        registerKeyboardBlock(blockStateModelGenerator, ModBlocks.GRAY_KEYBOARD);
         //</editor-fold>
 
         // Block Models

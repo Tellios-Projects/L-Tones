@@ -1,8 +1,9 @@
 {
+	"parent": "block/block",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "keyboard",
-		"particle": "keyboard"
+		"0": "#all",
+		"particle": "#all"
 	},
 	"elements": [
 		{

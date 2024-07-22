@@ -21,7 +21,6 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -265,6 +264,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .group(FabricRecipeProvider.getRecipeName(output))
                 .offerTo(exporter);
     }
+    public static void offerKeyboardRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible frameItem) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 1)
+                .input(Character.valueOf('F'), frameItem)
+                .input(Character.valueOf('S'), Items.STONE_BUTTON)
+                .pattern("SS")
+                .pattern("FF")
+                .criterion(FabricRecipeProvider.hasItem(frameItem), FabricRecipeProvider.conditionsFromItem(frameItem))
+                .criterion(FabricRecipeProvider.hasItem(Items.STONE_BUTTON), FabricRecipeProvider.conditionsFromItem(Items.STONE_BUTTON))
+                .group(FabricRecipeProvider.getRecipeName(output))
+                .offerTo(exporter);
+    }
 
 
     @Override
@@ -394,6 +404,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerCRTRecipe(exporter, ModBlocks.AGED_CRT, ModItems.CONDUCTIUM);
         offerCRTRecipe(exporter, ModBlocks.BLACK_CRT, ModItems.AMALGAM);
         offerCRTRecipe(exporter, ModBlocks.GRAY_CRT, ModItems.KERBESIUM);
+
+        // Keyboards
+        offerKeyboardRecipe(exporter, ModBlocks.KEYBOARD, ModItems.POLYMER);
+        offerKeyboardRecipe(exporter, ModBlocks.AGED_KEYBOARD, ModItems.CONDUCTIUM);
+        offerKeyboardRecipe(exporter, ModBlocks.BLACK_KEYBOARD, ModItems.AMALGAM);
+        offerKeyboardRecipe(exporter, ModBlocks.GRAY_KEYBOARD, ModItems.KERBESIUM);
 
         // Tires
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMPTY_TIRE, 1)

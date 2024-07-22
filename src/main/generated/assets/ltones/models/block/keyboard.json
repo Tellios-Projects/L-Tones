@@ -1,0 +1,7 @@
+{
+  "parent": "ltones:block/keyboard_template",
+  "textures": {
+    "all": "ltones:block/keyboard",
+    "particle": "ltones:block/keyboard"
+  }
+}

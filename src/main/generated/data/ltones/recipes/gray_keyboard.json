@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "gray_keyboard",
+  "key": {
+    "F": {
+      "item": "ltones:kerbesium"
+    },
+    "S": {
+      "item": "minecraft:stone_button"
+    }
+  },
+  "pattern": [
+    "SS",
+    "FF"
+  ],
+  "result": {
+    "item": "ltones:gray_keyboard"
+  },
+  "show_notification": true
+}

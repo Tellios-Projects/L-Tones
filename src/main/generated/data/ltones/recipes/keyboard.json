@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "keyboard",
+  "key": {
+    "F": {
+      "item": "ltones:polymer"
+    },
+    "S": {
+      "item": "minecraft:stone_button"
+    }
+  },
+  "pattern": [
+    "SS",
+    "FF"
+  ],
+  "result": {
+    "item": "ltones:keyboard"
+  },
+  "show_notification": true
+}

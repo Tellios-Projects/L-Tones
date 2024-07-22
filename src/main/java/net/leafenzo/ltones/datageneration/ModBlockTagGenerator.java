@@ -139,7 +139,7 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         ;
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
-        //.add(ModBlocks.)
+                .add(ModBlocks.EMPTY_TIRE)
         ;
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
@@ -155,8 +155,16 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
                 .add(ModBlocks.ABSTRACT_TONE)
                 .add(ModBlocks.FRAMED_TONE)
                 .add(ModBlocks.FRAMED_TONE_BRICKS)
+                .add(ModBlocks.CRT)
+                .add(ModBlocks.AGED_CRT)
+                .add(ModBlocks.BLACK_CRT)
+                .add(ModBlocks.GRAY_CRT)
                 .add(ModBlocks.TIRE)
                 .add(ModBlocks.CRATE)
+                .add(ModBlocks.KEYBOARD)
+                .add(ModBlocks.AGED_KEYBOARD)
+                .add(ModBlocks.BLACK_KEYBOARD)
+                .add(ModBlocks.GRAY_KEYBOARD)
         ;
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)

@@ -17,4 +17,5 @@ public class ModBlockSoundGroup {
     public static final BlockSoundGroup ZKUL = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_ZKUL_BREAK, ModSoundEvents.BLOCK_ZKUL_STEP, ModSoundEvents.BLOCK_ZKUL_PLACE, ModSoundEvents.BLOCK_ZKUL_HIT, ModSoundEvents.BLOCK_ZKUL_FALL);
     public static final BlockSoundGroup DECAL_SLAG = new BlockSoundGroup(1.0f, 1.0f, SoundEvents.BLOCK_STONE_HIT, SoundEvents.BLOCK_STONE_STEP, SoundEvents.BLOCK_STONE_HIT, SoundEvents.BLOCK_STONE_HIT, SoundEvents.BLOCK_STONE_FALL);
     public static final BlockSoundGroup DECAL_MOULDING = new BlockSoundGroup(0.33f, 1.0f, SoundEvents.BLOCK_GRAVEL_BREAK, SoundEvents.BLOCK_SUSPICIOUS_GRAVEL_STEP, SoundEvents.BLOCK_SUSPICIOUS_GRAVEL_PLACE, SoundEvents.BLOCK_GRAVEL_HIT, SoundEvents.BLOCK_SUSPICIOUS_GRAVEL_FALL);
+    public static final BlockSoundGroup TIRE = new BlockSoundGroup(0.66f, 2.4f, SoundEvents.BLOCK_FROGLIGHT_BREAK, SoundEvents.BLOCK_FROGLIGHT_STEP, SoundEvents.BLOCK_FROGLIGHT_PLACE, SoundEvents.BLOCK_FROGLIGHT_HIT,SoundEvents.BLOCK_FROGLIGHT_FALL);
 }

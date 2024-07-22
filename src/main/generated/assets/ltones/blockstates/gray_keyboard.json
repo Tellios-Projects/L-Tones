@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ltones:block/gray_keyboard",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "ltones:block/gray_keyboard"
+    },
+    "facing=south": {
+      "model": "ltones:block/gray_keyboard",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ltones:block/gray_keyboard",
+      "y": 270
+    }
+  }
+}
