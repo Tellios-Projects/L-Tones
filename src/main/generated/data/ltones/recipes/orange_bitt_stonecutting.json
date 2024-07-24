@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:bitt_blocks"
+  },
+  "result": "ltones:orange_bitt"
+}

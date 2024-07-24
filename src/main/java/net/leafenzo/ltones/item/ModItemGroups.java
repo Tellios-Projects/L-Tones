@@ -36,6 +36,7 @@ public class ModItemGroups {
                         for(Block block : includeVariants(ModBlocks.AGON_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.FORTT_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.GLAXX_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.BITT_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.CRAY_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.CAST_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.HOST_BLOCKS)) { entries.add(block); }

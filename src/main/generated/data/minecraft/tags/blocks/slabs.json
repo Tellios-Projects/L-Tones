@@ -1,15 +1,15 @@
 {
   "replace": false,
   "values": [
-    "ltones:redds_pice_slab",
-    "ltones:exri_divide_slab",
-    "ltones:kryp_smooth_slab",
-    "ltones:lair_rigid_slab",
     "ltones:lair_derma_slab",
     "ltones:kryp_wire_slab",
-    "ltones:lair_rigor_slab",
     "ltones:lave_tile_slab",
+    "ltones:exri_divide_slab",
+    "ltones:veeld_slab",
+    "ltones:lair_rigor_slab",
+    "ltones:lair_rigid_slab",
     "ltones:kryp_slab",
-    "ltones:veeld_slab"
+    "ltones:kryp_smooth_slab",
+    "ltones:redds_pice_slab"
   ]
 }

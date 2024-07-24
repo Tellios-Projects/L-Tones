@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:mint_bitt",
+    "ltones:orange_bitt",
+    "ltones:purple_bitt",
+    "ltones:light_blue_bitt",
+    "ltones:lime_bitt",
+    "ltones:magenta_bitt",
+    "ltones:fuchsia_bitt",
+    "ltones:green_bitt",
+    "ltones:indigo_bitt",
+    "ltones:amber_bitt",
+    "ltones:blue_bitt",
+    "ltones:cyan_bitt",
+    "ltones:bitt",
+    "ltones:yellow_bitt",
+    "ltones:red_bitt",
+    "ltones:shell_bitt"
+  ]
+}

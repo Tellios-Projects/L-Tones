@@ -72,6 +72,7 @@ public class ModBlocks {
     public static final ArrayList<Block> TYEL_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> ROEN_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> SOL_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> BITT_BLOCKS = new ArrayList<>();
 
     public static ArrayList<BlockSet> BLOCKSETS = new ArrayList<BlockSet>();
 
@@ -102,6 +103,7 @@ public class ModBlocks {
     public static final BlockSet TYEL_BLOCKSET = registerBlockSet(TYEL_BLOCKS, "tyel_blocks");
     public static final BlockSet ROEN_BLOCKSET = registerBlockSet(ROEN_BLOCKS, "roen_blocks");
     public static final BlockSet SOL_BLOCKSET = registerBlockSet(SOL_BLOCKS, "sol_blocks");
+    public static final BlockSet BITT_BLOCKSET = registerBlockSet(BITT_BLOCKS, "bitt_blocks");
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - FORTT">
@@ -733,6 +735,30 @@ public class ModBlocks {
     public static final Block SOL_NUCLEI = registerBlockInBlockset(SOL_BLOCKS, "sol_nuclei", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null));
     public static final Block SOL_CORONA = registerBlockInBlockset(SOL_BLOCKS, "sol_corona", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null));
     public static final Block SOL = registerBlockInBlockset(SOL_BLOCKS, "sol", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null));
+    //</editor-fold>
+
+    //<editor-fold desc ="Blocks - BITT">
+    private static final FabricBlockSettings bittMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.TERRACOTTA_GRAY)
+            .strength(0.6f)
+//            .luminance(state -> 5)
+            .sounds(ModBlockSoundGroup.POLYGON);
+    public static final Block MINT_BITT = registerBlockInBlockset(BITT_BLOCKS, "mint_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block ORANGE_BITT = registerBlockInBlockset(BITT_BLOCKS, "orange_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block PURPLE_BITT = registerBlockInBlockset(BITT_BLOCKS, "purple_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block LIGHT_BLUE_BITT = registerBlockInBlockset(BITT_BLOCKS, "light_blue_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block LIME_BITT = registerBlockInBlockset(BITT_BLOCKS, "lime_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block MAGENTA_BITT = registerBlockInBlockset(BITT_BLOCKS, "magenta_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block FUCHSIA_BITT = registerBlockInBlockset(BITT_BLOCKS, "fuchsia_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block GREEN_BITT = registerBlockInBlockset(BITT_BLOCKS, "green_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block INDIGO_BITT = registerBlockInBlockset(BITT_BLOCKS, "indigo_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block AMBER_BITT = registerBlockInBlockset(BITT_BLOCKS, "amber_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block BLUE_BITT = registerBlockInBlockset(BITT_BLOCKS, "blue_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block CYAN_BITT = registerBlockInBlockset(BITT_BLOCKS, "cyan_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block BITT = registerBlockInBlockset(BITT_BLOCKS, "bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block YELLOW_BITT = registerBlockInBlockset(BITT_BLOCKS, "yellow_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block RED_BITT = registerBlockInBlockset(BITT_BLOCKS, "red_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block SHELL_BITT = registerBlockInBlockset(BITT_BLOCKS, "shell_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - Other">

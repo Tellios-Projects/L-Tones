@@ -623,6 +623,11 @@ public class ModModelProvider extends FabricModelProvider {
         registerLitOnOffAxisRotatedBlock(blockStateModelGenerator, ModBlocks.SOL_SPECTRA, Models.CUBE_ALL, TextureMap::all);
         registerLitOnOffGlazedTerracottaBlock(blockStateModelGenerator, ModBlocks.SOL_BLAZAR,  Models.CUBE_ALL, TextureMap::all);
         //</editor-fold>
+        //<editor-fold desc = "Models - bitt">
+        for(Block block : ModBlocks.BITT_BLOCKS) {
+            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+        }
+        //</editor-fold>
 
         //<editor-fold desc = "Models - Other Blocks">
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.AURORA, Models.CUBE_ALL, TextureMap::all);
