@@ -38,11 +38,11 @@ public class ModPlacedFeatures {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         registerKey(context, ORE_LITHIUM_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ORE_LITHIUM),
-                modifiersWithCount(31, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-144), YOffset.fixed(80))) // interestingly, it seems that 256 is the limit of how many veins you can have in a chunk
+                modifiersWithCount(27, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-144), YOffset.fixed(80))) // interestingly, it seems that 256 is the limit of how many veins you can have in a chunk
         );
 
         registerKey(context, ORE_LITHIUM_LOWER_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ORE_LITHIUM),
-                modifiersWithCount(43, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-96), YOffset.fixed(-32))) // interestingly, it seems that 256 is the limit of how many veins you can have in a chunk
+                modifiersWithCount(36, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-96), YOffset.fixed(-32))) // interestingly, it seems that 256 is the limit of how many veins you can have in a chunk
         );
 
         registerKey(context, ORE_LITHIUM_END_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ORE_LITHIUM_END),
