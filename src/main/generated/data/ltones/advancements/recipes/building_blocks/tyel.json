@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_porcelain": {
+    "has_slump": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ltones:porcelain"
+              "ltones:slump"
             ]
           }
         ]
@@ -35,7 +35,7 @@
   "requirements": [
     [
       "has_ztone",
-      "has_porcelain",
+      "has_slump",
       "has_the_recipe"
     ]
   ],

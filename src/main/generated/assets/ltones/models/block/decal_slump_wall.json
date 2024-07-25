@@ -1,0 +1,7 @@
+{
+  "parent": "ltones:block/decal",
+  "textures": {
+    "all": "ltones:block/decal_slump_wall",
+    "particle": "ltones:block/decal_slump_wall"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "ltones:item/porcelain"
+    "layer0": "ltones:item/slump"
   }
 }

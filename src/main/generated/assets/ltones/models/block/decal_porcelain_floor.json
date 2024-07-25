@@ -1,7 +1,0 @@
-{
-  "parent": "ltones:block/decal",
-  "textures": {
-    "all": "ltones:block/decal_porcelain_floor",
-    "particle": "ltones:block/decal_porcelain_floor"
-  }
-}

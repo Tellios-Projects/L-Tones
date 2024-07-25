@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "ltonesporcelain",
+  "group": "ltonesslump",
   "ingredients": [
     {
       "item": "ltones:slag"
@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 2,
-    "item": "ltones:porcelain"
+    "item": "ltones:slump"
   }
 }

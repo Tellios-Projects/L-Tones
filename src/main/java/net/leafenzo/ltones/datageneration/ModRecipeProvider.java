@@ -305,7 +305,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.PLAQUE, Items.BONE, ModItems.OIL,4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.ORGANIC_BRASS, ModItems.ANTIBRASS, Items.BAMBOO,1);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.AMALGAM, ModItems.SLAG, ModItems.DIODE,2);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.PORCELAIN, ModItems.SLAG, Items.CLAY_BALL, 2);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SLUMP, ModItems.SLAG, Items.CLAY_BALL, 2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.RADIUM_PAINT, Items.BLACKSTONE, ModItems.SLAG,4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.POLYCARBONATE, ModItems.ANTIBRASS, ModItems.POLYMER, 2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.KERBESIUM, ModItems.ANTIBRASS, ModItems.SLAG,2);
@@ -338,7 +338,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_MYST, ModItems.CORPOREAL_VAPOR, 4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SYNC, ModBlocks.ZTONE, ModItems.RADIUM_PAINT,4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NURR, ModBlocks.ZTONE, ModItems.GAS_TUBE,4);
-        offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TYEL, ModBlocks.ZTONE, ModItems.PORCELAIN,4);
+        offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TYEL, ModBlocks.ZTONE, ModItems.SLUMP,4);
         offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROEN, ModItems.PLAQUE,4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOL, ModBlocks.ZTONE, ModItems.G2V,4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BITT, ModBlocks.ZTONE, ModItems.DIODE,4);

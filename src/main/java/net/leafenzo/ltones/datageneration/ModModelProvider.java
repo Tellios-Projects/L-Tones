@@ -224,7 +224,7 @@ public class ModModelProvider extends FabricModelProvider {
         this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_RADIUM_PAINT);
         this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_FIBROUS_POWDER);
         this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_AMALGAM);
-        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_PORCELAIN);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_SLUMP);
         this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_SHADE);
         this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_SCREEN);
         this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_SCARLET_MEMBRANE);

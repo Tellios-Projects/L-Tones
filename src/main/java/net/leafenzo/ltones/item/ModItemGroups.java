@@ -125,7 +125,7 @@ public class ModItemGroups {
                         entries.add(ModItems.RADIUM_PAINT);
                         entries.add(ModItems.FIBROUS_POWDER);
                         entries.add(ModItems.AMALGAM);
-                        entries.add(ModItems.PORCELAIN);
+                        entries.add(ModItems.SLUMP);
                         entries.add(ModItems.SHADE);
                         entries.add(ModItems.SCREEN);
                         entries.add(ModItems.SCARLET_MEMBRANE);

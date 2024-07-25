@@ -36,7 +36,7 @@ public class ModItems {
     public static final Item RADIUM_PAINT = registerItem("radium_paint", new AliasedBlockItem(ModBlocks.DECAL_RADIUM_PAINT, new FabricItemSettings()));
     public static final Item FIBROUS_POWDER = registerItem("fibrous_powder", new AliasedBlockItem(ModBlocks.DECAL_FIBROUS_POWDER, new FabricItemSettings()));
     public static final Item AMALGAM = registerItem("amalgam", new AliasedBlockItem(ModBlocks.DECAL_AMALGAM, new FabricItemSettings()));
-    public static final Item PORCELAIN = registerItem("porcelain", new AliasedBlockItem(ModBlocks.DECAL_PORCELAIN, new FabricItemSettings()));
+    public static final Item SLUMP = registerItem("slump", new AliasedBlockItem(ModBlocks.DECAL_SLUMP, new FabricItemSettings()));
     public static final Item SHADE = registerItem("shade", new AliasedBlockItem(ModBlocks.DECAL_SHADE, new FabricItemSettings()));
     public static final Item SCREEN = registerItem("screen", new AliasedBlockItem(ModBlocks.DECAL_SCREEN, new FabricItemSettings()));
     public static final Item SCARLET_MEMBRANE = registerItem("scarlet_membrane", new AliasedBlockItem(ModBlocks.DECAL_SCARLET_MEMBRANE, new FabricItemSettings()));
