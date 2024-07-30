@@ -200,6 +200,12 @@ public class ModModelProvider extends FabricModelProvider {
 //        blockStateModelGenerator.registerItemModel(block.asItem());
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
     }
+    private void registerAntennaBlock(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+//        Identifier identifier = blockStateModelGenerator.createSubModel(block, "", ModModels.KEYBOARD, TextureMap::all);
+        Identifier identifier = new Identifier("ltones", "block/antenna");
+//        blockStateModelGenerator.registerItemModel(block.asItem());
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
+    }
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
@@ -655,6 +661,7 @@ public class ModModelProvider extends FabricModelProvider {
         registerKeyboardBlock(blockStateModelGenerator, ModBlocks.AGED_KEYBOARD);
         registerKeyboardBlock(blockStateModelGenerator, ModBlocks.BLACK_KEYBOARD);
         registerKeyboardBlock(blockStateModelGenerator, ModBlocks.GRAY_KEYBOARD);
+        registerAntennaBlock(blockStateModelGenerator, ModBlocks.ANTENNA);
         //</editor-fold>
 
         // Block Models

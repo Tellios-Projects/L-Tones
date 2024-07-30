@@ -127,6 +127,7 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
             .add(ModBlocks.LITHIUM_ORE)
             .add(ModBlocks.DEEPSLATE_LITHIUM_ORE)
             .add(ModBlocks.ENDSTONE_LITHIUM_ORE)
+            .add(ModBlocks.ANTENNA)
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
@@ -168,6 +169,7 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
                 .add(ModBlocks.AGED_KEYBOARD)
                 .add(ModBlocks.BLACK_KEYBOARD)
                 .add(ModBlocks.GRAY_KEYBOARD)
+                .add(ModBlocks.ANTENNA)
         ;
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)

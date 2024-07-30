@@ -796,6 +796,8 @@ public class ModBlocks {
     public static final Block AGED_KEYBOARD = registerBlock("aged_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block BLACK_KEYBOARD = registerBlock("black_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block GRAY_KEYBOARD = registerBlock("gray_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block ANTENNA = registerBlock("antenna", new AntennaBlock(FabricBlockSettings.create().solid().mapColor(MapColor.CLEAR).strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY).requiresTool()));
+        static { RENDER_LAYER_CUTOUT.add(ANTENNA); }
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - Doors">
@@ -824,7 +826,7 @@ public class ModBlocks {
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - Decals">
-    private static final Block registerDecalBlock(String name, Block block) {
+    private static Block registerDecalBlock(String name, Block block) {
         Block b = registerBlockWithoutBlockItem(name, block);
         DECAL_BLOCKS.add(b);
         return b;

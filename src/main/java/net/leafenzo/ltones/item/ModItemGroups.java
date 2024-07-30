@@ -96,6 +96,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.EMPTY_TIRE);
                         entries.add(ModBlocks.TIRE);
                         entries.add(ModBlocks.CRATE);
+//                        entries.add(ModBlocks.RADIO);
+                        entries.add(ModBlocks.ANTENNA);
                         entries.add(ModBlocks.LITHIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_LITHIUM_ORE);
                         entries.add(ModBlocks.ENDSTONE_LITHIUM_ORE);

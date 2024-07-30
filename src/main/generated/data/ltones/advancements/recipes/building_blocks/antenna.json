@@ -1,24 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_amalgam": {
+    "has_conductium": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ltones:amalgam"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_diode": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "ltones:diode"
+              "ltones:conductium"
             ]
           }
         ]
@@ -27,21 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ltones:black_keyboard"
+        "recipe": "ltones:antenna"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_amalgam",
-      "has_diode",
+      "has_conductium",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ltones:black_keyboard"
+      "ltones:antenna"
     ]
   },
   "sends_telemetry_event": false

@@ -3,16 +3,16 @@
   "category": "building",
   "group": "black_keyboard",
   "key": {
+    "D": {
+      "item": "ltones:diode"
+    },
     "F": {
       "item": "ltones:amalgam"
-    },
-    "S": {
-      "item": "minecraft:stone_button"
     }
   },
   "pattern": [
-    "SS",
-    "FF"
+    "DDD",
+    "FFF"
   ],
   "result": {
     "item": "ltones:black_keyboard"

@@ -1,21 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "aged_keyboard",
   "key": {
-    "D": {
-      "item": "ltones:diode"
-    },
-    "F": {
+    "#": {
       "item": "ltones:conductium"
     }
   },
   "pattern": [
-    "DDD",
-    "FFF"
+    "# #",
+    " # ",
+    " # "
   ],
   "result": {
-    "item": "ltones:aged_keyboard"
+    "item": "ltones:antenna"
   },
   "show_notification": true
 }

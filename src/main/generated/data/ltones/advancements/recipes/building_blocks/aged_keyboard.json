@@ -13,12 +13,12 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_stone_button": {
+    "has_diode": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:stone_button"
+              "ltones:diode"
             ]
           }
         ]
@@ -35,7 +35,7 @@
   "requirements": [
     [
       "has_conductium",
-      "has_stone_button",
+      "has_diode",
       "has_the_recipe"
     ]
   ],

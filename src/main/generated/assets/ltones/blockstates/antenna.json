@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ltones:block/antenna",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "ltones:block/antenna"
+    },
+    "facing=south": {
+      "model": "ltones:block/antenna",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ltones:block/antenna",
+      "y": 270
+    }
+  }
+}

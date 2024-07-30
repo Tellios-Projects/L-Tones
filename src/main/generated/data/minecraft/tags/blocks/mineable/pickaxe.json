@@ -369,6 +369,22 @@
     "ltones:sol_nuclei",
     "ltones:sol_corona",
     "ltones:sol",
+    "ltones:mint_bitt",
+    "ltones:orange_bitt",
+    "ltones:purple_bitt",
+    "ltones:light_blue_bitt",
+    "ltones:lime_bitt",
+    "ltones:magenta_bitt",
+    "ltones:fuchsia_bitt",
+    "ltones:green_bitt",
+    "ltones:indigo_bitt",
+    "ltones:amber_bitt",
+    "ltones:blue_bitt",
+    "ltones:cyan_bitt",
+    "ltones:bitt",
+    "ltones:yellow_bitt",
+    "ltones:red_bitt",
+    "ltones:shell_bitt",
     "ltones:ztone",
     "ltones:raw_lithium_block",
     "ltones:lithium_block",
@@ -390,6 +406,7 @@
     "ltones:keyboard",
     "ltones:aged_keyboard",
     "ltones:black_keyboard",
-    "ltones:gray_keyboard"
+    "ltones:gray_keyboard",
+    "ltones:antenna"
   ]
 }
