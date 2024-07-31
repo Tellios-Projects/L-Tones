@@ -792,11 +792,11 @@ public class ModBlocks {
     public static final Block EMPTY_TIRE = registerBlock("empty_tire", new PillarBlock(FabricBlockSettings.create().mapColor(MapColor.BLACK).instrument(Instrument.BASS).strength(0.2f).sounds(ModBlockSoundGroup.TIRE)));
     public static final Block TIRE = registerBlock("tire", new PillarBlock(FabricBlockSettings.copyOf(EMPTY_TIRE).strength(1.0f).requiresTool()));
     public static final Block CRATE = registerBlock("crate", new CrateBlock(FabricBlockSettings.create().instrument(Instrument.BASEDRUM).mapColor(MapColor.TERRACOTTA_GRAY).strength(3.5f, 50.0f).requiresTool().sounds(BlockSoundGroup.COPPER)));
-    public static final Block KEYBOARD = registerBlock("keyboard", new KeyboardBlock(FabricBlockSettings.create().solid().mapColor(MapColor.CLEAR).strength(0.1f).sounds(BlockSoundGroup.CANDLE).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block KEYBOARD = registerBlock("keyboard", new KeyboardBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(0.1f).sounds(BlockSoundGroup.CANDLE).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block AGED_KEYBOARD = registerBlock("aged_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block BLACK_KEYBOARD = registerBlock("black_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block GRAY_KEYBOARD = registerBlock("gray_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY)));
-    public static final Block ANTENNA = registerBlock("antenna", new AntennaBlock(FabricBlockSettings.create().solid().mapColor(MapColor.CLEAR).strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY).requiresTool()));
+    public static final Block ANTENNA = registerBlock("antenna", new AntennaBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY).requiresTool()));
         static { RENDER_LAYER_CUTOUT.add(ANTENNA); }
     //</editor-fold>
 
