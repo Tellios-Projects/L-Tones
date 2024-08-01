@@ -128,6 +128,7 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
             .add(ModBlocks.DEEPSLATE_LITHIUM_ORE)
             .add(ModBlocks.ENDSTONE_LITHIUM_ORE)
             .add(ModBlocks.ANTENNA)
+            .add(ModBlocks.RADIO)
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)

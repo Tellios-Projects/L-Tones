@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_conductium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:conductium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_diode": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:diode"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_lithium_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:lithium_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_polymer": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:polymer"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ltones:radio"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_polymer",
+      "has_conductium",
+      "has_diode",
+      "has_lithium_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ltones:radio"
+    ]
+  },
+  "sends_telemetry_event": false
+}

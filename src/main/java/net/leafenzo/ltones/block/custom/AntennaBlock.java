@@ -32,7 +32,7 @@ public class AntennaBlock extends BasicHorizontalFacingBlock implements Waterlog
 
     public AntennaBlock(Settings settings) {
         super(settings);
-        this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false)); //TODO fix waterlogging
+        this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false));
     }
 
     @Override

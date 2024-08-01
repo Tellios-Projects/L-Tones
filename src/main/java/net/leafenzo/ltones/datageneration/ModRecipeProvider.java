@@ -445,19 +445,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" # ")
                 .criterion(FabricRecipeProvider.hasItem(ModItems.CONDUCTIUM), FabricRecipeProvider.conditionsFromItem(ModItems.CONDUCTIUM))
                 .offerTo(exporter);
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RADIO, 1)
-//                .input(Character.valueOf('P'), ModItems.POLYMER)
-//                .input(Character.valueOf('C'), ModItems.CONDUCTIUM)
-//                .input(Character.valueOf('D'), ModItems.DIODE)
-//                .input(Character.valueOf('L'), ModItems.LITHIUM_INGOT)
-//                .pattern("PPP")
-//                .pattern("CCC")
-//                .pattern("DLD")
-//                .criterion(FabricRecipeProvider.hasItem(ModItems.POLYMER), FabricRecipeProvider.conditionsFromItem(ModItems.POLYMER))
-//                .criterion(FabricRecipeProvider.hasItem(ModItems.CONDUCTIUM), FabricRecipeProvider.conditionsFromItem(ModItems.CONDUCTIUM))
-//                .criterion(FabricRecipeProvider.hasItem(ModItems.DIODE), FabricRecipeProvider.conditionsFromItem(ModItems.DIODE))
-//                .criterion(FabricRecipeProvider.hasItem(ModItems.LITHIUM_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.LITHIUM_INGOT))
-//                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RADIO, 1)
+                .input(Character.valueOf('P'), ModItems.POLYMER)
+                .input(Character.valueOf('C'), ModItems.CONDUCTIUM)
+                .input(Character.valueOf('D'), ModItems.DIODE)
+                .input(Character.valueOf('L'), ModItems.LITHIUM_INGOT)
+                .pattern("PPP")
+                .pattern("CCC")
+                .pattern("DLD")
+                .criterion(FabricRecipeProvider.hasItem(ModItems.POLYMER), FabricRecipeProvider.conditionsFromItem(ModItems.POLYMER))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.CONDUCTIUM), FabricRecipeProvider.conditionsFromItem(ModItems.CONDUCTIUM))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.DIODE), FabricRecipeProvider.conditionsFromItem(ModItems.DIODE))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.LITHIUM_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.LITHIUM_INGOT))
+                .offerTo(exporter);
 
         // Doors
         offerDoorRecipe(exporter, ModBlocks.DOOR_STEAK, ModItems.POLYCARBONATE);

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "item": "ltones:conductium"
+    },
+    "D": {
+      "item": "ltones:diode"
+    },
+    "L": {
+      "item": "ltones:lithium_ingot"
+    },
+    "P": {
+      "item": "ltones:polymer"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "CCC",
+    "DLD"
+  ],
+  "result": {
+    "item": "ltones:radio"
+  },
+  "show_notification": true
+}
