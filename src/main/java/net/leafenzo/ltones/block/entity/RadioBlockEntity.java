@@ -13,18 +13,16 @@ public class RadioBlockEntity extends BlockEntity {
         super(type, pos, state);
     }
 
-    public float acquireStation(World world, BlockPos pos) {
-        int x = Math.round((float) pos.getX() / 100);
-        int z = Math.round((float) pos.getZ() / 100);
-        long seed = ((long) x * z);
-
-        world.getTime()
-
-
-        Random random = Random.create(seed);
-
-
-        int d = random.nextInt(4);
-    }
+//    public float acquireStation(World world, BlockPos pos) {
+//        int x = Math.round((float) pos.getX() / 100);
+//        int z = Math.round((float) pos.getZ() / 100);
+//        long seed = ((long) x * z);
+//
+////        world.getTime()
+//        Random random = Random.create(seed);
+//
+//
+//        int d = random.nextInt(4);
+//    }
 
 }

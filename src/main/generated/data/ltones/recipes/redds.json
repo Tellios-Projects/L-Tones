@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
+    "O": {
       "item": "ltones:ztone"
     },
     "X": {
@@ -10,9 +10,8 @@
     }
   },
   "pattern": [
-    "###",
-    "#X#",
-    "###"
+    "XO",
+    "OX"
   ],
   "result": {
     "count": 4,

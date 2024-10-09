@@ -322,7 +322,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMPTY_HOST, ModItems.SLAG, ModItems.NETWORKING, 4);
         offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ZANE, ModItems.FLAKES, 4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VECT, ModBlocks.ZTONE, ModItems.KERBESIUM, 4);
-        offerSurroundedRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.REDDS, ModItems.THINKING_METAL, ModBlocks.ZTONE, 4);
+        offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.REDDS, ModItems.THINKING_METAL, ModBlocks.ZTONE, 4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MINN, ModBlocks.ZTONE, ModItems.FIBROUS_POWDER, 4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LAIR, Blocks.NETHERRACK, ModItems.SCARLET_MEMBRANE, 4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.KRYP, ModBlocks.ZTONE, ModItems.CONDUCTIUM, 4);
