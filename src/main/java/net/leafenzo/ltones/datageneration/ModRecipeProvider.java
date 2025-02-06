@@ -430,6 +430,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.AMALGAM), FabricRecipeProvider.conditionsFromItem(ModItems.AMALGAM))
                 .criterion(FabricRecipeProvider.hasItem(Items.IRON_INGOT), FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TONE, 8)
+                .input(Character.valueOf('#'), Blocks.TUFF)
+                .input(Character.valueOf('O'), ModItems.OIL)
+                .pattern("###")
+                .pattern("#O#")
+                .pattern("###")
+                .criterion(FabricRecipeProvider.hasItem(Blocks.TUFF), FabricRecipeProvider.conditionsFromItem(Blocks.TUFF))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.OIL), FabricRecipeProvider.conditionsFromItem(ModItems.OIL))
+                .offerTo(exporter);
 //        offerShapelessRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIRE, ModBlocks.EMPTY_TIRE, Items.IRON_INGOT, 1);
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRATE, 1)
                 .input(Character.valueOf('#'), ModItems.SLAG)
