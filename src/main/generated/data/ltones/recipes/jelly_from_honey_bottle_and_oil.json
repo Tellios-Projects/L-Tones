@@ -1,10 +1,10 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "ltonespolymer",
+  "group": "ltonesjelly",
   "ingredients": [
     {
-      "item": "minecraft:bone_meal"
+      "item": "minecraft:honey_bottle"
     },
     {
       "item": "ltones:oil"
@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 2,
-    "item": "ltones:polymer"
+    "item": "ltones:jelly"
   }
 }

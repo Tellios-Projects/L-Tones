@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lithium_ingot": {
+    "has_slag": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ltones:lithium_ingot"
+              "ltones:slag"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:gleam_from_lithium_ingot_and_glowstone_dust"
+        "recipe": "minecraft:fibrous_powder_from_slag_and_moss_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_lithium_ingot",
+      "has_slag",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:gleam_from_lithium_ingot_and_glowstone_dust"
+      "minecraft:fibrous_powder_from_slag_and_moss_block"
     ]
   },
   "sends_telemetry_event": false

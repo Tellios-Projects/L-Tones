@@ -3,20 +3,20 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "minecraft:glass_pane"
+      "item": "minecraft:tuff"
     },
-    "X": {
-      "item": "ltones:shade"
+    "O": {
+      "item": "ltones:oil"
     }
   },
   "pattern": [
     "###",
-    "#X#",
+    "#O#",
     "###"
   ],
   "result": {
     "count": 4,
-    "item": "ltones:licorice_glaxx"
+    "item": "ltones:tone"
   },
   "show_notification": true
 }

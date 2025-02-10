@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_glass_bottle": {
+    "has_honey_bottle": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:glass_bottle"
+              "minecraft:honey_bottle"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:oil_from_glass_bottle_and_coal"
+        "recipe": "minecraft:jelly_from_honey_bottle_and_oil"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_glass_bottle",
+      "has_honey_bottle",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:oil_from_glass_bottle_and_coal"
+      "minecraft:jelly_from_honey_bottle_and_oil"
     ]
   },
   "sends_telemetry_event": false

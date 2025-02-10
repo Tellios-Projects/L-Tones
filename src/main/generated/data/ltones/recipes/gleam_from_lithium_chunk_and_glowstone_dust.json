@@ -4,14 +4,14 @@
   "group": "ltonesgleam",
   "ingredients": [
     {
-      "item": "ltones:lithium_ingot"
+      "item": "ltones:lithium_chunk"
     },
     {
       "item": "minecraft:glowstone_dust"
     }
   ],
   "result": {
-    "count": 4,
+    "count": 2,
     "item": "ltones:gleam"
   }
 }

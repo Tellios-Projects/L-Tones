@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_amalgam": {
+    "has_lithium_chunk": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ltones:amalgam"
+              "ltones:lithium_chunk"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ltones:empty_tire"
+        "recipe": "minecraft:gleam_from_lithium_chunk_and_glow_ink_sac"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_amalgam",
+      "has_lithium_chunk",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ltones:empty_tire"
+      "minecraft:gleam_from_lithium_chunk_and_glow_ink_sac"
     ]
   },
   "sends_telemetry_event": false

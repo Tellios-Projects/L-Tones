@@ -4,13 +4,14 @@
   "group": "ltonesoil",
   "ingredients": [
     {
-      "item": "minecraft:glass_bottle"
+      "item": "minecraft:sculk_vein"
     },
     {
       "item": "minecraft:coal"
     }
   ],
   "result": {
+    "count": 8,
     "item": "ltones:oil"
   }
 }

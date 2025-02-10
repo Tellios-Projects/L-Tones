@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "ltonespolymer",
+  "group": "ltonesoil",
   "ingredients": [
     {
-      "item": "minecraft:bone_meal"
+      "item": "minecraft:dried_kelp"
     },
     {
-      "item": "ltones:oil"
+      "item": "minecraft:coal"
     }
   ],
   "result": {
     "count": 2,
-    "item": "ltones:polymer"
+    "item": "ltones:oil"
   }
 }

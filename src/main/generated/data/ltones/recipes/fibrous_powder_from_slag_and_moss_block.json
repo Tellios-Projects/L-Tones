@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "ltonespolymer",
+  "group": "ltonesfibrous_powder",
   "ingredients": [
     {
-      "item": "minecraft:bone_meal"
+      "item": "ltones:slag"
     },
     {
-      "item": "ltones:oil"
+      "item": "minecraft:moss_block"
     }
   ],
   "result": {
     "count": 2,
-    "item": "ltones:polymer"
+    "item": "ltones:fibrous_powder"
   }
 }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_amalgam": {
+    "has_sculk_vein": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ltones:amalgam"
+              "minecraft:sculk_vein"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ltones:empty_tire"
+        "recipe": "minecraft:oil_from_sculk_vein_and_coal"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_amalgam",
+      "has_sculk_vein",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ltones:empty_tire"
+      "minecraft:oil_from_sculk_vein_and_coal"
     ]
   },
   "sends_telemetry_event": false

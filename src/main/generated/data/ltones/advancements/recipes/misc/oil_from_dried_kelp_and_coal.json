@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_amalgam": {
+    "has_dried_kelp": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ltones:amalgam"
+              "minecraft:dried_kelp"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ltones:empty_tire"
+        "recipe": "minecraft:oil_from_dried_kelp_and_coal"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_amalgam",
+      "has_dried_kelp",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ltones:empty_tire"
+      "minecraft:oil_from_dried_kelp_and_coal"
     ]
   },
   "sends_telemetry_event": false

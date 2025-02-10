@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_amalgam": {
+    "has_bone_meal": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ltones:amalgam"
+              "minecraft:bone_meal"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ltones:empty_tire"
+        "recipe": "minecraft:oil_from_bone_meal_and_coal"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_amalgam",
+      "has_bone_meal",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ltones:empty_tire"
+      "minecraft:oil_from_bone_meal_and_coal"
     ]
   },
   "sends_telemetry_event": false

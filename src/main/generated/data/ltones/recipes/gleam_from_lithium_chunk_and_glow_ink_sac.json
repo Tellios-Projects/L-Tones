@@ -1,17 +1,16 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "ltonesdiode",
+  "group": "ltonesgleam",
   "ingredients": [
     {
       "item": "ltones:lithium_chunk"
     },
     {
-      "item": "minecraft:redstone"
+      "item": "minecraft:glow_ink_sac"
     }
   ],
   "result": {
-    "count": 2,
-    "item": "ltones:diode"
+    "item": "ltones:gleam"
   }
 }
