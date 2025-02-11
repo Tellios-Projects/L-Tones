@@ -499,7 +499,7 @@ public class ModBlocks {
             .mapColor(MapColor.GRAY)
             .requiresTool()
             .strength(1.8f)
-            .sounds(BlockSoundGroup.COPPER);
+            .sounds(ModBlockSoundGroup.EXRI);
     public static final Block EXRI_LEVEL = registerBlockInBlockset(EXRI_BLOCKS, "exri_level", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_TECT = registerBlockInBlockset(EXRI_BLOCKS, "exri_tect", new Block(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_STEM = registerBlockInBlockset(EXRI_BLOCKS, "exri_stem", new Block(FabricBlockSettings.copyOf(exriMaterial)));
@@ -549,7 +549,7 @@ public class ModBlocks {
             .mapColor(MapColor.DARK_AQUA)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.POLYGON);
+            .sounds(ModBlockSoundGroup.FLEQ);
     public static final Block FLEQ_WET = registerBlockInBlockset(FLEQ_BLOCKS, "fleq_wet", new Block(FabricBlockSettings.copyOf(fleqMaterial)));
     public static final Block FLEQ_VALVE = registerBlockInBlockset(FLEQ_BLOCKS, "fleq_valve", new Block(FabricBlockSettings.copyOf(fleqMaterial)));
     public static final Block FLEQ_TUBE = registerBlockInBlockset(FLEQ_BLOCKS, "fleq_tube", new PillarBlock(FabricBlockSettings.copyOf(fleqMaterial)));
@@ -571,7 +571,7 @@ public class ModBlocks {
     private static final FabricBlockSettings iszmMaterial = FabricBlockSettings.create()
             .strength(0.3f)
             .luminance(state -> 11)
-            .sounds(ModBlockSoundGroup.NEON);
+            .sounds(ModBlockSoundGroup.ISZM);
     public static final Block WARM_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "warm_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_LIME)));
     public static final Block VIBRANT_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "vibrant_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.PALE_GREEN)));
     public static final Block STUDY_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "study_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.BLUE)));
@@ -688,7 +688,7 @@ public class ModBlocks {
     private static final FabricBlockSettings roenMaterial = FabricBlockSettings.create()
             .mapColor(MapColor.LICHEN_GREEN)
             .strength(0.6f)
-            .sounds(ModBlockSoundGroup.LAIR);
+            .sounds(ModBlockSoundGroup.ROEN);
     public static final Block ROEN_DESSICATE = registerBlockInBlockset(ROEN_BLOCKS, "roen_dessicate", new Block(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.RAW_IRON_PINK)));
     public static final Block ROEN_LESION = registerBlockInBlockset(ROEN_BLOCKS, "roen_lesion", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.RED)));
     public static final Block ROEN_TRACT = registerBlockInBlockset(ROEN_BLOCKS, "roen_tract", new PillarBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.PURPLE)));
