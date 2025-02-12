@@ -295,7 +295,7 @@ public class ModBlocks {
             .mapColor(MapColor.PALE_GREEN)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.POLYGON);
+            .sounds(ModBlockSoundGroup.MINN);
     public static final Block MINN_TILES = registerBlockInBlockset(MINN_BLOCKS, "minn_tiles", new Block(minnMaterial));
     public static final Block MINN_RESONANCE = registerBlockInBlockset(MINN_BLOCKS, "minn_resonance", new Block(minnMaterial));
     public static final Block MINN_QUILT = registerBlockInBlockset(MINN_BLOCKS, "minn_quilt", new Block(minnMaterial));
@@ -666,7 +666,7 @@ public class ModBlocks {
     private static final FabricBlockSettings tyelMaterial = FabricBlockSettings.create()
             .requiresTool()
             .strength(1.4f)
-            .sounds(BlockSoundGroup.DECORATED_POT);
+            .sounds(ModBlockSoundGroup.TYEL);
     public static final Block TAN_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "tan_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.RAW_IRON_PINK)));
     public static final Block RED_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "red_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.RED)));
     public static final Block PURPLE_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "purple_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.PURPLE)));
@@ -772,7 +772,7 @@ public class ModBlocks {
             .luminance(createLightLevelFromProperty(11, Properties.LIT))
     ));
     public static final Block RAW_LITHIUM_BLOCK = registerBlock("raw_lithium_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK).mapColor(MapColor.PALE_PURPLE)));
-    public static final Block LITHIUM_BLOCK = registerBlock("lithium_block", new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block LITHIUM_BLOCK = registerBlock("lithium_block", new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).mapColor(MapColor.PALE_PURPLE).sounds(ModBlockSoundGroup.LITHIUM)));
     public static final Block LITHIUM_ORE = registerBlock("lithium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
     public static final Block DEEPSLATE_LITHIUM_ORE = registerBlock("deepslate_lithium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_IRON_ORE)));
     public static final Block ENDSTONE_LITHIUM_ORE = registerBlock("endstone_lithium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).strength(3.5f, 9.0f), UniformIntProvider.create(0, 1)));

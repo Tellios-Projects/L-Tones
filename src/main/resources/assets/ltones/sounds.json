@@ -203,6 +203,163 @@
 			"ltones:block/roen/step6"
 		]
 	},
+	
+	"block.minn.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/minn/break1",
+			"ltones:block/minn/break2",
+			"ltones:block/minn/break3",
+			"ltones:block/minn/break4"
+		]
+	},
+	"block.minn.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/minn/step1",
+			"ltones:block/minn/step2",
+			"ltones:block/minn/step3",
+			"ltones:block/minn/step4",
+			"ltones:block/minn/step5",
+			"ltones:block/minn/step6"
+		]
+	},
+	"block.minn.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/minn/break1",
+			"ltones:block/minn/break2",
+			"ltones:block/minn/break3",
+			"ltones:block/minn/break4"
+		]
+	},
+	"block.minn.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/minn/step1",
+			"ltones:block/minn/step2",
+			"ltones:block/minn/step3",
+			"ltones:block/minn/step4",
+			"ltones:block/minn/step5",
+			"ltones:block/minn/step6"
+		]
+	},
+	"block.minn.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/minn/step1",
+			"ltones:block/minn/step2",
+			"ltones:block/minn/step3",
+			"ltones:block/minn/step4",
+			"ltones:block/minn/step5",
+			"ltones:block/minn/step6"
+		]
+	},
+	
+	"block.lithium.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/lithium/break1",
+			"ltones:block/lithium/break2",
+			"ltones:block/lithium/break3",
+			"ltones:block/lithium/break4"
+		]
+	},
+	"block.lithium.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/lithium/step1",
+			"ltones:block/lithium/step2",
+			"ltones:block/lithium/step3",
+			"ltones:block/lithium/step4",
+			"ltones:block/lithium/step5",
+			"ltones:block/lithium/step6"
+		]
+	},
+	"block.lithium.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/lithium/break1",
+			"ltones:block/lithium/break2",
+			"ltones:block/lithium/break3",
+			"ltones:block/lithium/break4"
+		]
+	},
+	"block.lithium.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/lithium/step1",
+			"ltones:block/lithium/step2",
+			"ltones:block/lithium/step3",
+			"ltones:block/lithium/step4",
+			"ltones:block/lithium/step5",
+			"ltones:block/lithium/step6"
+		]
+	},
+	"block.lithium.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/lithium/step1",
+			"ltones:block/lithium/step2",
+			"ltones:block/lithium/step3",
+			"ltones:block/lithium/step4",
+			"ltones:block/lithium/step5",
+			"ltones:block/lithium/step6"
+		]
+	},
+	
+	"block.tyel.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/tyel/break1",
+			"ltones:block/tyel/break2",
+			"ltones:block/tyel/break3",
+			"ltones:block/tyel/break4"
+		]
+	},
+	"block.tyel.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/tyel/step1",
+			"ltones:block/tyel/step2",
+			"ltones:block/tyel/step3",
+			"ltones:block/tyel/step4",
+			"ltones:block/tyel/step5",
+			"ltones:block/tyel/step6"
+		]
+	},
+	"block.tyel.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/tyel/break1",
+			"ltones:block/tyel/break2",
+			"ltones:block/tyel/break3",
+			"ltones:block/tyel/break4"
+		]
+	},
+	"block.tyel.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/tyel/step1",
+			"ltones:block/tyel/step2",
+			"ltones:block/tyel/step3",
+			"ltones:block/tyel/step4",
+			"ltones:block/tyel/step5",
+			"ltones:block/tyel/step6"
+		]
+	},
+	"block.tyel.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/tyel/step1",
+			"ltones:block/tyel/step2",
+			"ltones:block/tyel/step3",
+			"ltones:block/tyel/step4",
+			"ltones:block/tyel/step5",
+			"ltones:block/tyel/step6"
+		]
+	},
+	
 	"block.metal_sticks.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [

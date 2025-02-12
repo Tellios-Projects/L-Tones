@@ -68,6 +68,24 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_LAIR_PLACE = registerSoundEvent("block.lair.place");
     public static final SoundEvent BLOCK_LAIR_HIT = registerSoundEvent("block.lair.hit");
     public static final SoundEvent BLOCK_LAIR_FALL = registerSoundEvent("block.lair.fall");
+
+    public static final SoundEvent BLOCK_TYEL_BREAK = registerSoundEvent("block.tyel.break");
+    public static final SoundEvent BLOCK_TYEL_STEP = registerSoundEvent("block.tyel.step");
+    public static final SoundEvent BLOCK_TYEL_PLACE = registerSoundEvent("block.tyel.place");
+    public static final SoundEvent BLOCK_TYEL_HIT = registerSoundEvent("block.tyel.hit");
+    public static final SoundEvent BLOCK_TYEL_FALL = registerSoundEvent("block.tyel.fall");
+
+    public static final SoundEvent BLOCK_MINN_BREAK = registerSoundEvent("block.minn.break");
+    public static final SoundEvent BLOCK_MINN_STEP = registerSoundEvent("block.minn.step");
+    public static final SoundEvent BLOCK_MINN_PLACE = registerSoundEvent("block.minn.place");
+    public static final SoundEvent BLOCK_MINN_HIT = registerSoundEvent("block.minn.hit");
+    public static final SoundEvent BLOCK_MINN_FALL = registerSoundEvent("block.minn.fall");
+
+    public static final SoundEvent BLOCK_LITHIUM_BREAK = registerSoundEvent("block.lithium.break");
+    public static final SoundEvent BLOCK_LITHIUM_STEP = registerSoundEvent("block.lithium.step");
+    public static final SoundEvent BLOCK_LITHIUM_PLACE = registerSoundEvent("block.lithium.place");
+    public static final SoundEvent BLOCK_LITHIUM_HIT = registerSoundEvent("block.lithium.hit");
+    public static final SoundEvent BLOCK_LITHIUM_FALL = registerSoundEvent("block.lithium.fall");
     
     public static final SoundEvent BLOCK_ZKUL_BREAK = registerSoundEvent("block.zkul.break");
     public static final SoundEvent BLOCK_ZKUL_STEP = registerSoundEvent("block.zkul.step");
