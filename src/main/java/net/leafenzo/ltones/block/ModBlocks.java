@@ -506,7 +506,7 @@ public class ModBlocks {
     public static final Block EXRI_STEEL = registerBlockInBlockset(EXRI_BLOCKS, "exri_steel", new Block(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_SERVE = registerBlockInBlockset(EXRI_BLOCKS, "exri_serve", new LitPillarBlock(FabricBlockSettings.copyOf(exriMaterial))); //TODO lit/unlit textures/anim
     public static final Block EXRI_SEAL = registerBlockInBlockset(EXRI_BLOCKS, "exri_seal", new Block(FabricBlockSettings.copyOf(exriMaterial)));
-    public static final Block EXRI_SCREEN = registerBlockInBlockset(EXRI_BLOCKS, "exri_screen", new Block(FabricBlockSettings.copyOf(exriMaterial).sounds(ModBlockSoundGroup.NEON)));
+    public static final Block EXRI_SCREEN = registerBlockInBlockset(EXRI_BLOCKS, "exri_screen", new Block(FabricBlockSettings.copyOf(exriMaterial).sounds(ModBlockSoundGroup.ISZM)));
     public static final Block EXRI_ROGEN = registerBlockInBlockset(EXRI_BLOCKS, "exri_rogen", new Block(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_MESH = registerBlockInBlockset(EXRI_BLOCKS, "exri_mesh", new Block(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_FLOW = registerBlockInBlockset(EXRI_BLOCKS, "exri_flow", new LitBlock(FabricBlockSettings.copyOf(exriMaterial)));
