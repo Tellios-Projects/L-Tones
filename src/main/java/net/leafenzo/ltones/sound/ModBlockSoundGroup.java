@@ -6,6 +6,14 @@ import net.minecraft.sound.SoundEvents;
 
 public class ModBlockSoundGroup {
     public static final BlockSoundGroup METAL_STICKS = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_METAL_STICKS_BREAK, ModSoundEvents.BLOCK_METAL_STICKS_STEP, ModSoundEvents.BLOCK_METAL_STICKS_PLACE, ModSoundEvents.BLOCK_METAL_STICKS_HIT, ModSoundEvents.BLOCK_METAL_STICKS_FALL);
+    public static final BlockSoundGroup EXRI = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_EXRI_BREAK, ModSoundEvents.BLOCK_EXRI_STEP, ModSoundEvents.BLOCK_EXRI_PLACE, ModSoundEvents.BLOCK_EXRI_HIT, ModSoundEvents.BLOCK_EXRI_FALL);
+    public static final BlockSoundGroup FLEQ = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_FLEQ_BREAK, ModSoundEvents.BLOCK_FLEQ_STEP, ModSoundEvents.BLOCK_FLEQ_PLACE, ModSoundEvents.BLOCK_FLEQ_HIT, ModSoundEvents.BLOCK_FLEQ_FALL);
+    public static final BlockSoundGroup ISZM = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_ISZM_BREAK, ModSoundEvents.BLOCK_ISZM_STEP, ModSoundEvents.BLOCK_ISZM_PLACE, ModSoundEvents.BLOCK_ISZM_HIT, ModSoundEvents.BLOCK_ISZM_FALL);
+    public static final BlockSoundGroup ROEN = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_ROEN_BREAK, ModSoundEvents.BLOCK_ROEN_STEP, ModSoundEvents.BLOCK_ROEN_PLACE, ModSoundEvents.BLOCK_ROEN_HIT, ModSoundEvents.BLOCK_ROEN_FALL);
+    public static final BlockSoundGroup TYEL = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_TYEL_BREAK, ModSoundEvents.BLOCK_TYEL_STEP, ModSoundEvents.BLOCK_TYEL_PLACE, ModSoundEvents.BLOCK_TYEL_HIT, ModSoundEvents.BLOCK_TYEL_FALL);
+    public static final BlockSoundGroup MINN = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_MINN_BREAK, ModSoundEvents.BLOCK_MINN_STEP, ModSoundEvents.BLOCK_MINN_PLACE, ModSoundEvents.BLOCK_MINN_HIT, ModSoundEvents.BLOCK_MINN_FALL);
+    public static final BlockSoundGroup LITHIUM = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_LITHIUM_BREAK, ModSoundEvents.BLOCK_LITHIUM_STEP, ModSoundEvents.BLOCK_LITHIUM_PLACE, ModSoundEvents.BLOCK_LITHIUM_HIT, ModSoundEvents.BLOCK_LITHIUM_FALL);
+
 
     //TODO add sfx files for these
     public static final BlockSoundGroup FOIL = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_FOIL_BREAK, ModSoundEvents.BLOCK_FOIL_STEP, ModSoundEvents.BLOCK_FOIL_PLACE, ModSoundEvents.BLOCK_FOIL_HIT, ModSoundEvents.BLOCK_FOIL_FALL);

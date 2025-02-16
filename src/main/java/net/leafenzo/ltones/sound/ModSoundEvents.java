@@ -39,11 +39,53 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_POLYGON_ACTIVATE = registerSoundEvent("block.polygon.activate");
     public static final SoundEvent BLOCK_POLYGON_DEACTIVATE = registerSoundEvent("block.polygon.deactivate");
 
+    public static final SoundEvent BLOCK_EXRI_BREAK = registerSoundEvent("block.exri.break");
+    public static final SoundEvent BLOCK_EXRI_STEP = registerSoundEvent("block.exri.step");
+    public static final SoundEvent BLOCK_EXRI_PLACE = registerSoundEvent("block.exri.place");
+    public static final SoundEvent BLOCK_EXRI_HIT = registerSoundEvent("block.exri.hit");
+    public static final SoundEvent BLOCK_EXRI_FALL = registerSoundEvent("block.exri.fall");
+
+    public static final SoundEvent BLOCK_FLEQ_BREAK = registerSoundEvent("block.fleq.break");
+    public static final SoundEvent BLOCK_FLEQ_STEP = registerSoundEvent("block.fleq.step");
+    public static final SoundEvent BLOCK_FLEQ_PLACE = registerSoundEvent("block.fleq.place");
+    public static final SoundEvent BLOCK_FLEQ_HIT = registerSoundEvent("block.fleq.hit");
+    public static final SoundEvent BLOCK_FLEQ_FALL = registerSoundEvent("block.fleq.fall");
+
+    public static final SoundEvent BLOCK_ISZM_BREAK = registerSoundEvent("block.iszm.break");
+    public static final SoundEvent BLOCK_ISZM_STEP = registerSoundEvent("block.iszm.step");
+    public static final SoundEvent BLOCK_ISZM_PLACE = registerSoundEvent("block.iszm.place");
+    public static final SoundEvent BLOCK_ISZM_HIT = registerSoundEvent("block.iszm.hit");
+    public static final SoundEvent BLOCK_ISZM_FALL = registerSoundEvent("block.iszm.fall");
+
+    public static final SoundEvent BLOCK_ROEN_BREAK = registerSoundEvent("block.roen.break");
+    public static final SoundEvent BLOCK_ROEN_STEP = registerSoundEvent("block.roen.step");
+    public static final SoundEvent BLOCK_ROEN_PLACE = registerSoundEvent("block.roen.place");
+    public static final SoundEvent BLOCK_ROEN_HIT = registerSoundEvent("block.roen.hit");
+    public static final SoundEvent BLOCK_ROEN_FALL = registerSoundEvent("block.roen.fall");
+
     public static final SoundEvent BLOCK_LAIR_BREAK = registerSoundEvent("block.lair.break");
     public static final SoundEvent BLOCK_LAIR_STEP = registerSoundEvent("block.lair.step");
     public static final SoundEvent BLOCK_LAIR_PLACE = registerSoundEvent("block.lair.place");
     public static final SoundEvent BLOCK_LAIR_HIT = registerSoundEvent("block.lair.hit");
     public static final SoundEvent BLOCK_LAIR_FALL = registerSoundEvent("block.lair.fall");
+
+    public static final SoundEvent BLOCK_TYEL_BREAK = registerSoundEvent("block.tyel.break");
+    public static final SoundEvent BLOCK_TYEL_STEP = registerSoundEvent("block.tyel.step");
+    public static final SoundEvent BLOCK_TYEL_PLACE = registerSoundEvent("block.tyel.place");
+    public static final SoundEvent BLOCK_TYEL_HIT = registerSoundEvent("block.tyel.hit");
+    public static final SoundEvent BLOCK_TYEL_FALL = registerSoundEvent("block.tyel.fall");
+
+    public static final SoundEvent BLOCK_MINN_BREAK = registerSoundEvent("block.minn.break");
+    public static final SoundEvent BLOCK_MINN_STEP = registerSoundEvent("block.minn.step");
+    public static final SoundEvent BLOCK_MINN_PLACE = registerSoundEvent("block.minn.place");
+    public static final SoundEvent BLOCK_MINN_HIT = registerSoundEvent("block.minn.hit");
+    public static final SoundEvent BLOCK_MINN_FALL = registerSoundEvent("block.minn.fall");
+
+    public static final SoundEvent BLOCK_LITHIUM_BREAK = registerSoundEvent("block.lithium.break");
+    public static final SoundEvent BLOCK_LITHIUM_STEP = registerSoundEvent("block.lithium.step");
+    public static final SoundEvent BLOCK_LITHIUM_PLACE = registerSoundEvent("block.lithium.place");
+    public static final SoundEvent BLOCK_LITHIUM_HIT = registerSoundEvent("block.lithium.hit");
+    public static final SoundEvent BLOCK_LITHIUM_FALL = registerSoundEvent("block.lithium.fall");
     
     public static final SoundEvent BLOCK_ZKUL_BREAK = registerSoundEvent("block.zkul.break");
     public static final SoundEvent BLOCK_ZKUL_STEP = registerSoundEvent("block.zkul.step");
