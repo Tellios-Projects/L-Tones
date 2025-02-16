@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "modid": "create",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "ltones:raw_lithium"
+    }
+  ],
+  "results": [
+    {
+      "count": 4,
+      "item": "ltones:lithium_chunk"
+    },
+    {
+      "chance": 0.75,
+      "item": "ltones:lithium_chunk"
+    }
+  ]
+}

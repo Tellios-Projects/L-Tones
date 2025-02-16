@@ -1,0 +1,32 @@
+{
+  "conditions": [
+    {
+      "modid": "create",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "ltones:lithium_ore"
+    }
+  ],
+  "results": [
+    {
+      "item": "ltones:raw_lithium"
+    },
+    {
+      "item": "ltones:raw_lithium",
+      "chance": 0.75
+    },
+    {
+      "item": "create:experience_nugget",
+      "chance": 0.75
+    },
+    {
+      "item": "ltones:tone",
+      "chance": 0.125
+    }
+  ],
+  "processingTime": 150
+}

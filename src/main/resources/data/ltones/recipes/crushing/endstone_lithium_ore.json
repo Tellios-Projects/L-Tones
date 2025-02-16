@@ -1,0 +1,29 @@
+{
+  "conditions": [
+    {
+      "modid": "create",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "ltones:endstone_lithium_ore"
+    }
+  ],
+  "results": [
+    {
+      "item": "ltones:lithium_chunk"
+      "count": 6
+    },
+    {
+      "item": "ltones:lithium_chunk",
+      "chance": 0.75
+    },
+    {
+      "item": "create:experience_nugget",
+      "chance": 0.75
+    },
+  ],
+  "processingTime": 150
+}
