@@ -1,20 +1,17 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "ltonesmoulding",
+  "group": "ltonesscarlet_membrane",
   "ingredients": [
     {
-      "item": "minecraft:clay_ball"
-    },
-    {
-      "item": "minecraft:bone_meal"
+      "item": "minecraft:nether_wart"
     },
     {
       "item": "ltones:oil"
     }
   ],
   "result": {
-    "count": 4,
-    "item": "ltones:moulding"
+    "count": 2,
+    "item": "ltones:scarlet_membrane"
   }
 }

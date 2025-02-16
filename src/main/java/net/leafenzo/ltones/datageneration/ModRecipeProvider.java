@@ -285,20 +285,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.OIL, Items.SCULK_VEIN, Items.COAL, 8);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.POLYMER, Items.BONE_MEAL, ModItems.OIL, 2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.ARGON, Items.GLASS_BOTTLE, ModTags.Items.IGNEOUS_ROCKS,1);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SLAG, ModItems.LITHIUM_INGOT, ModItems.OIL, 2);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.ANTIBRASS, ModItems.LITHIUM_INGOT, Items.COPPER_INGOT, 2);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SLAG, ModItems.LITHIUM_INGOT, ModItems.OIL, 3);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.ANTIBRASS, ModItems.LITHIUM_INGOT, Items.COPPER_INGOT, 3);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.DIODE, ModItems.LITHIUM_CHUNK, Items.REDSTONE, 2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.GLEAM, ModItems.LITHIUM_CHUNK, Items.GLOWSTONE_DUST, 2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.GLEAM, ModItems.LITHIUM_CHUNK, Items.GLOW_INK_SAC, 1);
 
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SCARLET_MEMBRANE, Items.ROTTEN_FLESH, ModItems.OIL,2);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.AZURE_RIVET, ModItems.ANTIBRASS, Items.LAPIS_LAZULI, 2);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SCARLET_MEMBRANE, Items.NETHER_WART, ModItems.OIL,2);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.AZURE_RIVET, ModItems.ANTIBRASS, Items.LAPIS_LAZULI, 4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.MIDASIUM, ModItems.LITHIUM_INGOT, Items.GOLD_INGOT,4);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.CONDUCTIUM,  ModItems.ANTIBRASS, Items.GOLD_NUGGET, 2);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.MOULDING, Items.CLAY_BALL,  Items.BONE_MEAL, ModItems.OIL, 2);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.CONDUCTIUM,  ModItems.ANTIBRASS, Items.GOLD_NUGGET, 4);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.MOULDING, Items.CLAY_BALL,  Items.BONE_MEAL, ModItems.OIL, 4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.G2V, ModItems.GLEAM, ModItems.OIL,  2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SCREEN, ModItems.GLEAM, ModItems.DIODE, Items.AMETHYST_SHARD,4);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SHEETING, ModItems.POLYMER, ModItems.DIODE, ModItems.POLYMER,2);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SHEETING, ModItems.POLYMER, ModItems.DIODE, ModItems.POLYMER,4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.FIBROUS_POWDER, ModItems.SLAG, ModTags.Items.FIBRE,2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.FIBROUS_POWDER, ModItems.SLAG, Items.KELP,2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.FIBROUS_POWDER, ModItems.SLAG, Items.MOSS_BLOCK,2);
@@ -307,16 +308,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SHADE, ModItems.GLEAM, ModItems.ARGON,4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.FLAKES, ModItems.ANTIBRASS, Items.QUARTZ,4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.PLAQUE, Items.BONE, ModItems.OIL,4);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.ORGANIC_BRASS, ModItems.ANTIBRASS, Items.BAMBOO,1);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.ORGANIC_BRASS, ModItems.ANTIBRASS, Items.BAMBOO,2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.AMALGAM, ModItems.SLAG, ModItems.DIODE,2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SLUMP, ModItems.SLAG, Items.CLAY_BALL, 2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.RADIUM_PAINT, Items.BLACKSTONE, ModItems.SLAG,4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.POLYCARBONATE, ModItems.ANTIBRASS, ModItems.POLYMER, 2);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.KERBESIUM, ModItems.ANTIBRASS, ModItems.SLAG,2);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.GAS_TUBE, ModItems.POLYMER, ModItems.ARGON,2);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.NETWORKING, ModTags.Items.MUSHROOMS, ModItems.ARGON,2);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.JELLY, Items.SLIME_BALL, ModItems.OIL,2);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.JELLY, Items.HONEY_BOTTLE, ModItems.OIL,2);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.KERBESIUM, ModItems.ANTIBRASS, ModItems.SLAG,4);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.GAS_TUBE, ModItems.POLYMER, ModItems.ARGON,4);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.NETWORKING, ModTags.Items.MUSHROOMS, ModItems.ARGON,4);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.JELLY, Items.SLIME_BALL, ModItems.OIL,4);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.JELLY, Items.HONEY_BOTTLE, ModItems.OIL,4);
 
         // Blockset Base Recipes
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AGON_BLOCKS.get(0), Blocks.GLASS, ModItems.ARGON, 4);
