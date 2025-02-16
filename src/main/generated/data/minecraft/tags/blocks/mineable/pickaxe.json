@@ -407,6 +407,23 @@
     "ltones:aged_keyboard",
     "ltones:black_keyboard",
     "ltones:gray_keyboard",
+    "ltones:gray_keyboard",
+    "ltones:door_steak",
+    "ltones:door_neon",
+    "ltones:door_toy",
+    "ltones:door_power",
+    "ltones:door_vacuum",
+    "ltones:door_confine",
+    "ltones:door_end",
+    "ltones:door_heavy",
+    "ltones:door_test",
+    "ltones:door_grown",
+    "ltones:door_knet",
+    "ltones:door_work",
+    "ltones:door_safe",
+    "ltones:door_petri",
+    "ltones:door_bunker",
+    "ltones:iron_bar_door",
     "ltones:antenna"
   ]
 }
