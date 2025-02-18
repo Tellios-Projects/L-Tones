@@ -256,6 +256,71 @@
 		]
 	},
 	
+	"block.kryp_node.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/kryp_node/break1",
+			"ltones:block/kryp_node/break2",
+			"ltones:block/kryp_node/break3",
+			"ltones:block/kryp_node/break4"
+		]
+	},
+	"block.kryp_node.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/kryp_node/break1",
+			"ltones:block/kryp_node/break2",
+			"ltones:block/kryp_node/break3",
+			"ltones:block/kryp_node/break4"
+		]
+	},
+	
+	"block.kryp.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/kryp/break1",
+			"ltones:block/kryp/break2",
+			"ltones:block/kryp/break3",
+			"ltones:block/kryp/break4"
+		]
+	},
+	"block.kryp.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/kryp/step1",
+			"ltones:block/kryp/step2",
+			"ltones:block/kryp/step3",
+			"ltones:block/kryp/step4"
+		]
+	},
+	"block.kryp.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/kryp/break1",
+			"ltones:block/kryp/break2",
+			"ltones:block/kryp/break3",
+			"ltones:block/kryp/break4"
+		]
+	},
+	"block.kryp.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/kryp/step1",
+			"ltones:block/kryp/step2",
+			"ltones:block/kryp/step3",
+			"ltones:block/kryp/step4"
+		]
+	},
+	"block.kryp.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/kryp/step1",
+			"ltones:block/kryp/step2",
+			"ltones:block/kryp/step3",
+			"ltones:block/kryp/step4"
+		]
+	},
+	
 	"block.lithium.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [

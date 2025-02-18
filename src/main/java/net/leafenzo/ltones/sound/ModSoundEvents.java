@@ -81,6 +81,15 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_MINN_HIT = registerSoundEvent("block.minn.hit");
     public static final SoundEvent BLOCK_MINN_FALL = registerSoundEvent("block.minn.fall");
 
+    public static final SoundEvent BLOCK_KRYP_BREAK = registerSoundEvent("block.kryp.break");
+    public static final SoundEvent BLOCK_KRYP_STEP = registerSoundEvent("block.kryp.step");
+    public static final SoundEvent BLOCK_KRYP_PLACE = registerSoundEvent("block.kryp.place");
+    public static final SoundEvent BLOCK_KRYP_HIT = registerSoundEvent("block.kryp.hit");
+    public static final SoundEvent BLOCK_KRYP_FALL = registerSoundEvent("block.kryp.fall");
+
+    public static final SoundEvent BLOCK_KRYP_NODE_BREAK = registerSoundEvent("block.kryp_node.break");
+    public static final SoundEvent BLOCK_KRYP_NODE_PLACE = registerSoundEvent("block.kryp_node.place");
+
     public static final SoundEvent BLOCK_LITHIUM_BREAK = registerSoundEvent("block.lithium.break");
     public static final SoundEvent BLOCK_LITHIUM_STEP = registerSoundEvent("block.lithium.step");
     public static final SoundEvent BLOCK_LITHIUM_PLACE = registerSoundEvent("block.lithium.place");

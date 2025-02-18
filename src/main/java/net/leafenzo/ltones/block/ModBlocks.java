@@ -348,29 +348,29 @@ public class ModBlocks {
             .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
             .requiresTool()
             .strength(3.0f, 6.0f)
-            .sounds(BlockSoundGroup.COPPER);
+            .sounds(ModBlockSoundGroup.KRYP);
     public static final Block KRYP_WIRE = registerBlockInBlockset(KRYP_BLOCKS, "kryp_wire", new Block(FabricBlockSettings.copyOf(krypMaterial)));
         public static final Block KRYP_WIRE_STAIRS = registerStairs(KRYP_WIRE,"kryp_wire_stairs", new StairsBlock(KRYP_WIRE.getDefaultState(), FabricBlockSettings.copyOf(KRYP_WIRE)));
         public static final Block KRYP_WIRE_SLAB = registerSlab(KRYP_WIRE,"kryp_wire_slab", new SlabBlock(FabricBlockSettings.copyOf(KRYP_WIRE)));
     public static final Block KRYP_SUPPORT = registerBlockInBlockset(KRYP_BLOCKS, "kryp_support", new PillarBlock(FabricBlockSettings.copyOf(krypMaterial)));
     public static final Block KRYP_STORAGE = registerBlockInBlockset(KRYP_BLOCKS, "kryp_storage", new Block(FabricBlockSettings.copyOf(krypMaterial)));
-    public static final Block KRYP_SMOOTH = registerBlockInBlockset(KRYP_BLOCKS, "kryp_smooth", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(BlockSoundGroup.CALCITE)));
-        public static final Block KRYP_SMOOTH_STAIRS = registerStairs(KRYP_SMOOTH,"kryp_smooth_stairs", new StairsBlock(KRYP_SMOOTH.getDefaultState(), FabricBlockSettings.copyOf(KRYP_SMOOTH)));
-        public static final Block KRYP_SMOOTH_SLAB = registerSlab(KRYP_SMOOTH,"kryp_smooth_slab", new SlabBlock(FabricBlockSettings.copyOf(KRYP_SMOOTH)));
-    public static final Block KRYP_SHEEN = registerBlockInBlockset(KRYP_BLOCKS, "kryp_sheen", new Block(FabricBlockSettings.copyOf(krypMaterial)));
+    public static final Block KRYP_SMOOTH = registerBlockInBlockset(KRYP_BLOCKS, "kryp_smooth", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(BlockSoundGroup.NETHERITE)));
+        public static final Block KRYP_SMOOTH_STAIRS = registerStairs(KRYP_SMOOTH,"kryp_smooth_stairs", new StairsBlock(KRYP_SMOOTH.getDefaultState(), FabricBlockSettings.copyOf(KRYP_SMOOTH).sounds(BlockSoundGroup.NETHERITE)));
+        public static final Block KRYP_SMOOTH_SLAB = registerSlab(KRYP_SMOOTH,"kryp_smooth_slab", new SlabBlock(FabricBlockSettings.copyOf(KRYP_SMOOTH).sounds(BlockSoundGroup.NETHERITE)));
+    public static final Block KRYP_SHEEN = registerBlockInBlockset(KRYP_BLOCKS, "kryp_sheen", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(BlockSoundGroup.NETHERITE)));
     public static final Block KRYP_RUIN = registerBlockInBlockset(KRYP_BLOCKS, "kryp_ruin", new Block(FabricBlockSettings.copyOf(krypMaterial)));
-    public static final Block KRYP_OMITTER = registerBlockInBlockset(KRYP_BLOCKS, "kryp_omitter", new LitBlock(FabricBlockSettings.copyOf(krypMaterial).luminance(createLightLevelFromProperty(11, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
-    public static final Block KRYP_LEVI = registerBlockInBlockset(KRYP_BLOCKS, "kryp_levi", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 9)));
+    public static final Block KRYP_OMITTER = registerBlockInBlockset(KRYP_BLOCKS, "kryp_omitter", new LitBlock(FabricBlockSettings.copyOf(krypMaterial).sounds(BlockSoundGroup.NETHERITE).luminance(createLightLevelFromProperty(11, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block KRYP_LEVI = registerBlockInBlockset(KRYP_BLOCKS, "kryp_levi", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 9).sounds(ModBlockSoundGroup.KRYP_NODE)));
     public static final Block KRYP_KUBT = registerBlockInBlockset(KRYP_BLOCKS, "kryp_kubt", new PillarBlock(FabricBlockSettings.copyOf(krypMaterial)));
-    public static final Block KRYP_INFO = registerBlockInBlockset(KRYP_BLOCKS, "kryp_info", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 5)));
-    public static final Block KRYP_DATA = registerBlockInBlockset(KRYP_BLOCKS, "kryp_data", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 5)));
-    public static final Block KRYP_CONNECTOR = registerBlockInBlockset(KRYP_BLOCKS, "kryp_connector", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 5)));
+    public static final Block KRYP_INFO = registerBlockInBlockset(KRYP_BLOCKS, "kryp_info", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 5).sounds(ModBlockSoundGroup.KRYP_NODE)));
+    public static final Block KRYP_DATA = registerBlockInBlockset(KRYP_BLOCKS, "kryp_data", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 5).sounds(ModBlockSoundGroup.KRYP_NODE)));
+    public static final Block KRYP_CONNECTOR = registerBlockInBlockset(KRYP_BLOCKS, "kryp_connector", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 5).sounds(ModBlockSoundGroup.KRYP_NODE)));
     public static final Block KRYP_CHUNK = registerBlockInBlockset(KRYP_BLOCKS, "kryp_chunk", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(krypMaterial)));
-    public static final Block KRYP_BEAM = registerBlockInBlockset(KRYP_BLOCKS, "kryp_beam", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 9)));
-    public static final Block KRYP_BASE = registerBlockInBlockset(KRYP_BLOCKS, "kryp_base", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(BlockSoundGroup.STONE)));
-    public static final Block KRYP = registerBlockInBlockset(KRYP_BLOCKS, "kryp", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(BlockSoundGroup.CALCITE)));
-        public static final Block KRYP_STAIRS = registerStairs(KRYP,"kryp_stairs", new StairsBlock(KRYP.getDefaultState(), FabricBlockSettings.copyOf(KRYP)));
-        public static final Block KRYP_SLAB = registerSlab(KRYP,"kryp_slab", new SlabBlock(FabricBlockSettings.copyOf(KRYP)));
+    public static final Block KRYP_BEAM = registerBlockInBlockset(KRYP_BLOCKS, "kryp_beam", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 9).sounds(ModBlockSoundGroup.KRYP_NODE)));
+    public static final Block KRYP_BASE = registerBlockInBlockset(KRYP_BLOCKS, "kryp_base", new Block(FabricBlockSettings.copyOf(krypMaterial)));
+    public static final Block KRYP = registerBlockInBlockset(KRYP_BLOCKS, "kryp", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(BlockSoundGroup.NETHERITE)));
+        public static final Block KRYP_STAIRS = registerStairs(KRYP,"kryp_stairs", new StairsBlock(KRYP.getDefaultState(), FabricBlockSettings.copyOf(KRYP).sounds(BlockSoundGroup.NETHERITE)));
+        public static final Block KRYP_SLAB = registerSlab(KRYP,"kryp_slab", new SlabBlock(FabricBlockSettings.copyOf(KRYP).sounds(BlockSoundGroup.NETHERITE)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - LAVE">
     private static final FabricBlockSettings laveMaterial = FabricBlockSettings.create()
