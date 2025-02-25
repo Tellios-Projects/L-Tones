@@ -45,6 +45,18 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_EXRI_HIT = registerSoundEvent("block.exri.hit");
     public static final SoundEvent BLOCK_EXRI_FALL = registerSoundEvent("block.exri.fall");
 
+    public static final SoundEvent BLOCK_TONE_BREAK = registerSoundEvent("block.tone.break");
+    public static final SoundEvent BLOCK_TONE_STEP = registerSoundEvent("block.tone.step");
+    public static final SoundEvent BLOCK_TONE_PLACE = registerSoundEvent("block.tone.place");
+    public static final SoundEvent BLOCK_TONE_HIT = registerSoundEvent("block.tone.hit");
+    public static final SoundEvent BLOCK_TONE_FALL = registerSoundEvent("block.tone.fall");
+
+    public static final SoundEvent BLOCK_TONE_BRICKS_BREAK = registerSoundEvent("block.tone_bricks.break");
+    public static final SoundEvent BLOCK_TONE_BRICKS_STEP = registerSoundEvent("block.tone_bricks.step");
+    public static final SoundEvent BLOCK_TONE_BRICKS_PLACE = registerSoundEvent("block.tone_bricks.place");
+    public static final SoundEvent BLOCK_TONE_BRICKS_HIT = registerSoundEvent("block.tone_bricks.hit");
+    public static final SoundEvent BLOCK_TONE_BRICKS_FALL = registerSoundEvent("block.tone_bricks.fall");
+
     public static final SoundEvent BLOCK_FLEQ_BREAK = registerSoundEvent("block.fleq.break");
     public static final SoundEvent BLOCK_FLEQ_STEP = registerSoundEvent("block.fleq.step");
     public static final SoundEvent BLOCK_FLEQ_PLACE = registerSoundEvent("block.fleq.place");

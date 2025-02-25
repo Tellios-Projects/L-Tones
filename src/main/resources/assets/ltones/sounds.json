@@ -101,6 +101,108 @@
 			"ltones:block/fleq/step6"
 		]
 	},
+	"block.tone.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/tone/break1",
+			"ltones:block/tone/break2",
+			"ltones:block/tone/break3",
+			"ltones:block/tone/break4"
+		]
+	},
+	"block.tone.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/tone/step1",
+			"ltones:block/tone/step2",
+			"ltones:block/tone/step3",
+			"ltones:block/tone/step4",
+			"ltones:block/tone/step5",
+			"ltones:block/tone/step6"
+		]
+	},
+	"block.tone.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/tone/break1",
+			"ltones:block/tone/break2",
+			"ltones:block/tone/break3",
+			"ltones:block/tone/break4"
+		]
+	},
+	"block.tone.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/tone/step1",
+			"ltones:block/tone/step2",
+			"ltones:block/tone/step3",
+			"ltones:block/tone/step4",
+			"ltones:block/tone/step5",
+			"ltones:block/tone/step6"
+		]
+	},
+	"block.tone.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/tone/step1",
+			"ltones:block/tone/step2",
+			"ltones:block/tone/step3",
+			"ltones:block/tone/step4",
+			"ltones:block/tone/step5",
+			"ltones:block/tone/step6"
+		]
+	},
+	"block.tone_bricks.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/tone_bricks/break1",
+			"ltones:block/tone_bricks/break2",
+			"ltones:block/tone_bricks/break3",
+			"ltones:block/tone_bricks/break4"
+		]
+	},
+	"block.tone_bricks.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/tone_bricks/step1",
+			"ltones:block/tone_bricks/step2",
+			"ltones:block/tone_bricks/step3",
+			"ltones:block/tone_bricks/step4",
+			"ltones:block/tone_bricks/step5",
+			"ltones:block/tone_bricks/step6"
+		]
+	},
+	"block.tone_bricks.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/tone_bricks/break1",
+			"ltones:block/tone_bricks/break2",
+			"ltones:block/tone_bricks/break3",
+			"ltones:block/tone_bricks/break4"
+		]
+	},
+	"block.tone_bricks.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/tone_bricks/step1",
+			"ltones:block/tone_bricks/step2",
+			"ltones:block/tone_bricks/step3",
+			"ltones:block/tone_bricks/step4",
+			"ltones:block/tone_bricks/step5",
+			"ltones:block/tone_bricks/step6"
+		]
+	},
+	"block.tone_bricks.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/tone_bricks/step1",
+			"ltones:block/tone_bricks/step2",
+			"ltones:block/tone_bricks/step3",
+			"ltones:block/tone_bricks/step4",
+			"ltones:block/tone_bricks/step5",
+			"ltones:block/tone_bricks/step6"
+		]
+	},
 	"block.iszm.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -428,42 +530,46 @@
 	"block.metal_sticks.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
-			"ltones:block/metal_sticks/break1",
-			"ltones:block/metal_sticks/break2",
-			"ltones:block/metal_sticks/break3",
-			"ltones:block/metal_sticks/break4"
+			"ltones:block/cast/break1",
+			"ltones:block/cast/break2",
+			"ltones:block/cast/break3",
+			"ltones:block/cast/break4"
 		]
 	},
 	"block.metal_sticks.step": {
 		"subtitle": "subtitles.block.generic.footsteps",
 		"sounds": [
-			"ltones:block/metal_sticks/step1",
-			"ltones:block/metal_sticks/step2",
-			"ltones:block/metal_sticks/step3",
-			"ltones:block/metal_sticks/step4"
+			"ltones:block/cast/step1",
+			"ltones:block/cast/step2",
+			"ltones:block/cast/step3",
+			"ltones:block/cast/step4"
 		]
 	},
 	"block.metal_sticks.place": {
 		"subtitle": "subtitles.block.generic.place",
 		"sounds": [
-			"ltones:block/metal_sticks/place1",
-			"ltones:block/metal_sticks/place2",
-			"ltones:block/metal_sticks/place3",
-			"ltones:block/metal_sticks/place4"
+			"ltones:block/cast/break1",
+			"ltones:block/cast/break2",
+			"ltones:block/cast/break3",
+			"ltones:block/cast/break4"
 		]
 	},
 	"block.metal_sticks.hit": {
 		"subtitle": "subtitles.block.generic.hit",
 		"sounds": [
-			"ltones:block/metal_sticks/hit1",
-			"ltones:block/metal_sticks/hit2",
-			"ltones:block/metal_sticks/hit3"
+			"ltones:block/cast/step1",
+			"ltones:block/cast/step2",
+			"ltones:block/cast/step3",
+			"ltones:block/cast/step4"
 		]
 	},
 	"block.metal_sticks.fall": {
 		"subtitle": "subtitles.block.generic.fall",
 		"sounds": [
-			"ltones:block/metal_sticks/fall1"
+			"ltones:block/cast/step1",
+			"ltones:block/cast/step2",
+			"ltones:block/cast/step3",
+			"ltones:block/cast/step4"
 		]
 	},
 	"block.polygon.break": {
@@ -478,7 +584,9 @@
 		"subtitle": "subtitles.block.generic.footsteps",
 		"sounds": [
 			"ltones:block/redds/step1",
-			"ltones:block/redds/step2"
+			"ltones:block/redds/step2",
+			"ltones:block/redds/step3",
+			"ltones:block/redds/step4"
 		]
 	},
 	"block.polygon.place": {
@@ -501,7 +609,9 @@
 		"subtitle": "subtitles.block.generic.fall",
 		"sounds": [
 			"ltones:block/redds/step1",
-			"ltones:block/redds/step2"
+			"ltones:block/redds/step2",
+			"ltones:block/redds/step3",
+			"ltones:block/redds/step4"
 		]
 	},
 	"block.lair.break": {

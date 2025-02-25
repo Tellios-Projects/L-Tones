@@ -1,12 +1,13 @@
 package net.leafenzo.ltones.sound;
 
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
 public class ModBlockSoundGroup {
-    public static final BlockSoundGroup METAL_STICKS = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_METAL_STICKS_BREAK, ModSoundEvents.BLOCK_METAL_STICKS_STEP, ModSoundEvents.BLOCK_METAL_STICKS_PLACE, ModSoundEvents.BLOCK_METAL_STICKS_HIT, ModSoundEvents.BLOCK_METAL_STICKS_FALL);
+    public static final BlockSoundGroup CAST = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_METAL_STICKS_BREAK, ModSoundEvents.BLOCK_METAL_STICKS_STEP, ModSoundEvents.BLOCK_METAL_STICKS_PLACE, ModSoundEvents.BLOCK_METAL_STICKS_HIT, ModSoundEvents.BLOCK_METAL_STICKS_FALL);
     public static final BlockSoundGroup EXRI = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_EXRI_BREAK, ModSoundEvents.BLOCK_EXRI_STEP, ModSoundEvents.BLOCK_EXRI_PLACE, ModSoundEvents.BLOCK_EXRI_HIT, ModSoundEvents.BLOCK_EXRI_FALL);
+    public static final BlockSoundGroup TONE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_TONE_BREAK, ModSoundEvents.BLOCK_TONE_STEP, ModSoundEvents.BLOCK_TONE_PLACE, ModSoundEvents.BLOCK_TONE_HIT, ModSoundEvents.BLOCK_TONE_FALL);
+    public static final BlockSoundGroup TONE_BRICKS = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_TONE_BRICKS_BREAK, ModSoundEvents.BLOCK_TONE_BRICKS_STEP, ModSoundEvents.BLOCK_TONE_BRICKS_PLACE, ModSoundEvents.BLOCK_TONE_BRICKS_HIT, ModSoundEvents.BLOCK_TONE_BRICKS_FALL);
     public static final BlockSoundGroup FLEQ = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_FLEQ_BREAK, ModSoundEvents.BLOCK_FLEQ_STEP, ModSoundEvents.BLOCK_FLEQ_PLACE, ModSoundEvents.BLOCK_FLEQ_HIT, ModSoundEvents.BLOCK_FLEQ_FALL);
     public static final BlockSoundGroup ISZM = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_ISZM_BREAK, ModSoundEvents.BLOCK_ISZM_STEP, ModSoundEvents.BLOCK_ISZM_PLACE, ModSoundEvents.BLOCK_ISZM_HIT, ModSoundEvents.BLOCK_ISZM_FALL);
     public static final BlockSoundGroup ROEN = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_ROEN_BREAK, ModSoundEvents.BLOCK_ROEN_STEP, ModSoundEvents.BLOCK_ROEN_PLACE, ModSoundEvents.BLOCK_ROEN_HIT, ModSoundEvents.BLOCK_ROEN_FALL);

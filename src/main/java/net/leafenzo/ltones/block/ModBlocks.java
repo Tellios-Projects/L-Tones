@@ -109,7 +109,7 @@ public class ModBlocks {
     //<editor-fold desc ="Blocks - FORTT">
     private static final FabricBlockSettings forttMaterial = FabricBlockSettings.create()
             .strength(1.0f)
-            .sounds(ModBlockSoundGroup.METAL_STICKS);  // TODO make sound less metal-y and more plastic-y
+            .sounds(ModBlockSoundGroup.CAST);  // TODO make sound less metal-y and more plastic-y
     public static final Block FORTT = registerBlockInBlockset(FORTT_BLOCKS, "fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.WHITE_GRAY)));
     public static final Block BRIGHT_BLUE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_blue_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.BLUE)));
     public static final Block BRIGHT_RED_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_red_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DULL_RED)));
@@ -179,7 +179,7 @@ public class ModBlocks {
     //<editor-fold desc ="Blocks - CAST">
     private static final FabricBlockSettings castMaterial = FabricBlockSettings.create()
             .strength(1.0f)
-            .sounds(ModBlockSoundGroup.METAL_STICKS); // TODO custom plastic sound
+            .sounds(ModBlockSoundGroup.CAST); // TODO custom plastic sound
     public static final Block YELLOW_CAST = registerBlockInBlockset(CAST_BLOCKS, "yellow_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.YELLOW)));
     public static final Block VERMILION_CAST = registerBlockInBlockset(CAST_BLOCKS, "vermilion_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BRIGHT_RED)));
     public static final Block VELVET_CAST = registerBlockInBlockset(CAST_BLOCKS, "velvet_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.DULL_RED)));
@@ -776,12 +776,12 @@ public class ModBlocks {
     public static final Block LITHIUM_ORE = registerBlock("lithium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
     public static final Block DEEPSLATE_LITHIUM_ORE = registerBlock("deepslate_lithium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_IRON_ORE)));
     public static final Block ENDSTONE_LITHIUM_ORE = registerBlock("endstone_lithium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).strength(3.5f, 9.0f), UniformIntProvider.create(0, 1)));
-    public static final Block TONE = registerBlock("tone", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY)));
-    public static final Block TONE_BRICKS = registerBlock("tone_bricks", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY)));
-    public static final Block POLISHED_TONE = registerBlock("polished_tone", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY)));
-    public static final Block ABSTRACT_TONE = registerBlock("abstract_tone", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY)));
-    public static final Block FRAMED_TONE = registerBlock("framed_tone", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY)));
-    public static final Block FRAMED_TONE_BRICKS = registerBlock("framed_tone_bricks", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY)));
+    public static final Block TONE = registerBlock("tone", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY).sounds(ModBlockSoundGroup.TONE)));
+    public static final Block TONE_BRICKS = registerBlock("tone_bricks", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY).sounds(ModBlockSoundGroup.TONE_BRICKS)));
+    public static final Block POLISHED_TONE = registerBlock("polished_tone", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY).sounds(ModBlockSoundGroup.TONE)));
+    public static final Block ABSTRACT_TONE = registerBlock("abstract_tone", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY).sounds(ModBlockSoundGroup.TONE)));
+    public static final Block FRAMED_TONE = registerBlock("framed_tone", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY).sounds(ModBlockSoundGroup.TONE)));
+    public static final Block FRAMED_TONE_BRICKS = registerBlock("framed_tone_bricks", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY).sounds(ModBlockSoundGroup.TONE_BRICKS)));
 
     //TODO better CRT sfx
     //CRT block entity and screen display
@@ -820,7 +820,7 @@ public class ModBlocks {
     public static final Block DOOR_GROWN = registerDoor("door_grown", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.DARK_GREEN), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_KNET = registerDoor("door_knet", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.CLEAR), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_WORK = registerDoor("door_work", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.GRAY), BlockSetType.POLISHED_BLACKSTONE));
-    public static final Block DOOR_SAFE = registerDoor("door_safe", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BLACK), BlockSetType.POLISHED_BLACKSTONE));
+    public static final Block DOOR_SAFE = registerDoor("door_safe", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BLACK).sounds(ModBlockSoundGroup.EXRI), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_PETRI = registerDoor("door_petri", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.PALE_YELLOW), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_BUNKER = registerDoor("door_bunker", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block IRON_BAR_DOOR = registerDoor("iron_bar_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY), BlockSetType.IRON));
