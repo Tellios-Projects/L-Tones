@@ -57,6 +57,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_TONE_BRICKS_HIT = registerSoundEvent("block.tone_bricks.hit");
     public static final SoundEvent BLOCK_TONE_BRICKS_FALL = registerSoundEvent("block.tone_bricks.fall");
 
+    public static final SoundEvent BLOCK_ZTONE_BREAK = registerSoundEvent("block.ztone.break");
+    public static final SoundEvent BLOCK_ZTONE_STEP = registerSoundEvent("block.ztone.step");
+    public static final SoundEvent BLOCK_ZTONE_PLACE = registerSoundEvent("block.ztone.place");
+    public static final SoundEvent BLOCK_ZTONE_HIT = registerSoundEvent("block.ztone.hit");
+    public static final SoundEvent BLOCK_ZTONE_FALL = registerSoundEvent("block.ztone.fall");
+
     public static final SoundEvent BLOCK_FLEQ_BREAK = registerSoundEvent("block.fleq.break");
     public static final SoundEvent BLOCK_FLEQ_STEP = registerSoundEvent("block.fleq.step");
     public static final SoundEvent BLOCK_FLEQ_PLACE = registerSoundEvent("block.fleq.place");

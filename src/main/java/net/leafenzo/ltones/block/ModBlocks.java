@@ -367,7 +367,7 @@ public class ModBlocks {
     public static final Block KRYP_CONNECTOR = registerBlockInBlockset(KRYP_BLOCKS, "kryp_connector", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 5).sounds(ModBlockSoundGroup.KRYP_NODE)));
     public static final Block KRYP_CHUNK = registerBlockInBlockset(KRYP_BLOCKS, "kryp_chunk", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(krypMaterial)));
     public static final Block KRYP_BEAM = registerBlockInBlockset(KRYP_BLOCKS, "kryp_beam", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 9).sounds(ModBlockSoundGroup.KRYP_NODE)));
-    public static final Block KRYP_BASE = registerBlockInBlockset(KRYP_BLOCKS, "kryp_base", new Block(FabricBlockSettings.copyOf(krypMaterial)));
+    public static final Block KRYP_BASE = registerBlockInBlockset(KRYP_BLOCKS, "kryp_base", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(BlockSoundGroup.NETHERITE)));
     public static final Block KRYP = registerBlockInBlockset(KRYP_BLOCKS, "kryp", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(BlockSoundGroup.NETHERITE)));
         public static final Block KRYP_STAIRS = registerStairs(KRYP,"kryp_stairs", new StairsBlock(KRYP.getDefaultState(), FabricBlockSettings.copyOf(KRYP).sounds(BlockSoundGroup.NETHERITE)));
         public static final Block KRYP_SLAB = registerSlab(KRYP,"kryp_slab", new SlabBlock(FabricBlockSettings.copyOf(KRYP).sounds(BlockSoundGroup.NETHERITE)));
@@ -764,6 +764,7 @@ public class ModBlocks {
     //<editor-fold desc ="Blocks - Other">
     public static final Block ZTONE = registerBlock("ztone", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)
             .mapColor(MapColor.LIGHT_GRAY)
+            .sounds(ModBlockSoundGroup.ZTONE)
     ));
     public static final Block AURORA = registerBlock("aurora", new AuroraBlock(FabricBlockSettings.create()
             .mapColor(MapColor.TERRACOTTA_CYAN)
@@ -810,19 +811,19 @@ public class ModBlocks {
     }
     public static final Block DOOR_STEAK = registerDoor("door_steak", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.DEEPSLATE_GRAY), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_NEON = registerDoor("door_neon", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.PURPLE), BlockSetType.POLISHED_BLACKSTONE));
-    public static final Block DOOR_TOY = registerDoor("door_toy", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BRIGHT_RED), BlockSetType.POLISHED_BLACKSTONE));
+    public static final Block DOOR_TOY = registerDoor("door_toy", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BRIGHT_RED).sounds(ModBlockSoundGroup.CAST), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_POWER = registerDoor("door_power", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BLACK), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_VACUUM = registerDoor("door_vacuum", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BLACK), BlockSetType.POLISHED_BLACKSTONE));
-    public static final Block DOOR_CONFINE = registerDoor("door_confine", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.WHITE), BlockSetType.POLISHED_BLACKSTONE));
-    public static final Block DOOR_END = registerDoor("door_end", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.DARK_CRIMSON), BlockSetType.POLISHED_BLACKSTONE));
-    public static final Block DOOR_HEAVY = registerDoor("door_heavy", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.SPRUCE_BROWN), BlockSetType.POLISHED_BLACKSTONE));
+    public static final Block DOOR_CONFINE = registerDoor("door_confine", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.WHITE).sounds(ModBlockSoundGroup.MINN), BlockSetType.POLISHED_BLACKSTONE));
+    public static final Block DOOR_END = registerDoor("door_end", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.DARK_CRIMSON).sounds(ModBlockSoundGroup.LAIR), BlockSetType.POLISHED_BLACKSTONE));
+    public static final Block DOOR_HEAVY = registerDoor("door_heavy", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.SPRUCE_BROWN).sounds(ModBlockSoundGroup.KRYP), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_TEST = registerDoor("door_test", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_GROWN = registerDoor("door_grown", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.DARK_GREEN), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_KNET = registerDoor("door_knet", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.CLEAR), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_WORK = registerDoor("door_work", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.GRAY), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_SAFE = registerDoor("door_safe", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BLACK).sounds(ModBlockSoundGroup.EXRI), BlockSetType.POLISHED_BLACKSTONE));
-    public static final Block DOOR_PETRI = registerDoor("door_petri", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.PALE_YELLOW), BlockSetType.POLISHED_BLACKSTONE));
-    public static final Block DOOR_BUNKER = registerDoor("door_bunker", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY), BlockSetType.POLISHED_BLACKSTONE));
+    public static final Block DOOR_PETRI = registerDoor("door_petri", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.PALE_YELLOW).sounds(ModBlockSoundGroup.ROEN), BlockSetType.POLISHED_BLACKSTONE));
+    public static final Block DOOR_BUNKER = registerDoor("door_bunker", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY).sounds(ModBlockSoundGroup.TONE), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block IRON_BAR_DOOR = registerDoor("iron_bar_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY), BlockSetType.IRON));
     //</editor-fold>
 
