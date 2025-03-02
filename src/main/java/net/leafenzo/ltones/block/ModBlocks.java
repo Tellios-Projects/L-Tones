@@ -809,6 +809,8 @@ public class ModBlocks {
         RENDER_LAYER_CUTOUT.add(b);
         return b;
     }
+
+    //TODO: add mixin BlockSetType for custom door sounds 
     public static final Block DOOR_STEAK = registerDoor("door_steak", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.DEEPSLATE_GRAY), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_NEON = registerDoor("door_neon", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.PURPLE), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_TOY = registerDoor("door_toy", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BRIGHT_RED).sounds(ModBlockSoundGroup.CAST), BlockSetType.POLISHED_BLACKSTONE));
@@ -839,12 +841,13 @@ public class ModBlocks {
             .nonOpaque()
             .noCollision()
             .pistonBehavior(PistonBehavior.DESTROY);
+    // public static final Block DECAL_LITHIUM = registerDecalBlock("decal_lithium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.LITHIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_LITHIUM); }
     public static final Block DECAL_CONDUCTIUM = registerDecalBlock("decal_conductium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_CONDUCTIUM); }
     public static final Block DECAL_KERBESIUM = registerDecalBlock("decal_kerbesium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_KERBESIUM); }
     public static final Block DECAL_ORGANIC_BRASS = registerDecalBlock("decal_organic_brass", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_ORGANIC_BRASS); }
     public static final Block DECAL_MIDASIUM = registerDecalBlock("decal_midasium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_MIDASIUM); }
     public static final Block DECAL_TAWSINE = registerDecalBlock("decal_tawsine", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_TAWSINE); }
-    public static final Block DECAL_THINKING_METAL = registerDecalBlock("decal_thinking_metal", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.CANDLE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_THINKING_METAL); }
+    public static final Block DECAL_THINKING_METAL = registerDecalBlock("decal_thinking_metal", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_THINKING_METAL); }
     public static final Block DECAL_ARGON = registerDecalBlock("decal_argon", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.POWDER_SNOW))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_ARGON); }
     public static final Block DECAL_OIL = registerDecalBlock("decal_oil", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.FROGSPAWN))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_OIL); }
     public static final Block DECAL_DIODE = registerDecalBlock("decal_diode", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_DIODE); }
@@ -865,7 +868,7 @@ public class ModBlocks {
     public static final Block DECAL_SCARLET_MEMBRANE = registerDecalBlock("decal_scarlet_membrane", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.FROGSPAWN))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_SCARLET_MEMBRANE); }
     public static final Block DECAL_MOULDING = registerDecalBlock("decal_moulding", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_MOULDING))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_MOULDING); }
     public static final Block DECAL_PLAQUE = registerDecalBlock("decal_plaque", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.FROGSPAWN))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_PLAQUE); }
-    public static final Block DECAL_JELLY = registerDecalBlock("decal_jelly", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.POWDER_SNOW))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_JELLY); }
+    public static final Block DECAL_JELLY = registerDecalBlock("decal_jelly", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.FROGSPAWN))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_JELLY); }
     public static final Block DECAL_CORPOREAL_VAPOR = registerDecalBlock("decal_corporeal_vapor", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.POWDER_SNOW))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_CORPOREAL_VAPOR); }
     public static final Block DECAL_FLAKES = registerDecalBlock("decal_flakes", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.CANDLE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_FLAKES); }
     public static final Block DECAL_NETWORKING = registerDecalBlock("decal_networking", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.CANDLE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_NETWORKING); }
