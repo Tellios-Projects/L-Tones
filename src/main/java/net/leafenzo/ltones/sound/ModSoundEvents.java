@@ -7,11 +7,14 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 public class ModSoundEvents {
-    public static final SoundEvent BLOCK_METAL_STICKS_BREAK = registerSoundEvent("block.metal_sticks.break");
-    public static final SoundEvent BLOCK_METAL_STICKS_STEP = registerSoundEvent("block.metal_sticks.step");
-    public static final SoundEvent BLOCK_METAL_STICKS_PLACE = registerSoundEvent("block.metal_sticks.place");
-    public static final SoundEvent BLOCK_METAL_STICKS_HIT = registerSoundEvent("block.metal_sticks.hit");
-    public static final SoundEvent BLOCK_METAL_STICKS_FALL = registerSoundEvent("block.metal_sticks.fall");
+    public static final SoundEvent BLOCK_CAST_DOOR_OPEN = registerSoundEvent("block.cast_door.open");
+    public static final SoundEvent BLOCK_CAST_DOOR_CLOSE = registerSoundEvent("block.cast_door.close");
+
+    public static final SoundEvent BLOCK_CAST_BREAK = registerSoundEvent("block.cast.break");
+    public static final SoundEvent BLOCK_CAST_STEP = registerSoundEvent("block.cast.step");
+    public static final SoundEvent BLOCK_CAST_PLACE = registerSoundEvent("block.cast.place");
+    public static final SoundEvent BLOCK_CAST_HIT = registerSoundEvent("block.cast.hit");
+    public static final SoundEvent BLOCK_CAST_FALL = registerSoundEvent("block.cast.fall");
 
     public static final SoundEvent BLOCK_FOIL_BREAK = registerSoundEvent("block.foil.break");
     public static final SoundEvent BLOCK_FOIL_STEP = registerSoundEvent("block.foil.step");
@@ -45,6 +48,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_EXRI_HIT = registerSoundEvent("block.exri.hit");
     public static final SoundEvent BLOCK_EXRI_FALL = registerSoundEvent("block.exri.fall");
 
+    public static final SoundEvent BLOCK_EXRI_DOOR_OPEN = registerSoundEvent("block.exri_door.open");
+    public static final SoundEvent BLOCK_EXRI_DOOR_CLOSE = registerSoundEvent("block.exri_door.close");
+
+    public static final SoundEvent BLOCK_TONE_DOOR_OPEN = registerSoundEvent("block.tone_door.open");
+    public static final SoundEvent BLOCK_TONE_DOOR_CLOSE = registerSoundEvent("block.tone_door.close");
+
     public static final SoundEvent BLOCK_TONE_BREAK = registerSoundEvent("block.tone.break");
     public static final SoundEvent BLOCK_TONE_STEP = registerSoundEvent("block.tone.step");
     public static final SoundEvent BLOCK_TONE_PLACE = registerSoundEvent("block.tone.place");
@@ -75,6 +84,9 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_ISZM_HIT = registerSoundEvent("block.iszm.hit");
     public static final SoundEvent BLOCK_ISZM_FALL = registerSoundEvent("block.iszm.fall");
 
+    public static final SoundEvent BLOCK_ROEN_DOOR_OPEN = registerSoundEvent("block.roen_door.open");
+    public static final SoundEvent BLOCK_ROEN_DOOR_CLOSE = registerSoundEvent("block.roen_door.close");
+
     public static final SoundEvent BLOCK_ROEN_BREAK = registerSoundEvent("block.roen.break");
     public static final SoundEvent BLOCK_ROEN_STEP = registerSoundEvent("block.roen.step");
     public static final SoundEvent BLOCK_ROEN_PLACE = registerSoundEvent("block.roen.place");
@@ -93,11 +105,17 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_TYEL_HIT = registerSoundEvent("block.tyel.hit");
     public static final SoundEvent BLOCK_TYEL_FALL = registerSoundEvent("block.tyel.fall");
 
+    public static final SoundEvent BLOCK_MINN_DOOR_OPEN = registerSoundEvent("block.minn_door.open");
+    public static final SoundEvent BLOCK_MINN_DOOR_CLOSE = registerSoundEvent("block.minn_door.close");
+
     public static final SoundEvent BLOCK_MINN_BREAK = registerSoundEvent("block.minn.break");
     public static final SoundEvent BLOCK_MINN_STEP = registerSoundEvent("block.minn.step");
     public static final SoundEvent BLOCK_MINN_PLACE = registerSoundEvent("block.minn.place");
     public static final SoundEvent BLOCK_MINN_HIT = registerSoundEvent("block.minn.hit");
     public static final SoundEvent BLOCK_MINN_FALL = registerSoundEvent("block.minn.fall");
+
+    public static final SoundEvent BLOCK_KRYP_DOOR_OPEN = registerSoundEvent("block.kryp_door.open");
+    public static final SoundEvent BLOCK_KRYP_DOOR_CLOSE = registerSoundEvent("block.kryp_door.close");
 
     public static final SoundEvent BLOCK_KRYP_BASE_BREAK = registerSoundEvent("block.kryp_base.break");
     public static final SoundEvent BLOCK_KRYP_BASE_STEP = registerSoundEvent("block.kryp_base.step");

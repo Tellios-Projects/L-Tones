@@ -4,7 +4,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvents;
 
 public class ModBlockSoundGroup {
-    public static final BlockSoundGroup CAST = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_METAL_STICKS_BREAK, ModSoundEvents.BLOCK_METAL_STICKS_STEP, ModSoundEvents.BLOCK_METAL_STICKS_PLACE, ModSoundEvents.BLOCK_METAL_STICKS_HIT, ModSoundEvents.BLOCK_METAL_STICKS_FALL);
+    public static final BlockSoundGroup CAST = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_CAST_BREAK, ModSoundEvents.BLOCK_CAST_STEP, ModSoundEvents.BLOCK_CAST_PLACE, ModSoundEvents.BLOCK_CAST_HIT, ModSoundEvents.BLOCK_CAST_FALL);
     public static final BlockSoundGroup EXRI = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_EXRI_BREAK, ModSoundEvents.BLOCK_EXRI_STEP, ModSoundEvents.BLOCK_EXRI_PLACE, ModSoundEvents.BLOCK_EXRI_HIT, ModSoundEvents.BLOCK_EXRI_FALL);
     public static final BlockSoundGroup TONE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_TONE_BREAK, ModSoundEvents.BLOCK_TONE_STEP, ModSoundEvents.BLOCK_TONE_PLACE, ModSoundEvents.BLOCK_TONE_HIT, ModSoundEvents.BLOCK_TONE_FALL);
     public static final BlockSoundGroup TONE_BRICKS = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_TONE_BRICKS_BREAK, ModSoundEvents.BLOCK_TONE_BRICKS_STEP, ModSoundEvents.BLOCK_TONE_BRICKS_PLACE, ModSoundEvents.BLOCK_TONE_BRICKS_HIT, ModSoundEvents.BLOCK_TONE_BRICKS_FALL);
