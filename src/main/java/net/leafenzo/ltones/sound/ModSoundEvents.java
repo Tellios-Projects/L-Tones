@@ -99,6 +99,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_MINN_HIT = registerSoundEvent("block.minn.hit");
     public static final SoundEvent BLOCK_MINN_FALL = registerSoundEvent("block.minn.fall");
 
+    public static final SoundEvent BLOCK_KRYP_BASE_BREAK = registerSoundEvent("block.kryp_base.break");
+    public static final SoundEvent BLOCK_KRYP_BASE_STEP = registerSoundEvent("block.kryp_base.step");
+    public static final SoundEvent BLOCK_KRYP_BASE_PLACE = registerSoundEvent("block.kryp_base.place");
+    public static final SoundEvent BLOCK_KRYP_BASE_HIT = registerSoundEvent("block.kryp_base.hit");
+    public static final SoundEvent BLOCK_KRYP_BASE_FALL = registerSoundEvent("block.kryp_base.fall");
+
     public static final SoundEvent BLOCK_KRYP_BREAK = registerSoundEvent("block.kryp.break");
     public static final SoundEvent BLOCK_KRYP_STEP = registerSoundEvent("block.kryp.step");
     public static final SoundEvent BLOCK_KRYP_PLACE = registerSoundEvent("block.kryp.place");

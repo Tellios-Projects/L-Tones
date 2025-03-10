@@ -473,7 +473,53 @@
 			"ltones:block/kryp/step4"
 		]
 	},
-	
+
+	"block.kryp_base.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/kryp_base/break1",
+			"ltones:block/kryp_base/break2",
+			"ltones:block/kryp_base/break3",
+			"ltones:block/kryp_base/break4"
+		]
+	},
+	"block.kryp_base.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/kryp_base/step1",
+			"ltones:block/kryp_base/step2",
+			"ltones:block/kryp_base/step3",
+			"ltones:block/kryp_base/step4"
+		]
+	},
+	"block.kryp_base.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/kryp_base/break1",
+			"ltones:block/kryp_base/break2",
+			"ltones:block/kryp_base/break3",
+			"ltones:block/kryp_base/break4"
+		]
+	},
+	"block.kryp_base.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/kryp_base/step1",
+			"ltones:block/kryp_base/step2",
+			"ltones:block/kryp_base/step3",
+			"ltones:block/kryp_base/step4"
+		]
+	},
+	"block.kryp_base.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/kryp_base/step1",
+			"ltones:block/kryp_base/step2",
+			"ltones:block/kryp_base/step3",
+			"ltones:block/kryp_base/step4"
+		]
+	},
+
 	"block.lithium.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [

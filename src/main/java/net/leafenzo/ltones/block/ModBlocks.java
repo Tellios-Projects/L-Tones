@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.leafenzo.ltones.ModInit;
 import net.leafenzo.ltones.Super;
 import net.leafenzo.ltones.block.custom.*;
+import net.leafenzo.ltones.sound.ModBlockSetType;
 import net.leafenzo.ltones.sound.ModBlockSoundGroup;
 import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.leafenzo.ltones.util.ModUtil;
@@ -354,12 +355,12 @@ public class ModBlocks {
         public static final Block KRYP_WIRE_SLAB = registerSlab(KRYP_WIRE,"kryp_wire_slab", new SlabBlock(FabricBlockSettings.copyOf(KRYP_WIRE)));
     public static final Block KRYP_SUPPORT = registerBlockInBlockset(KRYP_BLOCKS, "kryp_support", new PillarBlock(FabricBlockSettings.copyOf(krypMaterial)));
     public static final Block KRYP_STORAGE = registerBlockInBlockset(KRYP_BLOCKS, "kryp_storage", new Block(FabricBlockSettings.copyOf(krypMaterial)));
-    public static final Block KRYP_SMOOTH = registerBlockInBlockset(KRYP_BLOCKS, "kryp_smooth", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(BlockSoundGroup.NETHERITE)));
-        public static final Block KRYP_SMOOTH_STAIRS = registerStairs(KRYP_SMOOTH,"kryp_smooth_stairs", new StairsBlock(KRYP_SMOOTH.getDefaultState(), FabricBlockSettings.copyOf(KRYP_SMOOTH).sounds(BlockSoundGroup.NETHERITE)));
-        public static final Block KRYP_SMOOTH_SLAB = registerSlab(KRYP_SMOOTH,"kryp_smooth_slab", new SlabBlock(FabricBlockSettings.copyOf(KRYP_SMOOTH).sounds(BlockSoundGroup.NETHERITE)));
-    public static final Block KRYP_SHEEN = registerBlockInBlockset(KRYP_BLOCKS, "kryp_sheen", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(BlockSoundGroup.NETHERITE)));
+    public static final Block KRYP_SMOOTH = registerBlockInBlockset(KRYP_BLOCKS, "kryp_smooth", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(ModBlockSoundGroup.KRYP_BASE)));
+        public static final Block KRYP_SMOOTH_STAIRS = registerStairs(KRYP_SMOOTH,"kryp_smooth_stairs", new StairsBlock(KRYP_SMOOTH.getDefaultState(), FabricBlockSettings.copyOf(KRYP_SMOOTH).sounds(ModBlockSoundGroup.KRYP_BASE)));
+        public static final Block KRYP_SMOOTH_SLAB = registerSlab(KRYP_SMOOTH,"kryp_smooth_slab", new SlabBlock(FabricBlockSettings.copyOf(KRYP_SMOOTH).sounds(ModBlockSoundGroup.KRYP_BASE)));
+    public static final Block KRYP_SHEEN = registerBlockInBlockset(KRYP_BLOCKS, "kryp_sheen", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(ModBlockSoundGroup.KRYP_BASE)));
     public static final Block KRYP_RUIN = registerBlockInBlockset(KRYP_BLOCKS, "kryp_ruin", new Block(FabricBlockSettings.copyOf(krypMaterial)));
-    public static final Block KRYP_OMITTER = registerBlockInBlockset(KRYP_BLOCKS, "kryp_omitter", new LitBlock(FabricBlockSettings.copyOf(krypMaterial).sounds(BlockSoundGroup.NETHERITE).luminance(createLightLevelFromProperty(11, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
+    public static final Block KRYP_OMITTER = registerBlockInBlockset(KRYP_BLOCKS, "kryp_omitter", new LitBlock(FabricBlockSettings.copyOf(krypMaterial).sounds(ModBlockSoundGroup.KRYP_BASE).luminance(createLightLevelFromProperty(11, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
     public static final Block KRYP_LEVI = registerBlockInBlockset(KRYP_BLOCKS, "kryp_levi", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 9).sounds(ModBlockSoundGroup.KRYP_NODE)));
     public static final Block KRYP_KUBT = registerBlockInBlockset(KRYP_BLOCKS, "kryp_kubt", new PillarBlock(FabricBlockSettings.copyOf(krypMaterial)));
     public static final Block KRYP_INFO = registerBlockInBlockset(KRYP_BLOCKS, "kryp_info", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 5).sounds(ModBlockSoundGroup.KRYP_NODE)));
@@ -367,10 +368,10 @@ public class ModBlocks {
     public static final Block KRYP_CONNECTOR = registerBlockInBlockset(KRYP_BLOCKS, "kryp_connector", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 5).sounds(ModBlockSoundGroup.KRYP_NODE)));
     public static final Block KRYP_CHUNK = registerBlockInBlockset(KRYP_BLOCKS, "kryp_chunk", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(krypMaterial)));
     public static final Block KRYP_BEAM = registerBlockInBlockset(KRYP_BLOCKS, "kryp_beam", new Block(FabricBlockSettings.copyOf(krypMaterial).luminance(state -> 9).sounds(ModBlockSoundGroup.KRYP_NODE)));
-    public static final Block KRYP_BASE = registerBlockInBlockset(KRYP_BLOCKS, "kryp_base", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(BlockSoundGroup.NETHERITE)));
-    public static final Block KRYP = registerBlockInBlockset(KRYP_BLOCKS, "kryp", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(BlockSoundGroup.NETHERITE)));
-        public static final Block KRYP_STAIRS = registerStairs(KRYP,"kryp_stairs", new StairsBlock(KRYP.getDefaultState(), FabricBlockSettings.copyOf(KRYP).sounds(BlockSoundGroup.NETHERITE)));
-        public static final Block KRYP_SLAB = registerSlab(KRYP,"kryp_slab", new SlabBlock(FabricBlockSettings.copyOf(KRYP).sounds(BlockSoundGroup.NETHERITE)));
+    public static final Block KRYP_BASE = registerBlockInBlockset(KRYP_BLOCKS, "kryp_base", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(ModBlockSoundGroup.KRYP_BASE)));
+    public static final Block KRYP = registerBlockInBlockset(KRYP_BLOCKS, "kryp", new Block(FabricBlockSettings.copyOf(krypMaterial).sounds(ModBlockSoundGroup.KRYP_BASE)));
+        public static final Block KRYP_STAIRS = registerStairs(KRYP,"kryp_stairs", new StairsBlock(KRYP.getDefaultState(), FabricBlockSettings.copyOf(KRYP).sounds(ModBlockSoundGroup.KRYP_BASE)));
+        public static final Block KRYP_SLAB = registerSlab(KRYP,"kryp_slab", new SlabBlock(FabricBlockSettings.copyOf(KRYP).sounds(ModBlockSoundGroup.KRYP_BASE)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - LAVE">
     private static final FabricBlockSettings laveMaterial = FabricBlockSettings.create()
@@ -813,19 +814,19 @@ public class ModBlocks {
     //TODO: add mixin BlockSetType for custom door sounds
     public static final Block DOOR_STEAK = registerDoor("door_steak", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.DEEPSLATE_GRAY), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_NEON = registerDoor("door_neon", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.PURPLE), BlockSetType.POLISHED_BLACKSTONE));
-    public static final Block DOOR_TOY = registerDoor("door_toy", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BRIGHT_RED).sounds(ModBlockSoundGroup.CAST), BlockSetType.POLISHED_BLACKSTONE));
+    public static final Block DOOR_TOY = registerDoor("door_toy", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BRIGHT_RED), ModBlockSetType.CAST));
     public static final Block DOOR_POWER = registerDoor("door_power", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BLACK), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_VACUUM = registerDoor("door_vacuum", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BLACK), BlockSetType.POLISHED_BLACKSTONE));
-    public static final Block DOOR_CONFINE = registerDoor("door_confine", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.WHITE).sounds(ModBlockSoundGroup.MINN), BlockSetType.POLISHED_BLACKSTONE));
-    public static final Block DOOR_END = registerDoor("door_end", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.DARK_CRIMSON).sounds(ModBlockSoundGroup.LAIR), BlockSetType.POLISHED_BLACKSTONE));
-    public static final Block DOOR_HEAVY = registerDoor("door_heavy", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.SPRUCE_BROWN).sounds(ModBlockSoundGroup.KRYP), BlockSetType.POLISHED_BLACKSTONE));
+    public static final Block DOOR_CONFINE = registerDoor("door_confine", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.WHITE), ModBlockSetType.MINN));
+    public static final Block DOOR_END = registerDoor("door_end", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.DARK_CRIMSON), ModBlockSetType.LAIR));
+    public static final Block DOOR_HEAVY = registerDoor("door_heavy", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.SPRUCE_BROWN), ModBlockSetType.KRYP));
     public static final Block DOOR_TEST = registerDoor("door_test", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_GROWN = registerDoor("door_grown", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.DARK_GREEN), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_KNET = registerDoor("door_knet", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.CLEAR), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_WORK = registerDoor("door_work", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.GRAY), BlockSetType.POLISHED_BLACKSTONE));
-    public static final Block DOOR_SAFE = registerDoor("door_safe", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BLACK).sounds(ModBlockSoundGroup.EXRI), BlockSetType.POLISHED_BLACKSTONE));
-    public static final Block DOOR_PETRI = registerDoor("door_petri", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.PALE_YELLOW).sounds(ModBlockSoundGroup.ROEN), BlockSetType.POLISHED_BLACKSTONE));
-    public static final Block DOOR_BUNKER = registerDoor("door_bunker", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY).sounds(ModBlockSoundGroup.TONE), BlockSetType.POLISHED_BLACKSTONE));
+    public static final Block DOOR_SAFE = registerDoor("door_safe", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BLACK), ModBlockSetType.EXRI));
+    public static final Block DOOR_PETRI = registerDoor("door_petri", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.PALE_YELLOW), ModBlockSetType.ROEN));
+    public static final Block DOOR_BUNKER = registerDoor("door_bunker", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY), ModBlockSetType.TONE));
     public static final Block IRON_BAR_DOOR = registerDoor("iron_bar_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY), BlockSetType.IRON));
     //</editor-fold>
 
