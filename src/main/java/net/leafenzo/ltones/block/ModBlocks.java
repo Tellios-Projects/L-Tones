@@ -824,8 +824,8 @@ public class ModBlocks {
     public static final Block DOOR_KNET = registerDoor("door_knet", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.CLEAR), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_WORK = registerDoor("door_work", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.GRAY), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_SAFE = registerDoor("door_safe", new DoorBlock(FabricBlockSettings.copyOf(exriMaterial).mapColor(MapColor.BLACK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.EXRI));
-    public static final Block DOOR_PETRI = registerDoor("door_petri", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.PALE_YELLOW), ModBlockSetType.ROEN));
-    public static final Block DOOR_BUNKER = registerDoor("door_bunker", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY), ModBlockSetType.TONE));
+    public static final Block DOOR_PETRI = registerDoor("door_petri", new DoorBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.PALE_YELLOW), ModBlockSetType.ROEN));
+    public static final Block DOOR_BUNKER = registerDoor("door_bunker", new DoorBlock(FabricBlockSettings.copyOf(ModBlocks.ABSTRACT_TONE).mapColor(MapColor.IRON_GRAY), ModBlockSetType.TONE));
     public static final Block IRON_BAR_DOOR = registerDoor("iron_bar_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY), BlockSetType.IRON));
     //</editor-fold>
 
