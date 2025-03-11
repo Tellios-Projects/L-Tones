@@ -817,6 +817,24 @@
 			"ltones:block/redds/step4"
 		]
 	},
+
+	"block.lair_door.open": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/lair/door/open1",
+			"ltones:block/lair/door/open2",
+			"ltones:block/lair/door/open3"
+		]
+	},
+	"block.lair_door.close": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/lair/door/close1",
+			"ltones:block/lair/door/close2",
+			"ltones:block/lair/door/close3"
+		]
+	},
+
 	"block.lair.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [

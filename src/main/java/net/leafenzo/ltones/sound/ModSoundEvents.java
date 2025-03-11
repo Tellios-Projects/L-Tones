@@ -93,6 +93,9 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_ROEN_HIT = registerSoundEvent("block.roen.hit");
     public static final SoundEvent BLOCK_ROEN_FALL = registerSoundEvent("block.roen.fall");
 
+    public static final SoundEvent BLOCK_LAIR_DOOR_OPEN = registerSoundEvent("block.lair_door.open");
+    public static final SoundEvent BLOCK_LAIR_DOOR_CLOSE = registerSoundEvent("block.lair_door.close");
+
     public static final SoundEvent BLOCK_LAIR_BREAK = registerSoundEvent("block.lair.break");
     public static final SoundEvent BLOCK_LAIR_STEP = registerSoundEvent("block.lair.step");
     public static final SoundEvent BLOCK_LAIR_PLACE = registerSoundEvent("block.lair.place");
