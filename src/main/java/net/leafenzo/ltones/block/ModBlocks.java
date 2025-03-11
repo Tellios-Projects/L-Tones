@@ -810,8 +810,7 @@ public class ModBlocks {
         RENDER_LAYER_CUTOUT.add(b);
         return b;
     }
-
-    //TODO: add mixin BlockSetType for custom door sounds
+    
     public static final Block DOOR_STEAK = registerDoor("door_steak", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.DEEPSLATE_GRAY), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_NEON = registerDoor("door_neon", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.PURPLE), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_TOY = registerDoor("door_toy", new DoorBlock(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BRIGHT_RED).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.CAST));

@@ -829,12 +829,12 @@
 	"block.lair.step": {
 		"subtitle": "subtitles.block.generic.footsteps",
 		"sounds": [
-			"block/netherrack/step1",
-			"block/netherrack/step2",
-			"block/netherrack/step3",
-			"block/netherrack/step4",
-			"block/netherrack/step5",
-			"block/netherrack/step6"
+			"ltones:block/lair/step1",
+			"ltones:block/lair/step2",
+			"ltones:block/lair/step3",
+			"ltones:block/lair/step4",
+			"ltones:block/lair/step5",
+			"ltones:block/lair/step6"
 		]
 	},
 	"block.lair.place": {
@@ -849,23 +849,23 @@
 	"block.lair.hit": {
 		"subtitle": "subtitles.block.generic.hit",
 		"sounds": [
-			"block/netherrack/step1",
-			"block/netherrack/step2",
-			"block/netherrack/step3",
-			"block/netherrack/step4",
-			"block/netherrack/step5",
-			"block/netherrack/step6"
+			"ltones:block/lair/step1",
+			"ltones:block/lair/step2",
+			"ltones:block/lair/step3",
+			"ltones:block/lair/step4",
+			"ltones:block/lair/step5",
+			"ltones:block/lair/step6"
 		]
 	},
 	"block.lair.fall": {
 		"subtitle": "subtitles.block.generic.fall",
 		"sounds": [
-			"block/netherrack/step1",
-			"block/netherrack/step2",
-			"block/netherrack/step3",
-			"block/netherrack/step4",
-			"block/netherrack/step5",
-			"block/netherrack/step6"
+			"ltones:block/lair/step1",
+			"ltones:block/lair/step2",
+			"ltones:block/lair/step3",
+			"ltones:block/lair/step4",
+			"ltones:block/lair/step5",
+			"ltones:block/lair/step6"
 		]
 	},
 	"block.polygon.activate": {
