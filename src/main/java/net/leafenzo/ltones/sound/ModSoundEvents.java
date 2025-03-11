@@ -84,6 +84,15 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_GLAXX_HIT = registerSoundEvent("block.glaxx.hit");
     public static final SoundEvent BLOCK_GLAXX_FALL = registerSoundEvent("block.glaxx.fall");
 
+    public static final SoundEvent BLOCK_FORTT_DOOR_OPEN = registerSoundEvent("block.fortt_door.open");
+    public static final SoundEvent BLOCK_FORTT_DOOR_CLOSE = registerSoundEvent("block.fortt_door.close");
+
+    public static final SoundEvent BLOCK_FORTT_BREAK = registerSoundEvent("block.fortt.break");
+    public static final SoundEvent BLOCK_FORTT_STEP = registerSoundEvent("block.fortt.step");
+    public static final SoundEvent BLOCK_FORTT_PLACE = registerSoundEvent("block.fortt.place");
+    public static final SoundEvent BLOCK_FORTT_HIT = registerSoundEvent("block.fortt.hit");
+    public static final SoundEvent BLOCK_FORTT_FALL = registerSoundEvent("block.fortt.fall");
+
     public static final SoundEvent BLOCK_ISZM_BREAK = registerSoundEvent("block.iszm.break");
     public static final SoundEvent BLOCK_ISZM_STEP = registerSoundEvent("block.iszm.step");
     public static final SoundEvent BLOCK_ISZM_PLACE = registerSoundEvent("block.iszm.place");

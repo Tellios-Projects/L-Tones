@@ -937,6 +937,72 @@
 			"ltones:block/glaxx/step6"
 		]
 	},
+
+	"block.fortt_door.open": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/fortt/door/open1",
+			"ltones:block/fortt/door/open2",
+			"ltones:block/fortt/door/open3",
+			"ltones:block/fortt/door/open4"
+		]
+	},
+	"block.fortt_door.close": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/fortt/door/close1",
+			"ltones:block/fortt/door/close2",
+			"ltones:block/fortt/door/close3",
+			"ltones:block/fortt/door/close4"
+		]
+	},
+
+	"block.fortt.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/fortt/break1",
+			"ltones:block/fortt/break2",
+			"ltones:block/fortt/break3",
+			"ltones:block/fortt/break4"
+		]
+	},
+	"block.fortt.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/fortt/step1",
+			"ltones:block/fortt/step2",
+			"ltones:block/fortt/step3",
+			"ltones:block/fortt/step4"
+		]
+	},
+	"block.fortt.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/fortt/break1",
+			"ltones:block/fortt/break2",
+			"ltones:block/fortt/break3",
+			"ltones:block/fortt/break4"
+		]
+	},
+	"block.fortt.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/fortt/step1",
+			"ltones:block/fortt/step2",
+			"ltones:block/fortt/step3",
+			"ltones:block/fortt/step4"
+		]
+	},
+	"block.fortt.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/fortt/step1",
+			"ltones:block/fortt/step2",
+			"ltones:block/fortt/step3",
+			"ltones:block/fortt/step4"
+		]
+	},
+
 	"block.polygon.activate": {
 		"subtitle": "",
 		"sounds": [

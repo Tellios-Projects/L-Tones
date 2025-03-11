@@ -110,7 +110,7 @@ public class ModBlocks {
     //<editor-fold desc ="Blocks - FORTT">
     private static final FabricBlockSettings forttMaterial = FabricBlockSettings.create()
             .strength(1.0f)
-            .sounds(ModBlockSoundGroup.CAST);
+            .sounds(ModBlockSoundGroup.FORTT);
     public static final Block FORTT = registerBlockInBlockset(FORTT_BLOCKS, "fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.WHITE_GRAY)));
     public static final Block BRIGHT_BLUE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_blue_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.BLUE)));
     public static final Block BRIGHT_RED_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_red_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DULL_RED)));
@@ -811,7 +811,7 @@ public class ModBlocks {
         return b;
     }
     
-    public static final Block DOOR_STEAK = registerDoor("door_steak", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.DEEPSLATE_GRAY), BlockSetType.POLISHED_BLACKSTONE));
+    public static final Block DOOR_STEAK = registerDoor("door_steak", new DoorBlock(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DEEPSLATE_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.FORTT));
     public static final Block DOOR_NEON = registerDoor("door_neon", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.PURPLE), BlockSetType.POLISHED_BLACKSTONE));
     public static final Block DOOR_TOY = registerDoor("door_toy", new DoorBlock(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BRIGHT_RED).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.CAST));
     public static final Block DOOR_POWER = registerDoor("door_power", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BLACK), BlockSetType.POLISHED_BLACKSTONE));
