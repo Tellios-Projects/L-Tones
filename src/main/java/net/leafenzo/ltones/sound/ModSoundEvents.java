@@ -78,6 +78,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_FLEQ_HIT = registerSoundEvent("block.fleq.hit");
     public static final SoundEvent BLOCK_FLEQ_FALL = registerSoundEvent("block.fleq.fall");
 
+    public static final SoundEvent BLOCK_GLAXX_BREAK = registerSoundEvent("block.glaxx.break");
+    public static final SoundEvent BLOCK_GLAXX_STEP = registerSoundEvent("block.glaxx.step");
+    public static final SoundEvent BLOCK_GLAXX_PLACE = registerSoundEvent("block.glaxx.place");
+    public static final SoundEvent BLOCK_GLAXX_HIT = registerSoundEvent("block.glaxx.hit");
+    public static final SoundEvent BLOCK_GLAXX_FALL = registerSoundEvent("block.glaxx.fall");
+
     public static final SoundEvent BLOCK_ISZM_BREAK = registerSoundEvent("block.iszm.break");
     public static final SoundEvent BLOCK_ISZM_STEP = registerSoundEvent("block.iszm.step");
     public static final SoundEvent BLOCK_ISZM_PLACE = registerSoundEvent("block.iszm.place");

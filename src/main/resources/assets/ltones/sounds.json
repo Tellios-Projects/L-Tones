@@ -886,6 +886,57 @@
 			"ltones:block/lair/step6"
 		]
 	},
+	"block.glaxx.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/glaxx/place1",
+			"ltones:block/glaxx/place2",
+			"ltones:block/glaxx/place3",
+			"ltones:block/glaxx/place4"
+		]
+	},
+	"block.glaxx.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/glaxx/step1",
+			"ltones:block/glaxx/step2",
+			"ltones:block/glaxx/step3",
+			"ltones:block/glaxx/step4",
+			"ltones:block/glaxx/step5",
+			"ltones:block/glaxx/step6"
+		]
+	},
+	"block.glaxx.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/glaxx/place1",
+			"ltones:block/glaxx/place2",
+			"ltones:block/glaxx/place3",
+			"ltones:block/glaxx/place4"
+		]
+	},
+	"block.glaxx.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/glaxx/step1",
+			"ltones:block/glaxx/step2",
+			"ltones:block/glaxx/step3",
+			"ltones:block/glaxx/step4",
+			"ltones:block/glaxx/step5",
+			"ltones:block/glaxx/step6"
+		]
+	},
+	"block.glaxx.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/glaxx/step1",
+			"ltones:block/glaxx/step2",
+			"ltones:block/glaxx/step3",
+			"ltones:block/glaxx/step4",
+			"ltones:block/glaxx/step5",
+			"ltones:block/glaxx/step6"
+		]
+	},
 	"block.polygon.activate": {
 		"subtitle": "",
 		"sounds": [

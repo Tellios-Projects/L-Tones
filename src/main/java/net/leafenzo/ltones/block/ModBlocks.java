@@ -132,7 +132,7 @@ public class ModBlocks {
     private static final FabricBlockSettings glaxxMaterial = FabricBlockSettings.create()
             .mapColor(MapColor.CLEAR)
             .strength(0.3f)
-            .sounds(BlockSoundGroup.STONE) // TODO custom sound
+            .sounds(ModBlockSoundGroup.GLAXX)
             .nonOpaque()
             .allowsSpawning(ModBlocks::never)
             .solidBlock(ModBlocks::never)
