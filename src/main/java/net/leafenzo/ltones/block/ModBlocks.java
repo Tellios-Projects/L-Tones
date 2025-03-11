@@ -46,7 +46,7 @@ public class ModBlocks {
     public static final HashMap<Block, Block> SLAB_FROM_BLOCK = new HashMap<Block, Block>();
     public static final ArrayList<Block> DOORS = new ArrayList<Block>();
 
-    public static final ArrayList<Block> AGON_BLOCKS = registerBlocksetOfVanillaDyedBlocks("agon", FabricBlockSettings.create().strength(0.3f).sounds(ModBlockSoundGroup.NEON).luminance(state -> 15));
+    public static final ArrayList<Block> AGON_BLOCKS = registerBlocksetOfVanillaDyedBlocks("agon", FabricBlockSettings.create().strength(0.3f).sounds(ModBlockSoundGroup.AGON).luminance(state -> 15));
     public static final ArrayList<Block> FORTT_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> GLAXX_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> CRAY_BLOCKS = new ArrayList<>();
@@ -743,7 +743,7 @@ public class ModBlocks {
             .mapColor(MapColor.TERRACOTTA_GRAY)
             .strength(0.6f)
 //            .luminance(state -> 5)
-            .sounds(ModBlockSoundGroup.POLYGON);
+            .sounds(ModBlockSoundGroup.BITT);
     public static final Block MINT_BITT = registerBlockInBlockset(BITT_BLOCKS, "mint_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
     public static final Block ORANGE_BITT = registerBlockInBlockset(BITT_BLOCKS, "orange_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
     public static final Block PURPLE_BITT = registerBlockInBlockset(BITT_BLOCKS, "purple_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));

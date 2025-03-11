@@ -4,6 +4,8 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvents;
 
 public class ModBlockSoundGroup {
+    public static final BlockSoundGroup AGON = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_AGON_BREAK, ModSoundEvents.BLOCK_AGON_STEP, ModSoundEvents.BLOCK_AGON_PLACE, ModSoundEvents.BLOCK_AGON_HIT, ModSoundEvents.BLOCK_AGON_FALL);
+    public static final BlockSoundGroup BITT = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_BITT_BREAK, ModSoundEvents.BLOCK_BITT_STEP, ModSoundEvents.BLOCK_BITT_PLACE, ModSoundEvents.BLOCK_BITT_HIT, ModSoundEvents.BLOCK_BITT_FALL);
     public static final BlockSoundGroup CAST = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_CAST_BREAK, ModSoundEvents.BLOCK_CAST_STEP, ModSoundEvents.BLOCK_CAST_PLACE, ModSoundEvents.BLOCK_CAST_HIT, ModSoundEvents.BLOCK_CAST_FALL);
     public static final BlockSoundGroup EXRI = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_EXRI_BREAK, ModSoundEvents.BLOCK_EXRI_STEP, ModSoundEvents.BLOCK_EXRI_PLACE, ModSoundEvents.BLOCK_EXRI_HIT, ModSoundEvents.BLOCK_EXRI_FALL);
     public static final BlockSoundGroup TONE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_TONE_BREAK, ModSoundEvents.BLOCK_TONE_STEP, ModSoundEvents.BLOCK_TONE_PLACE, ModSoundEvents.BLOCK_TONE_HIT, ModSoundEvents.BLOCK_TONE_FALL);

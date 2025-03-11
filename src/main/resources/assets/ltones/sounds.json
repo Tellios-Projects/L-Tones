@@ -1003,6 +1003,98 @@
 		]
 	},
 
+	"block.bitt.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/bitt/break1",
+			"ltones:block/bitt/break2",
+			"ltones:block/bitt/break3",
+			"ltones:block/bitt/break4"
+		]
+	},
+	"block.bitt.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/bitt/step1",
+			"ltones:block/bitt/step2",
+			"ltones:block/bitt/step3",
+			"ltones:block/bitt/step4"
+		]
+	},
+	"block.bitt.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/bitt/break1",
+			"ltones:block/bitt/break2",
+			"ltones:block/bitt/break3",
+			"ltones:block/bitt/break4"
+		]
+	},
+	"block.bitt.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/bitt/step1",
+			"ltones:block/bitt/step2",
+			"ltones:block/bitt/step3",
+			"ltones:block/bitt/step4"
+		]
+	},
+	"block.bitt.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/bitt/step1",
+			"ltones:block/bitt/step2",
+			"ltones:block/bitt/step3",
+			"ltones:block/bitt/step4"
+		]
+	},
+
+	"block.agon.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/agon/break1",
+			"ltones:block/agon/break2",
+			"ltones:block/agon/break3",
+			"ltones:block/agon/break4"
+		]
+	},
+	"block.agon.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/agon/step1",
+			"ltones:block/agon/step2",
+			"ltones:block/agon/step3",
+			"ltones:block/agon/step4"
+		]
+	},
+	"block.agon.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/agon/break1",
+			"ltones:block/agon/break2",
+			"ltones:block/agon/break3",
+			"ltones:block/agon/break4"
+		]
+	},
+	"block.agon.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/agon/step1",
+			"ltones:block/agon/step2",
+			"ltones:block/agon/step3",
+			"ltones:block/agon/step4"
+		]
+	},
+	"block.agon.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/agon/step1",
+			"ltones:block/agon/step2",
+			"ltones:block/agon/step3",
+			"ltones:block/agon/step4"
+		]
+	},
+
 	"block.polygon.activate": {
 		"subtitle": "",
 		"sounds": [

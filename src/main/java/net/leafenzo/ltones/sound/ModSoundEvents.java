@@ -93,6 +93,18 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_FORTT_HIT = registerSoundEvent("block.fortt.hit");
     public static final SoundEvent BLOCK_FORTT_FALL = registerSoundEvent("block.fortt.fall");
 
+    public static final SoundEvent BLOCK_BITT_BREAK = registerSoundEvent("block.bitt.break");
+    public static final SoundEvent BLOCK_BITT_STEP = registerSoundEvent("block.bitt.step");
+    public static final SoundEvent BLOCK_BITT_PLACE = registerSoundEvent("block.bitt.place");
+    public static final SoundEvent BLOCK_BITT_HIT = registerSoundEvent("block.bitt.hit");
+    public static final SoundEvent BLOCK_BITT_FALL = registerSoundEvent("block.bitt.fall");
+
+    public static final SoundEvent BLOCK_AGON_BREAK = registerSoundEvent("block.agon.break");
+    public static final SoundEvent BLOCK_AGON_STEP = registerSoundEvent("block.agon.step");
+    public static final SoundEvent BLOCK_AGON_PLACE = registerSoundEvent("block.agon.place");
+    public static final SoundEvent BLOCK_AGON_HIT = registerSoundEvent("block.agon.hit");
+    public static final SoundEvent BLOCK_AGON_FALL = registerSoundEvent("block.agon.fall");
+
     public static final SoundEvent BLOCK_ISZM_BREAK = registerSoundEvent("block.iszm.break");
     public static final SoundEvent BLOCK_ISZM_STEP = registerSoundEvent("block.iszm.step");
     public static final SoundEvent BLOCK_ISZM_PLACE = registerSoundEvent("block.iszm.place");
