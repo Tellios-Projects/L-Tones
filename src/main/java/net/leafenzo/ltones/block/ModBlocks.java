@@ -841,7 +841,8 @@ public class ModBlocks {
             .nonOpaque()
             .noCollision()
             .pistonBehavior(PistonBehavior.DESTROY);
-    // public static final Block DECAL_LITHIUM = registerDecalBlock("decal_lithium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.LITHIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_LITHIUM); }
+    public static final Block DECAL_LITHIUM = registerDecalBlock("decal_lithium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.LITHIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_LITHIUM); }
+    public static final Block DECAL_ANTIBRASS = registerDecalBlock("decal_antibrass", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_ANTIBRASS); }
     public static final Block DECAL_CONDUCTIUM = registerDecalBlock("decal_conductium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_CONDUCTIUM); }
     public static final Block DECAL_KERBESIUM = registerDecalBlock("decal_kerbesium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_KERBESIUM); }
     public static final Block DECAL_ORGANIC_BRASS = registerDecalBlock("decal_organic_brass", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_ORGANIC_BRASS); }
