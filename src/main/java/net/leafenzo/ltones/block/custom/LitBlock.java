@@ -19,9 +19,11 @@ public class LitBlock extends Block {
     public static final BooleanProperty LIT = Properties.LIT;
     public final SoundEvent turnOnSound;
     public final SoundEvent turnOffSound;
+    public boolean flicker = false;
 
-    public LitBlock(AbstractBlock.Settings settings, @Nullable SoundEvent turnOnSound, @Nullable SoundEvent turnOffSound) {
+    public LitBlock(AbstractBlock.Settings settings, @Nullable SoundEvent turnOnSound, @Nullable SoundEvent turnOffSound, @Nullable boolean Flickers) {
         super(settings);
+        flicker = Flickers;
         this.turnOnSound = turnOnSound;
         this.turnOffSound = turnOffSound;
         this.setDefaultState((BlockState)this.getDefaultState().with(LIT, false));
@@ -57,7 +59,7 @@ public class LitBlock extends Block {
     //TODO learn a better way to do this from Derelict
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        boolean bl = state.get(LIT);
+        boolean bl = state.get(LIT) && flicker;
         if (bl /* && world.getRecievedRedstonePower(pos) == 1 */) {
             world.scheduleBlockTick(pos, this, 2);
             world.setBlockState(pos, (BlockState)state.cycle(LIT), Block.NOTIFY_LISTENERS); // Bypass sound

@@ -910,8 +910,10 @@
 	"block.polygon.hit": {
 		"subtitle": "subtitles.block.generic.hit",
 		"sounds": [
-			"ltones:block/redds/step1",
-			"ltones:block/redds/step2"
+			"ltones:block/host/step1",
+			"ltones:block/host/step2",
+			"ltones:block/host/step3",
+			"ltones:block/host/step4"
 		]
 	},
 	"block.polygon.fall": {
@@ -921,6 +923,51 @@
 			"ltones:block/redds/step2",
 			"ltones:block/redds/step3",
 			"ltones:block/redds/step4"
+		]
+	},
+
+	"block.host.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/host/break1",
+			"ltones:block/host/break2",
+			"ltones:block/host/break3"
+		]
+	},
+	"block.host.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/host/step1",
+			"ltones:block/host/step2",
+			"ltones:block/host/step3",
+			"ltones:block/host/step4"
+		]
+	},
+	"block.host.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/host/place1",
+			"ltones:block/host/place2",
+			"ltones:block/host/place3",
+			"ltones:block/host/place4"
+		]
+	},
+	"block.host.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/host/step1",
+			"ltones:block/host/step2",
+			"ltones:block/host/step3",
+			"ltones:block/host/step4"
+		]
+	},
+	"block.host.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/host/step1",
+			"ltones:block/host/step2",
+			"ltones:block/host/step3",
+			"ltones:block/host/step4"
 		]
 	},
 
@@ -992,6 +1039,70 @@
 			"ltones:block/lair/step6"
 		]
 	},
+
+	"block.tank_door.open": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/tank/door/open1",
+			"ltones:block/tank/door/open2",
+			"ltones:block/tank/door/open3"
+		]
+	},
+	"block.tank_door.close": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/tank/door/close1",
+			"ltones:block/tank/door/close2",
+			"ltones:block/tank/door/close3"
+		]
+	},
+
+	"block.tank.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/tank/break1",
+			"ltones:block/tank/break2",
+			"ltones:block/tank/break3",
+			"ltones:block/tank/break4"
+		]
+	},
+	"block.tank.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/tank/step1",
+			"ltones:block/tank/step2",
+			"ltones:block/tank/step3",
+			"ltones:block/tank/step4"
+		]
+	},
+	"block.tank.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/tank/break1",
+			"ltones:block/tank/break2",
+			"ltones:block/tank/break3",
+			"ltones:block/tank/break4"
+		]
+	},
+	"block.tank.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/tank/step1",
+			"ltones:block/tank/step2",
+			"ltones:block/tank/step3",
+			"ltones:block/tank/step4"
+		]
+	},
+	"block.tank.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/tank/step1",
+			"ltones:block/tank/step2",
+			"ltones:block/tank/step3",
+			"ltones:block/tank/step4"
+		]
+	},
+
 	"block.glaxx.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [

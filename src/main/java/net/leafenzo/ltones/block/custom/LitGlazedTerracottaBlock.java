@@ -15,10 +15,10 @@ public class LitGlazedTerracottaBlock extends LitBlock {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
     public LitGlazedTerracottaBlock(Settings settings, @Nullable SoundEvent turnOnSound, @Nullable SoundEvent turnOffSound) {
-        super(settings, turnOnSound, turnOffSound);
+        super(settings, turnOnSound, turnOffSound, false);
     }
     public LitGlazedTerracottaBlock(Settings settings) {
-        super(settings, null, null);
+        super(settings, null, null, false);
     }
 
     @Override

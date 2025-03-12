@@ -29,11 +29,11 @@ public class LitSlabBlock extends LitBlock implements Waterloggable {
     protected static final VoxelShape TOP_SHAPE = Block.createCuboidShape(0.0, 8.0, 0.0, 16.0, 16.0, 16.0);
 
     public LitSlabBlock(AbstractBlock.Settings settings, @Nullable SoundEvent turnOnSound, @Nullable SoundEvent turnOffSound) {
-        super(settings, turnOnSound, turnOffSound);
+        super(settings, turnOnSound, turnOffSound, false);
         this.setDefaultState((BlockState)((BlockState)this.getDefaultState().with(TYPE, SlabType.BOTTOM)).with(WATERLOGGED, false).with(LIT, false));
     }
     public LitSlabBlock(AbstractBlock.Settings settings) {
-        super(settings, null, null);
+        super(settings, null, null, false);
         this.setDefaultState((BlockState)((BlockState)this.getDefaultState().with(TYPE, SlabType.BOTTOM)).with(WATERLOGGED, false).with(LIT, false));
     }
 
