@@ -173,6 +173,10 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
                 .add(ModBlocks.ANTENNA)
         ;
 
+        for(Block block : ModBlocks.DECAL_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.COMBINATION_STEP_SOUND_BLOCKS).add(block);
+        }
+
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
         //.add(ModBlocks.)
         ;
