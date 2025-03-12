@@ -8,9 +8,19 @@ import net.minecraft.particle.DefaultParticleType;
 
 
 @Environment(value = EnvType.CLIENT)
-public class ExampleParticle extends SpriteBillboardParticle {
-    protected ExampleParticle(ClientWorld clientWorld, double xCoord, double yCoord, double zCoord, double xd, double yd, double zd) {
+public class ZkulParticle extends SpriteBillboardParticle {
+    protected ZkulParticle(ClientWorld clientWorld, double xCoord, double yCoord, double zCoord, double xd, double yd, double zd) {
         super(clientWorld, xCoord, yCoord, zCoord, xd, yd, zd);
+        this.maxAge = (int)(150.0f / (this.random.nextFloat() * 0.9f + 0.1f));
+        this.scale = 0.5f;
+        this.velocityX = 0;
+        this.velocityY = 0.05f;
+        this.velocityZ = 0;
+    }
+
+    @Override
+    public int getBrightness(float tint) {
+        return 240;
     }
 
     @Override
@@ -18,16 +28,15 @@ public class ExampleParticle extends SpriteBillboardParticle {
         this.prevPosX = this.x;
         this.prevPosY = this.y;
         this.prevPosZ = this.z;
-        if (this.maxAge-- <= 0) {
-//            world.playSound(null, new BlockPos((int)this.x, (int)this.y, (int)this.z), SoundEvents.BLOCK_BUBBLE_COLUMN_BUBBLE_POP, SoundCategory.PLAYERS, 10.0f, 1.0f);
+        if (this.age++ >= this.maxAge) {
             this.markDead();
             return;
         }
         this.velocityY += 0.002;
         this.move(this.velocityX, this.velocityY, this.velocityZ);
-        this.velocityX *= (double)0.85f;
-        this.velocityY *= (double)0.85f;
-        this.velocityZ *= (double)0.85f;
+        this.velocityX *= (double)0.01f;
+        this.velocityY *= (double)0.05f;
+        this.velocityZ *= (double)0.01f;
 //        if (!this.world.getFluidState(BlockPos.ofFloored(this.x, this.y, this.z)).isIn(FluidTags.WATER)) {
 //            this.markDead();
 //        }
@@ -47,7 +56,7 @@ public class ExampleParticle extends SpriteBillboardParticle {
         }
 
         public Particle createParticle(DefaultParticleType particleType, ClientWorld level, double x, double y, double z, double dx, double dy, double dz) {
-            ExampleParticle particle = new ExampleParticle(level, x, y, z, dx, dy, dz);
+            ZkulParticle particle = new ZkulParticle(level, x, y, z, dx, dy, dz);
             particle.setSprite(spriteProvider);
             return particle;
         }

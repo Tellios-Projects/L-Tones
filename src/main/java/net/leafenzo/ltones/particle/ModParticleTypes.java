@@ -10,7 +10,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModParticleTypes {
-    public static final DefaultParticleType EXAMPLE_PARTICLE = registerParticle("example_particle");
+    public static final DefaultParticleType ZKUL = registerParticle("zkul");
 
     private static DefaultParticleType registerParticle(String name) {
         return Registry.register(Registries.PARTICLE_TYPE, new Identifier(Super.MOD_ID, name), FabricParticleTypes.simple());
@@ -19,7 +19,7 @@ public class ModParticleTypes {
     public static void registerFactoriesForClient() {
         ParticleFactoryRegistry registry = ParticleFactoryRegistry.getInstance();
 
-        registry.register(EXAMPLE_PARTICLE, ExampleParticle.Factory::new);
+        registry.register(ZKUL, ZkulParticle.Factory::new);
     }
 
     public static void registerModParticleTypes() {

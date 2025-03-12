@@ -656,6 +656,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ABSTRACT_TONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FRAMED_TONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FRAMED_TONE_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ZKUL);
 
         registerCRT(blockStateModelGenerator, ModBlocks.CRT);
         registerCRT(blockStateModelGenerator, ModBlocks.AGED_CRT);

@@ -137,5 +137,6 @@ public class ModItemGroups {
                         entries.add(ModItems.CORPOREAL_VAPOR);
                         entries.add(ModItems.FLAKES);
                         entries.add(ModItems.NETWORKING);
+                        entries.add(ModBlocks.ZKUL);
                     }).build());
 }
