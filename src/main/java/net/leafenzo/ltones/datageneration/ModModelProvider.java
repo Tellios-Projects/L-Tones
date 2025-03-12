@@ -214,6 +214,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         //<editor-fold desc = "Models - decals">
         this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_LITHIUM);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_LITHIUM_CHUNK);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_RAW_LITHIUM);
         this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_CONDUCTIUM);
         this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_ANTIBRASS);
         this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_KERBESIUM);
