@@ -5,6 +5,9 @@ import net.minecraft.sound.SoundEvents;
 
 public class ModBlockSoundGroup {
     public static final BlockSoundGroup AGON = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_AGON_BREAK, ModSoundEvents.BLOCK_AGON_STEP, ModSoundEvents.BLOCK_AGON_PLACE, ModSoundEvents.BLOCK_AGON_HIT, ModSoundEvents.BLOCK_AGON_FALL);
+    public static final BlockSoundGroup NURR = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_NURR_BREAK, ModSoundEvents.BLOCK_NURR_STEP, ModSoundEvents.BLOCK_NURR_PLACE, ModSoundEvents.BLOCK_NURR_HIT, ModSoundEvents.BLOCK_NURR_FALL);
+    public static final BlockSoundGroup CRAY = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_CRAY_BREAK, ModSoundEvents.BLOCK_CRAY_STEP, ModSoundEvents.BLOCK_CRAY_PLACE, ModSoundEvents.BLOCK_CRAY_HIT, ModSoundEvents.BLOCK_CRAY_FALL);
+    public static final BlockSoundGroup VEELD = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_VEELD_BREAK, ModSoundEvents.BLOCK_VEELD_STEP, ModSoundEvents.BLOCK_VEELD_PLACE, ModSoundEvents.BLOCK_VEELD_HIT, ModSoundEvents.BLOCK_VEELD_FALL);
     public static final BlockSoundGroup BITT = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_BITT_BREAK, ModSoundEvents.BLOCK_BITT_STEP, ModSoundEvents.BLOCK_BITT_PLACE, ModSoundEvents.BLOCK_BITT_HIT, ModSoundEvents.BLOCK_BITT_FALL);
     public static final BlockSoundGroup CAST = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_CAST_BREAK, ModSoundEvents.BLOCK_CAST_STEP, ModSoundEvents.BLOCK_CAST_PLACE, ModSoundEvents.BLOCK_CAST_HIT, ModSoundEvents.BLOCK_CAST_FALL);
     public static final BlockSoundGroup EXRI = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_EXRI_BREAK, ModSoundEvents.BLOCK_EXRI_STEP, ModSoundEvents.BLOCK_EXRI_PLACE, ModSoundEvents.BLOCK_EXRI_HIT, ModSoundEvents.BLOCK_EXRI_FALL);
@@ -22,6 +25,8 @@ public class ModBlockSoundGroup {
     public static final BlockSoundGroup KRYP_NODE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_KRYP_NODE_BREAK, ModSoundEvents.BLOCK_KRYP_STEP, ModSoundEvents.BLOCK_KRYP_NODE_PLACE, ModSoundEvents.BLOCK_KRYP_HIT, ModSoundEvents.BLOCK_KRYP_FALL);
     public static final BlockSoundGroup MINN = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_MINN_BREAK, ModSoundEvents.BLOCK_MINN_STEP, ModSoundEvents.BLOCK_MINN_PLACE, ModSoundEvents.BLOCK_MINN_HIT, ModSoundEvents.BLOCK_MINN_FALL);
     public static final BlockSoundGroup LITHIUM = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_LITHIUM_BREAK, ModSoundEvents.BLOCK_LITHIUM_STEP, ModSoundEvents.BLOCK_LITHIUM_PLACE, ModSoundEvents.BLOCK_LITHIUM_HIT, ModSoundEvents.BLOCK_LITHIUM_FALL);
+    public static final BlockSoundGroup LITHIUM_ORE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_LITHIUM_ORE_BREAK, ModSoundEvents.BLOCK_LITHIUM_ORE_STEP, ModSoundEvents.BLOCK_LITHIUM_ORE_PLACE, ModSoundEvents.BLOCK_LITHIUM_ORE_HIT, ModSoundEvents.BLOCK_LITHIUM_ORE_FALL);
+    public static final BlockSoundGroup DEEPSLATE_LITHIUM_ORE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DEEPSLATE_LITHIUM_ORE_BREAK, ModSoundEvents.BLOCK_DEEPSLATE_LITHIUM_ORE_STEP, ModSoundEvents.BLOCK_DEEPSLATE_LITHIUM_ORE_PLACE, ModSoundEvents.BLOCK_DEEPSLATE_LITHIUM_ORE_HIT, ModSoundEvents.BLOCK_DEEPSLATE_LITHIUM_ORE_FALL);
 
 
     //TODO add sfx files for these

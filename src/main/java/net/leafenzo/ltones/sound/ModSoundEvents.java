@@ -99,6 +99,30 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_BITT_HIT = registerSoundEvent("block.bitt.hit");
     public static final SoundEvent BLOCK_BITT_FALL = registerSoundEvent("block.bitt.fall");
 
+    public static final SoundEvent BLOCK_CRAY_DOOR_OPEN = registerSoundEvent("block.cray_door.open");
+    public static final SoundEvent BLOCK_CRAY_DOOR_CLOSE = registerSoundEvent("block.cray_door.close");
+
+    public static final SoundEvent BLOCK_CRAY_BREAK = registerSoundEvent("block.cray.break");
+    public static final SoundEvent BLOCK_CRAY_STEP = registerSoundEvent("block.cray.step");
+    public static final SoundEvent BLOCK_CRAY_PLACE = registerSoundEvent("block.cray.place");
+    public static final SoundEvent BLOCK_CRAY_HIT = registerSoundEvent("block.cray.hit");
+    public static final SoundEvent BLOCK_CRAY_FALL = registerSoundEvent("block.cray.fall");
+
+    public static final SoundEvent BLOCK_VEELD_DOOR_OPEN = registerSoundEvent("block.veeld_door.open");
+    public static final SoundEvent BLOCK_VEELD_DOOR_CLOSE = registerSoundEvent("block.veeld_door.close");
+
+    public static final SoundEvent BLOCK_VEELD_BREAK = registerSoundEvent("block.veeld.break");
+    public static final SoundEvent BLOCK_VEELD_STEP = registerSoundEvent("block.veeld.step");
+    public static final SoundEvent BLOCK_VEELD_PLACE = registerSoundEvent("block.veeld.place");
+    public static final SoundEvent BLOCK_VEELD_HIT = registerSoundEvent("block.veeld.hit");
+    public static final SoundEvent BLOCK_VEELD_FALL = registerSoundEvent("block.veeld.fall");
+
+    public static final SoundEvent BLOCK_NURR_BREAK = registerSoundEvent("block.nurr.break");
+    public static final SoundEvent BLOCK_NURR_STEP = registerSoundEvent("block.nurr.step");
+    public static final SoundEvent BLOCK_NURR_PLACE = registerSoundEvent("block.nurr.place");
+    public static final SoundEvent BLOCK_NURR_HIT = registerSoundEvent("block.nurr.hit");
+    public static final SoundEvent BLOCK_NURR_FALL = registerSoundEvent("block.nurr.fall");
+
     public static final SoundEvent BLOCK_AGON_BREAK = registerSoundEvent("block.agon.break");
     public static final SoundEvent BLOCK_AGON_STEP = registerSoundEvent("block.agon.step");
     public static final SoundEvent BLOCK_AGON_PLACE = registerSoundEvent("block.agon.place");
@@ -167,6 +191,18 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_LITHIUM_PLACE = registerSoundEvent("block.lithium.place");
     public static final SoundEvent BLOCK_LITHIUM_HIT = registerSoundEvent("block.lithium.hit");
     public static final SoundEvent BLOCK_LITHIUM_FALL = registerSoundEvent("block.lithium.fall");
+
+    public static final SoundEvent BLOCK_LITHIUM_ORE_BREAK = registerSoundEvent("block.lithium_ore.break");
+    public static final SoundEvent BLOCK_LITHIUM_ORE_STEP = registerSoundEvent("block.lithium_ore.step");
+    public static final SoundEvent BLOCK_LITHIUM_ORE_PLACE = registerSoundEvent("block.lithium_ore.place");
+    public static final SoundEvent BLOCK_LITHIUM_ORE_HIT = registerSoundEvent("block.lithium_ore.hit");
+    public static final SoundEvent BLOCK_LITHIUM_ORE_FALL = registerSoundEvent("block.lithium_ore.fall");
+
+    public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_BREAK = registerSoundEvent("block.deepslate_lithium_ore.break");
+    public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_STEP = registerSoundEvent("block.deepslate_lithium_ore.step");
+    public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_PLACE = registerSoundEvent("block.deepslate_lithium_ore.place");
+    public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_HIT = registerSoundEvent("block.deepslate_lithium_ore.hit");
+    public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_FALL = registerSoundEvent("block.deepslate_lithium_ore.fall");
     
     public static final SoundEvent BLOCK_ZKUL_BREAK = registerSoundEvent("block.zkul.break");
     public static final SoundEvent BLOCK_ZKUL_STEP = registerSoundEvent("block.zkul.step");
