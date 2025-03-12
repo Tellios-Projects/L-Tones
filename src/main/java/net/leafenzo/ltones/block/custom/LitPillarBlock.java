@@ -13,8 +13,8 @@ import org.jetbrains.annotations.Nullable;
 public class LitPillarBlock extends LitBlock {
     public static final EnumProperty<Direction.Axis> AXIS = Properties.AXIS;
 
-    public LitPillarBlock(Settings settings, @Nullable SoundEvent turnOnSound, @Nullable SoundEvent turnOffSound) {
-        super(settings, turnOnSound, turnOffSound, false);
+    public LitPillarBlock(Settings settings, @Nullable SoundEvent turnOnSound, @Nullable SoundEvent turnOffSound, boolean Flickers) {
+        super(settings, turnOnSound, turnOffSound, Flickers);
         this.setDefaultState((BlockState)this.getDefaultState().with(AXIS, Direction.Axis.Y));
     }
     public LitPillarBlock(Settings settings) {

@@ -14,8 +14,8 @@ import org.jetbrains.annotations.Nullable;
 public class LitGlazedTerracottaBlock extends LitBlock {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
-    public LitGlazedTerracottaBlock(Settings settings, @Nullable SoundEvent turnOnSound, @Nullable SoundEvent turnOffSound) {
-        super(settings, turnOnSound, turnOffSound, false);
+    public LitGlazedTerracottaBlock(Settings settings, @Nullable SoundEvent turnOnSound, @Nullable SoundEvent turnOffSound, boolean Flickers) {
+        super(settings, turnOnSound, turnOffSound, Flickers);
     }
     public LitGlazedTerracottaBlock(Settings settings) {
         super(settings, null, null, false);
