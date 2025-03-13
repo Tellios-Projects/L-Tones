@@ -988,10 +988,10 @@
 	"block.polygon.hit": {
 		"subtitle": "subtitles.block.generic.hit",
 		"sounds": [
-			"ltones:block/host/step1",
-			"ltones:block/host/step2",
-			"ltones:block/host/step3",
-			"ltones:block/host/step4"
+			"ltones:block/redds/step1",
+			"ltones:block/redds/step2",
+			"ltones:block/redds/step3",
+			"ltones:block/redds/step4"
 		]
 	},
 	"block.polygon.fall": {
@@ -1009,7 +1009,8 @@
 		"sounds": [
 			"ltones:block/host/break1",
 			"ltones:block/host/break2",
-			"ltones:block/host/break3"
+			"ltones:block/host/break3",
+			"ltones:block/host/break4"
 		]
 	},
 	"block.host.step": {
@@ -1018,16 +1019,17 @@
 			"ltones:block/host/step1",
 			"ltones:block/host/step2",
 			"ltones:block/host/step3",
-			"ltones:block/host/step4"
+			"ltones:block/host/step4",
+			"ltones:block/host/step5"
 		]
 	},
 	"block.host.place": {
 		"subtitle": "subtitles.block.generic.place",
 		"sounds": [
-			"ltones:block/host/place1",
-			"ltones:block/host/place2",
-			"ltones:block/host/place3",
-			"ltones:block/host/place4"
+			"ltones:block/host/break1",
+			"ltones:block/host/break2",
+			"ltones:block/host/break3",
+			"ltones:block/host/break4"
 		]
 	},
 	"block.host.hit": {
@@ -1036,7 +1038,8 @@
 			"ltones:block/host/step1",
 			"ltones:block/host/step2",
 			"ltones:block/host/step3",
-			"ltones:block/host/step4"
+			"ltones:block/host/step4",
+			"ltones:block/host/step5"
 		]
 	},
 	"block.host.fall": {
@@ -1045,7 +1048,8 @@
 			"ltones:block/host/step1",
 			"ltones:block/host/step2",
 			"ltones:block/host/step3",
-			"ltones:block/host/step4"
+			"ltones:block/host/step4",
+			"ltones:block/host/step5"
 		]
 	},
 
