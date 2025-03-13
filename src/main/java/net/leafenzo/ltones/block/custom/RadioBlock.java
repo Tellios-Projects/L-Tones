@@ -25,10 +25,10 @@ import net.minecraft.world.event.GameEvent;
 public class RadioBlock extends BasicHorizontalFacingBlock {
     public static final BooleanProperty ENABLED = Properties.ENABLED;
     public static final VoxelShape[] HORIZONTAL_FACING_TO_COLLISION_SHAPE = new VoxelShape[] {
-            Block.createCuboidShape(0.5, 0.0, 5.5, 14.5, 12.0, 10.5),
-            Block.createCuboidShape(0.5, 0.0, 5.5, 14.5, 12.0, 10.5),
-            Block.createCuboidShape(5.5, 0.0, 0.5, 10.5, 12.0, 14.5),
-            Block.createCuboidShape(5.5, 0.0, 0.5, 10.5, 12.0, 14.5)
+            Block.createCuboidShape(2.0, 0.0, 4.0, 14.0, 10.0, 12.0),
+            Block.createCuboidShape(2.0, 0.0, 4.0, 14.0, 10.0, 12.0),
+            Block.createCuboidShape(4.0, 0.0, 2.0, 12.0, 10.0, 14.0),
+            Block.createCuboidShape(4.0, 0.0, 2.0, 12.0, 10.0, 14.0)
     };
 
     public RadioBlock(Settings settings) {
