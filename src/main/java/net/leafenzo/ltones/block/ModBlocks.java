@@ -802,6 +802,7 @@ public class ModBlocks {
     public static final Block ANTENNA = registerBlock("antenna", new AntennaBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_GRAY).strength(3.0f, 6.0f).sounds(BlockSoundGroup.COPPER).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY).requiresTool()));
         static { RENDER_LAYER_CUTOUT.add(ANTENNA); }
     public static final Block RADIO = registerBlock("radio", new RadioBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_GRAY).strength(1.0f).sounds(BlockSoundGroup.METAL).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY).requiresTool()));
+        static { RENDER_LAYER_CUTOUT.add(RADIO); }
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - Doors">
