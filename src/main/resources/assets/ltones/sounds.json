@@ -100,6 +100,23 @@
 		]
 	},
 
+	"block.korp_door.open": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/korp/door/open1",
+			"ltones:block/korp/door/open2",
+			"ltones:block/korp/door/open3"
+		]
+	},
+	"block.korp_door.close": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/korp/door/close1",
+			"ltones:block/korp/door/close2",
+			"ltones:block/korp/door/close3"
+		]
+	},
+
 	"block.korp.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -1484,6 +1501,22 @@
 		]
 	},
 
+
+	"block.nurr_door.open": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/nurr/door/open1",
+			"ltones:block/nurr/door/open2"
+		]
+	},
+	"block.nurr_door.close": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/nurr/door/close1",
+			"ltones:block/nurr/door/close2",
+			"ltones:block/nurr/door/close3"
+		]
+	},
 	"block.nurr.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
