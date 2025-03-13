@@ -1,6 +1,7 @@
 package net.leafenzo.ltones.block.custom;
 
 import net.leafenzo.ltones.particle.ModParticleTypes;
+import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.particle.ParticleTypes;
@@ -21,12 +22,12 @@ public class ZkulBlock extends Block {
 
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (world.getRandom().nextFloat() > 0.8) {
-            world.playSoundAtBlockCenter(pos, SoundEvents.BLOCK_RESPAWN_ANCHOR_AMBIENT, SoundCategory.BLOCKS, 0.8f, (float) (world.getRandom().nextFloat() * 0.2 + 0.5), false);
+        if (random.nextInt(20) == 0) {
+            world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_ZKUL_AMBIENT, SoundCategory.BLOCKS, 0.25f, (float) (world.getRandom().nextFloat() * 0.2 + 1.0), false);
         }
 
         for (int i = 0; i < 2; i++) {
-            world.addParticle(ModParticleTypes.ZKUL, ((world.getRandom().nextFloat() - 0.5f) * 16) + pos.getX(), ((world.getRandom().nextFloat() - 0.5f) * 16) + pos.getY(), ((world.getRandom().nextFloat() - 0.5f) * 16) + pos.getZ(), 0, 0, 0);
+            world.addParticle(ModParticleTypes.ZKUL, ((world.getRandom().nextFloat() - 0.5f) * 32) + pos.getX(), ((world.getRandom().nextFloat() - 0.5f) * 32) + pos.getY(), ((world.getRandom().nextFloat() - 0.5f) * 32) + pos.getZ(), 0, 0, 0);
         }
     }
 }

@@ -7,6 +7,9 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 public class ModSoundEvents {
+    public static final SoundEvent BLOCK_CRATE_OPEN = registerSoundEvent("block.crate.open");
+    public static final SoundEvent BLOCK_CRATE_CLOSE = registerSoundEvent("block.crate.close");
+
     public static final SoundEvent BLOCK_CAST_DOOR_OPEN = registerSoundEvent("block.cast_door.open");
     public static final SoundEvent BLOCK_CAST_DOOR_CLOSE = registerSoundEvent("block.cast_door.close");
 
@@ -15,6 +18,15 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_CAST_PLACE = registerSoundEvent("block.cast.place");
     public static final SoundEvent BLOCK_CAST_HIT = registerSoundEvent("block.cast.hit");
     public static final SoundEvent BLOCK_CAST_FALL = registerSoundEvent("block.cast.fall");
+
+    public static final SoundEvent BLOCK_KORP_NODE_BREAK = registerSoundEvent("block.korp_node.break");
+    public static final SoundEvent BLOCK_KORP_NODE_PLACE = registerSoundEvent("block.korp_node.place");
+
+    public static final SoundEvent BLOCK_KORP_BREAK = registerSoundEvent("block.korp.break");
+    public static final SoundEvent BLOCK_KORP_STEP = registerSoundEvent("block.korp.step");
+    public static final SoundEvent BLOCK_KORP_PLACE = registerSoundEvent("block.korp.place");
+    public static final SoundEvent BLOCK_KORP_HIT = registerSoundEvent("block.korp.hit");
+    public static final SoundEvent BLOCK_KORP_FALL = registerSoundEvent("block.korp.fall");
 
     public static final SoundEvent BLOCK_FOIL_BREAK = registerSoundEvent("block.foil.break");
     public static final SoundEvent BLOCK_FOIL_STEP = registerSoundEvent("block.foil.step");
@@ -218,7 +230,8 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_PLACE = registerSoundEvent("block.deepslate_lithium_ore.place");
     public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_HIT = registerSoundEvent("block.deepslate_lithium_ore.hit");
     public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_FALL = registerSoundEvent("block.deepslate_lithium_ore.fall");
-    
+
+    public static final SoundEvent BLOCK_ZKUL_AMBIENT = registerSoundEvent("block.zkul.ambient");
     public static final SoundEvent BLOCK_ZKUL_BREAK = registerSoundEvent("block.zkul.break");
     public static final SoundEvent BLOCK_ZKUL_STEP = registerSoundEvent("block.zkul.step");
     public static final SoundEvent BLOCK_ZKUL_PLACE = registerSoundEvent("block.zkul.place");

@@ -5,6 +5,8 @@ import net.minecraft.sound.SoundEvents;
 
 public class ModBlockSoundGroup {
     public static final BlockSoundGroup AGON = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_AGON_BREAK, ModSoundEvents.BLOCK_AGON_STEP, ModSoundEvents.BLOCK_AGON_PLACE, ModSoundEvents.BLOCK_AGON_HIT, ModSoundEvents.BLOCK_AGON_FALL);
+    public static final BlockSoundGroup KORP = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_KORP_BREAK, ModSoundEvents.BLOCK_KORP_STEP, ModSoundEvents.BLOCK_KORP_PLACE, ModSoundEvents.BLOCK_KORP_HIT, ModSoundEvents.BLOCK_KORP_FALL);
+    public static final BlockSoundGroup KORP_NODE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_KORP_NODE_BREAK, ModSoundEvents.BLOCK_KORP_STEP, ModSoundEvents.BLOCK_KORP_NODE_PLACE, ModSoundEvents.BLOCK_KORP_HIT, ModSoundEvents.BLOCK_KORP_FALL);
     public static final BlockSoundGroup HOST = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_HOST_BREAK, ModSoundEvents.BLOCK_HOST_STEP, ModSoundEvents.BLOCK_HOST_PLACE, ModSoundEvents.BLOCK_HOST_HIT, ModSoundEvents.BLOCK_HOST_FALL);
     public static final BlockSoundGroup TANK = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_TANK_BREAK, ModSoundEvents.BLOCK_TANK_STEP, ModSoundEvents.BLOCK_TANK_PLACE, ModSoundEvents.BLOCK_TANK_HIT, ModSoundEvents.BLOCK_TANK_FALL);
     public static final BlockSoundGroup NURR = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_NURR_BREAK, ModSoundEvents.BLOCK_NURR_STEP, ModSoundEvents.BLOCK_NURR_PLACE, ModSoundEvents.BLOCK_NURR_HIT, ModSoundEvents.BLOCK_NURR_FALL);

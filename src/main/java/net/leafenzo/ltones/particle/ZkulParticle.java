@@ -12,7 +12,7 @@ public class ZkulParticle extends SpriteBillboardParticle {
     protected ZkulParticle(ClientWorld clientWorld, double xCoord, double yCoord, double zCoord, double xd, double yd, double zd) {
         super(clientWorld, xCoord, yCoord, zCoord, xd, yd, zd);
         this.maxAge = (int)(150.0f / (this.random.nextFloat() * 0.9f + 0.1f));
-        this.scale = 0.5f;
+        this.scale = 0.3f;
         this.velocityX = 0;
         this.velocityY = 0.05f;
         this.velocityZ = 0;

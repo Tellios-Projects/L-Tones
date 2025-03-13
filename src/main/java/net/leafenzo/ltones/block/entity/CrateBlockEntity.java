@@ -4,6 +4,7 @@
 
 package net.leafenzo.ltones.block.entity;
 
+import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.minecraft.block.BarrelBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -34,13 +35,13 @@ public class CrateBlockEntity extends LootableContainerBlockEntity {
 
         @Override
         protected void onContainerOpen(World world, BlockPos pos, BlockState state) {
-            CrateBlockEntity.this.playSound(state, SoundEvents.BLOCK_BARREL_OPEN);
+            CrateBlockEntity.this.playSound(state, ModSoundEvents.BLOCK_CRATE_OPEN);
             CrateBlockEntity.this.setOpen(state, true);
         }
 
         @Override
         protected void onContainerClose(World world, BlockPos pos, BlockState state) {
-            CrateBlockEntity.this.playSound(state, SoundEvents.BLOCK_BARREL_CLOSE);
+            CrateBlockEntity.this.playSound(state, ModSoundEvents.BLOCK_CRATE_CLOSE);
             CrateBlockEntity.this.setOpen(state, false);
         }
 

@@ -1,4 +1,16 @@
 {
+	"block.crate.open": {
+		"subtitle": "subtitles.block.crate.open",
+		"sounds": [
+			"ltones:block/crate/open"
+		]
+	},
+	"block.crate.close": {
+		"subtitle": "subtitles.block.crate.close",
+		"sounds": [
+			"ltones:block/crate/close"
+		]
+	},
 	"block.exri_door.open": {
 		"subtitle": "subtitles.block.door.toggle",
 		"sounds": [
@@ -68,6 +80,72 @@
 			"ltones:block/exri/step6"
 		]
 	},
+
+	"block.korp_node.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/korp_node/break1",
+			"ltones:block/korp_node/break2",
+			"ltones:block/korp_node/break3",
+			"ltones:block/korp_node/break4"
+		]
+	},
+	"block.korp_node.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/korp_node/break1",
+			"ltones:block/korp_node/break2",
+			"ltones:block/korp_node/break3",
+			"ltones:block/korp_node/break4"
+		]
+	},
+
+	"block.korp.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/korp/break1",
+			"ltones:block/korp/break2",
+			"ltones:block/korp/break3",
+			"ltones:block/korp/break4"
+		]
+	},
+	"block.korp.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/korp/step1",
+			"ltones:block/korp/step2",
+			"ltones:block/korp/step3",
+			"ltones:block/korp/step4"
+		]
+	},
+	"block.korp.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/korp/break1",
+			"ltones:block/korp/break2",
+			"ltones:block/korp/break3",
+			"ltones:block/korp/break4"
+		]
+	},
+	"block.korp.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/korp/step1",
+			"ltones:block/korp/step2",
+			"ltones:block/korp/step3",
+			"ltones:block/korp/step4"
+		]
+	},
+	"block.korp.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/korp/step1",
+			"ltones:block/korp/step2",
+			"ltones:block/korp/step3",
+			"ltones:block/korp/step4"
+		]
+	},
+
 	"block.fleq.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -1057,6 +1135,8 @@
 		]
 	},
 
+
+
 	"block.tank.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -1508,6 +1588,15 @@
 			"ltones:block/redds/activate3"
 		]
 	},
+
+	"block.zkul.ambient": {
+		"sounds": [
+			"ltones:block/zkul/ambient1",
+			"ltones:block/zkul/ambient2",
+			"ltones:block/zkul/ambient3"
+		]
+	},
+
 	"block.zkul.break": {
 		"subtitle": "",
 		"sounds": [
