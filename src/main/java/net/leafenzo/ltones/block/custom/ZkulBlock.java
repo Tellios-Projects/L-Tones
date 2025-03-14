@@ -47,11 +47,11 @@ public class ZkulBlock extends BlockWithEntity {
 
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        if (player.isCreative()) {
+        if (!player.isCreative()) {
             this.explode(world, pos);
         }
         super.onBreak(world, pos, state, player);
-    }
+    } //ee
 
     @Override
     public void onBlockBreakStart(BlockState state, World world, BlockPos pos, PlayerEntity player) {
