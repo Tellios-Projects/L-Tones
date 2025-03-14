@@ -1,23 +1,28 @@
 package net.leafenzo.ltones.block.custom;
 
-import net.leafenzo.ltones.block.entity.ModBlockEntityType;
 import net.leafenzo.ltones.block.entity.ZkulBlockEntity;
 import net.leafenzo.ltones.particle.ModParticleTypes;
 import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.SculkShriekerBlockEntity;
-import net.minecraft.entity.Entity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.explosion.Explosion;
+import net.minecraft.world.explosion.ExplosionBehavior;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Iterator;
+import java.util.Optional;
 
 public class ZkulBlock extends BlockWithEntity {
 
@@ -31,30 +36,29 @@ public class ZkulBlock extends BlockWithEntity {
             world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_ZKUL_AMBIENT, SoundCategory.BLOCKS, 0.25f, (float) (world.getRandom().nextFloat() * 0.2 + 1.0), false);
         }
 
+        // if (random.nextInt(50) == 0) {
+        //     world.playSound(((world.getRandom().nextFloat() - 0.5f) * 32) + pos.getX(), ((world.getRandom().nextFloat() - 0.5f) * 32) + pos.getY(), ((world.getRandom().nextFloat() - 0.5f) * 32) + pos.getZ(), SoundEvents.AMBIENT_CAVE.value(), SoundCategory.BLOCKS, 2f, (float) (world.getRandom().nextFloat() * 0.2 + 0.5f), false);
+        // }
+
         for (int i = 0; i < 5; i++) {
             world.addParticle(ModParticleTypes.ZKUL, ((world.getRandom().nextFloat() - 0.5f) * 32) + pos.getX(), ((world.getRandom().nextFloat() - 0.5f) * 32) + pos.getY(), ((world.getRandom().nextFloat() - 0.5f) * 32) + pos.getZ(), 0, 0, 0);
         }
     }
 
     @Override
-    public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
-        if (world instanceof ServerWorld) {
-            ServerWorld serverWorld = (ServerWorld)world;
-            ServerPlayerEntity serverPlayerEntity = SculkShriekerBlockEntity.findResponsiblePlayerFromEntity(entity);
-            if (serverPlayerEntity != null) {
-                serverWorld.getBlockEntity(pos, ModBlockEntityType.ZKUL).ifPresent(blockEntity -> blockEntity.darkness(serverWorld, pos));
-            }
+    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        if (player.isCreative()) {
+            this.explode(world, pos);
         }
-        super.onSteppedOn(world, pos, state, entity);
+        super.onBreak(world, pos, state, player);
     }
 
     @Override
     public void onBlockBreakStart(BlockState state, World world, BlockPos pos, PlayerEntity player) {
         if (world instanceof ServerWorld) {
-            ServerWorld serverWorld = (ServerWorld)world;
             ServerPlayerEntity serverPlayerEntity = SculkShriekerBlockEntity.findResponsiblePlayerFromEntity(player);
             if (serverPlayerEntity != null) {
-                serverWorld.getBlockEntity(pos, ModBlockEntityType.ZKUL).ifPresent(blockEntity -> blockEntity.darkness(serverWorld, pos));
+                serverPlayerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 240, 0));
             }
         }
         world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_ZKUL_WARN, SoundCategory.BLOCKS, 1, world.getRandom().nextFloat() * 0.2f + 0.8f, false);
@@ -67,6 +71,23 @@ public class ZkulBlock extends BlockWithEntity {
         if (blockEntity instanceof ZkulBlockEntity) {
             ((ZkulBlockEntity)blockEntity).tick();
         }
+    }
+
+    private void explode(World world, final BlockPos explodedPos) {
+        world.playSoundAtBlockCenter(explodedPos, ModSoundEvents.BLOCK_ZKUL_WARN, SoundCategory.BLOCKS, 1, world.getRandom().nextFloat() * 0.2f + 0.5f, false);
+        for (int i = 0; i < 50; i++) {
+            world.addParticle(ModParticleTypes.ZKUL, ((world.getRandom().nextFloat() - 0.5f) * 8) + explodedPos.getX(), ((world.getRandom().nextFloat() - 0.5f) * 8) + explodedPos.getY(), ((world.getRandom().nextFloat() - 0.5f) * 8) + explodedPos.getZ(), 0, 0, 0);
+        }
+        world.removeBlock(explodedPos, false);
+        ExplosionBehavior explosionBehavior = new ExplosionBehavior(){
+
+            @Override
+            public Optional<Float> getBlastResistance(Explosion explosion, BlockView world, BlockPos pos, BlockState blockState, FluidState fluidState) {
+                return super.getBlastResistance(explosion, world, pos, blockState, fluidState);
+            }
+        };
+        Vec3d vec3d = explodedPos.toCenterPos();
+        world.createExplosion(null, world.getDamageSources().badRespawnPoint(vec3d), explosionBehavior, vec3d, 5.0f, true, World.ExplosionSourceType.BLOCK);
     }
 
     @Nullable

@@ -15,6 +15,7 @@ public class ZkulParticle extends SpriteBillboardParticle {
         super(clientWorld, xCoord, yCoord, zCoord, xd, yd, zd);
         this.maxAge = (int)(100.0f / (this.random.nextFloat() * 0.9f + 0.1f));
         this.scale = 0.3f;
+        // this.alpha = 0.0f;
         this.velocityX = 0;
         this.velocityY = 0.05f;
         this.velocityZ = 0;
@@ -30,10 +31,21 @@ public class ZkulParticle extends SpriteBillboardParticle {
         this.prevPosX = this.x;
         this.prevPosY = this.y;
         this.prevPosZ = this.z;
-        if (this.age++ >= this.maxAge) {
+
+//        this.alpha = Math.min(this.alpha,1);
+//        if (this.alpha < 1.0f && this.age < 4) {
+//            this.alpha += 0.25f;
+//        }
+//        if (this.age >= this.maxAge - 4 && this.alpha > 0.01f) {
+//            this.alpha -= 0.25f;
+//        }
+// commented out for now because i want to maybe do something more cool for the spawning/disappearing transitions
+
+        if (this.age++ >= this.maxAge || this.alpha <= 0.0f) {
             this.markDead();
             return;
         }
+
         this.velocityY += 0.002;
         this.move(this.velocityX, this.velocityY, this.velocityZ);
         float c = this.maxAge / 35000f;
@@ -47,7 +59,7 @@ public class ZkulParticle extends SpriteBillboardParticle {
 
     @Override
     public ParticleTextureSheet getType() {
-        return ParticleTextureSheet.PARTICLE_SHEET_OPAQUE;
+        return ParticleTextureSheet.PARTICLE_SHEET_TRANSLUCENT;
     }
 
     @Environment(EnvType.CLIENT)

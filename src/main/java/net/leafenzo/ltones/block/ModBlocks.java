@@ -784,7 +784,7 @@ public class ModBlocks {
     public static final Block ABSTRACT_TONE = registerBlock("abstract_tone", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY).sounds(ModBlockSoundGroup.TONE)));
     public static final Block FRAMED_TONE = registerBlock("framed_tone", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY).sounds(ModBlockSoundGroup.TONE)));
     public static final Block FRAMED_TONE_BRICKS = registerBlock("framed_tone_bricks", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY).sounds(ModBlockSoundGroup.TONE_BRICKS)));
-    public static final Block ZKUL = registerBlock("zkul", new ZkulBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).mapColor(MapColor.BLACK).sounds(ModBlockSoundGroup.LITHIUM).luminance(state -> 3).emissiveLighting(ModBlocks::always)));
+    public static final Block ZKUL = registerBlock("zkul", new ZkulBlock(FabricBlockSettings.copyOf(Blocks.REINFORCED_DEEPSLATE).mapColor(MapColor.BLACK).sounds(ModBlockSoundGroup.ZKUL).luminance(state -> 3).emissiveLighting(ModBlocks::always)));
 
     //TODO better CRT sfx
     //CRT block entity and screen display

@@ -16,6 +16,11 @@ public class ModBlockEntityType {
             CrateBlockEntity::new,
             ModBlocks.CRATE);
 
+    public static final BlockEntityType<ZkulBlockEntity> RADIO = register(
+            "radio",
+            ZkulBlockEntity::new,
+            ModBlocks.RADIO);
+
     public static final BlockEntityType<ZkulBlockEntity> ZKUL = register(
             "zkul",
             ZkulBlockEntity::new,
