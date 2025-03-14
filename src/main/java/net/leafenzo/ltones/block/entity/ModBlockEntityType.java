@@ -16,6 +16,11 @@ public class ModBlockEntityType {
             CrateBlockEntity::new,
             ModBlocks.CRATE);
 
+    public static final BlockEntityType<ZkulBlockEntity> ZKUL = register(
+            "zkul",
+            ZkulBlockEntity::new,
+            ModBlocks.ZKUL);
+
     private static <E extends BlockEntity> BlockEntityType<E> register(String id, FabricBlockEntityTypeBuilder.Factory<E> factory, Block... blocks) {
         return Registry.register(Registries.BLOCK_ENTITY_TYPE, Super.MOD_ID + ":" + id, FabricBlockEntityTypeBuilder.create(factory, blocks).build());
     }

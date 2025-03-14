@@ -1501,7 +1501,6 @@
 		]
 	},
 
-
 	"block.nurr_door.open": {
 		"subtitle": "subtitles.block.door.toggle",
 		"sounds": [
@@ -1631,6 +1630,11 @@
 			"ltones:block/zkul/ambient1",
 			"ltones:block/zkul/ambient2",
 			"ltones:block/zkul/ambient3"
+		]
+	},
+	"block.zkul.warn": {
+		"sounds": [
+			"ltones:block/zkul/warn"
 		]
 	},
 

@@ -238,6 +238,7 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_FALL = registerSoundEvent("block.deepslate_lithium_ore.fall");
 
     public static final SoundEvent BLOCK_ZKUL_AMBIENT = registerSoundEvent("block.zkul.ambient");
+    public static final SoundEvent BLOCK_ZKUL_WARN = registerSoundEvent("block.zkul.warn");
     public static final SoundEvent BLOCK_ZKUL_BREAK = registerSoundEvent("block.zkul.break");
     public static final SoundEvent BLOCK_ZKUL_STEP = registerSoundEvent("block.zkul.step");
     public static final SoundEvent BLOCK_ZKUL_PLACE = registerSoundEvent("block.zkul.place");
