@@ -91,7 +91,7 @@ public class ZkulBlock extends BlockWithEntity {
             }
         };
         Vec3d vec3d = explodedPos.toCenterPos();
-        world.createExplosion(null, world.getDamageSources().badRespawnPoint(vec3d), explosionBehavior, vec3d, 5.0f, true, World.ExplosionSourceType.BLOCK);
+        world.createExplosion(null, world.getDamageSources().magic(), explosionBehavior, vec3d, 5.0f, true, World.ExplosionSourceType.BLOCK);
     }
 
     @Nullable

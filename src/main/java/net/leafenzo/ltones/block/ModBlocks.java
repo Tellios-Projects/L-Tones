@@ -225,7 +225,7 @@ public class ModBlocks {
             .strength(0.75f)
             .requiresTool()
             .instrument(Instrument.BASEDRUM)
-            .sounds(BlockSoundGroup.CALCITE);
+            .sounds(ModBlockSoundGroup.ZANE);
     public static final Block RED_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "red_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.RED)));
     public static final Block AMBER_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "amber_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
     public static final Block BLACK_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "black_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.BLACK)));
@@ -248,7 +248,7 @@ public class ModBlocks {
             .mapColor(MapColor.YELLOW)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(BlockSoundGroup.METAL);
+            .sounds(ModBlockSoundGroup.VECT);
     public static final Block VECT = registerBlockInBlockset(VECT_BLOCKS, "vect", new Block(FabricBlockSettings.copyOf(vectMaterial)));
     public static final Block VECT_TILE = registerBlockInBlockset(VECT_BLOCKS, "vect_tile", new Block(FabricBlockSettings.copyOf(vectMaterial)));
     public static final Block VECT_RIVET = registerBlockInBlockset(VECT_BLOCKS, "vect_rivet", new Block(FabricBlockSettings.copyOf(vectMaterial)));
@@ -262,9 +262,9 @@ public class ModBlocks {
     public static final Block VECT_PANEL = registerBlockInBlockset(VECT_BLOCKS, "vect_panel", new Block(FabricBlockSettings.copyOf(vectMaterial)));
     public static final Block VECT_RADIATOR = registerBlockInBlockset(VECT_BLOCKS, "vect_radiator", new Block(FabricBlockSettings.copyOf(vectMaterial).mapColor(MapColor.GOLD)));
     public static final Block VECT_BULKHEAD = registerBlockInBlockset(VECT_BLOCKS, "vect_bulkhead", new PillarBlock(FabricBlockSettings.copyOf(vectMaterial)));
-    public static final Block VECT_TANK = registerBlockInBlockset(VECT_BLOCKS, "vect_tank", new Block(FabricBlockSettings.copyOf(vectMaterial).mapColor(MapColor.GOLD).strength(1.8f).sounds(ModBlockSoundGroup.FOIL)));
+    public static final Block VECT_TANK = registerBlockInBlockset(VECT_BLOCKS, "vect_tank", new Block(FabricBlockSettings.copyOf(vectMaterial).mapColor(MapColor.GOLD).strength(1.8f).sounds(ModBlockSoundGroup.VECT_FOIL)));
     public static final Block VECT_NETWORK = registerBlockInBlockset(VECT_BLOCKS, "vect_network", new Block(FabricBlockSettings.copyOf(vectMaterial).mapColor(MapColor.PALE_YELLOW)));
-    public static final Block VECT_FOIL = registerBlockInBlockset(VECT_BLOCKS, "vect_foil", new Block(FabricBlockSettings.copyOf(vectMaterial).mapColor(MapColor.GOLD).strength(1.2f).sounds(ModBlockSoundGroup.FOIL)));
+    public static final Block VECT_FOIL = registerBlockInBlockset(VECT_BLOCKS, "vect_foil", new Block(FabricBlockSettings.copyOf(vectMaterial).mapColor(MapColor.GOLD).strength(1.2f).sounds(ModBlockSoundGroup.VECT_FOIL)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - REDDS">
     private static final FabricBlockSettings reddsMaterial = FabricBlockSettings.create()
@@ -379,7 +379,7 @@ public class ModBlocks {
             .instrument(Instrument.BASEDRUM)
             .requiresTool()
             .strength(0.8f)
-            .sounds(BlockSoundGroup.DECORATED_POT);
+            .sounds(ModBlockSoundGroup.LAVE);
     public static final Block LAVE_WINDOW = registerBlockInBlockset(LAVE_BLOCKS, "lave_window", new Block(FabricBlockSettings.copyOf(laveMaterial)));
     public static final Block LAVE_VENT = registerBlockInBlockset(LAVE_BLOCKS, "lave_vent", new Block(FabricBlockSettings.copyOf(laveMaterial)));
     public static final Block LAVE_UNEVEN = registerBlockInBlockset(LAVE_BLOCKS, "lave_uneven", new Block(FabricBlockSettings.copyOf(laveMaterial)));
@@ -411,7 +411,7 @@ public class ModBlocks {
     public static final Block VEELD_STRUCTURE = registerBlockInBlockset(VEELD_BLOCKS, "veeld_structure", new PillarBlock(FabricBlockSettings.copyOf(veeldMaterial)));
     public static final Block VEELD_RIVETED = registerBlockInBlockset(VEELD_BLOCKS, "veeld_riveted", new Block(FabricBlockSettings.copyOf(veeldMaterial)));
     public static final Block VEELD_RIPPLE = registerBlockInBlockset(VEELD_BLOCKS, "veeld_ripple", new Block(FabricBlockSettings.copyOf(veeldMaterial)));
-    public static final Block VEELD_RIGIDBRICK = registerBlockInBlockset(VEELD_BLOCKS, "veeld_rigidbrick", new Block(FabricBlockSettings.copyOf(veeldMaterial)));
+    public static final Block VEELD_RIGIDBRICK = registerBlockInBlockset(VEELD_BLOCKS, "veeld_rigidbrick", new Block(FabricBlockSettings.copyOf(veeldMaterial).sounds(ModBlockSoundGroup.VEELD_BRICKS)));
     public static final Block VEELD_RIGID = registerBlockInBlockset(VEELD_BLOCKS, "veeld_rigid", new Block(FabricBlockSettings.copyOf(veeldMaterial)));
     public static final Block VEELD_PIPEWEAVE = registerBlockInBlockset(VEELD_BLOCKS, "veeld_pipeweave", new Block(FabricBlockSettings.copyOf(veeldMaterial)));
     public static final Block VEELD_PATTERNED = registerBlockInBlockset(VEELD_BLOCKS, "veeld_patterned", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(veeldMaterial)));
@@ -420,7 +420,7 @@ public class ModBlocks {
     public static final Block VEELD_EMBOSSED = registerBlockInBlockset(VEELD_BLOCKS, "veeld_embossed", new Block(FabricBlockSettings.copyOf(veeldMaterial).mapColor(MapColor.GREEN)));
     public static final Block VEELD_DRILL = registerBlockInBlockset(VEELD_BLOCKS, "veeld_drill", new PillarBlock(FabricBlockSettings.copyOf(veeldMaterial)));
     public static final Block VEELD_CORE = registerBlockInBlockset(VEELD_BLOCKS, "veeld_core", new Block(FabricBlockSettings.copyOf(veeldMaterial)));
-    public static final Block VEELD_BRICK = registerBlockInBlockset(VEELD_BLOCKS, "veeld_brick", new Block(FabricBlockSettings.copyOf(veeldMaterial)));
+    public static final Block VEELD_BRICK = registerBlockInBlockset(VEELD_BLOCKS, "veeld_brick", new Block(FabricBlockSettings.copyOf(veeldMaterial).sounds(ModBlockSoundGroup.VEELD_BRICKS)));
     public static final Block VEELD = registerBlockInBlockset(VEELD_BLOCKS, "veeld", new Block(FabricBlockSettings.copyOf(veeldMaterial).mapColor(MapColor.GREEN)));
         public static final Block VEELD_STAIRS = registerStairs(VEELD,"veeld_stairs", new StairsBlock(VEELD.getDefaultState(), FabricBlockSettings.copyOf(VEELD))); static { STAIRS_FROM_BLOCK.put(VEELD, VEELD_STAIRS); }
         public static final Block VEELD_SLAB = registerSlab(VEELD,"veeld_slab", new SlabBlock(FabricBlockSettings.copyOf(VEELD))); static { SLAB_FROM_BLOCK.put(VEELD, VEELD_SLAB); }
@@ -818,18 +818,18 @@ public class ModBlocks {
     public static final Block DOOR_NEON = registerDoor("door_neon", new DoorBlock(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.PURPLE).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.CRAY));
     public static final Block DOOR_TOY = registerDoor("door_toy", new DoorBlock(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BRIGHT_RED).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.CAST));
     public static final Block DOOR_POWER = registerDoor("door_power", new DoorBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.BLACK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.NURR));
-    public static final Block DOOR_VACUUM = registerDoor("door_vacuum", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.BLACK), BlockSetType.POLISHED_BLACKSTONE));
+    public static final Block DOOR_VACUUM = registerDoor("door_vacuum", new DoorBlock(FabricBlockSettings.copyOf(vectMaterial).mapColor(MapColor.BLACK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.VECT));
     public static final Block DOOR_CONFINE = registerDoor("door_confine", new DoorBlock(FabricBlockSettings.copyOf(minnMaterial).mapColor(MapColor.WHITE).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.MINN));
     public static final Block DOOR_END = registerDoor("door_end", new DoorBlock(FabricBlockSettings.copyOf(lairMaterial).mapColor(MapColor.DARK_CRIMSON).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.LAIR));
     public static final Block DOOR_HEAVY = registerDoor("door_heavy", new DoorBlock(FabricBlockSettings.copyOf(krypMaterial).mapColor(MapColor.SPRUCE_BROWN).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.KRYP));
-    public static final Block DOOR_TEST = registerDoor("door_test", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY), BlockSetType.POLISHED_BLACKSTONE));
+    public static final Block DOOR_TEST = registerDoor("door_test", new DoorBlock(FabricBlockSettings.copyOf(laveMaterial).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.LAVE));
     public static final Block DOOR_GROWN = registerDoor("door_grown", new DoorBlock(FabricBlockSettings.copyOf(veeldMaterial).mapColor(MapColor.DARK_GREEN).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.VEELD));
     public static final Block DOOR_KNET = registerDoor("door_knet", new DoorBlock(FabricBlockSettings.copyOf(korpMaterial).mapColor(MapColor.CLEAR).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.KORP));
     public static final Block DOOR_WORK = registerDoor("door_work", new DoorBlock(FabricBlockSettings.copyOf(tankMaterial).mapColor(MapColor.GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.TANK));
     public static final Block DOOR_SAFE = registerDoor("door_safe", new DoorBlock(FabricBlockSettings.copyOf(exriMaterial).mapColor(MapColor.BLACK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.EXRI));
-    public static final Block DOOR_PETRI = registerDoor("door_petri", new DoorBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.PALE_YELLOW), ModBlockSetType.ROEN));
-    public static final Block DOOR_BUNKER = registerDoor("door_bunker", new DoorBlock(FabricBlockSettings.copyOf(ModBlocks.ABSTRACT_TONE).mapColor(MapColor.IRON_GRAY), ModBlockSetType.TONE));
-    public static final Block IRON_BAR_DOOR = registerDoor("iron_bar_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY), BlockSetType.IRON));
+    public static final Block DOOR_PETRI = registerDoor("door_petri", new DoorBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.PALE_YELLOW).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.ROEN));
+    public static final Block DOOR_BUNKER = registerDoor("door_bunker", new DoorBlock(FabricBlockSettings.copyOf(ModBlocks.ABSTRACT_TONE).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.TONE));
+    public static final Block IRON_BAR_DOOR = registerDoor("iron_bar_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), BlockSetType.IRON));
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - Decals">
