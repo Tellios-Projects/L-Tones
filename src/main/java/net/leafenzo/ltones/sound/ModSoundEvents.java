@@ -219,6 +219,9 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_KRYP_NODE_BREAK = registerSoundEvent("block.kryp_node.break");
     public static final SoundEvent BLOCK_KRYP_NODE_PLACE = registerSoundEvent("block.kryp_node.place");
 
+    public static final SoundEvent BLOCK_LITHIUM_DOOR_OPEN = registerSoundEvent("block.lithium_door.open");
+    public static final SoundEvent BLOCK_LITHIUM_DOOR_CLOSE = registerSoundEvent("block.lithium_door.close");
+
     public static final SoundEvent BLOCK_LITHIUM_BREAK = registerSoundEvent("block.lithium.break");
     public static final SoundEvent BLOCK_LITHIUM_STEP = registerSoundEvent("block.lithium.step");
     public static final SoundEvent BLOCK_LITHIUM_PLACE = registerSoundEvent("block.lithium.place");

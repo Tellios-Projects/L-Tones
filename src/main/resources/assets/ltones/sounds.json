@@ -704,6 +704,23 @@
 		]
 	},
 
+	"block.lithium_door.open": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/lithium/door/open1",
+			"ltones:block/lithium/door/open2",
+			"ltones:block/lithium/door/open3"
+		]
+	},
+	"block.lithium_door.close": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/lithium/door/close1",
+			"ltones:block/lithium/door/close2",
+			"ltones:block/lithium/door/close3",
+			"ltones:block/lithium/door/close4"
+		]
+	},
 	"block.lithium.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
