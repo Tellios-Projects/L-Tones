@@ -22,6 +22,9 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_KORP_NODE_BREAK = registerSoundEvent("block.korp_node.break");
     public static final SoundEvent BLOCK_KORP_NODE_PLACE = registerSoundEvent("block.korp_node.place");
 
+    public static final SoundEvent BLOCK_KORP_DOOR_OPEN = registerSoundEvent("block.korp_door.open");
+    public static final SoundEvent BLOCK_KORP_DOOR_CLOSE = registerSoundEvent("block.korp_door.close");
+
     public static final SoundEvent BLOCK_KORP_BREAK = registerSoundEvent("block.korp.break");
     public static final SoundEvent BLOCK_KORP_STEP = registerSoundEvent("block.korp.step");
     public static final SoundEvent BLOCK_KORP_PLACE = registerSoundEvent("block.korp.place");
@@ -129,6 +132,9 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_VEELD_HIT = registerSoundEvent("block.veeld.hit");
     public static final SoundEvent BLOCK_VEELD_FALL = registerSoundEvent("block.veeld.fall");
 
+    public static final SoundEvent BLOCK_NURR_DOOR_OPEN = registerSoundEvent("block.nurr_door.open");
+    public static final SoundEvent BLOCK_NURR_DOOR_CLOSE = registerSoundEvent("block.nurr_door.close");
+
     public static final SoundEvent BLOCK_NURR_BREAK = registerSoundEvent("block.nurr.break");
     public static final SoundEvent BLOCK_NURR_STEP = registerSoundEvent("block.nurr.step");
     public static final SoundEvent BLOCK_NURR_PLACE = registerSoundEvent("block.nurr.place");
@@ -232,6 +238,7 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_FALL = registerSoundEvent("block.deepslate_lithium_ore.fall");
 
     public static final SoundEvent BLOCK_ZKUL_AMBIENT = registerSoundEvent("block.zkul.ambient");
+    public static final SoundEvent BLOCK_ZKUL_WARN = registerSoundEvent("block.zkul.warn");
     public static final SoundEvent BLOCK_ZKUL_BREAK = registerSoundEvent("block.zkul.break");
     public static final SoundEvent BLOCK_ZKUL_STEP = registerSoundEvent("block.zkul.step");
     public static final SoundEvent BLOCK_ZKUL_PLACE = registerSoundEvent("block.zkul.place");

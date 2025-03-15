@@ -10,9 +10,8 @@ import net.minecraft.world.World;
 
 public class RadioBlockEntity extends BlockEntity {
     public RadioBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
-        super(type, pos, state);
+        super(ModBlockEntityType.RADIO, pos, state);
     }
-
 //    public float acquireStation(World world, BlockPos pos) {
 //        int x = Math.round((float) pos.getX() / 100);
 //        int z = Math.round((float) pos.getZ() / 100);

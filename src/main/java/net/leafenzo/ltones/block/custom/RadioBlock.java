@@ -54,7 +54,7 @@ public class RadioBlock extends BasicHorizontalFacingBlock {
         world.setBlockState(pos, state.with(ENABLED, true));
     }
     public void turnOff(BlockState state, World world, BlockPos pos) {
-        world.playSound(null, pos, getOffSound(), SoundCategory.BLOCKS, 0.3f, 1.0f);
+        world.playSound(null, pos, getOffSound(), SoundCategory.BLOCKS, 0.3f, 0.8f);
         //put Blockentity to sleep
         world.setBlockState(pos, state.with(ENABLED, false));
     }
