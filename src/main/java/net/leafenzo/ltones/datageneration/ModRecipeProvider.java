@@ -490,6 +490,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerDoorRecipe(exporter, ModBlocks.DOOR_SAFE, ModItems.AMALGAM);
         offerDoorRecipe(exporter, ModBlocks.DOOR_PETRI, ModItems.PLAQUE);
         offerDoorRecipe(exporter, ModBlocks.DOOR_BUNKER, ModBlocks.ABSTRACT_TONE);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_PUNCTURE, ModItems.LITHIUM_INGOT);
         offerDoorRecipe(exporter, ModBlocks.IRON_BAR_DOOR, Items.IRON_BARS);
         offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.IRON_BAR_DOOR, Blocks.IRON_DOOR);
 

@@ -81,6 +81,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DOOR_SAFE);
                         entries.add(ModBlocks.DOOR_PETRI);
                         entries.add(ModBlocks.DOOR_BUNKER);
+                        entries.add(ModBlocks.DOOR_PUNCTURE);
                         entries.add(ModBlocks.IRON_BAR_DOOR);
                         entries.add(ModBlocks.TONE);
                         entries.add(ModBlocks.TONE_BRICKS);

@@ -812,7 +812,8 @@ public class ModBlocks {
         RENDER_LAYER_CUTOUT.add(b);
         return b;
     }
-    
+
+    public static final Block DOOR_PUNCTURE = registerDoor("door_puncture", new DoorBlock(FabricBlockSettings.copyOf(LITHIUM_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.LITHIUM));
     public static final Block DOOR_STEAK = registerDoor("door_steak", new DoorBlock(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DEEPSLATE_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.FORTT));
     public static final Block DOOR_NEON = registerDoor("door_neon", new DoorBlock(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.PURPLE).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.CRAY));
     public static final Block DOOR_TOY = registerDoor("door_toy", new DoorBlock(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BRIGHT_RED).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.CAST));

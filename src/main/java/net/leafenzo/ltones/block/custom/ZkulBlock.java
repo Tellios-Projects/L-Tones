@@ -7,6 +7,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.SculkShriekerBlockEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffectUtil;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
@@ -51,15 +52,18 @@ public class ZkulBlock extends BlockWithEntity {
             this.explode(world, pos);
         }
         super.onBreak(world, pos, state, player);
-    } //ee
+    }
 
     @Override
     public void onBlockBreakStart(BlockState state, World world, BlockPos pos, PlayerEntity player) {
         if (world instanceof ServerWorld) {
             ServerPlayerEntity serverPlayerEntity = SculkShriekerBlockEntity.findResponsiblePlayerFromEntity(player);
             if (serverPlayerEntity != null) {
-                serverPlayerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 240, 0));
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 260, 0, false, false));
             }
+        }
+        for (int i = 0; i < 50; i++) {
+            world.addParticle(ModParticleTypes.ZKUL, ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getX(), ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getY(), ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getZ(), 0, 0, 0);
         }
         world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_ZKUL_WARN, SoundCategory.BLOCKS, 1, world.getRandom().nextFloat() * 0.2f + 0.8f, false);
         super.onBlockBreakStart(state, world, pos, player);

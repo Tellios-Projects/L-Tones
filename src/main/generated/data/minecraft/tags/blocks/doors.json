@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:door_puncture",
     "ltones:door_steak",
     "ltones:door_neon",
     "ltones:door_toy",
