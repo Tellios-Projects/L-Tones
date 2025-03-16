@@ -784,6 +784,98 @@
 		]
 	},
 
+	"block.decal_flakes.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_flakes/break1",
+			"ltones:block/decal_flakes/break2",
+			"ltones:block/decal_flakes/break3",
+			"ltones:block/decal_flakes/break4"
+		]
+	},
+	"block.decal_flakes.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_flakes/step1",
+			"ltones:block/decal_flakes/step2",
+			"ltones:block/decal_flakes/step3",
+			"ltones:block/decal_flakes/step4"
+		]
+	},
+	"block.decal_flakes.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_flakes/break1",
+			"ltones:block/decal_flakes/break2",
+			"ltones:block/decal_flakes/break3",
+			"ltones:block/decal_flakes/break4"
+		]
+	},
+	"block.decal_flakes.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_flakes/step1",
+			"ltones:block/decal_flakes/step2",
+			"ltones:block/decal_flakes/step3",
+			"ltones:block/decal_flakes/step4"
+		]
+	},
+	"block.decal_flakes.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_flakes/step1",
+			"ltones:block/decal_flakes/step2",
+			"ltones:block/decal_flakes/step3",
+			"ltones:block/decal_flakes/step4"
+		]
+	},
+
+	"block.decal_antibrass.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_antibrass/break1",
+			"ltones:block/decal_antibrass/break2",
+			"ltones:block/decal_antibrass/break3",
+			"ltones:block/decal_antibrass/break4"
+		]
+	},
+	"block.decal_antibrass.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_antibrass/step1",
+			"ltones:block/decal_antibrass/step2",
+			"ltones:block/decal_antibrass/step3",
+			"ltones:block/decal_antibrass/step4"
+		]
+	},
+	"block.decal_antibrass.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_antibrass/break1",
+			"ltones:block/decal_antibrass/break2",
+			"ltones:block/decal_antibrass/break3",
+			"ltones:block/decal_antibrass/break4"
+		]
+	},
+	"block.decal_antibrass.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_antibrass/step1",
+			"ltones:block/decal_antibrass/step2",
+			"ltones:block/decal_antibrass/step3",
+			"ltones:block/decal_antibrass/step4"
+		]
+	},
+	"block.decal_antibrass.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_antibrass/step1",
+			"ltones:block/decal_antibrass/step2",
+			"ltones:block/decal_antibrass/step3",
+			"ltones:block/decal_antibrass/step4"
+		]
+	},
+
 
 	"block.crate.open": {
 		"subtitle": "subtitles.block.crate.open",
