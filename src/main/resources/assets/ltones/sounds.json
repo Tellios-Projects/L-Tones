@@ -1,4 +1,790 @@
 {
+
+	"block.decal_conductium.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_conductium/break1",
+			"ltones:block/decal_conductium/break2",
+			"ltones:block/decal_conductium/break3",
+			"ltones:block/decal_conductium/break4"
+		]
+	},
+	"block.decal_conductium.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_conductium/step1",
+			"ltones:block/decal_conductium/step2",
+			"ltones:block/decal_conductium/step3",
+			"ltones:block/decal_conductium/step4"
+		]
+	},
+	"block.decal_conductium.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_conductium/break1",
+			"ltones:block/decal_conductium/break2",
+			"ltones:block/decal_conductium/break3",
+			"ltones:block/decal_conductium/break4"
+		]
+	},
+	"block.decal_conductium.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_conductium/step1",
+			"ltones:block/decal_conductium/step2",
+			"ltones:block/decal_conductium/step3",
+			"ltones:block/decal_conductium/step4"
+		]
+	},
+	"block.decal_conductium.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_conductium/step1",
+			"ltones:block/decal_conductium/step2",
+			"ltones:block/decal_conductium/step3",
+			"ltones:block/decal_conductium/step4"
+		]
+	},
+
+	"block.decal_kerbesium.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_kerbesium/break1",
+			"ltones:block/decal_kerbesium/break2",
+			"ltones:block/decal_kerbesium/break3",
+			"ltones:block/decal_kerbesium/break4"
+		]
+	},
+	"block.decal_kerbesium.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_kerbesium/step1",
+			"ltones:block/decal_kerbesium/step2",
+			"ltones:block/decal_kerbesium/step3",
+			"ltones:block/decal_kerbesium/step4"
+		]
+	},
+	"block.decal_kerbesium.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_kerbesium/break1",
+			"ltones:block/decal_kerbesium/break2",
+			"ltones:block/decal_kerbesium/break3",
+			"ltones:block/decal_kerbesium/break4"
+		]
+	},
+	"block.decal_kerbesium.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_kerbesium/step1",
+			"ltones:block/decal_kerbesium/step2",
+			"ltones:block/decal_kerbesium/step3",
+			"ltones:block/decal_kerbesium/step4"
+		]
+	},
+	"block.decal_kerbesium.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_kerbesium/step1",
+			"ltones:block/decal_kerbesium/step2",
+			"ltones:block/decal_kerbesium/step3",
+			"ltones:block/decal_kerbesium/step4"
+		]
+	},
+
+	"block.decal_organic_brass.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_organic_brass/break1",
+			"ltones:block/decal_organic_brass/break2",
+			"ltones:block/decal_organic_brass/break3",
+			"ltones:block/decal_organic_brass/break4",
+			"ltones:block/decal_organic_brass/break5"
+		]
+	},
+	"block.decal_organic_brass.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_organic_brass/step1",
+			"ltones:block/decal_organic_brass/step2",
+			"ltones:block/decal_organic_brass/step3",
+			"ltones:block/decal_organic_brass/step4"
+		]
+	},
+	"block.decal_organic_brass.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_organic_brass/break1",
+			"ltones:block/decal_organic_brass/break2",
+			"ltones:block/decal_organic_brass/break3",
+			"ltones:block/decal_organic_brass/break4",
+			"ltones:block/decal_organic_brass/break5"
+		]
+	},
+	"block.decal_organic_brass.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_organic_brass/step1",
+			"ltones:block/decal_organic_brass/step2",
+			"ltones:block/decal_organic_brass/step3",
+			"ltones:block/decal_organic_brass/step4"
+		]
+	},
+	"block.decal_organic_brass.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_organic_brass/step1",
+			"ltones:block/decal_organic_brass/step2",
+			"ltones:block/decal_organic_brass/step3",
+			"ltones:block/decal_organic_brass/step4"
+		]
+	},
+
+	"block.decal_tawsine.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_tawsine/break1",
+			"ltones:block/decal_tawsine/break2",
+			"ltones:block/decal_tawsine/break3",
+			"ltones:block/decal_tawsine/break4"
+		]
+	},
+	"block.decal_tawsine.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_tawsine/step1",
+			"ltones:block/decal_tawsine/step2",
+			"ltones:block/decal_tawsine/step3",
+			"ltones:block/decal_tawsine/step4"
+		]
+	},
+	"block.decal_tawsine.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_tawsine/break1",
+			"ltones:block/decal_tawsine/break2",
+			"ltones:block/decal_tawsine/break3",
+			"ltones:block/decal_tawsine/break4"
+		]
+	},
+	"block.decal_tawsine.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_tawsine/step1",
+			"ltones:block/decal_tawsine/step2",
+			"ltones:block/decal_tawsine/step3",
+			"ltones:block/decal_tawsine/step4"
+		]
+	},
+	"block.decal_tawsine.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_tawsine/step1",
+			"ltones:block/decal_tawsine/step2",
+			"ltones:block/decal_tawsine/step3",
+			"ltones:block/decal_tawsine/step4"
+		]
+	},
+
+	"block.decal_thinking_metal.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_thinking_metal/break1",
+			"ltones:block/decal_thinking_metal/break2",
+			"ltones:block/decal_thinking_metal/break3",
+			"ltones:block/decal_thinking_metal/break4"
+		]
+	},
+	"block.decal_thinking_metal.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_thinking_metal/step1",
+			"ltones:block/decal_thinking_metal/step2",
+			"ltones:block/decal_thinking_metal/step3",
+			"ltones:block/decal_thinking_metal/step4"
+		]
+	},
+	"block.decal_thinking_metal.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_thinking_metal/break1",
+			"ltones:block/decal_thinking_metal/break2",
+			"ltones:block/decal_thinking_metal/break3",
+			"ltones:block/decal_thinking_metal/break4"
+		]
+	},
+	"block.decal_thinking_metal.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_thinking_metal/step1",
+			"ltones:block/decal_thinking_metal/step2",
+			"ltones:block/decal_thinking_metal/step3",
+			"ltones:block/decal_thinking_metal/step4"
+		]
+	},
+	"block.decal_thinking_metal.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_thinking_metal/step1",
+			"ltones:block/decal_thinking_metal/step2",
+			"ltones:block/decal_thinking_metal/step3",
+			"ltones:block/decal_thinking_metal/step4"
+		]
+	},
+
+	"block.decal_diode.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_diode/break1",
+			"ltones:block/decal_diode/break2",
+			"ltones:block/decal_diode/break3",
+			"ltones:block/decal_diode/break4"
+		]
+	},
+	"block.decal_diode.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_diode/step1",
+			"ltones:block/decal_diode/step2",
+			"ltones:block/decal_diode/step3",
+			"ltones:block/decal_diode/step4"
+		]
+	},
+	"block.decal_diode.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_diode/break1",
+			"ltones:block/decal_diode/break2",
+			"ltones:block/decal_diode/break3",
+			"ltones:block/decal_diode/break4"
+		]
+	},
+	"block.decal_diode.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_diode/step1",
+			"ltones:block/decal_diode/step2",
+			"ltones:block/decal_diode/step3",
+			"ltones:block/decal_diode/step4"
+		]
+	},
+	"block.decal_diode.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_diode/step1",
+			"ltones:block/decal_diode/step2",
+			"ltones:block/decal_diode/step3",
+			"ltones:block/decal_diode/step4"
+		]
+	},
+
+	"block.decal_polymer.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_polymer/break1",
+			"ltones:block/decal_polymer/break2",
+			"ltones:block/decal_polymer/break3",
+			"ltones:block/decal_polymer/break4"
+		]
+	},
+	"block.decal_polymer.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_polymer/step1",
+			"ltones:block/decal_polymer/step2",
+			"ltones:block/decal_polymer/step3",
+			"ltones:block/decal_polymer/step4"
+		]
+	},
+	"block.decal_polymer.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_polymer/break1",
+			"ltones:block/decal_polymer/break2",
+			"ltones:block/decal_polymer/break3",
+			"ltones:block/decal_polymer/break4"
+		]
+	},
+	"block.decal_polymer.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_polymer/step1",
+			"ltones:block/decal_polymer/step2",
+			"ltones:block/decal_polymer/step3",
+			"ltones:block/decal_polymer/step4"
+		]
+	},
+	"block.decal_polymer.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_polymer/step1",
+			"ltones:block/decal_polymer/step2",
+			"ltones:block/decal_polymer/step3",
+			"ltones:block/decal_polymer/step4"
+		]
+	},
+
+	"block.decal_sheeting.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_sheeting/break1",
+			"ltones:block/decal_sheeting/break2",
+			"ltones:block/decal_sheeting/break3",
+			"ltones:block/decal_sheeting/break4"
+		]
+	},
+	"block.decal_sheeting.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_sheeting/step1",
+			"ltones:block/decal_sheeting/step2",
+			"ltones:block/decal_sheeting/step3",
+			"ltones:block/decal_sheeting/step4"
+		]
+	},
+	"block.decal_sheeting.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_sheeting/break1",
+			"ltones:block/decal_sheeting/break2",
+			"ltones:block/decal_sheeting/break3",
+			"ltones:block/decal_sheeting/break4"
+		]
+	},
+	"block.decal_sheeting.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_sheeting/step1",
+			"ltones:block/decal_sheeting/step2",
+			"ltones:block/decal_sheeting/step3",
+			"ltones:block/decal_sheeting/step4"
+		]
+	},
+	"block.decal_sheeting.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_sheeting/step1",
+			"ltones:block/decal_sheeting/step2",
+			"ltones:block/decal_sheeting/step3",
+			"ltones:block/decal_sheeting/step4"
+		]
+	},
+
+	"block.decal_polycarbonate.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_polycarbonate/break1",
+			"ltones:block/decal_polycarbonate/break2",
+			"ltones:block/decal_polycarbonate/break3",
+			"ltones:block/decal_polycarbonate/break4"
+		]
+	},
+	"block.decal_polycarbonate.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_polycarbonate/step1",
+			"ltones:block/decal_polycarbonate/step2",
+			"ltones:block/decal_polycarbonate/step3",
+			"ltones:block/decal_polycarbonate/step4"
+		]
+	},
+	"block.decal_polycarbonate.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_polycarbonate/break1",
+			"ltones:block/decal_polycarbonate/break2",
+			"ltones:block/decal_polycarbonate/break3",
+			"ltones:block/decal_polycarbonate/break4"
+		]
+	},
+	"block.decal_polycarbonate.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_polycarbonate/step1",
+			"ltones:block/decal_polycarbonate/step2",
+			"ltones:block/decal_polycarbonate/step3",
+			"ltones:block/decal_polycarbonate/step4"
+		]
+	},
+	"block.decal_polycarbonate.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_polycarbonate/step1",
+			"ltones:block/decal_polycarbonate/step2",
+			"ltones:block/decal_polycarbonate/step3",
+			"ltones:block/decal_polycarbonate/step4"
+		]
+	},
+
+	"block.decal_glass_tube.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_glass_tube/break1",
+			"ltones:block/decal_glass_tube/break2",
+			"ltones:block/decal_glass_tube/break3",
+			"ltones:block/decal_glass_tube/break4"
+		]
+	},
+	"block.decal_glass_tube.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_glass_tube/step1",
+			"ltones:block/decal_glass_tube/step2",
+			"ltones:block/decal_glass_tube/step3",
+			"ltones:block/decal_glass_tube/step4"
+		]
+	},
+	"block.decal_glass_tube.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_glass_tube/place1",
+			"ltones:block/decal_glass_tube/place2",
+			"ltones:block/decal_glass_tube/place3",
+			"ltones:block/decal_glass_tube/place4"
+		]
+	},
+	"block.decal_glass_tube.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_glass_tube/step1",
+			"ltones:block/decal_glass_tube/step2",
+			"ltones:block/decal_glass_tube/step3",
+			"ltones:block/decal_glass_tube/step4"
+		]
+	},
+	"block.decal_glass_tube.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_glass_tube/step1",
+			"ltones:block/decal_glass_tube/step2",
+			"ltones:block/decal_glass_tube/step3",
+			"ltones:block/decal_glass_tube/step4"
+		]
+	},
+
+	"block.decal_slag.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_slag/break1",
+			"ltones:block/decal_slag/break2",
+			"ltones:block/decal_slag/break3",
+			"ltones:block/decal_slag/break4"
+		]
+	},
+	"block.decal_slag.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_slag/step1",
+			"ltones:block/decal_slag/step2",
+			"ltones:block/decal_slag/step3",
+			"ltones:block/decal_slag/step4"
+		]
+	},
+	"block.decal_slag.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_slag/break1",
+			"ltones:block/decal_slag/break2",
+			"ltones:block/decal_slag/break3",
+			"ltones:block/decal_slag/break4"
+		]
+	},
+	"block.decal_slag.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_slag/step1",
+			"ltones:block/decal_slag/step2",
+			"ltones:block/decal_slag/step3",
+			"ltones:block/decal_slag/step4"
+		]
+	},
+	"block.decal_slag.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_slag/step1",
+			"ltones:block/decal_slag/step2",
+			"ltones:block/decal_slag/step3",
+			"ltones:block/decal_slag/step4"
+		]
+	},
+
+	"block.decal_fibrous_powder.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_fibrous_powder/break1",
+			"ltones:block/decal_fibrous_powder/break2",
+			"ltones:block/decal_fibrous_powder/break3",
+			"ltones:block/decal_fibrous_powder/break4"
+		]
+	},
+	"block.decal_fibrous_powder.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_fibrous_powder/step1",
+			"ltones:block/decal_fibrous_powder/step2",
+			"ltones:block/decal_fibrous_powder/step3",
+			"ltones:block/decal_fibrous_powder/step4"
+		]
+	},
+	"block.decal_fibrous_powder.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_fibrous_powder/break1",
+			"ltones:block/decal_fibrous_powder/break2",
+			"ltones:block/decal_fibrous_powder/break3",
+			"ltones:block/decal_fibrous_powder/break4"
+		]
+	},
+	"block.decal_fibrous_powder.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_fibrous_powder/step1",
+			"ltones:block/decal_fibrous_powder/step2",
+			"ltones:block/decal_fibrous_powder/step3",
+			"ltones:block/decal_fibrous_powder/step4"
+		]
+	},
+	"block.decal_fibrous_powder.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_fibrous_powder/step1",
+			"ltones:block/decal_fibrous_powder/step2",
+			"ltones:block/decal_fibrous_powder/step3",
+			"ltones:block/decal_fibrous_powder/step4"
+		]
+	},
+
+	"block.decal_amalgam.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_amalgam/break1",
+			"ltones:block/decal_amalgam/break2",
+			"ltones:block/decal_amalgam/break3",
+			"ltones:block/decal_amalgam/break4"
+		]
+	},
+	"block.decal_amalgam.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_amalgam/step1",
+			"ltones:block/decal_amalgam/step2",
+			"ltones:block/decal_amalgam/step3",
+			"ltones:block/decal_amalgam/step4"
+		]
+	},
+	"block.decal_amalgam.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_amalgam/break1",
+			"ltones:block/decal_amalgam/break2",
+			"ltones:block/decal_amalgam/break3",
+			"ltones:block/decal_amalgam/break4"
+		]
+	},
+	"block.decal_amalgam.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_amalgam/step1",
+			"ltones:block/decal_amalgam/step2",
+			"ltones:block/decal_amalgam/step3",
+			"ltones:block/decal_amalgam/step4"
+		]
+	},
+	"block.decal_amalgam.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_amalgam/step1",
+			"ltones:block/decal_amalgam/step2",
+			"ltones:block/decal_amalgam/step3",
+			"ltones:block/decal_amalgam/step4"
+		]
+	},
+
+	"block.decal_slump.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_slump/break1",
+			"ltones:block/decal_slump/break2",
+			"ltones:block/decal_slump/break3",
+			"ltones:block/decal_slump/break4"
+		]
+	},
+	"block.decal_slump.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_slump/step1",
+			"ltones:block/decal_slump/step2",
+			"ltones:block/decal_slump/step3",
+			"ltones:block/decal_slump/step4"
+		]
+	},
+	"block.decal_slump.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_slump/break1",
+			"ltones:block/decal_slump/break2",
+			"ltones:block/decal_slump/break3",
+			"ltones:block/decal_slump/break4"
+		]
+	},
+	"block.decal_slump.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_slump/step1",
+			"ltones:block/decal_slump/step2",
+			"ltones:block/decal_slump/step3",
+			"ltones:block/decal_slump/step4"
+		]
+	},
+	"block.decal_slump.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_slump/step1",
+			"ltones:block/decal_slump/step2",
+			"ltones:block/decal_slump/step3",
+			"ltones:block/decal_slump/step4"
+		]
+	},
+
+	"block.decal_shade.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_shade/break1",
+			"ltones:block/decal_shade/break2",
+			"ltones:block/decal_shade/break3",
+			"ltones:block/decal_shade/break4"
+		]
+	},
+	"block.decal_shade.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_shade/step1",
+			"ltones:block/decal_shade/step2",
+			"ltones:block/decal_shade/step3",
+			"ltones:block/decal_shade/step4"
+		]
+	},
+	"block.decal_shade.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_shade/break1",
+			"ltones:block/decal_shade/break2",
+			"ltones:block/decal_shade/break3",
+			"ltones:block/decal_shade/break4"
+		]
+	},
+	"block.decal_shade.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_shade/step1",
+			"ltones:block/decal_shade/step2",
+			"ltones:block/decal_shade/step3",
+			"ltones:block/decal_shade/step4"
+		]
+	},
+	"block.decal_shade.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_shade/step1",
+			"ltones:block/decal_shade/step2",
+			"ltones:block/decal_shade/step3",
+			"ltones:block/decal_shade/step4"
+		]
+	},
+
+	"block.decal_screen.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_screen/break1",
+			"ltones:block/decal_screen/break2",
+			"ltones:block/decal_screen/break3",
+			"ltones:block/decal_screen/break4"
+		]
+	},
+	"block.decal_screen.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_screen/step1",
+			"ltones:block/decal_screen/step2",
+			"ltones:block/decal_screen/step3",
+			"ltones:block/decal_screen/step4"
+		]
+	},
+	"block.decal_screen.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_screen/break1",
+			"ltones:block/decal_screen/break2",
+			"ltones:block/decal_screen/break3",
+			"ltones:block/decal_screen/break4"
+		]
+	},
+	"block.decal_screen.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_screen/step1",
+			"ltones:block/decal_screen/step2",
+			"ltones:block/decal_screen/step3",
+			"ltones:block/decal_screen/step4"
+		]
+	},
+	"block.decal_screen.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_screen/step1",
+			"ltones:block/decal_screen/step2",
+			"ltones:block/decal_screen/step3",
+			"ltones:block/decal_screen/step4"
+		]
+	},
+
+	"block.decal_scarlet_membrane.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_scarlet_membrane/break1",
+			"ltones:block/decal_scarlet_membrane/break2",
+			"ltones:block/decal_scarlet_membrane/break3",
+			"ltones:block/decal_scarlet_membrane/break4"
+		]
+	},
+	"block.decal_scarlet_membrane.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_scarlet_membrane/step1",
+			"ltones:block/decal_scarlet_membrane/step2",
+			"ltones:block/decal_scarlet_membrane/step3",
+			"ltones:block/decal_scarlet_membrane/step4"
+		]
+	},
+	"block.decal_scarlet_membrane.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_scarlet_membrane/break1",
+			"ltones:block/decal_scarlet_membrane/break2",
+			"ltones:block/decal_scarlet_membrane/break3",
+			"ltones:block/decal_scarlet_membrane/break4"
+		]
+	},
+	"block.decal_scarlet_membrane.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_scarlet_membrane/step1",
+			"ltones:block/decal_scarlet_membrane/step2",
+			"ltones:block/decal_scarlet_membrane/step3",
+			"ltones:block/decal_scarlet_membrane/step4"
+		]
+	},
+	"block.decal_scarlet_membrane.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/decal_scarlet_membrane/step1",
+			"ltones:block/decal_scarlet_membrane/step2",
+			"ltones:block/decal_scarlet_membrane/step3",
+			"ltones:block/decal_scarlet_membrane/step4"
+		]
+	},
+
+
 	"block.crate.open": {
 		"subtitle": "subtitles.block.crate.open",
 		"sounds": [
@@ -592,7 +1378,7 @@
 			"ltones:block/kryp_node/break4"
 		]
 	},
-	
+
 	"block.kryp.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -1830,9 +2616,7 @@
 			"ltones:block/vect_foil/step1",
 			"ltones:block/vect_foil/step2",
 			"ltones:block/vect_foil/step3",
-			"ltones:block/vect_foil/step4",
-			"ltones:block/vect_foil/step5",
-			"ltones:block/vect_foil/step6"
+			"ltones:block/vect_foil/step4"
 		]
 	},
 	"block.vect_foil.place": {
@@ -1850,9 +2634,7 @@
 			"ltones:block/vect_foil/step1",
 			"ltones:block/vect_foil/step2",
 			"ltones:block/vect_foil/step3",
-			"ltones:block/vect_foil/step4",
-			"ltones:block/vect_foil/step5",
-			"ltones:block/vect_foil/step6"
+			"ltones:block/vect_foil/step4"
 		]
 	},
 	"block.vect_foil.fall": {
@@ -1861,9 +2643,57 @@
 			"ltones:block/vect_foil/step1",
 			"ltones:block/vect_foil/step2",
 			"ltones:block/vect_foil/step3",
-			"ltones:block/vect_foil/step4",
-			"ltones:block/vect_foil/step5",
-			"ltones:block/vect_foil/step6"
+			"ltones:block/vect_foil/step4"
+		]
+	},
+
+	"block.myst.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/myst/break1",
+			"ltones:block/myst/break2",
+			"ltones:block/myst/break3",
+			"ltones:block/myst/break4",
+			"ltones:block/myst/break5",
+			"ltones:block/myst/break6"
+		]
+	},
+	"block.myst.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/myst/step1",
+			"ltones:block/myst/step2",
+			"ltones:block/myst/step3",
+			"ltones:block/myst/step4"
+		]
+	},
+	"block.myst.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/myst/break1",
+			"ltones:block/myst/break2",
+			"ltones:block/myst/break3",
+			"ltones:block/myst/break4",
+			"ltones:block/myst/break5",
+			"ltones:block/myst/break6"
+		]
+	},
+	"block.myst.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/myst/step1",
+			"ltones:block/myst/step2",
+			"ltones:block/myst/step3",
+			"ltones:block/myst/step4"
+		]
+	},
+	"block.myst.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/myst/step1",
+			"ltones:block/myst/step2",
+			"ltones:block/myst/step3",
+			"ltones:block/myst/step4"
 		]
 	},
 
