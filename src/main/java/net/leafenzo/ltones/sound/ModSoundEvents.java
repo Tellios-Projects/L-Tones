@@ -25,6 +25,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_DECAL_CONDUCTIUM_HIT = registerSoundEvent("block.decal_conductium.hit");
     public static final SoundEvent BLOCK_DECAL_CONDUCTIUM_FALL = registerSoundEvent("block.decal_conductium.fall");
 
+    public static final SoundEvent BLOCK_DECAL_CORPOREAL_VALOR_BREAK = registerSoundEvent("block.decal_corporeal_valor.break");
+    public static final SoundEvent BLOCK_DECAL_CORPOREAL_VALOR_STEP = registerSoundEvent("block.decal_corporeal_valor.step");
+    public static final SoundEvent BLOCK_DECAL_CORPOREAL_VALOR_PLACE = registerSoundEvent("block.decal_corporeal_valor.place");
+    public static final SoundEvent BLOCK_DECAL_CORPOREAL_VALOR_HIT = registerSoundEvent("block.decal_corporeal_valor.hit");
+    public static final SoundEvent BLOCK_DECAL_CORPOREAL_VALOR_FALL = registerSoundEvent("block.decal_corporeal_valor.fall");
+
     public static final SoundEvent BLOCK_DECAL_DIODE_BREAK = registerSoundEvent("block.decal_diode.break");
     public static final SoundEvent BLOCK_DECAL_DIODE_STEP = registerSoundEvent("block.decal_diode.step");
     public static final SoundEvent BLOCK_DECAL_DIODE_PLACE = registerSoundEvent("block.decal_diode.place");
@@ -49,17 +55,47 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_DECAL_GLASS_TUBE_HIT = registerSoundEvent("block.decal_glass_tube.hit");
     public static final SoundEvent BLOCK_DECAL_GLASS_TUBE_FALL = registerSoundEvent("block.decal_glass_tube.fall");
 
+    public static final SoundEvent BLOCK_DECAL_JELLY_BREAK = registerSoundEvent("block.decal_jelly.break");
+    public static final SoundEvent BLOCK_DECAL_JELLY_STEP = registerSoundEvent("block.decal_jelly.step");
+    public static final SoundEvent BLOCK_DECAL_JELLY_PLACE = registerSoundEvent("block.decal_jelly.place");
+    public static final SoundEvent BLOCK_DECAL_JELLY_HIT = registerSoundEvent("block.decal_jelly.hit");
+    public static final SoundEvent BLOCK_DECAL_JELLY_FALL = registerSoundEvent("block.decal_jelly.fall");
+
     public static final SoundEvent BLOCK_DECAL_KERBESIUM_BREAK = registerSoundEvent("block.decal_kerbesium.break");
     public static final SoundEvent BLOCK_DECAL_KERBESIUM_STEP = registerSoundEvent("block.decal_kerbesium.step");
     public static final SoundEvent BLOCK_DECAL_KERBESIUM_PLACE = registerSoundEvent("block.decal_kerbesium.place");
     public static final SoundEvent BLOCK_DECAL_KERBESIUM_HIT = registerSoundEvent("block.decal_kerbesium.hit");
     public static final SoundEvent BLOCK_DECAL_KERBESIUM_FALL = registerSoundEvent("block.decal_kerbesium.fall");
 
+    public static final SoundEvent BLOCK_DECAL_LITHIUM_BREAK = registerSoundEvent("block.decal_lithium.break");
+    public static final SoundEvent BLOCK_DECAL_LITHIUM_STEP = registerSoundEvent("block.decal_lithium.step");
+    public static final SoundEvent BLOCK_DECAL_LITHIUM_PLACE = registerSoundEvent("block.decal_lithium.place");
+    public static final SoundEvent BLOCK_DECAL_LITHIUM_HIT = registerSoundEvent("block.decal_lithium.hit");
+    public static final SoundEvent BLOCK_DECAL_LITHIUM_FALL = registerSoundEvent("block.decal_lithium.fall");
+
+    public static final SoundEvent BLOCK_DECAL_MOULDING_BREAK = registerSoundEvent("block.decal_moulding.break");
+    public static final SoundEvent BLOCK_DECAL_MOULDING_STEP = registerSoundEvent("block.decal_moulding.step");
+    public static final SoundEvent BLOCK_DECAL_MOULDING_PLACE = registerSoundEvent("block.decal_moulding.place");
+    public static final SoundEvent BLOCK_DECAL_MOULDING_HIT = registerSoundEvent("block.decal_moulding.hit");
+    public static final SoundEvent BLOCK_DECAL_MOULDING_FALL = registerSoundEvent("block.decal_moulding.fall");
+
+    public static final SoundEvent BLOCK_DECAL_NETWORKING_BREAK = registerSoundEvent("block.decal_networking.break");
+    public static final SoundEvent BLOCK_DECAL_NETWORKING_STEP = registerSoundEvent("block.decal_networking.step");
+    public static final SoundEvent BLOCK_DECAL_NETWORKING_PLACE = registerSoundEvent("block.decal_networking.place");
+    public static final SoundEvent BLOCK_DECAL_NETWORKING_HIT = registerSoundEvent("block.decal_networking.hit");
+    public static final SoundEvent BLOCK_DECAL_NETWORKING_FALL = registerSoundEvent("block.decal_networking.fall");
+
     public static final SoundEvent BLOCK_DECAL_ORGANIC_BRASS_BREAK = registerSoundEvent("block.decal_organic_brass.break");
     public static final SoundEvent BLOCK_DECAL_ORGANIC_BRASS_STEP = registerSoundEvent("block.decal_organic_brass.step");
     public static final SoundEvent BLOCK_DECAL_ORGANIC_BRASS_PLACE = registerSoundEvent("block.decal_organic_brass.place");
     public static final SoundEvent BLOCK_DECAL_ORGANIC_BRASS_HIT = registerSoundEvent("block.decal_organic_brass.hit");
     public static final SoundEvent BLOCK_DECAL_ORGANIC_BRASS_FALL = registerSoundEvent("block.decal_organic_brass.fall");
+
+    public static final SoundEvent BLOCK_DECAL_PLAQUE_BREAK = registerSoundEvent("block.decal_plaque.break");
+    public static final SoundEvent BLOCK_DECAL_PLAQUE_STEP = registerSoundEvent("block.decal_plaque.step");
+    public static final SoundEvent BLOCK_DECAL_PLAQUE_PLACE = registerSoundEvent("block.decal_plaque.place");
+    public static final SoundEvent BLOCK_DECAL_PLAQUE_HIT = registerSoundEvent("block.decal_plaque.hit");
+    public static final SoundEvent BLOCK_DECAL_PLAQUE_FALL = registerSoundEvent("block.decal_plaque.fall");
 
     public static final SoundEvent BLOCK_DECAL_POLYCARBONATE_BREAK = registerSoundEvent("block.decal_polycarbonate.break");
     public static final SoundEvent BLOCK_DECAL_POLYCARBONATE_STEP = registerSoundEvent("block.decal_polycarbonate.step");
