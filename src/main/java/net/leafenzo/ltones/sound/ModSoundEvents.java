@@ -250,8 +250,8 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_REDDS_PLACE = registerSoundEvent("block.redds.place");
     public static final SoundEvent BLOCK_REDDS_HIT = registerSoundEvent("block.redds.hit");
     public static final SoundEvent BLOCK_REDDS_FALL = registerSoundEvent("block.redds.fall");
-    public static final SoundEvent BLOCK_POLYGON_ACTIVATE = registerSoundEvent("block.redds.activate");
-    public static final SoundEvent BLOCK_POLYGON_DEACTIVATE = registerSoundEvent("block.redds.deactivate");
+    public static final SoundEvent BLOCK_REDDS_ACTIVATE = registerSoundEvent("block.redds.activate");
+    public static final SoundEvent BLOCK_REDDS_DEACTIVATE = registerSoundEvent("block.redds.deactivate");
 
     public static final SoundEvent BLOCK_EXRI_BREAK = registerSoundEvent("block.exri.break");
     public static final SoundEvent BLOCK_EXRI_STEP = registerSoundEvent("block.exri.step");

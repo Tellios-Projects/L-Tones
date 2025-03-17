@@ -37,7 +37,7 @@
 		]
 	},
 	"block.decal_conductium.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_conductium/step1",
 			"ltones:block/decal_conductium/step2",
@@ -83,7 +83,7 @@
 		]
 	},
 	"block.decal_kerbesium.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_kerbesium/step1",
 			"ltones:block/decal_kerbesium/step2",
@@ -131,7 +131,7 @@
 		]
 	},
 	"block.decal_organic_brass.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_organic_brass/step1",
 			"ltones:block/decal_organic_brass/step2",
@@ -177,7 +177,7 @@
 		]
 	},
 	"block.decal_tawsine.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_tawsine/step1",
 			"ltones:block/decal_tawsine/step2",
@@ -223,7 +223,7 @@
 		]
 	},
 	"block.decal_thinking_metal.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_thinking_metal/step1",
 			"ltones:block/decal_thinking_metal/step2",
@@ -269,7 +269,7 @@
 		]
 	},
 	"block.decal_diode.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_diode/step1",
 			"ltones:block/decal_diode/step2",
@@ -315,7 +315,7 @@
 		]
 	},
 	"block.decal_polymer.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_polymer/step1",
 			"ltones:block/decal_polymer/step2",
@@ -361,7 +361,7 @@
 		]
 	},
 	"block.decal_sheeting.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_sheeting/step1",
 			"ltones:block/decal_sheeting/step2",
@@ -407,7 +407,7 @@
 		]
 	},
 	"block.decal_polycarbonate.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_polycarbonate/step1",
 			"ltones:block/decal_polycarbonate/step2",
@@ -453,7 +453,7 @@
 		]
 	},
 	"block.decal_glass_tube.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_glass_tube/step1",
 			"ltones:block/decal_glass_tube/step2",
@@ -499,7 +499,7 @@
 		]
 	},
 	"block.decal_slag.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_slag/step1",
 			"ltones:block/decal_slag/step2",
@@ -545,7 +545,7 @@
 		]
 	},
 	"block.decal_fibrous_powder.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_fibrous_powder/step1",
 			"ltones:block/decal_fibrous_powder/step2",
@@ -591,7 +591,7 @@
 		]
 	},
 	"block.decal_amalgam.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_amalgam/step1",
 			"ltones:block/decal_amalgam/step2",
@@ -637,7 +637,7 @@
 		]
 	},
 	"block.decal_slump.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_slump/step1",
 			"ltones:block/decal_slump/step2",
@@ -683,7 +683,7 @@
 		]
 	},
 	"block.decal_shade.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_shade/step1",
 			"ltones:block/decal_shade/step2",
@@ -729,7 +729,7 @@
 		]
 	},
 	"block.decal_screen.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_screen/step1",
 			"ltones:block/decal_screen/step2",
@@ -775,7 +775,7 @@
 		]
 	},
 	"block.decal_scarlet_membrane.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_scarlet_membrane/step1",
 			"ltones:block/decal_scarlet_membrane/step2",
@@ -821,7 +821,7 @@
 		]
 	},
 	"block.decal_flakes.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_flakes/step1",
 			"ltones:block/decal_flakes/step2",
@@ -867,7 +867,7 @@
 		]
 	},
 	"block.decal_antibrass.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_antibrass/step1",
 			"ltones:block/decal_antibrass/step2",
@@ -913,7 +913,7 @@
 		]
 	},
 	"block.decal_lithium.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_lithium/step1",
 			"ltones:block/decal_lithium/step2",
@@ -959,7 +959,7 @@
 		]
 	},
 	"block.decal_plaque.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_plaque/step1",
 			"ltones:block/decal_plaque/step2",
@@ -1005,7 +1005,7 @@
 		]
 	},
 	"block.decal_moulding.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_moulding/step1",
 			"ltones:block/decal_moulding/step2",
@@ -1051,7 +1051,7 @@
 		]
 	},
 	"block.decal_jelly.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_jelly/step1",
 			"ltones:block/decal_jelly/step2",
@@ -1097,7 +1097,7 @@
 		]
 	},
 	"block.decal_networking.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_networking/step1",
 			"ltones:block/decal_networking/step2",
@@ -1143,7 +1143,7 @@
 		]
 	},
 	"block.decal_corporeal_valor.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_corporeal_valor/step1",
 			"ltones:block/decal_corporeal_valor/step2",
@@ -1188,7 +1188,7 @@
 		]
 	},
 	"block.decal_g2v.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_g2v/step1",
 			"ltones:block/decal_g2v/step2",
@@ -1234,7 +1234,7 @@
 		]
 	},
 	"block.decal_midasium.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_midasium/step1",
 			"ltones:block/decal_midasium/step2",
@@ -1279,7 +1279,7 @@
 		]
 	},
 	"block.decal_azure_rivet.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/decal_azure_rivet/step1",
 			"ltones:block/decal_azure_rivet/step2",
@@ -1359,7 +1359,7 @@
 		]
 	},
 	"block.exri.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/exri/step1",
 			"ltones:block/exri/step2",
@@ -1407,7 +1407,7 @@
 		]
 	},
 	"block.jelt.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/jelt/step1",
 			"ltones:block/jelt/step2",
@@ -1453,7 +1453,7 @@
 		]
 	},
 	"block.azur.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/azur/step1",
 			"ltones:block/azur/step2",
@@ -1535,7 +1535,7 @@
 		]
 	},
 	"block.korp.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/korp/step1",
 			"ltones:block/korp/step2",
@@ -1585,7 +1585,7 @@
 		]
 	},
 	"block.fleq.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/fleq/step1",
 			"ltones:block/fleq/step2",
@@ -1654,7 +1654,7 @@
 		]
 	},
 	"block.tone.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/tone/step1",
 			"ltones:block/tone/step2",
@@ -1705,7 +1705,7 @@
 		]
 	},
 	"block.tone_bricks.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/tone_bricks/step1",
 			"ltones:block/tone_bricks/step2",
@@ -1756,7 +1756,7 @@
 		]
 	},
 	"block.ztone.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/ztone/step1",
 			"ltones:block/ztone/step2",
@@ -1807,7 +1807,7 @@
 		]
 	},
 	"block.iszm.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/iszm/step1",
 			"ltones:block/iszm/step2",
@@ -1876,7 +1876,7 @@
 		]
 	},
 	"block.roen.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/roen/step1",
 			"ltones:block/roen/step2",
@@ -1944,7 +1944,7 @@
 		]
 	},
 	"block.minn.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/minn/step1",
 			"ltones:block/minn/step2",
@@ -2011,7 +2011,7 @@
 		]
 	},
 	"block.kryp.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/kryp/step1",
 			"ltones:block/kryp/step2",
@@ -2057,7 +2057,7 @@
 		]
 	},
 	"block.kryp_base.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/kryp_base/step1",
 			"ltones:block/kryp_base/step2",
@@ -2143,7 +2143,7 @@
 		]
 	},
 	"block.lithium.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/lithium/step1",
 			"ltones:block/lithium/step2",
@@ -2195,7 +2195,7 @@
 		]
 	},
 	"block.lithium_ore.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/lithium_ore/step1",
 			"ltones:block/lithium_ore/step2",
@@ -2249,7 +2249,7 @@
 		]
 	},
 	"block.deepslate_lithium_ore.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/deepslate_lithium_ore/step1",
 			"ltones:block/deepslate_lithium_ore/step2",
@@ -2301,7 +2301,7 @@
 		]
 	},
 	"block.tyel.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/tyel/step1",
 			"ltones:block/tyel/step2",
@@ -2366,12 +2366,28 @@
 		]
 	},
 	"block.cast.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/cast/step1",
 			"ltones:block/cast/step2",
 			"ltones:block/cast/step3",
 			"ltones:block/cast/step4"
+		]
+	},
+	"block.redds.activate": {
+		"subtitle": "",
+		"sounds": [
+			"ltones:block/redds/activate1",
+			"ltones:block/redds/activate2",
+			"ltones:block/redds/activate3"
+		]
+	},
+	"block.redds.deactivate": {
+		"subtitle": "",
+		"sounds": [
+			"ltones:block/redds/activate1",
+			"ltones:block/redds/activate2",
+			"ltones:block/redds/activate3"
 		]
 	},
 	"block.redds.break": {
@@ -2410,7 +2426,7 @@
 		]
 	},
 	"block.redds.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/redds/step1",
 			"ltones:block/redds/step2",
@@ -2458,7 +2474,7 @@
 		]
 	},
 	"block.host.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/host/step1",
 			"ltones:block/host/step2",
@@ -2526,7 +2542,7 @@
 		]
 	},
 	"block.lair.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/lair/step1",
 			"ltones:block/lair/step2",
@@ -2593,7 +2609,7 @@
 		]
 	},
 	"block.tank.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/tank/step1",
 			"ltones:block/tank/step2",
@@ -2643,7 +2659,7 @@
 		]
 	},
 	"block.glaxx.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/glaxx/step1",
 			"ltones:block/glaxx/step2",
@@ -2710,7 +2726,7 @@
 		]
 	},
 	"block.fortt.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/fortt/step1",
 			"ltones:block/fortt/step2",
@@ -2756,7 +2772,7 @@
 		]
 	},
 	"block.bitt.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/bitt/step1",
 			"ltones:block/bitt/step2",
@@ -2821,7 +2837,7 @@
 		]
 	},
 	"block.veeld.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/veeld/step1",
 			"ltones:block/veeld/step2",
@@ -2869,7 +2885,7 @@
 		]
 	},
 	"block.veeld_bricks.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/veeld_bricks/step1",
 			"ltones:block/veeld_bricks/step2",
@@ -2936,7 +2952,7 @@
 		]
 	},
 	"block.cray.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/cray/step1",
 			"ltones:block/cray/step2",
@@ -2999,7 +3015,7 @@
 		]
 	},
 	"block.nurr.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/nurr/step1",
 			"ltones:block/nurr/step2",
@@ -3045,29 +3061,12 @@
 		]
 	},
 	"block.agon.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/agon/step1",
 			"ltones:block/agon/step2",
 			"ltones:block/agon/step3",
 			"ltones:block/agon/step4"
-		]
-	},
-
-	"block.polygon.activate": {
-		"subtitle": "",
-		"sounds": [
-			"ltones:block/redds/activate1",
-			"ltones:block/redds/activate2",
-			"ltones:block/redds/activate3"
-		]
-	},
-	"block.polygon.deactivate": {
-		"subtitle": "",
-		"sounds": [
-			"ltones:block/redds/activate1",
-			"ltones:block/redds/activate2",
-			"ltones:block/redds/activate3"
 		]
 	},
 
@@ -3124,7 +3123,7 @@
 		]
 	},
 	"block.lave.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/lave/step1",
 			"ltones:block/lave/step2",
@@ -3187,7 +3186,7 @@
 		]
 	},
 	"block.vect.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/vect/step1",
 			"ltones:block/vect/step2",
@@ -3233,7 +3232,7 @@
 		]
 	},
 	"block.vect_foil.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/vect_foil/step1",
 			"ltones:block/vect_foil/step2",
@@ -3283,7 +3282,7 @@
 		]
 	},
 	"block.myst.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/myst/step1",
 			"ltones:block/myst/step2",
@@ -3333,7 +3332,7 @@
 		]
 	},
 	"block.zane.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/zane/step1",
 			"ltones:block/zane/step2",
@@ -3381,7 +3380,7 @@
 		]
 	},
 	"block.sol.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/sol/step1",
 			"ltones:block/sol/step2",
@@ -3439,7 +3438,7 @@
 		]
 	},
 	"block.sync.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/sync/step1",
 			"ltones:block/sync/step2",
@@ -3483,7 +3482,7 @@
 		]
 	},
 	"block.tire.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/tire/step1",
 			"ltones:block/tire/step2",
@@ -3545,7 +3544,7 @@
 		]
 	},
 	"block.zkul.fall": {
-		"subtitle": "subtitles.block.generic.fall",
+		
 		"sounds": [
 			"ltones:block/zkul/step1",
 			"ltones:block/zkul/step2",
