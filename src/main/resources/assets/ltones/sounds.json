@@ -2328,6 +2328,22 @@
 			"ltones:block/cast/door/close3"
 		]
 	},
+	"block.cast_trapdoor.open": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/cast/trapdoor/open1",
+			"ltones:block/cast/trapdoor/open2",
+			"ltones:block/cast/trapdoor/open3"
+		]
+	},
+	"block.cast_trapdoor.close": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/cast/trapdoor/close1",
+			"ltones:block/cast/trapdoor/close2",
+			"ltones:block/cast/trapdoor/close3"
+		]
+	},
 
 	"block.cast.break": {
 		"subtitle": "subtitles.block.generic.break",
@@ -2689,6 +2705,23 @@
 		]
 	},
 
+	"block.fortt_trapdoor.open": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/fortt/trapdoor/open1",
+			"ltones:block/fortt/trapdoor/open2",
+			"ltones:block/fortt/trapdoor/open3"
+		]
+	},
+	"block.fortt_trapdoor.close": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/fortt/trapdoor/close1",
+			"ltones:block/fortt/trapdoor/close2",
+			"ltones:block/fortt/trapdoor/close3"
+		]
+	},
+
 	"block.fortt.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -2794,7 +2827,7 @@
 			"ltones:block/veeld/door/close1",
 			"ltones:block/veeld/door/close2",
 			"ltones:block/veeld/door/close3",
-			"ltones:block/cray/door/close4"
+			"ltones:block/veeld/door/close4"
 		]
 	},
 
@@ -2908,6 +2941,22 @@
 			"ltones:block/cray/door/close2",
 			"ltones:block/cray/door/close3",
 			"ltones:block/cray/door/close4"
+		]
+	},
+	"block.cray_trapdoor.open": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/cray/trapdoor/open1",
+			"ltones:block/cray/trapdoor/open2",
+			"ltones:block/cray/trapdoor/open3"
+		]
+	},
+	"block.cray_trapdoor.close": {
+		"subtitle": "subtitles.block.door.toggle",
+		"sounds": [
+			"ltones:block/cray/door/close1",
+			"ltones:block/cray/door/close2",
+			"ltones:block/cray/door/close3"
 		]
 	},
 

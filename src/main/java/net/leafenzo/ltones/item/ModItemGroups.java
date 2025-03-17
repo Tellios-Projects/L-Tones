@@ -67,21 +67,37 @@ public class ModItemGroups {
                         for(Block block : includeVariants(ModBlocks.ROEN_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.SOL_BLOCKS)) { entries.add(block); }
                         entries.add(ModBlocks.DOOR_STEAK);
+                        entries.add(ModBlocks.TRAPDOOR_STEAK);
                         entries.add(ModBlocks.DOOR_NEON);
+                        entries.add(ModBlocks.TRAPDOOR_NEON);
                         entries.add(ModBlocks.DOOR_TOY);
+                        entries.add(ModBlocks.TRAPDOOR_TOY);
                         entries.add(ModBlocks.DOOR_POWER);
+                        entries.add(ModBlocks.TRAPDOOR_POWER);
                         entries.add(ModBlocks.DOOR_VACUUM);
+                        entries.add(ModBlocks.TRAPDOOR_VACUUM);
                         entries.add(ModBlocks.DOOR_CONFINE);
+                        entries.add(ModBlocks.TRAPDOOR_CONFINE);
                         entries.add(ModBlocks.DOOR_END);
+                        entries.add(ModBlocks.TRAPDOOR_END);
                         entries.add(ModBlocks.DOOR_HEAVY);
+                        entries.add(ModBlocks.TRAPDOOR_HEAVY);
                         entries.add(ModBlocks.DOOR_TEST);
+                        entries.add(ModBlocks.TRAPDOOR_TEST);
                         entries.add(ModBlocks.DOOR_GROWN);
+                        entries.add(ModBlocks.TRAPDOOR_GROWN);
                         entries.add(ModBlocks.DOOR_KNET);
+                        entries.add(ModBlocks.TRAPDOOR_KNET);
                         entries.add(ModBlocks.DOOR_WORK);
+                        entries.add(ModBlocks.TRAPDOOR_WORK);
                         entries.add(ModBlocks.DOOR_SAFE);
+                        entries.add(ModBlocks.TRAPDOOR_SAFE);
                         entries.add(ModBlocks.DOOR_PETRI);
+                        entries.add(ModBlocks.TRAPDOOR_PETRI);
                         entries.add(ModBlocks.DOOR_BUNKER);
+                        entries.add(ModBlocks.TRAPDOOR_BUNKER);
                         entries.add(ModBlocks.DOOR_PUNCTURE);
+                        entries.add(ModBlocks.TRAPDOOR_PUNCTURE);
                         entries.add(ModBlocks.IRON_BAR_DOOR);
                         entries.add(ModBlocks.TONE);
                         entries.add(ModBlocks.TONE_BRICKS);

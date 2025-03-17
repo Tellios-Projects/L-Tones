@@ -234,6 +234,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
     }
 
+    public static void offerTrapdoorRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
+        createTrapdoorRecipe(output, Ingredient.ofItems(input))
+                .criterion(FabricRecipeProvider.hasItem(input), FabricRecipeProvider.conditionsFromItem(input))
+                .offerTo(exporter);
+    }
+
     public static void offerReversible2x2CompactingRecipesWithCompactingRecipeGroup(Consumer<RecipeJsonProvider> exporter, RecipeCategory reverseCategory, ItemConvertible baseItem, RecipeCategory compactingCategory, ItemConvertible compactItem, String compactingId, String compactingGroup) {
         offerReversible2x2CompactingRecipes(exporter, reverseCategory, baseItem, compactingCategory, compactItem, compactingId, compactingGroup, RecipeProvider.getRecipeName(baseItem), null);
     }
@@ -476,21 +482,37 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         // Doors
         offerDoorRecipe(exporter, ModBlocks.DOOR_STEAK, ModItems.POLYCARBONATE);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_STEAK, ModItems.POLYCARBONATE);
         offerDoorRecipe(exporter, ModBlocks.DOOR_NEON, ModItems.MOULDING);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_NEON, ModItems.MOULDING);
         offerDoorRecipe(exporter, ModBlocks.DOOR_TOY, ModItems.POLYMER);
-        offerDoorRecipe(exporter, ModBlocks.DOOR_POWER, ModItems.GAS_TUBE); // offerDoorRecipe(exporter, ModBlocks.DOOR_POWER, ModBlocks.NURR);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_TOY, ModItems.POLYMER);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_POWER, ModItems.GAS_TUBE);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_POWER, ModItems.GAS_TUBE);
         offerDoorRecipe(exporter, ModBlocks.DOOR_VACUUM, ModItems.KERBESIUM);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_VACUUM, ModItems.KERBESIUM);
         offerDoorRecipe(exporter, ModBlocks.DOOR_CONFINE, ModItems.FIBROUS_POWDER); // offerDoorRecipe(exporter, ModBlocks.DOOR_CONFINE, ModBlocks.MINN_POFFCAGE);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_CONFINE, ModItems.FIBROUS_POWDER);
         offerDoorRecipe(exporter, ModBlocks.DOOR_END, ModItems.SCARLET_MEMBRANE);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_END, ModItems.SCARLET_MEMBRANE);
         offerDoorRecipe(exporter, ModBlocks.DOOR_HEAVY, ModItems.CONDUCTIUM);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_HEAVY, ModItems.CONDUCTIUM);
         offerDoorRecipe(exporter, ModBlocks.DOOR_TEST, ModItems.SHEETING);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_TEST, ModItems.SHEETING);
         offerDoorRecipe(exporter, ModBlocks.DOOR_GROWN, ModItems.ORGANIC_BRASS);
-        offerDoorRecipe(exporter, ModBlocks.DOOR_KNET, ModItems.SLAG); // offerDoorRecipe(exporter, ModBlocks.DOOR_KNET, ModBlocks.KORP);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_GROWN, ModItems.ORGANIC_BRASS);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_KNET, ModItems.SLAG);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_KNET, ModItems.SLAG);
         offerDoorRecipe(exporter, ModBlocks.DOOR_WORK, ModItems.TAWSINE);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_WORK, ModItems.TAWSINE);
         offerDoorRecipe(exporter, ModBlocks.DOOR_SAFE, ModItems.AMALGAM);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_SAFE, ModItems.AMALGAM);
         offerDoorRecipe(exporter, ModBlocks.DOOR_PETRI, ModItems.PLAQUE);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_PETRI, ModItems.PLAQUE);
         offerDoorRecipe(exporter, ModBlocks.DOOR_BUNKER, ModBlocks.ABSTRACT_TONE);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_BUNKER, ModBlocks.ABSTRACT_TONE);
         offerDoorRecipe(exporter, ModBlocks.DOOR_PUNCTURE, ModItems.LITHIUM_INGOT);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_PUNCTURE, ModItems.LITHIUM_INGOT);
         offerDoorRecipe(exporter, ModBlocks.IRON_BAR_DOOR, Items.IRON_BARS);
         offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.IRON_BAR_DOOR, Blocks.IRON_DOOR);
 

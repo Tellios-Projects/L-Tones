@@ -258,6 +258,10 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         for(Block block : ModBlocks.DOORS) {
             getOrCreateTagBuilder(BlockTags.DOORS).add(block);
         }
+
+        for(Block block : ModBlocks.TRAPDOORS) {
+            getOrCreateTagBuilder(BlockTags.TRAPDOORS).add(block);
+        }
         //</editor-fold
     }
 }

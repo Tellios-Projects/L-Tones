@@ -32,6 +32,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.function.ToIntFunction;
 
+import static net.minecraft.registry.tag.BlockTags.TRAPDOORS;
+
 public class ModBlocks {
 
     //<editor-fold desc ="Hashmaps & BlockSets">
@@ -45,6 +47,7 @@ public class ModBlocks {
     public static final HashMap<Block, Block> STAIRS_FROM_BLOCK = new HashMap<Block, Block>();
     public static final HashMap<Block, Block> SLAB_FROM_BLOCK = new HashMap<Block, Block>();
     public static final ArrayList<Block> DOORS = new ArrayList<Block>();
+    public static final ArrayList<Block> TRAPDOORS = new ArrayList<Block>();
 
     public static final ArrayList<Block> AGON_BLOCKS = registerBlocksetOfVanillaDyedBlocks("agon", FabricBlockSettings.create().strength(0.3f).sounds(ModBlockSoundGroup.AGON).luminance(state -> 15));
     public static final ArrayList<Block> FORTT_BLOCKS = new ArrayList<>();
@@ -830,6 +833,32 @@ public class ModBlocks {
     public static final Block DOOR_PETRI = registerDoor("door_petri", new DoorBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.PALE_YELLOW).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.ROEN));
     public static final Block DOOR_BUNKER = registerDoor("door_bunker", new DoorBlock(FabricBlockSettings.copyOf(ModBlocks.ABSTRACT_TONE).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.TONE));
     public static final Block IRON_BAR_DOOR = registerDoor("iron_bar_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), BlockSetType.IRON));
+    //</editor-fold>
+
+    //<editor-fold desc ="Blocks - Trapdoors">
+    public static Block registerTrapdoor(String name, Block block) {
+        Block b = registerBlock(name, block);
+        TRAPDOORS.add(b);
+        RENDER_LAYER_CUTOUT.add(b);
+        return b;
+    }
+
+    public static final Block TRAPDOOR_PUNCTURE = registerTrapdoor("trapdoor_puncture", new TrapdoorBlock(FabricBlockSettings.copyOf(LITHIUM_BLOCK).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.LITHIUM));
+    public static final Block TRAPDOOR_STEAK = registerTrapdoor("trapdoor_steak", new TrapdoorBlock(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DEEPSLATE_GRAY).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.FORTT));
+    public static final Block TRAPDOOR_NEON = registerTrapdoor("trapdoor_neon", new TrapdoorBlock(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.PURPLE).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.CRAY));
+    public static final Block TRAPDOOR_TOY = registerTrapdoor("trapdoor_toy", new TrapdoorBlock(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BRIGHT_RED).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.CAST));
+    public static final Block TRAPDOOR_POWER = registerTrapdoor("trapdoor_power", new TrapdoorBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.BLACK).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.NURR));
+    public static final Block TRAPDOOR_VACUUM = registerTrapdoor("trapdoor_vacuum", new TrapdoorBlock(FabricBlockSettings.copyOf(vectMaterial).mapColor(MapColor.BLACK).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.VECT));
+    public static final Block TRAPDOOR_CONFINE = registerTrapdoor("trapdoor_confine", new TrapdoorBlock(FabricBlockSettings.copyOf(minnMaterial).mapColor(MapColor.WHITE).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.MINN));
+    public static final Block TRAPDOOR_END = registerTrapdoor("trapdoor_end", new TrapdoorBlock(FabricBlockSettings.copyOf(lairMaterial).mapColor(MapColor.DARK_CRIMSON).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.LAIR));
+    public static final Block TRAPDOOR_HEAVY = registerTrapdoor("trapdoor_heavy", new TrapdoorBlock(FabricBlockSettings.copyOf(krypMaterial).mapColor(MapColor.SPRUCE_BROWN).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.KRYP));
+    public static final Block TRAPDOOR_TEST = registerTrapdoor("trapdoor_test", new TrapdoorBlock(FabricBlockSettings.copyOf(laveMaterial).mapColor(MapColor.IRON_GRAY).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.LAVE));
+    public static final Block TRAPDOOR_GROWN = registerTrapdoor("trapdoor_grown", new TrapdoorBlock(FabricBlockSettings.copyOf(veeldMaterial).mapColor(MapColor.DARK_GREEN).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.VEELD));
+    public static final Block TRAPDOOR_KNET = registerTrapdoor("trapdoor_knet", new TrapdoorBlock(FabricBlockSettings.copyOf(korpMaterial).mapColor(MapColor.CLEAR).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.KORP));
+    public static final Block TRAPDOOR_WORK = registerTrapdoor("trapdoor_work", new TrapdoorBlock(FabricBlockSettings.copyOf(tankMaterial).mapColor(MapColor.GRAY).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.TANK));
+    public static final Block TRAPDOOR_SAFE = registerTrapdoor("trapdoor_safe", new TrapdoorBlock(FabricBlockSettings.copyOf(exriMaterial).mapColor(MapColor.BLACK).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.EXRI));
+    public static final Block TRAPDOOR_PETRI = registerTrapdoor("trapdoor_petri", new TrapdoorBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.PALE_YELLOW).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.ROEN));
+    public static final Block TRAPDOOR_BUNKER = registerTrapdoor("trapdoor_bunker", new TrapdoorBlock(FabricBlockSettings.copyOf(ModBlocks.ABSTRACT_TONE).mapColor(MapColor.IRON_GRAY).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.TONE));
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - Decals">

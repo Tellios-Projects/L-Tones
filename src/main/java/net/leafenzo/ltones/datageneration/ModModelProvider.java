@@ -9,7 +9,6 @@ import net.leafenzo.ltones.block.custom.LitSlabBlock;
 import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.data.client.ModModels;
 import net.leafenzo.ltones.data.client.ModTexturedModel;
-import net.leafenzo.ltones.item.ModItems;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.*;
 import net.minecraft.data.client.*;
@@ -29,8 +28,25 @@ public class ModModelProvider extends FabricModelProvider {
         super(output);
     }
 
-    private void registerUpDefaultOrientable(BlockStateModelGenerator blockStateModelGenerator, Block block, TexturedModel.Factory modelFactory) {
-        Identifier identifier = modelFactory.upload(block, blockStateModelGenerator.modelCollector);
+    public void registerCustomTrapdoor(BlockStateModelGenerator blockStateModelGenerator, Block trapdoorBlock) {
+        TextureMap textureMap = TextureMap.texture(trapdoorBlock);
+        Identifier identifier = Models.TEMPLATE_TRAPDOOR_TOP.upload(trapdoorBlock, textureMap, blockStateModelGenerator.modelCollector);
+        Identifier identifier2 = Models.TEMPLATE_TRAPDOOR_BOTTOM.upload(trapdoorBlock, textureMap, blockStateModelGenerator.modelCollector);
+        Identifier identifier3 = Models.TEMPLATE_TRAPDOOR_OPEN.upload(trapdoorBlock, textureMap, blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createTrapdoorBlockState(trapdoorBlock, identifier, identifier2, identifier3));
+    }
+
+    public void registerCustomOrientableTrapdoor(BlockStateModelGenerator blockStateModelGenerator, Block trapdoorBlock) {
+        TextureMap textureMap = TextureMap.texture(trapdoorBlock);
+        Identifier identifier = Models.TEMPLATE_ORIENTABLE_TRAPDOOR_TOP.upload(trapdoorBlock, textureMap, blockStateModelGenerator.modelCollector);
+        Identifier identifier2 = Models.TEMPLATE_ORIENTABLE_TRAPDOOR_BOTTOM.upload(trapdoorBlock, textureMap, blockStateModelGenerator.modelCollector);
+        Identifier identifier3 = Models.TEMPLATE_ORIENTABLE_TRAPDOOR_OPEN.upload(trapdoorBlock, textureMap, blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createOrientableTrapdoorBlockState(trapdoorBlock, identifier, identifier2, identifier3));
+        //blockStateModelGenerator.registerParentedItemModel(trapdoorBlock, identifier2);
+    }
+
+    private void registerUpDefaultOrientable(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        Identifier identifier = TexturedModel.CUBE_ALL.upload(block, blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(this.createUpDefaultRotationStates()));
         //blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(BlockStateModelGenerator.createNorthDefaultRotationStates(), identifier));
     }
@@ -40,23 +56,23 @@ public class ModModelProvider extends FabricModelProvider {
 //    public static Identifier createSubModel(Block block, String suffix, TexturedModel.Factory modelFactory) {
 //        return modelFactory.upload(block, suffix, )
 //    }
-    private void registerLitOnOffBlock(BlockStateModelGenerator blockStateModelGenerator, Block block, Model model,  Function<Identifier, TextureMap> textureFactory) {
-        Identifier identifier = model.upload(block, textureFactory.apply(TextureMap.getId(block)), blockStateModelGenerator.modelCollector);
-        Identifier identifier2 = blockStateModelGenerator.createSubModel(block, "_on", model, textureFactory);
+    private void registerLitOnOffBlock(BlockStateModelGenerator blockStateModelGenerator, Block block, Function<Identifier, TextureMap> textureFactory) {
+        Identifier identifier = Models.CUBE_ALL.upload(block, textureFactory.apply(TextureMap.getId(block)), blockStateModelGenerator.modelCollector);
+        Identifier identifier2 = blockStateModelGenerator.createSubModel(block, "_on", Models.CUBE_ALL, textureFactory);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.LIT, identifier2, identifier)));
 
     }
-    private void registerLitOnOffAxisRotatedBlock(BlockStateModelGenerator blockStateModelGenerator, Block block, Model model,  Function<Identifier, TextureMap> textureFactory) {
-        Identifier identifier = model.upload(block, textureFactory.apply(TextureMap.getId(block)), blockStateModelGenerator.modelCollector);
-        Identifier identifier2 = blockStateModelGenerator.createSubModel(block, "_on", model, textureFactory);
+    private void registerLitOnOffAxisRotatedBlock(BlockStateModelGenerator blockStateModelGenerator, Block block, Function<Identifier, TextureMap> textureFactory) {
+        Identifier identifier = Models.CUBE_ALL.upload(block, textureFactory.apply(TextureMap.getId(block)), blockStateModelGenerator.modelCollector);
+        Identifier identifier2 = blockStateModelGenerator.createSubModel(block, "_on", Models.CUBE_ALL, textureFactory);
         blockStateModelGenerator.blockStateCollector.accept(
                 VariantsBlockStateSupplier.create(block)
                         .coordinate(BlockStateModelGenerator.createAxisRotatedVariantMap())
                         .coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.LIT, identifier2, identifier)));
     }
-    private void registerLitOnOffGlazedTerracottaBlock(BlockStateModelGenerator blockStateModelGenerator, Block block, Model model,  Function<Identifier, TextureMap> textureFactory) {
-        Identifier identifier = model.upload(block, textureFactory.apply(TextureMap.getId(block)), blockStateModelGenerator.modelCollector);
-        Identifier identifier2 = blockStateModelGenerator.createSubModel(block, "_on", model, textureFactory);
+    private void registerLitOnOffGlazedTerracottaBlock(BlockStateModelGenerator blockStateModelGenerator, Block block, Function<Identifier, TextureMap> textureFactory) {
+        Identifier identifier = Models.CUBE_ALL.upload(block, textureFactory.apply(TextureMap.getId(block)), blockStateModelGenerator.modelCollector);
+        Identifier identifier2 = blockStateModelGenerator.createSubModel(block, "_on", Models.CUBE_ALL, textureFactory);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createSouthDefaultHorizontalRotationStates()).coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.LIT, identifier2, identifier)));
     }
     private void registerAxisRotatedBlockWithTopTexturePath(BlockStateModelGenerator blockStateModelGenerator, Block block, String topTexturePath) {
@@ -93,12 +109,12 @@ public class ModModelProvider extends FabricModelProvider {
         Identifier identifier2 = blockStateModelGenerator.createSubModel(block, "_wall", ModModels.DECAL, TextureMap::all);
 
         MultipartBlockStateSupplier multipartBlockStateSupplier = MultipartBlockStateSupplier.create(block);
-        When.PropertyCondition propertyCondition2 = Util.make(When.create(), propertyCondition -> blockStateModelGenerator.CONNECTION_VARIANT_FUNCTIONS.stream().map(Pair::getFirst).forEach(property -> {
+        When.PropertyCondition propertyCondition2 = Util.make(When.create(), propertyCondition -> BlockStateModelGenerator.CONNECTION_VARIANT_FUNCTIONS.stream().map(Pair::getFirst).forEach(property -> {
             if (block.getDefaultState().contains(property)) {
                 propertyCondition.set(property, false);
             }
         }));
-        for (Pair<BooleanProperty, Function<Identifier, BlockStateVariant>> pair : blockStateModelGenerator.CONNECTION_VARIANT_FUNCTIONS) {
+        for (Pair<BooleanProperty, Function<Identifier, BlockStateVariant>> pair : BlockStateModelGenerator.CONNECTION_VARIANT_FUNCTIONS) {
             BooleanProperty booleanProperty = pair.getFirst();
             Function<Identifier, BlockStateVariant> function = pair.getSecond();
             if (!block.getDefaultState().contains(booleanProperty)) continue;
@@ -119,12 +135,12 @@ public class ModModelProvider extends FabricModelProvider {
         Identifier identifier = blockStateModelGenerator.createSubModel(block, "", ModModels.DECAL, TextureMap::all);
 
         MultipartBlockStateSupplier multipartBlockStateSupplier = MultipartBlockStateSupplier.create(block);
-        When.PropertyCondition propertyCondition2 = Util.make(When.create(), propertyCondition -> blockStateModelGenerator.CONNECTION_VARIANT_FUNCTIONS.stream().map(Pair::getFirst).forEach(property -> {
+        When.PropertyCondition propertyCondition2 = Util.make(When.create(), propertyCondition -> BlockStateModelGenerator.CONNECTION_VARIANT_FUNCTIONS.stream().map(Pair::getFirst).forEach(property -> {
             if (block.getDefaultState().contains(property)) {
                 propertyCondition.set(property, false);
             }
         }));
-        for (Pair<BooleanProperty, Function<Identifier, BlockStateVariant>> pair : blockStateModelGenerator.CONNECTION_VARIANT_FUNCTIONS) {
+        for (Pair<BooleanProperty, Function<Identifier, BlockStateVariant>> pair : BlockStateModelGenerator.CONNECTION_VARIANT_FUNCTIONS) {
             BooleanProperty booleanProperty = pair.getFirst();
             Function<Identifier, BlockStateVariant> function = pair.getSecond();
             if (!block.getDefaultState().contains(booleanProperty)) continue;
@@ -191,19 +207,19 @@ public class ModModelProvider extends FabricModelProvider {
     public final void registerHorizontalFacingCubeWithCustomTexturePaths(BlockStateModelGenerator blockStateModelGenerator, Block block, String northTexture, String southTexture, String eastTexture, String westTexture, String upTexture, String downTexture) {
         registerHorizontalFacingCubeWithCustomTexturePaths(blockStateModelGenerator, block, northTexture, southTexture, eastTexture, westTexture, upTexture, downTexture, northTexture);
     }
-    private void registerCrate(BlockStateModelGenerator blockStateModelGenerator, Block block) {
-        Identifier identifier = TextureMap.getSubId(block, "_top_open");
-        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(blockStateModelGenerator.createUpDefaultFacingVariantMap()).coordinate(BlockStateVariantMap.create(Properties.OPEN).register((Boolean)false, BlockStateVariant.create().put(VariantSettings.MODEL, TexturedModel.CUBE_TOP.upload(block, blockStateModelGenerator.modelCollector))).register((Boolean)true, BlockStateVariant.create().put(VariantSettings.MODEL, TexturedModel.CUBE_TOP.get(block).textures(textureMap -> textureMap.put(TextureKey.TOP, identifier)).upload(block, "_open", blockStateModelGenerator.modelCollector)))));
+    private void registerCrate(BlockStateModelGenerator blockStateModelGenerator) {
+        Identifier identifier = TextureMap.getSubId(ModBlocks.CRATE, "_top_open");
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.CRATE).coordinate(blockStateModelGenerator.createUpDefaultFacingVariantMap()).coordinate(BlockStateVariantMap.create(Properties.OPEN).register((Boolean)false, BlockStateVariant.create().put(VariantSettings.MODEL, TexturedModel.CUBE_TOP.upload(ModBlocks.CRATE, blockStateModelGenerator.modelCollector))).register((Boolean)true, BlockStateVariant.create().put(VariantSettings.MODEL, TexturedModel.CUBE_TOP.get(ModBlocks.CRATE).textures(textureMap -> textureMap.put(TextureKey.TOP, identifier)).upload(ModBlocks.CRATE, "_open", blockStateModelGenerator.modelCollector)))));
     }
     private void registerKeyboardBlock(BlockStateModelGenerator blockStateModelGenerator, Block block) {
         Identifier identifier = blockStateModelGenerator.createSubModel(block, "", ModModels.KEYBOARD, TextureMap::all);
 //        blockStateModelGenerator.registerItemModel(block.asItem());
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
     }
-    private void registerAntennaBlock(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+    private void registerAntennaBlock(BlockStateModelGenerator blockStateModelGenerator) {
         Identifier identifier = new Identifier("ltones", "block/antenna");
 //        blockStateModelGenerator.registerItemModel(block.asItem());
-        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.ANTENNA, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
     }
     private void registerRadioBlock(BlockStateModelGenerator blockStateModelGenerator, Block block) {
         Identifier identifier = new Identifier("ltones", "block/radio");
@@ -217,7 +233,7 @@ public class ModModelProvider extends FabricModelProvider {
         this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_LITHIUM_CHUNK);
         this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_RAW_LITHIUM);
         this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_CONDUCTIUM);
-        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_ANTIBRASS);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_ANTIBRASS);
         this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_KERBESIUM);
         this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_ORGANIC_BRASS);
         this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_MIDASIUM);
@@ -289,21 +305,21 @@ public class ModModelProvider extends FabricModelProvider {
                 blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.REDDS_PICE);
         reddsPiceTexturePool.slab(ModBlocks.REDDS_PICE_SLAB);
         reddsPiceTexturePool.stairs(ModBlocks.REDDS_PICE_STAIRS);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_TRACT, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_THOUGHT, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_TILE, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_MARK, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_NEXUS, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_GRATE, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_HEART, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_HOPPER, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_FRACTAL, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_FRAME, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_BALANCE, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_CURRENT, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffAxisRotatedBlock(blockStateModelGenerator, ModBlocks.REDDS_TAPE, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffGlazedTerracottaBlock(blockStateModelGenerator, ModBlocks.REDDS_GLAZED, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_TRACT, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_THOUGHT, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_TILE, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_MARK, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_NEXUS, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_GRATE, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_HEART, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_HOPPER, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_FRACTAL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_FRAME, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_BALANCE, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.REDDS_CURRENT, TextureMap::all);
+        registerLitOnOffAxisRotatedBlock(blockStateModelGenerator, ModBlocks.REDDS_TAPE, TextureMap::all);
+        registerLitOnOffGlazedTerracottaBlock(blockStateModelGenerator, ModBlocks.REDDS_GLAZED, TextureMap::all);
         //</editor-fold>
         //<editor-fold desc = "Models - vect">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT);
@@ -311,7 +327,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_RIVET);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_HUB);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.VECT_STRUT, TexturedModel.CUBE_ALL);
-        registerUpDefaultOrientable(blockStateModelGenerator, ModBlocks.VECT_PAD, TexturedModel.CUBE_ALL);
+        registerUpDefaultOrientable(blockStateModelGenerator, ModBlocks.VECT_PAD);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_TRACKER);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_CORE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VECT_TREADPLATE);
@@ -363,7 +379,7 @@ public class ModModelProvider extends FabricModelProvider {
             lairDermaTexturePool.slab(ModBlocks.LAIR_DERMA_SLAB);
             lairDermaTexturePool.stairs(ModBlocks.LAIR_DERMA_STAIRS);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.LAIR_CROWNED, TexturedModel.CUBE_ALL);
-        registerUpDefaultOrientable(blockStateModelGenerator, ModBlocks.LAIR_CHUNK, TexturedModel.CUBE_ALL);
+        registerUpDefaultOrientable(blockStateModelGenerator, ModBlocks.LAIR_CHUNK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_CELL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_AGED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR);
@@ -378,7 +394,7 @@ public class ModModelProvider extends FabricModelProvider {
         krypSmoothTexturePool.stairs(ModBlocks.KRYP_SMOOTH_STAIRS);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_SHEEN);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_RUIN);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.KRYP_OMITTER, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.KRYP_OMITTER, TextureMap::all);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_LEVI);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_INFO);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_DATA);
@@ -498,8 +514,8 @@ public class ModModelProvider extends FabricModelProvider {
         exriDivideTexturePool.slab(ModBlocks.EXRI_DIVIDE_SLAB);
         exriDivideTexturePool.stairs(ModBlocks.EXRI_DIVIDE_STAIRS);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_FLOW, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffAxisRotatedBlock(blockStateModelGenerator, ModBlocks.EXRI_SERVE, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_FLOW, TextureMap::all);
+        registerLitOnOffAxisRotatedBlock(blockStateModelGenerator, ModBlocks.EXRI_SERVE, TextureMap::all);
 
         registerLitHorizontalFacingCubeWithCustomTexturePaths(blockStateModelGenerator, ModBlocks.EXRI_DISPLAY,
                 new TextureMap()
@@ -519,10 +535,10 @@ public class ModModelProvider extends FabricModelProvider {
                         .put(TextureKey.DOWN, Super.asResource("block/exri_seal"))
                         .put(TextureKey.PARTICLE, Super.asResource("block/exri_tect"))
         );
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_CURRENT, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_CRITICAL, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_CONTROL, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_LEVEL, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_CURRENT, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_CRITICAL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_CONTROL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_LEVEL, TextureMap::all);
         //</editor-fold>
         //<editor-fold desc = "Models - azur">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.AZUR_CUBE);
@@ -619,22 +635,22 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.ROEN_KINESIN);
         //</editor-fold>
         //<editor-fold desc = "Models - sol">
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_PHOTO, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_ELECTRON, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_MAX, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_MIN, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_CHROMA, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_FLARE, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_BLIND, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_PROTON, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_BALANCE, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_GLARE, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_FIELD, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_NUCLEI, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_CORONA, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffAxisRotatedBlock(blockStateModelGenerator, ModBlocks.SOL_SPECTRA, Models.CUBE_ALL, TextureMap::all);
-        registerLitOnOffGlazedTerracottaBlock(blockStateModelGenerator, ModBlocks.SOL_BLAZAR,  Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_PHOTO, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_ELECTRON, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_MAX, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_MIN, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_CHROMA, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_FLARE, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_BLIND, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_PROTON, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_BALANCE, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_GLARE, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_FIELD, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_NUCLEI, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_CORONA, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL, TextureMap::all);
+        registerLitOnOffAxisRotatedBlock(blockStateModelGenerator, ModBlocks.SOL_SPECTRA, TextureMap::all);
+        registerLitOnOffGlazedTerracottaBlock(blockStateModelGenerator, ModBlocks.SOL_BLAZAR, TextureMap::all);
         //</editor-fold>
         //<editor-fold desc = "Models - bitt">
         for(Block block : ModBlocks.BITT_BLOCKS) {
@@ -643,7 +659,7 @@ public class ModModelProvider extends FabricModelProvider {
         //</editor-fold>
 
         //<editor-fold desc = "Models - Other Blocks">
-        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.AURORA, Models.CUBE_ALL, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.AURORA, TextureMap::all);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ZTONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_LITHIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LITHIUM_BLOCK);
@@ -664,12 +680,12 @@ public class ModModelProvider extends FabricModelProvider {
         registerCRT(blockStateModelGenerator, ModBlocks.GRAY_CRT);
         registerAxisRotatedBlockWithCustomTexturePaths(blockStateModelGenerator, ModBlocks.TIRE, "block/tire_top", "block/tire_side");
         registerAxisRotatedBlockWithCustomTexturePaths(blockStateModelGenerator, ModBlocks.EMPTY_TIRE, "block/empty_tire_top", "block/tire_side");
-        registerCrate(blockStateModelGenerator, ModBlocks.CRATE);
+        registerCrate(blockStateModelGenerator);
         registerKeyboardBlock(blockStateModelGenerator, ModBlocks.KEYBOARD);
         registerKeyboardBlock(blockStateModelGenerator, ModBlocks.AGED_KEYBOARD);
         registerKeyboardBlock(blockStateModelGenerator, ModBlocks.BLACK_KEYBOARD);
         registerKeyboardBlock(blockStateModelGenerator, ModBlocks.GRAY_KEYBOARD);
-        registerAntennaBlock(blockStateModelGenerator, ModBlocks.ANTENNA);
+        registerAntennaBlock(blockStateModelGenerator);
         registerRadioBlock(blockStateModelGenerator, ModBlocks.RADIO);
         //</editor-fold>
 
@@ -693,16 +709,19 @@ public class ModModelProvider extends FabricModelProvider {
         for (Block block : ModBlocks.DOORS) {
             blockStateModelGenerator.registerDoor(block);
         }
+        for (Block block : ModBlocks.TRAPDOORS) {
+            registerCustomOrientableTrapdoor(blockStateModelGenerator, block);
+        }
 
         // Fallback BlockItem Models
         generateFallbackBlockItemModels(blockStateModelGenerator);
     }
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.RAW_LITHIUM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.LITHIUM_CHUNK, Models.GENERATED);
-        itemModelGenerator.register(ModItems.LITHIUM_INGOT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ANTIBRASS, Models.GENERATED);
+        //itemModelGenerator.register(ModItems.RAW_LITHIUM, Models.GENERATED);
+        //itemModelGenerator.register(ModItems.LITHIUM_CHUNK, Models.GENERATED);
+        //itemModelGenerator.register(ModItems.LITHIUM_INGOT, Models.GENERATED);
+        //itemModelGenerator.register(ModItems.ANTIBRASS, Models.GENERATED);
     }
 
     public ArrayList<Identifier> usedBlockItems = new ArrayList<Identifier>();

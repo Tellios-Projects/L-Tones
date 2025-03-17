@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:trapdoor_puncture",
+    "ltones:trapdoor_steak",
+    "ltones:trapdoor_neon",
+    "ltones:trapdoor_toy",
+    "ltones:trapdoor_power",
+    "ltones:trapdoor_vacuum",
+    "ltones:trapdoor_confine",
+    "ltones:trapdoor_end",
+    "ltones:trapdoor_heavy",
+    "ltones:trapdoor_test",
+    "ltones:trapdoor_grown",
+    "ltones:trapdoor_knet",
+    "ltones:trapdoor_work",
+    "ltones:trapdoor_safe",
+    "ltones:trapdoor_petri",
+    "ltones:trapdoor_bunker"
+  ]
+}

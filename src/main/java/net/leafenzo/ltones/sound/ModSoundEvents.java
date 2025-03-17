@@ -181,6 +181,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_CAST_DOOR_OPEN = registerSoundEvent("block.cast_door.open");
     public static final SoundEvent BLOCK_CAST_DOOR_CLOSE = registerSoundEvent("block.cast_door.close");
+    public static final SoundEvent BLOCK_CAST_TRAPDOOR_OPEN = registerSoundEvent("block.cast_trapdoor.open");
+    public static final SoundEvent BLOCK_CAST_TRAPDOOR_CLOSE = registerSoundEvent("block.cast_trapdoor.close");
 
     public static final SoundEvent BLOCK_CAST_BREAK = registerSoundEvent("block.cast.break");
     public static final SoundEvent BLOCK_CAST_STEP = registerSoundEvent("block.cast.step");
@@ -297,6 +299,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_FORTT_DOOR_OPEN = registerSoundEvent("block.fortt_door.open");
     public static final SoundEvent BLOCK_FORTT_DOOR_CLOSE = registerSoundEvent("block.fortt_door.close");
+    public static final SoundEvent BLOCK_FORTT_TRAPDOOR_OPEN = registerSoundEvent("block.fortt_trapdoor.open");
+    public static final SoundEvent BLOCK_FORTT_TRAPDOOR_CLOSE = registerSoundEvent("block.fortt_trapdoor.close");
 
     public static final SoundEvent BLOCK_FORTT_BREAK = registerSoundEvent("block.fortt.break");
     public static final SoundEvent BLOCK_FORTT_STEP = registerSoundEvent("block.fortt.step");
@@ -312,6 +316,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_CRAY_DOOR_OPEN = registerSoundEvent("block.cray_door.open");
     public static final SoundEvent BLOCK_CRAY_DOOR_CLOSE = registerSoundEvent("block.cray_door.close");
+    public static final SoundEvent BLOCK_CRAY_TRAPDOOR_OPEN = registerSoundEvent("block.cray_trapdoor.open");
+    public static final SoundEvent BLOCK_CRAY_TRAPDOOR_CLOSE = registerSoundEvent("block.cray_trapdoor.close");
 
     public static final SoundEvent BLOCK_CRAY_BREAK = registerSoundEvent("block.cray.break");
     public static final SoundEvent BLOCK_CRAY_STEP = registerSoundEvent("block.cray.step");
