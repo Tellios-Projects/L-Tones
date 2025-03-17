@@ -19,6 +19,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_DECAL_ANTIBRASS_HIT = registerSoundEvent("block.decal_antibrass.hit");
     public static final SoundEvent BLOCK_DECAL_ANTIBRASS_FALL = registerSoundEvent("block.decal_antibrass.fall");
 
+    public static final SoundEvent BLOCK_DECAL_AZURE_RIVET_BREAK = registerSoundEvent("block.decal_azure_rivet.break");
+    public static final SoundEvent BLOCK_DECAL_AZURE_RIVET_STEP = registerSoundEvent("block.decal_azure_rivet.step");
+    public static final SoundEvent BLOCK_DECAL_AZURE_RIVET_PLACE = registerSoundEvent("block.decal_azure_rivet.place");
+    public static final SoundEvent BLOCK_DECAL_AZURE_RIVET_HIT = registerSoundEvent("block.decal_azure_rivet.hit");
+    public static final SoundEvent BLOCK_DECAL_AZURE_RIVET_FALL = registerSoundEvent("block.decal_azure_rivet.fall");
+
     public static final SoundEvent BLOCK_DECAL_CONDUCTIUM_BREAK = registerSoundEvent("block.decal_conductium.break");
     public static final SoundEvent BLOCK_DECAL_CONDUCTIUM_STEP = registerSoundEvent("block.decal_conductium.step");
     public static final SoundEvent BLOCK_DECAL_CONDUCTIUM_PLACE = registerSoundEvent("block.decal_conductium.place");
@@ -181,6 +187,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_CAST_PLACE = registerSoundEvent("block.cast.place");
     public static final SoundEvent BLOCK_CAST_HIT = registerSoundEvent("block.cast.hit");
     public static final SoundEvent BLOCK_CAST_FALL = registerSoundEvent("block.cast.fall");
+
+    public static final SoundEvent BLOCK_AZUR_BREAK = registerSoundEvent("block.azur.break");
+    public static final SoundEvent BLOCK_AZUR_STEP = registerSoundEvent("block.azur.step");
+    public static final SoundEvent BLOCK_AZUR_PLACE = registerSoundEvent("block.azur.place");
+    public static final SoundEvent BLOCK_AZUR_HIT = registerSoundEvent("block.azur.hit");
+    public static final SoundEvent BLOCK_AZUR_FALL = registerSoundEvent("block.azur.fall");
 
     public static final SoundEvent BLOCK_JELT_BREAK = registerSoundEvent("block.jelt.break");
     public static final SoundEvent BLOCK_JELT_STEP = registerSoundEvent("block.jelt.step");

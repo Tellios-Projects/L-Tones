@@ -527,7 +527,7 @@ public class ModBlocks {
             .mapColor(MapColor.LAPIS_BLUE)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.REDDS);
+            .sounds(ModBlockSoundGroup.AZUR);
     public static final Block AZUR_CRIPT = registerBlockInBlockset(AZUR_BLOCKS, "azur_cript", new PillarBlock(FabricBlockSettings.copyOf(azurMaterial)));
     public static final Block AZUR_CUBE = registerBlockInBlockset(AZUR_BLOCKS, "azur_cube", new Block(FabricBlockSettings.copyOf(azurMaterial)));
     public static final Block AZUR_CYBER = registerBlockInBlockset(AZUR_BLOCKS, "azur_cyber", new PillarBlock(FabricBlockSettings.copyOf(azurMaterial)));
@@ -861,7 +861,7 @@ public class ModBlocks {
     public static final Block DECAL_SHEETING = registerDecalBlock("decal_sheeting", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_SHEETING))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_SHEETING); }
     public static final Block DECAL_POLYCARBONATE = registerDecalBlock("decal_polycarbonate", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_POLYCARBONATE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_POLYCARBONATE); }
     public static final Block DECAL_GAS_TUBE = registerDecalBlock("decal_gas_tube", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_GLASS_TUBE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_GAS_TUBE); }
-    public static final Block DECAL_AZURE_RIVET = registerDecalBlock("decal_azure_rivet", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.CANDLE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_AZURE_RIVET); }
+    public static final Block DECAL_AZURE_RIVET = registerDecalBlock("decal_azure_rivet", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_AZURE_RIVET))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_AZURE_RIVET); }
     public static final Block DECAL_GLEAM = registerDecalBlock("decal_gleam", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.CANDLE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_GLEAM); }
     public static final Block DECAL_G2V = registerDecalBlock("decal_g2v", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_G2V))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_G2V); }
     public static final Block DECAL_SLAG = registerDecalBlock("decal_slag", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_SLAG))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_SLAG); }
