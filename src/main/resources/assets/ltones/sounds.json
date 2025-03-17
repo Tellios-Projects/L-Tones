@@ -3390,6 +3390,64 @@
 		]
 	},
 
+	"block.sync.ambient": {
+		"sounds": [
+			"ltones:block/sync/ambient1",
+			"ltones:block/sync/ambient2",
+			"ltones:block/sync/ambient3",
+			"ltones:block/sync/ambient4",
+			"ltones:block/sync/ambient5",
+			"ltones:block/sync/ambient6",
+			"ltones:block/sync/ambient7",
+			"ltones:block/sync/ambient8"
+		]
+	},
+	"block.sync.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/sync/break1",
+			"ltones:block/sync/break2",
+			"ltones:block/sync/break3",
+			"ltones:block/sync/break4"
+		]
+	},
+	"block.sync.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/sync/step1",
+			"ltones:block/sync/step2",
+			"ltones:block/sync/step3",
+			"ltones:block/sync/step4"
+		]
+	},
+	"block.sync.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/sync/break1",
+			"ltones:block/sync/break2",
+			"ltones:block/sync/break3",
+			"ltones:block/sync/break4"
+		]
+	},
+	"block.sync.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/sync/step1",
+			"ltones:block/sync/step2",
+			"ltones:block/sync/step3",
+			"ltones:block/sync/step4"
+		]
+	},
+	"block.sync.fall": {
+		"subtitle": "subtitles.block.generic.fall",
+		"sounds": [
+			"ltones:block/sync/step1",
+			"ltones:block/sync/step2",
+			"ltones:block/sync/step3",
+			"ltones:block/sync/step4"
+		]
+	},
+
 	"block.tire.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -3494,56 +3552,6 @@
 			"ltones:block/zkul/step3",
 			"ltones:block/zkul/step4",
 			"ltones:block/zkul/step5"
-		]
-	},
-	"block.neon.break": {
-		"subtitle": "subtitles.block.generic.break",
-		"sounds": [
-			"ltones:block/neon_break1",
-			"ltones:block/neon_break2",
-			"ltones:block/neon_break3"
-		]
-	},
-	"block.neon.step": {
-		"subtitle": "subtitles.block.generic.footsteps",
-		"sounds": [
-			"step/stone1",
-			"step/stone2",
-			"step/stone3",
-			"step/stone4",
-			"step/stone5",
-			"step/stone6"
-		]
-	},
-	"block.neon.place": {
-		"subtitle": "subtitles.block.generic.place",
-		"sounds": [
-			"dig/stone1",
-			"dig/stone2",
-			"dig/stone3",
-			"dig/stone4"
-		]
-	},
-	"block.neon.hit": {
-		"subtitle": "subtitles.block.generic.hit",
-		"sounds": [
-			"step/stone1",
-			"step/stone2",
-			"step/stone3",
-			"step/stone4",
-			"step/stone5",
-			"step/stone6"
-		]
-	},
-	"block.neon.fall": {
-		"subtitle": "subtitles.block.generic.fall",
-		"sounds": [
-			"step/stone1",
-			"step/stone2",
-			"step/stone3",
-			"step/stone4",
-			"step/stone5",
-			"step/stone6"
 		]
 	}
 }

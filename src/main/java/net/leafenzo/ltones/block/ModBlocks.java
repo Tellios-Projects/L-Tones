@@ -622,23 +622,23 @@ public class ModBlocks {
             .mapColor(MapColor.LIME)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.REDDS);
-    public static final Block SYNC_TANK = registerBlockInBlockset(SYNC_BLOCKS, "sync_tank", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial)));
-    public static final Block SYNC_SHIELDING = registerBlockInBlockset(SYNC_BLOCKS, "sync_shielding", new Block(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
-    public static final Block SYNC_SAFE = registerBlockInBlockset(SYNC_BLOCKS, "sync_safe", new Block(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
-    public static final Block SYNC_MIZMER = registerBlockInBlockset(SYNC_BLOCKS, "sync_mizmer", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(syncMaterial)));
-    public static final Block SYNC_MESS = registerBlockInBlockset(SYNC_BLOCKS, "sync_mess", new Block(FabricBlockSettings.copyOf(syncMaterial)));
-    public static final Block SYNC_LEADED = registerBlockInBlockset(SYNC_BLOCKS, "sync_leaded", new Block(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
-    public static final Block SYNC_JUNCTION = registerBlockInBlockset(SYNC_BLOCKS, "sync_junction", new Block(FabricBlockSettings.copyOf(syncMaterial)));
-    public static final Block SYNC_HEX = registerBlockInBlockset(SYNC_BLOCKS, "sync_hex", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial)));
-    public static final Block SYNC_HAZARD = registerBlockInBlockset(SYNC_BLOCKS, "sync_hazard", new Block(FabricBlockSettings.copyOf(syncMaterial)));
-    public static final Block SYNC_HATCH = registerBlockInBlockset(SYNC_BLOCKS, "sync_hatch", new Block(FabricBlockSettings.copyOf(syncMaterial)));
-    public static final Block SYNC_FRAMED = registerBlockInBlockset(SYNC_BLOCKS, "sync_framed", new Block(FabricBlockSettings.copyOf(syncMaterial)));
-    public static final Block SYNC_FORCE = registerBlockInBlockset(SYNC_BLOCKS, "sync_force", new Block(FabricBlockSettings.copyOf(syncMaterial)));
-    public static final Block SYNC_DATA = registerBlockInBlockset(SYNC_BLOCKS, "sync_data", new Block(FabricBlockSettings.copyOf(syncMaterial)));
-    public static final Block SYNC_CONTAIN = registerBlockInBlockset(SYNC_BLOCKS, "sync_contain", new Block(FabricBlockSettings.copyOf(syncMaterial)));
-    public static final Block SYNC_CAUTION = registerBlockInBlockset(SYNC_BLOCKS, "sync_caution", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial)));
-    public static final Block SYNC = registerBlockInBlockset(SYNC_BLOCKS, "sync", new Block(FabricBlockSettings.copyOf(syncMaterial)));
+            .sounds(ModBlockSoundGroup.SYNC);
+    public static final Block SYNC_TANK = registerBlockInBlockset(SYNC_BLOCKS, "sync_tank", new SyncPillarBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_SHIELDING = registerBlockInBlockset(SYNC_BLOCKS, "sync_shielding", new SyncBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
+    public static final Block SYNC_SAFE = registerBlockInBlockset(SYNC_BLOCKS, "sync_safe", new SyncBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
+    public static final Block SYNC_MIZMER = registerBlockInBlockset(SYNC_BLOCKS, "sync_mizmer", new SyncGlazedTerracottaBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_MESS = registerBlockInBlockset(SYNC_BLOCKS, "sync_mess", new SyncBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_LEADED = registerBlockInBlockset(SYNC_BLOCKS, "sync_leaded", new SyncBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
+    public static final Block SYNC_JUNCTION = registerBlockInBlockset(SYNC_BLOCKS, "sync_junction", new SyncBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_HEX = registerBlockInBlockset(SYNC_BLOCKS, "sync_hex", new SyncPillarBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_HAZARD = registerBlockInBlockset(SYNC_BLOCKS, "sync_hazard", new SyncBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_HATCH = registerBlockInBlockset(SYNC_BLOCKS, "sync_hatch", new SyncBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_FRAMED = registerBlockInBlockset(SYNC_BLOCKS, "sync_framed", new SyncBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_FORCE = registerBlockInBlockset(SYNC_BLOCKS, "sync_force", new SyncBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_DATA = registerBlockInBlockset(SYNC_BLOCKS, "sync_data", new SyncBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_CONTAIN = registerBlockInBlockset(SYNC_BLOCKS, "sync_contain", new SyncBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_CAUTION = registerBlockInBlockset(SYNC_BLOCKS, "sync_caution", new SyncPillarBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC = registerBlockInBlockset(SYNC_BLOCKS, "sync", new SyncBlock(FabricBlockSettings.copyOf(syncMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - NURR">
     private static final FabricBlockSettings nurrMaterial = FabricBlockSettings.create()
@@ -865,7 +865,7 @@ public class ModBlocks {
     public static final Block DECAL_GLEAM = registerDecalBlock("decal_gleam", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.CANDLE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_GLEAM); }
     public static final Block DECAL_G2V = registerDecalBlock("decal_g2v", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_G2V))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_G2V); }
     public static final Block DECAL_SLAG = registerDecalBlock("decal_slag", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_SLAG))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_SLAG); }
-    public static final Block DECAL_RADIUM_PAINT = registerDecalBlock("decal_radium_paint", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.POWDER_SNOW))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_RADIUM_PAINT); }
+    public static final Block DECAL_RADIUM_PAINT = registerDecalBlock("decal_radium_paint", new AmbientDecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.POWDER_SNOW), ModSoundEvents.BLOCK_SYNC_AMBIENT)); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_RADIUM_PAINT); }
     public static final Block DECAL_FIBROUS_POWDER = registerDecalBlock("decal_fibrous_powder", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_FIBROUS_POWDER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_FIBROUS_POWDER); }
     public static final Block DECAL_AMALGAM = registerDecalBlock("decal_amalgam", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_AMALGAM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_AMALGAM); }
     public static final Block DECAL_SLUMP = registerDecalBlock("decal_slump", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_SLUMP))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_SLUMP); }

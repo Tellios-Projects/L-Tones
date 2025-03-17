@@ -442,6 +442,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_SOL_HIT = registerSoundEvent("block.sol.hit");
     public static final SoundEvent BLOCK_SOL_FALL = registerSoundEvent("block.sol.fall");
 
+    public static final SoundEvent BLOCK_SYNC_AMBIENT = registerSoundEvent("block.sync.ambient");
+    public static final SoundEvent BLOCK_SYNC_BREAK = registerSoundEvent("block.sync.break");
+    public static final SoundEvent BLOCK_SYNC_STEP = registerSoundEvent("block.sync.step");
+    public static final SoundEvent BLOCK_SYNC_PLACE = registerSoundEvent("block.sync.place");
+    public static final SoundEvent BLOCK_SYNC_HIT = registerSoundEvent("block.sync.hit");
+    public static final SoundEvent BLOCK_SYNC_FALL = registerSoundEvent("block.sync.fall");
 
     public static final SoundEvent BLOCK_LITHIUM_DOOR_OPEN = registerSoundEvent("block.lithium_door.open");
     public static final SoundEvent BLOCK_LITHIUM_DOOR_CLOSE = registerSoundEvent("block.lithium_door.close");

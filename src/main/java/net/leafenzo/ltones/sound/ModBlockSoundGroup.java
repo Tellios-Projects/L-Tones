@@ -70,6 +70,7 @@ public class ModBlockSoundGroup {
     public static final BlockSoundGroup VECT_FOIL = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_VECT_FOIL_BREAK, ModSoundEvents.BLOCK_VECT_FOIL_STEP, ModSoundEvents.BLOCK_VECT_FOIL_PLACE, ModSoundEvents.BLOCK_VECT_FOIL_HIT, ModSoundEvents.BLOCK_VECT_FOIL_FALL);
     public static final BlockSoundGroup LAIR = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_LAIR_BREAK, ModSoundEvents.BLOCK_LAIR_STEP, ModSoundEvents.BLOCK_LAIR_PLACE, ModSoundEvents.BLOCK_LAIR_HIT, ModSoundEvents.BLOCK_LAIR_FALL);
     public static final BlockSoundGroup SOL = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_SOL_BREAK, ModSoundEvents.BLOCK_SOL_STEP, ModSoundEvents.BLOCK_SOL_PLACE, ModSoundEvents.BLOCK_SOL_HIT, ModSoundEvents.BLOCK_SOL_FALL);
+    public static final BlockSoundGroup SYNC = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_SYNC_BREAK, ModSoundEvents.BLOCK_SYNC_STEP, ModSoundEvents.BLOCK_SYNC_PLACE, ModSoundEvents.BLOCK_SYNC_HIT, ModSoundEvents.BLOCK_SYNC_FALL);
     public static final BlockSoundGroup TIRE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_TIRE_BREAK, ModSoundEvents.BLOCK_TIRE_STEP, ModSoundEvents.BLOCK_TIRE_PLACE, ModSoundEvents.BLOCK_TIRE_HIT, ModSoundEvents.BLOCK_TIRE_FALL);
 
     public static final BlockSoundGroup ZKUL = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_ZKUL_BREAK, ModSoundEvents.BLOCK_ZKUL_STEP, ModSoundEvents.BLOCK_ZKUL_PLACE, ModSoundEvents.BLOCK_ZKUL_HIT, ModSoundEvents.BLOCK_ZKUL_FALL);
