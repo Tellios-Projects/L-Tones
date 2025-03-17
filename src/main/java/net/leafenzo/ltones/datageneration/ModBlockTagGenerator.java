@@ -128,6 +128,10 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         for(Block block : ModBlocks.DOORS) {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
         }
+        for(Block block : ModBlocks.DECAL_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+
         //</editor-fold
         //<editor-fold desc ="BlockTags - Individual Blocks">
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)

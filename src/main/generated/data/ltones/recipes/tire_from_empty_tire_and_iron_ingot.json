@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "ltonesBlock{ltones:tire}",
+  "ingredients": [
+    {
+      "item": "ltones:empty_tire"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "result": {
+    "item": "ltones:tire"
+  }
+}

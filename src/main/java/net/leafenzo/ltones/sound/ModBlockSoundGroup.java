@@ -1,7 +1,6 @@
 package net.leafenzo.ltones.sound;
 
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.sound.SoundEvents;
 
 public class ModBlockSoundGroup {
     public static final BlockSoundGroup DECAL_AMALGAM = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_AMALGAM_BREAK, ModSoundEvents.BLOCK_DECAL_AMALGAM_STEP, ModSoundEvents.BLOCK_DECAL_AMALGAM_PLACE, ModSoundEvents.BLOCK_DECAL_AMALGAM_HIT, ModSoundEvents.BLOCK_DECAL_AMALGAM_FALL);
@@ -11,10 +10,12 @@ public class ModBlockSoundGroup {
     public static final BlockSoundGroup DECAL_DIODE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_DIODE_BREAK, ModSoundEvents.BLOCK_DECAL_DIODE_STEP, ModSoundEvents.BLOCK_DECAL_DIODE_PLACE, ModSoundEvents.BLOCK_DECAL_DIODE_HIT, ModSoundEvents.BLOCK_DECAL_DIODE_FALL);
     public static final BlockSoundGroup DECAL_FIBROUS_POWDER = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_FIBROUS_POWDER_BREAK, ModSoundEvents.BLOCK_DECAL_FIBROUS_POWDER_STEP, ModSoundEvents.BLOCK_DECAL_FIBROUS_POWDER_PLACE, ModSoundEvents.BLOCK_DECAL_FIBROUS_POWDER_HIT, ModSoundEvents.BLOCK_DECAL_FIBROUS_POWDER_FALL);
     public static final BlockSoundGroup DECAL_FLAKES = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_FLAKES_BREAK, ModSoundEvents.BLOCK_DECAL_FLAKES_STEP, ModSoundEvents.BLOCK_DECAL_FLAKES_PLACE, ModSoundEvents.BLOCK_DECAL_FLAKES_HIT, ModSoundEvents.BLOCK_DECAL_FLAKES_FALL);
+    public static final BlockSoundGroup DECAL_G2V = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_G2V_BREAK, ModSoundEvents.BLOCK_DECAL_G2V_STEP, ModSoundEvents.BLOCK_DECAL_G2V_PLACE, ModSoundEvents.BLOCK_DECAL_G2V_HIT, ModSoundEvents.BLOCK_DECAL_G2V_FALL);
     public static final BlockSoundGroup DECAL_GLASS_TUBE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_GLASS_TUBE_BREAK, ModSoundEvents.BLOCK_DECAL_GLASS_TUBE_STEP, ModSoundEvents.BLOCK_DECAL_GLASS_TUBE_PLACE, ModSoundEvents.BLOCK_DECAL_GLASS_TUBE_HIT, ModSoundEvents.BLOCK_DECAL_GLASS_TUBE_FALL);
     public static final BlockSoundGroup DECAL_JELLY = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_JELLY_BREAK, ModSoundEvents.BLOCK_DECAL_JELLY_STEP, ModSoundEvents.BLOCK_DECAL_JELLY_PLACE, ModSoundEvents.BLOCK_DECAL_JELLY_HIT, ModSoundEvents.BLOCK_DECAL_JELLY_FALL);
     public static final BlockSoundGroup DECAL_KERBESIUM = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_KERBESIUM_BREAK, ModSoundEvents.BLOCK_DECAL_KERBESIUM_STEP, ModSoundEvents.BLOCK_DECAL_KERBESIUM_PLACE, ModSoundEvents.BLOCK_DECAL_KERBESIUM_HIT, ModSoundEvents.BLOCK_DECAL_KERBESIUM_FALL);
     public static final BlockSoundGroup DECAL_LITHIUM = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_LITHIUM_BREAK, ModSoundEvents.BLOCK_DECAL_LITHIUM_STEP, ModSoundEvents.BLOCK_DECAL_LITHIUM_PLACE, ModSoundEvents.BLOCK_DECAL_LITHIUM_HIT, ModSoundEvents.BLOCK_DECAL_LITHIUM_FALL);
+    public static final BlockSoundGroup DECAL_MIDASIUM = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_MIDASIUM_BREAK, ModSoundEvents.BLOCK_DECAL_MIDASIUM_STEP, ModSoundEvents.BLOCK_DECAL_MIDASIUM_PLACE, ModSoundEvents.BLOCK_DECAL_MIDASIUM_HIT, ModSoundEvents.BLOCK_DECAL_MIDASIUM_FALL);
     public static final BlockSoundGroup DECAL_MOULDING = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_MOULDING_BREAK, ModSoundEvents.BLOCK_DECAL_MOULDING_STEP, ModSoundEvents.BLOCK_DECAL_MOULDING_PLACE, ModSoundEvents.BLOCK_DECAL_MOULDING_HIT, ModSoundEvents.BLOCK_DECAL_MOULDING_FALL);
     public static final BlockSoundGroup DECAL_NETWORKING = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_NETWORKING_BREAK, ModSoundEvents.BLOCK_DECAL_NETWORKING_STEP, ModSoundEvents.BLOCK_DECAL_NETWORKING_PLACE, ModSoundEvents.BLOCK_DECAL_NETWORKING_HIT, ModSoundEvents.BLOCK_DECAL_NETWORKING_FALL);
     public static final BlockSoundGroup DECAL_ORGANIC_BRASS = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_ORGANIC_BRASS_BREAK, ModSoundEvents.BLOCK_DECAL_ORGANIC_BRASS_STEP, ModSoundEvents.BLOCK_DECAL_ORGANIC_BRASS_PLACE, ModSoundEvents.BLOCK_DECAL_ORGANIC_BRASS_HIT, ModSoundEvents.BLOCK_DECAL_ORGANIC_BRASS_FALL);
@@ -31,6 +32,7 @@ public class ModBlockSoundGroup {
     public static final BlockSoundGroup DECAL_THINKING_METAL = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_THINKING_METAL_BREAK, ModSoundEvents.BLOCK_DECAL_THINKING_METAL_STEP, ModSoundEvents.BLOCK_DECAL_THINKING_METAL_PLACE, ModSoundEvents.BLOCK_DECAL_THINKING_METAL_HIT, ModSoundEvents.BLOCK_DECAL_THINKING_METAL_FALL);
 
     public static final BlockSoundGroup AGON = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_AGON_BREAK, ModSoundEvents.BLOCK_AGON_STEP, ModSoundEvents.BLOCK_AGON_PLACE, ModSoundEvents.BLOCK_AGON_HIT, ModSoundEvents.BLOCK_AGON_FALL);
+    public static final BlockSoundGroup JELT = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_JELT_BREAK, ModSoundEvents.BLOCK_JELT_STEP, ModSoundEvents.BLOCK_JELT_PLACE, ModSoundEvents.BLOCK_JELT_HIT, ModSoundEvents.BLOCK_JELT_FALL);
     public static final BlockSoundGroup KORP = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_KORP_BREAK, ModSoundEvents.BLOCK_KORP_STEP, ModSoundEvents.BLOCK_KORP_PLACE, ModSoundEvents.BLOCK_KORP_HIT, ModSoundEvents.BLOCK_KORP_FALL);
     public static final BlockSoundGroup KORP_NODE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_KORP_NODE_BREAK, ModSoundEvents.BLOCK_KORP_STEP, ModSoundEvents.BLOCK_KORP_NODE_PLACE, ModSoundEvents.BLOCK_KORP_HIT, ModSoundEvents.BLOCK_KORP_FALL);
     public static final BlockSoundGroup HOST = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_HOST_BREAK, ModSoundEvents.BLOCK_HOST_STEP, ModSoundEvents.BLOCK_HOST_PLACE, ModSoundEvents.BLOCK_HOST_HIT, ModSoundEvents.BLOCK_HOST_FALL);
@@ -41,6 +43,7 @@ public class ModBlockSoundGroup {
     public static final BlockSoundGroup LAVE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_LAVE_BREAK, ModSoundEvents.BLOCK_LAVE_STEP, ModSoundEvents.BLOCK_LAVE_PLACE, ModSoundEvents.BLOCK_LAVE_HIT, ModSoundEvents.BLOCK_LAVE_FALL);
     public static final BlockSoundGroup VEELD = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_VEELD_BREAK, ModSoundEvents.BLOCK_VEELD_STEP, ModSoundEvents.BLOCK_VEELD_PLACE, ModSoundEvents.BLOCK_VEELD_HIT, ModSoundEvents.BLOCK_VEELD_FALL);
     public static final BlockSoundGroup VEELD_BRICKS = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_VEELD_BRICKS_BREAK, ModSoundEvents.BLOCK_VEELD_BRICKS_STEP, ModSoundEvents.BLOCK_VEELD_BRICKS_PLACE, ModSoundEvents.BLOCK_VEELD_BRICKS_HIT, ModSoundEvents.BLOCK_VEELD_BRICKS_FALL);
+    public static final BlockSoundGroup REDDS = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_REDDS_BREAK, ModSoundEvents.BLOCK_REDDS_STEP, ModSoundEvents.BLOCK_REDDS_PLACE, ModSoundEvents.BLOCK_REDDS_HIT, ModSoundEvents.BLOCK_REDDS_FALL);
     public static final BlockSoundGroup BITT = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_BITT_BREAK, ModSoundEvents.BLOCK_BITT_STEP, ModSoundEvents.BLOCK_BITT_PLACE, ModSoundEvents.BLOCK_BITT_HIT, ModSoundEvents.BLOCK_BITT_FALL);
     public static final BlockSoundGroup CAST = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_CAST_BREAK, ModSoundEvents.BLOCK_CAST_STEP, ModSoundEvents.BLOCK_CAST_PLACE, ModSoundEvents.BLOCK_CAST_HIT, ModSoundEvents.BLOCK_CAST_FALL);
     public static final BlockSoundGroup EXRI = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_EXRI_BREAK, ModSoundEvents.BLOCK_EXRI_STEP, ModSoundEvents.BLOCK_EXRI_PLACE, ModSoundEvents.BLOCK_EXRI_HIT, ModSoundEvents.BLOCK_EXRI_FALL);
@@ -63,15 +66,9 @@ public class ModBlockSoundGroup {
     public static final BlockSoundGroup MYST = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_MYST_BREAK, ModSoundEvents.BLOCK_MYST_STEP, ModSoundEvents.BLOCK_MYST_PLACE, ModSoundEvents.BLOCK_MYST_HIT, ModSoundEvents.BLOCK_MYST_FALL);
     public static final BlockSoundGroup VECT = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_VECT_BREAK, ModSoundEvents.BLOCK_VECT_STEP, ModSoundEvents.BLOCK_VECT_PLACE, ModSoundEvents.BLOCK_VECT_HIT, ModSoundEvents.BLOCK_VECT_FALL);
     public static final BlockSoundGroup VECT_FOIL = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_VECT_FOIL_BREAK, ModSoundEvents.BLOCK_VECT_FOIL_STEP, ModSoundEvents.BLOCK_VECT_FOIL_PLACE, ModSoundEvents.BLOCK_VECT_FOIL_HIT, ModSoundEvents.BLOCK_VECT_FOIL_FALL);
+    public static final BlockSoundGroup LAIR = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_LAIR_BREAK, ModSoundEvents.BLOCK_LAIR_STEP, ModSoundEvents.BLOCK_LAIR_PLACE, ModSoundEvents.BLOCK_LAIR_HIT, ModSoundEvents.BLOCK_LAIR_FALL);
+    public static final BlockSoundGroup SOL = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_SOL_BREAK, ModSoundEvents.BLOCK_SOL_STEP, ModSoundEvents.BLOCK_SOL_PLACE, ModSoundEvents.BLOCK_SOL_HIT, ModSoundEvents.BLOCK_SOL_FALL);
+    public static final BlockSoundGroup TIRE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_TIRE_BREAK, ModSoundEvents.BLOCK_TIRE_STEP, ModSoundEvents.BLOCK_TIRE_PLACE, ModSoundEvents.BLOCK_TIRE_HIT, ModSoundEvents.BLOCK_TIRE_FALL);
 
     public static final BlockSoundGroup ZKUL = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_ZKUL_BREAK, ModSoundEvents.BLOCK_ZKUL_STEP, ModSoundEvents.BLOCK_ZKUL_PLACE, ModSoundEvents.BLOCK_ZKUL_HIT, ModSoundEvents.BLOCK_ZKUL_FALL);
-
-
-    //TODO add sfx files for these
-    public static final BlockSoundGroup STATIC = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_STATIC_BREAK, ModSoundEvents.BLOCK_STATIC_STEP, ModSoundEvents.BLOCK_STATIC_PLACE, ModSoundEvents.BLOCK_STATIC_HIT, ModSoundEvents.BLOCK_STATIC_FALL);
-    public static final BlockSoundGroup NEON = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_NEON_BREAK, ModSoundEvents.BLOCK_NEON_STEP, ModSoundEvents.BLOCK_NEON_PLACE, ModSoundEvents.BLOCK_NEON_HIT, ModSoundEvents.BLOCK_NEON_FALL);
-    public static final BlockSoundGroup POLYGON = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_POLYGON_BREAK, ModSoundEvents.BLOCK_POLYGON_STEP, ModSoundEvents.BLOCK_POLYGON_PLACE, ModSoundEvents.BLOCK_POLYGON_HIT, ModSoundEvents.BLOCK_POLYGON_FALL);
-    public static final BlockSoundGroup LAIR = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_LAIR_BREAK, ModSoundEvents.BLOCK_LAIR_STEP, ModSoundEvents.BLOCK_LAIR_PLACE, ModSoundEvents.BLOCK_LAIR_HIT, ModSoundEvents.BLOCK_LAIR_FALL);
-    public static final BlockSoundGroup SOL = new BlockSoundGroup(1.0f, 1.0f, SoundEvents.BLOCK_GLASS_BREAK, SoundEvents.BLOCK_GLASS_STEP, SoundEvents.BLOCK_SHROOMLIGHT_PLACE, SoundEvents.BLOCK_GLASS_HIT, SoundEvents.BLOCK_GLASS_FALL);
-        public static final BlockSoundGroup TIRE = new BlockSoundGroup(0.66f, 2.4f, SoundEvents.BLOCK_FROGLIGHT_BREAK, SoundEvents.BLOCK_FROGLIGHT_STEP, SoundEvents.BLOCK_FROGLIGHT_PLACE, SoundEvents.BLOCK_FROGLIGHT_HIT,SoundEvents.BLOCK_FROGLIGHT_FALL);
 }

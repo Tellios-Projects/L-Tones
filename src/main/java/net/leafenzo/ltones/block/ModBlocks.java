@@ -271,7 +271,7 @@ public class ModBlocks {
             .mapColor(MapColor.DARK_RED)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.POLYGON);
+            .sounds(ModBlockSoundGroup.REDDS);
     public static final Block REDDS = registerBlockInBlockset(REDDS_BLOCKS, "redds", new LitBlock(FabricBlockSettings.copyOf(reddsMaterial).luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null, false));
     public static final Block REDDS_PICE = registerBlockInBlockset(REDDS_BLOCKS, "redds_pice", new LitBlock(FabricBlockSettings.copyOf(reddsMaterial), null, null, false));
         public static final Block REDDS_PICE_STAIRS = registerStairs(REDDS_PICE,"redds_pice_stairs", new LitStairsBlock(REDDS_PICE.getDefaultState(), FabricBlockSettings.copyOf(REDDS_PICE), null, null));
@@ -430,7 +430,7 @@ public class ModBlocks {
             .mapColor(MapColor.ORANGE)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.POLYGON);
+            .sounds(ModBlockSoundGroup.JELT);
     public static final Block JELT_SUPPLY = registerBlockInBlockset(JELT_BLOCKS, "jelt_supply", new Block(FabricBlockSettings.copyOf(jeltMaterial)));
     public static final Block JELT_POKE = registerBlockInBlockset(JELT_BLOCKS, "jelt_poke", new Block(FabricBlockSettings.copyOf(jeltMaterial)));
     public static final Block JELT_PATHJOINT = registerBlockInBlockset(JELT_BLOCKS, "jelt_pathjoint", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(jeltMaterial)));
@@ -527,7 +527,7 @@ public class ModBlocks {
             .mapColor(MapColor.LAPIS_BLUE)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.POLYGON);
+            .sounds(ModBlockSoundGroup.REDDS);
     public static final Block AZUR_CRIPT = registerBlockInBlockset(AZUR_BLOCKS, "azur_cript", new PillarBlock(FabricBlockSettings.copyOf(azurMaterial)));
     public static final Block AZUR_CUBE = registerBlockInBlockset(AZUR_BLOCKS, "azur_cube", new Block(FabricBlockSettings.copyOf(azurMaterial)));
     public static final Block AZUR_CYBER = registerBlockInBlockset(AZUR_BLOCKS, "azur_cyber", new PillarBlock(FabricBlockSettings.copyOf(azurMaterial)));
@@ -622,7 +622,7 @@ public class ModBlocks {
             .mapColor(MapColor.LIME)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.POLYGON);
+            .sounds(ModBlockSoundGroup.REDDS);
     public static final Block SYNC_TANK = registerBlockInBlockset(SYNC_BLOCKS, "sync_tank", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial)));
     public static final Block SYNC_SHIELDING = registerBlockInBlockset(SYNC_BLOCKS, "sync_shielding", new Block(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
     public static final Block SYNC_SAFE = registerBlockInBlockset(SYNC_BLOCKS, "sync_safe", new Block(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
@@ -792,7 +792,7 @@ public class ModBlocks {
     public static final Block AGED_CRT = registerBlock("aged_crt", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).mapColor(DyeColor.YELLOW), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
     public static final Block BLACK_CRT = registerBlock("black_crt", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).mapColor(DyeColor.BLACK), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
     public static final Block GRAY_CRT = registerBlock("gray_crt", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).mapColor(DyeColor.GRAY), ModSoundEvents.BLOCK_POLYGON_ACTIVATE, null));
-    public static final Block EMPTY_TIRE = registerBlock("empty_tire", new PillarBlock(FabricBlockSettings.create().mapColor(MapColor.BLACK).instrument(Instrument.BASS).strength(0.2f).sounds(ModBlockSoundGroup.TIRE)));
+    public static final Block EMPTY_TIRE = registerBlock("empty_tire", new BouncyPillarBlock(FabricBlockSettings.create().mapColor(MapColor.BLACK).instrument(Instrument.BASS).strength(0.2f).sounds(ModBlockSoundGroup.TIRE)));
     public static final Block TIRE = registerBlock("tire", new PillarBlock(FabricBlockSettings.copyOf(EMPTY_TIRE).strength(1.0f).requiresTool()));
     public static final Block CRATE = registerBlock("crate", new CrateBlock(FabricBlockSettings.create().instrument(Instrument.BASEDRUM).mapColor(MapColor.TERRACOTTA_GRAY).strength(3.5f, 50.0f).requiresTool().sounds(BlockSoundGroup.COPPER)));
     public static final Block KEYBOARD = registerBlock("keyboard", new KeyboardBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(0.1f).sounds(BlockSoundGroup.CANDLE).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY)));
@@ -851,7 +851,7 @@ public class ModBlocks {
     public static final Block DECAL_CONDUCTIUM = registerDecalBlock("decal_conductium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_CONDUCTIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_CONDUCTIUM); }
     public static final Block DECAL_KERBESIUM = registerDecalBlock("decal_kerbesium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_KERBESIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_KERBESIUM); }
     public static final Block DECAL_ORGANIC_BRASS = registerDecalBlock("decal_organic_brass", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_ORGANIC_BRASS))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_ORGANIC_BRASS); }
-    public static final Block DECAL_MIDASIUM = registerDecalBlock("decal_midasium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_MIDASIUM); }
+    public static final Block DECAL_MIDASIUM = registerDecalBlock("decal_midasium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_MIDASIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_MIDASIUM); }
     public static final Block DECAL_TAWSINE = registerDecalBlock("decal_tawsine", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_TAWSINE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_TAWSINE); }
     public static final Block DECAL_THINKING_METAL = registerDecalBlock("decal_thinking_metal", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_THINKING_METAL))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_THINKING_METAL); }
     public static final Block DECAL_ARGON = registerDecalBlock("decal_argon", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.POWDER_SNOW))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_ARGON); }
@@ -863,7 +863,7 @@ public class ModBlocks {
     public static final Block DECAL_GAS_TUBE = registerDecalBlock("decal_gas_tube", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_GLASS_TUBE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_GAS_TUBE); }
     public static final Block DECAL_AZURE_RIVET = registerDecalBlock("decal_azure_rivet", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.CANDLE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_AZURE_RIVET); }
     public static final Block DECAL_GLEAM = registerDecalBlock("decal_gleam", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.CANDLE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_GLEAM); }
-    public static final Block DECAL_G2V = registerDecalBlock("decal_g2v", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.FROGSPAWN))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_G2V); }
+    public static final Block DECAL_G2V = registerDecalBlock("decal_g2v", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_G2V))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_G2V); }
     public static final Block DECAL_SLAG = registerDecalBlock("decal_slag", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_SLAG))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_SLAG); }
     public static final Block DECAL_RADIUM_PAINT = registerDecalBlock("decal_radium_paint", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.POWDER_SNOW))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_RADIUM_PAINT); }
     public static final Block DECAL_FIBROUS_POWDER = registerDecalBlock("decal_fibrous_powder", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_FIBROUS_POWDER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_FIBROUS_POWDER); }

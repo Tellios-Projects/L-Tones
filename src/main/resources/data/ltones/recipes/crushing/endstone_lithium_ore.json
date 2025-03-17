@@ -25,7 +25,7 @@
     {
       "item": "create:experience_nugget",
       "chance": 0.75
-    },
+    }
   ],
   "processingTime": 150
 }
