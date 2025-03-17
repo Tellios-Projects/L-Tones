@@ -521,6 +521,7 @@ public class ModBlocks {
     public static final Block EXRI_CURRENT = registerBlockInBlockset(EXRI_BLOCKS, "exri_current", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_CRITICAL = registerBlockInBlockset(EXRI_BLOCKS, "exri_critical", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_CONTROL = registerBlockInBlockset(EXRI_BLOCKS, "exri_control", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
+    public static final Block EXRI_SOUNDSCAPE = registerBlockInBlockset(EXRI_BLOCKS, "exri_soundscape", new LitAmbientSoundBlock(FabricBlockSettings.copyOf(exriMaterial), null, null, false, ModSoundEvents.BLOCK_EXRI_AMBIENT, 50));
     public static final Block EXRI = registerBlockInBlockset(EXRI_BLOCKS, "exri", new Block(FabricBlockSettings.copyOf(exriMaterial)));
 
     //TODO bit blockset always emits a redstone level of 1   
@@ -641,6 +642,7 @@ public class ModBlocks {
     public static final Block SYNC_DATA = registerBlockInBlockset(SYNC_BLOCKS, "sync_data", new Block(FabricBlockSettings.copyOf(syncMaterial)));
     public static final Block SYNC_CONTAIN = registerBlockInBlockset(SYNC_BLOCKS, "sync_contain", new Block(FabricBlockSettings.copyOf(syncMaterial)));
     public static final Block SYNC_CAUTION = registerBlockInBlockset(SYNC_BLOCKS, "sync_caution", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_SOUNDSCAPE = registerBlockInBlockset(SYNC_BLOCKS, "sync_soundscape", new LitAmbientSoundBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, false, ModSoundEvents.BLOCK_SYNC_AMBIENT, 20));
     public static final Block SYNC = registerBlockInBlockset(SYNC_BLOCKS, "sync", new Block(FabricBlockSettings.copyOf(syncMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - NURR">
@@ -738,6 +740,7 @@ public class ModBlocks {
     public static final Block SOL_FIELD = registerBlockInBlockset(SOL_BLOCKS, "sol_field", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null, false));
     public static final Block SOL_NUCLEI = registerBlockInBlockset(SOL_BLOCKS, "sol_nuclei", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null, false));
     public static final Block SOL_CORONA = registerBlockInBlockset(SOL_BLOCKS, "sol_corona", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null, false));
+    public static final Block SOL_SOUNDSCAPE = registerBlockInBlockset(SOL_BLOCKS, "sol_soundscape", new LitAmbientSoundBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null, false, ModSoundEvents.BLOCK_SOL_AMBIENT, 80));
     public static final Block SOL = registerBlockInBlockset(SOL_BLOCKS, "sol", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null, false));
     //</editor-fold>
 

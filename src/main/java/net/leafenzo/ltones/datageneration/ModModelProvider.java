@@ -516,6 +516,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_FLOW, TextureMap::all);
         registerLitOnOffAxisRotatedBlock(blockStateModelGenerator, ModBlocks.EXRI_SERVE, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.EXRI_SOUNDSCAPE, TextureMap::all);
 
         registerLitHorizontalFacingCubeWithCustomTexturePaths(blockStateModelGenerator, ModBlocks.EXRI_DISPLAY,
                 new TextureMap()
@@ -598,6 +599,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC_FORCE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC_DATA);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC_CONTAIN);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SYNC_SOUNDSCAPE, TextureMap::all);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SYNC);
 //        blockStateModelGenerator.registerAxisRotated(ModBlocks.SYNC_TANK, TexturedModel.CUBE_ALL);
 //        blockStateModelGenerator.registerAxisRotated(ModBlocks.SYNC_CAUTION, TexturedModel.CUBE_ALL);
@@ -648,6 +650,7 @@ public class ModModelProvider extends FabricModelProvider {
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_FIELD, TextureMap::all);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_NUCLEI, TextureMap::all);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_CORONA, TextureMap::all);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL_SOUNDSCAPE, TextureMap::all);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SOL, TextureMap::all);
         registerLitOnOffAxisRotatedBlock(blockStateModelGenerator, ModBlocks.SOL_SPECTRA, TextureMap::all);
         registerLitOnOffGlazedTerracottaBlock(blockStateModelGenerator, ModBlocks.SOL_BLAZAR, TextureMap::all);

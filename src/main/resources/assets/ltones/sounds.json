@@ -1318,6 +1318,12 @@
 			"ltones:block/exri/door/close4"
 		]
 	},
+	"block.exri.ambient": {
+		"sounds": [
+			"ltones:block/exri/ambient1",
+			"ltones:block/exri/ambient2"
+		]
+	},
 	"block.exri.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -2329,7 +2335,7 @@
 		]
 	},
 	"block.cast_trapdoor.open": {
-		"subtitle": "subtitles.block.door.toggle",
+		"subtitle": "subtitles.block.trapdoor.toggle",
 		"sounds": [
 			"ltones:block/cast/trapdoor/open1",
 			"ltones:block/cast/trapdoor/open2",
@@ -2337,7 +2343,7 @@
 		]
 	},
 	"block.cast_trapdoor.close": {
-		"subtitle": "subtitles.block.door.toggle",
+		"subtitle": "subtitles.block.trapdoor.toggle",
 		"sounds": [
 			"ltones:block/cast/trapdoor/close1",
 			"ltones:block/cast/trapdoor/close2",
@@ -2706,7 +2712,7 @@
 	},
 
 	"block.fortt_trapdoor.open": {
-		"subtitle": "subtitles.block.door.toggle",
+		"subtitle": "subtitles.block.trapdoor.toggle",
 		"sounds": [
 			"ltones:block/fortt/trapdoor/open1",
 			"ltones:block/fortt/trapdoor/open2",
@@ -2714,7 +2720,7 @@
 		]
 	},
 	"block.fortt_trapdoor.close": {
-		"subtitle": "subtitles.block.door.toggle",
+		"subtitle": "subtitles.block.trapdoor.toggle",
 		"sounds": [
 			"ltones:block/fortt/trapdoor/close1",
 			"ltones:block/fortt/trapdoor/close2",
@@ -2944,7 +2950,7 @@
 		]
 	},
 	"block.cray_trapdoor.open": {
-		"subtitle": "subtitles.block.door.toggle",
+		"subtitle": "subtitles.block.trapdoor.toggle",
 		"sounds": [
 			"ltones:block/cray/trapdoor/open1",
 			"ltones:block/cray/trapdoor/open2",
@@ -2952,11 +2958,11 @@
 		]
 	},
 	"block.cray_trapdoor.close": {
-		"subtitle": "subtitles.block.door.toggle",
+		"subtitle": "subtitles.block.trapdoor.toggle",
 		"sounds": [
-			"ltones:block/cray/door/close1",
-			"ltones:block/cray/door/close2",
-			"ltones:block/cray/door/close3"
+			"ltones:block/cray/trapdoor/close1",
+			"ltones:block/cray/trapdoor/close2",
+			"ltones:block/cray/trapdoor/close3"
 		]
 	},
 
@@ -3392,6 +3398,13 @@
 		]
 	},
 
+	"block.sol.ambient": {
+		"sounds": [
+			"ltones:block/sol/ambient1",
+			"ltones:block/sol/ambient2",
+			"ltones:block/sol/ambient3"
+		]
+	},
 	"block.sol.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [

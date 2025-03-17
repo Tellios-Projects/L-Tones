@@ -255,6 +255,8 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_REDDS_ACTIVATE = registerSoundEvent("block.redds.activate");
     public static final SoundEvent BLOCK_REDDS_DEACTIVATE = registerSoundEvent("block.redds.deactivate");
 
+    public static final SoundEvent BLOCK_EXRI_AMBIENT = registerSoundEvent("block.exri.ambient");
+
     public static final SoundEvent BLOCK_EXRI_BREAK = registerSoundEvent("block.exri.break");
     public static final SoundEvent BLOCK_EXRI_STEP = registerSoundEvent("block.exri.step");
     public static final SoundEvent BLOCK_EXRI_PLACE = registerSoundEvent("block.exri.place");
@@ -441,6 +443,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_KRYP_NODE_BREAK = registerSoundEvent("block.kryp_node.break");
     public static final SoundEvent BLOCK_KRYP_NODE_PLACE = registerSoundEvent("block.kryp_node.place");
+
+    public static final SoundEvent BLOCK_SOL_AMBIENT = registerSoundEvent("block.sol.ambient");
 
     public static final SoundEvent BLOCK_SOL_BREAK = registerSoundEvent("block.sol.break");
     public static final SoundEvent BLOCK_SOL_STEP = registerSoundEvent("block.sol.step");

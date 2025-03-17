@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ltones:block/sync_soundscape"
+    },
+    "lit=true": {
+      "model": "ltones:block/sync_soundscape_on"
+    }
+  }
+}
