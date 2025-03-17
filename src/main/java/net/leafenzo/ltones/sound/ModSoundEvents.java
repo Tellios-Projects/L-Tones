@@ -207,6 +207,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_KORP_DOOR_OPEN = registerSoundEvent("block.korp_door.open");
     public static final SoundEvent BLOCK_KORP_DOOR_CLOSE = registerSoundEvent("block.korp_door.close");
+    public static final SoundEvent BLOCK_KORP_TRAPDOOR_OPEN = registerSoundEvent("block.korp_trapdoor.open");
+    public static final SoundEvent BLOCK_KORP_TRAPDOOR_CLOSE = registerSoundEvent("block.korp_trapdoor.close");
 
     public static final SoundEvent BLOCK_KORP_BREAK = registerSoundEvent("block.korp.break");
     public static final SoundEvent BLOCK_KORP_STEP = registerSoundEvent("block.korp.step");
@@ -216,6 +218,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_VECT_DOOR_OPEN = registerSoundEvent("block.vect_door.open");
     public static final SoundEvent BLOCK_VECT_DOOR_CLOSE = registerSoundEvent("block.vect_door.close");
+    public static final SoundEvent BLOCK_VECT_TRAPDOOR_OPEN = registerSoundEvent("block.vect_trapdoor.open");
+    public static final SoundEvent BLOCK_VECT_TRAPDOOR_CLOSE = registerSoundEvent("block.vect_trapdoor.close");
 
     public static final SoundEvent BLOCK_VECT_BREAK = registerSoundEvent("block.vect.break");
     public static final SoundEvent BLOCK_VECT_STEP = registerSoundEvent("block.vect.step");
@@ -265,9 +269,13 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_EXRI_DOOR_OPEN = registerSoundEvent("block.exri_door.open");
     public static final SoundEvent BLOCK_EXRI_DOOR_CLOSE = registerSoundEvent("block.exri_door.close");
+    public static final SoundEvent BLOCK_EXRI_TRAPDOOR_OPEN = registerSoundEvent("block.exri_trapdoor.open");
+    public static final SoundEvent BLOCK_EXRI_TRAPDOOR_CLOSE = registerSoundEvent("block.exri_trapdoor.close");
 
     public static final SoundEvent BLOCK_TONE_DOOR_OPEN = registerSoundEvent("block.tone_door.open");
     public static final SoundEvent BLOCK_TONE_DOOR_CLOSE = registerSoundEvent("block.tone_door.close");
+    public static final SoundEvent BLOCK_TONE_TRAPDOOR_OPEN = registerSoundEvent("block.tone_trapdoor.open");
+    public static final SoundEvent BLOCK_TONE_TRAPDOOR_CLOSE = registerSoundEvent("block.tone_trapdoor.close");
 
     public static final SoundEvent BLOCK_TONE_BREAK = registerSoundEvent("block.tone.break");
     public static final SoundEvent BLOCK_TONE_STEP = registerSoundEvent("block.tone.step");
@@ -329,6 +337,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_VEELD_DOOR_OPEN = registerSoundEvent("block.veeld_door.open");
     public static final SoundEvent BLOCK_VEELD_DOOR_CLOSE = registerSoundEvent("block.veeld_door.close");
+    public static final SoundEvent BLOCK_VEELD_TRAPDOOR_OPEN = registerSoundEvent("block.veeld_trapdoor.open");
+    public static final SoundEvent BLOCK_VEELD_TRAPDOOR_CLOSE = registerSoundEvent("block.veeld_trapdoor.close");
 
     public static final SoundEvent BLOCK_VEELD_BREAK = registerSoundEvent("block.veeld.break");
     public static final SoundEvent BLOCK_VEELD_STEP = registerSoundEvent("block.veeld.step");
@@ -344,6 +354,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_LAVE_DOOR_OPEN = registerSoundEvent("block.lave_door.open");
     public static final SoundEvent BLOCK_LAVE_DOOR_CLOSE = registerSoundEvent("block.lave_door.close");
+    public static final SoundEvent BLOCK_LAVE_TRAPDOOR_OPEN = registerSoundEvent("block.lave_trapdoor.open");
+    public static final SoundEvent BLOCK_LAVE_TRAPDOOR_CLOSE = registerSoundEvent("block.lave_trapdoor.close");
 
     public static final SoundEvent BLOCK_LAVE_BREAK = registerSoundEvent("block.lave.break");
     public static final SoundEvent BLOCK_LAVE_STEP = registerSoundEvent("block.lave.step");
@@ -353,6 +365,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_NURR_DOOR_OPEN = registerSoundEvent("block.nurr_door.open");
     public static final SoundEvent BLOCK_NURR_DOOR_CLOSE = registerSoundEvent("block.nurr_door.close");
+    public static final SoundEvent BLOCK_NURR_TRAPDOOR_OPEN = registerSoundEvent("block.nurr_trapdoor.open");
+    public static final SoundEvent BLOCK_NURR_TRAPDOOR_CLOSE = registerSoundEvent("block.nurr_trapdoor.close");
 
     public static final SoundEvent BLOCK_NURR_BREAK = registerSoundEvent("block.nurr.break");
     public static final SoundEvent BLOCK_NURR_STEP = registerSoundEvent("block.nurr.step");
@@ -380,6 +394,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_ROEN_DOOR_OPEN = registerSoundEvent("block.roen_door.open");
     public static final SoundEvent BLOCK_ROEN_DOOR_CLOSE = registerSoundEvent("block.roen_door.close");
+    public static final SoundEvent BLOCK_ROEN_TRAPDOOR_OPEN = registerSoundEvent("block.roen_trapdoor.open");
+    public static final SoundEvent BLOCK_ROEN_TRAPDOOR_CLOSE = registerSoundEvent("block.roen_trapdoor.close");
 
     public static final SoundEvent BLOCK_ROEN_BREAK = registerSoundEvent("block.roen.break");
     public static final SoundEvent BLOCK_ROEN_STEP = registerSoundEvent("block.roen.step");
@@ -389,6 +405,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_LAIR_DOOR_OPEN = registerSoundEvent("block.lair_door.open");
     public static final SoundEvent BLOCK_LAIR_DOOR_CLOSE = registerSoundEvent("block.lair_door.close");
+    public static final SoundEvent BLOCK_LAIR_TRAPDOOR_OPEN = registerSoundEvent("block.lair_trapdoor.open");
+    public static final SoundEvent BLOCK_LAIR_TRAPDOOR_CLOSE = registerSoundEvent("block.lair_trapdoor.close");
 
     public static final SoundEvent BLOCK_LAIR_BREAK = registerSoundEvent("block.lair.break");
     public static final SoundEvent BLOCK_LAIR_STEP = registerSoundEvent("block.lair.step");
@@ -410,6 +428,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_MINN_DOOR_OPEN = registerSoundEvent("block.minn_door.open");
     public static final SoundEvent BLOCK_MINN_DOOR_CLOSE = registerSoundEvent("block.minn_door.close");
+    public static final SoundEvent BLOCK_MINN_TRAPDOOR_OPEN = registerSoundEvent("block.minn_trapdoor.open");
+    public static final SoundEvent BLOCK_MINN_TRAPDOOR_CLOSE = registerSoundEvent("block.minn_trapdoor.close");
 
     public static final SoundEvent BLOCK_MINN_BREAK = registerSoundEvent("block.minn.break");
     public static final SoundEvent BLOCK_MINN_STEP = registerSoundEvent("block.minn.step");
@@ -419,6 +439,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_TANK_DOOR_OPEN = registerSoundEvent("block.tank_door.open");
     public static final SoundEvent BLOCK_TANK_DOOR_CLOSE = registerSoundEvent("block.tank_door.close");
+    public static final SoundEvent BLOCK_TANK_TRAPDOOR_OPEN = registerSoundEvent("block.tank_trapdoor.open");
+    public static final SoundEvent BLOCK_TANK_TRAPDOOR_CLOSE = registerSoundEvent("block.tank_trapdoor.close");
 
     public static final SoundEvent BLOCK_TANK_BREAK = registerSoundEvent("block.tank.break");
     public static final SoundEvent BLOCK_TANK_STEP = registerSoundEvent("block.tank.step");
@@ -428,6 +450,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_KRYP_DOOR_OPEN = registerSoundEvent("block.kryp_door.open");
     public static final SoundEvent BLOCK_KRYP_DOOR_CLOSE = registerSoundEvent("block.kryp_door.close");
+    public static final SoundEvent BLOCK_KRYP_TRAPDOOR_OPEN = registerSoundEvent("block.kryp_trapdoor.open");
+    public static final SoundEvent BLOCK_KRYP_TRAPDOOR_CLOSE = registerSoundEvent("block.kryp_trapdoor.close");
 
     public static final SoundEvent BLOCK_KRYP_BASE_BREAK = registerSoundEvent("block.kryp_base.break");
     public static final SoundEvent BLOCK_KRYP_BASE_STEP = registerSoundEvent("block.kryp_base.step");
@@ -461,6 +485,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_LITHIUM_DOOR_OPEN = registerSoundEvent("block.lithium_door.open");
     public static final SoundEvent BLOCK_LITHIUM_DOOR_CLOSE = registerSoundEvent("block.lithium_door.close");
+    public static final SoundEvent BLOCK_LITHIUM_TRAPDOOR_OPEN = registerSoundEvent("block.lithium_trapdoor.open");
+    public static final SoundEvent BLOCK_LITHIUM_TRAPDOOR_CLOSE = registerSoundEvent("block.lithium_trapdoor.close");
 
     public static final SoundEvent BLOCK_LITHIUM_BREAK = registerSoundEvent("block.lithium.break");
     public static final SoundEvent BLOCK_LITHIUM_STEP = registerSoundEvent("block.lithium.step");

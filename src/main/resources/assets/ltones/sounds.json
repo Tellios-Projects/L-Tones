@@ -1318,6 +1318,22 @@
 			"ltones:block/exri/door/close4"
 		]
 	},
+	"block.exri_trapdoor.open": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/exri/trapdoor/open1",
+			"ltones:block/exri/trapdoor/open2",
+			"ltones:block/exri/trapdoor/open3"
+		]
+	},
+	"block.exri_trapdoor.close": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/exri/trapdoor/close1",
+			"ltones:block/exri/trapdoor/close2",
+			"ltones:block/exri/trapdoor/close3"
+		]
+	},
 	"block.exri.ambient": {
 		"sounds": [
 			"ltones:block/exri/ambient1",
@@ -1503,7 +1519,22 @@
 			"ltones:block/korp/door/close3"
 		]
 	},
-
+	"block.korp_trapdoor.open": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/korp/trapdoor/open1",
+			"ltones:block/korp/trapdoor/open2",
+			"ltones:block/korp/trapdoor/open3"
+		]
+	},
+	"block.korp_trapdoor.close": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/korp/trapdoor/close1",
+			"ltones:block/korp/trapdoor/close2",
+			"ltones:block/korp/trapdoor/close3"
+		]
+	},
 	"block.korp.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -1618,7 +1649,22 @@
 			"ltones:block/tone/door/close3"
 		]
 	},
-
+	"block.tone_trapdoor.open": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/tone/trapdoor/open1",
+			"ltones:block/tone/trapdoor/open2",
+			"ltones:block/tone/trapdoor/open3"
+		]
+	},
+	"block.tone_trapdoor.close": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/tone/trapdoor/close1",
+			"ltones:block/tone/trapdoor/close2",
+			"ltones:block/tone/trapdoor/close3"
+		]
+	},
 	"block.tone.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -1840,7 +1886,22 @@
 			"ltones:block/roen/door/close3"
 		]
 	},
-
+	"block.roen_trapdoor.open": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/roen/trapdoor/open1",
+			"ltones:block/roen/trapdoor/open2",
+			"ltones:block/roen/trapdoor/open3"
+		]
+	},
+	"block.roen_trapdoor.close": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/roen/trapdoor/close1",
+			"ltones:block/roen/trapdoor/close2",
+			"ltones:block/roen/trapdoor/close3"
+		]
+	},
 	"block.roen.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -1908,7 +1969,22 @@
 			"ltones:block/minn/door/close3"
 		]
 	},
-	
+	"block.minn_trapdoor.open": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/minn/trapdoor/open1",
+			"ltones:block/minn/trapdoor/open2",
+			"ltones:block/minn/trapdoor/open3"
+		]
+	},
+	"block.minn_trapdoor.close": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/minn/trapdoor/close1",
+			"ltones:block/minn/trapdoor/close2",
+			"ltones:block/minn/trapdoor/close3"
+		]
+	},
 	"block.minn.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -2091,6 +2167,23 @@
 		]
 	},
 
+	"block.kryp_trapdoor.open": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/kryp/trapdoor/open1",
+			"ltones:block/kryp/trapdoor/open2",
+			"ltones:block/kryp/trapdoor/open3"
+		]
+	},
+	"block.kryp_trapdoor.close": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/kryp/trapdoor/close1",
+			"ltones:block/kryp/trapdoor/close2",
+			"ltones:block/kryp/trapdoor/close3"
+		]
+	},
+
 	"block.lithium_door.open": {
 		"subtitle": "subtitles.block.door.toggle",
 		"sounds": [
@@ -2106,6 +2199,22 @@
 			"ltones:block/lithium/door/close2",
 			"ltones:block/lithium/door/close3",
 			"ltones:block/lithium/door/close4"
+		]
+	},
+	"block.lithium_trapdoor.open": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/lithium/trapdoor/open1",
+			"ltones:block/lithium/trapdoor/open2",
+			"ltones:block/lithium/trapdoor/open3"
+		]
+	},
+	"block.lithium_trapdoor.close": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/lithium/trapdoor/close1",
+			"ltones:block/lithium/trapdoor/close2",
+			"ltones:block/lithium/trapdoor/close3"
 		]
 	},
 	"block.lithium.break": {
@@ -2522,7 +2631,22 @@
 			"ltones:block/lair/door/close3"
 		]
 	},
-
+	"block.lair_trapdoor.open": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/lair/trapdoor/open1",
+			"ltones:block/lair/trapdoor/open2",
+			"ltones:block/lair/trapdoor/open3"
+		]
+	},
+	"block.lair_trapdoor.close": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/lair/trapdoor/close1",
+			"ltones:block/lair/trapdoor/close2",
+			"ltones:block/lair/trapdoor/close3"
+		]
+	},
 	"block.lair.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -2592,7 +2716,22 @@
 		]
 	},
 
-
+	"block.tank_trapdoor.open": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/tank/trapdoor/open1",
+			"ltones:block/tank/trapdoor/open2",
+			"ltones:block/tank/trapdoor/open3"
+		]
+	},
+	"block.tank_trapdoor.close": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/tank/trapdoor/close1",
+			"ltones:block/tank/trapdoor/close2",
+			"ltones:block/tank/trapdoor/close3"
+		]
+	},
 
 	"block.tank.break": {
 		"subtitle": "subtitles.block.generic.break",
@@ -2836,7 +2975,22 @@
 			"ltones:block/veeld/door/close4"
 		]
 	},
-
+	"block.veeld_trapdoor.open": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/veeld/trapdoor/open1",
+			"ltones:block/veeld/trapdoor/open2",
+			"ltones:block/veeld/trapdoor/open3"
+		]
+	},
+	"block.veeld_trapdoor.close": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/veeld/trapdoor/close1",
+			"ltones:block/veeld/trapdoor/close2",
+			"ltones:block/veeld/trapdoor/close3"
+		]
+	},
 	"block.veeld.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -3033,6 +3187,22 @@
 			"ltones:block/nurr/door/close3"
 		]
 	},
+	"block.nurr_trapdoor.open": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/nurr/trapdoor/open1",
+			"ltones:block/nurr/trapdoor/open2",
+			"ltones:block/nurr/trapdoor/open3"
+		]
+	},
+	"block.nurr_trapdoor.close": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/nurr/trapdoor/close1",
+			"ltones:block/nurr/trapdoor/close2",
+			"ltones:block/nurr/trapdoor/close3"
+		]
+	},
 	"block.nurr.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -3141,6 +3311,22 @@
 			"ltones:block/lave/door/close3"
 		]
 	},
+	"block.lave_trapdoor.open": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/lave/trapdoor/open1",
+			"ltones:block/lave/trapdoor/open2",
+			"ltones:block/lave/trapdoor/open3"
+		]
+	},
+	"block.lave_trapdoor.close": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/lave/trapdoor/close1",
+			"ltones:block/lave/trapdoor/close2",
+			"ltones:block/lave/trapdoor/close3"
+		]
+	},
 	"block.lave.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -3203,7 +3389,22 @@
 			"ltones:block/vect/door/close3"
 		]
 	},
-
+	"block.vect_trapdoor.open": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/vect/trapdoor/open1",
+			"ltones:block/vect/trapdoor/open2",
+			"ltones:block/vect/trapdoor/open3"
+		]
+	},
+	"block.vect_trapdoor.close": {
+		"subtitle": "subtitles.block.trapdoor.toggle",
+		"sounds": [
+			"ltones:block/vect/trapdoor/close1",
+			"ltones:block/vect/trapdoor/close2",
+			"ltones:block/vect/trapdoor/close3"
+		]
+	},
 	"block.vect.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
