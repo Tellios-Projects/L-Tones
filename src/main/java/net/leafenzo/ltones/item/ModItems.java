@@ -27,6 +27,7 @@ public class ModItems {
     public static final Item DIODE = registerItem("diode", new AliasedBlockItem(ModBlocks.DECAL_DIODE, new FabricItemSettings()));
     public static final Item POLYMER = registerItem("polymer", new AliasedBlockItem(ModBlocks.DECAL_POLYMER, new FabricItemSettings()));
     public static final Item SHEETING = registerItem("sheeting", new AliasedBlockItem(ModBlocks.DECAL_SHEETING, new FabricItemSettings()));
+    public static final Item REBITH = registerItem("rebith", new AliasedBlockItem(ModBlocks.DECAL_REBITH, new FabricItemSettings()));
     public static final Item POLYCARBONATE = registerItem("polycarbonate", new AliasedBlockItem(ModBlocks.DECAL_POLYCARBONATE, new FabricItemSettings()));
     public static final Item GAS_TUBE = registerItem("gas_tube", new AliasedBlockItem(ModBlocks.DECAL_GAS_TUBE, new FabricItemSettings()));
     public static final Item AZURE_RIVET = registerItem("azure_rivet", new AliasedBlockItem(ModBlocks.DECAL_AZURE_RIVET, new FabricItemSettings()));

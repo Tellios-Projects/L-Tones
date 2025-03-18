@@ -145,6 +145,7 @@ public class ModItemGroups {
                         entries.add(ModItems.AZURE_RIVET);
                         entries.add(ModItems.GLEAM);
                         entries.add(ModItems.G2V);
+                        entries.add(ModItems.REBITH);
                         entries.add(ModItems.SLAG);
                         entries.add(ModItems.RADIUM_PAINT);
                         entries.add(ModItems.FIBROUS_POWDER);

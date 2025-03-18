@@ -32,8 +32,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.function.ToIntFunction;
 
-import static net.minecraft.registry.tag.BlockTags.TRAPDOORS;
-
 public class ModBlocks {
 
     //<editor-fold desc ="Hashmaps & BlockSets">
@@ -521,7 +519,7 @@ public class ModBlocks {
     public static final Block EXRI_CURRENT = registerBlockInBlockset(EXRI_BLOCKS, "exri_current", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_CRITICAL = registerBlockInBlockset(EXRI_BLOCKS, "exri_critical", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_CONTROL = registerBlockInBlockset(EXRI_BLOCKS, "exri_control", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
-    public static final Block EXRI_SOUNDSCAPE = registerBlockInBlockset(EXRI_BLOCKS, "exri_soundscape", new LitAmbientSoundBlock(FabricBlockSettings.copyOf(exriMaterial), null, null, false, ModSoundEvents.BLOCK_EXRI_AMBIENT, 50));
+    public static final Block EXRI_SOUNDSCAPE = registerBlockInBlockset(EXRI_BLOCKS, "exri_soundscape", new SoundscapeBlock(FabricBlockSettings.copyOf(exriMaterial), null, null, ModSoundEvents.BLOCK_EXRI_AMBIENT, true, 110));
     public static final Block EXRI = registerBlockInBlockset(EXRI_BLOCKS, "exri", new Block(FabricBlockSettings.copyOf(exriMaterial)));
 
     //TODO bit blockset always emits a redstone level of 1   
@@ -642,7 +640,7 @@ public class ModBlocks {
     public static final Block SYNC_DATA = registerBlockInBlockset(SYNC_BLOCKS, "sync_data", new Block(FabricBlockSettings.copyOf(syncMaterial)));
     public static final Block SYNC_CONTAIN = registerBlockInBlockset(SYNC_BLOCKS, "sync_contain", new Block(FabricBlockSettings.copyOf(syncMaterial)));
     public static final Block SYNC_CAUTION = registerBlockInBlockset(SYNC_BLOCKS, "sync_caution", new PillarBlock(FabricBlockSettings.copyOf(syncMaterial)));
-    public static final Block SYNC_SOUNDSCAPE = registerBlockInBlockset(SYNC_BLOCKS, "sync_soundscape", new LitAmbientSoundBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, false, ModSoundEvents.BLOCK_SYNC_AMBIENT, 20));
+    public static final Block SYNC_SOUNDSCAPE = registerBlockInBlockset(SYNC_BLOCKS, "sync_soundscape", new SoundscapeBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, ModSoundEvents.BLOCK_SYNC_AMBIENT, false, 20));
     public static final Block SYNC = registerBlockInBlockset(SYNC_BLOCKS, "sync", new Block(FabricBlockSettings.copyOf(syncMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - NURR">
@@ -740,7 +738,7 @@ public class ModBlocks {
     public static final Block SOL_FIELD = registerBlockInBlockset(SOL_BLOCKS, "sol_field", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null, false));
     public static final Block SOL_NUCLEI = registerBlockInBlockset(SOL_BLOCKS, "sol_nuclei", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null, false));
     public static final Block SOL_CORONA = registerBlockInBlockset(SOL_BLOCKS, "sol_corona", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null, false));
-    public static final Block SOL_SOUNDSCAPE = registerBlockInBlockset(SOL_BLOCKS, "sol_soundscape", new LitAmbientSoundBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null, false, ModSoundEvents.BLOCK_SOL_AMBIENT, 80));
+    public static final Block SOL_SOUNDSCAPE = registerBlockInBlockset(SOL_BLOCKS, "sol_soundscape", new SoundscapeBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null, ModSoundEvents.BLOCK_SOL_AMBIENT,  false,80));
     public static final Block SOL = registerBlockInBlockset(SOL_BLOCKS, "sol", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null, false));
     //</editor-fold>
 
@@ -846,6 +844,7 @@ public class ModBlocks {
         return b;
     }
 
+
     public static final Block TRAPDOOR_PUNCTURE = registerTrapdoor("trapdoor_puncture", new TrapdoorBlock(FabricBlockSettings.copyOf(LITHIUM_BLOCK).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.LITHIUM));
     public static final Block TRAPDOOR_STEAK = registerTrapdoor("trapdoor_steak", new TrapdoorBlock(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DEEPSLATE_GRAY).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.FORTT));
     public static final Block TRAPDOOR_NEON = registerTrapdoor("trapdoor_neon", new TrapdoorBlock(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.PURPLE).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.CRAY));
@@ -897,6 +896,7 @@ public class ModBlocks {
     public static final Block DECAL_GLEAM = registerDecalBlock("decal_gleam", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.CANDLE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_GLEAM); }
     public static final Block DECAL_G2V = registerDecalBlock("decal_g2v", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_G2V))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_G2V); }
     public static final Block DECAL_SLAG = registerDecalBlock("decal_slag", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_SLAG))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_SLAG); }
+    public static final Block DECAL_REBITH = registerDecalBlock("decal_rebith", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.FROGSPAWN))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_REBITH); }
     public static final Block DECAL_RADIUM_PAINT = registerDecalBlock("decal_radium_paint", new AmbientSoundDecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.POWDER_SNOW), ModSoundEvents.BLOCK_SYNC_AMBIENT, 80)); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_RADIUM_PAINT); }
     public static final Block DECAL_FIBROUS_POWDER = registerDecalBlock("decal_fibrous_powder", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_FIBROUS_POWDER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_FIBROUS_POWDER); }
     public static final Block DECAL_AMALGAM = registerDecalBlock("decal_amalgam", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_AMALGAM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_AMALGAM); }

@@ -97,7 +97,7 @@ public class ZkulBlock extends BlockWithEntity {
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state)  {
-        return new ZkulBlockEntity(pos, state);
+        return new ZkulBlockEntity(pos, state); // useful for future
     }
 
     @Override
