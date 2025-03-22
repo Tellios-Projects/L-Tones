@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ltones:block/sync_shielding",
+    "east": "ltones:block/sync_tank_on",
+    "north": "ltones:block/sync_tank_on",
+    "particle": "ltones:block/sync_tank_on",
+    "south": "ltones:block/sync_tank_on",
+    "up": "ltones:block/sync_shielding",
+    "west": "ltones:block/sync_tank_on"
+  }
+}

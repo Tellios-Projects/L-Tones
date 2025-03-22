@@ -21,6 +21,11 @@ public class ModBlockEntityType {
             LairSoundscapeBlockEntity::new,
             ModBlocks.LAIR_SOUNDSCAPE);
 
+    public static final BlockEntityType<ExriSoundscapeBlockEntity> EXRI_SOUNDSCAPE = register(
+            "exri_soundscape",
+            ExriSoundscapeBlockEntity::new,
+            ModBlocks.EXRI_SOUNDSCAPE);
+
     public static final BlockEntityType<ZkulBlockEntity> ZKUL = register(
             "zkul",
             ZkulBlockEntity::new,

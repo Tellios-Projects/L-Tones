@@ -1,18 +1,33 @@
 {
   "variants": {
-    "facing=east": {
+    "facing=east,lit=false": {
       "model": "ltones:block/sync_mizmer",
       "y": 270
     },
-    "facing=north": {
+    "facing=east,lit=true": {
+      "model": "ltones:block/sync_mizmer_on",
+      "y": 270
+    },
+    "facing=north,lit=false": {
       "model": "ltones:block/sync_mizmer",
       "y": 180
     },
-    "facing=south": {
+    "facing=north,lit=true": {
+      "model": "ltones:block/sync_mizmer_on",
+      "y": 180
+    },
+    "facing=south,lit=false": {
       "model": "ltones:block/sync_mizmer"
     },
-    "facing=west": {
+    "facing=south,lit=true": {
+      "model": "ltones:block/sync_mizmer_on"
+    },
+    "facing=west,lit=false": {
       "model": "ltones:block/sync_mizmer",
+      "y": 90
+    },
+    "facing=west,lit=true": {
+      "model": "ltones:block/sync_mizmer_on",
       "y": 90
     }
   }

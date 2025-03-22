@@ -17,8 +17,8 @@ public class LairSoundscapeBlockEntity extends BlockEntity {
 
     public static void serverTick(World world, BlockPos pos, BlockState state, LairSoundscapeBlockEntity blockEntity) {
         long l = world.getTime();
-            if (l % 80L == 0L && state.get(LIT)) {
-                world.playSound(null, pos, ModSoundEvents.BLOCK_LAIR_AMBIENT, SoundCategory.BLOCKS, 1.0f, 1.0f);
+            if (l % 20L == 0L && state.get(LIT)) {
+                world.playSound(null, pos, ModSoundEvents.BLOCK_LAIR_AMBIENT, SoundCategory.BLOCKS, 0.25f, 1.0f);
             }
     }
 }

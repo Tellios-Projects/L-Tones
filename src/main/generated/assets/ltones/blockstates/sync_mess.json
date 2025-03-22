@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "lit=false": {
       "model": "ltones:block/sync_mess"
+    },
+    "lit=true": {
+      "model": "ltones:block/sync_mess_on"
     }
   }
 }

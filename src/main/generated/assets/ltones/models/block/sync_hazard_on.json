@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "ltones:block/sync_mizmer"
+    "all": "ltones:block/sync_hazard_on"
   }
 }

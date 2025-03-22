@@ -2746,7 +2746,10 @@
 	},
 	"block.lair.ambient": {
 		"sounds": [
-			"ltones:block/lair/ambient"
+			"ltones:block/lair/ambient1",
+			"ltones:block/lair/ambient2",
+			"ltones:block/lair/ambient3",
+			"ltones:block/lair/ambient4"
 		]
 	},
 	"block.lair.break": {
