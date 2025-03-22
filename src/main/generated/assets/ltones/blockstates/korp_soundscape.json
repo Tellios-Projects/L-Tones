@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ltones:block/korp_soundscape"
+    },
+    "lit=true": {
+      "model": "ltones:block/korp_soundscape_on"
+    }
+  }
+}

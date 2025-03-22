@@ -385,6 +385,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROEN_BLOCKSET);
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOL_BLOCKSET);
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROST_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROST_BLOCKSET_RUST);
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BITT_BLOCKSET);
 
         // Lithium

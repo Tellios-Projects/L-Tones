@@ -384,6 +384,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_CELL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR_AGED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LAIR);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.LAIR_SOUNDSCAPE, TextureMap::all);
         //</editor-fold>
         //<editor-fold desc = "Models - kryp">
         BlockStateModelGenerator.BlockTexturePool krypWireTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KRYP_WIRE);
@@ -484,6 +485,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.KORP_FLOW, TexturedModel.CUBE_ALL);
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.KORP_OUTFLOW, "block/korp_regulate");
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.KORP_CONSUME);
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.KORP_SOUNDSCAPE, TextureMap::all);
         //</editor-fold>
         //<editor-fold desc = "Models - tank">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TANK_ZIZER);

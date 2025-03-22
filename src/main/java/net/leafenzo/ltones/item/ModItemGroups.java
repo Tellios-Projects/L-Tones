@@ -65,7 +65,34 @@ public class ModItemGroups {
                         for(Block block : includeVariants(ModBlocks.FLEQ_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.SYNC_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.ROEN_BLOCKS)) { entries.add(block); }
-                        for(Block block : includeVariants(ModBlocks.ROST_BLOCKS)) { entries.add(block); }
+                        entries.add(ModBlocks.ROST_CAGE);
+                        entries.add(ModBlocks.ROST_CAGE_RUST);
+                        entries.add(ModBlocks.ROST_CORRIGOR);
+                        entries.add(ModBlocks.ROST_CORRIGOR_RUST);
+                        entries.add(ModBlocks.ROST_CRETE);
+                        entries.add(ModBlocks.ROST_CRETE_RUST);
+                        entries.add(ModBlocks.ROST_LINOLEUM);
+                        entries.add(ModBlocks.ROST_LINOLEUM_RUST);
+                        entries.add(ModBlocks.ROST_MOUND);
+                        entries.add(ModBlocks.ROST_MOUND_RUST);
+                        entries.add(ModBlocks.ROST_PEEL);
+                        entries.add(ModBlocks.ROST_PEEL_RUST);
+                        entries.add(ModBlocks.ROST_PLATES);
+                        entries.add(ModBlocks.ROST_PLATES_RUST);
+                        entries.add(ModBlocks.ROST_REBAR);
+                        entries.add(ModBlocks.ROST_REBAR_RUST);
+                        entries.add(ModBlocks.ROST_RIBBING);
+                        entries.add(ModBlocks.ROST_RIBBING_RUST);
+                        entries.add(ModBlocks.ROST_TUNNEL);
+                        entries.add(ModBlocks.ROST_TUNNEL_RUST);
+                        entries.add(ModBlocks.ROST_VEIN);
+                        entries.add(ModBlocks.ROST_VEIN_RUST);
+                        entries.add(ModBlocks.ROST_VELLUM);
+                        entries.add(ModBlocks.ROST_VELLUM_RUST);
+                        entries.add(ModBlocks.ROST_WALLPAPER);
+                        entries.add(ModBlocks.ROST_WALLPAPER_RUST);
+                        entries.add(ModBlocks.ROST);
+                        entries.add(ModBlocks.ROST_RUST);
                         for(Block block : includeVariants(ModBlocks.SOL_BLOCKS)) { entries.add(block); }
                         entries.add(ModBlocks.DOOR_STEAK);
                         entries.add(ModBlocks.TRAPDOOR_STEAK);

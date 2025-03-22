@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:rost_wallpaper_rust",
+    "ltones:rost_vellum_rust",
+    "ltones:rost_vein_rust",
+    "ltones:rost_tunnel_rust",
+    "ltones:rost_ribbing_rust",
+    "ltones:rost_rebar_rust",
+    "ltones:rost_plates_rust",
+    "ltones:rost_peel_rust",
+    "ltones:rost_mound_rust",
+    "ltones:rost_linoleum_rust",
+    "ltones:rost_crete_rust",
+    "ltones:rost_corrigor_rust",
+    "ltones:rost_cage_rust",
+    "ltones:rost_rust"
+  ]
+}

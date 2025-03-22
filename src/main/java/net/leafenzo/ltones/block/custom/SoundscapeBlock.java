@@ -2,10 +2,7 @@ package net.leafenzo.ltones.block.custom;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.state.StateManager;
@@ -30,7 +27,7 @@ public class SoundscapeBlock extends Block {
         this.turnOffSound = turnOffSound;
         this.setDefaultState(this.getDefaultState().with(LIT, false));
         sound = ambientSound;
-        looping = loopingSound; // TODO: figure out how the hell to implement this
+        looping = loopingSound;
         soundFrequency = ambientSoundFrequency;
     }
 
@@ -73,5 +70,4 @@ public class SoundscapeBlock extends Block {
         super.appendProperties(builder);
         builder.add(LIT);
     }
-
 }

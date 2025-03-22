@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "tag": "ltones:rost_blocks"
+    "tag": "ltones:rost_blocks_rust"
   },
   "result": "ltones:rost_vellum_rust"
 }

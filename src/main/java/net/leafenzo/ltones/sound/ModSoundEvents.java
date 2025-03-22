@@ -210,6 +210,7 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_KORP_TRAPDOOR_OPEN = registerSoundEvent("block.korp_trapdoor.open");
     public static final SoundEvent BLOCK_KORP_TRAPDOOR_CLOSE = registerSoundEvent("block.korp_trapdoor.close");
 
+    public static final SoundEvent BLOCK_KORP_AMBIENT = registerSoundEvent("block.korp.ambient");
     public static final SoundEvent BLOCK_KORP_BREAK = registerSoundEvent("block.korp.break");
     public static final SoundEvent BLOCK_KORP_STEP = registerSoundEvent("block.korp.step");
     public static final SoundEvent BLOCK_KORP_PLACE = registerSoundEvent("block.korp.place");
@@ -408,6 +409,7 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_LAIR_TRAPDOOR_OPEN = registerSoundEvent("block.lair_trapdoor.open");
     public static final SoundEvent BLOCK_LAIR_TRAPDOOR_CLOSE = registerSoundEvent("block.lair_trapdoor.close");
 
+    public static final SoundEvent BLOCK_LAIR_AMBIENT = registerSoundEvent("block.lair.ambient");
     public static final SoundEvent BLOCK_LAIR_BREAK = registerSoundEvent("block.lair.break");
     public static final SoundEvent BLOCK_LAIR_STEP = registerSoundEvent("block.lair.step");
     public static final SoundEvent BLOCK_LAIR_PLACE = registerSoundEvent("block.lair.place");

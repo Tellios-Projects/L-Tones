@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_any_block_from_rost_blocks": {
+    "has_any_block_from_rost_blocks_rust": {
       "conditions": {
         "items": [
           {
-            "tag": "ltones:rost_blocks"
+            "tag": "ltones:rost_blocks_rust"
           }
         ]
       },
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "has_any_block_from_rost_blocks",
+      "has_any_block_from_rost_blocks_rust",
       "has_the_recipe"
     ]
   ],

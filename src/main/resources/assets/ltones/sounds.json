@@ -1535,6 +1535,14 @@
 			"ltones:block/korp/trapdoor/close3"
 		]
 	},
+	"block.korp.ambient": {
+		"sounds": [
+			"ltones:block/korp/ambient1",
+			"ltones:block/korp/ambient2",
+			"ltones:block/korp/ambient3",
+			"ltones:block/korp/ambient4"
+		]
+	},
 	"block.korp.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
@@ -2734,6 +2742,11 @@
 			"ltones:block/lair/trapdoor/close1",
 			"ltones:block/lair/trapdoor/close2",
 			"ltones:block/lair/trapdoor/close3"
+		]
+	},
+	"block.lair.ambient": {
+		"sounds": [
+			"ltones:block/lair/ambient"
 		]
 	},
 	"block.lair.break": {

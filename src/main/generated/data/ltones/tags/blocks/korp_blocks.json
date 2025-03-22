@@ -16,6 +16,7 @@
     "ltones:korp_command",
     "ltones:korp_bank",
     "ltones:korp_asset",
-    "ltones:korp"
+    "ltones:korp",
+    "ltones:korp_soundscape"
   ]
 }

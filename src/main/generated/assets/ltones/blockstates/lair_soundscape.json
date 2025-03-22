@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "ltones:block/lair_soundscape"
+    },
+    "lit=true": {
+      "model": "ltones:block/lair_soundscape_on"
+    }
+  }
+}
