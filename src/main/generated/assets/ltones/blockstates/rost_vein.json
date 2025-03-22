@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ltones:block/rost_vein",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "ltones:block/rost_vein",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "ltones:block/rost_vein"
+    },
+    "facing=west": {
+      "model": "ltones:block/rost_vein",
+      "y": 90
+    }
+  }
+}

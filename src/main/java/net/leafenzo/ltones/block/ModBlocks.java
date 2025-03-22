@@ -75,6 +75,7 @@ public class ModBlocks {
     public static final ArrayList<Block> ROEN_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> SOL_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> BITT_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> ROST_BLOCKS = new ArrayList<>();
 
     public static ArrayList<BlockSet> BLOCKSETS = new ArrayList<BlockSet>();
 
@@ -105,6 +106,7 @@ public class ModBlocks {
     public static final BlockSet TYEL_BLOCKSET = registerBlockSet(TYEL_BLOCKS, "tyel_blocks");
     public static final BlockSet ROEN_BLOCKSET = registerBlockSet(ROEN_BLOCKS, "roen_blocks");
     public static final BlockSet SOL_BLOCKSET = registerBlockSet(SOL_BLOCKS, "sol_blocks");
+    public static final BlockSet ROST_BLOCKSET = registerBlockSet(ROST_BLOCKS, "rost_blocks");
     public static final BlockSet BITT_BLOCKSET = registerBlockSet(BITT_BLOCKS, "bitt_blocks");
     //</editor-fold>
 
@@ -765,7 +767,47 @@ public class ModBlocks {
     public static final Block RED_BITT = registerBlockInBlockset(BITT_BLOCKS, "red_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
     public static final Block SHELL_BITT = registerBlockInBlockset(BITT_BLOCKS, "shell_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
     //</editor-fold>
-
+//</editor-fold>
+    //<editor-fold desc ="Blocks - ROST">
+    private static final FabricBlockSettings rostMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.OAK_TAN)
+            .requiresTool()
+            .strength(2.4f, 2.0f)
+            .sounds(ModBlockSoundGroup.ROST);
+    private static final FabricBlockSettings rostRustMaterial = FabricBlockSettings.create()
+            .mapColor(MapColor.DULL_RED)
+            .requiresTool()
+            .strength(2.4f, 2.0f)
+            .sounds(ModBlockSoundGroup.ROST_RUST);
+    public static final Block ROST_WALLPAPER_RUST = registerBlockInBlockset(ROST_BLOCKS, "rost_wallpaper_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_WALLPAPER = registerBlockInBlockset(ROST_BLOCKS, "rost_wallpaper", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_WALLPAPER_RUST.getDefaultState(), false));
+    public static final Block ROST_VELLUM_RUST = registerBlockInBlockset(ROST_BLOCKS, "rost_vellum_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_VELLUM = registerBlockInBlockset(ROST_BLOCKS, "rost_vellum", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_VELLUM_RUST.getDefaultState(), false));
+    public static final Block ROST_VEIN_RUST = registerBlockInBlockset(ROST_BLOCKS, "rost_vein_rust", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_VEIN = registerBlockInBlockset(ROST_BLOCKS, "rost_vein", new RustingGlazedTerracottaBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_VEIN_RUST.getDefaultState(), false));
+    public static final Block ROST_TUNNEL_RUST = registerBlockInBlockset(ROST_BLOCKS, "rost_tunnel_rust", new PillarBlock(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_TUNNEL = registerBlockInBlockset(ROST_BLOCKS, "rost_tunnel", new RustingPillarBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_TUNNEL_RUST.getDefaultState(), false));
+    public static final Block ROST_RIBBING_RUST     = registerBlockInBlockset(ROST_BLOCKS, "rost_ribbing_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_RIBBING = registerBlockInBlockset(ROST_BLOCKS, "rost_ribbing", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_RIBBING_RUST.getDefaultState(), false));
+    public static final Block ROST_REBAR_RUST = registerBlockInBlockset(ROST_BLOCKS, "rost_rebar_rust", new PillarBlock(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_REBAR = registerBlockInBlockset(ROST_BLOCKS, "rost_rebar", new RustingPillarBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_REBAR_RUST.getDefaultState(), false));
+    public static final Block ROST_PLATES_RUST = registerBlockInBlockset(ROST_BLOCKS, "rost_plates_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_PLATES = registerBlockInBlockset(ROST_BLOCKS, "rost_plates", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_PLATES_RUST.getDefaultState(), false));
+    public static final Block ROST_PEEL_RUST = registerBlockInBlockset(ROST_BLOCKS, "rost_peel_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_PEEL = registerBlockInBlockset(ROST_BLOCKS, "rost_peel", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_PEEL_RUST.getDefaultState(), false));
+    public static final Block ROST_MOUND_RUST = registerBlockInBlockset(ROST_BLOCKS, "rost_mound_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_MOUND = registerBlockInBlockset(ROST_BLOCKS, "rost_mound", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_MOUND_RUST.getDefaultState(), false));
+    public static final Block ROST_LINOLEUM_RUST = registerBlockInBlockset(ROST_BLOCKS, "rost_linoleum_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_LINOLEUM = registerBlockInBlockset(ROST_BLOCKS, "rost_linoleum", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_LINOLEUM_RUST.getDefaultState(), false));
+    public static final Block ROST_CRETE_RUST = registerBlockInBlockset(ROST_BLOCKS, "rost_crete_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_CRETE = registerBlockInBlockset(ROST_BLOCKS, "rost_crete", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_CRETE_RUST.getDefaultState(), false));
+    public static final Block ROST_CORRIGOR_RUST = registerBlockInBlockset(ROST_BLOCKS, "rost_corrigor_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_CORRIGOR = registerBlockInBlockset(ROST_BLOCKS, "rost_corrigor", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_CORRIGOR_RUST.getDefaultState(), false));
+    public static final Block ROST_CAGE_RUST = registerBlockInBlockset(ROST_BLOCKS, "rost_cage_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial).nonOpaque()));  static { RENDER_LAYER_CUTOUT.add(ROST_CAGE_RUST); }
+    public static final Block ROST_CAGE = registerBlockInBlockset(ROST_BLOCKS, "rost_cage", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial).nonOpaque(), ROST_CAGE_RUST.getDefaultState(), false)); static { RENDER_LAYER_CUTOUT.add(ROST_CAGE); }
+    public static final Block ROST_RUST = registerBlockInBlockset(ROST_BLOCKS, "rost_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST = registerBlockInBlockset(ROST_BLOCKS, "rost", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_RUST.getDefaultState(), false));
+    //</editor-fold>
     //<editor-fold desc ="Blocks - Other">
     public static final Block ZTONE = registerBlock("ztone", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)
             .mapColor(MapColor.LIGHT_GRAY)

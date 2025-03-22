@@ -2258,7 +2258,6 @@
 		]
 	},
 	"block.lithium.fall": {
-		
 		"sounds": [
 			"ltones:block/lithium/step1",
 			"ltones:block/lithium/step2",
@@ -2372,6 +2371,96 @@
 			"ltones:block/deepslate_lithium_ore/step4",
 			"ltones:block/deepslate_lithium_ore/step5",
 			"ltones:block/deepslate_lithium_ore/step6"
+		]
+	},
+
+	"block.rost.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/rost/break1",
+			"ltones:block/rost/break2",
+			"ltones:block/rost/break3",
+			"ltones:block/rost/break4"
+		]
+	},
+	"block.rost.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/rost/step1",
+			"ltones:block/rost/step2",
+			"ltones:block/rost/step3",
+			"ltones:block/rost/step4"
+		]
+	},
+	"block.rost.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/rost/break1",
+			"ltones:block/rost/break2",
+			"ltones:block/rost/break3",
+			"ltones:block/rost/break4"
+		]
+	},
+	"block.rost.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/rost/step1",
+			"ltones:block/rost/step2",
+			"ltones:block/rost/step3",
+			"ltones:block/rost/step4"
+		]
+	},
+	"block.rost.fall": {
+		"sounds": [
+			"ltones:block/rost/step1",
+			"ltones:block/rost/step2",
+			"ltones:block/rost/step3",
+			"ltones:block/rost/step4"
+		]
+	},
+
+	"block.rost_rust.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/rost_rust/break1",
+			"ltones:block/rost_rust/break2",
+			"ltones:block/rost_rust/break3",
+			"ltones:block/rost_rust/break4"
+		]
+	},
+	"block.rost_rust.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/rost_rust/step1",
+			"ltones:block/rost_rust/step2",
+			"ltones:block/rost_rust/step3",
+			"ltones:block/rost_rust/step4"
+		]
+	},
+	"block.rost_rust.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/rost_rust/break1",
+			"ltones:block/rost_rust/break2",
+			"ltones:block/rost_rust/break3",
+			"ltones:block/rost_rust/break4"
+		]
+	},
+	"block.rost_rust.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/rost_rust/step1",
+			"ltones:block/rost_rust/step2",
+			"ltones:block/rost_rust/step3",
+			"ltones:block/rost_rust/step4"
+		]
+	},
+	"block.rost_rust.fall": {
+		"sounds": [
+			"ltones:block/rost_rust/step1",
+			"ltones:block/rost_rust/step2",
+			"ltones:block/rost_rust/step3",
+			"ltones:block/rost_rust/step4"
 		]
 	},
 

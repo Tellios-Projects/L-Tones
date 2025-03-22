@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "ltones:block/rost_rebar_rust",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "ltones:block/rost_rebar_rust"
+    },
+    "axis=z": {
+      "model": "ltones:block/rost_rebar_rust",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ltones:block/rost_rebar_top",
+    "east": "ltones:block/rost_rebar",
+    "north": "ltones:block/rost_rebar",
+    "particle": "ltones:block/rost_rebar",
+    "south": "ltones:block/rost_rebar",
+    "up": "ltones:block/rost_rebar_top",
+    "west": "ltones:block/rost_rebar"
+  }
+}

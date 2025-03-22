@@ -65,6 +65,7 @@ public class ModItemGroups {
                         for(Block block : includeVariants(ModBlocks.FLEQ_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.SYNC_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.ROEN_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.ROST_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.SOL_BLOCKS)) { entries.add(block); }
                         entries.add(ModBlocks.DOOR_STEAK);
                         entries.add(ModBlocks.TRAPDOOR_STEAK);

@@ -37,17 +37,17 @@ public class AntennaBlock extends BasicHorizontalFacingBlock implements Waterlog
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return HORIZONTAL_FACING_TO_COLLISION_SHAPE[state.get(FACING).getId()-2];
+        return VoxelShapes.empty();
     }
 
     @Override
     public VoxelShape getCameraCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return HORIZONTAL_FACING_TO_COLLISION_SHAPE[state.get(FACING).getId()-2];
+        return VoxelShapes.empty();
     }
 
     @Override
     public VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
-        return HORIZONTAL_FACING_TO_COLLISION_SHAPE[state.get(FACING).getId()-2];
+        return VoxelShapes.empty();
     }
 
     @Override

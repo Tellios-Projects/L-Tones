@@ -506,6 +506,18 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_HIT = registerSoundEvent("block.deepslate_lithium_ore.hit");
     public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_FALL = registerSoundEvent("block.deepslate_lithium_ore.fall");
 
+    public static final SoundEvent BLOCK_ROST_BREAK = registerSoundEvent("block.rost.break");
+    public static final SoundEvent BLOCK_ROST_STEP = registerSoundEvent("block.rost.step");
+    public static final SoundEvent BLOCK_ROST_PLACE = registerSoundEvent("block.rost.place");
+    public static final SoundEvent BLOCK_ROST_HIT = registerSoundEvent("block.rost.hit");
+    public static final SoundEvent BLOCK_ROST_FALL = registerSoundEvent("block.rost.fall");
+
+    public static final SoundEvent BLOCK_ROST_RUST_BREAK = registerSoundEvent("block.rost_rust.break");
+    public static final SoundEvent BLOCK_ROST_RUST_STEP = registerSoundEvent("block.rost_rust.step");
+    public static final SoundEvent BLOCK_ROST_RUST_PLACE = registerSoundEvent("block.rost_rust.place");
+    public static final SoundEvent BLOCK_ROST_RUST_HIT = registerSoundEvent("block.rost_rust.hit");
+    public static final SoundEvent BLOCK_ROST_RUST_FALL = registerSoundEvent("block.rost_rust.fall");
+
     public static final SoundEvent BLOCK_TIRE_BREAK = registerSoundEvent("block.tire.break");
     public static final SoundEvent BLOCK_TIRE_STEP = registerSoundEvent("block.tire.step");
     public static final SoundEvent BLOCK_TIRE_PLACE = registerSoundEvent("block.tire.place");

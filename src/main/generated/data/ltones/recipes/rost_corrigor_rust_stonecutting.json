@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "ltones:rost_blocks"
+  },
+  "result": "ltones:rost_corrigor_rust"
+}

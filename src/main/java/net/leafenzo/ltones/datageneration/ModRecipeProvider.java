@@ -353,6 +353,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TYEL, ModBlocks.ZTONE, ModItems.SLUMP,4);
         offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROEN, ModItems.PLAQUE,4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOL, ModBlocks.ZTONE, ModItems.G2V,4);
+        offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROST, ModBlocks.ZTONE, ModItems.REBITH,4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BITT, ModBlocks.ZTONE, ModItems.DIODE,4);
 
         // Blockset Stonecutting Recipes
@@ -383,6 +384,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TYEL_BLOCKSET);
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROEN_BLOCKSET);
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOL_BLOCKSET);
+        offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROST_BLOCKSET);
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BITT_BLOCKSET);
 
         // Lithium

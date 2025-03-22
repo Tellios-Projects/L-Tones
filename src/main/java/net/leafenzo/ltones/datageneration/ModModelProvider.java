@@ -503,7 +503,7 @@ public class ModModelProvider extends FabricModelProvider {
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.TANK_BEAM, "block/tank_secure");
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.TANK_CANNON);
         //</editor-fold>
-        //<editor-fold desc = "Models - axri">
+        //<editor-fold desc = "Models - exri">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_TECT);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_STEM);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.EXRI_STEEL);
@@ -662,6 +662,36 @@ public class ModModelProvider extends FabricModelProvider {
         }
         //</editor-fold>
 
+        //<editor-fold desc = "Models - rost">
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_RUST);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_CAGE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_CAGE_RUST);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_CORRIGOR);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_CORRIGOR_RUST);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_CRETE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_CRETE_RUST);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_LINOLEUM);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_LINOLEUM_RUST);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_MOUND);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_MOUND_RUST);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_PEEL);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_PEEL_RUST);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_PLATES);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_PLATES_RUST);
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROST_REBAR, "block/rost_rebar_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROST_REBAR_RUST, "block/rost_rebar_top_rust");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_RIBBING);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_RIBBING_RUST);
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROST_TUNNEL, "block/rost_rebar_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROST_TUNNEL_RUST, "block/rost_tunnel_top_rust");
+        blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.ROST_VEIN);
+        blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.ROST_VEIN_RUST);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_VELLUM);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_VELLUM_RUST);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_WALLPAPER);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_WALLPAPER_RUST);
+        //</editor-fold>
         //<editor-fold desc = "Models - Other Blocks">
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.AURORA, TextureMap::all);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ZTONE);
