@@ -1540,7 +1540,10 @@
 			"ltones:block/korp/ambient1",
 			"ltones:block/korp/ambient2",
 			"ltones:block/korp/ambient3",
-			"ltones:block/korp/ambient4"
+			"ltones:block/korp/ambient4",
+			"ltones:block/korp/ambient5",
+			"ltones:block/korp/ambient6",
+			"ltones:block/korp/ambient7"
 		]
 	},
 	"block.korp.break": {

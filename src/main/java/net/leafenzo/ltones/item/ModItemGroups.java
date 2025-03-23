@@ -83,6 +83,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ROST_REBAR_RUST);
                         entries.add(ModBlocks.ROST_RIBBING);
                         entries.add(ModBlocks.ROST_RIBBING_RUST);
+                        entries.add(ModBlocks.ROST_SHIELDED);
+                        entries.add(ModBlocks.ROST_SHIELDED_RUST);
+                        entries.add(ModBlocks.ROST_SMOTHERED);
+                        entries.add(ModBlocks.ROST_SMOTHERED_RUST);
                         entries.add(ModBlocks.ROST_TUNNEL);
                         entries.add(ModBlocks.ROST_TUNNEL_RUST);
                         entries.add(ModBlocks.ROST_VEIN);

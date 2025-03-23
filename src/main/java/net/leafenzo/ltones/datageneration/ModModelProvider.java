@@ -696,6 +696,10 @@ public class ModModelProvider extends FabricModelProvider {
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROST_REBAR_RUST, "block/rost_rebar_top_rust");
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_RIBBING);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_RIBBING_RUST);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_SHIELDED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_SHIELDED_RUST);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_SMOTHERED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROST_SMOTHERED_RUST);
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROST_TUNNEL, "block/rost_rebar_top");
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ROST_TUNNEL_RUST, "block/rost_tunnel_top_rust");
         blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.ROST_VEIN);

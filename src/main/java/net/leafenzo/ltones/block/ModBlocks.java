@@ -788,6 +788,8 @@ public class ModBlocks {
     public static final Block ROST_VEIN_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_vein_rust", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(rostRustMaterial)));
     public static final Block ROST_TUNNEL_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_tunnel_rust", new PillarBlock(FabricBlockSettings.copyOf(rostRustMaterial)));
     public static final Block ROST_RIBBING_RUST     = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_ribbing_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_SHIELDED_RUST     = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_shielded_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_SMOTHERED_RUST     = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_smothered_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
     public static final Block ROST_REBAR_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_rebar_rust", new PillarBlock(FabricBlockSettings.copyOf(rostRustMaterial)));
     public static final Block ROST_PLATES_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_plates_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
     public static final Block ROST_PEEL_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_peel_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
@@ -802,6 +804,8 @@ public class ModBlocks {
     public static final Block ROST_VEIN = registerBlockInBlockset(ROST_BLOCKS, "rost_vein", new RustingGlazedTerracottaBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_VEIN_RUST.getDefaultState(), false));
     public static final Block ROST_TUNNEL = registerBlockInBlockset(ROST_BLOCKS, "rost_tunnel", new RustingPillarBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_TUNNEL_RUST.getDefaultState(), false));
     public static final Block ROST_RIBBING = registerBlockInBlockset(ROST_BLOCKS, "rost_ribbing", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_RIBBING_RUST.getDefaultState(), false));
+    public static final Block ROST_SHIELDED = registerBlockInBlockset(ROST_BLOCKS, "rost_shielded", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_SHIELDED_RUST.getDefaultState(), false));
+    public static final Block ROST_SMOTHERED = registerBlockInBlockset(ROST_BLOCKS, "rost_smothered", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_SMOTHERED_RUST.getDefaultState(), false));
     public static final Block ROST_REBAR = registerBlockInBlockset(ROST_BLOCKS, "rost_rebar", new RustingPillarBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_REBAR_RUST.getDefaultState(), false));
     public static final Block ROST_PLATES = registerBlockInBlockset(ROST_BLOCKS, "rost_plates", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_PLATES_RUST.getDefaultState(), false));
     public static final Block ROST_PEEL = registerBlockInBlockset(ROST_BLOCKS, "rost_peel", new RustingBlock(FabricBlockSettings.copyOf(rostMaterial), ROST_PEEL_RUST.getDefaultState(), false));
