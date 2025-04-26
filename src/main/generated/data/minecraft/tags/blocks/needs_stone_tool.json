@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "ltones:raw_lithium_block",
-    "ltones:lithium_block",
-    "ltones:lithium_ore",
-    "ltones:deepslate_lithium_ore",
-    "ltones:endstone_lithium_ore",
+    "ltones:raw_luesium_block",
+    "ltones:luesium_block",
+    "ltones:luesium_ore",
+    "ltones:deepslate_luesium_ore",
+    "ltones:endstone_luesium_ore",
     "ltones:antenna",
     "ltones:radio"
   ]

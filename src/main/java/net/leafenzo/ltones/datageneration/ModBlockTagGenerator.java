@@ -144,11 +144,11 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         //</editor-fold
         //<editor-fold desc ="BlockTags - Individual Blocks">
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
-            .add(ModBlocks.RAW_LITHIUM_BLOCK)
-            .add(ModBlocks.LITHIUM_BLOCK)
-            .add(ModBlocks.LITHIUM_ORE)
-            .add(ModBlocks.DEEPSLATE_LITHIUM_ORE)
-            .add(ModBlocks.ENDSTONE_LITHIUM_ORE)
+            .add(ModBlocks.RAW_LUESIUM_BLOCK)
+            .add(ModBlocks.LUESIUM_BLOCK)
+            .add(ModBlocks.LUESIUM_ORE)
+            .add(ModBlocks.DEEPSLATE_LUESIUM_ORE)
+            .add(ModBlocks.ENDSTONE_LUESIUM_ORE)
             .add(ModBlocks.ANTENNA)
             .add(ModBlocks.RADIO)
         ;
@@ -171,11 +171,11 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.ZTONE)
-                .add(ModBlocks.RAW_LITHIUM_BLOCK)
-                .add(ModBlocks.LITHIUM_BLOCK)
-                .add(ModBlocks.LITHIUM_ORE)
-                .add(ModBlocks.DEEPSLATE_LITHIUM_ORE)
-                .add(ModBlocks.ENDSTONE_LITHIUM_ORE)
+                .add(ModBlocks.RAW_LUESIUM_BLOCK)
+                .add(ModBlocks.LUESIUM_BLOCK)
+                .add(ModBlocks.LUESIUM_ORE)
+                .add(ModBlocks.DEEPSLATE_LUESIUM_ORE)
+                .add(ModBlocks.ENDSTONE_LUESIUM_ORE)
                 .add(ModBlocks.TONE)
                 .add(ModBlocks.TONE_BRICKS)
                 .add(ModBlocks.POLISHED_TONE)

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslate_luesium_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:deepslate_luesium_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:luesium_ingot_from_blasting_deepslate_luesium_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_deepslate_luesium_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:luesium_ingot_from_blasting_deepslate_luesium_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

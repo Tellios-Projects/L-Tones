@@ -25,12 +25,12 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_lithium_ingot": {
+    "has_luesium_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ltones:lithium_ingot"
+              "ltones:luesium_ingot"
             ]
           }
         ]
@@ -61,7 +61,7 @@
       "has_polymer",
       "has_conductium",
       "has_diode",
-      "has_lithium_ingot",
+      "has_luesium_ingot",
       "has_the_recipe"
     ]
   ],

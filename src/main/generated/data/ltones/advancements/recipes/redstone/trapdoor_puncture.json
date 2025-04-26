@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lithium_ingot": {
+    "has_luesium_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ltones:lithium_ingot"
+              "ltones:luesium_ingot"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_lithium_ingot",
+      "has_luesium_ingot",
       "has_the_recipe"
     ]
   ],

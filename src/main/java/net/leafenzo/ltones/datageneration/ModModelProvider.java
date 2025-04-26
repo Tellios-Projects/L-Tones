@@ -245,9 +245,9 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         //<editor-fold desc = "Models - decals">
-        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_LITHIUM);
-        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_LITHIUM_CHUNK);
-        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_RAW_LITHIUM);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_LUESIUM);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_LUESIUM_CHUNK);
+        this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_RAW_LUESIUM);
         this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_CONDUCTIUM);
         this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_ANTIBRASS);
         this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_KERBESIUM);
@@ -712,11 +712,11 @@ public class ModModelProvider extends FabricModelProvider {
         //<editor-fold desc = "Models - Other Blocks">
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.AURORA, TextureMap::all);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ZTONE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_LITHIUM_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LITHIUM_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LITHIUM_ORE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_LITHIUM_ORE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ENDSTONE_LITHIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_LUESIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LUESIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LUESIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_LUESIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ENDSTONE_LUESIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TONE_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.POLISHED_TONE);
@@ -769,9 +769,9 @@ public class ModModelProvider extends FabricModelProvider {
     }
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        //itemModelGenerator.register(ModItems.RAW_LITHIUM, Models.GENERATED);
-        //itemModelGenerator.register(ModItems.LITHIUM_CHUNK, Models.GENERATED);
-        //itemModelGenerator.register(ModItems.LITHIUM_INGOT, Models.GENERATED);
+        //itemModelGenerator.register(ModItems.RAW_LUESIUM, Models.GENERATED);
+        //itemModelGenerator.register(ModItems.LUESIUM_CHUNK, Models.GENERATED);
+        //itemModelGenerator.register(ModItems.LUESIUM_INGOT, Models.GENERATED);
         //itemModelGenerator.register(ModItems.ANTIBRASS, Models.GENERATED);
     }
 

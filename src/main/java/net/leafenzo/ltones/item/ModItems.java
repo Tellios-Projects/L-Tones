@@ -12,9 +12,9 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     //<editor-fold desc ="Items">
-    public static final Item RAW_LITHIUM = registerItem("raw_lithium", new AliasedBlockItem(ModBlocks.DECAL_RAW_LITHIUM, new FabricItemSettings()));
-    public static final Item LITHIUM_INGOT = registerItem("lithium_ingot", new AliasedBlockItem(ModBlocks.DECAL_LITHIUM, new FabricItemSettings()));
-    public static final Item LITHIUM_CHUNK = registerItem("lithium_chunk", new AliasedBlockItem(ModBlocks.DECAL_LITHIUM_CHUNK, new FabricItemSettings()));
+    public static final Item RAW_LUESIUM = registerItem("raw_luesium", new AliasedBlockItem(ModBlocks.DECAL_RAW_LUESIUM, new FabricItemSettings()));
+    public static final Item LUESIUM_INGOT = registerItem("luesium_ingot", new AliasedBlockItem(ModBlocks.DECAL_LUESIUM, new FabricItemSettings()));
+    public static final Item LUESIUM_CHUNK = registerItem("luesium_chunk", new AliasedBlockItem(ModBlocks.DECAL_LUESIUM_CHUNK, new FabricItemSettings()));
     public static final Item ANTIBRASS = registerItem("antibrass", new AliasedBlockItem(ModBlocks.DECAL_ANTIBRASS, new FabricItemSettings()));
     public static final Item CONDUCTIUM = registerItem("conductium", new AliasedBlockItem(ModBlocks.DECAL_CONDUCTIUM, new FabricItemSettings()));
     public static final Item KERBESIUM = registerItem("kerbesium", new AliasedBlockItem(ModBlocks.DECAL_KERBESIUM, new FabricItemSettings()));

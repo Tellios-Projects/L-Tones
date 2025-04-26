@@ -22,8 +22,8 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
 
-    public static final RegistryKey <ConfiguredFeature <?, ?>> ORE_LITHIUM = registerKey("ore_lithium");
-    public static final RegistryKey <ConfiguredFeature <?, ?>> ORE_LITHIUM_END = registerKey("ore_lithium_end");
+    public static final RegistryKey <ConfiguredFeature <?, ?>> ORE_LUESIUM = registerKey("ore_luesium");
+    public static final RegistryKey <ConfiguredFeature <?, ?>> ORE_LUESIUM_END = registerKey("ore_luesium_end");
     public static final RegistryKey <ConfiguredFeature <?, ?>> ORE_TONE = registerKey("ore_tone");
 
 
@@ -38,16 +38,16 @@ public class ModConfiguredFeatures {
         TagMatchRuleTest isBaseStoneNether = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
         BlockMatchRuleTest isEndstone = new BlockMatchRuleTest(Blocks.END_STONE);
 
-        List<OreFeatureConfig.Target> overworldLithiumTargets = List.of(
-                OreFeatureConfig.createTarget(isStone, ModBlocks.LITHIUM_ORE.getDefaultState()),
-                OreFeatureConfig.createTarget(isDeepslate, ModBlocks.DEEPSLATE_LITHIUM_ORE.getDefaultState())
+        List<OreFeatureConfig.Target> overworldLuesiumTargets = List.of(
+                OreFeatureConfig.createTarget(isStone, ModBlocks.LUESIUM_ORE.getDefaultState()),
+                OreFeatureConfig.createTarget(isDeepslate, ModBlocks.DEEPSLATE_LUESIUM_ORE.getDefaultState())
         );
-        register(context, ORE_LITHIUM, Feature.ORE, new OreFeatureConfig(overworldLithiumTargets, 5));
+        register(context, ORE_LUESIUM, Feature.ORE, new OreFeatureConfig(overworldLuesiumTargets, 5));
 
-        List<OreFeatureConfig.Target> endLithiumTargets = List.of(
-                OreFeatureConfig.createTarget(isEndstone, ModBlocks.ENDSTONE_LITHIUM_ORE.getDefaultState())
+        List<OreFeatureConfig.Target> endLuesiumTargets = List.of(
+                OreFeatureConfig.createTarget(isEndstone, ModBlocks.ENDSTONE_LUESIUM_ORE.getDefaultState())
         );
-        register(context, ORE_LITHIUM_END, Feature.ORE, new OreFeatureConfig(endLithiumTargets, 5));
+        register(context, ORE_LUESIUM_END, Feature.ORE, new OreFeatureConfig(endLuesiumTargets, 5));
 
         List<OreFeatureConfig.Target> toneTargets = List.of(
                 OreFeatureConfig.createTarget(isBaseStoneOverworld, ModBlocks.TONE.getDefaultState())

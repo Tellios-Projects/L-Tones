@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_luesium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ltones:raw_luesium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:luesium_ingot_from_smelting_raw_luesium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_luesium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:luesium_ingot_from_smelting_raw_luesium"
+    ]
+  },
+  "sends_telemetry_event": false
+}

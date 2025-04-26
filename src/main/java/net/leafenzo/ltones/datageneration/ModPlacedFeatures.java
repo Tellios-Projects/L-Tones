@@ -19,9 +19,9 @@ import net.minecraft.world.gen.placementmodifier.*;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final RegistryKey<PlacedFeature> ORE_LITHIUM_PLACED = registerKey("ore_lithium_placed");
-    public static final RegistryKey<PlacedFeature> ORE_LITHIUM_LOWER_PLACED = registerKey("ore_lithium_lower_placed");
-    public static final RegistryKey<PlacedFeature> ORE_LITHIUM_END_PLACED = registerKey("ore_lithium_end_placed");
+    public static final RegistryKey<PlacedFeature> ORE_LUESIUM_PLACED = registerKey("ore_luesium_placed");
+    public static final RegistryKey<PlacedFeature> ORE_LUESIUM_LOWER_PLACED = registerKey("ore_luesium_lower_placed");
+    public static final RegistryKey<PlacedFeature> ORE_LUESIUM_END_PLACED = registerKey("ore_luesium_end_placed");
     public static final RegistryKey<PlacedFeature> ORE_TONE_PLACED = registerKey("ore_tone_placed");
 
     private static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {
@@ -37,15 +37,15 @@ public class ModPlacedFeatures {
     public static void bootstrap(Registerable <PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-        registerKey(context, ORE_LITHIUM_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ORE_LITHIUM),
+        registerKey(context, ORE_LUESIUM_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ORE_LUESIUM),
                 modifiersWithCount(27, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-144), YOffset.fixed(80))) // interestingly, it seems that 256 is the limit of how many veins you can have in a chunk
         );
 
-        registerKey(context, ORE_LITHIUM_LOWER_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ORE_LITHIUM),
+        registerKey(context, ORE_LUESIUM_LOWER_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ORE_LUESIUM),
                 modifiersWithCount(36, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-96), YOffset.fixed(-32))) // interestingly, it seems that 256 is the limit of how many veins you can have in a chunk
         );
 
-        registerKey(context, ORE_LITHIUM_END_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ORE_LITHIUM_END),
+        registerKey(context, ORE_LUESIUM_END_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ORE_LUESIUM_END),
                 modifiersWithCount(123, HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(40)))
         );
 
@@ -58,11 +58,11 @@ public class ModPlacedFeatures {
         BiomeModifications.create(new Identifier(Super.MOD_ID, "overworld_additions"))
                 .add(ModificationPhase.ADDITIONS,
                 BiomeSelectors.foundInOverworld(),
-                context -> { context.getGenerationSettings().addFeature(GenerationStep.Feature.UNDERGROUND_ORES, ORE_LITHIUM_PLACED); }
+                context -> { context.getGenerationSettings().addFeature(GenerationStep.Feature.UNDERGROUND_ORES, ORE_LUESIUM_PLACED); }
                 )
                 .add(ModificationPhase.ADDITIONS,
                         BiomeSelectors.foundInOverworld(),
-                        context -> { context.getGenerationSettings().addFeature(GenerationStep.Feature.UNDERGROUND_ORES, ORE_LITHIUM_LOWER_PLACED); }
+                        context -> { context.getGenerationSettings().addFeature(GenerationStep.Feature.UNDERGROUND_ORES, ORE_LUESIUM_LOWER_PLACED); }
                 )
                 .add(ModificationPhase.ADDITIONS,
                         BiomeSelectors.foundInOverworld(),
@@ -72,7 +72,7 @@ public class ModPlacedFeatures {
         BiomeModifications.create(new Identifier(Super.MOD_ID, "end_additions"))
                 .add(ModificationPhase.ADDITIONS,
                 BiomeSelectors.foundInTheEnd(),
-                context -> { context.getGenerationSettings().addFeature(GenerationStep.Feature.UNDERGROUND_ORES, ORE_LITHIUM_END_PLACED); }
+                context -> { context.getGenerationSettings().addFeature(GenerationStep.Feature.UNDERGROUND_ORES, ORE_LUESIUM_END_PLACED); }
                 );
     }
 

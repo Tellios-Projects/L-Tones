@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesgleam",
+  "ingredients": [
+    {
+      "item": "ltones:luesium_chunk"
+    },
+    {
+      "item": "minecraft:glow_ink_sac"
+    }
+  ],
+  "result": {
+    "item": "ltones:gleam"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "luesium_ingot",
+  "key": {
+    "#": {
+      "item": "ltones:luesium_chunk"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "item": "ltones:luesium_ingot"
+  },
+  "show_notification": true
+}

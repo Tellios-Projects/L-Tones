@@ -79,11 +79,11 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_DECAL_KERBESIUM_HIT = registerSoundEvent("block.decal_kerbesium.hit");
     public static final SoundEvent BLOCK_DECAL_KERBESIUM_FALL = registerSoundEvent("block.decal_kerbesium.fall");
 
-    public static final SoundEvent BLOCK_DECAL_LITHIUM_BREAK = registerSoundEvent("block.decal_lithium.break");
-    public static final SoundEvent BLOCK_DECAL_LITHIUM_STEP = registerSoundEvent("block.decal_lithium.step");
-    public static final SoundEvent BLOCK_DECAL_LITHIUM_PLACE = registerSoundEvent("block.decal_lithium.place");
-    public static final SoundEvent BLOCK_DECAL_LITHIUM_HIT = registerSoundEvent("block.decal_lithium.hit");
-    public static final SoundEvent BLOCK_DECAL_LITHIUM_FALL = registerSoundEvent("block.decal_lithium.fall");
+    public static final SoundEvent BLOCK_DECAL_LUESIUM_BREAK = registerSoundEvent("block.decal_luesium.break");
+    public static final SoundEvent BLOCK_DECAL_LUESIUM_STEP = registerSoundEvent("block.decal_luesium.step");
+    public static final SoundEvent BLOCK_DECAL_LUESIUM_PLACE = registerSoundEvent("block.decal_luesium.place");
+    public static final SoundEvent BLOCK_DECAL_LUESIUM_HIT = registerSoundEvent("block.decal_luesium.hit");
+    public static final SoundEvent BLOCK_DECAL_LUESIUM_FALL = registerSoundEvent("block.decal_luesium.fall");
 
     public static final SoundEvent BLOCK_DECAL_MIDASIUM_BREAK = registerSoundEvent("block.decal_midasium.break");
     public static final SoundEvent BLOCK_DECAL_MIDASIUM_STEP = registerSoundEvent("block.decal_midasium.step");
@@ -485,28 +485,28 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_SYNC_HIT = registerSoundEvent("block.sync.hit");
     public static final SoundEvent BLOCK_SYNC_FALL = registerSoundEvent("block.sync.fall");
 
-    public static final SoundEvent BLOCK_LITHIUM_DOOR_OPEN = registerSoundEvent("block.lithium_door.open");
-    public static final SoundEvent BLOCK_LITHIUM_DOOR_CLOSE = registerSoundEvent("block.lithium_door.close");
-    public static final SoundEvent BLOCK_LITHIUM_TRAPDOOR_OPEN = registerSoundEvent("block.lithium_trapdoor.open");
-    public static final SoundEvent BLOCK_LITHIUM_TRAPDOOR_CLOSE = registerSoundEvent("block.lithium_trapdoor.close");
+    public static final SoundEvent BLOCK_LUESIUM_DOOR_OPEN = registerSoundEvent("block.luesium_door.open");
+    public static final SoundEvent BLOCK_LUESIUM_DOOR_CLOSE = registerSoundEvent("block.luesium_door.close");
+    public static final SoundEvent BLOCK_LUESIUM_TRAPDOOR_OPEN = registerSoundEvent("block.luesium_trapdoor.open");
+    public static final SoundEvent BLOCK_LUESIUM_TRAPDOOR_CLOSE = registerSoundEvent("block.luesium_trapdoor.close");
 
-    public static final SoundEvent BLOCK_LITHIUM_BREAK = registerSoundEvent("block.lithium.break");
-    public static final SoundEvent BLOCK_LITHIUM_STEP = registerSoundEvent("block.lithium.step");
-    public static final SoundEvent BLOCK_LITHIUM_PLACE = registerSoundEvent("block.lithium.place");
-    public static final SoundEvent BLOCK_LITHIUM_HIT = registerSoundEvent("block.lithium.hit");
-    public static final SoundEvent BLOCK_LITHIUM_FALL = registerSoundEvent("block.lithium.fall");
+    public static final SoundEvent BLOCK_LUESIUM_BREAK = registerSoundEvent("block.luesium.break");
+    public static final SoundEvent BLOCK_LUESIUM_STEP = registerSoundEvent("block.luesium.step");
+    public static final SoundEvent BLOCK_LUESIUM_PLACE = registerSoundEvent("block.luesium.place");
+    public static final SoundEvent BLOCK_LUESIUM_HIT = registerSoundEvent("block.luesium.hit");
+    public static final SoundEvent BLOCK_LUESIUM_FALL = registerSoundEvent("block.luesium.fall");
 
-    public static final SoundEvent BLOCK_LITHIUM_ORE_BREAK = registerSoundEvent("block.lithium_ore.break");
-    public static final SoundEvent BLOCK_LITHIUM_ORE_STEP = registerSoundEvent("block.lithium_ore.step");
-    public static final SoundEvent BLOCK_LITHIUM_ORE_PLACE = registerSoundEvent("block.lithium_ore.place");
-    public static final SoundEvent BLOCK_LITHIUM_ORE_HIT = registerSoundEvent("block.lithium_ore.hit");
-    public static final SoundEvent BLOCK_LITHIUM_ORE_FALL = registerSoundEvent("block.lithium_ore.fall");
+    public static final SoundEvent BLOCK_LUESIUM_ORE_BREAK = registerSoundEvent("block.luesium_ore.break");
+    public static final SoundEvent BLOCK_LUESIUM_ORE_STEP = registerSoundEvent("block.luesium_ore.step");
+    public static final SoundEvent BLOCK_LUESIUM_ORE_PLACE = registerSoundEvent("block.luesium_ore.place");
+    public static final SoundEvent BLOCK_LUESIUM_ORE_HIT = registerSoundEvent("block.luesium_ore.hit");
+    public static final SoundEvent BLOCK_LUESIUM_ORE_FALL = registerSoundEvent("block.luesium_ore.fall");
 
-    public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_BREAK = registerSoundEvent("block.deepslate_lithium_ore.break");
-    public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_STEP = registerSoundEvent("block.deepslate_lithium_ore.step");
-    public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_PLACE = registerSoundEvent("block.deepslate_lithium_ore.place");
-    public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_HIT = registerSoundEvent("block.deepslate_lithium_ore.hit");
-    public static final SoundEvent BLOCK_DEEPSLATE_LITHIUM_ORE_FALL = registerSoundEvent("block.deepslate_lithium_ore.fall");
+    public static final SoundEvent BLOCK_DEEPSLATE_LUESIUM_ORE_BREAK = registerSoundEvent("block.deepslate_luesium_ore.break");
+    public static final SoundEvent BLOCK_DEEPSLATE_LUESIUM_ORE_STEP = registerSoundEvent("block.deepslate_luesium_ore.step");
+    public static final SoundEvent BLOCK_DEEPSLATE_LUESIUM_ORE_PLACE = registerSoundEvent("block.deepslate_luesium_ore.place");
+    public static final SoundEvent BLOCK_DEEPSLATE_LUESIUM_ORE_HIT = registerSoundEvent("block.deepslate_luesium_ore.hit");
+    public static final SoundEvent BLOCK_DEEPSLATE_LUESIUM_ORE_FALL = registerSoundEvent("block.deepslate_luesium_ore.fall");
 
     public static final SoundEvent BLOCK_ROST_BREAK = registerSoundEvent("block.rost.break");
     public static final SoundEvent BLOCK_ROST_STEP = registerSoundEvent("block.rost.step");
