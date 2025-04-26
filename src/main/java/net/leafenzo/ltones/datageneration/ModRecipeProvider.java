@@ -291,16 +291,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.OIL, Items.SCULK_VEIN, Items.COAL, 8);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.POLYMER, Items.BONE_MEAL, ModItems.OIL, 2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.ARGON, Items.GLASS_BOTTLE, ModTags.Items.IGNEOUS_ROCKS,1);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SLAG, ModItems.LITHIUM_INGOT, ModItems.OIL, 3);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.ANTIBRASS, ModItems.LITHIUM_INGOT, Items.COPPER_INGOT, 3);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.DIODE, ModItems.LITHIUM_CHUNK, Items.REDSTONE, 2);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.GLEAM, ModItems.LITHIUM_CHUNK, Items.GLOWSTONE_DUST, 2);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.GLEAM, ModItems.LITHIUM_CHUNK, Items.GLOW_INK_SAC, 1);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SLAG, ModItems.LUESIUM_INGOT, ModItems.OIL, 3);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.ANTIBRASS, ModItems.LUESIUM_INGOT, Items.COPPER_INGOT, 3);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.DIODE, ModItems.LUESIUM_CHUNK, Items.REDSTONE, 2);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.GLEAM, ModItems.LUESIUM_CHUNK, Items.GLOWSTONE_DUST, 2);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.GLEAM, ModItems.LUESIUM_CHUNK, Items.GLOW_INK_SAC, 1);
 
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SCARLET_MEMBRANE, Items.ROTTEN_FLESH, ModItems.OIL,2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SCARLET_MEMBRANE, Items.NETHER_WART, ModItems.OIL,2);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.AZURE_RIVET, ModItems.ANTIBRASS, Items.LAPIS_LAZULI, 4);
-        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.MIDASIUM, ModItems.LITHIUM_INGOT, Items.GOLD_INGOT,4);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.MIDASIUM, ModItems.LUESIUM_INGOT, Items.GOLD_INGOT,4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.CONDUCTIUM,  ModItems.ANTIBRASS, Items.GOLD_NUGGET, 4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.MOULDING, Items.CLAY_BALL,  Items.BONE_MEAL, ModItems.OIL, 4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.G2V, ModItems.GLEAM, ModItems.OIL,  2);
@@ -388,12 +388,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROST_BLOCKSET_RUST);
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BITT_BLOCKSET);
 
-        // Lithium
-        offerSmelting(exporter, ImmutableList.of(ModItems.RAW_LITHIUM, ModBlocks.LITHIUM_ORE, ModBlocks.DEEPSLATE_LITHIUM_ORE, ModBlocks.ENDSTONE_LITHIUM_ORE), RecipeCategory.MISC, ModItems.LITHIUM_INGOT, 0.7f, 200, "lithium_ingot");
-        offerBlasting(exporter, ImmutableList.of(ModItems.RAW_LITHIUM, ModBlocks.LITHIUM_ORE, ModBlocks.DEEPSLATE_LITHIUM_ORE, ModBlocks.ENDSTONE_LITHIUM_ORE), RecipeCategory.MISC, ModItems.LITHIUM_INGOT, 0.7f, 100, "lithium_ingot");
-        offerReversible2x2CompactingRecipesWithCompactingRecipeGroup(exporter, RecipeCategory.MISC, ModItems.LITHIUM_CHUNK, RecipeCategory.MISC, ModItems.LITHIUM_INGOT, "lithium_ingot_from_lithium_chunks", "lithium_ingot");
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.RAW_LITHIUM, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_LITHIUM_BLOCK);
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.LITHIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LITHIUM_BLOCK);
+        // Luesium
+        offerSmelting(exporter, ImmutableList.of(ModItems.RAW_LUESIUM, ModBlocks.LUESIUM_ORE, ModBlocks.DEEPSLATE_LUESIUM_ORE, ModBlocks.ENDSTONE_LUESIUM_ORE), RecipeCategory.MISC, ModItems.LUESIUM_INGOT, 0.7f, 200, "luesium_ingot");
+        offerBlasting(exporter, ImmutableList.of(ModItems.RAW_LUESIUM, ModBlocks.LUESIUM_ORE, ModBlocks.DEEPSLATE_LUESIUM_ORE, ModBlocks.ENDSTONE_LUESIUM_ORE), RecipeCategory.MISC, ModItems.LUESIUM_INGOT, 0.7f, 100, "luesium_ingot");
+        offerReversible2x2CompactingRecipesWithCompactingRecipeGroup(exporter, RecipeCategory.MISC, ModItems.LUESIUM_CHUNK, RecipeCategory.MISC, ModItems.LUESIUM_INGOT, "luesium_ingot_from_luesium_chunks", "luesium_ingot");
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.RAW_LUESIUM, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_LUESIUM_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.LUESIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LUESIUM_BLOCK);
 
         // Tone
         offerSurroundedRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ABSTRACT_TONE, ModItems.OIL, ModBlocks.TONE, 8);
@@ -405,12 +405,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ImmutableList.of(ModBlocks.TONE, ModBlocks.POLISHED_TONE, ModBlocks.TONE_BRICKS), ImmutableList.of(ModBlocks.TONE, ModBlocks.POLISHED_TONE, ModBlocks.TONE_BRICKS));
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ZTONE, 5)
                 .input(Character.valueOf('X'), ModBlocks.TONE)
-                .input(Character.valueOf('#'), ModItems.LITHIUM_CHUNK)
+                .input(Character.valueOf('#'), ModItems.LUESIUM_CHUNK)
                 .pattern("X#X")
                 .pattern("#X#")
                 .pattern("X#X")
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.TONE), FabricRecipeProvider.conditionsFromItem(ModBlocks.TONE))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.LITHIUM_CHUNK), FabricRecipeProvider.conditionsFromItem(ModItems.LITHIUM_CHUNK))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.LUESIUM_CHUNK), FabricRecipeProvider.conditionsFromItem(ModItems.LUESIUM_CHUNK))
                 .offerTo(exporter);
 
         // Aurora Block
@@ -473,14 +473,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(Character.valueOf('P'), ModItems.POLYMER)
                 .input(Character.valueOf('C'), ModItems.CONDUCTIUM)
                 .input(Character.valueOf('D'), ModItems.DIODE)
-                .input(Character.valueOf('L'), ModItems.LITHIUM_INGOT)
+                .input(Character.valueOf('L'), ModItems.LUESIUM_INGOT)
                 .pattern("PPP")
                 .pattern("CCC")
                 .pattern("DLD")
                 .criterion(FabricRecipeProvider.hasItem(ModItems.POLYMER), FabricRecipeProvider.conditionsFromItem(ModItems.POLYMER))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.CONDUCTIUM), FabricRecipeProvider.conditionsFromItem(ModItems.CONDUCTIUM))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.DIODE), FabricRecipeProvider.conditionsFromItem(ModItems.DIODE))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.LITHIUM_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.LITHIUM_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.LUESIUM_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.LUESIUM_INGOT))
                 .offerTo(exporter);
 
         // Doors
@@ -514,8 +514,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_PETRI, ModItems.PLAQUE);
         offerDoorRecipe(exporter, ModBlocks.DOOR_BUNKER, ModBlocks.ABSTRACT_TONE);
         offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_BUNKER, ModBlocks.ABSTRACT_TONE);
-        offerDoorRecipe(exporter, ModBlocks.DOOR_PUNCTURE, ModItems.LITHIUM_INGOT);
-        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_PUNCTURE, ModItems.LITHIUM_INGOT);
+        offerDoorRecipe(exporter, ModBlocks.DOOR_PUNCTURE, ModItems.LUESIUM_INGOT);
+        offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_PUNCTURE, ModItems.LUESIUM_INGOT);
         offerDoorRecipe(exporter, ModBlocks.IRON_BAR_DOOR, Items.IRON_BARS);
         offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.IRON_BAR_DOOR, Blocks.IRON_DOOR);
 

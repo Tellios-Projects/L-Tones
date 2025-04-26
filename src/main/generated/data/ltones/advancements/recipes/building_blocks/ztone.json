@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lithium_chunk": {
+    "has_luesium_chunk": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ltones:lithium_chunk"
+              "ltones:luesium_chunk"
             ]
           }
         ]
@@ -35,7 +35,7 @@
   "requirements": [
     [
       "has_tone",
-      "has_lithium_chunk",
+      "has_luesium_chunk",
       "has_the_recipe"
     ]
   ],

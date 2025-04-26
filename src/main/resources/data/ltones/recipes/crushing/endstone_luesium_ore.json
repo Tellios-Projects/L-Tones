@@ -1,0 +1,31 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    }
+  ],
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "ltones:endstone_luesium_ore"
+    }
+  ],
+  "results": [
+    {
+      "item": "ltones:luesium_chunk",
+      "count": 6
+    },
+    {
+      "item": "ltones:luesium_chunk",
+      "chance": 0.75
+    },
+    {
+      "item": "create:experience_nugget",
+      "chance": 0.75
+    }
+  ],
+  "processingTime": 150
+}

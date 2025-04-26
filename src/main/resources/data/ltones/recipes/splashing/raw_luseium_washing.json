@@ -1,0 +1,26 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    }
+  ],
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "ltones:raw_luesium"
+    }
+  ],
+  "results": [
+    {
+      "count": 4,
+      "item": "ltones:luesium_chunk"
+    },
+    {
+      "chance": 0.75,
+      "item": "ltones:luesium_chunk"
+    }
+  ]
+}

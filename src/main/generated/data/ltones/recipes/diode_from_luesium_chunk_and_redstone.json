@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesdiode",
+  "ingredients": [
+    {
+      "item": "ltones:luesium_chunk"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ltones:diode"
+  }
+}

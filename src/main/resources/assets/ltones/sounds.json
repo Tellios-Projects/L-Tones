@@ -876,49 +876,49 @@
 		]
 	},
 
-	"block.decal_lithium.break": {
+	"block.decal_luesium.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
-			"ltones:block/decal_lithium/break1",
-			"ltones:block/decal_lithium/break2",
-			"ltones:block/decal_lithium/break3",
-			"ltones:block/decal_lithium/break4"
+			"ltones:block/decal_luesium/break1",
+			"ltones:block/decal_luesium/break2",
+			"ltones:block/decal_luesium/break3",
+			"ltones:block/decal_luesium/break4"
 		]
 	},
-	"block.decal_lithium.step": {
+	"block.decal_luesium.step": {
 		"subtitle": "subtitles.block.generic.footsteps",
 		"sounds": [
-			"ltones:block/decal_lithium/step1",
-			"ltones:block/decal_lithium/step2",
-			"ltones:block/decal_lithium/step3",
-			"ltones:block/decal_lithium/step4"
+			"ltones:block/decal_luesium/step1",
+			"ltones:block/decal_luesium/step2",
+			"ltones:block/decal_luesium/step3",
+			"ltones:block/decal_luesium/step4"
 		]
 	},
-	"block.decal_lithium.place": {
+	"block.decal_luesium.place": {
 		"subtitle": "subtitles.block.generic.place",
 		"sounds": [
-			"ltones:block/decal_lithium/break1",
-			"ltones:block/decal_lithium/break2",
-			"ltones:block/decal_lithium/break3",
-			"ltones:block/decal_lithium/break4"
+			"ltones:block/decal_luesium/break1",
+			"ltones:block/decal_luesium/break2",
+			"ltones:block/decal_luesium/break3",
+			"ltones:block/decal_luesium/break4"
 		]
 	},
-	"block.decal_lithium.hit": {
+	"block.decal_luesium.hit": {
 		"subtitle": "subtitles.block.generic.hit",
 		"sounds": [
-			"ltones:block/decal_lithium/step1",
-			"ltones:block/decal_lithium/step2",
-			"ltones:block/decal_lithium/step3",
-			"ltones:block/decal_lithium/step4"
+			"ltones:block/decal_luesium/step1",
+			"ltones:block/decal_luesium/step2",
+			"ltones:block/decal_luesium/step3",
+			"ltones:block/decal_luesium/step4"
 		]
 	},
-	"block.decal_lithium.fall": {
+	"block.decal_luesium.fall": {
 		
 		"sounds": [
-			"ltones:block/decal_lithium/step1",
-			"ltones:block/decal_lithium/step2",
-			"ltones:block/decal_lithium/step3",
-			"ltones:block/decal_lithium/step4"
+			"ltones:block/decal_luesium/step1",
+			"ltones:block/decal_luesium/step2",
+			"ltones:block/decal_luesium/step3",
+			"ltones:block/decal_luesium/step4"
 		]
 	},
 
@@ -2195,111 +2195,110 @@
 		]
 	},
 
-	"block.lithium_door.open": {
+	"block.luesium_door.open": {
 		"subtitle": "subtitles.block.door.toggle",
 		"sounds": [
-			"ltones:block/lithium/door/open1",
-			"ltones:block/lithium/door/open2",
-			"ltones:block/lithium/door/open3"
+			"ltones:block/luesium/door/open1",
+			"ltones:block/luesium/door/open2",
+			"ltones:block/luesium/door/open3"
 		]
 	},
-	"block.lithium_door.close": {
+	"block.luesium_door.close": {
 		"subtitle": "subtitles.block.door.toggle",
 		"sounds": [
-			"ltones:block/lithium/door/close1",
-			"ltones:block/lithium/door/close2",
-			"ltones:block/lithium/door/close3",
-			"ltones:block/lithium/door/close4"
+			"ltones:block/luesium/door/close1",
+			"ltones:block/luesium/door/close2",
+			"ltones:block/luesium/door/close3"
 		]
 	},
-	"block.lithium_trapdoor.open": {
+	"block.luesium_trapdoor.open": {
 		"subtitle": "subtitles.block.trapdoor.toggle",
 		"sounds": [
-			"ltones:block/lithium/trapdoor/open1",
-			"ltones:block/lithium/trapdoor/open2",
-			"ltones:block/lithium/trapdoor/open3"
+			"ltones:block/luesium/trapdoor/open1",
+			"ltones:block/luesium/trapdoor/open2",
+			"ltones:block/luesium/trapdoor/open3"
 		]
 	},
-	"block.lithium_trapdoor.close": {
+	"block.luesium_trapdoor.close": {
 		"subtitle": "subtitles.block.trapdoor.toggle",
 		"sounds": [
-			"ltones:block/lithium/trapdoor/close1",
-			"ltones:block/lithium/trapdoor/close2",
-			"ltones:block/lithium/trapdoor/close3"
+			"ltones:block/luesium/trapdoor/close1",
+			"ltones:block/luesium/trapdoor/close2",
+			"ltones:block/luesium/trapdoor/close3"
 		]
 	},
-	"block.lithium.break": {
+	"block.luesium.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
-			"ltones:block/lithium/break1",
-			"ltones:block/lithium/break2",
-			"ltones:block/lithium/break3",
-			"ltones:block/lithium/break4"
+			"ltones:block/luesium/break1",
+			"ltones:block/luesium/break2",
+			"ltones:block/luesium/break3",
+			"ltones:block/luesium/break4"
 		]
 	},
-	"block.lithium.step": {
+	"block.luesium.step": {
 		"subtitle": "subtitles.block.generic.footsteps",
 		"sounds": [
-			"ltones:block/lithium/step1",
-			"ltones:block/lithium/step2",
-			"ltones:block/lithium/step3",
-			"ltones:block/lithium/step4",
-			"ltones:block/lithium/step5",
-			"ltones:block/lithium/step6"
+			"ltones:block/luesium/step1",
+			"ltones:block/luesium/step2",
+			"ltones:block/luesium/step3",
+			"ltones:block/luesium/step4",
+			"ltones:block/luesium/step5",
+			"ltones:block/luesium/step6"
 		]
 	},
-	"block.lithium.place": {
+	"block.luesium.place": {
 		"subtitle": "subtitles.block.generic.place",
 		"sounds": [
-			"ltones:block/lithium/break1",
-			"ltones:block/lithium/break2",
-			"ltones:block/lithium/break3",
-			"ltones:block/lithium/break4"
+			"ltones:block/luesium/break1",
+			"ltones:block/luesium/break2",
+			"ltones:block/luesium/break3",
+			"ltones:block/luesium/break4"
 		]
 	},
-	"block.lithium.hit": {
+	"block.luesium.hit": {
 		"subtitle": "subtitles.block.generic.hit",
 		"sounds": [
-			"ltones:block/lithium/step1",
-			"ltones:block/lithium/step2",
-			"ltones:block/lithium/step3",
-			"ltones:block/lithium/step4",
-			"ltones:block/lithium/step5",
-			"ltones:block/lithium/step6"
+			"ltones:block/luesium/step1",
+			"ltones:block/luesium/step2",
+			"ltones:block/luesium/step3",
+			"ltones:block/luesium/step4",
+			"ltones:block/luesium/step5",
+			"ltones:block/luesium/step6"
 		]
 	},
-	"block.lithium.fall": {
+	"block.luesium.fall": {
 		"sounds": [
-			"ltones:block/lithium/step1",
-			"ltones:block/lithium/step2",
-			"ltones:block/lithium/step3",
-			"ltones:block/lithium/step4",
-			"ltones:block/lithium/step5",
-			"ltones:block/lithium/step6"
+			"ltones:block/luesium/step1",
+			"ltones:block/luesium/step2",
+			"ltones:block/luesium/step3",
+			"ltones:block/luesium/step4",
+			"ltones:block/luesium/step5",
+			"ltones:block/luesium/step6"
 		]
 	},
 
-	"block.lithium_ore.break": {
+	"block.luesium_ore.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
-			"ltones:block/lithium_ore/break1",
-			"ltones:block/lithium_ore/break2",
-			"ltones:block/lithium_ore/break3",
-			"ltones:block/lithium_ore/break4"
+			"ltones:block/luesium_ore/break1",
+			"ltones:block/luesium_ore/break2",
+			"ltones:block/luesium_ore/break3",
+			"ltones:block/luesium_ore/break4"
 		]
 	},
-	"block.lithium_ore.step": {
+	"block.luesium_ore.step": {
 		"subtitle": "subtitles.block.generic.footsteps",
 		"sounds": [
-			"ltones:block/lithium_ore/step1",
-			"ltones:block/lithium_ore/step2",
-			"ltones:block/lithium_ore/step3",
-			"ltones:block/lithium_ore/step4",
-			"ltones:block/lithium_ore/step5",
-			"ltones:block/lithium_ore/step6"
+			"ltones:block/luesium_ore/step1",
+			"ltones:block/luesium_ore/step2",
+			"ltones:block/luesium_ore/step3",
+			"ltones:block/luesium_ore/step4",
+			"ltones:block/luesium_ore/step5",
+			"ltones:block/luesium_ore/step6"
 		]
 	},
-	"block.lithium_ore.place": {
+	"block.luesium_ore.place": {
 		"subtitle": "subtitles.block.generic.place",
 		"sounds": [
 			"minecraft:dig/stone1",
@@ -2308,50 +2307,50 @@
 			"minecraft:dig/stone4"
 		]
 	},
-	"block.lithium_ore.hit": {
+	"block.luesium_ore.hit": {
 		"subtitle": "subtitles.block.generic.hit",
 		"sounds": [
-			"ltones:block/lithium_ore/step1",
-			"ltones:block/lithium_ore/step2",
-			"ltones:block/lithium_ore/step3",
-			"ltones:block/lithium_ore/step4",
-			"ltones:block/lithium_ore/step5",
-			"ltones:block/lithium_ore/step6"
+			"ltones:block/luesium_ore/step1",
+			"ltones:block/luesium_ore/step2",
+			"ltones:block/luesium_ore/step3",
+			"ltones:block/luesium_ore/step4",
+			"ltones:block/luesium_ore/step5",
+			"ltones:block/luesium_ore/step6"
 		]
 	},
-	"block.lithium_ore.fall": {
+	"block.luesium_ore.fall": {
 		
 		"sounds": [
-			"ltones:block/lithium_ore/step1",
-			"ltones:block/lithium_ore/step2",
-			"ltones:block/lithium_ore/step3",
-			"ltones:block/lithium_ore/step4",
-			"ltones:block/lithium_ore/step5",
-			"ltones:block/lithium_ore/step6"
+			"ltones:block/luesium_ore/step1",
+			"ltones:block/luesium_ore/step2",
+			"ltones:block/luesium_ore/step3",
+			"ltones:block/luesium_ore/step4",
+			"ltones:block/luesium_ore/step5",
+			"ltones:block/luesium_ore/step6"
 		]
 	},
 
-	"block.deepslate_lithium_ore.break": {
+	"block.deepslate_luesium_ore.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
-			"ltones:block/deepslate_lithium_ore/break1",
-			"ltones:block/deepslate_lithium_ore/break2",
-			"ltones:block/deepslate_lithium_ore/break3",
-			"ltones:block/deepslate_lithium_ore/break4"
+			"ltones:block/deepslate_luesium_ore/break1",
+			"ltones:block/deepslate_luesium_ore/break2",
+			"ltones:block/deepslate_luesium_ore/break3",
+			"ltones:block/deepslate_luesium_ore/break4"
 		]
 	},
-	"block.deepslate_lithium_ore.step": {
+	"block.deepslate_luesium_ore.step": {
 		"subtitle": "subtitles.block.generic.footsteps",
 		"sounds": [
-			"ltones:block/deepslate_lithium_ore/step1",
-			"ltones:block/deepslate_lithium_ore/step2",
-			"ltones:block/deepslate_lithium_ore/step3",
-			"ltones:block/deepslate_lithium_ore/step4",
-			"ltones:block/deepslate_lithium_ore/step5",
-			"ltones:block/deepslate_lithium_ore/step6"
+			"ltones:block/deepslate_luesium_ore/step1",
+			"ltones:block/deepslate_luesium_ore/step2",
+			"ltones:block/deepslate_luesium_ore/step3",
+			"ltones:block/deepslate_luesium_ore/step4",
+			"ltones:block/deepslate_luesium_ore/step5",
+			"ltones:block/deepslate_luesium_ore/step6"
 		]
 	},
-	"block.deepslate_lithium_ore.place": {
+	"block.deepslate_luesium_ore.place": {
 		"subtitle": "subtitles.block.generic.place",
 		"sounds": [
 			"minecraft:block/deepslate/place1",
@@ -2362,26 +2361,26 @@
 			"minecraft:block/deepslate/place6"
 		]
 	},
-	"block.deepslate_lithium_ore.hit": {
+	"block.deepslate_luesium_ore.hit": {
 		"subtitle": "subtitles.block.generic.hit",
 		"sounds": [
-			"ltones:block/deepslate_lithium_ore/step1",
-			"ltones:block/deepslate_lithium_ore/step2",
-			"ltones:block/deepslate_lithium_ore/step3",
-			"ltones:block/deepslate_lithium_ore/step4",
-			"ltones:block/deepslate_lithium_ore/step5",
-			"ltones:block/deepslate_lithium_ore/step6"
+			"ltones:block/deepslate_luesium_ore/step1",
+			"ltones:block/deepslate_luesium_ore/step2",
+			"ltones:block/deepslate_luesium_ore/step3",
+			"ltones:block/deepslate_luesium_ore/step4",
+			"ltones:block/deepslate_luesium_ore/step5",
+			"ltones:block/deepslate_luesium_ore/step6"
 		]
 	},
-	"block.deepslate_lithium_ore.fall": {
+	"block.deepslate_luesium_ore.fall": {
 		
 		"sounds": [
-			"ltones:block/deepslate_lithium_ore/step1",
-			"ltones:block/deepslate_lithium_ore/step2",
-			"ltones:block/deepslate_lithium_ore/step3",
-			"ltones:block/deepslate_lithium_ore/step4",
-			"ltones:block/deepslate_lithium_ore/step5",
-			"ltones:block/deepslate_lithium_ore/step6"
+			"ltones:block/deepslate_luesium_ore/step1",
+			"ltones:block/deepslate_luesium_ore/step2",
+			"ltones:block/deepslate_luesium_ore/step3",
+			"ltones:block/deepslate_luesium_ore/step4",
+			"ltones:block/deepslate_luesium_ore/step5",
+			"ltones:block/deepslate_luesium_ore/step6"
 		]
 	},
 

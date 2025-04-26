@@ -827,11 +827,11 @@ public class ModBlocks {
             .sounds(BlockSoundGroup.SNOW)
             .luminance(createLightLevelFromProperty(11, Properties.LIT))
     ));
-    public static final Block RAW_LITHIUM_BLOCK = registerBlock("raw_lithium_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK).mapColor(MapColor.PALE_PURPLE).sounds(ModBlockSoundGroup.LITHIUM_ORE)));
-    public static final Block LITHIUM_BLOCK = registerBlock("lithium_block", new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).mapColor(MapColor.PALE_PURPLE).sounds(ModBlockSoundGroup.LITHIUM)));
-    public static final Block LITHIUM_ORE = registerBlock("lithium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE).sounds(ModBlockSoundGroup.LITHIUM_ORE)));
-    public static final Block DEEPSLATE_LITHIUM_ORE = registerBlock("deepslate_lithium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_IRON_ORE).sounds(ModBlockSoundGroup.DEEPSLATE_LITHIUM_ORE)));
-    public static final Block ENDSTONE_LITHIUM_ORE = registerBlock("endstone_lithium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).strength(3.5f, 9.0f).sounds(ModBlockSoundGroup.LITHIUM_ORE), UniformIntProvider.create(0, 1)));
+    public static final Block RAW_LUESIUM_BLOCK = registerBlock("raw_luesium_block", new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK).mapColor(MapColor.PALE_PURPLE).sounds(ModBlockSoundGroup.LUESIUM_ORE)));
+    public static final Block LUESIUM_BLOCK = registerBlock("luesium_block", new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).mapColor(MapColor.PALE_PURPLE).sounds(ModBlockSoundGroup.LUESIUM)));
+    public static final Block LUESIUM_ORE = registerBlock("luesium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE).sounds(ModBlockSoundGroup.LUESIUM_ORE)));
+    public static final Block DEEPSLATE_LUESIUM_ORE = registerBlock("deepslate_luesium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_IRON_ORE).sounds(ModBlockSoundGroup.DEEPSLATE_LUESIUM_ORE)));
+    public static final Block ENDSTONE_LUESIUM_ORE = registerBlock("endstone_luesium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.END_STONE).strength(3.5f, 9.0f).sounds(ModBlockSoundGroup.LUESIUM_ORE), UniformIntProvider.create(0, 1)));
     public static final Block TONE = registerBlock("tone", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY).sounds(ModBlockSoundGroup.TONE)));
     public static final Block TONE_BRICKS = registerBlock("tone_bricks", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY).sounds(ModBlockSoundGroup.TONE_BRICKS)));
     public static final Block POLISHED_TONE = registerBlock("polished_tone", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY).sounds(ModBlockSoundGroup.TONE)));
@@ -867,7 +867,7 @@ public class ModBlocks {
         return b;
     }
 
-    public static final Block DOOR_PUNCTURE = registerDoor("door_puncture", new DoorBlock(FabricBlockSettings.copyOf(LITHIUM_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.LITHIUM));
+    public static final Block DOOR_PUNCTURE = registerDoor("door_puncture", new DoorBlock(FabricBlockSettings.copyOf(LUESIUM_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.LUESIUM));
     public static final Block DOOR_STEAK = registerDoor("door_steak", new DoorBlock(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DEEPSLATE_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.FORTT));
     public static final Block DOOR_NEON = registerDoor("door_neon", new DoorBlock(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.PURPLE).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.CRAY));
     public static final Block DOOR_TOY = registerDoor("door_toy", new DoorBlock(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BRIGHT_RED).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.CAST));
@@ -895,7 +895,7 @@ public class ModBlocks {
     }
 
 
-    public static final Block TRAPDOOR_PUNCTURE = registerTrapdoor("trapdoor_puncture", new TrapdoorBlock(FabricBlockSettings.copyOf(LITHIUM_BLOCK).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.LITHIUM));
+    public static final Block TRAPDOOR_PUNCTURE = registerTrapdoor("trapdoor_puncture", new TrapdoorBlock(FabricBlockSettings.copyOf(LUESIUM_BLOCK).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.LUESIUM));
     public static final Block TRAPDOOR_STEAK = registerTrapdoor("trapdoor_steak", new TrapdoorBlock(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DEEPSLATE_GRAY).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.FORTT));
     public static final Block TRAPDOOR_NEON = registerTrapdoor("trapdoor_neon", new TrapdoorBlock(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.PURPLE).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.CRAY));
     public static final Block TRAPDOOR_TOY = registerTrapdoor("trapdoor_toy", new TrapdoorBlock(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BRIGHT_RED).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.CAST));
@@ -925,9 +925,9 @@ public class ModBlocks {
             .nonOpaque()
             .noCollision()
             .pistonBehavior(PistonBehavior.DESTROY);
-    public static final Block DECAL_LITHIUM = registerDecalBlock("decal_lithium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_LITHIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_LITHIUM); }
-    public static final Block DECAL_LITHIUM_CHUNK = registerDecalBlock("decal_lithium_chunk", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_LITHIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_LITHIUM_CHUNK); }
-    public static final Block DECAL_RAW_LITHIUM = registerDecalBlock("decal_raw_lithium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.LITHIUM_ORE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_RAW_LITHIUM); }
+    public static final Block DECAL_LUESIUM = registerDecalBlock("decal_luesium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_LUESIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_LUESIUM); }
+    public static final Block DECAL_LUESIUM_CHUNK = registerDecalBlock("decal_luesium_chunk", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_LUESIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_LUESIUM_CHUNK); }
+    public static final Block DECAL_RAW_LUESIUM = registerDecalBlock("decal_raw_luesium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.LUESIUM_ORE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_RAW_LUESIUM); }
     public static final Block DECAL_ANTIBRASS = registerDecalBlock("decal_antibrass", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_ANTIBRASS))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_ANTIBRASS); }
     public static final Block DECAL_CONDUCTIUM = registerDecalBlock("decal_conductium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_CONDUCTIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_CONDUCTIUM); }
     public static final Block DECAL_KERBESIUM = registerDecalBlock("decal_kerbesium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_KERBESIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_KERBESIUM); }
