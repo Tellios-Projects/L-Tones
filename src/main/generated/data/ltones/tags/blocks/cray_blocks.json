@@ -1,21 +1,21 @@
 {
   "replace": false,
   "values": [
-    "ltones:yellow_cray",
-    "ltones:violet_cray",
+    "ltones:cray",
+    "ltones:black_cray",
     "ltones:red_cray",
-    "ltones:purple_cray",
     "ltones:orange_cray",
-    "ltones:navy_cray",
-    "ltones:mint_cray",
-    "ltones:magenta_cray",
+    "ltones:amber_cray",
+    "ltones:yellow_cray",
     "ltones:lime_cray",
     "ltones:green_cray",
-    "ltones:fuchsia_cray",
-    "ltones:black_cray",
+    "ltones:mint_cray",
     "ltones:cyan_cray",
     "ltones:blue_cray",
-    "ltones:amber_cray",
-    "ltones:cray"
+    "ltones:navy_cray",
+    "ltones:purple_cray",
+    "ltones:violet_cray",
+    "ltones:magenta_cray",
+    "ltones:fuchsia_cray"
   ]
 }

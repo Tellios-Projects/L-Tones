@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_any_block_from_agon_blocks": {
+    "has_any_block_from_glaxx_blocks": {
       "conditions": {
         "items": [
           {
-            "tag": "ltones:agon_blocks"
+            "tag": "ltones:glaxx_blocks"
           }
         ]
       },
@@ -13,20 +13,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:light_blue_agon_stonecutting"
+        "recipe": "minecraft:cinnamon_glaxx_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_any_block_from_agon_blocks",
+      "has_any_block_from_glaxx_blocks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:light_blue_agon_stonecutting"
+      "minecraft:cinnamon_glaxx_stonecutting"
     ]
   },
   "sends_telemetry_event": false

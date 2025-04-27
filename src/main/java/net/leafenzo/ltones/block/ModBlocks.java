@@ -112,7 +112,7 @@ public class ModBlocks {
     public static final BlockSet BITT_BLOCKSET = registerBlockSet(BITT_BLOCKS, "bitt_blocks");
     //</editor-fold>
 
-    //<editor-fold desc ="Blocks - FORTT">
+    //<editor-fold desc ="Blocks - AGON">
 
     private static final FabricBlockSettings agonMaterial = FabricBlockSettings.create()
             .strength(0.3f)
@@ -141,21 +141,21 @@ public class ModBlocks {
             .strength(1.0f)
             .sounds(ModBlockSoundGroup.FORTT);
     public static final Block FORTT = registerBlockInBlockset(FORTT_BLOCKS, "fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.WHITE_GRAY)));
-    public static final Block BRIGHT_BLUE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_blue_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.BLUE)));
-    public static final Block BRIGHT_RED_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_red_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DULL_RED)));
-    public static final Block BRIGHT_VIOLET_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_violet_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.TERRACOTTA_BLUE)));
-    public static final Block BRIGHT_YELLOW_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_yellow_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.YELLOW)));
-    public static final Block DARK_AZURE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "dark_azure_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.LAPIS_BLUE)));
-    public static final Block DARK_RED_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "dark_red_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.RED)));
-    public static final Block DARK_TURQUOISE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "dark_turquoise_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.TEAL)));
-    public static final Block EARTH_GREEN_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "earth_green_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DARK_GREEN)));
-    public static final Block EARTH_ORANGE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "earth_orange_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
     public static final Block GRAY_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "gray_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.IRON_GRAY)));
-    public static final Block LIME_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "lime_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.LIME)));
-    public static final Block MEDIUM_AZURE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "medium_azure_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DIAMOND_BLUE)));
-    public static final Block ORANGE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "orange_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.ORANGE)));
-    public static final Block SAND_BLUE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "sand_blue_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.LIGHT_BLUE_GRAY)));
     public static final Block STONE_GRAY_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "stone_gray_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.STONE_GRAY)));
+    public static final Block SAND_BLUE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "sand_blue_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.LIGHT_BLUE_GRAY)));
+    public static final Block DARK_RED_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "dark_red_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.RED)));
+    public static final Block BRIGHT_RED_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_red_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DULL_RED)));
+    public static final Block EARTH_ORANGE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "earth_orange_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block ORANGE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "orange_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.ORANGE)));
+    public static final Block BRIGHT_YELLOW_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_yellow_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.YELLOW)));
+    public static final Block LIME_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "lime_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.LIME)));
+    public static final Block EARTH_GREEN_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "earth_green_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DARK_GREEN)));
+    public static final Block DARK_TURQUOISE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "dark_turquoise_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.TEAL)));
+    public static final Block MEDIUM_AZURE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "medium_azure_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.DIAMOND_BLUE)));
+    public static final Block DARK_AZURE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "dark_azure_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.LAPIS_BLUE)));
+    public static final Block BRIGHT_BLUE_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_blue_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.BLUE)));
+    public static final Block BRIGHT_VIOLET_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_violet_fortt", new Block(FabricBlockSettings.copyOf(forttMaterial).mapColor(MapColor.TERRACOTTA_BLUE)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - GLAXX">
     private static final FabricBlockSettings glaxxMaterial = FabricBlockSettings.create()
@@ -167,44 +167,44 @@ public class ModBlocks {
             .solidBlock(ModBlocks::never)
             .suffocates(ModBlocks::never)
             .blockVision(ModBlocks::never);
-    public static final Block THYME_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "thyme_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_GREEN)*/));
-    public static final Block SASSAFRAS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sassafras_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.BLUE)*/));
-    public static final Block SANDALWOOD_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sandalwood_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.IRON_GRAY)*/));
-    public static final Block SAGE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sage_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_LIME)*/));
-    public static final Block ROSE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "rose_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.DULL_PINK)*/));
-    public static final Block PINE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "pine_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.SPRUCE_BROWN)*/));
-    public static final Block MINT_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "mint_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.LICHEN_GREEN)*/));
     public static final Block LICORICE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "licorice_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.STONE_GRAY)*/));
-    public static final Block LEMON_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "lemon_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_YELLOW)*/));
-    public static final Block LAVENDER_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "lavender_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_BLUE)*/));
+    public static final Block SANDALWOOD_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sandalwood_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.IRON_GRAY)*/));
     public static final Block INCENSE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "incense_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.GRAY)*/));
-    public static final Block EUCALYPTUS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "eucalyptus_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.DARK_DULL_PINK)*/));
-    public static final Block COCONUT_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "coconut_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_CYAN)*/));
-    public static final Block CINNIMON_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "cinnimon_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.DARK_CRIMSON)*/));
+    public static final Block CINNAMON_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "cinnamon_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.DARK_CRIMSON)*/));
     public static final Block CITRUS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "citrus_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.DIRT_BROWN)*/));
+    public static final Block PINE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "pine_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.SPRUCE_BROWN)*/));
+    public static final Block LEMON_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "lemon_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_YELLOW)*/));
+    public static final Block THYME_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "thyme_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_GREEN)*/));
+    public static final Block SAGE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sage_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_LIME)*/));
+    public static final Block MINT_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "mint_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.LICHEN_GREEN)*/));
+    public static final Block COCONUT_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "coconut_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_CYAN)*/));
     public static final Block BRINE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "brine_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.CYAN)*/));
+    public static final Block SASSAFRAS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sassafras_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.BLUE)*/));
+    public static final Block LAVENDER_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "lavender_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_BLUE)*/));
+    public static final Block EUCALYPTUS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "eucalyptus_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.DARK_DULL_PINK)*/));
+    public static final Block ROSE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "rose_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.DULL_PINK)*/));
     //</editor-fold>
     //<editor-fold desc ="Blocks - CRAY">
     private static final FabricBlockSettings crayMaterial = FabricBlockSettings.create()
             .strength(0.8f) // same as sandstone
             .requiresTool()
             .sounds(ModBlockSoundGroup.CRAY);
-    public static final Block YELLOW_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "yellow_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.YELLOW)));
-    public static final Block VIOLET_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "violet_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.PURPLE)));
+    public static final Block CRAY = registerBlockInBlockset(CRAY_BLOCKS, "cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.WHITE_GRAY)));
+    public static final Block BLACK_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "black_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.LIGHT_GRAY)));
     public static final Block RED_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "red_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.RED)));
-    public static final Block PURPLE_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "purple_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.PALE_PURPLE)));
     public static final Block ORANGE_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "orange_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.ORANGE)));
-    public static final Block NAVY_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "navy_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.LIGHT_BLUE)));
-    public static final Block MINT_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "mint_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.BRIGHT_TEAL)));
-    public static final Block MAGENTA_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "magenta_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.MAGENTA)));
+    public static final Block AMBER_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "amber_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.OAK_TAN)));
+    public static final Block YELLOW_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "yellow_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.YELLOW)));
     public static final Block LIME_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "lime_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.LIME)));
     public static final Block GREEN_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "green_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.EMERALD_GREEN)));
-    public static final Block FUCHSIA_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "fuchsia_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.DULL_PINK)));
-    public static final Block BLACK_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "black_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.LIGHT_GRAY)));
+    public static final Block MINT_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "mint_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.BRIGHT_TEAL)));
     public static final Block CYAN_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "cyan_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.DARK_AQUA)));
     public static final Block BLUE_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "blue_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.CYAN)));
-    public static final Block AMBER_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "amber_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.OAK_TAN)));
-    public static final Block CRAY = registerBlockInBlockset(CRAY_BLOCKS, "cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.WHITE_GRAY)));
+    public static final Block NAVY_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "navy_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block PURPLE_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "purple_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.PALE_PURPLE)));
+    public static final Block VIOLET_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "violet_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.PURPLE)));
+    public static final Block MAGENTA_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "magenta_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.MAGENTA)));
+    public static final Block FUCHSIA_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "fuchsia_cray", new Block(FabricBlockSettings.copyOf(crayMaterial).mapColor(MapColor.DULL_PINK)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - CAST">
     private static final FabricBlockSettings castMaterial = FabricBlockSettings.create()
@@ -213,7 +213,6 @@ public class ModBlocks {
     public static final Block CAST = registerBlockInBlockset(CAST_BLOCKS, "cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.WHITE)));
     public static final Block BLACK_CAST = registerBlockInBlockset(CAST_BLOCKS, "black_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BLACK)));
     public static final Block BROWN_CAST = registerBlockInBlockset(CAST_BLOCKS, "brown_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
-    public static final Block VELVET_CAST = registerBlockInBlockset(CAST_BLOCKS, "velvet_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.DULL_RED)));
     public static final Block RED_CAST = registerBlockInBlockset(CAST_BLOCKS, "red_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BRIGHT_RED)));
     public static final Block VERMILION_CAST = registerBlockInBlockset(CAST_BLOCKS, "vermilion_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BRIGHT_RED)));
     public static final Block AMBER_CAST = registerBlockInBlockset(CAST_BLOCKS, "amber_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.TERRACOTTA_YELLOW)));
@@ -226,28 +225,29 @@ public class ModBlocks {
     public static final Block NAVY_CAST = registerBlockInBlockset(CAST_BLOCKS, "navy_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.WATER_BLUE)));
     public static final Block PURPLE_CAST = registerBlockInBlockset(CAST_BLOCKS, "purple_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.PURPLE)));
     public static final Block MAGENTA_CAST = registerBlockInBlockset(CAST_BLOCKS, "magenta_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.MAGENTA)));
+    public static final Block VELVET_CAST = registerBlockInBlockset(CAST_BLOCKS, "velvet_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.DULL_RED)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - HOST">
     private static final FabricBlockSettings hostMaterial = FabricBlockSettings.create()
             .strength(1.5f)
             .requiresTool()
             .sounds(ModBlockSoundGroup.HOST);
-    public static final Block YELLOW_HOST = registerBlockInBlockset(HOST_BLOCKS, "yellow_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
-    public static final Block VIOLET_HOST = registerBlockInBlockset(HOST_BLOCKS, "violet_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
-    public static final Block VERMILION_HOST = registerBlockInBlockset(HOST_BLOCKS, "vermilion_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block EMPTY_HOST = registerBlockInBlockset(HOST_BLOCKS, "empty_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.BLACK).sounds(BlockSoundGroup.COPPER)));
+    public static final Block HOST = registerBlockInBlockset(HOST_BLOCKS, "host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 3)));
     public static final Block RED_HOST = registerBlockInBlockset(HOST_BLOCKS, "red_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
-    public static final Block PURPLE_HOST = registerBlockInBlockset(HOST_BLOCKS, "purple_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
-    public static final Block NAVY_HOST = registerBlockInBlockset(HOST_BLOCKS, "navy_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
-    public static final Block MINT_HOST = registerBlockInBlockset(HOST_BLOCKS, "mint_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
-    public static final Block MAGENTA_HOST = registerBlockInBlockset(HOST_BLOCKS, "magenta_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block AMBER_HOST = registerBlockInBlockset(HOST_BLOCKS, "amber_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block VERMILION_HOST = registerBlockInBlockset(HOST_BLOCKS, "vermilion_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block YELLOW_HOST = registerBlockInBlockset(HOST_BLOCKS, "yellow_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
     public static final Block LIME_HOST = registerBlockInBlockset(HOST_BLOCKS, "lime_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
     public static final Block GREEN_HOST = registerBlockInBlockset(HOST_BLOCKS, "green_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
-    public static final Block FUCHSIA_HOST = registerBlockInBlockset(HOST_BLOCKS, "fuchsia_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
-    public static final Block EMPTY_HOST = registerBlockInBlockset(HOST_BLOCKS, "empty_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.BLACK).sounds(BlockSoundGroup.COPPER)));
+    public static final Block MINT_HOST = registerBlockInBlockset(HOST_BLOCKS, "mint_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
     public static final Block CYAN_HOST = registerBlockInBlockset(HOST_BLOCKS, "cyan_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
     public static final Block BLUE_HOST = registerBlockInBlockset(HOST_BLOCKS, "blue_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
-    public static final Block AMBER_HOST = registerBlockInBlockset(HOST_BLOCKS, "amber_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
-    public static final Block HOST = registerBlockInBlockset(HOST_BLOCKS, "host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 3)));
+    public static final Block NAVY_HOST = registerBlockInBlockset(HOST_BLOCKS, "navy_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block PURPLE_HOST = registerBlockInBlockset(HOST_BLOCKS, "purple_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block VIOLET_HOST = registerBlockInBlockset(HOST_BLOCKS, "violet_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block MAGENTA_HOST = registerBlockInBlockset(HOST_BLOCKS, "magenta_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
+    public static final Block FUCHSIA_HOST = registerBlockInBlockset(HOST_BLOCKS, "fuchsia_host", new Block(FabricBlockSettings.copyOf(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - ZANE">
     private static final FabricBlockSettings zaneMaterial = FabricBlockSettings.create()
@@ -255,22 +255,22 @@ public class ModBlocks {
             .requiresTool()
             .instrument(Instrument.BASEDRUM)
             .sounds(ModBlockSoundGroup.ZANE);
-    public static final Block RED_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "red_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.RED)));
-    public static final Block AMBER_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "amber_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
+    public static final Block ZANE = registerBlockInBlockset(ZANE_BLOCKS, "zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.WHITE)));
     public static final Block BLACK_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "black_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.BLACK)));
+    public static final Block RED_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "red_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.RED)));
     public static final Block ORANGE_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "orange_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.ORANGE)));
+    public static final Block AMBER_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "amber_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
     public static final Block YELLOW_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "yellow_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.YELLOW)));
-    public static final Block PURPLE_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "purple_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.PURPLE)));
-    public static final Block NAVY_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "navy_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.BLUE)));
-    public static final Block MINT_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "mint_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.BRIGHT_TEAL)));
-    public static final Block MAGENTA_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "magenta_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.MAGENTA)));
     public static final Block LIME_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "lime_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.LIME)));
     public static final Block GREEN_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "green_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.GREEN)));
-    public static final Block FUCHSIA_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "fuchsia_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.DULL_PINK)));
+    public static final Block MINT_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "mint_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.BRIGHT_TEAL)));
     public static final Block CYAN_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "cyan_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.TEAL)));
-    public static final Block CERULEAN_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "cerulean_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.LAPIS_BLUE)));
     public static final Block BLUE_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "blue_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.LIGHT_BLUE)));
-    public static final Block ZANE = registerBlockInBlockset(ZANE_BLOCKS, "zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.WHITE)));
+    public static final Block CERULEAN_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "cerulean_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.LAPIS_BLUE)));
+    public static final Block NAVY_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "navy_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.BLUE)));
+    public static final Block PURPLE_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "purple_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.PURPLE)));
+    public static final Block MAGENTA_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "magenta_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.MAGENTA)));
+    public static final Block FUCHSIA_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "fuchsia_zane", new Block(FabricBlockSettings.copyOf(zaneMaterial).mapColor(MapColor.DULL_PINK)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - VECT">
     private static final FabricBlockSettings vectMaterial = FabricBlockSettings.create()
@@ -605,22 +605,22 @@ public class ModBlocks {
             .strength(0.3f)
             .luminance(state -> 11)
             .sounds(ModBlockSoundGroup.ISZM);
-    public static final Block WARM_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "warm_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_LIME)));
-    public static final Block VIBRANT_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "vibrant_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.PALE_GREEN)));
-    public static final Block STUDY_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "study_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.BLUE)));
+    public static final Block ISZM = registerBlockInBlockset(ISZM_BLOCKS, "iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.GRAY)));
+    public static final Block WHITE_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "white_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_WHITE)));
+    public static final Block FADED_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "faded_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.PALE_YELLOW)));
+    public static final Block NEUTRAL_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "neutral_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.WHITE_GRAY)));
+    public static final Block DUSTY_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "dusty_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.OAK_TAN)));
     public static final Block SCORCHED_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "scorched_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.DARK_CRIMSON)));
+    public static final Block DARK_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "dark_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.DARK_RED)));
     public static final Block RED_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "red_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.DULL_RED)));
     public static final Block PINK_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "pink_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_RED)));
-    public static final Block NEUTRAL_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "neutral_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.WHITE_GRAY)));
     public static final Block GREEN_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "green_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.LIME)));
+    public static final Block WARM_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "warm_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_LIME)));
+    public static final Block VIBRANT_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "vibrant_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.PALE_GREEN)));
     public static final Block GAME_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "game_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.GREEN)));
-    public static final Block FADED_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "faded_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.PALE_YELLOW)));
-    public static final Block DUSTY_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "dusty_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.OAK_TAN)));
-    public static final Block DARK_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "dark_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.DARK_RED)));
-    public static final Block COLD_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "cold_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_LIGHT_BLUE)));
     public static final Block BURNED_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "burned_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_GREEN)));
-    public static final Block WHITE_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "white_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_WHITE)));
-    public static final Block ISZM = registerBlockInBlockset(ISZM_BLOCKS, "iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.GRAY)));
+    public static final Block COLD_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "cold_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_LIGHT_BLUE)));
+    public static final Block STUDY_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "study_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.BLUE)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - MYST">
     private static final FabricBlockSettings mystMaterial = FabricBlockSettings.create() // TODO, color based scrolling animation // what did i MEAN by this grrgrjgjrglerkgjer;kgkj;ekgrj
@@ -632,22 +632,22 @@ public class ModBlocks {
             .suffocates(ModBlocks::never)
             .blockVision(ModBlocks::never)
             .sounds(ModBlockSoundGroup.MYST);
-    public static final Block RED_MYST = registerBlockInBlockset(MYST_BLOCKS, "red_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block PURPLE_MYST = registerBlockInBlockset(MYST_BLOCKS, "purple_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block PINK_MYST = registerBlockInBlockset(MYST_BLOCKS, "pink_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block ORANGE_MYST = registerBlockInBlockset(MYST_BLOCKS, "orange_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block MAGENTA_MYST = registerBlockInBlockset(MYST_BLOCKS, "magenta_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block LIME_MYST = registerBlockInBlockset(MYST_BLOCKS, "lime_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block LIGHT_GRAY_MYST = registerBlockInBlockset(MYST_BLOCKS, "light_gray_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block LIGHT_BLUE_MYST = registerBlockInBlockset(MYST_BLOCKS, "light_blue_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block GREEN_MYST = registerBlockInBlockset(MYST_BLOCKS, "green_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block GRAY_MYST = registerBlockInBlockset(MYST_BLOCKS, "gray_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block CYAN_MYST = registerBlockInBlockset(MYST_BLOCKS, "cyan_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block BROWN_MYST = registerBlockInBlockset(MYST_BLOCKS, "brown_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block BLUE_MYST = registerBlockInBlockset(MYST_BLOCKS, "blue_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block BLACK_MYST = registerBlockInBlockset(MYST_BLOCKS, "black_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block YELLOW_MYST = registerBlockInBlockset(MYST_BLOCKS, "yellow_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
     public static final Block WHITE_MYST = registerBlockInBlockset(MYST_BLOCKS, "white_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block LIGHT_GRAY_MYST = registerBlockInBlockset(MYST_BLOCKS, "light_gray_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block GRAY_MYST = registerBlockInBlockset(MYST_BLOCKS, "gray_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block BLACK_MYST = registerBlockInBlockset(MYST_BLOCKS, "black_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block BROWN_MYST = registerBlockInBlockset(MYST_BLOCKS, "brown_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block RED_MYST = registerBlockInBlockset(MYST_BLOCKS, "red_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block ORANGE_MYST = registerBlockInBlockset(MYST_BLOCKS, "orange_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block YELLOW_MYST = registerBlockInBlockset(MYST_BLOCKS, "yellow_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block LIME_MYST = registerBlockInBlockset(MYST_BLOCKS, "lime_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block GREEN_MYST = registerBlockInBlockset(MYST_BLOCKS, "green_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block CYAN_MYST = registerBlockInBlockset(MYST_BLOCKS, "cyan_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block LIGHT_BLUE_MYST = registerBlockInBlockset(MYST_BLOCKS, "light_blue_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block BLUE_MYST = registerBlockInBlockset(MYST_BLOCKS, "blue_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block PURPLE_MYST = registerBlockInBlockset(MYST_BLOCKS, "purple_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block MAGENTA_MYST = registerBlockInBlockset(MYST_BLOCKS, "magenta_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block PINK_MYST = registerBlockInBlockset(MYST_BLOCKS, "pink_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - SYNC">
     private static final FabricBlockSettings syncMaterial = FabricBlockSettings.create()
@@ -679,44 +679,44 @@ public class ModBlocks {
             .strength(1.2f)
             .luminance(state -> 11)
             .sounds(ModBlockSoundGroup.NURR);
-    public static final Block BLACK_NURR = registerBlockInBlockset(NURR_BLOCKS, "black_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.BLACK).luminance(state -> 0)));
     public static final Block NURR = registerBlockInBlockset(NURR_BLOCKS, "nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.GRAY)));
-    public static final Block NAVY_NURR = registerBlockInBlockset(NURR_BLOCKS, "navy_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.TERRACOTTA_BLUE)));
-    public static final Block MINT_NURR = registerBlockInBlockset(NURR_BLOCKS, "mint_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.BRIGHT_TEAL)));
-    public static final Block MAGENTA_NURR = registerBlockInBlockset(NURR_BLOCKS, "magenta_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.MAGENTA)));
+    public static final Block BLACK_NURR = registerBlockInBlockset(NURR_BLOCKS, "black_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.BLACK).luminance(state -> 0)));
+    public static final Block RED_NURR = registerBlockInBlockset(NURR_BLOCKS, "red_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.RED)));
+    public static final Block ORANGE_NURR = registerBlockInBlockset(NURR_BLOCKS, "orange_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.ORANGE)));
+    public static final Block AMBER_NURR = registerBlockInBlockset(NURR_BLOCKS, "amber_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.TERRACOTTA_YELLOW)));
+    public static final Block YELLOW_NURR = registerBlockInBlockset(NURR_BLOCKS, "yellow_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.YELLOW)));
     public static final Block LIME_NURR = registerBlockInBlockset(NURR_BLOCKS, "lime_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.LIME)));
     public static final Block GREEN_NURR = registerBlockInBlockset(NURR_BLOCKS, "green_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.EMERALD_GREEN)));
-    public static final Block FUCHSIA_NURR = registerBlockInBlockset(NURR_BLOCKS, "fuchsia_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.TERRACOTTA_MAGENTA)));
+    public static final Block MINT_NURR = registerBlockInBlockset(NURR_BLOCKS, "mint_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.BRIGHT_TEAL)));
     public static final Block CYAN_NURR = registerBlockInBlockset(NURR_BLOCKS, "cyan_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.DIAMOND_BLUE)));
     public static final Block CERULEAN_NURR = registerBlockInBlockset(NURR_BLOCKS, "cerulean_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.LIGHT_BLUE)));
     public static final Block BLUE_NURR = registerBlockInBlockset(NURR_BLOCKS, "blue_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.BLUE)));
-    public static final Block AMBER_NURR = registerBlockInBlockset(NURR_BLOCKS, "amber_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.TERRACOTTA_YELLOW)));
-    public static final Block YELLOW_NURR = registerBlockInBlockset(NURR_BLOCKS, "yellow_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.YELLOW)));
-    public static final Block RED_NURR = registerBlockInBlockset(NURR_BLOCKS, "red_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.RED)));
+    public static final Block NAVY_NURR = registerBlockInBlockset(NURR_BLOCKS, "navy_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.TERRACOTTA_BLUE)));
     public static final Block PURPLE_NURR = registerBlockInBlockset(NURR_BLOCKS, "purple_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.PURPLE)));
-    public static final Block ORANGE_NURR = registerBlockInBlockset(NURR_BLOCKS, "orange_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.ORANGE)));
+    public static final Block MAGENTA_NURR = registerBlockInBlockset(NURR_BLOCKS, "magenta_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.MAGENTA)));
+    public static final Block FUCHSIA_NURR = registerBlockInBlockset(NURR_BLOCKS, "fuchsia_nurr", new PillarBlock(FabricBlockSettings.copyOf(nurrMaterial).mapColor(MapColor.TERRACOTTA_MAGENTA)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - TYEL">
     private static final FabricBlockSettings tyelMaterial = FabricBlockSettings.create()
             .requiresTool()
             .strength(1.4f)
             .sounds(ModBlockSoundGroup.TYEL);
+    public static final Block TYEL = registerBlockInBlockset(TYEL_BLOCKS, "tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.WHITE_GRAY)));
+    public static final Block BLACK_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "black_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.BLACK)));
     public static final Block TAN_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "tan_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.RAW_IRON_PINK)));
     public static final Block RED_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "red_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.RED)));
-    public static final Block PURPLE_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "purple_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.PURPLE)));
-    public static final Block MAGENTA_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "magenta_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.MAGENTA)));
-    public static final Block LIME_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "lime_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.LIME)));
-    public static final Block GREEN_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "green_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.GREEN)));
-    public static final Block FUCHSIA_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "fuchsia_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.DULL_PINK)));
-    public static final Block CYAN_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "cyan_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.DIAMOND_BLUE)));
-    public static final Block CHARTREUSE_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "chartreuse_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.LIME)));
-    public static final Block CERULEAN_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "cerulean_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.LIGHT_BLUE)));
-    public static final Block BLUE_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "blue_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.BLUE)));
+    public static final Block VERMILION_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "vermilion_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
     public static final Block AMBER_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "amber_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.TERRACOTTA_YELLOW)));
     public static final Block YELLOW_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "yellow_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.YELLOW)));
-    public static final Block VERMILION_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "vermilion_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
-    public static final Block BLACK_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "black_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.BLACK)));
-    public static final Block TYEL = registerBlockInBlockset(TYEL_BLOCKS, "tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.WHITE_GRAY)));
+    public static final Block CHARTREUSE_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "chartreuse_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.LIME)));
+    public static final Block LIME_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "lime_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.LIME)));
+    public static final Block GREEN_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "green_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.GREEN)));
+    public static final Block CYAN_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "cyan_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.DIAMOND_BLUE)));
+    public static final Block CERULEAN_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "cerulean_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block BLUE_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "blue_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.BLUE)));
+    public static final Block PURPLE_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "purple_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.PURPLE)));
+    public static final Block MAGENTA_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "magenta_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.MAGENTA)));
+    public static final Block FUCHSIA_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "fuchsia_tyel", new Block(FabricBlockSettings.copyOf(tyelMaterial).mapColor(MapColor.DULL_PINK)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - ROEN">
     private static final FabricBlockSettings roenMaterial = FabricBlockSettings.create()
@@ -778,22 +778,22 @@ public class ModBlocks {
             .strength(0.6f)
 //            .luminance(state -> 5)
             .sounds(ModBlockSoundGroup.BITT);
-    public static final Block MINT_BITT = registerBlockInBlockset(BITT_BLOCKS, "mint_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block BITT = registerBlockInBlockset(BITT_BLOCKS, "bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block SHELL_BITT = registerBlockInBlockset(BITT_BLOCKS, "shell_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block RED_BITT = registerBlockInBlockset(BITT_BLOCKS, "red_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
     public static final Block ORANGE_BITT = registerBlockInBlockset(BITT_BLOCKS, "orange_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
-    public static final Block PURPLE_BITT = registerBlockInBlockset(BITT_BLOCKS, "purple_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
-    public static final Block LIGHT_BLUE_BITT = registerBlockInBlockset(BITT_BLOCKS, "light_blue_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block AMBER_BITT = registerBlockInBlockset(BITT_BLOCKS, "amber_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block YELLOW_BITT = registerBlockInBlockset(BITT_BLOCKS, "yellow_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
     public static final Block LIME_BITT = registerBlockInBlockset(BITT_BLOCKS, "lime_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block GREEN_BITT = registerBlockInBlockset(BITT_BLOCKS, "green_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block MINT_BITT = registerBlockInBlockset(BITT_BLOCKS, "mint_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block CYAN_BITT = registerBlockInBlockset(BITT_BLOCKS, "cyan_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block LIGHT_BLUE_BITT = registerBlockInBlockset(BITT_BLOCKS, "light_blue_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block BLUE_BITT = registerBlockInBlockset(BITT_BLOCKS, "blue_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block INDIGO_BITT = registerBlockInBlockset(BITT_BLOCKS, "indigo_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
+    public static final Block PURPLE_BITT = registerBlockInBlockset(BITT_BLOCKS, "purple_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
     public static final Block MAGENTA_BITT = registerBlockInBlockset(BITT_BLOCKS, "magenta_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
     public static final Block FUCHSIA_BITT = registerBlockInBlockset(BITT_BLOCKS, "fuchsia_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
-    public static final Block GREEN_BITT = registerBlockInBlockset(BITT_BLOCKS, "green_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
-    public static final Block INDIGO_BITT = registerBlockInBlockset(BITT_BLOCKS, "indigo_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
-    public static final Block AMBER_BITT = registerBlockInBlockset(BITT_BLOCKS, "amber_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
-    public static final Block BLUE_BITT = registerBlockInBlockset(BITT_BLOCKS, "blue_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
-    public static final Block CYAN_BITT = registerBlockInBlockset(BITT_BLOCKS, "cyan_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
-    public static final Block BITT = registerBlockInBlockset(BITT_BLOCKS, "bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
-    public static final Block YELLOW_BITT = registerBlockInBlockset(BITT_BLOCKS, "yellow_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
-    public static final Block RED_BITT = registerBlockInBlockset(BITT_BLOCKS, "red_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
-    public static final Block SHELL_BITT = registerBlockInBlockset(BITT_BLOCKS, "shell_bitt", new BittBlock(FabricBlockSettings.copyOf(bittMaterial)));
     //</editor-fold>
 //</editor-fold>
     //<editor-fold desc ="Blocks - ROST">
