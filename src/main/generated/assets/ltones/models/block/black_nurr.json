@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "ltones:block/black_nurr"
+    "down": "ltones:block/black_nurr_top",
+    "east": "ltones:block/black_nurr",
+    "north": "ltones:block/black_nurr",
+    "particle": "ltones:block/black_nurr",
+    "south": "ltones:block/black_nurr",
+    "up": "ltones:block/black_nurr_top",
+    "west": "ltones:block/black_nurr"
   }
 }

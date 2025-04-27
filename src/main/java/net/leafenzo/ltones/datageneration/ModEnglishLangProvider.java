@@ -81,6 +81,23 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         generateTranslation(translationBuilder, ModBlocks.GRAY_CRT, "Gray CRT Monitor");
         generateTranslation(translationBuilder, "container.crate", "Crate");
 
+        generateTranslation(translationBuilder, ModBlocks.ROST_RUST, "Rusted Rost");
+        generateTranslation(translationBuilder, ModBlocks.ROST_CAGE_RUST, "Rusted Rost Cage");
+        generateTranslation(translationBuilder, ModBlocks.ROST_CORRIGOR_RUST, "Rusted Rost Corrigor");
+        generateTranslation(translationBuilder, ModBlocks.ROST_CRETE_RUST, "Rusted Rost Crete");
+        generateTranslation(translationBuilder, ModBlocks.ROST_LINOLEUM_RUST, "Rusted Rost Linoleum");
+        generateTranslation(translationBuilder, ModBlocks.ROST_MOUND_RUST, "Rusted Rost Mound");
+        generateTranslation(translationBuilder, ModBlocks.ROST_PEEL_RUST, "Rusted Rost Peel");
+        generateTranslation(translationBuilder, ModBlocks.ROST_PLATES_RUST, "Rusted Rost Plates");
+        generateTranslation(translationBuilder, ModBlocks.ROST_REBAR_RUST, "Rusted Rost Rebar");
+        generateTranslation(translationBuilder, ModBlocks.ROST_RIBBING_RUST, "Rusted Rost Ribbing");
+        generateTranslation(translationBuilder, ModBlocks.ROST_SHIELDED_RUST, "Rusted Rost Shielding");
+        generateTranslation(translationBuilder, ModBlocks.ROST_SMOTHERED_RUST, "Rusted Rost Smothered");
+        generateTranslation(translationBuilder, ModBlocks.ROST_TUNNEL_RUST, "Rusted Rost Tunnel");
+        generateTranslation(translationBuilder, ModBlocks.ROST_VEIN_RUST, "Rusted Rost Vein");
+        generateTranslation(translationBuilder, ModBlocks.ROST_VELLUM_RUST, "Rusted Rost Vellum");
+        generateTranslation(translationBuilder, ModBlocks.ROST_WALLPAPER_RUST, "Rusted Rost Wallpaper");
+
         //</editor-fold
         //<editor-fold desc ="EnglishLang - Fallback">
         for(Identifier id : ModUtil.allBlockIdsInNamespace(Super.MOD_ID)) {

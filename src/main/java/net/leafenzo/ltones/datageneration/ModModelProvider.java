@@ -623,9 +623,22 @@ public class ModModelProvider extends FabricModelProvider {
         registerLitOnOffGlazedTerracottaBlock(blockStateModelGenerator, ModBlocks.SYNC_MIZMER, TextureMap::all);
         //</editor-fold>
         //<editor-fold desc = "Models - nurr">
-        for(Block block : ModBlocks.NURR_BLOCKS) {
-            blockStateModelGenerator.registerAxisRotated(block, TexturedModel.CUBE_ALL);
-        }
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.AMBER_NURR, "block/amber_nurr_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.BLACK_NURR, "block/black_nurr_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.BLUE_NURR, "block/blue_nurr_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.CERULEAN_NURR, "block/cerulean_nurr_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.CYAN_NURR, "block/cyan_nurr_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.FUCHSIA_NURR, "block/fuchsia_nurr_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.GREEN_NURR, "block/green_nurr_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.LIME_NURR, "block/lime_nurr_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.MAGENTA_NURR, "block/magenta_nurr_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.MINT_NURR, "block/mint_nurr_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.NAVY_NURR, "block/navy_nurr_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.NURR, "block/nurr_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.ORANGE_NURR, "block/orange_nurr_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.PURPLE_NURR, "block/purple_nurr_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.RED_NURR, "block/red_nurr_top");
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.YELLOW_NURR, "block/yellow_nurr_top");
         //</editor-fold>
         //<editor-fold desc = "Models - tyel">
         for(Block block : ModBlocks.TYEL_BLOCKS) {

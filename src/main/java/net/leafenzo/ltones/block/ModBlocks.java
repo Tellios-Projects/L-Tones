@@ -47,7 +47,7 @@ public class ModBlocks {
     public static final ArrayList<Block> DOORS = new ArrayList<Block>();
     public static final ArrayList<Block> TRAPDOORS = new ArrayList<Block>();
 
-    public static final ArrayList<Block> AGON_BLOCKS = registerBlocksetOfVanillaDyedBlocks("agon", FabricBlockSettings.create().strength(0.3f).sounds(ModBlockSoundGroup.AGON).luminance(state -> 15));
+    public static final ArrayList<Block> AGON_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> FORTT_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> GLAXX_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> CRAY_BLOCKS = new ArrayList<>();
@@ -110,6 +110,30 @@ public class ModBlocks {
     public static final BlockSet ROST_BLOCKSET = registerBlockSet(ROST_BLOCKS, "rost_blocks");
     public static final BlockSet ROST_BLOCKSET_RUST = registerBlockSet(ROST_BLOCKS_RUST, "rost_blocks_rust");
     public static final BlockSet BITT_BLOCKSET = registerBlockSet(BITT_BLOCKS, "bitt_blocks");
+    //</editor-fold>
+
+    //<editor-fold desc ="Blocks - FORTT">
+
+    private static final FabricBlockSettings agonMaterial = FabricBlockSettings.create()
+            .strength(0.3f)
+            .sounds(ModBlockSoundGroup.AGON)
+            .luminance(state -> 15);
+    public static final Block WHITE_AGON = registerBlockInBlockset(AGON_BLOCKS, "white_agon", new Block(FabricBlockSettings.copyOf(agonMaterial).mapColor(MapColor.WHITE)));
+    public static final Block LIGHT_GRAY_AGON = registerBlockInBlockset(AGON_BLOCKS, "light_gray_agon", new Block(FabricBlockSettings.copyOf(agonMaterial).mapColor(MapColor.LIGHT_GRAY)));
+    public static final Block GRAY_AGON = registerBlockInBlockset(AGON_BLOCKS, "gray_agon", new Block(FabricBlockSettings.copyOf(agonMaterial).mapColor(MapColor.GRAY)));
+    public static final Block BLACK_AGON = registerBlockInBlockset(AGON_BLOCKS, "black_agon", new Block(FabricBlockSettings.copyOf(agonMaterial).mapColor(MapColor.BLACK)));
+    public static final Block BROWN_AGON = registerBlockInBlockset(AGON_BLOCKS, "brown_agon", new Block(FabricBlockSettings.copyOf(agonMaterial).mapColor(MapColor.BROWN)));
+    public static final Block RED_AGON = registerBlockInBlockset(AGON_BLOCKS, "red_agon", new Block(FabricBlockSettings.copyOf(agonMaterial).mapColor(MapColor.RED)));
+    public static final Block ORANGE_AGON = registerBlockInBlockset(AGON_BLOCKS, "orange_agon", new Block(FabricBlockSettings.copyOf(agonMaterial).mapColor(MapColor.ORANGE)));
+    public static final Block YELLOW_AGON = registerBlockInBlockset(AGON_BLOCKS, "yellow_agon", new Block(FabricBlockSettings.copyOf(agonMaterial).mapColor(MapColor.YELLOW)));
+    public static final Block LIME_AGON = registerBlockInBlockset(AGON_BLOCKS, "lime_agon", new Block(FabricBlockSettings.copyOf(agonMaterial).mapColor(MapColor.LIME)));
+    public static final Block GREEN_AGON = registerBlockInBlockset(AGON_BLOCKS, "green_agon", new Block(FabricBlockSettings.copyOf(agonMaterial).mapColor(MapColor.GREEN)));
+    public static final Block CYAN_AGON = registerBlockInBlockset(AGON_BLOCKS, "cyan_agon", new Block(FabricBlockSettings.copyOf(agonMaterial).mapColor(MapColor.CYAN)));
+    public static final Block BLUE_AGON = registerBlockInBlockset(AGON_BLOCKS, "blue_agon", new Block(FabricBlockSettings.copyOf(agonMaterial).mapColor(MapColor.BLUE)));
+    public static final Block PURPLE_AGON = registerBlockInBlockset(AGON_BLOCKS, "purple_agon", new Block(FabricBlockSettings.copyOf(agonMaterial).mapColor(MapColor.PURPLE)));
+    public static final Block MAGENTA_AGON = registerBlockInBlockset(AGON_BLOCKS, "magenta_agon", new Block(FabricBlockSettings.copyOf(agonMaterial).mapColor(MapColor.MAGENTA)));
+    public static final Block PINK_AGON = registerBlockInBlockset(AGON_BLOCKS, "pink_agon", new Block(FabricBlockSettings.copyOf(agonMaterial).mapColor(MapColor.PINK)));
+    //</editor-fold>
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - FORTT">
@@ -186,22 +210,22 @@ public class ModBlocks {
     private static final FabricBlockSettings castMaterial = FabricBlockSettings.create()
             .strength(1.0f)
             .sounds(ModBlockSoundGroup.CAST);
-    public static final Block YELLOW_CAST = registerBlockInBlockset(CAST_BLOCKS, "yellow_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.YELLOW)));
-    public static final Block VERMILION_CAST = registerBlockInBlockset(CAST_BLOCKS, "vermilion_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BRIGHT_RED)));
+    public static final Block CAST = registerBlockInBlockset(CAST_BLOCKS, "cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.WHITE)));
+    public static final Block BLACK_CAST = registerBlockInBlockset(CAST_BLOCKS, "black_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BLACK)));
+    public static final Block BROWN_CAST = registerBlockInBlockset(CAST_BLOCKS, "brown_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
     public static final Block VELVET_CAST = registerBlockInBlockset(CAST_BLOCKS, "velvet_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.DULL_RED)));
     public static final Block RED_CAST = registerBlockInBlockset(CAST_BLOCKS, "red_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BRIGHT_RED)));
-    public static final Block PURPLE_CAST = registerBlockInBlockset(CAST_BLOCKS, "purple_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.PURPLE)));
-    public static final Block NAVY_CAST = registerBlockInBlockset(CAST_BLOCKS, "navy_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.WATER_BLUE)));
-    public static final Block MAGENTA_CAST = registerBlockInBlockset(CAST_BLOCKS, "magenta_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.MAGENTA)));
+    public static final Block VERMILION_CAST = registerBlockInBlockset(CAST_BLOCKS, "vermilion_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BRIGHT_RED)));
+    public static final Block AMBER_CAST = registerBlockInBlockset(CAST_BLOCKS, "amber_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.TERRACOTTA_YELLOW)));
+    public static final Block YELLOW_CAST = registerBlockInBlockset(CAST_BLOCKS, "yellow_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.YELLOW)));
+    public static final Block CHARTREUSE_CAST = registerBlockInBlockset(CAST_BLOCKS, "chartreuse_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.PALE_GREEN)));
     public static final Block LIME_CAST = registerBlockInBlockset(CAST_BLOCKS, "lime_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.LIME)));
     public static final Block GREEN_CAST = registerBlockInBlockset(CAST_BLOCKS, "green_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.EMERALD_GREEN)));
-    public static final Block BLACK_CAST = registerBlockInBlockset(CAST_BLOCKS, "black_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.BLACK)));
     public static final Block CYAN_CAST = registerBlockInBlockset(CAST_BLOCKS, "cyan_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.CYAN)));
-    public static final Block CHARTREUSE_CAST = registerBlockInBlockset(CAST_BLOCKS, "chartreuse_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.PALE_GREEN)));
-    public static final Block BROWN_CAST = registerBlockInBlockset(CAST_BLOCKS, "brown_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
     public static final Block BLUE_CAST = registerBlockInBlockset(CAST_BLOCKS, "blue_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.LAPIS_BLUE)));
-    public static final Block AMBER_CAST = registerBlockInBlockset(CAST_BLOCKS, "amber_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.TERRACOTTA_YELLOW)));
-    public static final Block CAST = registerBlockInBlockset(CAST_BLOCKS, "cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.WHITE)));
+    public static final Block NAVY_CAST = registerBlockInBlockset(CAST_BLOCKS, "navy_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.WATER_BLUE)));
+    public static final Block PURPLE_CAST = registerBlockInBlockset(CAST_BLOCKS, "purple_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.PURPLE)));
+    public static final Block MAGENTA_CAST = registerBlockInBlockset(CAST_BLOCKS, "magenta_cast", new Block(FabricBlockSettings.copyOf(castMaterial).mapColor(MapColor.MAGENTA)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - HOST">
     private static final FabricBlockSettings hostMaterial = FabricBlockSettings.create()
@@ -848,7 +872,7 @@ public class ModBlocks {
     public static final Block GRAY_CRT = registerBlock("gray_crt", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).mapColor(DyeColor.GRAY), ModSoundEvents.BLOCK_REDDS_ACTIVATE, ModSoundEvents.BLOCK_REDDS_DEACTIVATE));
     public static final Block EMPTY_TIRE = registerBlock("empty_tire", new BouncyPillarBlock(FabricBlockSettings.create().mapColor(MapColor.BLACK).instrument(Instrument.BASS).strength(0.2f).sounds(ModBlockSoundGroup.TIRE)));
     public static final Block TIRE = registerBlock("tire", new PillarBlock(FabricBlockSettings.copyOf(EMPTY_TIRE).strength(1.0f).requiresTool()));
-    public static final Block CRATE = registerBlock("crate", new CrateBlock(FabricBlockSettings.create().instrument(Instrument.BASEDRUM).mapColor(MapColor.TERRACOTTA_GRAY).strength(3.5f, 50.0f).requiresTool().sounds(BlockSoundGroup.COPPER)));
+    public static final Block CRATE = registerBlock("crate", new CrateBlock(FabricBlockSettings.create().instrument(Instrument.BASEDRUM).mapColor(MapColor.TERRACOTTA_GRAY).strength(3.5f, 50.0f).requiresTool().sounds(ModBlockSoundGroup.KORP)));
     public static final Block KEYBOARD = registerBlock("keyboard", new KeyboardBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(0.1f).sounds(ModBlockSoundGroup.DECAL_SHEETING).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block AGED_KEYBOARD = registerBlock("aged_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block BLACK_KEYBOARD = registerBlock("black_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY)));

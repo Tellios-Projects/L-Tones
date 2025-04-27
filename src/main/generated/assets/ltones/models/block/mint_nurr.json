@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "ltones:block/mint_nurr"
+    "down": "ltones:block/mint_nurr_top",
+    "east": "ltones:block/mint_nurr",
+    "north": "ltones:block/mint_nurr",
+    "particle": "ltones:block/mint_nurr",
+    "south": "ltones:block/mint_nurr",
+    "up": "ltones:block/mint_nurr_top",
+    "west": "ltones:block/mint_nurr"
   }
 }

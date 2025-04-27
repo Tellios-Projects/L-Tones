@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "ltones:block/fuchsia_nurr"
+    "down": "ltones:block/fuchsia_nurr_top",
+    "east": "ltones:block/fuchsia_nurr",
+    "north": "ltones:block/fuchsia_nurr",
+    "particle": "ltones:block/fuchsia_nurr",
+    "south": "ltones:block/fuchsia_nurr",
+    "up": "ltones:block/fuchsia_nurr_top",
+    "west": "ltones:block/fuchsia_nurr"
   }
 }
