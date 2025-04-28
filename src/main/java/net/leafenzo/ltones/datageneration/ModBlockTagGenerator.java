@@ -199,6 +199,7 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
                 .add(ModBlocks.BLACK_KEYBOARD)
                 .add(ModBlocks.GRAY_KEYBOARD)
                 .add(ModBlocks.ANTENNA)
+                .add(ModBlocks.RADIO)
         ;
 
         for(Block block : ModBlocks.DECAL_BLOCKS) {
