@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "ltonesflakes",
+  "group": "ltonesconductium",
   "ingredients": [
     {
-      "item": "ltones:antibrass"
+      "item": "ltones:antibrass_ingot"
     },
     {
-      "item": "minecraft:quartz"
+      "item": "minecraft:gold_nugget"
     }
   ],
   "result": {
     "count": 4,
-    "item": "ltones:flakes"
+    "item": "ltones:conductium"
   }
 }

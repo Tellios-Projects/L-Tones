@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:sol",
     "ltones:sol_photo",
     "ltones:sol_electron",
     "ltones:sol_max",
@@ -16,7 +17,6 @@
     "ltones:sol_field",
     "ltones:sol_nuclei",
     "ltones:sol_corona",
-    "ltones:sol_soundscape",
-    "ltones:sol"
+    "ltones:sol_soundscape"
   ]
 }

@@ -75,6 +75,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         //<editor-fold desc ="EnglishLang - Manual Translations">
         generateTranslation(translationBuilder, ModBlocks.RAW_LUESIUM_BLOCK, "Block of Raw Luesium");
         generateTranslation(translationBuilder, ModBlocks.LUESIUM_BLOCK, "Block of Luesium");
+        generateTranslation(translationBuilder, ModBlocks.ANTIBRASS_BLOCK, "Block of Antibrass");
         generateTranslation(translationBuilder, ModBlocks.CRT, "CRT Monitor");
         generateTranslation(translationBuilder, ModBlocks.AGED_CRT, "Aged CRT Monitor");
         generateTranslation(translationBuilder, ModBlocks.BLACK_CRT, "Black CRT Monitor");

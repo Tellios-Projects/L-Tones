@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:veeld",
     "ltones:veeld_wet",
     "ltones:veeld_traction",
     "ltones:veeld_structure",
@@ -15,7 +16,6 @@
     "ltones:veeld_embossed",
     "ltones:veeld_drill",
     "ltones:veeld_core",
-    "ltones:veeld_brick",
-    "ltones:veeld"
+    "ltones:veeld_brick"
   ]
 }

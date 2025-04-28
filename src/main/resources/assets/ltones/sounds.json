@@ -2195,6 +2195,57 @@
 		]
 	},
 
+	"block.antibrass.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/antibrass/break1",
+			"ltones:block/antibrass/break2",
+			"ltones:block/antibrass/break3",
+			"ltones:block/antibrass/break4"
+		]
+	},
+	"block.antibrass.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/antibrass/step1",
+			"ltones:block/antibrass/step2",
+			"ltones:block/antibrass/step3",
+			"ltones:block/antibrass/step4",
+			"ltones:block/antibrass/step5",
+			"ltones:block/antibrass/step6"
+		]
+	},
+	"block.antibrass.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/antibrass/break1",
+			"ltones:block/antibrass/break2",
+			"ltones:block/antibrass/break3",
+			"ltones:block/antibrass/break4"
+		]
+	},
+	"block.antibrass.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/antibrass/step1",
+			"ltones:block/antibrass/step2",
+			"ltones:block/antibrass/step3",
+			"ltones:block/antibrass/step4",
+			"ltones:block/antibrass/step5",
+			"ltones:block/antibrass/step6"
+		]
+	},
+	"block.antibrass.fall": {
+		"sounds": [
+			"ltones:block/antibrass/step1",
+			"ltones:block/antibrass/step2",
+			"ltones:block/antibrass/step3",
+			"ltones:block/antibrass/step4",
+			"ltones:block/antibrass/step5",
+			"ltones:block/antibrass/step6"
+		]
+	},
+
 	"block.luesium_door.open": {
 		"subtitle": "subtitles.block.door.toggle",
 		"sounds": [

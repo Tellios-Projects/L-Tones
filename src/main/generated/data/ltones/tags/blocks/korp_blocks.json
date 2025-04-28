@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:korp",
     "ltones:korp_wall",
     "ltones:korp_vest",
     "ltones:korp_secure",
@@ -16,7 +17,6 @@
     "ltones:korp_command",
     "ltones:korp_bank",
     "ltones:korp_asset",
-    "ltones:korp",
     "ltones:korp_soundscape"
   ]
 }

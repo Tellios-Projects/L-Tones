@@ -730,6 +730,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LUESIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_LUESIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ENDSTONE_LUESIUM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ANTIBRASS_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TONE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TONE_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.POLISHED_TONE);

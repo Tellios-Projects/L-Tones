@@ -100,7 +100,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "ltones:antibrass"
+          "name": "ltones:antibrass_ingot"
         }
       ],
       "rolls": 1.0

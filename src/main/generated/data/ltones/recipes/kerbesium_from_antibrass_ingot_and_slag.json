@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "ltonesazure_rivet",
+  "group": "ltoneskerbesium",
   "ingredients": [
     {
-      "item": "ltones:antibrass"
+      "item": "ltones:antibrass_ingot"
     },
     {
-      "item": "minecraft:lapis_lazuli"
+      "item": "ltones:slag"
     }
   ],
   "result": {
     "count": 4,
-    "item": "ltones:azure_rivet"
+    "item": "ltones:kerbesium"
   }
 }

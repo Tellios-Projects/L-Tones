@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "ltones:item/antibrass"
+    "layer0": "ltones:item/antibrass_ingot"
   }
 }

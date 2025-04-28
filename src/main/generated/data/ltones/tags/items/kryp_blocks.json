@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:kryp",
     "ltones:kryp_wire",
     "ltones:kryp_support",
     "ltones:kryp_storage",
@@ -15,7 +16,6 @@
     "ltones:kryp_connector",
     "ltones:kryp_chunk",
     "ltones:kryp_beam",
-    "ltones:kryp_base",
-    "ltones:kryp"
+    "ltones:kryp_base"
   ]
 }

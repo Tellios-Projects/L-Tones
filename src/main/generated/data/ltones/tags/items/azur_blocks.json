@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:azur",
     "ltones:azur_cript",
     "ltones:azur_cube",
     "ltones:azur_cyber",
@@ -15,7 +16,6 @@
     "ltones:azur_scrape",
     "ltones:azur_sensory",
     "ltones:azur_sign",
-    "ltones:azur_signal",
-    "ltones:azur"
+    "ltones:azur_signal"
   ]
 }

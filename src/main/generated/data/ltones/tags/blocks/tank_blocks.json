@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:tank",
     "ltones:tank_zizer",
     "ltones:tank_window",
     "ltones:tank_tread",
@@ -15,7 +16,6 @@
     "ltones:tank_cannon",
     "ltones:tank_beam",
     "ltones:tank_band",
-    "ltones:tank_armor",
-    "ltones:tank"
+    "ltones:tank_armor"
   ]
 }

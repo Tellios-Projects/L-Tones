@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:rost",
     "ltones:rost_wallpaper",
     "ltones:rost_vellum",
     "ltones:rost_vein",
@@ -15,7 +16,6 @@
     "ltones:rost_linoleum",
     "ltones:rost_crete",
     "ltones:rost_corrigor",
-    "ltones:rost_cage",
-    "ltones:rost"
+    "ltones:rost_cage"
   ]
 }

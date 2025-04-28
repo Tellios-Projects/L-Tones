@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:lair",
     "ltones:lair_strut",
     "ltones:lair_smooth",
     "ltones:lair_rigor",
@@ -16,7 +17,6 @@
     "ltones:lair_chunk",
     "ltones:lair_cell",
     "ltones:lair_aged",
-    "ltones:lair",
     "ltones:lair_soundscape"
   ]
 }

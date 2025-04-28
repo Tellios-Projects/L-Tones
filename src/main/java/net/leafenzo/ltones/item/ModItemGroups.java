@@ -1,16 +1,11 @@
 package net.leafenzo.ltones.item;
 
 
-import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.leafenzo.ltones.ModInit;
 import net.leafenzo.ltones.Super;
 import net.leafenzo.ltones.block.ModBlocks;
-import net.minecraft.MinecraftVersion;
 import net.minecraft.block.Block;
-import net.minecraft.client.ClientBrandRetriever;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.RunArgs;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -37,7 +32,7 @@ public class ModItemGroups {
 
     public static ItemGroup LTONES = Registry.register(Registries.ITEM_GROUP, new Identifier(Super.MOD_ID, "ltones"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.ltones"))
-                    .icon(() -> new ItemStack(ModBlocks.REDDS_TILE)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModItems.LUESIUM_INGOT)).entries((displayContext, entries) -> {
                         for(Block block : includeVariants(ModBlocks.AGON_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.FORTT_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.GLAXX_BLOCKS)) { entries.add(block); }
@@ -65,6 +60,8 @@ public class ModItemGroups {
                         for(Block block : includeVariants(ModBlocks.FLEQ_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.SYNC_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.ROEN_BLOCKS)) { entries.add(block); }
+                        entries.add(ModBlocks.ROST);
+                        entries.add(ModBlocks.ROST_RUST);
                         entries.add(ModBlocks.ROST_CAGE);
                         entries.add(ModBlocks.ROST_CAGE_RUST);
                         entries.add(ModBlocks.ROST_CORRIGOR);
@@ -95,8 +92,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ROST_VELLUM_RUST);
                         entries.add(ModBlocks.ROST_WALLPAPER);
                         entries.add(ModBlocks.ROST_WALLPAPER_RUST);
-                        entries.add(ModBlocks.ROST);
-                        entries.add(ModBlocks.ROST_RUST);
                         for(Block block : includeVariants(ModBlocks.SOL_BLOCKS)) { entries.add(block); }
                         entries.add(ModBlocks.DOOR_STEAK);
                         entries.add(ModBlocks.TRAPDOOR_STEAK);
@@ -160,7 +155,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.LUESIUM_BLOCK);
                         entries.add(ModItems.LUESIUM_INGOT);
                         entries.add(ModItems.LUESIUM_CHUNK);
-                        entries.add(ModItems.ANTIBRASS);
+                        entries.add(ModBlocks.ANTIBRASS_BLOCK);
+                        entries.add(ModItems.ANTIBRASS_INGOT);
                         entries.add(ModItems.CONDUCTIUM);
                         entries.add(ModItems.KERBESIUM);
                         entries.add(ModItems.ORGANIC_BRASS);

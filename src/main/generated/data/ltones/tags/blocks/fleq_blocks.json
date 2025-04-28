@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:fleq",
     "ltones:fleq_wet",
     "ltones:fleq_valve",
     "ltones:fleq_tube",
@@ -15,7 +16,6 @@
     "ltones:fleq_direct",
     "ltones:fleq_bubble",
     "ltones:fleq_bolden",
-    "ltones:fleq_abode",
-    "ltones:fleq"
+    "ltones:fleq_abode"
   ]
 }

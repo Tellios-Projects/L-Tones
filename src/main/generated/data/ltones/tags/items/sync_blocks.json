@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:sync",
     "ltones:sync_tank",
     "ltones:sync_shielding",
     "ltones:sync_safe",
@@ -16,7 +17,6 @@
     "ltones:sync_data",
     "ltones:sync_contain",
     "ltones:sync_caution",
-    "ltones:sync_soundscape",
-    "ltones:sync"
+    "ltones:sync_soundscape"
   ]
 }

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:minn",
     "ltones:minn_tiles",
     "ltones:minn_resonance",
     "ltones:minn_quilt",
@@ -15,7 +16,6 @@
     "ltones:minn_cage",
     "ltones:minn_cubes",
     "ltones:minn_blank",
-    "ltones:minn_bevel",
-    "ltones:minn"
+    "ltones:minn_bevel"
   ]
 }

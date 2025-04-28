@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:exri",
     "ltones:exri_level",
     "ltones:exri_tect",
     "ltones:exri_stem",
@@ -16,7 +17,6 @@
     "ltones:exri_current",
     "ltones:exri_critical",
     "ltones:exri_control",
-    "ltones:exri_soundscape",
-    "ltones:exri"
+    "ltones:exri_soundscape"
   ]
 }

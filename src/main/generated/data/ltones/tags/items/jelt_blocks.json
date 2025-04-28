@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:jelt",
     "ltones:jelt_supply",
     "ltones:jelt_poke",
     "ltones:jelt_pathjoint",
@@ -15,7 +16,6 @@
     "ltones:jelt_emboss",
     "ltones:jelt_destine",
     "ltones:jelt_confine",
-    "ltones:jelt_atwal",
-    "ltones:jelt"
+    "ltones:jelt_atwal"
   ]
 }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_luesium_ingot": {
+    "has_antibrass_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ltones:luesium_ingot"
+              "ltones:antibrass_ingot"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:antibrass_from_luesium_ingot_and_copper_ingot"
+        "recipe": "minecraft:flakes_from_antibrass_ingot_and_quartz"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_luesium_ingot",
+      "has_antibrass_ingot",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:antibrass_from_luesium_ingot_and_copper_ingot"
+      "minecraft:flakes_from_antibrass_ingot_and_quartz"
     ]
   },
   "sends_telemetry_event": false

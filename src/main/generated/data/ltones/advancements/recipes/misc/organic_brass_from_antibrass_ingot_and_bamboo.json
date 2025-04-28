@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_antibrass": {
+    "has_antibrass_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ltones:antibrass"
+              "ltones:antibrass_ingot"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:flakes_from_antibrass_and_quartz"
+        "recipe": "minecraft:organic_brass_from_antibrass_ingot_and_bamboo"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_antibrass",
+      "has_antibrass_ingot",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:flakes_from_antibrass_and_quartz"
+      "minecraft:organic_brass_from_antibrass_ingot_and_bamboo"
     ]
   },
   "sends_telemetry_event": false

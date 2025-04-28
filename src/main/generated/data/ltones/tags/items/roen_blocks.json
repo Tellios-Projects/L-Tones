@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "ltones:roen",
     "ltones:roen_dessicate",
     "ltones:roen_lesion",
     "ltones:roen_tract",
@@ -15,7 +16,6 @@
     "ltones:roen_assay",
     "ltones:roen_operon",
     "ltones:roen_oncogene",
-    "ltones:roen_grout",
-    "ltones:roen"
+    "ltones:roen_grout"
   ]
 }

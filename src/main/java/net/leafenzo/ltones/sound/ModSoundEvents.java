@@ -508,6 +508,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_DEEPSLATE_LUESIUM_ORE_HIT = registerSoundEvent("block.deepslate_luesium_ore.hit");
     public static final SoundEvent BLOCK_DEEPSLATE_LUESIUM_ORE_FALL = registerSoundEvent("block.deepslate_luesium_ore.fall");
 
+    public static final SoundEvent BLOCK_ANTIBRASS_BREAK = registerSoundEvent("block.antibrass.break");
+    public static final SoundEvent BLOCK_ANTIBRASS_STEP = registerSoundEvent("block.antibrass.step");
+    public static final SoundEvent BLOCK_ANTIBRASS_PLACE = registerSoundEvent("block.antibrass.place");
+    public static final SoundEvent BLOCK_ANTIBRASS_HIT = registerSoundEvent("block.antibrass.hit");
+    public static final SoundEvent BLOCK_ANTIBRASS_FALL = registerSoundEvent("block.antibrass.fall");
+
     public static final SoundEvent BLOCK_ROST_BREAK = registerSoundEvent("block.rost.break");
     public static final SoundEvent BLOCK_ROST_STEP = registerSoundEvent("block.rost.step");
     public static final SoundEvent BLOCK_ROST_PLACE = registerSoundEvent("block.rost.place");

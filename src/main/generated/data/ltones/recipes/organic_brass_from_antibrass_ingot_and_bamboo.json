@@ -4,7 +4,7 @@
   "group": "ltonesorganic_brass",
   "ingredients": [
     {
-      "item": "ltones:antibrass"
+      "item": "ltones:antibrass_ingot"
     },
     {
       "item": "minecraft:bamboo"
