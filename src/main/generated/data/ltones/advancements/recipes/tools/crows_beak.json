@@ -1,24 +1,24 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_antibrass_ingot": {
+    "has_luesium_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ltones:antibrass_ingot"
+              "ltones:luesium_ingot"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_conductium": {
+    "has_netherite_scrap": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ltones:conductium"
+              "minecraft:netherite_scrap"
             ]
           }
         ]
@@ -27,21 +27,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ltones:antenna"
+        "recipe": "ltones:crows_beak"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_conductium",
-      "has_antibrass_ingot",
+      "has_netherite_scrap",
+      "has_luesium_ingot",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "ltones:antenna"
+      "ltones:crows_beak"
     ]
   },
   "sends_telemetry_event": false

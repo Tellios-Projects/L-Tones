@@ -802,19 +802,21 @@ public class ModBlocks {
             .requiresTool()
             .strength(2.4f, 2.0f)
             .sounds(ModBlockSoundGroup.ROST);
+
     private static final FabricBlockSettings rostRustMaterial = FabricBlockSettings.create()
             .mapColor(MapColor.DULL_RED)
             .requiresTool()
             .strength(2.4f, 2.0f)
             .sounds(ModBlockSoundGroup.ROST_RUST);
+    //TODO: refactor rusting system in order to implement scraping with crow's beak
     public static final Block ROST_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
     public static final Block ROST_WALLPAPER_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_wallpaper_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
     public static final Block ROST_VELLUM_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_vellum_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
     public static final Block ROST_VEIN_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_vein_rust", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(rostRustMaterial)));
     public static final Block ROST_TUNNEL_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_tunnel_rust", new PillarBlock(FabricBlockSettings.copyOf(rostRustMaterial)));
-    public static final Block ROST_RIBBING_RUST     = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_ribbing_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
-    public static final Block ROST_SHIELDED_RUST     = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_shielded_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
-    public static final Block ROST_SMOTHERED_RUST     = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_smothered_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_RIBBING_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_ribbing_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_SHIELDED_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_shielded_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
+    public static final Block ROST_SMOTHERED_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_smothered_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
     public static final Block ROST_REBAR_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_rebar_rust", new PillarBlock(FabricBlockSettings.copyOf(rostRustMaterial)));
     public static final Block ROST_PLATES_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_plates_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));
     public static final Block ROST_PEEL_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_peel_rust", new Block(FabricBlockSettings.copyOf(rostRustMaterial)));

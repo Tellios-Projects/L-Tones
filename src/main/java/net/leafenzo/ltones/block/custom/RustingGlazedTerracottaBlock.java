@@ -8,18 +8,18 @@ import net.minecraft.util.math.random.Random;
 
 public class RustingGlazedTerracottaBlock extends GlazedTerracottaBlock {
 
-    BlockState block;
-    boolean rusted;
+    public BlockState rustBlock;
+    public boolean rusted;
     public RustingGlazedTerracottaBlock(Settings settings, BlockState rustedBlock, boolean isRusted) {
         super(settings);
-        block = rustedBlock;
+        rustBlock = rustedBlock;
         rusted = isRusted;
     }
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (world.isReceivingRedstonePower(pos) && random.nextInt(18) == 0 && !rusted) {
-            world.setBlockState(pos, block.getBlock().getStateWithProperties(state));
+            world.setBlockState(pos, rustBlock.getBlock().getStateWithProperties(state));
         }
     }
     @Override

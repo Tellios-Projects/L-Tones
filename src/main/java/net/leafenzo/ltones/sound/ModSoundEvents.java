@@ -534,6 +534,7 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_ZKUL_AMBIENT = registerSoundEvent("block.zkul.ambient");
     public static final SoundEvent BLOCK_ZKUL_WARN = registerSoundEvent("block.zkul.warn");
+    public static final SoundEvent BLOCK_ZKUL_OBTAIN = registerSoundEvent("block.zkul.obtain");
     public static final SoundEvent BLOCK_ZKUL_BREAK = registerSoundEvent("block.zkul.break");
     public static final SoundEvent BLOCK_ZKUL_STEP = registerSoundEvent("block.zkul.step");
     public static final SoundEvent BLOCK_ZKUL_PLACE = registerSoundEvent("block.zkul.place");

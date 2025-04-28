@@ -1,6 +1,7 @@
 package net.leafenzo.ltones.block.custom;
 
 import net.leafenzo.ltones.block.entity.ZkulBlockEntity;
+import net.leafenzo.ltones.item.ModItems;
 import net.leafenzo.ltones.particle.ModParticleTypes;
 import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.minecraft.block.*;
@@ -11,9 +12,12 @@ import net.minecraft.entity.effect.StatusEffectUtil;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
+import net.minecraft.item.ItemUsageContext;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.util.Hand;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
@@ -48,7 +52,7 @@ public class ZkulBlock extends BlockWithEntity {
 
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        if (!player.isCreative()) {
+        if (!(player.isCreative() || player.getStackInHand(Hand.MAIN_HAND).isOf(ModItems.CROWS_BEAK))) {
             this.explode(world, pos);
         }
         super.onBreak(world, pos, state, player);
@@ -56,17 +60,27 @@ public class ZkulBlock extends BlockWithEntity {
 
     @Override
     public void onBlockBreakStart(BlockState state, World world, BlockPos pos, PlayerEntity player) {
-        if (world instanceof ServerWorld) {
-            ServerPlayerEntity serverPlayerEntity = SculkShriekerBlockEntity.findResponsiblePlayerFromEntity(player);
-            if (serverPlayerEntity != null) {
-                player.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 260, 0, false, false));
+        if (!player.getStackInHand(Hand.MAIN_HAND).isOf(ModItems.CROWS_BEAK)) {
+            if (world instanceof ServerWorld) {
+                ServerPlayerEntity serverPlayerEntity = SculkShriekerBlockEntity.findResponsiblePlayerFromEntity(player);
+                if (serverPlayerEntity != null) {
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 260, 0, false, false));
+                }
             }
+            for (int i = 0; i < 50; i++) {
+                world.addParticle(ModParticleTypes.ZKUL, ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getX(), ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getY(), ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getZ(), 0, 0, 0);
+            }
+            world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_ZKUL_WARN, SoundCategory.BLOCKS, 1, world.getRandom().nextFloat() * 0.2f + 0.8f, false);
+            super.onBlockBreakStart(state, world, pos, player);
+        } else {
+            world.breakBlock(pos,true,player);
+            for (int i = 0; i < 8; i++) {
+                world.addParticle(ModParticleTypes.ZKUL, world.getRandom().nextFloat() + pos.getX(), world.getRandom().nextFloat() + pos.getY(), world.getRandom().nextFloat() + pos.getZ(), 0, 2, 0);
+            }
+            player.getStackInHand(Hand.MAIN_HAND).damage(1,player, p -> p.sendToolBreakStatus(Hand.MAIN_HAND));
+            world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_ZKUL_OBTAIN, SoundCategory.BLOCKS, 1, world.getRandom().nextFloat() * 0.2f + 0.8f, false);
+            super.onBlockBreakStart(state, world, pos, player);
         }
-        for (int i = 0; i < 50; i++) {
-            world.addParticle(ModParticleTypes.ZKUL, ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getX(), ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getY(), ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getZ(), 0, 0, 0);
-        }
-        world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_ZKUL_WARN, SoundCategory.BLOCKS, 1, world.getRandom().nextFloat() * 0.2f + 0.8f, false);
-        super.onBlockBreakStart(state, world, pos, player);
     }
 
     @Override

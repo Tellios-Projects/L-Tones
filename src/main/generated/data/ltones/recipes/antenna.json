@@ -2,14 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
+    "A": {
+      "item": "ltones:antibrass_ingot"
+    },
+    "C": {
       "item": "ltones:conductium"
     }
   },
   "pattern": [
-    "# #",
-    " # ",
-    " # "
+    "AAA",
+    " C ",
+    " C "
   ],
   "result": {
     "item": "ltones:antenna"

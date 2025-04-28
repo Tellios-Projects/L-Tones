@@ -9,6 +9,7 @@ import net.leafenzo.ltones.block.custom.LitSlabBlock;
 import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.data.client.ModModels;
 import net.leafenzo.ltones.data.client.ModTexturedModel;
+import net.leafenzo.ltones.item.ModItems;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.*;
 import net.minecraft.data.client.*;
@@ -783,6 +784,7 @@ public class ModModelProvider extends FabricModelProvider {
     }
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        itemModelGenerator.register(ModItems.CROWS_BEAK, Models.HANDHELD);
         //itemModelGenerator.register(ModItems.RAW_LUESIUM, Models.GENERATED);
         //itemModelGenerator.register(ModItems.LUESIUM_CHUNK, Models.GENERATED);
         //itemModelGenerator.register(ModItems.LUESIUM_INGOT, Models.GENERATED);

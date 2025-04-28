@@ -4,14 +4,46 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.leafenzo.ltones.ModInit;
 import net.leafenzo.ltones.Super;
 import net.leafenzo.ltones.block.ModBlocks;
-import net.minecraft.item.AliasedBlockItem;
-import net.minecraft.item.Item;
+import net.minecraft.item.*;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
     //<editor-fold desc ="Items">
+    public static final Item CROWS_BEAK = registerItem("crows_beak", new CrowsBeakItem(new ToolMaterial() {
+        @Override
+        public int getDurability() {
+            return 752;
+        }
+
+        @Override
+        public float getMiningSpeedMultiplier() {
+            return 7.0f;
+        }
+
+        @Override
+        public float getAttackDamage() {
+            return 2.5f;
+        }
+
+        @Override
+        public int getMiningLevel() {
+            return 3;
+        }
+
+        @Override
+        public int getEnchantability() {
+            return 20;
+        }
+
+        @Override
+        public Ingredient getRepairIngredient() {
+            return Ingredient.ofItems(Items.NETHERITE_SCRAP);
+        }
+    }, 4, 0.9f, new FabricItemSettings()));
+
     public static final Item RAW_LUESIUM = registerItem("raw_luesium", new AliasedBlockItem(ModBlocks.DECAL_RAW_LUESIUM, new FabricItemSettings()));
     public static final Item LUESIUM_INGOT = registerItem("luesium_ingot", new AliasedBlockItem(ModBlocks.DECAL_LUESIUM, new FabricItemSettings()));
     public static final Item LUESIUM_CHUNK = registerItem("luesium_chunk", new AliasedBlockItem(ModBlocks.DECAL_LUESIUM_CHUNK, new FabricItemSettings()));

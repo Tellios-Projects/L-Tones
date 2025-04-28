@@ -36,6 +36,11 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
                 .add(Blocks.DIORITE)
                 .add(Blocks.BASALT)
         ;
+        getOrCreateTagBuilder(ModTags.Blocks.CROWS_BEAK_MINEABLE)
+                .add(ModBlocks.ZKUL)
+                .addTag(BlockTags.PICKAXE_MINEABLE)
+                .addTag(BlockTags.AXE_MINEABLE)
+        ;
         //</editor-fold
         //<editor-fold desc ="BlockTags - BlockSet Self-tags">
         for(BlockSet blockSet : ModBlocks.BLOCKSETS) {
@@ -176,6 +181,7 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
                 .add(ModBlocks.LUESIUM_ORE)
                 .add(ModBlocks.DEEPSLATE_LUESIUM_ORE)
                 .add(ModBlocks.ENDSTONE_LUESIUM_ORE)
+                .add(ModBlocks.ANTIBRASS_BLOCK)
                 .add(ModBlocks.TONE)
                 .add(ModBlocks.TONE_BRICKS)
                 .add(ModBlocks.POLISHED_TONE)

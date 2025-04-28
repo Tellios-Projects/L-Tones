@@ -12,6 +12,8 @@ public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> IGNEOUS_ROCKS = getOrCreateTag("igneous_rocks");
 
+        public static final TagKey<Block> CROWS_BEAK_MINEABLE = getOrCreateTag("mineable/crows_beak");
+
         public static TagKey<Block> getOrCreateTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(Super.MOD_ID, name));
         }

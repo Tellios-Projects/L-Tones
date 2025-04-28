@@ -467,11 +467,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.SLAG), FabricRecipeProvider.conditionsFromItem(ModItems.SLAG))
                 .offerTo(exporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANTENNA, 1)
-                .input(Character.valueOf('#'), ModItems.CONDUCTIUM)
-                .pattern("# #")
-                .pattern(" # ")
-                .pattern(" # ")
+                .input(Character.valueOf('C'), ModItems.CONDUCTIUM)
+                .input(Character.valueOf('A'), ModItems.ANTIBRASS_INGOT)
+                .pattern("AAA")
+                .pattern(" C ")
+                .pattern(" C ")
                 .criterion(FabricRecipeProvider.hasItem(ModItems.CONDUCTIUM), FabricRecipeProvider.conditionsFromItem(ModItems.CONDUCTIUM))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.ANTIBRASS_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.ANTIBRASS_INGOT))
                 .offerTo(exporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RADIO, 1)
                 .input(Character.valueOf('P'), ModItems.POLYMER)
@@ -484,6 +486,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.POLYMER), FabricRecipeProvider.conditionsFromItem(ModItems.POLYMER))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.CONDUCTIUM), FabricRecipeProvider.conditionsFromItem(ModItems.CONDUCTIUM))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.DIODE), FabricRecipeProvider.conditionsFromItem(ModItems.DIODE))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.LUESIUM_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.LUESIUM_INGOT))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.CROWS_BEAK, 1)
+                .input(Character.valueOf('A'), ModItems.AZURE_RIVET)
+                .input(Character.valueOf('N'), Items.NETHERITE_SCRAP)
+                .input(Character.valueOf('L'), ModItems.LUESIUM_INGOT)
+                .pattern("LNL")
+                .pattern(" AL")
+                .pattern(" A ")
+                .criterion(FabricRecipeProvider.hasItem(Items.NETHERITE_SCRAP), FabricRecipeProvider.conditionsFromItem(Items.NETHERITE_SCRAP))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.LUESIUM_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.LUESIUM_INGOT))
                 .offerTo(exporter);
 

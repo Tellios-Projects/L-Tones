@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:zkul",
+    "#minecraft:mineable/pickaxe",
+    "#minecraft:mineable/axe"
+  ]
+}

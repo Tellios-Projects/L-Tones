@@ -155,6 +155,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.LUESIUM_BLOCK);
                         entries.add(ModItems.LUESIUM_INGOT);
                         entries.add(ModItems.LUESIUM_CHUNK);
+                        entries.add(ModItems.CROWS_BEAK);
                         entries.add(ModBlocks.ANTIBRASS_BLOCK);
                         entries.add(ModItems.ANTIBRASS_INGOT);
                         entries.add(ModItems.CONDUCTIUM);

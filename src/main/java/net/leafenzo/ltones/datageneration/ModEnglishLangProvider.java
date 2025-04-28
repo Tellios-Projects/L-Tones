@@ -5,23 +5,16 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
 import net.leafenzo.ltones.Super;
 import net.leafenzo.ltones.block.ModBlocks;
+import net.leafenzo.ltones.item.ModItems;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.Block;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
-import net.minecraft.text.Text;
-import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
-import org.spongepowered.asm.mixin.Debug;
 
-import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import static net.leafenzo.ltones.util.ModUtil.toSentanceCase;
 
@@ -81,6 +74,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         generateTranslation(translationBuilder, ModBlocks.BLACK_CRT, "Black CRT Monitor");
         generateTranslation(translationBuilder, ModBlocks.GRAY_CRT, "Gray CRT Monitor");
         generateTranslation(translationBuilder, "container.crate", "Crate");
+        generateTranslation(translationBuilder, ModItems.CROWS_BEAK, "Crow's Beak");
 
         generateTranslation(translationBuilder, ModBlocks.ROST_RUST, "Rusted Rost");
         generateTranslation(translationBuilder, ModBlocks.ROST_CAGE_RUST, "Rusted Rost Cage");
