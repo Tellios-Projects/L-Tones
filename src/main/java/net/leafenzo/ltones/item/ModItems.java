@@ -13,37 +13,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     //<editor-fold desc ="Items">
-    public static final Item CROWS_BEAK = registerItem("crows_beak", new CrowsBeakItem(new ToolMaterial() {
-        @Override
-        public int getDurability() {
-            return 752;
-        }
-
-        @Override
-        public float getMiningSpeedMultiplier() {
-            return 7.0f;
-        }
-
-        @Override
-        public float getAttackDamage() {
-            return 2.5f;
-        }
-
-        @Override
-        public int getMiningLevel() {
-            return 3;
-        }
-
-        @Override
-        public int getEnchantability() {
-            return 20;
-        }
-
-        @Override
-        public Ingredient getRepairIngredient() {
-            return Ingredient.ofItems(Items.NETHERITE_SCRAP);
-        }
-    }, 4, 0.9f, new FabricItemSettings()));
+    public static final Item CROWS_BEAK = registerItem("crows_beak", new CrowsBeakItem(4, 0.9f, new FabricItemSettings()));
 
     public static final Item RAW_LUESIUM = registerItem("raw_luesium", new AliasedBlockItem(ModBlocks.DECAL_RAW_LUESIUM, new FabricItemSettings()));
     public static final Item LUESIUM_INGOT = registerItem("luesium_ingot", new AliasedBlockItem(ModBlocks.DECAL_LUESIUM, new FabricItemSettings()));

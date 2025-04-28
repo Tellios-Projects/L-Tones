@@ -54,6 +54,12 @@ public class ZkulBlock extends BlockWithEntity {
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         if (!(player.isCreative() || player.getStackInHand(Hand.MAIN_HAND).isOf(ModItems.CROWS_BEAK))) {
             this.explode(world, pos);
+        } else if (!player.isCreative() && player.getStackInHand(Hand.MAIN_HAND).isOf(ModItems.CROWS_BEAK)) {
+            world.breakBlock(pos,true,player);
+            for (int i = 0; i < 8; i++) {
+                world.addParticle(ModParticleTypes.ZKUL, world.getRandom().nextFloat() + pos.getX(), world.getRandom().nextFloat() + pos.getY(), world.getRandom().nextFloat() + pos.getZ(), 0, 2, 0);
+            }
+            world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_ZKUL_OBTAIN, SoundCategory.BLOCKS, 1, world.getRandom().nextFloat() * 0.2f + 0.8f, false);
         }
         super.onBreak(world, pos, state, player);
     }
@@ -71,14 +77,6 @@ public class ZkulBlock extends BlockWithEntity {
                 world.addParticle(ModParticleTypes.ZKUL, ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getX(), ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getY(), ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getZ(), 0, 0, 0);
             }
             world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_ZKUL_WARN, SoundCategory.BLOCKS, 1, world.getRandom().nextFloat() * 0.2f + 0.8f, false);
-            super.onBlockBreakStart(state, world, pos, player);
-        } else {
-            world.breakBlock(pos,true,player);
-            for (int i = 0; i < 8; i++) {
-                world.addParticle(ModParticleTypes.ZKUL, world.getRandom().nextFloat() + pos.getX(), world.getRandom().nextFloat() + pos.getY(), world.getRandom().nextFloat() + pos.getZ(), 0, 2, 0);
-            }
-            player.getStackInHand(Hand.MAIN_HAND).damage(1,player, p -> p.sendToolBreakStatus(Hand.MAIN_HAND));
-            world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_ZKUL_OBTAIN, SoundCategory.BLOCKS, 1, world.getRandom().nextFloat() * 0.2f + 0.8f, false);
             super.onBlockBreakStart(state, world, pos, player);
         }
     }
