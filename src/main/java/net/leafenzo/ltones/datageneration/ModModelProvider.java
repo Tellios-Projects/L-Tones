@@ -238,9 +238,13 @@ public class ModModelProvider extends FabricModelProvider {
 //        blockStateModelGenerator.registerItemModel(block.asItem());
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.ANTENNA, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
     }
-    private void registerRadioBlock(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+    private void registerRadioBlock(BlockStateModelGenerator blockStateModelGenerator) {
         Identifier identifier = new Identifier("ltones", "block/radio");
-        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
+        Identifier identifier2 = new Identifier("ltones", "block/radio_antenna");
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.RADIO, BlockStateVariant.create()
+                .put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
+                //.coordinate(BlockStateModelGenerator.createBooleanModelMap(ModProperties.HAS_ANTENNA, identifier2, identifier)) WHYYYY DOESNTTTT THISSSSS WORKRKKKKKK
+                //.coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
     }
 
     @Override
@@ -752,7 +756,7 @@ public class ModModelProvider extends FabricModelProvider {
         registerKeyboardBlock(blockStateModelGenerator, ModBlocks.BLACK_KEYBOARD);
         registerKeyboardBlock(blockStateModelGenerator, ModBlocks.GRAY_KEYBOARD);
         registerAntennaBlock(blockStateModelGenerator);
-        registerRadioBlock(blockStateModelGenerator, ModBlocks.RADIO);
+        registerRadioBlock(blockStateModelGenerator);
         //</editor-fold>
 
         // Block Models

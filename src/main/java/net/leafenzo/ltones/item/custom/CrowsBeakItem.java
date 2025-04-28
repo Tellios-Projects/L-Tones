@@ -1,4 +1,4 @@
-package net.leafenzo.ltones.item;
+package net.leafenzo.ltones.item.custom;
 
 import net.leafenzo.ltones.registry.tag.ModTags;
 import net.minecraft.item.*;

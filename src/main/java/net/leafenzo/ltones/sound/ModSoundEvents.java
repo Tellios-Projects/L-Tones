@@ -7,6 +7,20 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 public class ModSoundEvents {
+    public static final SoundEvent BLOCK_ANTENNA_BREAK = registerSoundEvent("block.antenna.break");
+    public static final SoundEvent BLOCK_ANTENNA_STEP = registerSoundEvent("block.antenna.step");
+    public static final SoundEvent BLOCK_ANTENNA_PLACE = registerSoundEvent("block.antenna.place");
+    public static final SoundEvent BLOCK_ANTENNA_HIT = registerSoundEvent("block.antenna.hit");
+    public static final SoundEvent BLOCK_ANTENNA_FALL = registerSoundEvent("block.antenna.fall");
+
+    public static final SoundEvent BLOCK_RADIO_ON = registerSoundEvent("block.radio.on");
+    public static final SoundEvent BLOCK_RADIO_OFF = registerSoundEvent("block.radio.off");
+    public static final SoundEvent BLOCK_RADIO_BREAK = registerSoundEvent("block.radio.break");
+    public static final SoundEvent BLOCK_RADIO_STEP = registerSoundEvent("block.radio.step");
+    public static final SoundEvent BLOCK_RADIO_PLACE = registerSoundEvent("block.radio.place");
+    public static final SoundEvent BLOCK_RADIO_HIT = registerSoundEvent("block.radio.hit");
+    public static final SoundEvent BLOCK_RADIO_FALL = registerSoundEvent("block.radio.fall");
+
     public static final SoundEvent BLOCK_DECAL_AMALGAM_BREAK = registerSoundEvent("block.decal_amalgam.break");
     public static final SoundEvent BLOCK_DECAL_AMALGAM_STEP = registerSoundEvent("block.decal_amalgam.step");
     public static final SoundEvent BLOCK_DECAL_AMALGAM_PLACE = registerSoundEvent("block.decal_amalgam.place");

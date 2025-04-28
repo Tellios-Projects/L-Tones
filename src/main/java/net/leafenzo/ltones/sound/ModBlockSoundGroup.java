@@ -32,6 +32,9 @@ public class ModBlockSoundGroup {
     public static final BlockSoundGroup DECAL_TAWSINE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_TAWSINE_BREAK, ModSoundEvents.BLOCK_DECAL_TAWSINE_STEP, ModSoundEvents.BLOCK_DECAL_TAWSINE_PLACE, ModSoundEvents.BLOCK_DECAL_TAWSINE_HIT, ModSoundEvents.BLOCK_DECAL_TAWSINE_FALL);
     public static final BlockSoundGroup DECAL_THINKING_METAL = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_DECAL_THINKING_METAL_BREAK, ModSoundEvents.BLOCK_DECAL_THINKING_METAL_STEP, ModSoundEvents.BLOCK_DECAL_THINKING_METAL_PLACE, ModSoundEvents.BLOCK_DECAL_THINKING_METAL_HIT, ModSoundEvents.BLOCK_DECAL_THINKING_METAL_FALL);
 
+    public static final BlockSoundGroup ANTENNA = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_ANTENNA_BREAK, ModSoundEvents.BLOCK_ANTENNA_STEP, ModSoundEvents.BLOCK_ANTENNA_PLACE, ModSoundEvents.BLOCK_ANTENNA_HIT, ModSoundEvents.BLOCK_ANTENNA_FALL);
+    public static final BlockSoundGroup RADIO = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_RADIO_BREAK, ModSoundEvents.BLOCK_RADIO_STEP, ModSoundEvents.BLOCK_RADIO_PLACE, ModSoundEvents.BLOCK_RADIO_HIT, ModSoundEvents.BLOCK_RADIO_FALL);
+
     public static final BlockSoundGroup AGON = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_AGON_BREAK, ModSoundEvents.BLOCK_AGON_STEP, ModSoundEvents.BLOCK_AGON_PLACE, ModSoundEvents.BLOCK_AGON_HIT, ModSoundEvents.BLOCK_AGON_FALL);
     public static final BlockSoundGroup JELT = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_JELT_BREAK, ModSoundEvents.BLOCK_JELT_STEP, ModSoundEvents.BLOCK_JELT_PLACE, ModSoundEvents.BLOCK_JELT_HIT, ModSoundEvents.BLOCK_JELT_FALL);
     public static final BlockSoundGroup AZUR = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_AZUR_BREAK, ModSoundEvents.BLOCK_AZUR_STEP, ModSoundEvents.BLOCK_AZUR_PLACE, ModSoundEvents.BLOCK_AZUR_HIT, ModSoundEvents.BLOCK_AZUR_FALL);

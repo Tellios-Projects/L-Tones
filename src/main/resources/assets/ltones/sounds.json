@@ -1,4 +1,111 @@
 {
+	"block.antenna.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/antenna/break1",
+			"ltones:block/antenna/break2",
+			"ltones:block/antenna/break3",
+			"ltones:block/antenna/break4"
+		]
+	},
+	"block.antenna.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/antenna/step1",
+			"ltones:block/antenna/step2",
+			"ltones:block/antenna/step3",
+			"ltones:block/antenna/step4",
+			"ltones:block/antenna/step5",
+			"ltones:block/antenna/step6"
+		]
+	},
+	"block.antenna.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/antenna/break1",
+			"ltones:block/antenna/break2",
+			"ltones:block/antenna/break3",
+			"ltones:block/antenna/break4"
+		]
+	},
+	"block.antenna.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/antenna/step1",
+			"ltones:block/antenna/step2",
+			"ltones:block/antenna/step3",
+			"ltones:block/antenna/step4",
+			"ltones:block/antenna/step5",
+			"ltones:block/antenna/step6"
+		]
+	},
+	"block.antenna.fall": {
+		"sounds": [
+			"ltones:block/antenna/step1",
+			"ltones:block/antenna/step2",
+			"ltones:block/antenna/step3",
+			"ltones:block/antenna/step4",
+			"ltones:block/antenna/step5",
+			"ltones:block/antenna/step6"
+		]
+	},
+
+	"block.radio.on": {
+		"sounds": [
+			"ltones:block/radio/on"
+		]
+	},
+
+	"block.radio.off": {
+		"sounds": [
+			"ltones:block/radio/off"
+		]
+	},
+
+	"block.radio.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/radio/break1",
+			"ltones:block/radio/break2",
+			"ltones:block/radio/break3",
+			"ltones:block/radio/break4"
+		]
+	},
+	"block.radio.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/radio/step1",
+			"ltones:block/radio/step2",
+			"ltones:block/radio/step3",
+			"ltones:block/radio/step4"
+		]
+	},
+	"block.radio.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/radio/break1",
+			"ltones:block/radio/break2",
+			"ltones:block/radio/break3",
+			"ltones:block/radio/break4"
+		]
+	},
+	"block.radio.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/radio/step1",
+			"ltones:block/radio/step2",
+			"ltones:block/radio/step3",
+			"ltones:block/radio/step4"
+		]
+	},
+	"block.radio.fall": {
+		"sounds": [
+			"ltones:block/radio/step1",
+			"ltones:block/radio/step2",
+			"ltones:block/radio/step3",
+			"ltones:block/radio/step4"
+		]
+	},
 
 	"block.decal_conductium.break": {
 		"subtitle": "subtitles.block.generic.break",
