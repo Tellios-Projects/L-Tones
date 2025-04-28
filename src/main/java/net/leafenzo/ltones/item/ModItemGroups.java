@@ -60,6 +60,7 @@ public class ModItemGroups {
                         for(Block block : includeVariants(ModBlocks.FLEQ_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.SYNC_BLOCKS)) { entries.add(block); }
                         for(Block block : includeVariants(ModBlocks.ROEN_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.SOL_BLOCKS)) { entries.add(block); }
                         entries.add(ModBlocks.ROST);
                         entries.add(ModBlocks.ROST_RUST);
                         entries.add(ModBlocks.ROST_CAGE);
@@ -92,7 +93,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ROST_VELLUM_RUST);
                         entries.add(ModBlocks.ROST_WALLPAPER);
                         entries.add(ModBlocks.ROST_WALLPAPER_RUST);
-                        for(Block block : includeVariants(ModBlocks.SOL_BLOCKS)) { entries.add(block); }
                         entries.add(ModBlocks.DOOR_STEAK);
                         entries.add(ModBlocks.TRAPDOOR_STEAK);
                         entries.add(ModBlocks.DOOR_NEON);

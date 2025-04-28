@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonestawsine",
+  "ingredients": [
+    {
+      "item": "ltones:amalgam"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "ltones:tawsine"
+  }
+}

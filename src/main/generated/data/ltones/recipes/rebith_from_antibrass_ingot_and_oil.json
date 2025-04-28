@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesrebith",
+  "ingredients": [
+    {
+      "item": "ltones:antibrass_ingot"
+    },
+    {
+      "item": "ltones:oil"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "ltones:rebith"
+  }
+}
