@@ -1,7 +1,7 @@
 package net.leafenzo.ltones.item.custom;
 
 import net.leafenzo.ltones.registry.tag.ModTags;
-import net.minecraft.block.BlockState;
+import net.minecraft.block.*;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.BlockTags;
@@ -43,7 +43,7 @@ public class CrowsBeakItem extends MiningToolItem {
 
     @Override
     public float getMiningSpeedMultiplier(ItemStack stack, BlockState state) {
-        if (state.toString().contains("ltones:")) {
+        if (state.toString().contains("ltones:") && !state.isIn(ModTags.Blocks.NOT_INSTAMINE_CROWS_BEAK)) {
             return 15000f;
         } else if (state.isIn(ModTags.Blocks.CROWS_BEAK_MINEABLE) && !state.isIn(BlockTags.NEEDS_DIAMOND_TOOL)) {
             return 7.0f;

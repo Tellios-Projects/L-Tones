@@ -127,10 +127,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.TRAPDOOR_PUNCTURE);
                         entries.add(ModBlocks.IRON_BAR_DOOR);
                         entries.add(ModBlocks.TONE);
-                        entries.add(ModBlocks.TONE_BRICKS);
                         entries.add(ModBlocks.POLISHED_TONE);
-                        entries.add(ModBlocks.ABSTRACT_TONE);
+                        entries.add(ModBlocks.TONE_BRICKS);
                         entries.add(ModBlocks.FRAMED_TONE);
+                        entries.add(ModBlocks.ABSTRACT_TONE);
                         entries.add(ModBlocks.FRAMED_TONE_BRICKS);
                         entries.add(ModBlocks.ZTONE);
                         entries.add(ModBlocks.AURORA);

@@ -41,6 +41,33 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
                 .addTag(BlockTags.PICKAXE_MINEABLE)
                 .addTag(BlockTags.AXE_MINEABLE)
         ;
+        getOrCreateTagBuilder(ModTags.Blocks.NOT_INSTAMINE_CROWS_BEAK)
+                .add(ModBlocks.IRON_BAR_DOOR)
+                .add(ModBlocks.TONE)
+                .add(ModBlocks.TONE_BRICKS)
+                .add(ModBlocks.POLISHED_TONE)
+                .add(ModBlocks.ABSTRACT_TONE)
+                .add(ModBlocks.FRAMED_TONE)
+                .add(ModBlocks.FRAMED_TONE_BRICKS)
+                .add(ModBlocks.AURORA)
+                .add(ModBlocks.CRT)
+                .add(ModBlocks.KEYBOARD)
+                .add(ModBlocks.AGED_CRT)
+                .add(ModBlocks.AGED_KEYBOARD)
+                .add(ModBlocks.BLACK_CRT)
+                .add(ModBlocks.BLACK_KEYBOARD)
+                .add(ModBlocks.GRAY_CRT)
+                .add(ModBlocks.GRAY_KEYBOARD)
+                .add(ModBlocks.EMPTY_TIRE)
+                .add(ModBlocks.TIRE)
+                .add(ModBlocks.CRATE)
+                .add(ModBlocks.RADIO)
+                .add(ModBlocks.ANTENNA)
+                .add(ModBlocks.LUESIUM_ORE)
+                .add(ModBlocks.DEEPSLATE_LUESIUM_ORE)
+                .add(ModBlocks.ENDSTONE_LUESIUM_ORE)
+                .add(ModBlocks.RAW_LUESIUM_BLOCK)
+        ;
         //</editor-fold
         //<editor-fold desc ="BlockTags - BlockSet Self-tags">
         for(BlockSet blockSet : ModBlocks.BLOCKSETS) {

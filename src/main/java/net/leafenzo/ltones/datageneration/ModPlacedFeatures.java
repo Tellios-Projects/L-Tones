@@ -23,6 +23,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> ORE_LUESIUM_LOWER_PLACED = registerKey("ore_luesium_lower_placed");
     public static final RegistryKey<PlacedFeature> ORE_LUESIUM_END_PLACED = registerKey("ore_luesium_end_placed");
     public static final RegistryKey<PlacedFeature> ORE_TONE_PLACED = registerKey("ore_tone_placed");
+    public static final RegistryKey<PlacedFeature> ORE_ZKUL_PLACED = registerKey("ore_zkul_placed");
 
     private static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {
         return List.of(countModifier, SquarePlacementModifier.of(), heightModifier, BiomePlacementModifier.of());
@@ -52,6 +53,10 @@ public class ModPlacedFeatures {
         registerKey(context, ORE_TONE_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ORE_TONE),
                 modifiersWithRarity(6, HeightRangePlacementModifier.uniform(YOffset.fixed(64), YOffset.fixed(128)))
         );
+
+        registerKey(context, ORE_ZKUL_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ORE_ZKUL),
+                modifiersWithCount(1, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-96), YOffset.fixed(-32))) // interestingly, it seems that 256 is the limit of how many veins you can have in a chunk
+        );
     }
 
     public static void registerModifications() {
@@ -63,6 +68,10 @@ public class ModPlacedFeatures {
                 .add(ModificationPhase.ADDITIONS,
                         BiomeSelectors.foundInOverworld(),
                         context -> { context.getGenerationSettings().addFeature(GenerationStep.Feature.UNDERGROUND_ORES, ORE_LUESIUM_LOWER_PLACED); }
+                )
+                .add(ModificationPhase.ADDITIONS,
+                        BiomeSelectors.foundInOverworld(),
+                        context -> { context.getGenerationSettings().addFeature(GenerationStep.Feature.UNDERGROUND_ORES, ORE_ZKUL_PLACED); }
                 )
                 .add(ModificationPhase.ADDITIONS,
                         BiomeSelectors.foundInOverworld(),

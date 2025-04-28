@@ -14,7 +14,7 @@ public class ModTags {
 
         public static final TagKey<Block> CROWS_BEAK_MINEABLE = getOrCreateTag("mineable/crows_beak");
 
-        public static final TagKey<Block> LTONES = getOrCreateTag("ltones_blocks");
+        public static final TagKey<Block> NOT_INSTAMINE_CROWS_BEAK = getOrCreateTag("not_instamineable_with_crows_beak");
 
         public static TagKey<Block> getOrCreateTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(Super.MOD_ID, name));

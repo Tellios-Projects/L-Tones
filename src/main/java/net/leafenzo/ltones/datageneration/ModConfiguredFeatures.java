@@ -20,11 +20,14 @@ import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 
 import java.util.List;
 
+import static net.leafenzo.ltones.block.ModBlocks.ZKUL;
+
 public class ModConfiguredFeatures {
 
     public static final RegistryKey <ConfiguredFeature <?, ?>> ORE_LUESIUM = registerKey("ore_luesium");
     public static final RegistryKey <ConfiguredFeature <?, ?>> ORE_LUESIUM_END = registerKey("ore_luesium_end");
     public static final RegistryKey <ConfiguredFeature <?, ?>> ORE_TONE = registerKey("ore_tone");
+    public static final RegistryKey <ConfiguredFeature <?, ?>> ORE_ZKUL = registerKey("ore_zkul");
 
 
     public static void bootstrap(Registerable <ConfiguredFeature <?, ?>> context) {
@@ -53,6 +56,11 @@ public class ModConfiguredFeatures {
                 OreFeatureConfig.createTarget(isBaseStoneOverworld, ModBlocks.TONE.getDefaultState())
         );
         register(context, ORE_TONE, Feature.ORE, new OreFeatureConfig(toneTargets, 64));
+
+        List<OreFeatureConfig.Target> overworldZkulTargets = List.of(
+                OreFeatureConfig.createTarget(isDeepslate, ModBlocks.ZKUL.getDefaultState())
+        );
+        register(context, ORE_ZKUL, Feature.ORE, new OreFeatureConfig(overworldZkulTargets, 1));
 
     }
     private static <FC extends FeatureConfig, F extends Feature <FC>> void register(Registerable <ConfiguredFeature <?, ?>> context, RegistryKey <ConfiguredFeature <?, ?>> key, F feature, FC configuration) {

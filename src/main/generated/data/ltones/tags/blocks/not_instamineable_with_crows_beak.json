@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "ltones:iron_bar_door",
+    "ltones:tone",
+    "ltones:tone_bricks",
+    "ltones:polished_tone",
+    "ltones:abstract_tone",
+    "ltones:framed_tone",
+    "ltones:framed_tone_bricks",
+    "ltones:aurora",
+    "ltones:crt",
+    "ltones:keyboard",
+    "ltones:aged_crt",
+    "ltones:aged_keyboard",
+    "ltones:black_crt",
+    "ltones:black_keyboard",
+    "ltones:gray_crt",
+    "ltones:gray_keyboard",
+    "ltones:empty_tire",
+    "ltones:tire",
+    "ltones:crate",
+    "ltones:radio",
+    "ltones:antenna",
+    "ltones:luesium_ore",
+    "ltones:deepslate_luesium_ore",
+    "ltones:endstone_luesium_ore",
+    "ltones:raw_luesium_block"
+  ]
+}
