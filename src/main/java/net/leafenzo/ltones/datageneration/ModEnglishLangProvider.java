@@ -66,6 +66,8 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
     public void generateTranslations(TranslationBuilder translationBuilder) {
         //Manual
         //<editor-fold desc ="EnglishLang - Manual Translations">
+
+        generateTranslation(translationBuilder, "itemgroup.ltones", "L-Tones");
         generateTranslation(translationBuilder, ModBlocks.RAW_LUESIUM_BLOCK, "Block of Raw Luesium");
         generateTranslation(translationBuilder, ModBlocks.LUESIUM_BLOCK, "Block of Luesium");
         generateTranslation(translationBuilder, ModBlocks.ANTIBRASS_BLOCK, "Block of Antibrass");
