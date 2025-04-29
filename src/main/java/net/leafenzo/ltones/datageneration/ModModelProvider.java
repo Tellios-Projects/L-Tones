@@ -10,6 +10,7 @@ import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.data.client.ModModels;
 import net.leafenzo.ltones.data.client.ModTexturedModel;
 import net.leafenzo.ltones.item.ModItems;
+import net.leafenzo.ltones.state.ModProperties;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.*;
 import net.minecraft.data.client.*;
@@ -241,10 +242,10 @@ public class ModModelProvider extends FabricModelProvider {
     private void registerRadioBlock(BlockStateModelGenerator blockStateModelGenerator) {
         Identifier identifier = new Identifier("ltones", "block/radio");
         Identifier identifier2 = new Identifier("ltones", "block/radio_antenna");
-        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.RADIO, BlockStateVariant.create()
-                .put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
-                //.coordinate(BlockStateModelGenerator.createBooleanModelMap(ModProperties.HAS_ANTENNA, identifier2, identifier)) WHYYYY DOESNTTTT THISSSSS WORKRKKKKKK
-                //.coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
+//        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.RADIO, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.RADIO)
+                .coordinate(BlockStateModelGenerator.createBooleanModelMap(ModProperties.HAS_ANTENNA, identifier2, identifier))
+                .coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
     }
 
     @Override

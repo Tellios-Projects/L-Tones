@@ -26,9 +26,12 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
 
+import static net.leafenzo.ltones.block.custom.SoundscapeBlock.LIT;
+import static net.leafenzo.ltones.state.ModProperties.HAS_ANTENNA;
+
 public class RadioBlock extends BasicHorizontalFacingBlock {
+    public static final BooleanProperty HAS_ANTENNA = ModProperties.HAS_ANTENNA;
     public static final BooleanProperty ENABLED = Properties.ENABLED;
-    // public static final BooleanProperty HAS_ANTENNA = ModProperties.HAS_ANTENNA;
     public static final VoxelShape[] HORIZONTAL_FACING_TO_COLLISION_SHAPE = new VoxelShape[] {
             Block.createCuboidShape(2.0, 0.0, 4.0, 14.0, 10.0, 12.0),
             Block.createCuboidShape(2.0, 0.0, 4.0, 14.0, 10.0, 12.0),
@@ -38,7 +41,15 @@ public class RadioBlock extends BasicHorizontalFacingBlock {
 
     public RadioBlock(Settings settings) {
         super(settings);
-        this.setDefaultState(this.getDefaultState().with(ENABLED, false)); //.with(HAS_ANTENNA, false));
+        this.setDefaultState(this.stateManager.getDefaultState().with(ENABLED, false).with(HAS_ANTENNA, false));
+    }
+
+    @Override
+    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        if (state.get(HAS_ANTENNA)) {
+            dropStack(world,pos, ModBlocks.ANTENNA.asItem().getDefaultStack());
+        }
+        super.onBreak(world, pos, state, player);
     }
 
     @Override
@@ -78,12 +89,15 @@ public class RadioBlock extends BasicHorizontalFacingBlock {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (player.getStackInHand(hand).isOf(ModBlocks.ANTENNA.asItem())) {
+        if (player.getStackInHand(hand).isOf(ModBlocks.ANTENNA.asItem()) && !state.get(HAS_ANTENNA)) {
+            world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_ANTENNA_PLACE, SoundCategory.BLOCKS, 1.0f, 0.8f, false);
+            if (world.isClient) {
+                return ActionResult.SUCCESS;
+            }
             if (!player.isCreative()) {
                 player.getStackInHand(hand).decrement(1);
             }
-            world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_ANTENNA_PLACE, SoundCategory.BLOCKS, 1.0f, 0.8f, false);
-            //world.setBlockState(pos,state.with(HAS_ANTENNA,true));
+            world.setBlockState(pos,state.with(HAS_ANTENNA,true));
         } else {
             if (world.isClient) {
                 return ActionResult.SUCCESS;
@@ -126,6 +140,7 @@ public class RadioBlock extends BasicHorizontalFacingBlock {
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         super.appendProperties(builder);
+        builder.add(HAS_ANTENNA);
         builder.add(ENABLED);
     }
 }
