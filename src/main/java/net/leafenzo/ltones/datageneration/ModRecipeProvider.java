@@ -330,7 +330,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         // Blockset Base Recipes
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AGON_BLOCKS.get(0), Blocks.GLASS, ModItems.ARGON, 4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FORTT_BLOCKS.get(0), ModBlocks.ZTONE, ModItems.POLYCARBONATE, 4);
-        offerSurroundedRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LICORICE_GLAXX, ModItems.SHADE, Items.GLASS_PANE, 4);
+        offerSurroundedRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SANDALWOOD_GLAXX, ModItems.SHADE, Items.GLASS_PANE, 4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRAY, ModBlocks.ZTONE, ModItems.MOULDING, 4);
         offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CAST, ModItems.POLYMER, 4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMPTY_HOST, ModItems.SLAG, ModItems.NETWORKING, 4);
@@ -349,7 +349,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZUR, ModBlocks.ZTONE, ModItems.AZURE_RIVET,4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.FLEQ, ModBlocks.ZTONE, ModItems.JELLY,4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ISZM, Blocks.GLASS, ModItems.SCREEN,4);
-        offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_MYST, ModItems.CORPOREAL_VAPOR, 4);
+        offer2x2Recipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_MYST, ModItems.CORPOREAL_VAPOR, 4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SYNC, ModBlocks.ZTONE, ModItems.RADIUM_PAINT,4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NURR, ModBlocks.ZTONE, ModItems.GAS_TUBE,4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TYEL, ModBlocks.ZTONE, ModItems.SLUMP,4);

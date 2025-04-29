@@ -167,8 +167,8 @@ public class ModBlocks {
             .solidBlock(ModBlocks::never)
             .suffocates(ModBlocks::never)
             .blockVision(ModBlocks::never);
-    public static final Block LICORICE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "licorice_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.STONE_GRAY)*/));
     public static final Block SANDALWOOD_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sandalwood_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.IRON_GRAY)*/));
+    public static final Block LICORICE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "licorice_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.STONE_GRAY)*/));
     public static final Block INCENSE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "incense_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.GRAY)*/));
     public static final Block CINNAMON_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "cinnamon_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.DARK_CRIMSON)*/));
     public static final Block CITRUS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "citrus_glaxx", new GlassBlock(FabricBlockSettings.copyOf(glaxxMaterial)/*.mapColor(MapColor.DIRT_BROWN)*/));
@@ -632,22 +632,22 @@ public class ModBlocks {
             .suffocates(ModBlocks::never)
             .blockVision(ModBlocks::never)
             .sounds(ModBlockSoundGroup.MYST);
-    public static final Block WHITE_MYST = registerBlockInBlockset(MYST_BLOCKS, "white_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block LIGHT_GRAY_MYST = registerBlockInBlockset(MYST_BLOCKS, "light_gray_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block GRAY_MYST = registerBlockInBlockset(MYST_BLOCKS, "gray_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block BLACK_MYST = registerBlockInBlockset(MYST_BLOCKS, "black_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block BROWN_MYST = registerBlockInBlockset(MYST_BLOCKS, "brown_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block RED_MYST = registerBlockInBlockset(MYST_BLOCKS, "red_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block ORANGE_MYST = registerBlockInBlockset(MYST_BLOCKS, "orange_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block YELLOW_MYST = registerBlockInBlockset(MYST_BLOCKS, "yellow_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block LIME_MYST = registerBlockInBlockset(MYST_BLOCKS, "lime_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block GREEN_MYST = registerBlockInBlockset(MYST_BLOCKS, "green_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block CYAN_MYST = registerBlockInBlockset(MYST_BLOCKS, "cyan_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block LIGHT_BLUE_MYST = registerBlockInBlockset(MYST_BLOCKS, "light_blue_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block BLUE_MYST = registerBlockInBlockset(MYST_BLOCKS, "blue_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block PURPLE_MYST = registerBlockInBlockset(MYST_BLOCKS, "purple_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block MAGENTA_MYST = registerBlockInBlockset(MYST_BLOCKS, "magenta_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
-    public static final Block PINK_MYST = registerBlockInBlockset(MYST_BLOCKS, "pink_myst", new GlassBlock(FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block WHITE_MYST = registerBlockInBlockset(MYST_BLOCKS, "white_myst", new StainedGlassBlock(DyeColor.WHITE, FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block LIGHT_GRAY_MYST = registerBlockInBlockset(MYST_BLOCKS, "light_gray_myst", new StainedGlassBlock(DyeColor.LIGHT_GRAY, FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block GRAY_MYST = registerBlockInBlockset(MYST_BLOCKS, "gray_myst", new StainedGlassBlock(DyeColor.GRAY, FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block BLACK_MYST = registerBlockInBlockset(MYST_BLOCKS, "black_myst", new StainedGlassBlock(DyeColor.BLACK, FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block BROWN_MYST = registerBlockInBlockset(MYST_BLOCKS, "brown_myst", new StainedGlassBlock(DyeColor.BROWN, FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block RED_MYST = registerBlockInBlockset(MYST_BLOCKS, "red_myst", new StainedGlassBlock(DyeColor.RED, FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block ORANGE_MYST = registerBlockInBlockset(MYST_BLOCKS, "orange_myst", new StainedGlassBlock(DyeColor.ORANGE, FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block YELLOW_MYST = registerBlockInBlockset(MYST_BLOCKS, "yellow_myst", new StainedGlassBlock(DyeColor.YELLOW, FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block LIME_MYST = registerBlockInBlockset(MYST_BLOCKS, "lime_myst", new StainedGlassBlock(DyeColor.LIME, FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block GREEN_MYST = registerBlockInBlockset(MYST_BLOCKS, "green_myst", new StainedGlassBlock(DyeColor.GREEN, FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block CYAN_MYST = registerBlockInBlockset(MYST_BLOCKS, "cyan_myst", new StainedGlassBlock(DyeColor.CYAN, FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block LIGHT_BLUE_MYST = registerBlockInBlockset(MYST_BLOCKS, "light_blue_myst", new StainedGlassBlock(DyeColor.LIGHT_BLUE, FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block BLUE_MYST = registerBlockInBlockset(MYST_BLOCKS, "blue_myst", new StainedGlassBlock(DyeColor.BLUE, FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block PURPLE_MYST = registerBlockInBlockset(MYST_BLOCKS, "purple_myst", new StainedGlassBlock(DyeColor.PURPLE, FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block MAGENTA_MYST = registerBlockInBlockset(MYST_BLOCKS, "magenta_myst", new StainedGlassBlock(DyeColor.MAGENTA, FabricBlockSettings.copyOf(mystMaterial)));
+    public static final Block PINK_MYST = registerBlockInBlockset(MYST_BLOCKS, "pink_myst", new StainedGlassBlock(DyeColor.PINK, FabricBlockSettings.copyOf(mystMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - SYNC">
     private static final FabricBlockSettings syncMaterial = FabricBlockSettings.create()
