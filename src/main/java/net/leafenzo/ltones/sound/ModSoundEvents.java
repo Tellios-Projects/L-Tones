@@ -81,6 +81,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_DECAL_GLASS_TUBE_HIT = registerSoundEvent("block.decal_glass_tube.hit");
     public static final SoundEvent BLOCK_DECAL_GLASS_TUBE_FALL = registerSoundEvent("block.decal_glass_tube.fall");
 
+    public static final SoundEvent BLOCK_DECAL_GLEAM_BREAK = registerSoundEvent("block.decal_gleam.break");
+    public static final SoundEvent BLOCK_DECAL_GLEAM_STEP = registerSoundEvent("block.decal_gleam.step");
+    public static final SoundEvent BLOCK_DECAL_GLEAM_PLACE = registerSoundEvent("block.decal_gleam.place");
+    public static final SoundEvent BLOCK_DECAL_GLEAM_HIT = registerSoundEvent("block.decal_gleam.hit");
+    public static final SoundEvent BLOCK_DECAL_GLEAM_FALL = registerSoundEvent("block.decal_gleam.fall");
+
     public static final SoundEvent BLOCK_DECAL_JELLY_BREAK = registerSoundEvent("block.decal_jelly.break");
     public static final SoundEvent BLOCK_DECAL_JELLY_STEP = registerSoundEvent("block.decal_jelly.step");
     public static final SoundEvent BLOCK_DECAL_JELLY_PLACE = registerSoundEvent("block.decal_jelly.place");
@@ -117,6 +123,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_DECAL_NETWORKING_HIT = registerSoundEvent("block.decal_networking.hit");
     public static final SoundEvent BLOCK_DECAL_NETWORKING_FALL = registerSoundEvent("block.decal_networking.fall");
 
+    public static final SoundEvent BLOCK_DECAL_OIL_BREAK = registerSoundEvent("block.decal_oil.break");
+    public static final SoundEvent BLOCK_DECAL_OIL_STEP = registerSoundEvent("block.decal_oil.step");
+    public static final SoundEvent BLOCK_DECAL_OIL_PLACE = registerSoundEvent("block.decal_oil.place");
+    public static final SoundEvent BLOCK_DECAL_OIL_HIT = registerSoundEvent("block.decal_oil.hit");
+    public static final SoundEvent BLOCK_DECAL_OIL_FALL = registerSoundEvent("block.decal_oil.fall");
+
     public static final SoundEvent BLOCK_DECAL_ORGANIC_BRASS_BREAK = registerSoundEvent("block.decal_organic_brass.break");
     public static final SoundEvent BLOCK_DECAL_ORGANIC_BRASS_STEP = registerSoundEvent("block.decal_organic_brass.step");
     public static final SoundEvent BLOCK_DECAL_ORGANIC_BRASS_PLACE = registerSoundEvent("block.decal_organic_brass.place");
@@ -140,6 +152,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_DECAL_POLYMER_PLACE = registerSoundEvent("block.decal_polymer.place");
     public static final SoundEvent BLOCK_DECAL_POLYMER_HIT = registerSoundEvent("block.decal_polymer.hit");
     public static final SoundEvent BLOCK_DECAL_POLYMER_FALL = registerSoundEvent("block.decal_polymer.fall");
+
+    public static final SoundEvent BLOCK_DECAL_REBITH_BREAK = registerSoundEvent("block.decal_rebith.break");
+    public static final SoundEvent BLOCK_DECAL_REBITH_STEP = registerSoundEvent("block.decal_rebith.step");
+    public static final SoundEvent BLOCK_DECAL_REBITH_PLACE = registerSoundEvent("block.decal_rebith.place");
+    public static final SoundEvent BLOCK_DECAL_REBITH_HIT = registerSoundEvent("block.decal_rebith.hit");
+    public static final SoundEvent BLOCK_DECAL_REBITH_FALL = registerSoundEvent("block.decal_rebith.fall");
 
     public static final SoundEvent BLOCK_DECAL_SCARLET_MEMBRANE_BREAK = registerSoundEvent("block.decal_scarlet_membrane.break");
     public static final SoundEvent BLOCK_DECAL_SCARLET_MEMBRANE_STEP = registerSoundEvent("block.decal_scarlet_membrane.step");
@@ -549,6 +567,7 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_ZKUL_AMBIENT = registerSoundEvent("block.zkul.ambient");
     public static final SoundEvent BLOCK_ZKUL_WARN = registerSoundEvent("block.zkul.warn");
     public static final SoundEvent BLOCK_ZKUL_OBTAIN = registerSoundEvent("block.zkul.obtain");
+    public static final SoundEvent BLOCK_ZKUL_BROKEN = registerSoundEvent("block.zkul.broken");
     public static final SoundEvent BLOCK_ZKUL_BREAK = registerSoundEvent("block.zkul.break");
     public static final SoundEvent BLOCK_ZKUL_STEP = registerSoundEvent("block.zkul.step");
     public static final SoundEvent BLOCK_ZKUL_PLACE = registerSoundEvent("block.zkul.place");
