@@ -234,6 +234,11 @@ public class ModModelProvider extends FabricModelProvider {
 //        blockStateModelGenerator.registerItemModel(block.asItem());
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
     }
+    private void registerMouseBlock(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        Identifier identifier = blockStateModelGenerator.createSubModel(block, "", ModModels.MOUSE, TextureMap::all);
+//        blockStateModelGenerator.registerItemModel(block.asItem());
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
+    }
     private void registerAntennaBlock(BlockStateModelGenerator blockStateModelGenerator) {
         Identifier identifier = new Identifier("ltones", "block/antenna");
         Identifier identifier2 = new Identifier("ltones", "block/antenna_lower");
@@ -759,6 +764,10 @@ public class ModModelProvider extends FabricModelProvider {
         registerKeyboardBlock(blockStateModelGenerator, ModBlocks.AGED_KEYBOARD);
         registerKeyboardBlock(blockStateModelGenerator, ModBlocks.BLACK_KEYBOARD);
         registerKeyboardBlock(blockStateModelGenerator, ModBlocks.GRAY_KEYBOARD);
+        registerMouseBlock(blockStateModelGenerator, ModBlocks.MOUSE);
+        registerMouseBlock(blockStateModelGenerator, ModBlocks.AGED_MOUSE);
+        registerMouseBlock(blockStateModelGenerator, ModBlocks.BLACK_MOUSE);
+        registerMouseBlock(blockStateModelGenerator, ModBlocks.GRAY_MOUSE);
         registerAntennaBlock(blockStateModelGenerator);
         registerRadioBlock(blockStateModelGenerator);
         //</editor-fold>

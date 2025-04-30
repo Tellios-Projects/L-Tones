@@ -16,6 +16,7 @@
     "ltones:trapdoor_work",
     "ltones:trapdoor_safe",
     "ltones:trapdoor_petri",
-    "ltones:trapdoor_bunker"
+    "ltones:trapdoor_bunker",
+    "ltones:iron_bar_trapdoor"
   ]
 }

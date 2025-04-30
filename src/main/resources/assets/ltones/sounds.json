@@ -1,4 +1,18 @@
 {
+	"block.keyboard.click": {
+		"sounds": [
+			"ltones:block/keyboard/click1",
+			"ltones:block/keyboard/click2",
+			"ltones:block/keyboard/click3"
+		]
+	},
+	"block.mouse.click": {
+		"sounds": [
+			"ltones:block/mouse/click1",
+			"ltones:block/mouse/click2",
+			"ltones:block/mouse/click3"
+		]
+	},
 	"block.antenna.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [

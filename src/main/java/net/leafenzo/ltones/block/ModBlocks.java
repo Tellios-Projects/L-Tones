@@ -876,10 +876,14 @@ public class ModBlocks {
     public static final Block EMPTY_TIRE = registerBlock("empty_tire", new BouncyPillarBlock(FabricBlockSettings.create().mapColor(MapColor.BLACK).instrument(Instrument.BASS).strength(0.2f).sounds(ModBlockSoundGroup.TIRE)));
     public static final Block TIRE = registerBlock("tire", new PillarBlock(FabricBlockSettings.copyOf(EMPTY_TIRE).strength(1.0f).requiresTool()));
     public static final Block CRATE = registerBlock("crate", new CrateBlock(FabricBlockSettings.create().instrument(Instrument.BASEDRUM).mapColor(MapColor.TERRACOTTA_GRAY).strength(3.5f, 50.0f).requiresTool().sounds(ModBlockSoundGroup.KORP)));
-    public static final Block KEYBOARD = registerBlock("keyboard", new KeyboardBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(0.1f).sounds(ModBlockSoundGroup.DECAL_SHEETING).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block KEYBOARD = registerBlock("keyboard", new KeyboardBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(0.1f).sounds(ModBlockSoundGroup.DECAL_POLYMER).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block AGED_KEYBOARD = registerBlock("aged_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block BLACK_KEYBOARD = registerBlock("black_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block GRAY_KEYBOARD = registerBlock("gray_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block MOUSE = registerBlock("mouse", new MouseBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(0.1f).sounds(ModBlockSoundGroup.DECAL_POLYMER).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block AGED_MOUSE = registerBlock("aged_mouse", new MouseBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block BLACK_MOUSE = registerBlock("black_mouse", new MouseBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block GRAY_MOUSE = registerBlock("gray_mouse", new MouseBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block ANTENNA = registerBlock("antenna", new AntennaBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_GRAY).strength(3.0f, 6.0f).sounds(ModBlockSoundGroup.ANTENNA).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never)));
         static { RENDER_LAYER_CUTOUT.add(ANTENNA); }
     public static final Block RADIO = registerBlock("radio", new RadioBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_GRAY).strength(1.0f).sounds(ModBlockSoundGroup.RADIO).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never)));
@@ -937,7 +941,7 @@ public class ModBlocks {
     public static final Block TRAPDOOR_SAFE = registerTrapdoor("trapdoor_safe", new TrapdoorBlock(FabricBlockSettings.copyOf(exriMaterial).mapColor(MapColor.BLACK).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.EXRI));
     public static final Block TRAPDOOR_PETRI = registerTrapdoor("trapdoor_petri", new TrapdoorBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.PALE_YELLOW).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.ROEN));
     public static final Block TRAPDOOR_BUNKER = registerTrapdoor("trapdoor_bunker", new TrapdoorBlock(FabricBlockSettings.copyOf(ModBlocks.ABSTRACT_TONE).mapColor(MapColor.IRON_GRAY).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.TONE));
-    public static final Block IRON_BAR_TRAPDOOR = registerDoor("iron_bar_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_TRAPDOOR).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), BlockSetType.IRON));
+    public static final Block IRON_BAR_TRAPDOOR = registerTrapdoor("iron_bar_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_TRAPDOOR).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), BlockSetType.IRON));
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - Decals">

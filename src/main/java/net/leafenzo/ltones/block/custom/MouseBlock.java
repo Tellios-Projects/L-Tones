@@ -22,48 +22,48 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class KeyboardBlock extends BasicHorizontalFacingBlock implements Waterloggable {
+public class MouseBlock extends BasicHorizontalFacingBlock implements Waterloggable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    protected static final VoxelShape[] HORIZONTAL_FACING_TO_SHAPE = new VoxelShape[]{
-            Block.createCuboidShape(0.0, 0.0, 4.0, 16.0, 2.0, 12.0), // North
-            Block.createCuboidShape(0.0, 0.0, 4.0, 16.0, 2.0, 12.0), // South
-            Block.createCuboidShape(4.0, 0.0, 0.0, 12.0, 2.0, 16.0), // East
-            Block.createCuboidShape(4.0, 0.0, 0.0, 12.0, 2.0, 16.0), // West
-    };
-
-    public KeyboardBlock(AbstractBlock.Settings settings) {
+    public MouseBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false));
     }
+
+    protected static final VoxelShape[] HORIZONTAL_FACING_TO_SHAPE = new VoxelShape[]{
+            Block.createCuboidShape(6.0, 0.0, 5.0, 11.0, 2.0, 11.0), // North
+            Block.createCuboidShape(5.0, 0.0, 5.0, 10.0, 2.0, 11.0), // South
+            Block.createCuboidShape(5.0, 0.0, 5.0, 11.0, 2.0, 10.0), // East
+            Block.createCuboidShape(5.0, 0.0, 6.0, 11.0, 2.0, 11.0), // West
+    };
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         float a = world.getRandom().nextFloat() * 0.1f;
         float b = world.getRandom().nextFloat() * 0.3f;
-        world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_KEYBOARD_CLICK, SoundCategory.BLOCKS, 0.3f + b, 0.95f + a, false);
+        world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_MOUSE_CLICK, SoundCategory.BLOCKS, 0.3f + b, 0.95f + a, false);
 
         return ActionResult.SUCCESS;
     }
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return HORIZONTAL_FACING_TO_SHAPE[state.get(KeyboardBlock.FACING).getId()-2];
+        return HORIZONTAL_FACING_TO_SHAPE[state.get(MouseBlock.FACING).getId()-2];
     }
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return HORIZONTAL_FACING_TO_SHAPE[state.get(KeyboardBlock.FACING).getId()-2];
+        return HORIZONTAL_FACING_TO_SHAPE[state.get(MouseBlock.FACING).getId()-2];
     }
 
     @Override
     public VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
-        return HORIZONTAL_FACING_TO_SHAPE[state.get(KeyboardBlock.FACING).getId()-2];
+        return HORIZONTAL_FACING_TO_SHAPE[state.get(MouseBlock.FACING).getId()-2];
     }
 
     @Override
     public VoxelShape getCameraCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return HORIZONTAL_FACING_TO_SHAPE[state.get(KeyboardBlock.FACING).getId()-2];
+        return HORIZONTAL_FACING_TO_SHAPE[state.get(MouseBlock.FACING).getId()-2];
     }
 
     @Override
