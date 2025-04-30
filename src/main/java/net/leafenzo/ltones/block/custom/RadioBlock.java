@@ -55,6 +55,9 @@ public class RadioBlock extends BasicHorizontalFacingBlock {
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (!state.canPlaceAt(world, pos)) {
+            if (state.get(HAS_ANTENNA)) {
+                dropStack((World) world,pos, ModBlocks.ANTENNA.asItem().getDefaultStack());
+            }
             return Blocks.AIR.getDefaultState();
         }
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);

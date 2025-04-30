@@ -70,7 +70,7 @@ public class AntennaBlock extends BasicHorizontalFacingBlock implements Waterlog
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (world.getBlockState(pos.up()).isOf(ModBlocks.ANTENNA)) {
-            world.setBlockState(pos, state.with(LOWER, true), 2); //.with(FACING, neighborState.get(FACING)) causes crash !!
+            world.setBlockState(pos, state.with(LOWER, true), 2); //.with(FACING, neighborState.get(FACING)) causes crash !! but also makes the blocks match rotation of block above
         } else {
             world.setBlockState(pos, state.with(LOWER, false), 2);
         }
