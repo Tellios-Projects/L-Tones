@@ -46,7 +46,7 @@ public class RadioBlock extends BasicHorizontalFacingBlock {
 
     @Override
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        if (state.get(HAS_ANTENNA)) {
+        if (state.get(HAS_ANTENNA) && !player.isCreative()) {
             dropStack(world,pos, ModBlocks.ANTENNA.asItem().getDefaultStack());
         }
         super.onBreak(world, pos, state, player);

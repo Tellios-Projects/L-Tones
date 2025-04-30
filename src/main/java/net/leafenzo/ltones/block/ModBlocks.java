@@ -880,9 +880,9 @@ public class ModBlocks {
     public static final Block AGED_KEYBOARD = registerBlock("aged_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block BLACK_KEYBOARD = registerBlock("black_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block GRAY_KEYBOARD = registerBlock("gray_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY)));
-    public static final Block ANTENNA = registerBlock("antenna", new AntennaBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_GRAY).strength(3.0f, 6.0f).sounds(ModBlockSoundGroup.ANTENNA).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY).requiresTool()));
+    public static final Block ANTENNA = registerBlock("antenna", new AntennaBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_GRAY).strength(3.0f, 6.0f).sounds(ModBlockSoundGroup.ANTENNA).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never)));
         static { RENDER_LAYER_CUTOUT.add(ANTENNA); }
-    public static final Block RADIO = registerBlock("radio", new RadioBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_GRAY).strength(1.0f).sounds(ModBlockSoundGroup.RADIO).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY).requiresTool()));
+    public static final Block RADIO = registerBlock("radio", new RadioBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_GRAY).strength(1.0f).sounds(ModBlockSoundGroup.RADIO).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never)));
         static { RENDER_LAYER_CUTOUT.add(RADIO); }
     //</editor-fold>
 
