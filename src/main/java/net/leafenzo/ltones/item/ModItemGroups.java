@@ -126,6 +126,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DOOR_PUNCTURE);
                         entries.add(ModBlocks.TRAPDOOR_PUNCTURE);
                         entries.add(ModBlocks.IRON_BAR_DOOR);
+                        entries.add(ModBlocks.IRON_BAR_TRAPDOOR);
                         entries.add(ModBlocks.TONE);
                         entries.add(ModBlocks.POLISHED_TONE);
                         entries.add(ModBlocks.TONE_BRICKS);

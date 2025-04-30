@@ -534,6 +534,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerTrapdoorRecipe(exporter, ModBlocks.TRAPDOOR_PUNCTURE, ModItems.LUESIUM_INGOT);
         offerDoorRecipe(exporter, ModBlocks.IRON_BAR_DOOR, Items.IRON_BARS);
         offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.IRON_BAR_DOOR, Blocks.IRON_DOOR);
+        offerTrapdoorRecipe(exporter, ModBlocks.IRON_BAR_TRAPDOOR, Items.IRON_BARS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.IRON_BAR_TRAPDOOR, Blocks.IRON_TRAPDOOR);
 
         // Automatic Stairs & Slab Recipes
         for (Block block : ModBlocks.STAIRS_FROM_BLOCK.keySet()) {

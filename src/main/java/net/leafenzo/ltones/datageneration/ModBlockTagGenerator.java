@@ -43,6 +43,7 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         ;
         getOrCreateTagBuilder(ModTags.Blocks.NOT_INSTAMINE_CROWS_BEAK)
                 .add(ModBlocks.IRON_BAR_DOOR)
+                .add(ModBlocks.IRON_BAR_TRAPDOOR)
                 .add(ModBlocks.TONE)
                 .add(ModBlocks.TONE_BRICKS)
                 .add(ModBlocks.POLISHED_TONE)

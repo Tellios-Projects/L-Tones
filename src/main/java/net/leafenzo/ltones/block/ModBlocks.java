@@ -937,6 +937,7 @@ public class ModBlocks {
     public static final Block TRAPDOOR_SAFE = registerTrapdoor("trapdoor_safe", new TrapdoorBlock(FabricBlockSettings.copyOf(exriMaterial).mapColor(MapColor.BLACK).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.EXRI));
     public static final Block TRAPDOOR_PETRI = registerTrapdoor("trapdoor_petri", new TrapdoorBlock(FabricBlockSettings.copyOf(roenMaterial).mapColor(MapColor.PALE_YELLOW).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.ROEN));
     public static final Block TRAPDOOR_BUNKER = registerTrapdoor("trapdoor_bunker", new TrapdoorBlock(FabricBlockSettings.copyOf(ModBlocks.ABSTRACT_TONE).mapColor(MapColor.IRON_GRAY).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.TONE));
+    public static final Block IRON_BAR_TRAPDOOR = registerDoor("iron_bar_trapdoor", new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_TRAPDOOR).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), BlockSetType.IRON));
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - Decals">
