@@ -10,6 +10,7 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
@@ -31,10 +32,12 @@ public class MouseBlock extends BasicHorizontalFacingBlock implements Waterlogga
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     public static final BooleanProperty POWERED = Properties.POWERED;
     private final int pressTicks;
+    private final SoundEvent click;
 
-    public MouseBlock(Settings settings, int pressTicks) {
+    public MouseBlock(Settings settings, SoundEvent clickSound, int pressTicks) {
         super(settings);
         this.pressTicks = pressTicks;
+        this.click = clickSound;
         this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false).with(POWERED, false));
     }
 
@@ -49,7 +52,7 @@ public class MouseBlock extends BasicHorizontalFacingBlock implements Waterlogga
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         float a = world.getRandom().nextFloat() * 0.1f;
         float b = world.getRandom().nextFloat() * 0.3f;
-        world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_MOUSE_CLICK, SoundCategory.BLOCKS, 0.3f + b, 0.95f + a, false);
+        world.playSoundAtBlockCenter(pos, click, SoundCategory.BLOCKS, 0.3f + b, 0.95f + a, false);
         this.powerOn(state, world, pos);
         world.emitGameEvent(player, GameEvent.BLOCK_ACTIVATE, pos);
         return ActionResult.SUCCESS;

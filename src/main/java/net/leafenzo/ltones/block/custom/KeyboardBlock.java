@@ -8,6 +8,7 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -27,6 +28,7 @@ public class KeyboardBlock extends BasicHorizontalFacingBlock implements Waterlo
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     public static final BooleanProperty POWERED = Properties.POWERED;
     private final int pressTicks;
+    private final SoundEvent click;
 
     protected static final VoxelShape[] HORIZONTAL_FACING_TO_SHAPE = new VoxelShape[]{
             Block.createCuboidShape(0.0, 0.0, 4.0, 16.0, 2.0, 12.0), // North
@@ -35,9 +37,10 @@ public class KeyboardBlock extends BasicHorizontalFacingBlock implements Waterlo
             Block.createCuboidShape(4.0, 0.0, 0.0, 12.0, 2.0, 16.0), // West
     };
 
-    public KeyboardBlock(AbstractBlock.Settings settings, int pressTicks) {
+    public KeyboardBlock(AbstractBlock.Settings settings, SoundEvent clickSound, int pressTicks) {
         super(settings);
         this.pressTicks = pressTicks;
+        this.click = clickSound;
         this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false).with(POWERED, false));
     }
 
@@ -45,7 +48,7 @@ public class KeyboardBlock extends BasicHorizontalFacingBlock implements Waterlo
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         float a = world.getRandom().nextFloat() * 0.1f;
         float b = world.getRandom().nextFloat() * 0.3f;
-        world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_KEYBOARD_CLICK, SoundCategory.BLOCKS, 0.3f + b, 0.95f + a, false);
+        world.playSoundAtBlockCenter(pos, click, SoundCategory.BLOCKS, 0.3f + b, 0.95f + a, false);
         this.powerOn(state, world, pos);
         return ActionResult.SUCCESS;
     }

@@ -9,7 +9,9 @@ import net.minecraft.util.Identifier;
 public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_KEYBOARD_CLICK = registerSoundEvent("block.keyboard.click");
+    public static final SoundEvent BLOCK_KEYBOARD_CLICK_AGED = registerSoundEvent("block.keyboard.click_aged");
     public static final SoundEvent BLOCK_MOUSE_CLICK = registerSoundEvent("block.mouse.click");
+    public static final SoundEvent BLOCK_MOUSE_CLICK_AGED = registerSoundEvent("block.mouse.click_aged");
 
     public static final SoundEvent BLOCK_CRT_BREAK = registerSoundEvent("block.crt.break");
     public static final SoundEvent BLOCK_CRT_STEP = registerSoundEvent("block.crt.step");

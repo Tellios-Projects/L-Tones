@@ -6,11 +6,25 @@
 			"ltones:block/keyboard/click3"
 		]
 	},
+	"block.keyboard.click_aged": {
+		"sounds": [
+			"ltones:block/keyboard/click_aged1",
+			"ltones:block/keyboard/click_aged2",
+			"ltones:block/keyboard/click_aged3"
+		]
+	},
 	"block.mouse.click": {
 		"sounds": [
 			"ltones:block/mouse/click1",
 			"ltones:block/mouse/click2",
 			"ltones:block/mouse/click3"
+		]
+	},
+	"block.mouse.click_aged": {
+		"sounds": [
+			"ltones:block/mouse/click_aged1",
+			"ltones:block/mouse/click_aged2",
+			"ltones:block/mouse/click_aged3"
 		]
 	},
 	"block.antenna.break": {
