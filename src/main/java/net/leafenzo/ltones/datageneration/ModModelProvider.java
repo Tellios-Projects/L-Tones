@@ -459,6 +459,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.LAVE_TRACKPAD, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.LAVE_ELEVATE, TexturedModel.CUBE_ALL);
         registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.LAVE_BEAM, "block/lave_panel");
+        registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.LAVE_SOUNDSCAPE, TextureMap::all);
         //</editor-fold>
         //<editor-fold desc = "Models - veeld">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.VEELD_WET);

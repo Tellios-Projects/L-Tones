@@ -428,7 +428,7 @@ public class ModBlocks {
     public static final Block LAVE_DARK = registerBlockInBlockset(LAVE_BLOCKS, "lave_dark", new Block(FabricBlockSettings.copyOf(laveMaterial).mapColor(MapColor.CYAN)));
     public static final Block LAVE_CROSSSECTION = registerBlockInBlockset(LAVE_BLOCKS, "lave_crosssection", new Block(FabricBlockSettings.copyOf(laveMaterial)));
     public static final Block LAVE_BEAM = registerBlockInBlockset(LAVE_BLOCKS, "lave_beam", new PillarBlock(FabricBlockSettings.copyOf(laveMaterial)));
-    public static final Block LAVE_SOUNDSCAPE = registerBlockInBlockset(KORP_BLOCKS, "lave_soundscape", new SoundscapeBlock(FabricBlockSettings.copyOf(laveMaterial).luminance(createLightLevelFromProperty(11, Properties.LIT)).mapColor(MapColor.DIAMOND_BLUE).sounds(ModBlockSoundGroup.LAVE), null, null,  ModSoundEvents.BLOCK_LAVE_AMBIENT, false, 80));
+    public static final Block LAVE_SOUNDSCAPE = registerBlockInBlockset(LAVE_BLOCKS, "lave_soundscape", new SoundscapeBlock(FabricBlockSettings.copyOf(laveMaterial).luminance(createLightLevelFromProperty(11, Properties.LIT)).mapColor(MapColor.DIAMOND_BLUE).sounds(ModBlockSoundGroup.LAVE), null, null,  ModSoundEvents.BLOCK_LAVE_AMBIENT, false, 80));
     //</editor-fold>
     //<editor-fold desc ="Blocks - VEELD">
     private static final FabricBlockSettings veeldMaterial = FabricBlockSettings.create()
