@@ -3,18 +3,18 @@
   "id": "ltones",
   "version": "${version}",
 
-  "name": "LTONES",
-  "description": "ADDME",
+  "name": "L-Tones",
+  "description": "A building mod focused on the surreal and otherworldly. \nSpiritual successor to the Z-Tones mod of 1.7.10 days.",
   "authors": [
-    "Leah (@leafenzio), Tellio (@tellioaridoitsu)"
+    "Leah (@leafenzio), Tellio (@tellioaridoitsu), amber meow"
   ],
   "contact": {
     "homepage": "ADDME - website link",
-    "sources": "ADDME - github link"
+    "sources": "https://github.com/Tellios-Projects/L-Tones"
   },
 
   "license": "MIT",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/ltones/icon.png",
 
   "environment": "*",
   "entrypoints": {
