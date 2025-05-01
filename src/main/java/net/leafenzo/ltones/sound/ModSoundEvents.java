@@ -11,6 +11,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_KEYBOARD_CLICK = registerSoundEvent("block.keyboard.click");
     public static final SoundEvent BLOCK_MOUSE_CLICK = registerSoundEvent("block.mouse.click");
 
+    public static final SoundEvent BLOCK_CRT_BREAK = registerSoundEvent("block.crt.break");
+    public static final SoundEvent BLOCK_CRT_STEP = registerSoundEvent("block.crt.step");
+    public static final SoundEvent BLOCK_CRT_PLACE = registerSoundEvent("block.crt.place");
+    public static final SoundEvent BLOCK_CRT_HIT = registerSoundEvent("block.crt.hit");
+    public static final SoundEvent BLOCK_CRT_FALL = registerSoundEvent("block.crt.fall");
+
     public static final SoundEvent BLOCK_ANTENNA_BREAK = registerSoundEvent("block.antenna.break");
     public static final SoundEvent BLOCK_ANTENNA_STEP = registerSoundEvent("block.antenna.step");
     public static final SoundEvent BLOCK_ANTENNA_PLACE = registerSoundEvent("block.antenna.place");

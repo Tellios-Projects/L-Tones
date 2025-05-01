@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-import static net.leafenzo.ltones.util.ModUtil.toSentanceCase;
+import static net.leafenzo.ltones.util.ModUtil.toSentenceCase;
 
 public class ModEnglishLangProvider extends FabricLanguageProvider {
     Set<String> usedTranslationKeys = new HashSet<String>(); // For duplicate handling
@@ -59,7 +59,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
      */
     private void generateBannerTranslations(TranslationBuilder translationBuilder, ArrayList<Block> BannerBlocks) {
         for(Block block : BannerBlocks) {
-            generateTranslation(translationBuilder, block.getTranslationKey(), toSentanceCase(Registries.BLOCK.getId(block).getPath()));
+            generateTranslation(translationBuilder, block.getTranslationKey(), toSentenceCase(Registries.BLOCK.getId(block).getPath()));
         }
     }
     @Override
@@ -101,25 +101,25 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
             String key = Registries.BLOCK.get(id).getTranslationKey();
             if(usedTranslationKeys.contains(key)) { continue; } //Skip over duplicate translation keys
             usedTranslationKeys.add(key);
-            translationBuilder.add(key, toSentanceCase(id.getPath()));
+            translationBuilder.add(key, toSentenceCase(id.getPath()));
         }
         for(Identifier id : ModUtil.allItemIdsInNamespace(Super.MOD_ID)) {
             String key = Registries.ITEM.get(id).getTranslationKey();
             if(usedTranslationKeys.contains(key)) { continue; } //Skip over duplicate translation keys
             usedTranslationKeys.add(key);
-            translationBuilder.add(key, toSentanceCase(id.getPath()));
+            translationBuilder.add(key, toSentenceCase(id.getPath()));
         }
         for(Identifier id : ModUtil.allItemGroupIdsInNamespace(Super.MOD_ID)) {
             String key = Registries.ITEM_GROUP.get(id).getDisplayName().getString();
             if(usedTranslationKeys.contains(key)) { continue; } //Skip over duplicate translation keys
             usedTranslationKeys.add(key);
-            translationBuilder.add(key, toSentanceCase(id.getPath()));
+            translationBuilder.add(key, toSentenceCase(id.getPath()));
         }
         for(Identifier id : ModUtil.allStatusEffectIdsInNamespace(Super.MOD_ID)) {
             String key = Registries.STATUS_EFFECT.get(id).getTranslationKey();
             if(usedTranslationKeys.contains(key)) { continue; } //Skip over duplicate translation keys
             usedTranslationKeys.add(key);
-            translationBuilder.add(key, toSentanceCase(id.getPath()));
+            translationBuilder.add(key, toSentenceCase(id.getPath()));
         }
         // This is a mess, just do this part manually for now.
         // Effects, Potions, and Tipped arrows

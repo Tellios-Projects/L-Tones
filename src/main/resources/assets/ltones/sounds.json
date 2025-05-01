@@ -3794,6 +3794,52 @@
 		]
 	},
 
+	"block.crt.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/crt/break1",
+			"ltones:block/crt/break2",
+			"ltones:block/crt/break3",
+			"ltones:block/crt/break4"
+		]
+	},
+	"block.crt.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/crt/step1",
+			"ltones:block/crt/step2",
+			"ltones:block/crt/step3",
+			"ltones:block/crt/step4"
+		]
+	},
+	"block.crt.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/crt/place1",
+			"ltones:block/crt/place2",
+			"ltones:block/crt/place3",
+			"ltones:block/crt/place4"
+		]
+	},
+	"block.crt.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/crt/step1",
+			"ltones:block/crt/step2",
+			"ltones:block/crt/step3",
+			"ltones:block/crt/step4"
+		]
+	},
+	"block.crt.fall": {
+
+		"sounds": [
+			"ltones:block/crt/step1",
+			"ltones:block/crt/step2",
+			"ltones:block/crt/step3",
+			"ltones:block/crt/step4"
+		]
+	},
+
 	"block.vect_door.open": {
 		"subtitle": "subtitles.block.door.toggle",
 		"sounds": [

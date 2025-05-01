@@ -6,13 +6,11 @@
 package net.leafenzo.ltones.util;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.random.Random;
 
 import java.util.*;
 
@@ -144,7 +142,7 @@ public class ModUtil {
         return s.concat(" }");
     }
 
-    public static String toSentanceCase(String s) {
+    public static String toSentenceCase(String s) {
         String words[] = s.split("[\\s|_]");
         StringBuilder capitalizeWord = new StringBuilder();
         for (String w : words) {
