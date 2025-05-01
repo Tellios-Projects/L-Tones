@@ -394,6 +394,7 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_LAVE_TRAPDOOR_OPEN = registerSoundEvent("block.lave_trapdoor.open");
     public static final SoundEvent BLOCK_LAVE_TRAPDOOR_CLOSE = registerSoundEvent("block.lave_trapdoor.close");
 
+    public static final SoundEvent BLOCK_LAVE_AMBIENT = registerSoundEvent("block.lave.ambient");
     public static final SoundEvent BLOCK_LAVE_BREAK = registerSoundEvent("block.lave.break");
     public static final SoundEvent BLOCK_LAVE_STEP = registerSoundEvent("block.lave.step");
     public static final SoundEvent BLOCK_LAVE_PLACE = registerSoundEvent("block.lave.place");

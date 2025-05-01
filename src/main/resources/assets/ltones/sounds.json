@@ -3744,6 +3744,10 @@
 			"ltones:block/lave/trapdoor/close3"
 		]
 	},
+	"block.lave.ambient": {
+		"sounds": [
+		]
+	},
 	"block.lave.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
