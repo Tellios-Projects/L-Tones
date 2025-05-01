@@ -1,0 +1,21 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"particle": "ltones:block/mouse",
+		"all": "ltones:block/mouse"
+	},
+	"elements": [
+		{
+			"from": [6, 0, 5],
+			"to": [11, 2, 11],
+			"faces": {
+				"north": {"uv": [5, 11, 10, 13], "texture": "#all"},
+				"east": {"uv": [3, 5, 1, 11], "rotation": 90, "texture": "#all"},
+				"south": {"uv": [10, 5, 5, 3], "texture": "#all"},
+				"west": {"uv": [15, 5, 13, 11], "rotation": 270, "texture": "#all"},
+				"up": {"uv": [8, 11, 3, 5], "texture": "#all"},
+				"down": {"uv": [8, 5, 13, 11], "texture": "#all", "cullface": "down"}
+			}
+		}
+	]
+}

@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
+	"ambientocclusion": false,
 	"textures": {
 		"0": "ltones:block/antenna",
 		"particle": "ltones:block/antenna"
@@ -25,13 +26,13 @@
 			}
 		},
 		{
-			"from": [0.5, 12, 3.5],
-			"to": [15.5, 12, 12.5],
+			"from": [0, 12, 3],
+			"to": [16, 12, 13],
 			"shade": false,
-			"rotation": {"angle": 0, "axis": "y", "origin": [0.5, 12, 3.5]},
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.5, 12, 8]},
 			"faces": {
-				"up": {"uv": [2, 0, 11, 15], "rotation": 90, "texture": "#0"},
-				"down": {"uv": [2, 0, 11, 15], "rotation": 90, "texture": "#0"}
+				"up": {"uv": [3, 0, 13, 16], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [3, 0, 13, 16], "rotation": 90, "texture": "#0"}
 			}
 		}
 	],

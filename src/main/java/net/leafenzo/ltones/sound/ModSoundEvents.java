@@ -7,6 +7,10 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 public class ModSoundEvents {
+
+    public static final SoundEvent BLOCK_KEYBOARD_CLICK = registerSoundEvent("block.keyboard.click");
+    public static final SoundEvent BLOCK_MOUSE_CLICK = registerSoundEvent("block.mouse.click");
+
     public static final SoundEvent BLOCK_ANTENNA_BREAK = registerSoundEvent("block.antenna.break");
     public static final SoundEvent BLOCK_ANTENNA_STEP = registerSoundEvent("block.antenna.step");
     public static final SoundEvent BLOCK_ANTENNA_PLACE = registerSoundEvent("block.antenna.place");

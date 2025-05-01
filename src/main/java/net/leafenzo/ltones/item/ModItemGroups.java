@@ -126,6 +126,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DOOR_PUNCTURE);
                         entries.add(ModBlocks.TRAPDOOR_PUNCTURE);
                         entries.add(ModBlocks.IRON_BAR_DOOR);
+                        entries.add(ModBlocks.IRON_BAR_TRAPDOOR);
                         entries.add(ModBlocks.TONE);
                         entries.add(ModBlocks.POLISHED_TONE);
                         entries.add(ModBlocks.TONE_BRICKS);
@@ -136,12 +137,16 @@ public class ModItemGroups {
                         entries.add(ModBlocks.AURORA);
                         entries.add(ModBlocks.CRT);
                         entries.add(ModBlocks.KEYBOARD);
+                        entries.add(ModBlocks.MOUSE);
                         entries.add(ModBlocks.AGED_CRT);
                         entries.add(ModBlocks.AGED_KEYBOARD);
+                        entries.add(ModBlocks.AGED_MOUSE);
                         entries.add(ModBlocks.BLACK_CRT);
                         entries.add(ModBlocks.BLACK_KEYBOARD);
+                        entries.add(ModBlocks.BLACK_MOUSE);
                         entries.add(ModBlocks.GRAY_CRT);
                         entries.add(ModBlocks.GRAY_KEYBOARD);
+                        entries.add(ModBlocks.GRAY_MOUSE);
                         entries.add(ModBlocks.EMPTY_TIRE);
                         entries.add(ModBlocks.TIRE);
                         entries.add(ModBlocks.CRATE);

@@ -1,5 +1,6 @@
 package net.leafenzo.ltones.block.custom;
 
+import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
@@ -38,13 +39,9 @@ public class KeyboardBlock extends BasicHorizontalFacingBlock implements Waterlo
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        float a = world.getRandom().nextFloat() * 0.4f;
+        float a = world.getRandom().nextFloat() * 0.1f;
         float b = world.getRandom().nextFloat() * 0.3f;
-        world.playSound(null, pos, SoundEvents.BLOCK_BAMBOO_WOOD_BUTTON_CLICK_ON, SoundCategory.BLOCKS, 0.3f + b, 1.8f + a);
-        world.playSound(null, pos, SoundEvents.BLOCK_BAMBOO_WOOD_BUTTON_CLICK_OFF, SoundCategory.BLOCKS, 0.3f + a, 1.8f + b);
-
-        float c = world.getRandom().nextFloat() * 0.2f;
-        world.playSound(null, pos, SoundEvents.BLOCK_STONE_HIT, SoundCategory.BLOCKS, 0.2f + c, 2.4f - b);
+        world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_KEYBOARD_CLICK, SoundCategory.BLOCKS, 0.3f + b, 0.95f + a, false);
 
         return ActionResult.SUCCESS;
     }

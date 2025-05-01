@@ -27,7 +27,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:licorice_glaxx"
+        "recipe": "minecraft:sandalwood_glaxx"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -41,7 +41,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:licorice_glaxx"
+      "minecraft:sandalwood_glaxx"
     ]
   },
   "sends_telemetry_event": false

@@ -1,18 +1,33 @@
 {
   "variants": {
-    "facing=east": {
+    "facing=east,lower=false": {
       "model": "ltones:block/antenna",
       "y": 90
     },
-    "facing=north": {
+    "facing=east,lower=true": {
+      "model": "ltones:block/antenna_lower",
+      "y": 90
+    },
+    "facing=north,lower=false": {
       "model": "ltones:block/antenna"
     },
-    "facing=south": {
+    "facing=north,lower=true": {
+      "model": "ltones:block/antenna_lower"
+    },
+    "facing=south,lower=false": {
       "model": "ltones:block/antenna",
       "y": 180
     },
-    "facing=west": {
+    "facing=south,lower=true": {
+      "model": "ltones:block/antenna_lower",
+      "y": 180
+    },
+    "facing=west,lower=false": {
       "model": "ltones:block/antenna",
+      "y": 270
+    },
+    "facing=west,lower=true": {
+      "model": "ltones:block/antenna_lower",
       "y": 270
     }
   }

@@ -1,0 +1,7 @@
+{
+  "parent": "ltones:block/mouse_template",
+  "textures": {
+    "all": "ltones:block/aged_mouse",
+    "particle": "ltones:block/aged_mouse"
+  }
+}

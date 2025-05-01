@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
+  "category": "redstone",
   "key": {
     "#": {
-      "item": "ltones:corporeal_vapor"
+      "item": "minecraft:iron_bars"
     }
   },
   "pattern": [
-    "##",
-    "##"
+    "###",
+    "###"
   ],
   "result": {
-    "count": 4,
-    "item": "ltones:light_gray_myst"
+    "count": 2,
+    "item": "ltones:iron_bar_trapdoor"
   },
   "show_notification": true
 }
