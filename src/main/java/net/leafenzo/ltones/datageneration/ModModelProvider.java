@@ -14,6 +14,7 @@ import net.leafenzo.ltones.state.ModProperties;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.*;
 import net.minecraft.data.client.*;
+import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -44,7 +45,6 @@ public class ModModelProvider extends FabricModelProvider {
         Identifier identifier2 = Models.TEMPLATE_ORIENTABLE_TRAPDOOR_BOTTOM.upload(trapdoorBlock, textureMap, blockStateModelGenerator.modelCollector);
         Identifier identifier3 = Models.TEMPLATE_ORIENTABLE_TRAPDOOR_OPEN.upload(trapdoorBlock, textureMap, blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createOrientableTrapdoorBlockState(trapdoorBlock, identifier, identifier2, identifier3));
-        //blockStateModelGenerator.registerParentedItemModel(trapdoorBlock, identifier2);
     }
 
     private void registerUpDefaultOrientable(BlockStateModelGenerator blockStateModelGenerator, Block block) {
@@ -794,7 +794,7 @@ public class ModModelProvider extends FabricModelProvider {
             blockStateModelGenerator.registerDoor(block);
         }
         for (Block block : ModBlocks.TRAPDOORS) {
-            registerCustomOrientableTrapdoor(blockStateModelGenerator, block);
+            this.registerCustomOrientableTrapdoor(blockStateModelGenerator, block);
         }
 
         // Fallback BlockItem Models
