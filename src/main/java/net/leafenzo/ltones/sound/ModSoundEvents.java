@@ -13,6 +13,8 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_MOUSE_CLICK = registerSoundEvent("block.mouse.click");
     public static final SoundEvent BLOCK_MOUSE_CLICK_AGED = registerSoundEvent("block.mouse.click_aged");
 
+    public static final SoundEvent BLOCK_CRT_TURN_ON = registerSoundEvent("block.crt.turn_on");
+    public static final SoundEvent BLOCK_CRT_TURN_OFF = registerSoundEvent("block.crt.turn_off");
     public static final SoundEvent BLOCK_CRT_BREAK = registerSoundEvent("block.crt.break");
     public static final SoundEvent BLOCK_CRT_STEP = registerSoundEvent("block.crt.step");
     public static final SoundEvent BLOCK_CRT_PLACE = registerSoundEvent("block.crt.place");

@@ -870,10 +870,10 @@ public class ModBlocks {
 
     //TODO better CRT sfx
     //CRT block entity and screen display
-    public static final Block CRT = registerBlock("crt", new CRTBlock(FabricBlockSettings.copyOf(nurrMaterial).sounds(ModBlockSoundGroup.CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).strength(1.0f).mapColor(DyeColor.WHITE), ModSoundEvents.BLOCK_REDDS_ACTIVATE, ModSoundEvents.BLOCK_REDDS_DEACTIVATE));
-    public static final Block AGED_CRT = registerBlock("aged_crt", new CRTBlock(FabricBlockSettings.copyOf(CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).mapColor(DyeColor.YELLOW), ModSoundEvents.BLOCK_REDDS_ACTIVATE, ModSoundEvents.BLOCK_REDDS_DEACTIVATE));
-    public static final Block BLACK_CRT = registerBlock("black_crt", new CRTBlock(FabricBlockSettings.copyOf(CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).mapColor(DyeColor.BLACK), ModSoundEvents.BLOCK_REDDS_ACTIVATE, ModSoundEvents.BLOCK_REDDS_DEACTIVATE));
-    public static final Block GRAY_CRT = registerBlock("gray_crt", new CRTBlock(FabricBlockSettings.copyOf(CRT).luminance(createLightLevelFromProperty(7, Properties.LIT)).mapColor(DyeColor.GRAY), ModSoundEvents.BLOCK_REDDS_ACTIVATE, ModSoundEvents.BLOCK_REDDS_DEACTIVATE));
+    public static final Block CRT = registerBlock("crt", new CRTBlock(FabricBlockSettings.create().strength(1.2f).sounds(ModBlockSoundGroup.CRT).emissiveLighting((state, world, pos) -> state.get(Properties.LIT)).luminance(createLightLevelFromProperty(3, Properties.LIT)).strength(1.0f).mapColor(DyeColor.WHITE), ModSoundEvents.BLOCK_CRT_TURN_ON, ModSoundEvents.BLOCK_CRT_TURN_OFF));
+    public static final Block AGED_CRT = registerBlock("aged_crt", new CRTBlock(FabricBlockSettings.copyOf(CRT).mapColor(DyeColor.YELLOW), ModSoundEvents.BLOCK_CRT_TURN_ON, ModSoundEvents.BLOCK_CRT_TURN_OFF));
+    public static final Block BLACK_CRT = registerBlock("black_crt", new CRTBlock(FabricBlockSettings.copyOf(CRT).mapColor(DyeColor.BLACK), ModSoundEvents.BLOCK_CRT_TURN_ON, ModSoundEvents.BLOCK_CRT_TURN_OFF));
+    public static final Block GRAY_CRT = registerBlock("gray_crt", new CRTBlock(FabricBlockSettings.copyOf(CRT).mapColor(DyeColor.GRAY), ModSoundEvents.BLOCK_CRT_TURN_ON, ModSoundEvents.BLOCK_CRT_TURN_OFF));
     public static final Block EMPTY_TIRE = registerBlock("empty_tire", new BouncyPillarBlock(FabricBlockSettings.create().mapColor(MapColor.BLACK).instrument(Instrument.BASS).strength(0.2f).sounds(ModBlockSoundGroup.TIRE)));
     public static final Block TIRE = registerBlock("tire", new PillarBlock(FabricBlockSettings.copyOf(EMPTY_TIRE).strength(1.0f).requiresTool()));
     public static final Block CRATE = registerBlock("crate", new CrateBlock(FabricBlockSettings.create().instrument(Instrument.BASEDRUM).mapColor(MapColor.TERRACOTTA_GRAY).strength(3.5f, 50.0f).requiresTool().sounds(ModBlockSoundGroup.KORP)));
@@ -1044,6 +1044,9 @@ public class ModBlocks {
     //</editor-fold>
 
     //<editor-fold desc ="Attribute Util">
+    private static boolean state(BlockState blockState, BlockView blockView, BlockPos blockPos, BooleanProperty property) {
+        return blockState.get(property);
+    }
     private static boolean never(BlockState blockState, BlockView blockView, BlockPos blockPos) {
         return false;
     }

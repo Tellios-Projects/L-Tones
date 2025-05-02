@@ -19,6 +19,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -69,9 +70,6 @@ public class RadioBlock extends BasicHorizontalFacingBlock {
 
     public void turnOn(BlockState state, World world, BlockPos pos) {
         world.playSound(null, pos, getOnSound(), SoundCategory.BLOCKS, 0.3f, 1.0f);
-        for (int i = 0; i < 8; i++) {
-            world.addParticle(new DustParticleEffect(DustParticleEffect.RED, 1.0f), pos.getX() + 0.5f, pos.getY() + 0.5f, pos.getZ() + 0.5f, 0.0, 0.0, 0.0);
-        }
         //enable Blockentity
         world.setBlockState(pos, state.with(ENABLED, true));
     }
@@ -108,6 +106,7 @@ public class RadioBlock extends BasicHorizontalFacingBlock {
             if (state.get(ENABLED)) {
                 turnOff(state, world, pos);
             } else {
+                spawnParticles(world,pos);
                 turnOn(state, world, pos);
             }
             world.emitGameEvent(player, state.get(ENABLED) ? GameEvent.BLOCK_ACTIVATE : GameEvent.BLOCK_DEACTIVATE, pos);
@@ -115,12 +114,11 @@ public class RadioBlock extends BasicHorizontalFacingBlock {
         return ActionResult.CONSUME;
     }
 
-    private static void spawnParticles(BlockState state, WorldAccess world, BlockPos pos, float alpha) {
-        Direction direction = state.get(FACING).getOpposite();
-        double d = (double)pos.getX() + 0.5 + 0.1 * (double)direction.getOffsetX() + 0.2;
-        double e = (double)pos.getY() + 0.5 + 0.1 * (double)direction.getOffsetY() + 0.2;
-        double f = (double)pos.getZ() + 0.5 + 0.1 * (double)direction.getOffsetZ() + 0.2;
-        world.addParticle(new DustParticleEffect(DustParticleEffect.RED, alpha), d, e, f, 0.0, 0.0, 0.0);
+    private static void spawnParticles(World world, BlockPos pos) {
+        Random random = world.random;
+        for (int i = 0; i < 8; i++) {
+            world.addParticle(DustParticleEffect.DEFAULT, (double)pos.getX() + (double)random.nextFloat(), (double)pos.getY() + (double)random.nextFloat(), (double)pos.getZ() + (double)random.nextFloat(), 0.0, 0.0, 0.0);
+        }
     }
 
     @Override

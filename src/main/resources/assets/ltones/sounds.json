@@ -3808,6 +3808,17 @@
 		]
 	},
 
+
+	"block.crt.turn_on": {
+		"sounds": [
+			"ltones:block/crt/turn_on"
+		]
+	},
+	"block.crt.turn_off": {
+		"sounds": [
+			"ltones:block/crt/turn_off"
+		]
+	},
 	"block.crt.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
