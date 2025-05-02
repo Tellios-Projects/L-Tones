@@ -13,7 +13,8 @@ public class ModModels {
     public static final Model CRT = block(Super.MOD_ID + ":block/crt_template", TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.FRONT, TextureKey.BACK);
     public static final Model KEYBOARD = block(Super.MOD_ID + ":block/keyboard_template", TextureKey.PARTICLE, TextureKey.ALL);
     public static final Model MOUSE = block(Super.MOD_ID + ":block/mouse_template", TextureKey.PARTICLE, TextureKey.ALL);
-    public static final Model TRAPDOOR = block(Super.MOD_ID + ":block/trapdoor_item", TextureKey.PARTICLE, TextureKey.ALL);
+    public static final Model SWITCH_ON = block(Super.MOD_ID + ":block/switch_on_template", TextureKey.PARTICLE, TextureKey.ALL);
+    public static final Model SWITCH_OFF = block(Super.MOD_ID + ":block/switch_off_template", TextureKey.PARTICLE, TextureKey.ALL);
 
 
     private static Model block(String path, TextureKey ... requiredTextureKeys) {

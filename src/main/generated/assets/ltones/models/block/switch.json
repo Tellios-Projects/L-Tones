@@ -1,0 +1,7 @@
+{
+  "parent": "ltones:block/switch_off_template",
+  "textures": {
+    "all": "ltones:block/switch",
+    "particle": "ltones:block/switch"
+  }
+}

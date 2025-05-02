@@ -7,6 +7,7 @@ import net.leafenzo.ltones.Super;
 import net.leafenzo.ltones.block.custom.DecalBlock;
 import net.leafenzo.ltones.block.custom.LitSlabBlock;
 import net.leafenzo.ltones.block.ModBlocks;
+import net.leafenzo.ltones.block.custom.SwitchBlock;
 import net.leafenzo.ltones.data.client.ModModels;
 import net.leafenzo.ltones.data.client.ModTexturedModel;
 import net.leafenzo.ltones.item.ModItems;
@@ -240,6 +241,16 @@ public class ModModelProvider extends FabricModelProvider {
 //        blockStateModelGenerator.registerItemModel(block.asItem());
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
     }
+
+    private void registerSwitchBlock(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        blockStateModelGenerator.registerItemModel(block.asItem());
+        Identifier identifier = blockStateModelGenerator.createSubModel(block, "", ModModels.SWITCH_OFF, TextureMap::all); //come back to this
+        Identifier identifier2 = blockStateModelGenerator.createSubModel(block, "_on", ModModels.SWITCH_ON, TextureMap::all);
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block)
+                .coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.POWERED, identifier2, identifier))
+                .coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
+    }
+
     private void registerAntennaBlock(BlockStateModelGenerator blockStateModelGenerator) {
         Identifier identifier = new Identifier("ltones", "block/antenna");
         Identifier identifier2 = new Identifier("ltones", "block/antenna_lower");
@@ -770,6 +781,10 @@ public class ModModelProvider extends FabricModelProvider {
         registerMouseBlock(blockStateModelGenerator, ModBlocks.AGED_MOUSE);
         registerMouseBlock(blockStateModelGenerator, ModBlocks.BLACK_MOUSE);
         registerMouseBlock(blockStateModelGenerator, ModBlocks.GRAY_MOUSE);
+        registerSwitchBlock(blockStateModelGenerator, ModBlocks.SWITCH);
+        registerSwitchBlock(blockStateModelGenerator, ModBlocks.AGED_SWITCH);
+        registerSwitchBlock(blockStateModelGenerator, ModBlocks.BLACK_SWITCH);
+        registerSwitchBlock(blockStateModelGenerator, ModBlocks.GRAY_SWITCH);
         registerAntennaBlock(blockStateModelGenerator);
         registerRadioBlock(blockStateModelGenerator);
         //</editor-fold>
@@ -820,7 +835,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateFallbackBlockItemModels(BlockStateModelGenerator blockStateModelGenerator) {
         for (Identifier id : ModUtil.allBlockIdsInNamespace(Super.MOD_ID)) {
             Block block = Registries.BLOCK.get(id);
-            if (block instanceof TrapdoorBlock) return; //fuck it this fixes trapdoors
+            if (block instanceof TrapdoorBlock || block instanceof SwitchBlock) return; //fuck it this fixes trapdoors
             //TODO: come up with a more modular implementation of this that excludes blocks which have an item model already. otherwise it throws an error saying that the model is duplicated
             if(block instanceof StairsBlock || block instanceof LitSlabBlock || block instanceof SlabBlock || block instanceof DecalBlock || block instanceof DoorBlock) continue; //Jank but it works // WOW this sucks -me, months later
             registerParentedBlockItemModel(blockStateModelGenerator, Registries.BLOCK.get(id), Super.asResource("block/" + id.getPath()));

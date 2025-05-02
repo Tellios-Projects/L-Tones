@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,powered=false": {
+      "model": "ltones:block/gray_switch",
+      "y": 90
+    },
+    "facing=east,powered=true": {
+      "model": "ltones:block/gray_switch_on",
+      "y": 90
+    },
+    "facing=north,powered=false": {
+      "model": "ltones:block/gray_switch"
+    },
+    "facing=north,powered=true": {
+      "model": "ltones:block/gray_switch_on"
+    },
+    "facing=south,powered=false": {
+      "model": "ltones:block/gray_switch",
+      "y": 180
+    },
+    "facing=south,powered=true": {
+      "model": "ltones:block/gray_switch_on",
+      "y": 180
+    },
+    "facing=west,powered=false": {
+      "model": "ltones:block/gray_switch",
+      "y": 270
+    },
+    "facing=west,powered=true": {
+      "model": "ltones:block/gray_switch_on",
+      "y": 270
+    }
+  }
+}
