@@ -45,6 +45,7 @@ public class ModModelProvider extends FabricModelProvider {
         Identifier identifier2 = Models.TEMPLATE_ORIENTABLE_TRAPDOOR_BOTTOM.upload(trapdoorBlock, textureMap, blockStateModelGenerator.modelCollector);
         Identifier identifier3 = Models.TEMPLATE_ORIENTABLE_TRAPDOOR_OPEN.upload(trapdoorBlock, textureMap, blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createOrientableTrapdoorBlockState(trapdoorBlock, identifier, identifier2, identifier3));
+        blockStateModelGenerator.registerParentedItemModel(trapdoorBlock, identifier2);
     }
 
     private void registerUpDefaultOrientable(BlockStateModelGenerator blockStateModelGenerator, Block block) {
@@ -819,6 +820,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateFallbackBlockItemModels(BlockStateModelGenerator blockStateModelGenerator) {
         for (Identifier id : ModUtil.allBlockIdsInNamespace(Super.MOD_ID)) {
             Block block = Registries.BLOCK.get(id);
+            if (block instanceof TrapdoorBlock) return; //fuck it this fixes trapdoors
+            //TODO: come up with a more modular implementation of this that excludes blocks which have an item model already. otherwise it throws an error saying that the model is duplicated
             if(block instanceof StairsBlock || block instanceof LitSlabBlock || block instanceof SlabBlock || block instanceof DecalBlock || block instanceof DoorBlock) continue; //Jank but it works // WOW this sucks -me, months later
             registerParentedBlockItemModel(blockStateModelGenerator, Registries.BLOCK.get(id), Super.asResource("block/" + id.getPath()));
         }
