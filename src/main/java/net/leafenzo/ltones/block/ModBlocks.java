@@ -604,24 +604,24 @@ public class ModBlocks {
     //<editor-fold desc ="Blocks - ISZM">
     private static final FabricBlockSettings iszmMaterial = FabricBlockSettings.create()
             .strength(0.3f)
-            .luminance(state -> 11)
+            .luminance(createLightLevelFromProperty(11, Properties.LIT))
             .sounds(ModBlockSoundGroup.ISZM);
-    public static final Block ISZM = registerBlockInBlockset(ISZM_BLOCKS, "iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.GRAY)));
-    public static final Block WHITE_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "white_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_WHITE)));
-    public static final Block FADED_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "faded_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.PALE_YELLOW)));
-    public static final Block NEUTRAL_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "neutral_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.WHITE_GRAY)));
-    public static final Block DUSTY_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "dusty_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.OAK_TAN)));
-    public static final Block SCORCHED_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "scorched_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.DARK_CRIMSON)));
-    public static final Block DARK_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "dark_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.DARK_RED)));
-    public static final Block RED_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "red_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.DULL_RED)));
-    public static final Block PINK_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "pink_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_RED)));
-    public static final Block GREEN_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "green_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.LIME)));
-    public static final Block WARM_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "warm_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_LIME)));
-    public static final Block VIBRANT_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "vibrant_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.PALE_GREEN)));
-    public static final Block GAME_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "game_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.GREEN)));
-    public static final Block BURNED_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "burned_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_GREEN)));
-    public static final Block COLD_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "cold_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_LIGHT_BLUE)));
-    public static final Block STUDY_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "study_iszm", new Block(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.BLUE)));
+    public static final Block ISZM = registerBlockInBlockset(ISZM_BLOCKS, "iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.GRAY)));
+    public static final Block WHITE_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "white_iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_WHITE)));
+    public static final Block FADED_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "faded_iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.PALE_YELLOW)));
+    public static final Block NEUTRAL_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "neutral_iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.WHITE_GRAY)));
+    public static final Block DUSTY_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "dusty_iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.OAK_TAN)));
+    public static final Block SCORCHED_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "scorched_iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.DARK_CRIMSON)));
+    public static final Block DARK_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "dark_iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.DARK_RED)));
+    public static final Block RED_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "red_iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.DULL_RED)));
+    public static final Block PINK_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "pink_iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_RED)));
+    public static final Block GREEN_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "green_iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.LIME)));
+    public static final Block WARM_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "warm_iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_LIME)));
+    public static final Block VIBRANT_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "vibrant_iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.PALE_GREEN)));
+    public static final Block GAME_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "game_iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.GREEN)));
+    public static final Block BURNED_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "burned_iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_GREEN)));
+    public static final Block COLD_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "cold_iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.TERRACOTTA_LIGHT_BLUE)));
+    public static final Block STUDY_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "study_iszm", new LitBlock(FabricBlockSettings.copyOf(iszmMaterial).mapColor(MapColor.BLUE)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - MYST">
     private static final FabricBlockSettings mystMaterial = FabricBlockSettings.create() // TODO, color based scrolling animation // what did i MEAN by this grrgrjgjrglerkgjer;kgkj;ekgrj

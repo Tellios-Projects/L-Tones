@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "lit=false": {
       "model": "ltones:block/faded_iszm"
+    },
+    "lit=true": {
+      "model": "ltones:block/faded_iszm_on"
     }
   }
 }

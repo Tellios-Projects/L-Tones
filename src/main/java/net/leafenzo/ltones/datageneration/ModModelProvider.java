@@ -613,7 +613,7 @@ public class ModModelProvider extends FabricModelProvider {
         //</editor-fold>
         //<editor-fold desc = "Models - iszm">
         for(Block block : ModBlocks.ISZM_BLOCKS) {
-            blockStateModelGenerator.registerCubeAllModelTexturePool(block);
+            registerLitOnOffBlock(blockStateModelGenerator, block, TextureMap::all);
         }
         //</editor-fold>
         //<editor-fold desc = "Models - myst">
