@@ -1,7 +1,7 @@
 {
   "parent": "ltones:block/switch_on_template",
   "textures": {
-    "all": "ltones:block/black_switch_on",
-    "particle": "ltones:block/black_switch_on"
+    "all": "ltones:block/black_switch",
+    "particle": "ltones:block/black_switch"
   }
 }

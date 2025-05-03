@@ -32,6 +32,10 @@ public class ModModelProvider extends FabricModelProvider {
         super(output);
     }
 
+    public final Identifier createSubModelWithoutTextureSuffix(BlockStateModelGenerator blockStateModelGenerator, Block block, String suffix, Model model, Function<Identifier, TextureMap> texturesFactory) {
+        return model.upload(block, suffix, texturesFactory.apply(TextureMap.getId(block)), blockStateModelGenerator.modelCollector);
+    }
+
     public void registerCustomTrapdoor(BlockStateModelGenerator blockStateModelGenerator, Block trapdoorBlock) {
         TextureMap textureMap = TextureMap.texture(trapdoorBlock);
         Identifier identifier = Models.TEMPLATE_TRAPDOOR_TOP.upload(trapdoorBlock, textureMap, blockStateModelGenerator.modelCollector);
@@ -244,8 +248,8 @@ public class ModModelProvider extends FabricModelProvider {
 
     private void registerSwitchBlock(BlockStateModelGenerator blockStateModelGenerator, Block block) {
         blockStateModelGenerator.registerItemModel(block.asItem());
-        Identifier identifier = blockStateModelGenerator.createSubModel(block, "", ModModels.SWITCH_OFF, TextureMap::all); //come back to this
-        Identifier identifier2 = blockStateModelGenerator.createSubModel(block, "_on", ModModels.SWITCH_ON, TextureMap::all);
+        Identifier identifier = createSubModelWithoutTextureSuffix(blockStateModelGenerator, block, "", ModModels.SWITCH_OFF, TextureMap::all);
+        Identifier identifier2 = createSubModelWithoutTextureSuffix(blockStateModelGenerator, block, "_on", ModModels.SWITCH_ON, TextureMap::all);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block)
                 .coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.POWERED, identifier2, identifier))
                 .coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
@@ -259,6 +263,7 @@ public class ModModelProvider extends FabricModelProvider {
                 .coordinate(BlockStateModelGenerator.createBooleanModelMap(ModProperties.LOWER, identifier2, identifier))
                 .coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
     }
+
     private void registerRadioBlock(BlockStateModelGenerator blockStateModelGenerator) {
         Identifier identifier = new Identifier("ltones", "block/radio");
         Identifier identifier2 = new Identifier("ltones", "block/radio_antenna");
