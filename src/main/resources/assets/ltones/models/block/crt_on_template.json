@@ -1,13 +1,13 @@
 {
 	"parent": "ltones:block/orientable_top_bottom_side_back",
 	"textures": {
-		"down": "",
-		"up": "",
-		"north": "",
-		"east": "",
-		"south": "",
-		"particle": "",
-		"west": "",
+		"particle": "#side",
+		"down": "#bottom",
+		"up": "#top",
+		"north": "#front",
+		"east": "#side",
+		"south": "#back",
+		"west": "#side",
 		"screen": "ltones:block/crt_screen_commandline"
 	},
 	"elements": [
