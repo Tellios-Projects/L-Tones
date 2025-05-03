@@ -1,7 +1,6 @@
 package net.leafenzo.ltones.block.custom;
 
 import net.leafenzo.ltones.block.entity.PCBlockEntity;
-import net.leafenzo.ltones.block.entity.ZkulBlockEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -23,14 +22,14 @@ import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
 
-public class PCTowerBlock extends BlockWithEntity {
+public class PCBlock extends BlockWithEntity {
 
     public static final BooleanProperty POWERED = Properties.POWERED;
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     private final SoundEvent onSound;
     private final SoundEvent offSound;
 
-    public PCTowerBlock(Settings settings, SoundEvent turnOnSound, SoundEvent turnOffSound) {
+    public PCBlock(Settings settings, SoundEvent turnOnSound, SoundEvent turnOffSound) {
         super(settings);
         this.onSound = turnOnSound;
         this.offSound = turnOffSound;

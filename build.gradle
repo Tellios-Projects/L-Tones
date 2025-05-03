@@ -63,7 +63,7 @@ def dependencies(DependencyHandler deps) {
 
 def devEnv(DependencyHandler deps) {
 	deps.modRuntimeOnly("maven.modrinth:emi:${emi_version}")
-	deps.modRuntimeOnly("maven.modrinth:sodium:${sodium_version}")
+	//deps.modRuntimeOnly("maven.modrinth:sodium:${sodium_version}")
 }
 
 def compat(DependencyHandler deps) {
