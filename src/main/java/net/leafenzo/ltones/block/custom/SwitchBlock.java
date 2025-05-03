@@ -81,16 +81,18 @@ public class SwitchBlock extends BasicHorizontalFacingBlock {
         state = state.cycle(POWERED);
         world.setBlockState(pos, state, Block.NOTIFY_ALL);
         this.updateNeighbors(state, world, pos);
+        this.updateNeighbors(state, world, pos);
         return state;
     }
 
     private static void spawnParticles(BlockState state, WorldAccess world, BlockPos pos, float alpha) {
-        Direction direction = state.get(FACING).getOpposite();
-        Direction direction2 = SwitchBlock.getDirection(state).getOpposite();
-        double d = (double)pos.getX() + 0.5 + 0.1 * (double)direction.getOffsetX() + 0.2 * (double)direction2.getOffsetX();
-        double e = (double)pos.getY() + 0.5 + 0.1 * (double)direction.getOffsetY() + 0.2 * (double)direction2.getOffsetY();
-        double f = (double)pos.getZ() + 0.5 + 0.1 * (double)direction.getOffsetZ() + 0.2 * (double)direction2.getOffsetZ();
-        world.addParticle(new DustParticleEffect(DustParticleEffect.RED, alpha), d, e, f, 0.0, 0.0, 0.0);
+        // Disabled on purpose
+//        Direction direction = state.get(FACING).getOpposite();
+//        Direction direction2 = SwitchBlock.getDirection(state).getOpposite();
+//        double d = (double)pos.getX() + 0.5 + 0.1 * (double)direction.getOffsetX() + 0.2 * (double)direction2.getOffsetX();
+//        double e = (double)pos.getY() + 0.5 + 0.1 * (double)direction.getOffsetY() + 0.2 * (double)direction2.getOffsetY();
+//        double f = (double)pos.getZ() + 0.5 + 0.1 * (double)direction.getOffsetZ() + 0.2 * (double)direction2.getOffsetZ();
+//        world.addParticle(new DustParticleEffect(DustParticleEffect.RED, alpha), d, e, f, 0.0, 0.0, 0.0);
     }
 
     @Override
