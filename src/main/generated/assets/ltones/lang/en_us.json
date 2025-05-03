@@ -646,5 +646,8 @@
   "item.ltones.slump": "Slump",
   "item.ltones.tawsine": "Tawsine",
   "item.ltones.thinking_metal": "Thinking Metal",
-  "itemgroup.ltones": "L-Tones"
+  "itemgroup.ltones": "L-Tones",
+  "subtitles.block.keyboard.click": "Keyboard clicks",
+  "subtitles.block.mouse.click": "Mouse clicks",
+  "subtitles.block.switch.toggle": "Switch clicks"
 }

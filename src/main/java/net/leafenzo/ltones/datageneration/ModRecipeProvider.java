@@ -257,7 +257,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerReversible2x2CompactingRecipes(exporter, reverseCategory, baseItem, compactingCategory, compactItem, RecipeProvider.getRecipeName(compactItem), Super.MOD_ID + ":" + Registries.ITEM.getId(baseItem.asItem()).getPath(), RecipeProvider.getRecipeName(baseItem), Super.MOD_ID + ":" + Registries.ITEM.getId(baseItem.asItem()).getPath() + "_reverse");
     }
     public static void offerCRTRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible frameItem) {
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 1)
                 .input(Character.valueOf('F'), frameItem)
                 .input(Character.valueOf('D'), ModItems.DIODE)
                 .input(Character.valueOf('S'), ModItems.SCREEN)
@@ -271,11 +271,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
     }
     public static void offerKeyboardRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible frameItem) {
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 1)
                 .input(Character.valueOf('F'), frameItem)
                 .input(Character.valueOf('D'), ModItems.DIODE)
                 .pattern("DDD")
                 .pattern("FFF")
+                .criterion(FabricRecipeProvider.hasItem(frameItem), FabricRecipeProvider.conditionsFromItem(frameItem))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.DIODE), FabricRecipeProvider.conditionsFromItem(ModItems.DIODE))
+                .group(FabricRecipeProvider.getRecipeName(output))
+                .offerTo(exporter);
+    }
+    public static void offerMouseRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible frameItem) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 2)
+                .input(Character.valueOf('F'), frameItem)
+                .input(Character.valueOf('D'), ModItems.DIODE)
+                .pattern("DD")
+                .pattern("FF")
                 .criterion(FabricRecipeProvider.hasItem(frameItem), FabricRecipeProvider.conditionsFromItem(frameItem))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.DIODE), FabricRecipeProvider.conditionsFromItem(ModItems.DIODE))
                 .group(FabricRecipeProvider.getRecipeName(output))
@@ -426,11 +437,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerCRTRecipe(exporter, ModBlocks.BLACK_CRT, ModItems.AMALGAM);
         offerCRTRecipe(exporter, ModBlocks.GRAY_CRT, ModItems.KERBESIUM);
 
+        // Switches
+        offerShapelessRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.SWITCH, Blocks.LEVER, ModItems.POLYMER, 2);
+        offerShapelessRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.SWITCH, Blocks.LEVER, ModItems.CONDUCTIUM, 2);
+        offerShapelessRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.SWITCH, Blocks.LEVER, ModItems.AMALGAM, 2);
+        offerShapelessRecipe(exporter, RecipeCategory.REDSTONE, ModBlocks.SWITCH, Blocks.LEVER, ModItems.KERBESIUM, 2);
+
         // Keyboards
         offerKeyboardRecipe(exporter, ModBlocks.KEYBOARD, ModItems.POLYMER);
         offerKeyboardRecipe(exporter, ModBlocks.AGED_KEYBOARD, ModItems.CONDUCTIUM);
         offerKeyboardRecipe(exporter, ModBlocks.BLACK_KEYBOARD, ModItems.AMALGAM);
         offerKeyboardRecipe(exporter, ModBlocks.GRAY_KEYBOARD, ModItems.KERBESIUM);
+
+        // Mice
+        offerMouseRecipe(exporter, ModBlocks.MOUSE, ModItems.POLYMER);
+        offerMouseRecipe(exporter, ModBlocks.AGED_MOUSE, ModItems.CONDUCTIUM);
+        offerMouseRecipe(exporter, ModBlocks.BLACK_MOUSE, ModItems.AMALGAM);
+        offerMouseRecipe(exporter, ModBlocks.GRAY_MOUSE, ModItems.KERBESIUM);
 
         // Tires
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMPTY_TIRE, 1)

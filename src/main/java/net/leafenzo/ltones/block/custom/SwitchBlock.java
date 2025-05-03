@@ -1,14 +1,11 @@
 package net.leafenzo.ltones.block.custom;
 
 import net.minecraft.block.*;
-import net.minecraft.block.enums.WallMountLocation;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.particle.DustParticleEffect;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -60,9 +57,9 @@ public class SwitchBlock extends BasicHorizontalFacingBlock {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (state.get(POWERED)) {
-            world.playSoundAtBlockCenter(pos, onClick, SoundCategory.BLOCKS, 0.3f, 1.0f, false);
+            world.playSound(null, pos, offClick, SoundCategory.BLOCKS, 0.6f, 1.0f);
         } else {
-            world.playSoundAtBlockCenter(pos, offClick, SoundCategory.BLOCKS, 0.3f, 1.0f, false);
+            world.playSound(null, pos, onClick, SoundCategory.BLOCKS, 0.6f, 1.0f);
         }
 
         if (world.isClient) {

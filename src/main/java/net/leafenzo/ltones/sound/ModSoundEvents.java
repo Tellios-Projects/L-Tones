@@ -13,6 +13,9 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_MOUSE_CLICK = registerSoundEvent("block.mouse.click");
     public static final SoundEvent BLOCK_MOUSE_CLICK_AGED = registerSoundEvent("block.mouse.click_aged");
 
+    public static final SoundEvent BLOCK_SWITCH_ON = registerSoundEvent("block.switch.on");
+    public static final SoundEvent BLOCK_SWITCH_OFF = registerSoundEvent("block.switch.off");
+
     public static final SoundEvent BLOCK_CRT_TURN_ON = registerSoundEvent("block.crt.turn_on");
     public static final SoundEvent BLOCK_CRT_TURN_OFF = registerSoundEvent("block.crt.turn_off");
     public static final SoundEvent BLOCK_CRT_BREAK = registerSoundEvent("block.crt.break");
@@ -20,6 +23,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_CRT_PLACE = registerSoundEvent("block.crt.place");
     public static final SoundEvent BLOCK_CRT_HIT = registerSoundEvent("block.crt.hit");
     public static final SoundEvent BLOCK_CRT_FALL = registerSoundEvent("block.crt.fall");
+
+    public static final SoundEvent BLOCK_APPLIANCE_BREAK = registerSoundEvent("block.appliance.break");
+    public static final SoundEvent BLOCK_APPLIANCE_STEP = registerSoundEvent("block.appliance.step");
+    public static final SoundEvent BLOCK_APPLIANCE_PLACE = registerSoundEvent("block.appliance.place");
+    public static final SoundEvent BLOCK_APPLIANCE_HIT = registerSoundEvent("block.appliance.hit");
+    public static final SoundEvent BLOCK_APPLIANCE_FALL = registerSoundEvent("block.appliance.fall");
 
     public static final SoundEvent BLOCK_ANTENNA_BREAK = registerSoundEvent("block.antenna.break");
     public static final SoundEvent BLOCK_ANTENNA_STEP = registerSoundEvent("block.antenna.step");

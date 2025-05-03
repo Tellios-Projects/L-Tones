@@ -38,6 +38,7 @@ public class ModBlockSoundGroup {
     public static final BlockSoundGroup ANTENNA = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_ANTENNA_BREAK, ModSoundEvents.BLOCK_ANTENNA_STEP, ModSoundEvents.BLOCK_ANTENNA_PLACE, ModSoundEvents.BLOCK_ANTENNA_HIT, ModSoundEvents.BLOCK_ANTENNA_FALL);
     public static final BlockSoundGroup RADIO = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_RADIO_BREAK, ModSoundEvents.BLOCK_RADIO_STEP, ModSoundEvents.BLOCK_RADIO_PLACE, ModSoundEvents.BLOCK_RADIO_HIT, ModSoundEvents.BLOCK_RADIO_FALL);
 
+    public static final BlockSoundGroup APPLIANCE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_APPLIANCE_BREAK, ModSoundEvents.BLOCK_APPLIANCE_STEP, ModSoundEvents.BLOCK_APPLIANCE_PLACE, ModSoundEvents.BLOCK_APPLIANCE_HIT, ModSoundEvents.BLOCK_APPLIANCE_FALL);
     public static final BlockSoundGroup CRT = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_CRT_BREAK, ModSoundEvents.BLOCK_CRT_STEP, ModSoundEvents.BLOCK_CRT_PLACE, ModSoundEvents.BLOCK_CRT_HIT, ModSoundEvents.BLOCK_CRT_FALL);
 
     public static final BlockSoundGroup AGON = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_AGON_BREAK, ModSoundEvents.BLOCK_AGON_STEP, ModSoundEvents.BLOCK_AGON_PLACE, ModSoundEvents.BLOCK_AGON_HIT, ModSoundEvents.BLOCK_AGON_FALL);

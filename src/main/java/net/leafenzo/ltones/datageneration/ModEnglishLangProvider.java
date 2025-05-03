@@ -68,6 +68,9 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         //<editor-fold desc ="EnglishLang - Manual Translations">
 
         generateTranslation(translationBuilder, "itemgroup.ltones", "L-Tones");
+        generateTranslation(translationBuilder, "subtitles.block.keyboard.click", "Keyboard clicks");
+        generateTranslation(translationBuilder, "subtitles.block.mouse.click", "Mouse clicks");
+        generateTranslation(translationBuilder, "subtitles.block.switch.toggle", "Switch clicks");
         generateTranslation(translationBuilder, ModBlocks.RAW_LUESIUM_BLOCK, "Block of Raw Luesium");
         generateTranslation(translationBuilder, ModBlocks.LUESIUM_BLOCK, "Block of Luesium");
         generateTranslation(translationBuilder, ModBlocks.ANTIBRASS_BLOCK, "Block of Antibrass");

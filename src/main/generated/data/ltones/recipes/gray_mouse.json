@@ -1,25 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
-  "group": "aged_crt",
+  "group": "gray_mouse",
   "key": {
     "D": {
       "item": "ltones:diode"
     },
     "F": {
-      "item": "ltones:conductium"
-    },
-    "S": {
-      "item": "ltones:screen"
+      "item": "ltones:kerbesium"
     }
   },
   "pattern": [
-    "FSF",
-    "FDF",
-    "FFF"
+    "DD",
+    "FF"
   ],
   "result": {
-    "item": "ltones:aged_crt"
+    "count": 2,
+    "item": "ltones:gray_mouse"
   },
   "show_notification": true
 }

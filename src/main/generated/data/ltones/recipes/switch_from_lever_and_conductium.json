@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "ltonesBlock{ltones:switch}",
+  "ingredients": [
+    {
+      "item": "minecraft:lever"
+    },
+    {
+      "item": "ltones:conductium"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ltones:switch"
+  }
+}

@@ -4,27 +4,93 @@
 			"ltones:block/keyboard/click1",
 			"ltones:block/keyboard/click2",
 			"ltones:block/keyboard/click3"
-		]
+		],
+		"subtitle": "subtitles.block.keyboard.click"
 	},
 	"block.keyboard.click_aged": {
 		"sounds": [
 			"ltones:block/keyboard/click_aged1",
 			"ltones:block/keyboard/click_aged2",
 			"ltones:block/keyboard/click_aged3"
-		]
+		],
+		"subtitle": "subtitles.block.keyboard.click"
 	},
 	"block.mouse.click": {
 		"sounds": [
 			"ltones:block/mouse/click1",
 			"ltones:block/mouse/click2",
 			"ltones:block/mouse/click3"
-		]
+		],
+		"subtitle": "subtitles.block.mouse.click"
 	},
 	"block.mouse.click_aged": {
 		"sounds": [
 			"ltones:block/mouse/click_aged1",
 			"ltones:block/mouse/click_aged2",
 			"ltones:block/mouse/click_aged3"
+		],
+		"subtitle": "subtitles.block.mouse.click"
+	},
+	"block.switch.on": {
+		"sounds": [
+			"ltones:block/switch/on1",
+			"ltones:block/switch/on2",
+			"ltones:block/switch/on3"
+		],
+		"subtitle": "subtitles.block.switch.toggle"
+	},
+	"block.switch.off": {
+		"sounds": [
+			"ltones:block/switch/off1",
+			"ltones:block/switch/off2",
+			"ltones:block/switch/off3"
+		],
+		"subtitle": "subtitles.block.switch.toggle"
+	},
+
+	"block.appliance.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/appliance/break1",
+			"ltones:block/appliance/break2",
+			"ltones:block/appliance/break3",
+			"ltones:block/appliance/break4"
+		]
+	},
+	"block.appliance.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/appliance/step1",
+			"ltones:block/appliance/step2",
+			"ltones:block/appliance/step3",
+			"ltones:block/appliance/step4"
+		]
+	},
+	"block.appliance.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/appliance/break1",
+			"ltones:block/appliance/break2",
+			"ltones:block/appliance/break3",
+			"ltones:block/appliance/break4"
+		]
+	},
+	"block.appliance.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/appliance/step1",
+			"ltones:block/appliance/step2",
+			"ltones:block/appliance/step3",
+			"ltones:block/appliance/step4"
+		]
+	},
+	"block.appliance.fall": {
+
+		"sounds": [
+			"ltones:block/appliance/step1",
+			"ltones:block/appliance/step2",
+			"ltones:block/appliance/step3",
+			"ltones:block/appliance/step4"
 		]
 	},
 	"block.antenna.break": {
@@ -4247,6 +4313,7 @@
 	},
 
 	"block.zkul.ambient": {
+		"subtitle": "subtitles.ambient.sound",
 		"sounds": [
 			"ltones:block/zkul/ambient1",
 			"ltones:block/zkul/ambient2",
@@ -4254,7 +4321,7 @@
 		]
 	},
 	"block.zkul.warn": {
-		"subtitle": "subtitles.block.zkul.warn",
+		"subtitle": "subtitles.ambient.sound",
 		"sounds": [
 			"ltones:block/zkul/warn1",
 			"ltones:block/zkul/warn2",
@@ -4262,6 +4329,7 @@
 		]
 	},
 	"block.zkul.obtain": {
+		"subtitle": "",
 		"sounds": [
 			"ltones:block/zkul/obtain1",
 			"ltones:block/zkul/obtain2"
@@ -4280,7 +4348,7 @@
 		"sounds": []
 	},
 	"block.zkul.step": {
-		"subtitle": "subtitles.block.generic.footsteps",
+		"subtitle": "",
 		"sounds": [
 			"ltones:block/zkul/step1",
 			"ltones:block/zkul/step2",
@@ -4290,7 +4358,7 @@
 		]
 	},
 	"block.zkul.place": {
-		"subtitle": "subtitles.block.generic.place",
+		"subtitle": "",
 		"sounds": [
 			"ltones:block/zkul/place1",
 			"ltones:block/zkul/place2",
@@ -4298,7 +4366,7 @@
 		]
 	},
 	"block.zkul.hit": {
-		"subtitle": "subtitles.block.generic.hit",
+		"subtitle": "",
 		"sounds": [
 			"ltones:block/zkul/step1",
 			"ltones:block/zkul/step2",
@@ -4308,7 +4376,6 @@
 		]
 	},
 	"block.zkul.fall": {
-		
 		"sounds": [
 			"ltones:block/zkul/step1",
 			"ltones:block/zkul/step2",
