@@ -16,15 +16,10 @@ public class ModBlockEntityType {
             CrateBlockEntity::new,
             ModBlocks.CRATE);
 
-    public static final BlockEntityType<LairSoundscapeBlockEntity> LAIR_SOUNDSCAPE = register(
-            "lair_soundscape",
-            LairSoundscapeBlockEntity::new,
-            ModBlocks.LAIR_SOUNDSCAPE);
-
-    public static final BlockEntityType<ExriSoundscapeBlockEntity> EXRI_SOUNDSCAPE = register(
-            "exri_soundscape",
-            ExriSoundscapeBlockEntity::new,
-            ModBlocks.EXRI_SOUNDSCAPE);
+    public static final BlockEntityType<LoopingSoundscapeBlockEntity> LOOPING_SOUNDSCAPE = register(
+            "looping_soundscape",
+            LoopingSoundscapeBlockEntity::new,
+            ModBlocks.LAIR_SOUNDSCAPE, ModBlocks.EXRI_SOUNDSCAPE);
 
     public static final BlockEntityType<ZkulBlockEntity> ZKUL = register(
             "zkul",
@@ -35,6 +30,11 @@ public class ModBlockEntityType {
             "radio",
             ZkulBlockEntity::new,
             ModBlocks.RADIO);
+
+    public static final BlockEntityType<PCBlockEntity> PC_TOWER = register(
+            "pc_tower",
+            PCBlockEntity::new,
+            ModBlocks.PC, ModBlocks.AGED_PC, ModBlocks.BLACK_PC, ModBlocks.GRAY_PC);
 
 
     private static <E extends BlockEntity> BlockEntityType<E> register(String id, FabricBlockEntityTypeBuilder.Factory<E> factory, Block... blocks) {

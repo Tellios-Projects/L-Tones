@@ -63,10 +63,6 @@ public class SwitchBlock extends BasicHorizontalFacingBlock {
         }
 
         if (world.isClient) {
-            BlockState blockState = state.cycle(POWERED);
-            if (blockState.get(POWERED)) {
-                SwitchBlock.spawnParticles(blockState, world, pos, 1.0f);
-            }
             return ActionResult.SUCCESS;
         }
         BlockState blockState = this.togglePower(state, world, pos);
@@ -80,23 +76,6 @@ public class SwitchBlock extends BasicHorizontalFacingBlock {
         this.updateNeighbors(state, world, pos);
         this.updateNeighbors(state, world, pos);
         return state;
-    }
-
-    private static void spawnParticles(BlockState state, WorldAccess world, BlockPos pos, float alpha) {
-        // Disabled on purpose
-//        Direction direction = state.get(FACING).getOpposite();
-//        Direction direction2 = SwitchBlock.getDirection(state).getOpposite();
-//        double d = (double)pos.getX() + 0.5 + 0.1 * (double)direction.getOffsetX() + 0.2 * (double)direction2.getOffsetX();
-//        double e = (double)pos.getY() + 0.5 + 0.1 * (double)direction.getOffsetY() + 0.2 * (double)direction2.getOffsetY();
-//        double f = (double)pos.getZ() + 0.5 + 0.1 * (double)direction.getOffsetZ() + 0.2 * (double)direction2.getOffsetZ();
-//        world.addParticle(new DustParticleEffect(DustParticleEffect.RED, alpha), d, e, f, 0.0, 0.0, 0.0);
-    }
-
-    @Override
-    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (state.get(POWERED) && random.nextFloat() < 0.25f) {
-            SwitchBlock.spawnParticles(state, world, pos, 0.5f);
-        }
     }
 
     @Override
@@ -136,7 +115,7 @@ public class SwitchBlock extends BasicHorizontalFacingBlock {
         if (state.get(POWERED)) {
             this.updateNeighbors(state, world, pos);
         }
-        super.onStateReplaced(state, world, pos, newState, moved);
+        super.onStateReplaced(state, world, pos, newState, false);
     }
 
     @Override

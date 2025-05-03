@@ -372,7 +372,7 @@ public class ModBlocks {
     public static final Block LAIR_CHUNK = registerBlockInBlockset(LAIR_BLOCKS, "lair_chunk", new ReversiblePillarBlock(FabricBlockSettings.copyOf(lairMaterial).mapColor(MapColor.DARK_CRIMSON)));
     public static final Block LAIR_CELL = registerBlockInBlockset(LAIR_BLOCKS, "lair_cell", new Block(FabricBlockSettings.copyOf(lairMaterial)));
     public static final Block LAIR_AGED = registerBlockInBlockset(LAIR_BLOCKS, "lair_aged", new Block(FabricBlockSettings.copyOf(lairMaterial).mapColor(MapColor.DARK_CRIMSON)));
-    public static final Block LAIR_SOUNDSCAPE = registerBlockInBlockset(LAIR_BLOCKS, "lair_soundscape", new LairSoundscapeBlock(FabricBlockSettings.copyOf(lairMaterial).mapColor(MapColor.DARK_CRIMSON)));
+    public static final Block LAIR_SOUNDSCAPE = registerBlockInBlockset(LAIR_BLOCKS, "lair_soundscape", new LoopingSoundscapeBlock(FabricBlockSettings.copyOf(lairMaterial).mapColor(MapColor.DARK_CRIMSON), ModSoundEvents.BLOCK_LAIR_AMBIENT, 20));
     //</editor-fold>
     //<editor-fold desc ="Blocks - KRYP">
     private static final FabricBlockSettings krypMaterial = FabricBlockSettings.create()
@@ -551,7 +551,7 @@ public class ModBlocks {
     public static final Block EXRI_CURRENT = registerBlockInBlockset(EXRI_BLOCKS, "exri_current", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_CRITICAL = registerBlockInBlockset(EXRI_BLOCKS, "exri_critical", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_CONTROL = registerBlockInBlockset(EXRI_BLOCKS, "exri_control", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
-    public static final Block EXRI_SOUNDSCAPE = registerBlockInBlockset(EXRI_BLOCKS, "exri_soundscape", new ExriSoundscapeBlock(FabricBlockSettings.copyOf(exriMaterial)));
+    public static final Block EXRI_SOUNDSCAPE = registerBlockInBlockset(EXRI_BLOCKS, "exri_soundscape", new LoopingSoundscapeBlock(FabricBlockSettings.copyOf(exriMaterial), ModSoundEvents.BLOCK_LAIR_AMBIENT,105));
 
     //TODO bit blockset always emits a redstone level of 1   
     //</editor-fold>
@@ -889,6 +889,11 @@ public class ModBlocks {
     public static final Block AGED_SWITCH = registerBlock("aged_switch", new SwitchBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_ON, ModSoundEvents.BLOCK_SWITCH_OFF));
     public static final Block BLACK_SWITCH = registerBlock("black_switch", new SwitchBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_ON, ModSoundEvents.BLOCK_SWITCH_OFF));
     public static final Block GRAY_SWITCH = registerBlock("gray_switch", new SwitchBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_ON, ModSoundEvents.BLOCK_SWITCH_OFF));
+    public static final Block PC = registerBlock("pc", new PCTowerBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(0.1f).sounds(ModBlockSoundGroup.APPLIANCE).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_ON, ModSoundEvents.BLOCK_SWITCH_OFF));
+    public static final Block AGED_PC = registerBlock("aged_pc", new PCTowerBlock(FabricBlockSettings.copyOf(PC).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_ON, ModSoundEvents.BLOCK_SWITCH_OFF));
+    public static final Block BLACK_PC = registerBlock("black_pc", new PCTowerBlock(FabricBlockSettings.copyOf(PC).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_ON, ModSoundEvents.BLOCK_SWITCH_OFF));
+    public static final Block GRAY_PC = registerBlock("gray_pc", new PCTowerBlock(FabricBlockSettings.copyOf(PC).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_ON, ModSoundEvents.BLOCK_SWITCH_OFF));
+
     public static final Block ANTENNA = registerBlock("antenna", new AntennaBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_GRAY).strength(3.0f, 6.0f).sounds(ModBlockSoundGroup.ANTENNA).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never)));
         static { RENDER_LAYER_CUTOUT.add(ANTENNA); }
     public static final Block RADIO = registerBlock("radio", new RadioBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_GRAY).strength(1.0f).sounds(ModBlockSoundGroup.RADIO).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never)));

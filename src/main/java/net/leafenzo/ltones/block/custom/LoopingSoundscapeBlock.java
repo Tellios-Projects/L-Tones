@@ -1,10 +1,11 @@
 package net.leafenzo.ltones.block.custom;
 
-import net.leafenzo.ltones.block.entity.LairSoundscapeBlockEntity;
+import net.leafenzo.ltones.block.entity.LoopingSoundscapeBlockEntity;
 import net.leafenzo.ltones.block.entity.ModBlockEntityType;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.*;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.state.StateManager;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -12,10 +13,14 @@ import org.jetbrains.annotations.Nullable;
 
 import static net.leafenzo.ltones.block.custom.SoundscapeBlock.LIT;
 
-public class LairSoundscapeBlock extends BlockWithEntity {
+public class LoopingSoundscapeBlock extends BlockWithEntity {
+    private static int delay;
+    private static SoundEvent sound;
 
-    public LairSoundscapeBlock(Settings settings) {
+    public LoopingSoundscapeBlock(Settings settings, SoundEvent loopingSound, int soundDelay) {
         super(settings);
+        delay = soundDelay;
+        sound = loopingSound;
     }
 
     @Override
@@ -27,9 +32,8 @@ public class LairSoundscapeBlock extends BlockWithEntity {
     @Override
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return world.isClient ? null : LairSoundscapeBlock.checkType(type, ModBlockEntityType.LAIR_SOUNDSCAPE, LairSoundscapeBlockEntity::serverTick);
+        return world.isClient ? null : LoopingSoundscapeBlock.checkType(type, ModBlockEntityType.LOOPING_SOUNDSCAPE, LoopingSoundscapeBlockEntity::serverTick);
     }
-
 
     @Override
     public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
@@ -55,7 +59,7 @@ public class LairSoundscapeBlock extends BlockWithEntity {
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state)  {
-        return new LairSoundscapeBlockEntity(pos, state); // useful for future
+        return new LoopingSoundscapeBlockEntity(pos, state, delay, sound);
     }
 
     @Override
