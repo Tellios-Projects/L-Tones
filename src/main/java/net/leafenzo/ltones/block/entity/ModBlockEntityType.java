@@ -31,7 +31,7 @@ public class ModBlockEntityType {
             ZkulBlockEntity::new,
             ModBlocks.RADIO);
 
-    public static final BlockEntityType<PCBlockEntity> PC_TOWER = register(
+    public static final BlockEntityType<PCBlockEntity> PC = register(
             "pc_tower",
             PCBlockEntity::new,
             ModBlocks.PC, ModBlocks.AGED_PC, ModBlocks.BLACK_PC, ModBlocks.GRAY_PC);

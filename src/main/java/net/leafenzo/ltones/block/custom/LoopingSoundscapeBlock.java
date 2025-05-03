@@ -15,15 +15,15 @@ import org.jetbrains.annotations.Nullable;
 import static net.leafenzo.ltones.block.custom.SoundscapeBlock.LIT;
 
 public class LoopingSoundscapeBlock extends BlockWithEntity {
-    public static int delay;
-    public static SoundEvent sound;
+    private static int delay;
+    private static SoundEvent sound;
 
     public LoopingSoundscapeBlock(Settings settings, SoundEvent loopingSound, int soundDelay) {
         super(settings);
         delay = soundDelay;
         sound = loopingSound;
     }
-//TODO: how to make this not static help why is it static how do i make it not static skdgnj sadrgb huearbguiosbdrghseb
+
     public static void playLoopingSound(World world, BlockPos pos, BlockState state) {
         long l = world.getTime();
         if (l % delay == 0L && state.get(LitBlock.LIT)) {
@@ -40,7 +40,7 @@ public class LoopingSoundscapeBlock extends BlockWithEntity {
     @Override
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return world.isClient ? null : LoopingSoundscapeBlock.checkType(type, ModBlockEntityType.LOOPING_SOUNDSCAPE, LoopingSoundscapeBlockEntity::serverTick);
+        return world.isClient ? null : LoopingSoundscapeBlock.checkType(type, ModBlockEntityType.LOOPING_SOUNDSCAPE, LoopingSoundscapeBlockEntity::tick);
     }
 
     @Override

@@ -1,0 +1,7 @@
+{
+  "parent": "ltones:block/pc_template",
+  "textures": {
+    "all": "ltones:block/pc",
+    "particle": "ltones:block/pc"
+  }
+}

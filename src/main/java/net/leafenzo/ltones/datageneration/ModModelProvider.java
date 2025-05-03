@@ -246,6 +246,24 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
     }
 
+    private void registerPCBlock(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        TexturedModel.Factory modelFactory = ModTexturedModel.PC;
+        Identifier identifier = modelFactory.upload(block, blockStateModelGenerator.modelCollector);
+
+        TextureMap map = new TextureMap()
+                .put(TextureKey.TOP, TextureMap.getSubId(block, "_top"))
+                .put(TextureKey.BOTTOM, TextureMap.getSubId(block, "_bottom"))
+                .put(TextureKey.SIDE, TextureMap.getSubId(block, "_side"))
+                .put(TextureKey.FRONT, TextureMap.getSubId(block, "_front_on"))
+                .put(TextureKey.BACK, TextureMap.getSubId(block, "_back"))
+                ;
+        Model model = ModModels.CRT;
+        Identifier identifier2 = model.upload(block, "_on", map, blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block)
+                .coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.POWERED, identifier2, identifier))
+                .coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
+    }
+
     private void registerSwitchBlock(BlockStateModelGenerator blockStateModelGenerator, Block block) {
         blockStateModelGenerator.registerItemModel(block.asItem());
         Identifier identifier = createSubModelWithoutTextureSuffix(blockStateModelGenerator, block, "", ModModels.SWITCH_OFF, TextureMap::all);
@@ -786,6 +804,10 @@ public class ModModelProvider extends FabricModelProvider {
         registerMouseBlock(blockStateModelGenerator, ModBlocks.AGED_MOUSE);
         registerMouseBlock(blockStateModelGenerator, ModBlocks.BLACK_MOUSE);
         registerMouseBlock(blockStateModelGenerator, ModBlocks.GRAY_MOUSE);
+        registerPCBlock(blockStateModelGenerator, ModBlocks.PC);
+        registerPCBlock(blockStateModelGenerator, ModBlocks.AGED_PC);
+        registerPCBlock(blockStateModelGenerator, ModBlocks.BLACK_PC);
+        registerPCBlock(blockStateModelGenerator, ModBlocks.GRAY_PC);
         registerSwitchBlock(blockStateModelGenerator, ModBlocks.SWITCH);
         registerSwitchBlock(blockStateModelGenerator, ModBlocks.AGED_SWITCH);
         registerSwitchBlock(blockStateModelGenerator, ModBlocks.BLACK_SWITCH);

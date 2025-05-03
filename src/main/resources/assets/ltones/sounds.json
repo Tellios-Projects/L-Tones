@@ -31,7 +31,7 @@
 		],
 		"subtitle": "subtitles.block.mouse.click"
 	},
-	"block.switch.on": {
+	"block.switch.turn_on": {
 		"sounds": [
 			"ltones:block/switch/on1",
 			"ltones:block/switch/on2",
@@ -39,7 +39,7 @@
 		],
 		"subtitle": "subtitles.block.switch.toggle"
 	},
-	"block.switch.off": {
+	"block.switch.turn_off": {
 		"sounds": [
 			"ltones:block/switch/off1",
 			"ltones:block/switch/off2",
@@ -47,6 +47,24 @@
 		],
 		"subtitle": "subtitles.block.switch.toggle"
 	},
+
+	"block.pc.ambient": {
+		"sounds": [
+			"ltones:block/pc/ambient"
+		]
+	},
+	"block.pc.turn_on": {
+		"sounds": [
+			"ltones:block/pc/on"
+		],
+		"subtitle": "subtitles.block.pc.toggle"
+	},
+	"block.pc.turn_off": {
+	"sounds": [
+		"ltones:block/pc/off"
+	],
+	"subtitle": "subtitles.block.pc.toggle"
+},
 
 	"block.appliance.break": {
 		"subtitle": "subtitles.block.generic.break",
