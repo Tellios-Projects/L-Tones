@@ -168,8 +168,8 @@ public class ModModelProvider extends FabricModelProvider {
             BooleanProperty booleanProperty = pair.getFirst();
             Function<Identifier, BlockStateVariant> function = pair.getSecond();
             if (!block.getDefaultState().contains(booleanProperty)) continue;
-            multipartBlockStateSupplier.with((When)When.create().set(booleanProperty, true), function.apply(identifier));
-            multipartBlockStateSupplier.with((When)propertyCondition2, function.apply(identifier));
+            multipartBlockStateSupplier.with(When.create().set(booleanProperty, true), function.apply(identifier));
+            multipartBlockStateSupplier.with(propertyCondition2, function.apply(identifier));
         }
         blockStateModelGenerator.blockStateCollector.accept(multipartBlockStateSupplier);
     }
@@ -253,11 +253,13 @@ public class ModModelProvider extends FabricModelProvider {
         TextureMap map = new TextureMap()
                 .put(TextureKey.TOP, TextureMap.getSubId(block, "_top"))
                 .put(TextureKey.BOTTOM, TextureMap.getSubId(block, "_bottom"))
-                .put(TextureKey.SIDE, TextureMap.getSubId(block, "_side"))
-                .put(TextureKey.FRONT, TextureMap.getSubId(block, "_front_on"))
-                .put(TextureKey.BACK, TextureMap.getSubId(block, "_back"))
+                .put(TextureKey.NORTH, TextureMap.getSubId(block, "_north_on"))
+                .put(TextureKey.EAST, TextureMap.getSubId(block, "_east_on"))
+                .put(TextureKey.SOUTH, TextureMap.getSubId(block, "_south"))
+                .put(TextureKey.WEST, TextureMap.getSubId(block, "_west"))
                 ;
-        Model model = ModModels.CRT;
+
+        Model model = ModModels.PC;
         Identifier identifier2 = model.upload(block, "_on", map, blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block)
                 .coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.POWERED, identifier2, identifier))

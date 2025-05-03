@@ -1,18 +1,33 @@
 {
   "variants": {
-    "facing=east": {
+    "facing=east,powered=false": {
       "model": "ltones:block/pc",
       "y": 90
     },
-    "facing=north": {
+    "facing=east,powered=true": {
+      "model": "ltones:block/pc_on",
+      "y": 90
+    },
+    "facing=north,powered=false": {
       "model": "ltones:block/pc"
     },
-    "facing=south": {
+    "facing=north,powered=true": {
+      "model": "ltones:block/pc_on"
+    },
+    "facing=south,powered=false": {
       "model": "ltones:block/pc",
       "y": 180
     },
-    "facing=west": {
+    "facing=south,powered=true": {
+      "model": "ltones:block/pc_on",
+      "y": 180
+    },
+    "facing=west,powered=false": {
       "model": "ltones:block/pc",
+      "y": 270
+    },
+    "facing=west,powered=true": {
+      "model": "ltones:block/pc_on",
       "y": 270
     }
   }

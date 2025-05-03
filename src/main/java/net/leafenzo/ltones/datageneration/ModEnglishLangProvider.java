@@ -71,6 +71,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         generateTranslation(translationBuilder, "subtitles.block.keyboard.click", "Keyboard clicks");
         generateTranslation(translationBuilder, "subtitles.block.mouse.click", "Mouse clicks");
         generateTranslation(translationBuilder, "subtitles.block.switch.toggle", "Switch clicks");
+        generateTranslation(translationBuilder, "subtitles.block.pc.toggle", "PC clicks");
         generateTranslation(translationBuilder, ModBlocks.RAW_LUESIUM_BLOCK, "Block of Raw Luesium");
         generateTranslation(translationBuilder, ModBlocks.LUESIUM_BLOCK, "Block of Luesium");
         generateTranslation(translationBuilder, ModBlocks.ANTIBRASS_BLOCK, "Block of Antibrass");
@@ -78,6 +79,10 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         generateTranslation(translationBuilder, ModBlocks.AGED_CRT, "Aged CRT Monitor");
         generateTranslation(translationBuilder, ModBlocks.BLACK_CRT, "Black CRT Monitor");
         generateTranslation(translationBuilder, ModBlocks.GRAY_CRT, "Gray CRT Monitor");
+        generateTranslation(translationBuilder, ModBlocks.PC, "PC Tower");
+        generateTranslation(translationBuilder, ModBlocks.AGED_PC, "Aged PC Tower");
+        generateTranslation(translationBuilder, ModBlocks.BLACK_PC, "Black PC Tower");
+        generateTranslation(translationBuilder, ModBlocks.GRAY_PC, "Gray PC Tower");
         generateTranslation(translationBuilder, "container.crate", "Crate");
         generateTranslation(translationBuilder, ModItems.CROWS_BEAK, "Crow's Beak");
 

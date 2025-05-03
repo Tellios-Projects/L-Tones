@@ -2,8 +2,8 @@
   "parent": "ltones:block/pc_template",
   "textures": {
     "bottom": "ltones:block/pc_bottom",
-    "east": "ltones:block/pc_east",
-    "north": "ltones:block/pc_north",
+    "east": "ltones:block/pc_east_on",
+    "north": "ltones:block/pc_north_on",
     "south": "ltones:block/pc_south",
     "top": "ltones:block/pc_top",
     "west": "ltones:block/pc_west"

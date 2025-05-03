@@ -25,7 +25,7 @@ public class ModTexturedModel {
         return  new TextureMap()
                 .put(TextureKey.TOP, TextureMap.getSubId(block, "_top"))
                 .put(TextureKey.BOTTOM, TextureMap.getSubId(block, "_bottom"))
-                .put(TextureKey.NORTH, TextureMap.getSubId(block, "_front"))
+                .put(TextureKey.NORTH, TextureMap.getSubId(block, "_north"))
                 .put(TextureKey.EAST, TextureMap.getSubId(block, "_east"))
                 .put(TextureKey.SOUTH, TextureMap.getSubId(block, "_south"))
                 .put(TextureKey.WEST, TextureMap.getSubId(block, "_west"))
