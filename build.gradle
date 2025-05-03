@@ -51,29 +51,23 @@ repositories {
 	// for more information about repositories.
 }
 
-dependencies {
-	// To change the versions see the gradle.properties file
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-	// Fabric API. This is technically optional, but you probably want it anyway.
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+def setup(DependencyHandler deps) {
+	deps.minecraft("com.mojang:minecraft:${project.minecraft_version}")
+	deps.modImplementation("net.fabricmc:fabric-loader:${project.loader_version}")
+	deps.mappings("net.fabricmc:yarn:${project.yarn_mappings}:v2")
+}
 
-	// EMI
-	modRuntimeOnly("maven.modrinth:emi:${emi_version}")
+def dependencies(DependencyHandler deps) {
+	deps.modImplementation("net.fabricmc.fabric-api:fabric-api:${project.fabric_version}")
+}
 
+def devEnv(DependencyHandler deps) {
+	deps.modRuntimeOnly("maven.modrinth:emi:${emi_version}")
+	// deps.modRuntimeOnly("maven.modrinth:axiom:${axiom_version}")
+}
 
-		// uncomment if needed
-	//include implementation("net.dv8tion:JDA:${project.jda_version}") {
-	//	exclude(module : "opus-java")
-	//}
-	// implementation 'com.opencsv:opencsv:5.7.1'  //Library Unused
-	//include('com.opencsv:opencsv:5.7.1')
-		//
+def compat(DependencyHandler deps) {
 
-	// Uncomment the following line to enable the deprecated Fabric API modules. 
-	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
-	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 }
 
 processResources {
@@ -82,6 +76,15 @@ processResources {
 	filesMatching("fabric.mod.json") {
 		expand "version": project.version
 	}
+}
+
+dependencies {
+	setup(dependencies)
+	devEnv(dependencies)
+	include(modImplementation('com.github.Chocohead:Fabric-ASM:v2.3'))
+	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.2.2")))
+	compat(dependencies) // Comment this line out temporarily if genSources isn't working.
+	dependencies(dependencies)
 }
 
 def dataOutput = 'src/main/generated'
