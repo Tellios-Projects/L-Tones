@@ -250,7 +250,7 @@ public class ModModelProvider extends FabricModelProvider {
         TexturedModel.Factory modelFactory = ModTexturedModel.PC;
         Identifier identifier = modelFactory.upload(block, blockStateModelGenerator.modelCollector);
 
-        TextureMap map = new TextureMap()
+        TextureMap onMap = new TextureMap()
                 .put(TextureKey.TOP, TextureMap.getSubId(block, "_top"))
                 .put(TextureKey.BOTTOM, TextureMap.getSubId(block, "_bottom"))
                 .put(TextureKey.NORTH, TextureMap.getSubId(block, "_north_on"))
@@ -260,7 +260,7 @@ public class ModModelProvider extends FabricModelProvider {
                 ;
 
         Model model = ModModels.PC;
-        Identifier identifier2 = model.upload(block, "_on", map, blockStateModelGenerator.modelCollector);
+        Identifier identifier2 = model.upload(block, "_on", onMap, blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block)
                 .coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.POWERED, identifier2, identifier))
                 .coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
