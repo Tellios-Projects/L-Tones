@@ -1,7 +1,9 @@
 package net.leafenzo.ltones.block.custom;
 
+import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.block.entity.LoopingSoundscapeBlockEntity;
 import net.leafenzo.ltones.block.entity.ModBlockEntityType;
+import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.*;
 import net.minecraft.item.ItemPlacementContext;
@@ -15,17 +17,25 @@ import org.jetbrains.annotations.Nullable;
 import static net.leafenzo.ltones.block.custom.SoundscapeBlock.LIT;
 
 public class LoopingSoundscapeBlock extends BlockWithEntity {
-    private static int delay;
-    private static SoundEvent sound;
 
     public LoopingSoundscapeBlock(Settings settings, SoundEvent loopingSound, int soundDelay) {
         super(settings);
-        delay = soundDelay;
-        sound = loopingSound;
     }
 
     public static void playLoopingSound(World world, BlockPos pos, BlockState state) {
         long l = world.getTime();
+
+        int delay = 0;
+        SoundEvent sound = null;
+
+        if (state.isOf(ModBlocks.LAIR_SOUNDSCAPE)) {
+            delay = 20;
+            sound = ModSoundEvents.BLOCK_LAIR_AMBIENT;
+        } else if (state.isOf(ModBlocks.EXRI_SOUNDSCAPE)) {
+            delay = 105;
+            sound = ModSoundEvents.BLOCK_EXRI_AMBIENT;
+        } //i dont like this but it works so whatever
+
         if (l % delay == 0L && state.get(LitBlock.LIT)) {
             world.playSound(null, pos, sound, SoundCategory.BLOCKS, 0.25f, 1.0f);
         }
