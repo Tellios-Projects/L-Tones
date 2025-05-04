@@ -6,9 +6,6 @@ import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
 
-// if you're reading this, i apologize for my awful code
-// -amber
-
 @Environment(value = EnvType.CLIENT)
 public class ZkulParticle extends SpriteBillboardParticle {
     protected ZkulParticle(ClientWorld clientWorld, double xCoord, double yCoord, double zCoord, double xd, double yd, double zd) {
@@ -31,15 +28,6 @@ public class ZkulParticle extends SpriteBillboardParticle {
         this.prevPosX = this.x;
         this.prevPosY = this.y;
         this.prevPosZ = this.z;
-
-//        this.alpha = Math.min(this.alpha,1);
-//        if (this.alpha < 1.0f && this.age < 4) {
-//            this.alpha += 0.25f;
-//        }
-//        if (this.age >= this.maxAge - 4 && this.alpha > 0.01f) {
-//            this.alpha -= 0.25f;
-//        }
-// commented out for now because i want to maybe do something more cool for the spawning/disappearing transitions
 
         if (this.age++ >= this.maxAge || this.alpha <= 0.0f) {
             this.markDead();

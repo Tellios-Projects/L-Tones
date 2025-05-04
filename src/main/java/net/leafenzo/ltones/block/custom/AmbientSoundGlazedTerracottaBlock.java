@@ -1,6 +1,5 @@
 package net.leafenzo.ltones.block.custom;
 
-import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.GlazedTerracottaBlock;
 import net.minecraft.sound.SoundCategory;

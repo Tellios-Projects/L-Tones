@@ -5,8 +5,6 @@ import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.leafenzo.ltones.state.ModProperties;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
 import net.minecraft.particle.DustParticleEffect;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
@@ -26,9 +24,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
-
-import static net.leafenzo.ltones.block.custom.SoundscapeBlock.LIT;
-import static net.leafenzo.ltones.state.ModProperties.HAS_ANTENNA;
 
 public class RadioBlock extends BasicHorizontalFacingBlock {
     public static final BooleanProperty HAS_ANTENNA = ModProperties.HAS_ANTENNA;

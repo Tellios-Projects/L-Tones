@@ -7,7 +7,6 @@ package net.leafenzo.ltones.block.custom;
 import net.leafenzo.ltones.block.entity.CrateBlockEntity;
 import net.leafenzo.ltones.stat.ModStats;
 import net.minecraft.block.*;
-import net.minecraft.block.entity.BarrelBlockEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.PiglinBrain;

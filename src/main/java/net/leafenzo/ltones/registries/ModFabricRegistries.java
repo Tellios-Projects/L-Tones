@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.VillagerInteractionRegistries;
-import net.leafenzo.ltones.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemConvertible;
 

@@ -1,6 +1,5 @@
 package net.leafenzo.ltones.block.custom;
 
-import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.block.entity.ModBlockEntityType;
 import net.leafenzo.ltones.block.entity.PCBlockEntity;
 import net.leafenzo.ltones.sound.ModSoundEvents;

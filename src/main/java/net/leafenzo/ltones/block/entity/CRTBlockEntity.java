@@ -6,13 +6,11 @@ import net.minecraft.util.math.BlockPos;
 
 public class CRTBlockEntity extends BlockEntity {
     public CRTBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntityType.ZKUL, pos, state);
+        super(ModBlockEntityType.CRT, pos, state);
     }
 
     public void tick() {
         // mario
     }
-
-
 
 }

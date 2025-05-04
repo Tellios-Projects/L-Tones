@@ -1,6 +1,5 @@
 package net.leafenzo.ltones.block.custom;
 
-import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.sound.SoundCategory;

@@ -9,13 +9,13 @@
     "F": {
       "item": "ltones:amalgam"
     },
-    "G": {
-      "item": "minecraft:glass_pane"
+    "T": {
+      "item": "ltones:thinking_metal"
     }
   },
   "pattern": [
     "FFF",
-    "GDG",
+    "DTD",
     "FFF"
   ],
   "result": {

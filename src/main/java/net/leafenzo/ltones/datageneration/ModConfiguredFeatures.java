@@ -6,21 +6,15 @@ package net.leafenzo.ltones.datageneration;
 
 import net.leafenzo.ltones.Super;
 import net.leafenzo.ltones.block.ModBlocks;
-import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.*;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
-import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 
 import java.util.List;
-
-import static net.leafenzo.ltones.block.ModBlocks.ZKUL;
 
 public class ModConfiguredFeatures {
 

@@ -15,7 +15,6 @@ import net.leafenzo.ltones.state.ModProperties;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.*;
 import net.minecraft.data.client.*;
-import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;

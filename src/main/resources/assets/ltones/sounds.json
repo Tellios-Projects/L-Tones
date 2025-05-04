@@ -50,26 +50,11 @@
 
 	"block.pc.ambient": {
 		"sounds": [
-			{
-				"name": "ltones:block/pc/ambient1",
-				"weight": 5
-			},
-			{
-				"name": "ltones:block/pc/ambient2",
-				"weight": 1
-			},
-			{
-				"name": "ltones:block/pc/ambient3",
-				"weight": 5
-			},
-			{
-				"name": "ltones:block/pc/ambient4",
-				"weight": 5
-			},
-			{
-				"name": "ltones:block/pc/ambient5",
-				"weight": 5
-			}
+			"ltones:block/pc/ambient1",
+			"ltones:block/pc/ambient2",
+			"ltones:block/pc/ambient3",
+			"ltones:block/pc/ambient4",
+			"ltones:block/pc/ambient5"
 		]
 	},
 	"block.pc.turn_on": {

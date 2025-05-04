@@ -1,6 +1,5 @@
 package net.leafenzo.ltones.block.custom;
 
-import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;

@@ -15,34 +15,16 @@ public class LitPillarBlock extends LitBlock {
 
     public LitPillarBlock(Settings settings, @Nullable SoundEvent turnOnSound, @Nullable SoundEvent turnOffSound, boolean Flickers) {
         super(settings, turnOnSound, turnOffSound, Flickers);
-        this.setDefaultState((BlockState)this.getDefaultState().with(AXIS, Direction.Axis.Y));
+        this.setDefaultState(this.getDefaultState().with(AXIS, Direction.Axis.Y));
     }
     public LitPillarBlock(Settings settings) {
         super(settings, null, null, false);
-        this.setDefaultState((BlockState)this.getDefaultState().with(AXIS, Direction.Axis.Y));
+        this.setDefaultState(this.getDefaultState().with(AXIS, Direction.Axis.Y));
     }
 
     @Override
     public BlockState rotate(BlockState state, BlockRotation rotation) {
         return PillarBlock.changeRotation(state, rotation);
-    }
-
-    public static BlockState changeRotation(BlockState state, BlockRotation rotation) {
-        switch (rotation) {
-            case COUNTERCLOCKWISE_90:
-            case CLOCKWISE_90: {
-                switch (state.get(AXIS)) {
-                    case X: {
-                        return (BlockState)state.with(AXIS, Direction.Axis.Z);
-                    }
-                    case Z: {
-                        return (BlockState)state.with(AXIS, Direction.Axis.X);
-                    }
-                }
-                return state;
-            }
-        }
-        return state;
     }
 
     @Override
@@ -53,6 +35,6 @@ public class LitPillarBlock extends LitBlock {
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)this.getDefaultState().with(AXIS, ctx.getSide().getAxis());
+        return this.getDefaultState().with(LIT, ctx.getWorld().isReceivingRedstonePower(ctx.getBlockPos())).with(AXIS, ctx.getSide().getAxis());
     }
 }

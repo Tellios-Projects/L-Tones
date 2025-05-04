@@ -1,7 +1,6 @@
 package net.leafenzo.ltones.block.custom;
 
 import net.leafenzo.ltones.block.entity.CRTBlockEntity;
-import net.leafenzo.ltones.block.entity.PCBlockEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.item.ItemPlacementContext;

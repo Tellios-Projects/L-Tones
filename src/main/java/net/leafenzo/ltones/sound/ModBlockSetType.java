@@ -1,7 +1,6 @@
 package net.leafenzo.ltones.sound;
 
 import net.minecraft.block.BlockSetType;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvents;
 
 public class ModBlockSetType {
