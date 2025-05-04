@@ -7,7 +7,6 @@ import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.registry.tag.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
@@ -40,6 +39,40 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
                 .add(ModBlocks.ZKUL)
                 .addTag(BlockTags.PICKAXE_MINEABLE)
                 .addTag(BlockTags.AXE_MINEABLE)
+                .add(Blocks.GLASS)
+                .add(Blocks.WHITE_STAINED_GLASS)
+                .add(Blocks.LIGHT_GRAY_STAINED_GLASS)
+                .add(Blocks.GRAY_STAINED_GLASS)
+                .add(Blocks.BLACK_STAINED_GLASS)
+                .add(Blocks.BROWN_STAINED_GLASS)
+                .add(Blocks.RED_STAINED_GLASS)
+                .add(Blocks.ORANGE_STAINED_GLASS)
+                .add(Blocks.YELLOW_STAINED_GLASS)
+                .add(Blocks.LIME_STAINED_GLASS)
+                .add(Blocks.GREEN_STAINED_GLASS)
+                .add(Blocks.CYAN_STAINED_GLASS)
+                .add(Blocks.LIGHT_BLUE_STAINED_GLASS)
+                .add(Blocks.BLUE_STAINED_GLASS)
+                .add(Blocks.PURPLE_STAINED_GLASS)
+                .add(Blocks.MAGENTA_STAINED_GLASS)
+                .add(Blocks.PINK_STAINED_GLASS)
+                .add(Blocks.GLASS_PANE)
+                .add(Blocks.WHITE_STAINED_GLASS_PANE)
+                .add(Blocks.LIGHT_GRAY_STAINED_GLASS_PANE)
+                .add(Blocks.GRAY_STAINED_GLASS_PANE)
+                .add(Blocks.BLACK_STAINED_GLASS_PANE)
+                .add(Blocks.BROWN_STAINED_GLASS_PANE)
+                .add(Blocks.RED_STAINED_GLASS_PANE)
+                .add(Blocks.ORANGE_STAINED_GLASS_PANE)
+                .add(Blocks.YELLOW_STAINED_GLASS_PANE)
+                .add(Blocks.LIME_STAINED_GLASS_PANE)
+                .add(Blocks.GREEN_STAINED_GLASS_PANE)
+                .add(Blocks.CYAN_STAINED_GLASS_PANE)
+                .add(Blocks.LIGHT_BLUE_STAINED_GLASS_PANE)
+                .add(Blocks.BLUE_STAINED_GLASS_PANE)
+                .add(Blocks.PURPLE_STAINED_GLASS_PANE)
+                .add(Blocks.MAGENTA_STAINED_GLASS_PANE)
+                .add(Blocks.PINK_STAINED_GLASS_PANE)
         ;
         getOrCreateTagBuilder(ModTags.Blocks.NOT_INSTAMINE_CROWS_BEAK)
                 .add(ModBlocks.IRON_BAR_DOOR)
