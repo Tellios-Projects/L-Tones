@@ -3,20 +3,20 @@
   "category": "redstone",
   "group": "gray_pc",
   "key": {
-    "D": {
-      "item": "ltones:diode"
+    "B": {
+      "item": "ltones:pcb_board"
     },
     "F": {
       "item": "ltones:kerbesium"
     },
-    "T": {
-      "item": "ltones:thinking_metal"
+    "I": {
+      "item": "minecraft:iron_ingot"
     }
   },
   "pattern": [
     "FFF",
-    "DTD",
-    "FFF"
+    "FBF",
+    "FIF"
   ],
   "result": {
     "item": "ltones:gray_pc"

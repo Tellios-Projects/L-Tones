@@ -890,6 +890,15 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.CROWS_BEAK, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PCB_BOARD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PENCIL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.BROKEN_PENCIL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STORAGE_PEARL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.INDUSTRIAL_DIAMOND, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MEDICINE_PILLS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BOXED_MEDICINE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PACKAGED_MEAL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DECK_OF_CARDS, Models.GENERATED);
         //itemModelGenerator.register(ModItems.RAW_LUESIUM, Models.GENERATED);
         //itemModelGenerator.register(ModItems.LUESIUM_CHUNK, Models.GENERATED);
         //itemModelGenerator.register(ModItems.LUESIUM_INGOT, Models.GENERATED);

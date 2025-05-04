@@ -80,6 +80,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter, getRecipePath(output, input, input2, input3));
     }
+    public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, ItemConvertible input2, ItemConvertible input3, ItemConvertible input4, @Nullable String group, int outputCount) {
+        ShapelessRecipeJsonBuilder
+                .create(recipeCategory, output, outputCount)
+                .input(input)
+                .input(input2)
+                .input(input3)
+                .input(input4)
+                .group(group)
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(exporter, getRecipePath(output, input, input2, input3));
+    }
     public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, TagKey<Item> input2, @Nullable String group, int outputCount) {
         ShapelessRecipeJsonBuilder
                 .create(recipeCategory, output, outputCount)
@@ -105,6 +116,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     }
     public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output,  ItemConvertible input, ItemConvertible input2, ItemConvertible input3, int outputCount) {
         offerShapelessRecipe(exporter, recipeCategory, output, input, input2, input3, Super.MOD_ID + output.toString(), outputCount);
+    }
+    public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output,  ItemConvertible input, ItemConvertible input2, ItemConvertible input3, ItemConvertible input4, int outputCount) {
+        offerShapelessRecipe(exporter, recipeCategory, output, input, input2, input3, input4, Super.MOD_ID + output.toString(), outputCount);
     }
     public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output,  ItemConvertible input, TagKey<Item> input2, int outputCount) {
         offerShapelessRecipe(exporter, recipeCategory, output, input, input2, Super.MOD_ID + output.toString(), outputCount);
@@ -259,11 +273,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public static void offerCRTRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible frameItem) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 1)
                 .input(Character.valueOf('F'), frameItem)
-                .input(Character.valueOf('D'), ModItems.DIODE)
+                .input(Character.valueOf('B'), ModItems.PCB_BOARD)
                 .input(Character.valueOf('S'), ModItems.SCREEN)
-                .pattern("FSF")
-                .pattern("FDF")
                 .pattern("FFF")
+                .pattern("FSF")
+                .pattern("FBF")
                 .criterion(FabricRecipeProvider.hasItem(frameItem), FabricRecipeProvider.conditionsFromItem(frameItem))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.DIODE), FabricRecipeProvider.conditionsFromItem(ModItems.DIODE))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.SCREEN), FabricRecipeProvider.conditionsFromItem(ModItems.SCREEN))
@@ -274,8 +288,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 1)
                 .input(Character.valueOf('F'), frameItem)
                 .input(Character.valueOf('D'), ModItems.DIODE)
+                .input(Character.valueOf('B'), ModItems.PCB_BOARD)
                 .pattern("DDD")
-                .pattern("FFF")
+                .pattern("FBF")
                 .criterion(FabricRecipeProvider.hasItem(frameItem), FabricRecipeProvider.conditionsFromItem(frameItem))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.DIODE), FabricRecipeProvider.conditionsFromItem(ModItems.DIODE))
                 .group(FabricRecipeProvider.getRecipeName(output))
@@ -296,11 +311,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public static void offerPCRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible frameItem) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 1)
                 .input(Character.valueOf('F'), frameItem)
-                .input(Character.valueOf('D'), ModItems.DIODE)
-                .input(Character.valueOf('T'), ModItems.THINKING_METAL)
+                .input(Character.valueOf('B'), ModItems.PCB_BOARD)
+                .input(Character.valueOf('I'), Items.IRON_INGOT)
                 .pattern("FFF")
-                .pattern("DTD")
-                .pattern("FFF")
+                .pattern("FBF")
+                .pattern("FIF")
                 .criterion(FabricRecipeProvider.hasItem(frameItem), FabricRecipeProvider.conditionsFromItem(frameItem))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.DIODE), FabricRecipeProvider.conditionsFromItem(ModItems.DIODE))
                 .group(FabricRecipeProvider.getRecipeName(output))
@@ -351,6 +366,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.NETWORKING, ModTags.Items.MUSHROOMS, ModItems.ARGON,4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.JELLY, Items.SLIME_BALL, ModItems.OIL,4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.JELLY, Items.HONEY_BOTTLE, ModItems.OIL,4);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.PCB_BOARD, ModItems.THINKING_METAL, ModItems.DIODE,  ModItems.DIODE, ModItems.DIODE,  2);
 
         // Blockset Base Recipes
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AGON_BLOCKS.get(0), Blocks.GLASS, ModItems.ARGON, 4);
@@ -509,7 +525,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("###")
                 .criterion(FabricRecipeProvider.hasItem(ModItems.SLAG), FabricRecipeProvider.conditionsFromItem(ModItems.SLAG))
                 .offerTo(exporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ANTENNA, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.ANTENNA, 1)
                 .input(Character.valueOf('C'), ModItems.CONDUCTIUM)
                 .input(Character.valueOf('A'), ModItems.ANTIBRASS_INGOT)
                 .pattern("AAA")
@@ -518,14 +534,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.CONDUCTIUM), FabricRecipeProvider.conditionsFromItem(ModItems.CONDUCTIUM))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.ANTIBRASS_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.ANTIBRASS_INGOT))
                 .offerTo(exporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RADIO, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.RADIO, 1)
                 .input(Character.valueOf('P'), ModItems.POLYMER)
                 .input(Character.valueOf('C'), ModItems.CONDUCTIUM)
-                .input(Character.valueOf('D'), ModItems.DIODE)
+                .input(Character.valueOf('B'), ModItems.PCB_BOARD)
                 .input(Character.valueOf('L'), ModItems.LUESIUM_INGOT)
                 .pattern("PPP")
-                .pattern("CCC")
-                .pattern("DLD")
+                .pattern("CBC")
+                .pattern("L L")
                 .criterion(FabricRecipeProvider.hasItem(ModItems.POLYMER), FabricRecipeProvider.conditionsFromItem(ModItems.POLYMER))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.CONDUCTIUM), FabricRecipeProvider.conditionsFromItem(ModItems.CONDUCTIUM))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.DIODE), FabricRecipeProvider.conditionsFromItem(ModItems.DIODE))

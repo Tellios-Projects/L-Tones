@@ -85,6 +85,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         generateTranslation(translationBuilder, ModBlocks.GRAY_PC, "Gray PC Tower");
         generateTranslation(translationBuilder, "container.crate", "Crate");
         generateTranslation(translationBuilder, ModItems.CROWS_BEAK, "Crow's Beak");
+        generateTranslation(translationBuilder, ModItems.PCB_BOARD, "PCB_Board");
 
         generateTranslation(translationBuilder, ModBlocks.ROST_RUST, "Rusted Rost");
         generateTranslation(translationBuilder, ModBlocks.ROST_CAGE_RUST, "Rusted Rost Cage");

@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
+  "category": "redstone",
   "key": {
+    "B": {
+      "item": "ltones:pcb_board"
+    },
     "C": {
       "item": "ltones:conductium"
-    },
-    "D": {
-      "item": "ltones:diode"
     },
     "L": {
       "item": "ltones:luesium_ingot"
@@ -17,8 +17,8 @@
   },
   "pattern": [
     "PPP",
-    "CCC",
-    "DLD"
+    "CBC",
+    "L L"
   ],
   "result": {
     "item": "ltones:radio"

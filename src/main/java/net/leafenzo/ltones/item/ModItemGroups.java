@@ -202,6 +202,15 @@ public class ModItemGroups {
                         entries.add(ModItems.CORPOREAL_VAPOR);
                         entries.add(ModItems.FLAKES);
                         entries.add(ModItems.NETWORKING);
+                        entries.add(ModItems.PCB_BOARD);
+                        entries.add(ModItems.PENCIL);
+                        entries.add(ModItems.BROKEN_PENCIL);
+                        entries.add(ModItems.STORAGE_PEARL);
+                        entries.add(ModItems.INDUSTRIAL_DIAMOND);
+                        entries.add(ModItems.MEDICINE_PILLS);
+                        entries.add(ModItems.BOXED_MEDICINE);
+                        entries.add(ModItems.PACKAGED_MEAL);
+                        entries.add(ModItems.DECK_OF_CARDS);
                         entries.add(ModBlocks.ZKUL);
                     }).build());
 }

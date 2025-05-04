@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonespcb_board",
+  "ingredients": [
+    {
+      "item": "ltones:thinking_metal"
+    },
+    {
+      "item": "ltones:diode"
+    },
+    {
+      "item": "ltones:diode"
+    },
+    {
+      "item": "ltones:diode"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "ltones:pcb_board"
+  }
+}

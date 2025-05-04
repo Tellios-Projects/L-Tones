@@ -64,6 +64,7 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+
         this.addDrop(ModBlocks.LUESIUM_ORE, (Block block) -> this.oreDrops((Block)block, ModItems.RAW_LUESIUM));
         this.addDrop(ModBlocks.DEEPSLATE_LUESIUM_ORE, (Block block) -> this.oreDrops((Block)block, ModItems.RAW_LUESIUM));
         this.addDrop(ModBlocks.ENDSTONE_LUESIUM_ORE, (Block block) -> VanillaBlockLootTableGenerator.dropsWithSilkTouch(block, (LootPoolEntry.Builder)this.applyExplosionDecay((ItemConvertible)block, ((LeafEntry.Builder)ItemEntry.builder(ModItems.LUESIUM_CHUNK).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 6.0f)))).apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE)))));

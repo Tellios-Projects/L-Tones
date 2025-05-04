@@ -3,8 +3,8 @@
   "category": "redstone",
   "group": "gray_crt",
   "key": {
-    "D": {
-      "item": "ltones:diode"
+    "B": {
+      "item": "ltones:pcb_board"
     },
     "F": {
       "item": "ltones:kerbesium"
@@ -14,9 +14,9 @@
     }
   },
   "pattern": [
+    "FFF",
     "FSF",
-    "FDF",
-    "FFF"
+    "FBF"
   ],
   "result": {
     "item": "ltones:gray_crt"

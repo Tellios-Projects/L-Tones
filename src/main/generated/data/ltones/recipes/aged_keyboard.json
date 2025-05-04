@@ -3,6 +3,9 @@
   "category": "redstone",
   "group": "aged_keyboard",
   "key": {
+    "B": {
+      "item": "ltones:pcb_board"
+    },
     "D": {
       "item": "ltones:diode"
     },
@@ -12,7 +15,7 @@
   },
   "pattern": [
     "DDD",
-    "FFF"
+    "FBF"
   ],
   "result": {
     "item": "ltones:aged_keyboard"
