@@ -557,7 +557,7 @@ public class ModBlocks {
     public static final Block EXRI_CURRENT = registerBlockInBlockset(EXRI_BLOCKS, "exri_current", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_CRITICAL = registerBlockInBlockset(EXRI_BLOCKS, "exri_critical", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_CONTROL = registerBlockInBlockset(EXRI_BLOCKS, "exri_control", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
-    public static final Block EXRI_SOUNDSCAPE = registerBlockInBlockset(EXRI_BLOCKS, "exri_soundscape", new LoopingSoundscapeBlock(FabricBlockSettings.copyOf(exriMaterial), ModSoundEvents.BLOCK_LAIR_AMBIENT,105));
+    public static final Block EXRI_SOUNDSCAPE = registerBlockInBlockset(EXRI_BLOCKS, "exri_soundscape", new LoopingSoundscapeBlock(FabricBlockSettings.copyOf(exriMaterial), ModSoundEvents.BLOCK_EXRI_AMBIENT,105));
 
     //TODO bit blockset always emits a redstone level of 1   
     //</editor-fold>

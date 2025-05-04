@@ -1,20 +1,31 @@
 package net.leafenzo.ltones.block.entity;
 
-import net.leafenzo.ltones.block.custom.LoopingSoundscapeBlock;
+import net.leafenzo.ltones.block.custom.LitBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
-
 
 public class LoopingSoundscapeBlockEntity extends BlockEntity {
 
     public LoopingSoundscapeBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntityType.LOOPING_SOUNDSCAPE, pos, state);
     }
+    private int soundDelay;
+    private SoundEvent loopingSound;
+
+    public LoopingSoundscapeBlockEntity(BlockPos pos, BlockState state, int delay, SoundEvent sound) {
+        super(ModBlockEntityType.LOOPING_SOUNDSCAPE, pos, state);
+        soundDelay = delay;
+        loopingSound = sound;
+    }
 
     public static void tick(World world, BlockPos pos, BlockState state, LoopingSoundscapeBlockEntity blockEntity) {
-        LoopingSoundscapeBlock.playLoopingSound(world, pos, state);
+        long l = world.getTime();
+        if (l % blockEntity.soundDelay == 0L && state.get(LitBlock.LIT)) {
+            world.playSound(null, pos, blockEntity.loopingSound, SoundCategory.BLOCKS, 0.25f, 1.0f);
+        }
     }
 }
