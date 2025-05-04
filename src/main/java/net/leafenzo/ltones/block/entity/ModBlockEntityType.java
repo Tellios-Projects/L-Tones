@@ -36,6 +36,11 @@ public class ModBlockEntityType {
             PCBlockEntity::new,
             ModBlocks.PC, ModBlocks.AGED_PC, ModBlocks.BLACK_PC, ModBlocks.GRAY_PC);
 
+    public static final BlockEntityType<PCBlockEntity> CRT = register(
+            "crt",
+            PCBlockEntity::new,
+            ModBlocks.CRT, ModBlocks.AGED_CRT, ModBlocks.BLACK_CRT, ModBlocks.GRAY_CRT);
+
 
     private static <E extends BlockEntity> BlockEntityType<E> register(String id, FabricBlockEntityTypeBuilder.Factory<E> factory, Block... blocks) {
         return Registry.register(Registries.BLOCK_ENTITY_TYPE, Super.MOD_ID + ":" + id, FabricBlockEntityTypeBuilder.create(factory, blocks).build());
