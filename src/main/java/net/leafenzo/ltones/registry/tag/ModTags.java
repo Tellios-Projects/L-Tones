@@ -16,6 +16,8 @@ public class ModTags {
 
         public static final TagKey<Block> NOT_INSTAMINE_CROWS_BEAK = getOrCreateTag("not_instamineable_with_crows_beak");
 
+        public static final TagKey<Block> APPLIANCE_BLOCKS = getOrCreateTag("appliance_blocks");
+
         public static TagKey<Block> getOrCreateTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(Super.MOD_ID, name));
         }

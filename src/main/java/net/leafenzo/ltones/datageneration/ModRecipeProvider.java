@@ -282,11 +282,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
     }
     public static void offerMouseRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible frameItem) {
-        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 1)
                 .input(Character.valueOf('F'), frameItem)
                 .input(Character.valueOf('D'), ModItems.DIODE)
                 .pattern("DD")
                 .pattern("FF")
+                .criterion(FabricRecipeProvider.hasItem(frameItem), FabricRecipeProvider.conditionsFromItem(frameItem))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.DIODE), FabricRecipeProvider.conditionsFromItem(ModItems.DIODE))
+                .group(FabricRecipeProvider.getRecipeName(output))
+                .offerTo(exporter);
+    }
+
+    public static void offerPCRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible frameItem) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 1)
+                .input(Character.valueOf('F'), frameItem)
+                .input(Character.valueOf('D'), ModItems.DIODE)
+                .input(Character.valueOf('G'), Blocks.GLASS_PANE.asItem())
+                .pattern("FFF")
+                .pattern("GDG")
+                .pattern("FFF")
                 .criterion(FabricRecipeProvider.hasItem(frameItem), FabricRecipeProvider.conditionsFromItem(frameItem))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.DIODE), FabricRecipeProvider.conditionsFromItem(ModItems.DIODE))
                 .group(FabricRecipeProvider.getRecipeName(output))
@@ -454,6 +468,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerMouseRecipe(exporter, ModBlocks.AGED_MOUSE, ModItems.CONDUCTIUM);
         offerMouseRecipe(exporter, ModBlocks.BLACK_MOUSE, ModItems.AMALGAM);
         offerMouseRecipe(exporter, ModBlocks.GRAY_MOUSE, ModItems.KERBESIUM);
+
+        // Mice
+        offerPCRecipe(exporter, ModBlocks.PC, ModItems.POLYMER);
+        offerPCRecipe(exporter, ModBlocks.AGED_PC, ModItems.CONDUCTIUM);
+        offerPCRecipe(exporter, ModBlocks.BLACK_PC, ModItems.AMALGAM);
+        offerPCRecipe(exporter, ModBlocks.GRAY_PC, ModItems.KERBESIUM);
 
         // Tires
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMPTY_TIRE, 1)

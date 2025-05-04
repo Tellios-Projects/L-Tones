@@ -47,6 +47,12 @@ public class ModBlocks {
     public static final ArrayList<Block> DOORS = new ArrayList<Block>();
     public static final ArrayList<Block> TRAPDOORS = new ArrayList<Block>();
 
+    public static final ArrayList<Block> CRT_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> PC_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> KEYBOARD_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> MOUSE_BLOCKS = new ArrayList<>();
+    public static final ArrayList<Block> SWITCH_BLOCKS = new ArrayList<>();
+
     public static final ArrayList<Block> AGON_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> FORTT_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> GLAXX_BLOCKS = new ArrayList<>();
@@ -870,29 +876,29 @@ public class ModBlocks {
 
     //TODO better CRT sfx
     //CRT block entity and screen display
-    public static final Block CRT = registerBlock("crt", new CRTBlock(FabricBlockSettings.create().strength(1.2f).sounds(ModBlockSoundGroup.CRT).emissiveLighting((state, world, pos) -> state.get(Properties.LIT)).luminance(createLightLevelFromProperty(3, Properties.LIT)).strength(1.0f).mapColor(DyeColor.WHITE), ModSoundEvents.BLOCK_CRT_TURN_ON, ModSoundEvents.BLOCK_CRT_TURN_OFF));
-    public static final Block AGED_CRT = registerBlock("aged_crt", new CRTBlock(FabricBlockSettings.copyOf(CRT).mapColor(DyeColor.YELLOW), ModSoundEvents.BLOCK_CRT_TURN_ON, ModSoundEvents.BLOCK_CRT_TURN_OFF));
-    public static final Block BLACK_CRT = registerBlock("black_crt", new CRTBlock(FabricBlockSettings.copyOf(CRT).mapColor(DyeColor.BLACK), ModSoundEvents.BLOCK_CRT_TURN_ON, ModSoundEvents.BLOCK_CRT_TURN_OFF));
-    public static final Block GRAY_CRT = registerBlock("gray_crt", new CRTBlock(FabricBlockSettings.copyOf(CRT).mapColor(DyeColor.GRAY), ModSoundEvents.BLOCK_CRT_TURN_ON, ModSoundEvents.BLOCK_CRT_TURN_OFF));
+    public static final Block CRT = registerBlockInBlockset(CRT_BLOCKS,"crt", new CRTBlock(FabricBlockSettings.create().strength(1.2f).sounds(ModBlockSoundGroup.CRT).emissiveLighting((state, world, pos) -> state.get(Properties.LIT)).luminance(createLightLevelFromProperty(3, Properties.LIT)).strength(1.0f).mapColor(DyeColor.WHITE), ModSoundEvents.BLOCK_CRT_TURN_ON, ModSoundEvents.BLOCK_CRT_TURN_OFF));
+    public static final Block AGED_CRT = registerBlockInBlockset(CRT_BLOCKS,"aged_crt", new CRTBlock(FabricBlockSettings.copyOf(CRT).mapColor(DyeColor.YELLOW), ModSoundEvents.BLOCK_CRT_TURN_ON, ModSoundEvents.BLOCK_CRT_TURN_OFF));
+    public static final Block BLACK_CRT = registerBlockInBlockset(CRT_BLOCKS,"black_crt", new CRTBlock(FabricBlockSettings.copyOf(CRT).mapColor(DyeColor.BLACK), ModSoundEvents.BLOCK_CRT_TURN_ON, ModSoundEvents.BLOCK_CRT_TURN_OFF));
+    public static final Block GRAY_CRT = registerBlockInBlockset(CRT_BLOCKS,"gray_crt", new CRTBlock(FabricBlockSettings.copyOf(CRT).mapColor(DyeColor.GRAY), ModSoundEvents.BLOCK_CRT_TURN_ON, ModSoundEvents.BLOCK_CRT_TURN_OFF));
+    public static final Block PC = registerBlockInBlockset(PC_BLOCKS, "pc", new PCBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(0.1f).sounds(ModBlockSoundGroup.APPLIANCE).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block AGED_PC = registerBlockInBlockset(PC_BLOCKS,"aged_pc", new PCBlock(FabricBlockSettings.copyOf(PC).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block BLACK_PC = registerBlockInBlockset(PC_BLOCKS,"black_pc", new PCBlock(FabricBlockSettings.copyOf(PC).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block GRAY_PC = registerBlockInBlockset(PC_BLOCKS,"gray_pc", new PCBlock(FabricBlockSettings.copyOf(PC).pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block KEYBOARD = registerBlockInBlockset(KEYBOARD_BLOCKS,"keyboard", new KeyboardBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(0.1f).sounds(ModBlockSoundGroup.APPLIANCE).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_KEYBOARD_CLICK, 20));
+    public static final Block AGED_KEYBOARD = registerBlockInBlockset(KEYBOARD_BLOCKS,"aged_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_KEYBOARD_CLICK_AGED, 40));
+    public static final Block BLACK_KEYBOARD = registerBlockInBlockset(KEYBOARD_BLOCKS,"black_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY),ModSoundEvents.BLOCK_KEYBOARD_CLICK, 20));
+    public static final Block GRAY_KEYBOARD = registerBlockInBlockset(KEYBOARD_BLOCKS,"gray_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_KEYBOARD_CLICK,20));
+    public static final Block MOUSE = registerBlockInBlockset(MOUSE_BLOCKS,"mouse", new MouseBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(0.1f).sounds(ModBlockSoundGroup.APPLIANCE).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_MOUSE_CLICK, 5));
+    public static final Block AGED_MOUSE = registerBlockInBlockset(MOUSE_BLOCKS,"aged_mouse", new MouseBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_MOUSE_CLICK_AGED,10));
+    public static final Block BLACK_MOUSE = registerBlockInBlockset(MOUSE_BLOCKS,"black_mouse", new MouseBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_MOUSE_CLICK,5));
+    public static final Block GRAY_MOUSE = registerBlockInBlockset(MOUSE_BLOCKS,"gray_mouse", new MouseBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_MOUSE_CLICK,5));
+    public static final Block SWITCH = registerBlockInBlockset(SWITCH_BLOCKS,"switch", new SwitchBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(0.1f).sounds(ModBlockSoundGroup.APPLIANCE).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_TURN_ON, ModSoundEvents.BLOCK_SWITCH_TURN_OFF));
+    public static final Block AGED_SWITCH = registerBlockInBlockset(SWITCH_BLOCKS,"aged_switch", new SwitchBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_TURN_ON, ModSoundEvents.BLOCK_SWITCH_TURN_OFF));
+    public static final Block BLACK_SWITCH = registerBlockInBlockset(SWITCH_BLOCKS,"black_switch", new SwitchBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_TURN_ON, ModSoundEvents.BLOCK_SWITCH_TURN_OFF));
+    public static final Block GRAY_SWITCH = registerBlockInBlockset(SWITCH_BLOCKS,"gray_switch", new SwitchBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_TURN_ON, ModSoundEvents.BLOCK_SWITCH_TURN_OFF));
     public static final Block EMPTY_TIRE = registerBlock("empty_tire", new BouncyPillarBlock(FabricBlockSettings.create().mapColor(MapColor.BLACK).instrument(Instrument.BASS).strength(0.2f).sounds(ModBlockSoundGroup.TIRE)));
     public static final Block TIRE = registerBlock("tire", new PillarBlock(FabricBlockSettings.copyOf(EMPTY_TIRE).strength(1.0f).requiresTool()));
     public static final Block CRATE = registerBlock("crate", new CrateBlock(FabricBlockSettings.create().instrument(Instrument.BASEDRUM).mapColor(MapColor.TERRACOTTA_GRAY).strength(3.5f, 50.0f).requiresTool().sounds(ModBlockSoundGroup.KORP)));
-    public static final Block KEYBOARD = registerBlock("keyboard", new KeyboardBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(0.1f).sounds(ModBlockSoundGroup.APPLIANCE).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_KEYBOARD_CLICK, 20));
-    public static final Block AGED_KEYBOARD = registerBlock("aged_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_KEYBOARD_CLICK_AGED, 40));
-    public static final Block BLACK_KEYBOARD = registerBlock("black_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY),ModSoundEvents.BLOCK_KEYBOARD_CLICK, 20));
-    public static final Block GRAY_KEYBOARD = registerBlock("gray_keyboard", new KeyboardBlock(FabricBlockSettings.copyOf(KEYBOARD).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_KEYBOARD_CLICK,20));
-    public static final Block MOUSE = registerBlock("mouse", new MouseBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(0.1f).sounds(ModBlockSoundGroup.APPLIANCE).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_MOUSE_CLICK, 5));
-    public static final Block AGED_MOUSE = registerBlock("aged_mouse", new MouseBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_MOUSE_CLICK_AGED,10));
-    public static final Block BLACK_MOUSE = registerBlock("black_mouse", new MouseBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_MOUSE_CLICK,5));
-    public static final Block GRAY_MOUSE = registerBlock("gray_mouse", new MouseBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_MOUSE_CLICK,5));
-    public static final Block SWITCH = registerBlock("switch", new SwitchBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(0.1f).sounds(ModBlockSoundGroup.APPLIANCE).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_TURN_ON, ModSoundEvents.BLOCK_SWITCH_TURN_OFF));
-    public static final Block AGED_SWITCH = registerBlock("aged_switch", new SwitchBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_TURN_ON, ModSoundEvents.BLOCK_SWITCH_TURN_OFF));
-    public static final Block BLACK_SWITCH = registerBlock("black_switch", new SwitchBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_TURN_ON, ModSoundEvents.BLOCK_SWITCH_TURN_OFF));
-    public static final Block GRAY_SWITCH = registerBlock("gray_switch", new SwitchBlock(FabricBlockSettings.copyOf(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_TURN_ON, ModSoundEvents.BLOCK_SWITCH_TURN_OFF));
-    public static final Block PC = registerBlock("pc", new PCBlock(FabricBlockSettings.create().mapColor(MapColor.CLEAR).strength(0.1f).sounds(ModBlockSoundGroup.APPLIANCE).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never).pistonBehavior(PistonBehavior.DESTROY)));
-    public static final Block AGED_PC = registerBlock("aged_pc", new PCBlock(FabricBlockSettings.copyOf(PC).pistonBehavior(PistonBehavior.DESTROY)));
-    public static final Block BLACK_PC = registerBlock("black_pc", new PCBlock(FabricBlockSettings.copyOf(PC).pistonBehavior(PistonBehavior.DESTROY)));
-    public static final Block GRAY_PC = registerBlock("gray_pc", new PCBlock(FabricBlockSettings.copyOf(PC).pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block ANTENNA = registerBlock("antenna", new AntennaBlock(FabricBlockSettings.create().mapColor(MapColor.TERRACOTTA_GRAY).strength(3.0f, 6.0f).sounds(ModBlockSoundGroup.ANTENNA).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never)));
         static { RENDER_LAYER_CUTOUT.add(ANTENNA); }

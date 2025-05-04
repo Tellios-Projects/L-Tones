@@ -59,6 +59,14 @@ public class PCBlock extends BlockWithEntity {
         return world.getBlockState(pos.down()).isSolid();
     }
 
+    public boolean emitsRedstonePower(BlockState state) {
+        return true;
+    }
+
+    public int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
+        return state.get(POWERED) ? 15 : 0;
+    }
+
     @Override
     @Nullable
     public BlockState getPlacementState(ItemPlacementContext ctx) {

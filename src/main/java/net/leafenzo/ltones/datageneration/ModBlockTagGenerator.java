@@ -52,17 +52,25 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
                 .add(ModBlocks.FRAMED_TONE_BRICKS)
                 .add(ModBlocks.AURORA)
                 .add(ModBlocks.CRT)
+                .add(ModBlocks.PC)
                 .add(ModBlocks.KEYBOARD)
                 .add(ModBlocks.MOUSE)
+                .add(ModBlocks.SWITCH)
                 .add(ModBlocks.AGED_CRT)
+                .add(ModBlocks.AGED_PC)
                 .add(ModBlocks.AGED_KEYBOARD)
                 .add(ModBlocks.AGED_MOUSE)
+                .add(ModBlocks.AGED_SWITCH)
                 .add(ModBlocks.BLACK_CRT)
+                .add(ModBlocks.BLACK_PC)
                 .add(ModBlocks.BLACK_KEYBOARD)
                 .add(ModBlocks.BLACK_MOUSE)
+                .add(ModBlocks.BLACK_SWITCH)
                 .add(ModBlocks.GRAY_CRT)
+                .add(ModBlocks.GRAY_PC)
                 .add(ModBlocks.GRAY_KEYBOARD)
                 .add(ModBlocks.GRAY_MOUSE)
+                .add(ModBlocks.GRAY_SWITCH)
                 .add(ModBlocks.EMPTY_TIRE)
                 .add(ModBlocks.TIRE)
                 .add(ModBlocks.CRATE)
@@ -84,6 +92,9 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         }
         //</editor-fold
         //<editor-fold desc ="BlockTags - Blockset Specific">
+        for(Block block : ModBlocks.AGON_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
         for(Block block : ModBlocks.AGON_BLOCKS) {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
         }
@@ -180,6 +191,21 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         for(Block block : ModBlocks.ROST_BLOCKS_RUST) {
             getOrCreateTagBuilder(ModBlocks.ROST_BLOCKSET.blockTag).add(block);
         }
+        for(Block block : ModBlocks.CRT_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+        for(Block block : ModBlocks.PC_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+        for(Block block : ModBlocks.KEYBOARD_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+        for(Block block : ModBlocks.MOUSE_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
+        for(Block block : ModBlocks.SWITCH_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
 
         //</editor-fold
         //<editor-fold desc ="BlockTags - Individual Blocks">
@@ -223,16 +249,8 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
                 .add(ModBlocks.ABSTRACT_TONE)
                 .add(ModBlocks.FRAMED_TONE)
                 .add(ModBlocks.FRAMED_TONE_BRICKS)
-                .add(ModBlocks.CRT)
-                .add(ModBlocks.AGED_CRT)
-                .add(ModBlocks.BLACK_CRT)
-                .add(ModBlocks.GRAY_CRT)
                 .add(ModBlocks.TIRE)
                 .add(ModBlocks.CRATE)
-                .add(ModBlocks.KEYBOARD)
-                .add(ModBlocks.AGED_KEYBOARD)
-                .add(ModBlocks.BLACK_KEYBOARD)
-                .add(ModBlocks.GRAY_KEYBOARD)
                 .add(ModBlocks.ANTENNA)
                 .add(ModBlocks.RADIO)
         ;

@@ -1,21 +1,25 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
-  "group": "aged_mouse",
+  "group": "pc",
   "key": {
     "D": {
       "item": "ltones:diode"
     },
     "F": {
-      "item": "ltones:conductium"
+      "item": "ltones:polymer"
+    },
+    "G": {
+      "item": "minecraft:glass_pane"
     }
   },
   "pattern": [
-    "DD",
-    "FF"
+    "FFF",
+    "GDG",
+    "FFF"
   ],
   "result": {
-    "item": "ltones:aged_mouse"
+    "item": "ltones:pc"
   },
   "show_notification": true
 }
