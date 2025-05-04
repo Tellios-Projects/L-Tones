@@ -25,19 +25,19 @@ public class LitHorizontalFacingBlock extends HorizontalFacingBlock {
         super(settings);
         this.turnOnSound = turnOnSound;
         this.turnOffSound = turnOffSound;
-        this.setDefaultState((BlockState)this.getDefaultState().with(LIT, false));
+        this.setDefaultState(this.getDefaultState().with(LIT, false));
     }
     public LitHorizontalFacingBlock(AbstractBlock.Settings settings) {
         super(settings);
         this.turnOnSound = null;
         this.turnOffSound = null;
-        this.setDefaultState((BlockState)this.getDefaultState().with(LIT, false));
+        this.setDefaultState(this.getDefaultState().with(LIT, false));
     }
 
     @Override
     @Nullable
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return super.getPlacementState(ctx).with(LIT, ctx.getWorld().isReceivingRedstonePower(ctx.getBlockPos())).with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+        return this.getDefaultState().with(LIT, ctx.getWorld().isReceivingRedstonePower(ctx.getBlockPos())).with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
     }
 
     @Override

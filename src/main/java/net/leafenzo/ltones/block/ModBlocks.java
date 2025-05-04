@@ -308,9 +308,9 @@ public class ModBlocks {
             .strength(2.4f, 2.0f)
             .sounds(ModBlockSoundGroup.REDDS);
     public static final Block REDDS = registerBlockInBlockset(REDDS_BLOCKS, "redds", new LitBlock(FabricBlockSettings.copyOf(reddsMaterial).luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_REDDS_ACTIVATE, ModSoundEvents.BLOCK_REDDS_DEACTIVATE, false));
-    public static final Block REDDS_PICE = registerBlockInBlockset(REDDS_BLOCKS, "redds_pice", new LitBlock(FabricBlockSettings.copyOf(reddsMaterial), null, null, false));
+    public static final Block REDDS_PICE = registerBlockInBlockset(REDDS_BLOCKS, "redds_pice", new LitBlock(FabricBlockSettings.copyOf(reddsMaterial)));
         public static final Block REDDS_PICE_STAIRS = registerStairs(REDDS_PICE,"redds_pice_stairs", new LitStairsBlock(REDDS_PICE.getDefaultState(), FabricBlockSettings.copyOf(REDDS_PICE), null, null));
-        public static final Block REDDS_PICE_SLAB = registerSlab(REDDS_PICE, "redds_pice_slab", new LitSlabBlock(FabricBlockSettings.copyOf(REDDS_PICE), null, null, false));
+        public static final Block REDDS_PICE_SLAB = registerSlab(REDDS_PICE, "redds_pice_slab", new LitSlabBlock(FabricBlockSettings.copyOf(REDDS_PICE)));
     public static final Block REDDS_TRACT = registerBlockInBlockset(REDDS_BLOCKS, "redds_tract", new LitBlock(FabricBlockSettings.copyOf(reddsMaterial).luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_REDDS_ACTIVATE, ModSoundEvents.BLOCK_REDDS_DEACTIVATE, false));
     public static final Block REDDS_THOUGHT = registerBlockInBlockset(REDDS_BLOCKS, "redds_thought", new LitBlock(FabricBlockSettings.copyOf(reddsMaterial).luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_REDDS_ACTIVATE, ModSoundEvents.BLOCK_REDDS_DEACTIVATE, false));
     public static final Block REDDS_TILE = registerBlockInBlockset(REDDS_BLOCKS, "redds_tile", new LitBlock(FabricBlockSettings.copyOf(reddsMaterial).luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_REDDS_ACTIVATE, ModSoundEvents.BLOCK_REDDS_DEACTIVATE, false));
@@ -662,22 +662,22 @@ public class ModBlocks {
             .requiresTool()
             .strength(2.4f, 2.0f)
             .sounds(ModBlockSoundGroup.SYNC);
-    public static final Block SYNC = registerBlockInBlockset(SYNC_BLOCKS, "sync", new LitBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, false));
-    public static final Block SYNC_TANK = registerBlockInBlockset(SYNC_BLOCKS, "sync_tank", new LitPillarBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, false));
-    public static final Block SYNC_SHIELDING = registerBlockInBlockset(SYNC_BLOCKS, "sync_shielding", new LitBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK), null, null, false));
-    public static final Block SYNC_SAFE = registerBlockInBlockset(SYNC_BLOCKS, "sync_safe", new LitBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK), null, null, false));
-    public static final Block SYNC_MIZMER = registerBlockInBlockset(SYNC_BLOCKS, "sync_mizmer", new LitGlazedTerracottaBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, false));
-    public static final Block SYNC_MESS = registerBlockInBlockset(SYNC_BLOCKS, "sync_mess", new LitBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, false));
-    public static final Block SYNC_LEADED = registerBlockInBlockset(SYNC_BLOCKS, "sync_leaded", new LitBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK), null, null, false));
-    public static final Block SYNC_JUNCTION = registerBlockInBlockset(SYNC_BLOCKS, "sync_junction", new LitBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, false));
-    public static final Block SYNC_HEX = registerBlockInBlockset(SYNC_BLOCKS, "sync_hex", new LitPillarBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, false));
-    public static final Block SYNC_HAZARD = registerBlockInBlockset(SYNC_BLOCKS, "sync_hazard", new LitBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, false));
-    public static final Block SYNC_HATCH = registerBlockInBlockset(SYNC_BLOCKS, "sync_hatch", new LitBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, false));
-    public static final Block SYNC_FRAMED = registerBlockInBlockset(SYNC_BLOCKS, "sync_framed", new LitBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, false));
-    public static final Block SYNC_FORCE = registerBlockInBlockset(SYNC_BLOCKS, "sync_force", new LitBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, false));
-    public static final Block SYNC_DATA = registerBlockInBlockset(SYNC_BLOCKS, "sync_data", new LitBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, false));
-    public static final Block SYNC_CONTAIN = registerBlockInBlockset(SYNC_BLOCKS, "sync_contain", new LitBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, false));
-    public static final Block SYNC_CAUTION = registerBlockInBlockset(SYNC_BLOCKS, "sync_caution", new LitPillarBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, false));
+    public static final Block SYNC = registerBlockInBlockset(SYNC_BLOCKS, "sync", new LitBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_TANK = registerBlockInBlockset(SYNC_BLOCKS, "sync_tank", new LitPillarBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_SHIELDING = registerBlockInBlockset(SYNC_BLOCKS, "sync_shielding", new LitBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
+    public static final Block SYNC_SAFE = registerBlockInBlockset(SYNC_BLOCKS, "sync_safe", new LitBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
+    public static final Block SYNC_MIZMER = registerBlockInBlockset(SYNC_BLOCKS, "sync_mizmer", new LitGlazedTerracottaBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_MESS = registerBlockInBlockset(SYNC_BLOCKS, "sync_mess", new LitBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_LEADED = registerBlockInBlockset(SYNC_BLOCKS, "sync_leaded", new LitBlock(FabricBlockSettings.copyOf(syncMaterial).mapColor(MapColor.BLACK)));
+    public static final Block SYNC_JUNCTION = registerBlockInBlockset(SYNC_BLOCKS, "sync_junction", new LitBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_HEX = registerBlockInBlockset(SYNC_BLOCKS, "sync_hex", new LitPillarBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_HAZARD = registerBlockInBlockset(SYNC_BLOCKS, "sync_hazard", new LitBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_HATCH = registerBlockInBlockset(SYNC_BLOCKS, "sync_hatch", new LitBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_FRAMED = registerBlockInBlockset(SYNC_BLOCKS, "sync_framed", new LitBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_FORCE = registerBlockInBlockset(SYNC_BLOCKS, "sync_force", new LitBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_DATA = registerBlockInBlockset(SYNC_BLOCKS, "sync_data", new LitBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_CONTAIN = registerBlockInBlockset(SYNC_BLOCKS, "sync_contain", new LitBlock(FabricBlockSettings.copyOf(syncMaterial)));
+    public static final Block SYNC_CAUTION = registerBlockInBlockset(SYNC_BLOCKS, "sync_caution", new LitPillarBlock(FabricBlockSettings.copyOf(syncMaterial)));
     public static final Block SYNC_SOUNDSCAPE = registerBlockInBlockset(SYNC_BLOCKS, "sync_soundscape", new SoundscapeBlock(FabricBlockSettings.copyOf(syncMaterial), null, null, ModSoundEvents.BLOCK_SYNC_AMBIENT, false, 20));
     //</editor-fold>
     //<editor-fold desc ="Blocks - NURR">
@@ -760,22 +760,22 @@ public class ModBlocks {
             .luminance(createLightLevelFromProperty(11, Properties.LIT))
             .mapColor(state -> state.get(Properties.LIT) ? MapColor.YELLOW : MapColor.TERRACOTTA_ORANGE)
             .sounds(ModBlockSoundGroup.SOL);
-    public static final Block SOL = registerBlockInBlockset(SOL_BLOCKS, "sol", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null, false));
-    public static final Block SOL_PHOTO = registerBlockInBlockset(SOL_BLOCKS, "sol_photo", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null, false));
-    public static final Block SOL_ELECTRON = registerBlockInBlockset(SOL_BLOCKS, "sol_electron", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null, false));
-    public static final Block SOL_MAX = registerBlockInBlockset(SOL_BLOCKS, "sol_max", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null, false));
-    public static final Block SOL_MIN = registerBlockInBlockset(SOL_BLOCKS, "sol_min", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null, false));
-    public static final Block SOL_CHROMA = registerBlockInBlockset(SOL_BLOCKS, "sol_chroma", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null, false));
-    public static final Block SOL_FLARE = registerBlockInBlockset(SOL_BLOCKS, "sol_flare", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null, false));
-    public static final Block SOL_BLIND = registerBlockInBlockset(SOL_BLOCKS, "sol_blind", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null, false));
-    public static final Block SOL_PROTON = registerBlockInBlockset(SOL_BLOCKS, "sol_proton", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null, false));
-    public static final Block SOL_BALANCE = registerBlockInBlockset(SOL_BLOCKS, "sol_balance", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null, false));
-    public static final Block SOL_GLARE = registerBlockInBlockset(SOL_BLOCKS, "sol_glare", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null, false));
-    public static final Block SOL_SPECTRA = registerBlockInBlockset(SOL_BLOCKS, "sol_spectra", new LitPillarBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null, false));
-    public static final Block SOL_BLAZAR = registerBlockInBlockset(SOL_BLOCKS, "sol_blazar", new LitGlazedTerracottaBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null, false));
-    public static final Block SOL_FIELD = registerBlockInBlockset(SOL_BLOCKS, "sol_field", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null, false));
-    public static final Block SOL_NUCLEI = registerBlockInBlockset(SOL_BLOCKS, "sol_nuclei", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null, false));
-    public static final Block SOL_CORONA = registerBlockInBlockset(SOL_BLOCKS, "sol_corona", new LitBlock(FabricBlockSettings.copyOf(solMaterial), null, null, false));
+    public static final Block SOL = registerBlockInBlockset(SOL_BLOCKS, "sol", new LitBlock(FabricBlockSettings.copyOf(solMaterial)));
+    public static final Block SOL_PHOTO = registerBlockInBlockset(SOL_BLOCKS, "sol_photo", new LitBlock(FabricBlockSettings.copyOf(solMaterial)));
+    public static final Block SOL_ELECTRON = registerBlockInBlockset(SOL_BLOCKS, "sol_electron", new LitBlock(FabricBlockSettings.copyOf(solMaterial)));
+    public static final Block SOL_MAX = registerBlockInBlockset(SOL_BLOCKS, "sol_max", new LitBlock(FabricBlockSettings.copyOf(solMaterial)));
+    public static final Block SOL_MIN = registerBlockInBlockset(SOL_BLOCKS, "sol_min", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim)));
+    public static final Block SOL_CHROMA = registerBlockInBlockset(SOL_BLOCKS, "sol_chroma", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim)));
+    public static final Block SOL_FLARE = registerBlockInBlockset(SOL_BLOCKS, "sol_flare", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim)));
+    public static final Block SOL_BLIND = registerBlockInBlockset(SOL_BLOCKS, "sol_blind", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim)));
+    public static final Block SOL_PROTON = registerBlockInBlockset(SOL_BLOCKS, "sol_proton", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim)));
+    public static final Block SOL_BALANCE = registerBlockInBlockset(SOL_BLOCKS, "sol_balance", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim)));
+    public static final Block SOL_GLARE = registerBlockInBlockset(SOL_BLOCKS, "sol_glare", new LitBlock(FabricBlockSettings.copyOf(solMaterial)));
+    public static final Block SOL_SPECTRA = registerBlockInBlockset(SOL_BLOCKS, "sol_spectra", new LitPillarBlock(FabricBlockSettings.copyOf(solMaterialDim)));
+    public static final Block SOL_BLAZAR = registerBlockInBlockset(SOL_BLOCKS, "sol_blazar", new LitGlazedTerracottaBlock(FabricBlockSettings.copyOf(solMaterialDim)));
+    public static final Block SOL_FIELD = registerBlockInBlockset(SOL_BLOCKS, "sol_field", new LitBlock(FabricBlockSettings.copyOf(solMaterialDim)));
+    public static final Block SOL_NUCLEI = registerBlockInBlockset(SOL_BLOCKS, "sol_nuclei", new LitBlock(FabricBlockSettings.copyOf(solMaterial)));
+    public static final Block SOL_CORONA = registerBlockInBlockset(SOL_BLOCKS, "sol_corona", new LitBlock(FabricBlockSettings.copyOf(solMaterial)));
     public static final Block SOL_SOUNDSCAPE = registerBlockInBlockset(SOL_BLOCKS, "sol_soundscape", new SoundscapeBlock(FabricBlockSettings.copyOf(solMaterialDim), null, null, ModSoundEvents.BLOCK_SOL_AMBIENT,  false,80));
     //</editor-fold>
 

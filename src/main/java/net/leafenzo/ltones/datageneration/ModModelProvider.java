@@ -83,7 +83,7 @@ public class ModModelProvider extends FabricModelProvider {
         Identifier identifier2 = blockStateModelGenerator.createSubModel(block, "_on", Models.CUBE_ALL, textureFactory);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createSouthDefaultHorizontalRotationStates()).coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.LIT, identifier2, identifier)));
     }
-    private void registerLitOnOffAxisRotatedBlockWithTopTexturePath(BlockStateModelGenerator blockStateModelGenerator, Block block, Function<Identifier, TextureMap> textureFactory, String topTexturePath) {
+    private void registerLitOnOffAxisRotatedBlockWithTopTexturePath(BlockStateModelGenerator blockStateModelGenerator, Block block, String topTexturePath) {
         TextureMap map = new TextureMap()
                 .put(TextureKey.PARTICLE, TextureMap.getId(block))
                 .put(TextureKey.NORTH, TextureMap.getId(block))
@@ -92,8 +92,48 @@ public class ModModelProvider extends FabricModelProvider {
                 .put(TextureKey.WEST, TextureMap.getId(block))
                 .put(TextureKey.UP, Super.asResource(topTexturePath))
                 .put(TextureKey.DOWN, Super.asResource(topTexturePath));
-        Identifier identifier = Models.CUBE.upload(block, map, blockStateModelGenerator.modelCollector);
-        Identifier identifier2 = blockStateModelGenerator.createSubModel(block, "_on", Models.CUBE_COLUMN, textureFactory);
+
+        TextureMap onMap = new TextureMap()
+                .put(TextureKey.PARTICLE, TextureMap.getSubId(block, "_on"))
+                .put(TextureKey.NORTH, TextureMap.getSubId(block, "_on"))
+                .put(TextureKey.SOUTH, TextureMap.getSubId(block, "_on"))
+                .put(TextureKey.EAST, TextureMap.getSubId(block, "_on"))
+                .put(TextureKey.WEST, TextureMap.getSubId(block, "_on"))
+                .put(TextureKey.UP, Super.asResource(topTexturePath + "_on"))
+                .put(TextureKey.DOWN, Super.asResource(topTexturePath + "_on"));
+
+        ;
+        Model model = Models.CUBE;
+        Identifier identifier = model.upload(block, map, blockStateModelGenerator.modelCollector);
+        Identifier identifier2 = model.upload(block, "_on", onMap, blockStateModelGenerator.modelCollector);
+        blockStateModelGenerator.blockStateCollector.accept(
+                VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier))
+                        .coordinate(BlockStateModelGenerator.createAxisRotatedVariantMap())
+                        .coordinate(BlockStateModelGenerator.createBooleanModelMap(Properties.LIT, identifier2, identifier)));
+    }
+    private void registerLitOnOffAxisRotatedBlockWithStaticTopTexturePath(BlockStateModelGenerator blockStateModelGenerator, Block block, String topTexturePath) {
+        TextureMap map = new TextureMap()
+                .put(TextureKey.PARTICLE, TextureMap.getId(block))
+                .put(TextureKey.NORTH, TextureMap.getId(block))
+                .put(TextureKey.SOUTH, TextureMap.getId(block))
+                .put(TextureKey.EAST, TextureMap.getId(block))
+                .put(TextureKey.WEST, TextureMap.getId(block))
+                .put(TextureKey.UP, Super.asResource(topTexturePath))
+                .put(TextureKey.DOWN, Super.asResource(topTexturePath));
+
+        TextureMap onMap = new TextureMap()
+                .put(TextureKey.PARTICLE, TextureMap.getSubId(block, "_on"))
+                .put(TextureKey.NORTH, TextureMap.getSubId(block, "_on"))
+                .put(TextureKey.SOUTH, TextureMap.getSubId(block, "_on"))
+                .put(TextureKey.EAST, TextureMap.getSubId(block, "_on"))
+                .put(TextureKey.WEST, TextureMap.getSubId(block, "_on"))
+                .put(TextureKey.UP, Super.asResource(topTexturePath))
+                .put(TextureKey.DOWN, Super.asResource(topTexturePath));
+
+        ;
+        Model model = Models.CUBE;
+        Identifier identifier = model.upload(block, map, blockStateModelGenerator.modelCollector);
+        Identifier identifier2 = model.upload(block, "_on", onMap, blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.blockStateCollector.accept(
                 VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier))
                         .coordinate(BlockStateModelGenerator.createAxisRotatedVariantMap())
@@ -671,6 +711,9 @@ public class ModModelProvider extends FabricModelProvider {
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SYNC_DATA, TextureMap::all);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SYNC_CONTAIN, TextureMap::all);
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SYNC_SOUNDSCAPE, TextureMap::all);
+        registerLitOnOffAxisRotatedBlockWithStaticTopTexturePath(blockStateModelGenerator, ModBlocks.SYNC_TANK, "block/sync_shielding");
+        registerLitOnOffAxisRotatedBlockWithStaticTopTexturePath(blockStateModelGenerator, ModBlocks.SYNC_CAUTION, "block/sync_shielding");
+        registerLitOnOffAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.SYNC_HEX, "block/sync_junction");
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.SYNC, TextureMap::all);
         registerLitOnOffGlazedTerracottaBlock(blockStateModelGenerator, ModBlocks.SYNC_MIZMER, TextureMap::all);
         //</editor-fold>
