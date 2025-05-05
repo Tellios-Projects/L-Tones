@@ -65,31 +65,31 @@ public class ZkulBlock extends BlockWithEntity {
         }
         super.onBreak(world, pos, state, player);
     }
-
+    private boolean hitCooldownActive;
     @Override
     public void onBlockBreakStart(BlockState state, World world, BlockPos pos, PlayerEntity player) {
         if (!player.getStackInHand(Hand.MAIN_HAND).isOf(ModItems.CROWS_BEAK)) {
+            world.scheduleBlockTick(pos, state.getBlock(), 60);
             if (world instanceof ServerWorld) {
                 ServerPlayerEntity serverPlayerEntity = SculkShriekerBlockEntity.findResponsiblePlayerFromEntity(player);
                 if (serverPlayerEntity != null) {
                     player.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 260, 0, false, false));
                 }
             }
-            for (int i = 0; i < 50; i++) {
-                world.addParticle(ModParticleTypes.ZKUL, ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getX(), ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getY(), ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getZ(), 0, 0, 0);
+            if (!hitCooldownActive) {
+                hitCooldownActive = true;
+                for (int i = 0; i < 50; i++) {
+                    world.addParticle(ModParticleTypes.ZKUL, ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getX(), ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getY(), ((world.getRandom().nextFloat() - 0.5f) * 8) + pos.getZ(), 0, 0, 0);
+                }
+                world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_ZKUL_WARN, SoundCategory.BLOCKS, 1, world.getRandom().nextFloat() * 0.2f + 0.8f, false);
             }
-            world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_ZKUL_WARN, SoundCategory.BLOCKS, 1, world.getRandom().nextFloat() * 0.2f + 0.8f, false);
-
         }
         super.onBlockBreakStart(state, world, pos, player);
     }
 
     @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof ZkulBlockEntity) {
-            ((ZkulBlockEntity)blockEntity).tick();
-        }
+        hitCooldownActive = false;
     }
 
     private void explode(World world, final BlockPos explodedPos) {

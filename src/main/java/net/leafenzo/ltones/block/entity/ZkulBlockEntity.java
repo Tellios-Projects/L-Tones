@@ -9,8 +9,4 @@ public class ZkulBlockEntity extends BlockEntity {
         super(ModBlockEntityType.ZKUL, pos, state);
     }
 
-    public void tick() {
-        // mario
-    }
-
 }
