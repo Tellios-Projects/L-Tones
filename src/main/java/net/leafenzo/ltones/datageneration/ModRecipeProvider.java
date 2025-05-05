@@ -366,6 +366,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.NETWORKING, ModTags.Items.MUSHROOMS, ModItems.ARGON,4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.JELLY, Items.SLIME_BALL, ModItems.OIL,4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.JELLY, Items.HONEY_BOTTLE, ModItems.OIL,4);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.SUGARING_PASTE, Items.SUGAR, ModItems.JELLY,4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.PCB_BOARD, ModItems.THINKING_METAL, ModItems.DIODE,  ModItems.DIODE, ModItems.DIODE,  2);
 
         // Blockset Base Recipes

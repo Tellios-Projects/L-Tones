@@ -229,6 +229,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_DECAL_SLUMP_HIT = registerSoundEvent("block.decal_slump.hit");
     public static final SoundEvent BLOCK_DECAL_SLUMP_FALL = registerSoundEvent("block.decal_slump.fall");
 
+    public static final SoundEvent BLOCK_DECAL_SUGARING_PASTE_BREAK = registerSoundEvent("block.decal_sugaring_paste.break");
+    public static final SoundEvent BLOCK_DECAL_SUGARING_PASTE_STEP = registerSoundEvent("block.decal_sugaring_paste.step");
+    public static final SoundEvent BLOCK_DECAL_SUGARING_PASTE_PLACE = registerSoundEvent("block.decal_sugaring_paste.place");
+    public static final SoundEvent BLOCK_DECAL_SUGARING_PASTE_HIT = registerSoundEvent("block.decal_sugaring_paste.hit");
+    public static final SoundEvent BLOCK_DECAL_SUGARING_PASTE_FALL = registerSoundEvent("block.decal_sugaring_paste.fall");
+
     public static final SoundEvent BLOCK_DECAL_TAWSINE_BREAK = registerSoundEvent("block.decal_tawsine.break");
     public static final SoundEvent BLOCK_DECAL_TAWSINE_STEP = registerSoundEvent("block.decal_tawsine.step");
     public static final SoundEvent BLOCK_DECAL_TAWSINE_PLACE = registerSoundEvent("block.decal_tawsine.place");

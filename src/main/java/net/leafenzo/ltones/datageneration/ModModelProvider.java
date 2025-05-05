@@ -367,6 +367,7 @@ public class ModModelProvider extends FabricModelProvider {
         this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_MOULDING);
         this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_PLAQUE);
         this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_JELLY);
+        this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_SUGARING_PASTE);
         this.registerSingleStateDecal(blockStateModelGenerator, ModBlocks.DECAL_CORPOREAL_VAPOR);
         this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_FLAKES);
         this.registerMultiStateDecal(blockStateModelGenerator, ModBlocks.DECAL_NETWORKING);
@@ -899,10 +900,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BOXED_MEDICINE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PACKAGED_MEAL, Models.GENERATED);
         itemModelGenerator.register(ModItems.DECK_OF_CARDS, Models.GENERATED);
-        //itemModelGenerator.register(ModItems.RAW_LUESIUM, Models.GENERATED);
-        //itemModelGenerator.register(ModItems.LUESIUM_CHUNK, Models.GENERATED);
-        //itemModelGenerator.register(ModItems.LUESIUM_INGOT, Models.GENERATED);
-        //itemModelGenerator.register(ModItems.ANTIBRASS, Models.GENERATED);
     }
 
     public ArrayList<Identifier> usedBlockItems = new ArrayList<Identifier>();

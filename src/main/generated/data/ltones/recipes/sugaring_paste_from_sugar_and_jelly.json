@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonessugaring_paste",
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "ltones:jelly"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "ltones:sugaring_paste"
+  }
+}

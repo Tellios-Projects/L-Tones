@@ -13,8 +13,8 @@ public class LoopingSoundscapeBlockEntity extends BlockEntity {
     public LoopingSoundscapeBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntityType.LOOPING_SOUNDSCAPE, pos, state);
     }
-    private int soundDelay;
-    private SoundEvent loopingSound;
+    private int soundDelay = 20;
+    private SoundEvent loopingSound = null;
 
     public LoopingSoundscapeBlockEntity(BlockPos pos, BlockState state, int delay, SoundEvent sound) {
         super(ModBlockEntityType.LOOPING_SOUNDSCAPE, pos, state);

@@ -199,6 +199,7 @@ public class ModItemGroups {
                         entries.add(ModItems.MOULDING);
                         entries.add(ModItems.PLAQUE);
                         entries.add(ModItems.JELLY);
+                        entries.add(ModItems.SUGARING_PASTE);
                         entries.add(ModItems.CORPOREAL_VAPOR);
                         entries.add(ModItems.FLAKES);
                         entries.add(ModItems.NETWORKING);

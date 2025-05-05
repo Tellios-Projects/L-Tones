@@ -46,6 +46,7 @@ public class ModItems {
     public static final Item MOULDING = registerItem("moulding", new AliasedBlockItem(ModBlocks.DECAL_MOULDING, new FabricItemSettings()));
     public static final Item PLAQUE = registerItem("plaque", new AliasedBlockItem(ModBlocks.DECAL_PLAQUE, new FabricItemSettings()));
     public static final Item JELLY = registerItem("jelly", new AliasedBlockItem(ModBlocks.DECAL_JELLY, new FabricItemSettings()));
+    public static final Item SUGARING_PASTE = registerItem("sugaring_paste", new AliasedBlockItem(ModBlocks.DECAL_SUGARING_PASTE, new FabricItemSettings()));
     public static final Item CORPOREAL_VAPOR = registerItem("corporeal_vapor", new AliasedBlockItem(ModBlocks.DECAL_CORPOREAL_VAPOR, new FabricItemSettings()));
     public static final Item FLAKES = registerItem("flakes", new AliasedBlockItem(ModBlocks.DECAL_FLAKES, new FabricItemSettings()));
     public static final Item NETWORKING = registerItem("networking", new AliasedBlockItem(ModBlocks.DECAL_NETWORKING, new FabricItemSettings()));
