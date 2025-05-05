@@ -269,6 +269,51 @@
 		]
 	},
 
+	"block.decal_radium_paint.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_radium_paint/break1",
+			"ltones:block/decal_radium_paint/break2",
+			"ltones:block/decal_radium_paint/break3",
+			"ltones:block/decal_radium_paint/break4"
+		]
+	},
+	"block.decal_radium_paint.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_radium_paint/step1",
+			"ltones:block/decal_radium_paint/step2",
+			"ltones:block/decal_radium_paint/step3",
+			"ltones:block/decal_radium_paint/step4"
+		]
+	},
+	"block.decal_radium_paint.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_radium_paint/break1",
+			"ltones:block/decal_radium_paint/break2",
+			"ltones:block/decal_radium_paint/break3",
+			"ltones:block/decal_radium_paint/break4"
+		]
+	},
+	"block.decal_radium_paint.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_radium_paint/step1",
+			"ltones:block/decal_radium_paint/step2",
+			"ltones:block/decal_radium_paint/step3",
+			"ltones:block/decal_radium_paint/step4"
+		]
+	},
+	"block.decal_radium_paint.fall": {
+		"sounds": [
+			"ltones:block/decal_radium_paint/step1",
+			"ltones:block/decal_radium_paint/step2",
+			"ltones:block/decal_radium_paint/step3",
+			"ltones:block/decal_radium_paint/step4"
+		]
+	},
+
 	"block.decal_oil.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [

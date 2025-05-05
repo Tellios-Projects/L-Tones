@@ -54,7 +54,7 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> overworldZkulTargets = List.of(
                 OreFeatureConfig.createTarget(isDeepslate, ModBlocks.ZKUL.getDefaultState())
         );
-        register(context, ORE_ZKUL, Feature.ORE, new OreFeatureConfig(overworldZkulTargets, 1));
+        register(context, ORE_ZKUL, Feature.ORE, new OreFeatureConfig(overworldZkulTargets, 1)); //TODO: redo this to not be shit
 
     }
     private static <FC extends FeatureConfig, F extends Feature <FC>> void register(Registerable <ConfiguredFeature <?, ?>> context, RegistryKey <ConfiguredFeature <?, ?>> key, F feature, FC configuration) {

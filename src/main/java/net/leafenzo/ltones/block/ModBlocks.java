@@ -559,7 +559,6 @@ public class ModBlocks {
     public static final Block EXRI_CONTROL = registerBlockInBlockset(EXRI_BLOCKS, "exri_control", new LitHorizontalFacingBlock(FabricBlockSettings.copyOf(exriMaterial)));
     public static final Block EXRI_SOUNDSCAPE = registerBlockInBlockset(EXRI_BLOCKS, "exri_soundscape", new LoopingSoundscapeBlock(FabricBlockSettings.copyOf(exriMaterial), ModSoundEvents.BLOCK_EXRI_AMBIENT,105));
 
-    //TODO bit blockset always emits a redstone level of 1   
     //</editor-fold>
     //<editor-fold desc ="Blocks - AZUR">
     private static final FabricBlockSettings azurMaterial = FabricBlockSettings.create()
@@ -874,7 +873,6 @@ public class ModBlocks {
     public static final Block FRAMED_TONE_BRICKS = registerBlock("framed_tone_bricks", new Block(FabricBlockSettings.copyOf(Blocks.ANDESITE).mapColor(MapColor.TERRACOTTA_GRAY).sounds(ModBlockSoundGroup.TONE_BRICKS)));
     public static final Block ZKUL = registerBlock("zkul", new ZkulBlock(FabricBlockSettings.copyOf(Blocks.REINFORCED_DEEPSLATE).mapColor(MapColor.BLACK).sounds(ModBlockSoundGroup.ZKUL).luminance(state -> 3).emissiveLighting(ModBlocks::always)));
 
-    //TODO better CRT sfx
     //CRT block entity and screen display
     public static final Block CRT = registerBlockInBlockset(CRT_BLOCKS,"crt", new CRTBlock(FabricBlockSettings.create().strength(1.2f).sounds(ModBlockSoundGroup.CRT).emissiveLighting((state, world, pos) -> state.get(Properties.LIT)).luminance(createLightLevelFromProperty(3, Properties.LIT)).strength(1.0f).mapColor(DyeColor.WHITE), ModSoundEvents.BLOCK_CRT_TURN_ON, ModSoundEvents.BLOCK_CRT_TURN_OFF));
     public static final Block AGED_CRT = registerBlockInBlockset(CRT_BLOCKS,"aged_crt", new CRTBlock(FabricBlockSettings.copyOf(CRT).mapColor(DyeColor.YELLOW), ModSoundEvents.BLOCK_CRT_TURN_ON, ModSoundEvents.BLOCK_CRT_TURN_OFF));
@@ -974,7 +972,7 @@ public class ModBlocks {
             .pistonBehavior(PistonBehavior.DESTROY);
     public static final Block DECAL_LUESIUM = registerDecalBlock("decal_luesium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_LUESIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_LUESIUM); }
     public static final Block DECAL_LUESIUM_CHUNK = registerDecalBlock("decal_luesium_chunk", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_LUESIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_LUESIUM_CHUNK); }
-    public static final Block DECAL_RAW_LUESIUM = registerDecalBlock("decal_raw_luesium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.LUESIUM_ORE))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_RAW_LUESIUM); }
+    public static final Block DECAL_RAW_LUESIUM = registerDecalBlock("decal_raw_luesium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_RAW_LUESIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_RAW_LUESIUM); }
     public static final Block DECAL_ANTIBRASS = registerDecalBlock("decal_antibrass", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_ANTIBRASS))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_ANTIBRASS); }
     public static final Block DECAL_CONDUCTIUM = registerDecalBlock("decal_conductium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_CONDUCTIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_CONDUCTIUM); }
     public static final Block DECAL_KERBESIUM = registerDecalBlock("decal_kerbesium", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_KERBESIUM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_KERBESIUM); }
@@ -994,7 +992,7 @@ public class ModBlocks {
     public static final Block DECAL_G2V = registerDecalBlock("decal_g2v", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_G2V))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_G2V); }
     public static final Block DECAL_SLAG = registerDecalBlock("decal_slag", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_SLAG))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_SLAG); }
     public static final Block DECAL_REBITH = registerDecalBlock("decal_rebith", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_REBITH))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_REBITH); }
-    public static final Block DECAL_RADIUM_PAINT = registerDecalBlock("decal_radium_paint", new AmbientSoundDecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_CORPOREAL_VALOR), ModSoundEvents.BLOCK_SYNC_AMBIENT, 80)); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_RADIUM_PAINT); }
+    public static final Block DECAL_RADIUM_PAINT = registerDecalBlock("decal_radium_paint", new AmbientSoundDecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_RADIUM_PAINT), ModSoundEvents.BLOCK_SYNC_AMBIENT, 80)); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_RADIUM_PAINT); }
     public static final Block DECAL_FIBROUS_POWDER = registerDecalBlock("decal_fibrous_powder", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_FIBROUS_POWDER))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_FIBROUS_POWDER); }
     public static final Block DECAL_AMALGAM = registerDecalBlock("decal_amalgam", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_AMALGAM))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_AMALGAM); }
     public static final Block DECAL_SLUMP = registerDecalBlock("decal_slump", new DecalBlock(FabricBlockSettings.copyOf(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_SLUMP))); static { RENDER_LAYER_TRANSLUCENT.add(DECAL_SLUMP); }

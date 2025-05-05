@@ -181,6 +181,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_DECAL_POLYMER_HIT = registerSoundEvent("block.decal_polymer.hit");
     public static final SoundEvent BLOCK_DECAL_POLYMER_FALL = registerSoundEvent("block.decal_polymer.fall");
 
+    public static final SoundEvent BLOCK_DECAL_RADIUM_PAINT_BREAK = registerSoundEvent("block.decal_radium_paint.break");
+    public static final SoundEvent BLOCK_DECAL_RADIUM_PAINT_STEP = registerSoundEvent("block.decal_radium_paint.step");
+    public static final SoundEvent BLOCK_DECAL_RADIUM_PAINT_PLACE = registerSoundEvent("block.decal_radium_paint.place");
+    public static final SoundEvent BLOCK_DECAL_RADIUM_PAINT_HIT = registerSoundEvent("block.decal_radium_paint.hit");
+    public static final SoundEvent BLOCK_DECAL_RADIUM_PAINT_FALL = registerSoundEvent("block.decal_radium_paint.fall");
+
     public static final SoundEvent BLOCK_DECAL_REBITH_BREAK = registerSoundEvent("block.decal_rebith.break");
     public static final SoundEvent BLOCK_DECAL_REBITH_STEP = registerSoundEvent("block.decal_rebith.step");
     public static final SoundEvent BLOCK_DECAL_REBITH_PLACE = registerSoundEvent("block.decal_rebith.place");
