@@ -318,18 +318,6 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_MYST_HIT = registerSoundEvent("block.myst.hit");
     public static final SoundEvent BLOCK_MYST_FALL = registerSoundEvent("block.myst.fall");
 
-    public static final SoundEvent BLOCK_STATIC_BREAK = registerSoundEvent("block.static.break");
-    public static final SoundEvent BLOCK_STATIC_STEP = registerSoundEvent("block.static.step");
-    public static final SoundEvent BLOCK_STATIC_PLACE = registerSoundEvent("block.static.place");
-    public static final SoundEvent BLOCK_STATIC_HIT = registerSoundEvent("block.static.hit");
-    public static final SoundEvent BLOCK_STATIC_FALL = registerSoundEvent("block.static.fall");
-
-    public static final SoundEvent BLOCK_NEON_BREAK = registerSoundEvent("block.neon.break");
-    public static final SoundEvent BLOCK_NEON_STEP = registerSoundEvent("block.neon.step");
-    public static final SoundEvent BLOCK_NEON_PLACE = registerSoundEvent("block.neon.place");
-    public static final SoundEvent BLOCK_NEON_HIT = registerSoundEvent("block.neon.hit");
-    public static final SoundEvent BLOCK_NEON_FALL = registerSoundEvent("block.neon.fall");
-
     public static final SoundEvent BLOCK_REDDS_BREAK = registerSoundEvent("block.redds.break");
     public static final SoundEvent BLOCK_REDDS_STEP = registerSoundEvent("block.redds.step");
     public static final SoundEvent BLOCK_REDDS_PLACE = registerSoundEvent("block.redds.place");

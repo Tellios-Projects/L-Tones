@@ -287,7 +287,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public static void offerReversible2x2CompactingRecipes(Consumer<RecipeJsonProvider> exporter, RecipeCategory reverseCategory, ItemConvertible baseItem, RecipeCategory compactingCategory, ItemConvertible compactItem, String compactingId, @Nullable String compactingGroup, String reverseId, @Nullable String reverseGroup) {
         ShapelessRecipeJsonBuilder.create(reverseCategory, baseItem, 4).input(compactItem).group(reverseGroup).criterion(RecipeProvider.hasItem(compactItem), RecipeProvider.conditionsFromItem(compactItem)).offerTo(exporter, new Identifier(reverseId + "_from_" + compactingId));
         ShapedRecipeJsonBuilder.create(compactingCategory, compactItem)
-                .input(Character.valueOf('#'), baseItem)
+                .input('#', baseItem)
                 .pattern("##")
                 .pattern("##")
                 .group(compactingGroup)
@@ -301,9 +301,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     public static void offerCRTRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible frameItem) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 1)
-                .input(Character.valueOf('F'), frameItem)
-                .input(Character.valueOf('B'), ModItems.PCB_BOARD)
-                .input(Character.valueOf('S'), ModItems.SCREEN)
+                .input('F', frameItem)
+                .input('B', ModItems.PCB_BOARD)
+                .input('S', ModItems.SCREEN)
                 .pattern("FFF")
                 .pattern("FSF")
                 .pattern("FBF")
@@ -316,9 +316,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     public static void offerKeyboardRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible frameItem) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 1)
-                .input(Character.valueOf('F'), frameItem)
-                .input(Character.valueOf('D'), ModItems.DIODE)
-                .input(Character.valueOf('B'), ModItems.PCB_BOARD)
+                .input('F', frameItem)
+                .input('D', ModItems.DIODE)
+                .input('B', ModItems.PCB_BOARD)
                 .pattern("DDD")
                 .pattern("FBF")
                 .criterion(FabricRecipeProvider.hasItem(frameItem), FabricRecipeProvider.conditionsFromItem(frameItem))
@@ -341,9 +341,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     public static void offerPCRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible frameItem) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, output, 1)
-                .input(Character.valueOf('F'), frameItem)
-                .input(Character.valueOf('B'), ModItems.PCB_BOARD)
-                .input(Character.valueOf('I'), Items.IRON_INGOT)
+                .input('F', frameItem)
+                .input('B', ModItems.PCB_BOARD)
+                .input('I', Items.IRON_INGOT)
                 .pattern("FFF")
                 .pattern("FBF")
                 .pattern("FIF")
@@ -488,8 +488,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ImmutableList.of(ModBlocks.ABSTRACT_TONE, ModBlocks.FRAMED_TONE, ModBlocks.FRAMED_TONE_BRICKS), ImmutableList.of(ModBlocks.ABSTRACT_TONE, ModBlocks.FRAMED_TONE, ModBlocks.FRAMED_TONE_BRICKS));
         offerStonecuttingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ImmutableList.of(ModBlocks.TONE, ModBlocks.POLISHED_TONE, ModBlocks.TONE_BRICKS), ImmutableList.of(ModBlocks.TONE, ModBlocks.POLISHED_TONE, ModBlocks.TONE_BRICKS));
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ZTONE, 5)
-                .input(Character.valueOf('X'), ModBlocks.TONE)
-                .input(Character.valueOf('#'), ModItems.LUESIUM_CHUNK)
+                .input('X', ModBlocks.TONE)
+                .input('#', ModItems.LUESIUM_CHUNK)
                 .pattern("X#X")
                 .pattern("#X#")
                 .pattern("X#X")
@@ -532,15 +532,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         // Tires
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.EMPTY_TIRE, 1)
-                .input(Character.valueOf('#'), ModItems.AMALGAM)
+                .input('#', ModItems.AMALGAM)
                 .pattern("###")
                 .pattern("# #")
                 .pattern("###")
                 .criterion(FabricRecipeProvider.hasItem(ModItems.AMALGAM), FabricRecipeProvider.conditionsFromItem(ModItems.AMALGAM))
                 .offerTo(exporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIRE, 1)
-                .input(Character.valueOf('#'), ModItems.AMALGAM)
-                .input(Character.valueOf('O'), Items.IRON_INGOT)
+                .input('#', ModItems.AMALGAM)
+                .input('O', Items.IRON_INGOT)
                 .pattern("###")
                 .pattern("#O#")
                 .pattern("###")
@@ -549,8 +549,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
         offerShapelessRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIRE, ModBlocks.EMPTY_TIRE, Items.IRON_INGOT, 1);
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TONE, 4)
-                .input(Character.valueOf('#'), Items.TUFF)
-                .input(Character.valueOf('O'), ModItems.OIL)
+                .input('#', Items.TUFF)
+                .input('O', ModItems.OIL)
                 .pattern("###")
                 .pattern("#O#")
                 .pattern("###")
@@ -558,15 +558,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.OIL), FabricRecipeProvider.conditionsFromItem(ModItems.OIL))
                 .offerTo(exporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRATE, 1)
-                .input(Character.valueOf('#'), ModItems.SLAG)
+                .input('#', ModItems.SLAG)
                 .pattern("###")
                 .pattern("# #")
                 .pattern("###")
                 .criterion(FabricRecipeProvider.hasItem(ModItems.SLAG), FabricRecipeProvider.conditionsFromItem(ModItems.SLAG))
                 .offerTo(exporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.ANTENNA, 1)
-                .input(Character.valueOf('C'), ModItems.CONDUCTIUM)
-                .input(Character.valueOf('A'), ModItems.ANTIBRASS_INGOT)
+                .input('C', ModItems.CONDUCTIUM)
+                .input('A', ModItems.ANTIBRASS_INGOT)
                 .pattern("AAA")
                 .pattern(" C ")
                 .pattern(" C ")
@@ -574,10 +574,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.ANTIBRASS_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.ANTIBRASS_INGOT))
                 .offerTo(exporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.RADIO, 1)
-                .input(Character.valueOf('P'), ModItems.POLYMER)
-                .input(Character.valueOf('C'), ModItems.CONDUCTIUM)
-                .input(Character.valueOf('B'), ModItems.PCB_BOARD)
-                .input(Character.valueOf('L'), ModItems.LUESIUM_INGOT)
+                .input('P', ModItems.POLYMER)
+                .input('C', ModItems.CONDUCTIUM)
+                .input('B', ModItems.PCB_BOARD)
+                .input('L', ModItems.LUESIUM_INGOT)
                 .pattern("PPP")
                 .pattern("CBC")
                 .pattern("L L")
@@ -587,9 +587,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.LUESIUM_INGOT), FabricRecipeProvider.conditionsFromItem(ModItems.LUESIUM_INGOT))
                 .offerTo(exporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.CROWS_BEAK, 1)
-                .input(Character.valueOf('A'), ModItems.AZURE_RIVET)
-                .input(Character.valueOf('N'), Items.NETHERITE_SCRAP)
-                .input(Character.valueOf('L'), ModItems.LUESIUM_INGOT)
+                .input('A', ModItems.AZURE_RIVET)
+                .input('N', Items.NETHERITE_SCRAP)
+                .input('L', ModItems.LUESIUM_INGOT)
                 .pattern("LNL")
                 .pattern(" AL")
                 .pattern(" A ")

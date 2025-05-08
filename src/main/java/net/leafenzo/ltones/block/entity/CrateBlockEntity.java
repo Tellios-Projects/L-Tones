@@ -124,7 +124,7 @@ public class CrateBlockEntity extends LootableContainerBlockEntity {
 
     void setOpen(BlockState state, boolean open) {
         assert this.world != null;
-        this.world.setBlockState(this.getPos(), (BlockState) state.with(BarrelBlock.OPEN, open), Block.NOTIFY_ALL);
+        this.world.setBlockState(this.getPos(), state.with(BarrelBlock.OPEN, open), Block.NOTIFY_ALL);
     }
 
     void playSound(BlockState state, SoundEvent soundEvent) {

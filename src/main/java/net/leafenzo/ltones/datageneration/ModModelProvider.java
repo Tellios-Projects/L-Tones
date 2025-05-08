@@ -54,7 +54,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     private void registerUpDefaultOrientable(BlockStateModelGenerator blockStateModelGenerator, Block block) {
         Identifier identifier = TexturedModel.CUBE_ALL.upload(block, blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(this.createUpDefaultRotationStates()));
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(createUpDefaultRotationStates()));
         //blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(BlockStateModelGenerator.createNorthDefaultRotationStates(), identifier));
     }
     private static BlockStateVariantMap createUpDefaultRotationStates() {
@@ -125,7 +125,7 @@ public class ModModelProvider extends FabricModelProvider {
                 .put(TextureKey.UP, Super.asResource(topTexturePath + "_on"))
                 .put(TextureKey.DOWN, Super.asResource(topTexturePath + "_on"));
 
-        ;
+
         Model model = Models.CUBE;
         Identifier identifier = model.upload(block, map, blockStateModelGenerator.modelCollector);
         Identifier identifier2 = model.upload(block, "_on", onMap, blockStateModelGenerator.modelCollector);
@@ -153,7 +153,7 @@ public class ModModelProvider extends FabricModelProvider {
                 .put(TextureKey.UP, Super.asResource(topTexturePath))
                 .put(TextureKey.DOWN, Super.asResource(topTexturePath));
 
-        ;
+
         Model model = Models.CUBE;
         Identifier identifier = model.upload(block, map, blockStateModelGenerator.modelCollector);
         Identifier identifier2 = model.upload(block, "_on", onMap, blockStateModelGenerator.modelCollector);
@@ -207,12 +207,12 @@ public class ModModelProvider extends FabricModelProvider {
             if (!block.getDefaultState().contains(booleanProperty)) continue;
 
             if(Objects.equals(booleanProperty.getName(), "up") || Objects.equals(booleanProperty.getName(), "down")) {
-                multipartBlockStateSupplier.with((When)When.create().set(booleanProperty, true), function.apply(identifier));
-                multipartBlockStateSupplier.with((When)propertyCondition2, function.apply(identifier));
+                multipartBlockStateSupplier.with(When.create().set(booleanProperty, true), function.apply(identifier));
+                multipartBlockStateSupplier.with(propertyCondition2, function.apply(identifier));
             }
             else {
-                multipartBlockStateSupplier.with((When)When.create().set(booleanProperty, true), function.apply(identifier2));
-                multipartBlockStateSupplier.with((When)propertyCondition2, function.apply(identifier2));
+                multipartBlockStateSupplier.with(When.create().set(booleanProperty, true), function.apply(identifier2));
+                multipartBlockStateSupplier.with(propertyCondition2, function.apply(identifier2));
             }
         }
         blockStateModelGenerator.blockStateCollector.accept(multipartBlockStateSupplier);
@@ -296,7 +296,7 @@ public class ModModelProvider extends FabricModelProvider {
     }
     private void registerCrate(BlockStateModelGenerator blockStateModelGenerator) {
         Identifier identifier = TextureMap.getSubId(ModBlocks.CRATE, "_top_open");
-        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.CRATE).coordinate(blockStateModelGenerator.createUpDefaultFacingVariantMap()).coordinate(BlockStateVariantMap.create(Properties.OPEN).register((Boolean)false, BlockStateVariant.create().put(VariantSettings.MODEL, TexturedModel.CUBE_TOP.upload(ModBlocks.CRATE, blockStateModelGenerator.modelCollector))).register((Boolean)true, BlockStateVariant.create().put(VariantSettings.MODEL, TexturedModel.CUBE_TOP.get(ModBlocks.CRATE).textures(textureMap -> textureMap.put(TextureKey.TOP, identifier)).upload(ModBlocks.CRATE, "_open", blockStateModelGenerator.modelCollector)))));
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.CRATE).coordinate(blockStateModelGenerator.createUpDefaultFacingVariantMap()).coordinate(BlockStateVariantMap.create(Properties.OPEN).register((Boolean)false, BlockStateVariant.create().put(VariantSettings.MODEL, TexturedModel.CUBE_TOP.upload(ModBlocks.CRATE, blockStateModelGenerator.modelCollector))).register(true, BlockStateVariant.create().put(VariantSettings.MODEL, TexturedModel.CUBE_TOP.get(ModBlocks.CRATE).textures(textureMap -> textureMap.put(TextureKey.TOP, identifier)).upload(ModBlocks.CRATE, "_open", blockStateModelGenerator.modelCollector)))));
     }
     private void registerKeyboardBlock(BlockStateModelGenerator blockStateModelGenerator, Block block) {
         Identifier identifier = blockStateModelGenerator.createSubModel(block, "", ModModels.KEYBOARD, TextureMap::all);
@@ -482,7 +482,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_PAD);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_NEXUS);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_LINENODE);
-        blockStateModelGenerator.registerAxisRotated(ModBlocks.MINN_LINE, TexturedModel.CUBE_ALL); ;
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.MINN_LINE, TexturedModel.CUBE_ALL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_CIRCLE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_CAGE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.MINN_CUBES);
@@ -931,7 +931,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DECK_OF_CARDS, Models.GENERATED);
     }
 
-    public ArrayList<Identifier> usedBlockItems = new ArrayList<Identifier>();
+    public ArrayList<Identifier> usedBlockItems = new ArrayList<>();
     public void registerParentedBlockItemModel(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier identifier) {
         if(!usedBlockItems.contains(identifier)) {
             blockStateModelGenerator.registerParentedItemModel(block, identifier);

@@ -36,16 +36,16 @@ public class ModBlocks {
 
     //<editor-fold desc ="Hashmaps & BlockSets">
     // The reason why it's <Block, Block> instead of <Block, StairBlock> is because sometimes there will be block classes that have all the behavior of stair blocks without actually being children of them. This assumption is made for the hashmaps here as well.
-    public static final ArrayList<Block> RENDER_LAYER_CUTOUT = new ArrayList<Block>();
-    public static final ArrayList<Block> RENDER_LAYER_CUTOUT_MIPPED = new ArrayList<Block>();
-    public static final ArrayList<Block> RENDER_LAYER_TRANSLUCENT = new ArrayList<Block>();
-    public static final ArrayList<Block> HAS_FOLIAGE_COLOR_PROVIDER = new ArrayList<Block>();
-    public static final ArrayList<Block> HAS_GRASS_COLOR_PROVIDER = new ArrayList<Block>();
-    public static final ArrayList<Block> DECAL_BLOCKS = new ArrayList<Block>();
-    public static final HashMap<Block, Block> STAIRS_FROM_BLOCK = new HashMap<Block, Block>();
-    public static final HashMap<Block, Block> SLAB_FROM_BLOCK = new HashMap<Block, Block>();
-    public static final ArrayList<Block> DOORS = new ArrayList<Block>();
-    public static final ArrayList<Block> TRAPDOORS = new ArrayList<Block>();
+    public static final ArrayList<Block> RENDER_LAYER_CUTOUT = new ArrayList<>();
+    public static final ArrayList<Block> RENDER_LAYER_CUTOUT_MIPPED = new ArrayList<>();
+    public static final ArrayList<Block> RENDER_LAYER_TRANSLUCENT = new ArrayList<>();
+    public static final ArrayList<Block> HAS_FOLIAGE_COLOR_PROVIDER = new ArrayList<>();
+    public static final ArrayList<Block> HAS_GRASS_COLOR_PROVIDER = new ArrayList<>();
+    public static final ArrayList<Block> DECAL_BLOCKS = new ArrayList<>();
+    public static final HashMap<Block, Block> STAIRS_FROM_BLOCK = new HashMap<>();
+    public static final HashMap<Block, Block> SLAB_FROM_BLOCK = new HashMap<>();
+    public static final ArrayList<Block> DOORS = new ArrayList<>();
+    public static final ArrayList<Block> TRAPDOORS = new ArrayList<>();
 
     public static final ArrayList<Block> CRT_BLOCKS = new ArrayList<>();
     public static final ArrayList<Block> PC_BLOCKS = new ArrayList<>();

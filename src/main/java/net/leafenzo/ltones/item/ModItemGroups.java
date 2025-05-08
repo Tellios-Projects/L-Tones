@@ -21,7 +21,7 @@ public class ModItemGroups {
     }
 
     public static ArrayList<Block> includeVariants(ArrayList<Block> inputs) {
-        ArrayList<Block> blocks = new ArrayList<Block>();
+        ArrayList<Block> blocks = new ArrayList<>();
         for(Block block : inputs) {
             blocks.add(block);
             if (ModBlocks.STAIRS_FROM_BLOCK.get(block) != null) { blocks.add(ModBlocks.STAIRS_FROM_BLOCK.get(block)); }
