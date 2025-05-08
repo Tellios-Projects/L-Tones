@@ -212,6 +212,9 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         for(Block block : ModBlocks.ROST_BLOCKS_RUST) {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
         }
+        for(Block block : ModBlocks.SOUNDSCAPE_BLOCKS) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
+        }
         for(Block block : ModBlocks.DOORS) {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
         }
@@ -220,9 +223,6 @@ public class ModBlockTagGenerator extends FabricTagProvider<Block> {
         }
         for(Block block : ModBlocks.DECAL_BLOCKS) {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);
-        }
-        for(Block block : ModBlocks.ROST_BLOCKS_RUST) {
-            getOrCreateTagBuilder(ModBlocks.ROST_BLOCKSET.blockTag).add(block);
         }
         for(Block block : ModBlocks.CRT_BLOCKS) {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(block);

@@ -5,6 +5,7 @@ import net.leafenzo.ltones.block.entity.ModBlockEntityType;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.*;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;

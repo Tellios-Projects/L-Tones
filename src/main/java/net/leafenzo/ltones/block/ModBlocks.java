@@ -118,7 +118,7 @@ public class ModBlocks {
     public static final BlockSet ROST_BLOCKSET = registerBlockSet(ROST_BLOCKS, "rost_blocks");
     public static final BlockSet ROST_BLOCKSET_RUST = registerBlockSet(ROST_BLOCKS_RUST, "rost_blocks_rust");
     public static final BlockSet BITT_BLOCKSET = registerBlockSet(BITT_BLOCKS, "bitt_blocks");
-    public static final BlockSet SOUNDSCAPE_BLOCKSET = registerBlockSet(SOUNDSCAPE_BLOCKS, "bitt_blocks");
+    public static final BlockSet SOUNDSCAPE_BLOCKSET = registerBlockSet(SOUNDSCAPE_BLOCKS, "soundscape_blocks");
     public static final BlockSet PLEX_BLOCKSET = registerBlockSet(PLEX_BLOCKS, "plex_blocks");
     //</editor-fold>
     //<editor-fold desc ="Blocks - AGON">
