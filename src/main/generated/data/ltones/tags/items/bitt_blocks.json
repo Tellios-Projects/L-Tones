@@ -16,6 +16,13 @@
     "ltones:indigo_bitt",
     "ltones:purple_bitt",
     "ltones:magenta_bitt",
-    "ltones:fuchsia_bitt"
+    "ltones:fuchsia_bitt",
+    "ltones:soundscape_lair",
+    "ltones:soundscape_lave",
+    "ltones:soundscape_korp",
+    "ltones:soundscape_tank",
+    "ltones:soundscape_exri",
+    "ltones:soundscape_sync",
+    "ltones:soundscape_sol"
   ]
 }

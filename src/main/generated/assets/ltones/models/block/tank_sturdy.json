@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ltones:block/tank_sturdy_top",
+    "east": "ltones:block/tank_sturdy",
+    "north": "ltones:block/tank_sturdy",
+    "particle": "ltones:block/tank_sturdy",
+    "south": "ltones:block/tank_sturdy",
+    "up": "ltones:block/tank_sturdy_top",
+    "west": "ltones:block/tank_sturdy"
+  }
+}

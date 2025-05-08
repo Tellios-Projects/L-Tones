@@ -16,7 +16,6 @@
     "ltones:sync_force",
     "ltones:sync_data",
     "ltones:sync_contain",
-    "ltones:sync_caution",
-    "ltones:sync_soundscape"
+    "ltones:sync_caution"
   ]
 }

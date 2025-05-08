@@ -1189,6 +1189,56 @@
 			"ltones:block/decal_scarlet_membrane/step4"
 		]
 	},
+	"block.decal_felt.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/decal_felt/break1",
+			"ltones:block/decal_felt/break2",
+			"ltones:block/decal_felt/break3",
+			"ltones:block/decal_felt/break4"
+		]
+	},
+	"block.decal_felt.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/decal_felt/step1",
+			"ltones:block/decal_felt/step2",
+			"ltones:block/decal_felt/step3",
+			"ltones:block/decal_felt/step4",
+			"ltones:block/decal_felt/step5",
+			"ltones:block/decal_felt/step6"
+		]
+	},
+	"block.decal_felt.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/decal_felt/break1",
+			"ltones:block/decal_felt/break2",
+			"ltones:block/decal_felt/break3",
+			"ltones:block/decal_felt/break4"
+		]
+	},
+	"block.decal_felt.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/decal_felt/step1",
+			"ltones:block/decal_felt/step2",
+			"ltones:block/decal_felt/step3",
+			"ltones:block/decal_felt/step4",
+			"ltones:block/decal_felt/step5",
+			"ltones:block/decal_felt/step6"
+		]
+	},
+	"block.decal_felt.fall": {
+		"sounds": [
+			"ltones:block/decal_felt/step1",
+			"ltones:block/decal_felt/step2",
+			"ltones:block/decal_felt/step3",
+			"ltones:block/decal_felt/step4",
+			"ltones:block/decal_felt/step5",
+			"ltones:block/decal_felt/step6"
+		]
+	},
 
 	"block.decal_sugaring_paste.break": {
 		"subtitle": "subtitles.block.generic.break",

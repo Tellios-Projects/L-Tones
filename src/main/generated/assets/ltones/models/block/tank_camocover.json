@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ltones:block/tank_camocover_top",
+    "east": "ltones:block/tank_camocover",
+    "north": "ltones:block/tank_camocover",
+    "particle": "ltones:block/tank_camocover",
+    "south": "ltones:block/tank_camocover",
+    "up": "ltones:block/tank_camocover_top",
+    "west": "ltones:block/tank_camocover"
+  }
+}

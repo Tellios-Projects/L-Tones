@@ -16,7 +16,7 @@ public class PCBlockEntity extends BlockEntity {
     public static <T extends BlockEntity> void tick(World world, BlockPos pos, BlockState state, T t) {
         long l = world.getTime();
         if (l % 40 == 0L && state.get(PCBlock.POWERED)) {
-            world.playSound(null, pos, ModSoundEvents.BLOCK_PC_AMBIENT, SoundCategory.BLOCKS, 1.0f, 1.0f);
+            world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_PC_AMBIENT, SoundCategory.BLOCKS, 1.0f, 1.0f, false);
         }
     }
 

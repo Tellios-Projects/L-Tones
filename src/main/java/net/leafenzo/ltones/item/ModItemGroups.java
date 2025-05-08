@@ -93,6 +93,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ROST_VELLUM_RUST);
                         entries.add(ModBlocks.ROST_WALLPAPER);
                         entries.add(ModBlocks.ROST_WALLPAPER_RUST);
+                        for(Block block : includeVariants(ModBlocks.PLEX_BLOCKS)) { entries.add(block); }
+                        for(Block block : includeVariants(ModBlocks.SOUNDSCAPE_BLOCKS)) { entries.add(block); }
                         entries.add(ModBlocks.DOOR_STEAK);
                         entries.add(ModBlocks.TRAPDOOR_STEAK);
                         entries.add(ModBlocks.DOOR_NEON);
@@ -199,7 +201,7 @@ public class ModItemGroups {
                         entries.add(ModItems.MOULDING);
                         entries.add(ModItems.PLAQUE);
                         entries.add(ModItems.JELLY);
-                        entries.add(ModItems.SUGARING_PASTE);
+                        entries.add(ModItems.FELT);
                         entries.add(ModItems.CORPOREAL_VAPOR);
                         entries.add(ModItems.FLAKES);
                         entries.add(ModItems.NETWORKING);
@@ -211,6 +213,7 @@ public class ModItemGroups {
                         entries.add(ModItems.MEDICINE_PILLS);
                         entries.add(ModItems.BOXED_MEDICINE);
                         entries.add(ModItems.PACKAGED_MEAL);
+                        entries.add(ModItems.SUGARING_PASTE);
                         entries.add(ModItems.DECK_OF_CARDS);
                         entries.add(ModBlocks.ZKUL);
                     }).build());

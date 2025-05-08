@@ -85,6 +85,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_DECAL_DIODE_HIT = registerSoundEvent("block.decal_diode.hit");
     public static final SoundEvent BLOCK_DECAL_DIODE_FALL = registerSoundEvent("block.decal_diode.fall");
 
+    public static final SoundEvent BLOCK_DECAL_FELT_BREAK = registerSoundEvent("block.decal_felt.break");
+    public static final SoundEvent BLOCK_DECAL_FELT_STEP = registerSoundEvent("block.decal_felt.step");
+    public static final SoundEvent BLOCK_DECAL_FELT_PLACE = registerSoundEvent("block.decal_felt.place");
+    public static final SoundEvent BLOCK_DECAL_FELT_HIT = registerSoundEvent("block.decal_felt.hit");
+    public static final SoundEvent BLOCK_DECAL_FELT_FALL = registerSoundEvent("block.decal_felt.fall");
+
     public static final SoundEvent BLOCK_DECAL_FIBROUS_POWDER_BREAK = registerSoundEvent("block.decal_fibrous_powder.break");
     public static final SoundEvent BLOCK_DECAL_FIBROUS_POWDER_STEP = registerSoundEvent("block.decal_fibrous_powder.step");
     public static final SoundEvent BLOCK_DECAL_FIBROUS_POWDER_PLACE = registerSoundEvent("block.decal_fibrous_powder.place");

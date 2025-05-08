@@ -63,6 +63,8 @@ def dependencies(DependencyHandler deps) {
 
 def devEnv(DependencyHandler deps) {
 	deps.modRuntimeOnly("maven.modrinth:emi:${emi_version}")
+	//deps.modRuntimeOnly("maven.modrinth:appleskin:${appleskin_version}")
+	//deps.modRuntimeOnly("maven.modrinth:modmenu:${modmenu_version}")
 	//deps.modRuntimeOnly("maven.modrinth:sodium:${sodium_version}")
 }
 

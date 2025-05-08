@@ -65,7 +65,9 @@ public class ZkulBlock extends BlockWithEntity {
         }
         super.onBreak(world, pos, state, player);
     }
+
     private boolean hitCooldownActive;
+
     @Override
     public void onBlockBreakStart(BlockState state, World world, BlockPos pos, PlayerEntity player) {
         if (!player.getStackInHand(Hand.MAIN_HAND).isOf(ModItems.CROWS_BEAK)) {
@@ -98,7 +100,7 @@ public class ZkulBlock extends BlockWithEntity {
             world.addParticle(ModParticleTypes.ZKUL, ((world.getRandom().nextFloat() - 0.5f) * 8) + explodedPos.getX(), ((world.getRandom().nextFloat() - 0.5f) * 8) + explodedPos.getY(), ((world.getRandom().nextFloat() - 0.5f) * 8) + explodedPos.getZ(), 0, 0, 0);
         }
         world.removeBlock(explodedPos, false);
-        ExplosionBehavior explosionBehavior = new ExplosionBehavior(){
+        ExplosionBehavior explosionBehavior = new ExplosionBehavior() {
 
             @Override
             public Optional<Float> getBlastResistance(Explosion explosion, BlockView world, BlockPos pos, BlockState blockState, FluidState fluidState) {
@@ -111,7 +113,7 @@ public class ZkulBlock extends BlockWithEntity {
 
     @Nullable
     @Override
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state)  {
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return new ZkulBlockEntity(pos, state); // useful for future
     }
 

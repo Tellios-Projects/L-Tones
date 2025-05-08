@@ -25,7 +25,7 @@ public class LoopingSoundscapeBlockEntity extends BlockEntity {
     public static void tick(World world, BlockPos pos, BlockState state, LoopingSoundscapeBlockEntity blockEntity) {
         long l = world.getTime();
         if (l % blockEntity.soundDelay == 0L && state.get(LitBlock.LIT)) {
-            world.playSound(null, pos, blockEntity.loopingSound, SoundCategory.BLOCKS, 0.25f, 1.0f);
+            world.playSoundAtBlockCenter(pos, blockEntity.loopingSound, SoundCategory.BLOCKS, 0.25f, 1.0f, false);
         }
     }
 }

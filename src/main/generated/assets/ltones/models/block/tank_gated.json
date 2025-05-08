@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ltones:block/tank_gated_top",
+    "east": "ltones:block/tank_gated",
+    "north": "ltones:block/tank_gated",
+    "particle": "ltones:block/tank_gated",
+    "south": "ltones:block/tank_gated",
+    "up": "ltones:block/tank_gated_top",
+    "west": "ltones:block/tank_gated"
+  }
+}

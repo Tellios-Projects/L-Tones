@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ltones:block/lair",
+    "east": "ltones:block/soundscape_lair",
+    "north": "ltones:block/soundscape_lair",
+    "particle": "ltones:block/soundscape_lair",
+    "south": "ltones:block/soundscape_lair",
+    "up": "ltones:block/lair",
+    "west": "ltones:block/soundscape_lair"
+  }
+}

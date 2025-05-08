@@ -19,7 +19,7 @@ public class ModBlockEntityType {
     public static final BlockEntityType<LoopingSoundscapeBlockEntity> LOOPING_SOUNDSCAPE = register(
             "looping_soundscape",
             LoopingSoundscapeBlockEntity::new,
-            ModBlocks.LAIR_SOUNDSCAPE, ModBlocks.EXRI_SOUNDSCAPE);
+            ModBlocks.SOUNDSCAPE_LAIR, ModBlocks.SOUNDSCAPE_EXRI);
 
     public static final BlockEntityType<ZkulBlockEntity> ZKUL = register(
             "zkul",
