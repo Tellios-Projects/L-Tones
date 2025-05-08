@@ -17,6 +17,8 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
@@ -397,6 +399,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.NETWORKING, ModTags.Items.MUSHROOMS, ModItems.ARGON, 4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.JELLY, Items.SLIME_BALL, ModItems.OIL, 4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.JELLY, Items.HONEY_BOTTLE, ModItems.OIL, 4);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.FELT, Items.STRING, ModItems.POLYMER, 1);
+        offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.FELT, ItemTags.WOOL, ModItems.POLYMER, 4);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.PCB_BOARD, ModItems.THINKING_METAL, ModItems.DIODE, ModItems.DIODE, ModItems.DIODE, 2);
 
         // Blockset Base Recipes
@@ -429,6 +433,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SOL, ModBlocks.ZTONE, ModItems.G2V, 4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROST, ModBlocks.ZTONE, ModItems.REBITH, 4);
         offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BITT, ModBlocks.ZTONE, ModItems.DIODE, 4);
+        offer2x2CrossRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PLEX, ModBlocks.ZTONE, ModItems.FELT, 4);
 
         // Blockset Stonecutting Recipes
         offerStonecuttingRecipesForBlockSet(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AGON_BLOCKSET);

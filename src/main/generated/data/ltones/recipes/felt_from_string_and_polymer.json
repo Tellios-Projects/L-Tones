@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesfelt",
+  "ingredients": [
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "ltones:polymer"
+    }
+  ],
+  "result": {
+    "item": "ltones:felt"
+  }
+}

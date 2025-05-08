@@ -45,6 +45,7 @@ public class ModBlockSoundGroup {
     public static final BlockSoundGroup APPLIANCE = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_APPLIANCE_BREAK, ModSoundEvents.BLOCK_APPLIANCE_STEP, ModSoundEvents.BLOCK_APPLIANCE_PLACE, ModSoundEvents.BLOCK_APPLIANCE_HIT, ModSoundEvents.BLOCK_APPLIANCE_FALL);
     public static final BlockSoundGroup CRT = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_CRT_BREAK, ModSoundEvents.BLOCK_CRT_STEP, ModSoundEvents.BLOCK_CRT_PLACE, ModSoundEvents.BLOCK_CRT_HIT, ModSoundEvents.BLOCK_CRT_FALL);
 
+    public static final BlockSoundGroup PLEX = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_PLEX_BREAK, ModSoundEvents.BLOCK_PLEX_STEP, ModSoundEvents.BLOCK_PLEX_PLACE, ModSoundEvents.BLOCK_PLEX_HIT, ModSoundEvents.BLOCK_PLEX_FALL);
     public static final BlockSoundGroup AGON = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_AGON_BREAK, ModSoundEvents.BLOCK_AGON_STEP, ModSoundEvents.BLOCK_AGON_PLACE, ModSoundEvents.BLOCK_AGON_HIT, ModSoundEvents.BLOCK_AGON_FALL);
     public static final BlockSoundGroup JELT = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_JELT_BREAK, ModSoundEvents.BLOCK_JELT_STEP, ModSoundEvents.BLOCK_JELT_PLACE, ModSoundEvents.BLOCK_JELT_HIT, ModSoundEvents.BLOCK_JELT_FALL);
     public static final BlockSoundGroup AZUR = new BlockSoundGroup(1.0f, 1.0f, ModSoundEvents.BLOCK_AZUR_BREAK, ModSoundEvents.BLOCK_AZUR_STEP, ModSoundEvents.BLOCK_AZUR_PLACE, ModSoundEvents.BLOCK_AZUR_HIT, ModSoundEvents.BLOCK_AZUR_FALL);

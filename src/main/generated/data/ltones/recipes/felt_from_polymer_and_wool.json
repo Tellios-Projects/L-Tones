@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ltonesfelt",
+  "ingredients": [
+    {
+      "tag": "minecraft:wool"
+    },
+    {
+      "item": "ltones:polymer"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "ltones:felt"
+  }
+}

@@ -3217,6 +3217,51 @@
 		]
 	},
 
+	"block.plex.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/plex/break1",
+			"ltones:block/plex/break2",
+			"ltones:block/plex/break3",
+			"ltones:block/plex/break4"
+		]
+	},
+	"block.plex.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/plex/step1",
+			"ltones:block/plex/step2",
+			"ltones:block/plex/step3",
+			"ltones:block/plex/step4"
+		]
+	},
+	"block.plex.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/plex/break1",
+			"ltones:block/plex/break2",
+			"ltones:block/plex/break3",
+			"ltones:block/plex/break4"
+		]
+	},
+	"block.plex.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/plex/step1",
+			"ltones:block/plex/step2",
+			"ltones:block/plex/step3",
+			"ltones:block/plex/step4"
+		]
+	},
+	"block.plex.fall": {
+		"sounds": [
+			"ltones:block/plex/step1",
+			"ltones:block/plex/step2",
+			"ltones:block/plex/step3",
+			"ltones:block/plex/step4"
+		]
+	},
+
 	"block.host.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [

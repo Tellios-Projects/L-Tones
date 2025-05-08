@@ -552,6 +552,12 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_SYNC_HIT = registerSoundEvent("block.sync.hit");
     public static final SoundEvent BLOCK_SYNC_FALL = registerSoundEvent("block.sync.fall");
 
+    public static final SoundEvent BLOCK_PLEX_BREAK = registerSoundEvent("block.plex.break");
+    public static final SoundEvent BLOCK_PLEX_STEP = registerSoundEvent("block.plex.step");
+    public static final SoundEvent BLOCK_PLEX_PLACE = registerSoundEvent("block.plex.place");
+    public static final SoundEvent BLOCK_PLEX_HIT = registerSoundEvent("block.plex.hit");
+    public static final SoundEvent BLOCK_PLEX_FALL = registerSoundEvent("block.plex.fall");
+
     public static final SoundEvent BLOCK_LUESIUM_DOOR_OPEN = registerSoundEvent("block.luesium_door.open");
     public static final SoundEvent BLOCK_LUESIUM_DOOR_CLOSE = registerSoundEvent("block.luesium_door.close");
     public static final SoundEvent BLOCK_LUESIUM_TRAPDOOR_OPEN = registerSoundEvent("block.luesium_trapdoor.open");
