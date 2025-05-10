@@ -58,7 +58,7 @@ public class ModPlacedFeatures {
     }
 
     public static void registerModifications() {
-        BiomeModifications.create(new Identifier(Super.MOD_ID, "overworld_additions"))
+        BiomeModifications.create(Identifier.of(Super.MOD_ID, "overworld_additions"))
                 .add(ModificationPhase.ADDITIONS,
                 BiomeSelectors.foundInOverworld(),
                 context -> { context.getGenerationSettings().addFeature(GenerationStep.Feature.UNDERGROUND_ORES, ORE_LUESIUM_PLACED); }
@@ -76,7 +76,7 @@ public class ModPlacedFeatures {
                         context -> { context.getGenerationSettings().addFeature(GenerationStep.Feature.UNDERGROUND_ORES, ORE_TONE_PLACED); }
                 );
 
-        BiomeModifications.create(new Identifier(Super.MOD_ID, "end_additions"))
+        BiomeModifications.create(Identifier.of(Super.MOD_ID, "end_additions"))
                 .add(ModificationPhase.ADDITIONS,
                 BiomeSelectors.foundInTheEnd(),
                 context -> { context.getGenerationSettings().addFeature(GenerationStep.Feature.UNDERGROUND_ORES, ORE_LUESIUM_END_PLACED); }
@@ -84,7 +84,7 @@ public class ModPlacedFeatures {
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(Super.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(Super.MOD_ID, name));
     }
 
     private static void registerKey(Registerable<PlacedFeature> context, RegistryKey <PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> configuration, List<PlacementModifier> modifiers) {

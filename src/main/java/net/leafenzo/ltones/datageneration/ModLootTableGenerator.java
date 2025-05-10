@@ -9,8 +9,10 @@ import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.MultifaceGrowthBlock;
 import net.minecraft.data.server.loottable.vanilla.VanillaBlockLootTableGenerator;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
@@ -23,10 +25,13 @@ import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 
 import java.util.ArrayList;
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
 public class ModLootTableGenerator extends FabricBlockLootTableProvider {
@@ -45,12 +50,13 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         usedBlocks.add(block);
     }
     public void addDrop(Block block, LootTable.Builder lootTable) {
-        this.lootTables.put(block.getLootTableId(), lootTable);
+        this.lootTables.put(block.getLootTableKey(), lootTable);
         usedBlocks.add(block);
     }
 
-    public ModLootTableGenerator(FabricDataOutput dataOutput) {
-        super(dataOutput);
+    public ModLootTableGenerator(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> future) {
+        super(dataOutput, future);
+
     }
 
     public LootTable.Builder decalDrops(Block drop) { // similar to BlockLootTableGenerator.multifaceGrowthDrops
@@ -64,22 +70,22 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-
-        this.addDrop(ModBlocks.LUESIUM_ORE, (Block block) -> this.oreDrops((Block)block, ModItems.RAW_LUESIUM));
-        this.addDrop(ModBlocks.DEEPSLATE_LUESIUM_ORE, (Block block) -> this.oreDrops((Block)block, ModItems.RAW_LUESIUM));
-        this.addDrop(ModBlocks.ENDSTONE_LUESIUM_ORE, (Block block) -> VanillaBlockLootTableGenerator.dropsWithSilkTouch(block, (LootPoolEntry.Builder)this.applyExplosionDecay((ItemConvertible)block, ((LeafEntry.Builder)ItemEntry.builder(ModItems.LUESIUM_CHUNK).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 6.0f)))).apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE)))));
-        this.addDrop(ModBlocks.CRATE, (Block block) -> this.nameableContainerDrops((Block)block));
+        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
+        this.addDrop(ModBlocks.LUESIUM_ORE, (Block block) -> this.oreDrops(block, ModItems.RAW_LUESIUM));
+        this.addDrop(ModBlocks.DEEPSLATE_LUESIUM_ORE, (Block block) -> this.oreDrops(block, ModItems.RAW_LUESIUM));
+        this.addDrop(ModBlocks.ENDSTONE_LUESIUM_ORE, (Block block) -> this.dropsWithSilkTouch(block, this.applyExplosionDecay(block, ItemEntry.builder(ModItems.LUESIUM_CHUNK).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 6.0F))).apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE))))));
+        this.addDrop(ModBlocks.CRATE, (Block block) -> this.nameableContainerDrops(block));
 
         for(Block block : ModBlocks.DECAL_BLOCKS) {
-            this.addDrop(block, (Block b) -> this.decalDrops((Block) b));
+            this.addDrop(block, (Block b) -> this.decalDrops(b));
         }
 
         for(Block block : ModBlocks.SLAB_FROM_BLOCK.values()) {
-            this.addDrop(block, (Block b) -> this.slabDrops((Block) b));
+            this.addDrop(block, (Block b) -> this.slabDrops(b));
         }
 
         for(Block block : ModBlocks.DOORS) {
-            this.addDrop(block, (Block b) -> this.doorDrops((Block) b));
+            this.addDrop(block, (Block b) -> this.doorDrops(b));
         }
 
         //Fallback

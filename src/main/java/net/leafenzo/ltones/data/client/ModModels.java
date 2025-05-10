@@ -19,6 +19,6 @@ public class ModModels {
 
 
     private static Model block(String path, TextureKey ... requiredTextureKeys) {
-        return new Model(Optional.of(new Identifier(path)), Optional.empty(), requiredTextureKeys);
+        return new Model(Optional.of(Identifier.of(path)), Optional.empty(), requiredTextureKeys);
     }
 }

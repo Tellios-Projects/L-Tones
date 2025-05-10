@@ -622,7 +622,7 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_ZKUL_FALL = registerSoundEvent("block.zkul.fall");
 
     private static SoundEvent registerSoundEvent(String name) {
-        Identifier id = new Identifier(Super.MOD_ID, name);
+        Identifier id = Identifier.of(Super.MOD_ID, name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
 }

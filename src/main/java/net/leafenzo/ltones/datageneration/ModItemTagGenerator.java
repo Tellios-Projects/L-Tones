@@ -67,7 +67,7 @@ public class ModItemTagGenerator extends FabricTagProvider<Item> {
         ;
 
         getOrCreateTagBuilder(ModTags.Items.FIBRE)
-                .add(Items.GRASS)
+                .add(Items.SHORT_GRASS)
                 .add(Items.TALL_GRASS)
                 .add(Items.FERN)
                 .add(Items.LARGE_FERN)

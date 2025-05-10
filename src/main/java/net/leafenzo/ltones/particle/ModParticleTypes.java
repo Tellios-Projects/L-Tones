@@ -13,7 +13,7 @@ public class ModParticleTypes {
     public static final DefaultParticleType ZKUL = registerParticle("zkul");
 
     private static DefaultParticleType registerParticle(String name) {
-        return Registry.register(Registries.PARTICLE_TYPE, new Identifier(Super.MOD_ID, name), FabricParticleTypes.simple());
+        return Registry.register(Registries.PARTICLE_TYPE, Identifier.of(Super.MOD_ID, name), FabricParticleTypes.simple());
     }
 
     public static void registerFactoriesForClient() {

@@ -339,8 +339,8 @@ public class ModModelProvider extends FabricModelProvider {
     }
 
     private void registerAntennaBlock(BlockStateModelGenerator blockStateModelGenerator) {
-        Identifier identifier = new Identifier("ltones", "block/antenna");
-        Identifier identifier2 = new Identifier("ltones", "block/antenna_lower");
+        Identifier identifier = Identifier.of("ltones", "block/antenna");
+        Identifier identifier2 = Identifier.of("ltones", "block/antenna_lower");
 //        blockStateModelGenerator.registerItemModel(block.asItem());
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.ANTENNA)
                 .coordinate(BlockStateModelGenerator.createBooleanModelMap(ModProperties.LOWER, identifier2, identifier))
@@ -348,8 +348,8 @@ public class ModModelProvider extends FabricModelProvider {
     }
 
     private void registerRadioBlock(BlockStateModelGenerator blockStateModelGenerator) {
-        Identifier identifier = new Identifier("ltones", "block/radio");
-        Identifier identifier2 = new Identifier("ltones", "block/radio_antenna");
+        Identifier identifier = Identifier.of("ltones", "block/radio");
+        Identifier identifier2 = Identifier.of("ltones", "block/radio_antenna");
 //        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.RADIO, BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).coordinate(BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates()));
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.RADIO)
                 .coordinate(BlockStateModelGenerator.createBooleanModelMap(ModProperties.HAS_ANTENNA, identifier2, identifier))

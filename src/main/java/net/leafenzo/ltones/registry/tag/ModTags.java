@@ -19,10 +19,10 @@ public class ModTags {
         public static final TagKey<Block> APPLIANCE_BLOCKS = getOrCreateTag("appliance_blocks");
 
         public static TagKey<Block> getOrCreateTag(String name) {
-            return TagKey.of(RegistryKeys.BLOCK, new Identifier(Super.MOD_ID, name));
+            return TagKey.of(RegistryKeys.BLOCK, Identifier.of(Super.MOD_ID, name));
         }
         private static TagKey<Block> getOrCreateCommonTag(String name) {
-            return TagKey.of(RegistryKeys.BLOCK, new Identifier("c", name));
+            return TagKey.of(RegistryKeys.BLOCK, Identifier.of("c", name));
         }
     }
     public static class Items {
@@ -62,10 +62,10 @@ public class ModTags {
 
 
         public static TagKey<Item> getOrCreateTag(String name) {
-            return TagKey.of(RegistryKeys.ITEM, new Identifier(Super.MOD_ID, name));
+            return TagKey.of(RegistryKeys.ITEM, Identifier.of(Super.MOD_ID, name));
         }
         public static TagKey<Item> getOrCreateCommonTag(String name) {
-            return TagKey.of(RegistryKeys.ITEM, new Identifier("c", name));
+            return TagKey.of(RegistryKeys.ITEM, Identifier.of("c", name));
         }
         public static TagKey<Item> getOrCreateDyeItemCommonTag(DyeItem item) {
             return getOrCreateCommonTag(item.getColor().getName()+"_dyes");

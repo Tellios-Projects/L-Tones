@@ -1,5 +1,6 @@
 package net.leafenzo.ltones.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -12,6 +13,13 @@ public class BasicHorizontalFacingBlock extends HorizontalFacingBlock {
 
     public BasicHorizontalFacingBlock(AbstractBlock.Settings settings) {
         super(settings);
+    }
+
+    public static final MapCodec<BasicHorizontalFacingBlock> CODEC = createCodec(BasicHorizontalFacingBlock::new);
+
+    @Override
+    protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
+        return CODEC;
     }
 
     @Override

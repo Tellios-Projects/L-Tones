@@ -1,6 +1,10 @@
 package net.leafenzo.ltones.block.custom;
 
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.leafenzo.ltones.block.entity.CRTBlockEntity;
+import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.item.ItemPlacementContext;
@@ -21,14 +25,17 @@ import org.jetbrains.annotations.Nullable;
 public class CRTBlock extends BlockWithEntity {
     public static final DirectionProperty FACING;
     public static final BooleanProperty LIT = Properties.LIT;
-    public final SoundEvent turnOnSound;
-    public final SoundEvent turnOffSound;
 
-    public CRTBlock(AbstractBlock.Settings settings, @Nullable SoundEvent turnOnSound, @Nullable SoundEvent turnOffSound) {
+    public CRTBlock(AbstractBlock.Settings settings) {
         super(settings);
-        this.turnOnSound = turnOnSound;
-        this.turnOffSound = turnOffSound;
         this.setDefaultState(this.getDefaultState().with(LIT, false));
+    }
+
+    public static final MapCodec<CRTBlock> CODEC = createCodec(CRTBlock::new);
+
+    @Override
+    protected MapCodec<? extends BlockWithEntity> getCodec() {
+        return CODEC;
     }
 
     @Override
@@ -61,10 +68,10 @@ public class CRTBlock extends BlockWithEntity {
 
     public void toggleLit(BlockState state, World world, BlockPos pos) {
         if(state.get(LIT)) {
-            if(turnOffSound != null) world.playSound(null, pos, this.turnOffSound, SoundCategory.BLOCKS, 1.0f, 1.0f);
+            world.playSound(null, pos, ModSoundEvents.BLOCK_CRT_TURN_OFF, SoundCategory.BLOCKS, 1.0f, 1.0f);
         }
         else {
-            if(turnOnSound != null) world.playSound(null, pos, this.turnOnSound, SoundCategory.BLOCKS, 1.0f, 1.0f);
+            world.playSound(null, pos, ModSoundEvents.BLOCK_CRT_TURN_ON, SoundCategory.BLOCKS, 1.0f, 1.0f);
         }
         world.setBlockState(pos, state.cycle(LIT), Block.NOTIFY_LISTENERS);
     }

@@ -1,9 +1,9 @@
 package net.leafenzo.ltones.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.state.ModProperties;
 import net.minecraft.block.*;
-import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.state.StateManager;
@@ -28,6 +28,13 @@ public class AntennaBlock extends BasicHorizontalFacingBlock implements Waterlog
     };
     protected static final VoxelShape LOWER_SHAPE = Block.createCuboidShape(6.0, 0.0, 6.0, 10.0, 16.0, 10.0);
 
+    public static final MapCodec<AntennaBlock> CODEC = createCodec(AntennaBlock::new);
+
+    @Override
+    protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
+        return CODEC;
+    }
+
     public AntennaBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false).with(LOWER, false));
@@ -51,11 +58,6 @@ public class AntennaBlock extends BasicHorizontalFacingBlock implements Waterlog
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return state.get(LOWER) ? LOWER_SHAPE : HORIZONTAL_FACING_TO_SHAPE[state.get(FACING).getId()-2];
-    }
-
-    @Override
-    public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
-        return false;
     }
 
     @Override

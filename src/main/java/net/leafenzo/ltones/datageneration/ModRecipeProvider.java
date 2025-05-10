@@ -51,7 +51,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public static void offerStairsRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
         createStairsRecipe(output, Ingredient.ofItems(input))
                 .criterion(FabricRecipeProvider.hasItem(input), FabricRecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(FabricRecipeProvider.getRecipeName(output)));
     }
 
     public static void offerSlabRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
@@ -203,7 +203,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('#', input2)
                 .criterion(FabricRecipeProvider.hasItem(input1.asItem()), FabricRecipeProvider.conditionsFromItem(input1))
                 .criterion("from_" + input2.id().getPath(), FabricRecipeProvider.conditionsFromTag(input2))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(FabricRecipeProvider.getRecipeName(output)));
     }
 
     public static void offerSurroundedRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input1, ItemConvertible input2, int count) {
@@ -215,7 +215,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('#', input2)
                 .criterion(FabricRecipeProvider.hasItem(input1.asItem()), FabricRecipeProvider.conditionsFromItem(input1))
                 .criterion(FabricRecipeProvider.hasItem(input2.asItem()), FabricRecipeProvider.conditionsFromItem(input2))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(FabricRecipeProvider.getRecipeName(output)));
     }
 
     public static void offer2x2Recipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, TagKey<Item> input1, int count) {
@@ -224,7 +224,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("##")
                 .input('#', input1)
                 .criterion("from_" + input1.id().getPath(), FabricRecipeProvider.conditionsFromTag(input1))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(FabricRecipeProvider.getRecipeName(output)));
     }
 
     public static void offer2x2Recipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input1, int count) {
@@ -233,7 +233,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("##")
                 .input('#', input1)
                 .criterion(FabricRecipeProvider.hasItem(input1.asItem()), FabricRecipeProvider.conditionsFromItem(input1))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(FabricRecipeProvider.getRecipeName(output)));
     }
 
     public static void offer2x2CrossRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input1, TagKey<Item> input2, int count) {
@@ -244,7 +244,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('O', input2)
                 .criterion(FabricRecipeProvider.hasItem(input1.asItem()), FabricRecipeProvider.conditionsFromItem(input1))
                 .criterion("from_" + input2.id().getPath(), FabricRecipeProvider.conditionsFromTag(input2))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(FabricRecipeProvider.getRecipeName(output)));
     }
 
     // biting the walls of my enclosure
@@ -256,7 +256,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('O', input2)
                 .criterion("from_" + input1.id().getPath(), FabricRecipeProvider.conditionsFromTag(input1))
                 .criterion(FabricRecipeProvider.hasItem(input2.asItem()), FabricRecipeProvider.conditionsFromItem(input2))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(FabricRecipeProvider.getRecipeName(output)));
     }
 
     public static void offer2x2CrossRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input1, ItemConvertible input2, int count) {
@@ -267,7 +267,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('O', input2)
                 .criterion(FabricRecipeProvider.hasItem(input1.asItem()), FabricRecipeProvider.conditionsFromItem(input1))
                 .criterion(FabricRecipeProvider.hasItem(input2.asItem()), FabricRecipeProvider.conditionsFromItem(input2))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
+                .offerTo(exporter, Identifier.of(FabricRecipeProvider.getRecipeName(output)));
     }
 
     public static void offerDoorRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
@@ -287,14 +287,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     }
 
     public static void offerReversible2x2CompactingRecipes(Consumer<RecipeJsonProvider> exporter, RecipeCategory reverseCategory, ItemConvertible baseItem, RecipeCategory compactingCategory, ItemConvertible compactItem, String compactingId, @Nullable String compactingGroup, String reverseId, @Nullable String reverseGroup) {
-        ShapelessRecipeJsonBuilder.create(reverseCategory, baseItem, 4).input(compactItem).group(reverseGroup).criterion(RecipeProvider.hasItem(compactItem), RecipeProvider.conditionsFromItem(compactItem)).offerTo(exporter, new Identifier(reverseId + "_from_" + compactingId));
+        ShapelessRecipeJsonBuilder.create(reverseCategory, baseItem, 4).input(compactItem).group(reverseGroup).criterion(RecipeProvider.hasItem(compactItem), RecipeProvider.conditionsFromItem(compactItem)).offerTo(exporter, Identifier.of(reverseId + "_from_" + compactingId));
         ShapedRecipeJsonBuilder.create(compactingCategory, compactItem)
                 .input('#', baseItem)
                 .pattern("##")
                 .pattern("##")
                 .group(compactingGroup)
                 .criterion(FabricRecipeProvider.hasItem(baseItem), FabricRecipeProvider.conditionsFromItem(baseItem))
-                .offerTo(exporter, new Identifier(compactingId + "_from_" + reverseId));
+                .offerTo(exporter, Identifier.of(compactingId + "_from_" + reverseId));
     }
 
     public static void offerReversible2x2CompactingRecipes(Consumer<RecipeJsonProvider> exporter, RecipeCategory reverseCategory, ItemConvertible baseItem, RecipeCategory compactingCategory, ItemConvertible compactItem) {

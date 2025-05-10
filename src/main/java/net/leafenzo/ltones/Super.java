@@ -10,6 +10,6 @@ public class Super {
     public static String MOD_ID = "ltones";
 
     public static Identifier asResource(String path) {
-        return new Identifier(MOD_ID, path.toLowerCase().replace(' ', '_')); // Silently make the path lowercase if it's not.
+        return Identifier.of(MOD_ID, path.toLowerCase().replace(' ', '_')); // Silently make the path lowercase if it's not.
     }
 }
