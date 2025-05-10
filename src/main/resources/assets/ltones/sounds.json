@@ -3217,6 +3217,51 @@
 		]
 	},
 
+	"block.plex_studded.break": {
+		"subtitle": "subtitles.block.generic.break",
+		"sounds": [
+			"ltones:block/plex_studded/break1",
+			"ltones:block/plex_studded/break2",
+			"ltones:block/plex_studded/break3",
+			"ltones:block/plex_studded/break4"
+		]
+	},
+	"block.plex_studded.step": {
+		"subtitle": "subtitles.block.generic.footsteps",
+		"sounds": [
+			"ltones:block/plex_studded/step1",
+			"ltones:block/plex_studded/step2",
+			"ltones:block/plex_studded/step3",
+			"ltones:block/plex_studded/step4"
+		]
+	},
+	"block.plex_studded.place": {
+		"subtitle": "subtitles.block.generic.place",
+		"sounds": [
+			"ltones:block/plex_studded/break1",
+			"ltones:block/plex_studded/break2",
+			"ltones:block/plex_studded/break3",
+			"ltones:block/plex_studded/break4"
+		]
+	},
+	"block.plex_studded.hit": {
+		"subtitle": "subtitles.block.generic.hit",
+		"sounds": [
+			"ltones:block/plex_studded/step1",
+			"ltones:block/plex_studded/step2",
+			"ltones:block/plex_studded/step3",
+			"ltones:block/plex_studded/step4"
+		]
+	},
+	"block.plex_studded.fall": {
+		"sounds": [
+			"ltones:block/plex_studded/step1",
+			"ltones:block/plex_studded/step2",
+			"ltones:block/plex_studded/step3",
+			"ltones:block/plex_studded/step4"
+		]
+	},
+
 	"block.plex.break": {
 		"subtitle": "subtitles.block.generic.break",
 		"sounds": [
