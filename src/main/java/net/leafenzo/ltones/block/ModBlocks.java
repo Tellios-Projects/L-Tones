@@ -880,10 +880,14 @@ public class ModBlocks {
     //<editor-fold desc ="Blocks - VECT">
     private static final FabricBlockSettings plexMaterial = FabricBlockSettings.create()
             .mapColor(MapColor.LIME)
-            .requiresTool()
             .strength(0.3f)
             .sounds(ModBlockSoundGroup.PLEX);
     public static final Block PLEX = registerBlockInBlockset(PLEX_BLOCKS, "plex", new Block(FabricBlockSettings.copyOf(plexMaterial)));
+    public static final Block PLEX_PLAID = registerBlockInBlockset(PLEX_BLOCKS, "plex_plaid", new Block(FabricBlockSettings.copyOf(plexMaterial).mapColor(MapColor.DIAMOND_BLUE)));
+    public static final Block PLEX_PUFF = registerBlockInBlockset(PLEX_BLOCKS, "plex_puff", new Block(FabricBlockSettings.copyOf(plexMaterial).mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block PLEX_STUDDED = registerBlockInBlockset(PLEX_BLOCKS, "plex_studded", new Block(FabricBlockSettings.copyOf(plexMaterial).sounds(ModBlockSoundGroup.PLEX_STUDDED)));
+    public static final Block PLEX_ROLL = registerBlockInBlockset(PLEX_BLOCKS, "plex_roll", new PillarBlock(FabricBlockSettings.copyOf(plexMaterial).mapColor(MapColor.BRIGHT_RED)));
+    public static final Block PLEX_PRINT = registerBlockInBlockset(PLEX_BLOCKS, "plex_print", new GlazedTerracottaBlock(FabricBlockSettings.copyOf(plexMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - SOUNDSCAPE">
     public static final Block SOUNDSCAPE_LAIR = registerBlockInBlockset(SOUNDSCAPE_BLOCKS, "soundscape_lair", new LoopingSoundscapeBlock(FabricBlockSettings.copyOf(lairMaterial).mapColor(MapColor.DARK_CRIMSON), ModSoundEvents.BLOCK_LAIR_AMBIENT, 20));

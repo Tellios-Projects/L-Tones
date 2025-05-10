@@ -1,5 +1,5 @@
 <h1 align="center"> LTones
-<br>	<img src="https://img.shields.io/badge/Available%20for-MC%201.20.1-c70039" alt="Supported Versions">
+<br>	<img src="https://img.shields.io/badge/Available%20for-MC%201.21.1-c70039" alt="Supported Versions">
   	<a href="https://discord.gg/uNZQ5NbnMX"><img src="https://img.shields.io/static/v1?label= &message=Tellio's Projects&style=flat&logo=Discord&color=363b5c" alt="Discord"></a>
 	<a href="https://github.com/Tellios-Projects/Squashed/blob/1.19/LICENSE.md"><img src="https://img.shields.io/github/license/Tellios-Projects/L-Tones?style=flat&color=b00a3f" alt="License"></a>
     <br>
@@ -9,7 +9,7 @@
 
 l-tones is meant to be a successor to the original [ZTones](https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/2221070-ztones-v-2-2-1-decorative-blocks-16x) mod, brought to both Fabric and the latest versions of Minecraft. Unlike [XTones](https://github.com/TehNut/Xtones) and [XTones-Reworked](https://github.com/TobsenD/XTones-Reworked) before it, l-tones comes with all new, completely revampted textures for all blocksets - as well as some other new items and blocks that fit into it's theme.
 
-Textures are made by Tellio-Aridoitsu (Eliza) based off the original Ztones textures, with programming done by Leafenzo (Leah). 
+Textures are made by Tellio-Aridoitsu (Eliza) and amber meow (Amber) based off the original Ztones textures, with programming done by Leafenzo (Leah) and amber meow (Amber). 
 
 </h4>
 </h1>

@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
-    "ltones:plex"
+    "ltones:plex",
+    "ltones:plex_plaid",
+    "ltones:plex_puff",
+    "ltones:plex_studded",
+    "ltones:plex_roll",
+    "ltones:plex_print"
   ]
 }

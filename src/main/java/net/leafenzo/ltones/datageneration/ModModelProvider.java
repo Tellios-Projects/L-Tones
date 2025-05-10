@@ -845,6 +845,11 @@ public class ModModelProvider extends FabricModelProvider {
         //</editor-fold>
         //<editor-fold desc = "Models - plex">
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PLEX);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PLEX_PLAID);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PLEX_PUFF);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PLEX_STUDDED);
+        registerAxisRotatedBlockWithTopTexturePath(blockStateModelGenerator, ModBlocks.PLEX_ROLL, "block/plex_roll_top");
+        blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.PLEX_PRINT);
         //</editor-fold>
         //<editor-fold desc = "Models - Other Blocks">
         registerLitOnOffBlock(blockStateModelGenerator, ModBlocks.AURORA, TextureMap::all);

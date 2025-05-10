@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ltones:block/plex_print",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "ltones:block/plex_print",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "ltones:block/plex_print"
+    },
+    "facing=west": {
+      "model": "ltones:block/plex_print",
+      "y": 90
+    }
+  }
+}

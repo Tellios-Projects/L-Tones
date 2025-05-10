@@ -30,7 +30,7 @@ public class ModItemGroups {
         return blocks;
     }
 
-    public static ItemGroup LTONES = Registry.register(Registries.ITEM_GROUP, new Identifier(Super.MOD_ID, "ltones"),
+    public static ItemGroup LTONES = Registry.register(Registries.ITEM_GROUP, Identifier.of(Super.MOD_ID, "ltones"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.ltones"))
                     .icon(() -> new ItemStack(ModItems.LUESIUM_INGOT)).entries((displayContext, entries) -> {
                         for(Block block : includeVariants(ModBlocks.AGON_BLOCKS)) { entries.add(block); }
