@@ -1,7 +1,6 @@
 package net.leafenzo.ltones.block.custom;
 
 import net.minecraft.block.*;
-import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -107,11 +106,6 @@ public class KeyboardBlock extends BasicHorizontalFacingBlock implements Waterlo
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         return world.getBlockState(pos.down()).isSolid();
-    }
-
-    @Override
-    public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
-        return false;
     }
 
     private void updateNeighbors(BlockState state, World world, BlockPos pos) {

@@ -1,5 +1,6 @@
 package net.leafenzo.ltones.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import net.leafenzo.ltones.block.entity.LoopingSoundscapeBlockEntity;
 import net.leafenzo.ltones.block.entity.ModBlockEntityType;
 import net.minecraft.block.*;
@@ -25,6 +26,11 @@ public class LoopingSoundscapeBlock extends BlockWithEntity {
     }
 
     @Override
+    protected MapCodec<? extends BlockWithEntity> getCodec() {
+        return CODEC;
+    }
+
+    @Override
     @Nullable
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         return this.getDefaultState().with(LIT, ctx.getWorld().isReceivingRedstonePower(ctx.getBlockPos()));
@@ -33,7 +39,7 @@ public class LoopingSoundscapeBlock extends BlockWithEntity {
     @Override
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return world.isClient ? null : LoopingSoundscapeBlock.checkType(type, ModBlockEntityType.LOOPING_SOUNDSCAPE, LoopingSoundscapeBlockEntity::tick);
+        return world.isClient ? null : LoopingSoundscapeBlock.validateTicker(type, ModBlockEntityType.LOOPING_SOUNDSCAPE, LoopingSoundscapeBlockEntity::tick);
     }
 
     @Override

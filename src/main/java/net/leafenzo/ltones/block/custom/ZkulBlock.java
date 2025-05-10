@@ -1,5 +1,6 @@
 package net.leafenzo.ltones.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import net.leafenzo.ltones.block.ModBlocks;
 import net.leafenzo.ltones.block.entity.ZkulBlockEntity;
 import net.leafenzo.ltones.item.ModItems;
@@ -33,6 +34,13 @@ public class ZkulBlock extends BlockWithEntity {
         super(settings);
     }
 
+    public static final MapCodec<ZkulBlock> CODEC = createCodec(ZkulBlock::new);
+
+    @Override
+    protected MapCodec<? extends BlockWithEntity> getCodec() {
+        return CODEC;
+    }
+
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         if (random.nextInt(20) == 0) {
@@ -49,7 +57,7 @@ public class ZkulBlock extends BlockWithEntity {
     }
 
     @Override
-    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         if (!(player.isCreative() || player.getStackInHand(Hand.MAIN_HAND).isOf(ModItems.CROWS_BEAK))) {
             this.explode(world, pos);
         } else if (!player.isCreative() && player.getStackInHand(Hand.MAIN_HAND).isOf(ModItems.CROWS_BEAK)) {
@@ -64,6 +72,7 @@ public class ZkulBlock extends BlockWithEntity {
             world.playSoundAtBlockCenter(pos, ModSoundEvents.BLOCK_ZKUL_BROKEN, SoundCategory.BLOCKS, 1, 0.8f, false);
         }
         super.onBreak(world, pos, state, player);
+        return state;
     }
 
     private boolean hitCooldownActive;

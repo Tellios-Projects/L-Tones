@@ -1,5 +1,6 @@
 package net.leafenzo.ltones.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -24,6 +25,13 @@ public class DecalBlock extends MultifaceGrowthBlock implements Waterloggable {
     public DecalBlock(AbstractBlock.Settings settings) {
         super(settings);
         this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false));
+    }
+
+    public static final MapCodec<DecalBlock> CODEC = createCodec(DecalBlock::new);
+
+    @Override
+    protected MapCodec<? extends MultifaceGrowthBlock> getCodec() {
+        return CODEC;
     }
 
     public static Set<Direction> collectDirections(BlockState state) {

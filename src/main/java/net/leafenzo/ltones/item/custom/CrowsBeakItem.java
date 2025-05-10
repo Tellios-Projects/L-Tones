@@ -5,6 +5,7 @@ import net.minecraft.block.*;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 
 public class CrowsBeakItem extends MiningToolItem {
     public CrowsBeakItem(int attackDamage, float attackSpeed, Item.Settings settings) {
@@ -25,6 +26,11 @@ public class CrowsBeakItem extends MiningToolItem {
             }
 
             @Override
+            public TagKey<Block> getInverseTag() {
+                return null;
+            }
+
+            @Override
             public int getMiningLevel() {
                 return 3;
             }
@@ -39,6 +45,11 @@ public class CrowsBeakItem extends MiningToolItem {
                 return Ingredient.ofItems(Items.NETHERITE_SCRAP);
             }
         }, ModTags.Blocks.CROWS_BEAK_MINEABLE, settings);
+    }
+
+    @Override
+    public float getMiningSpeed(ItemStack stack, BlockState state) {
+        return super.getMiningSpeed(stack, state);
     }
 
     @Override

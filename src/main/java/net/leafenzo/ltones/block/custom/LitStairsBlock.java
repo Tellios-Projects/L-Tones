@@ -22,13 +22,13 @@ public class LitStairsBlock extends StairsBlock {
         super(baseBlockState, settings);
         this.turnOnSound = turnOnSound;
         this.turnOffSound = turnOffSound;
-        this.setDefaultState((BlockState)this.getDefaultState().with(LIT, false));
+        this.setDefaultState(this.getDefaultState().with(LIT, false));
     }
     public LitStairsBlock(BlockState baseBlockState, AbstractBlock.Settings settings) {
         super(baseBlockState, settings);
         this.turnOnSound = null;
         this.turnOffSound = null;
-        this.setDefaultState((BlockState)this.getDefaultState().with(LIT, false));
+        this.setDefaultState(this.getDefaultState().with(LIT, false));
     }
 
     @Override
@@ -66,7 +66,7 @@ public class LitStairsBlock extends StairsBlock {
         else {
             if(turnOnSound != null) world.playSound(null, pos, this.turnOnSound, SoundCategory.BLOCKS, 1.0f, 1.0f);
         }
-        world.setBlockState(pos, (BlockState)state.cycle(LIT), Block.NOTIFY_LISTENERS);
+        world.setBlockState(pos, state.cycle(LIT), Block.NOTIFY_LISTENERS);
     }
 
     @Override

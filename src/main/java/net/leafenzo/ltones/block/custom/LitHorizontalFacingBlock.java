@@ -1,9 +1,6 @@
 package net.leafenzo.ltones.block.custom;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalFacingBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -21,12 +18,6 @@ public class LitHorizontalFacingBlock extends HorizontalFacingBlock {
     public final SoundEvent turnOnSound;
     public final SoundEvent turnOffSound;
 
-    public LitHorizontalFacingBlock(AbstractBlock.Settings settings, @Nullable SoundEvent turnOnSound, @Nullable SoundEvent turnOffSound) {
-        super(settings);
-        this.turnOnSound = turnOnSound;
-        this.turnOffSound = turnOffSound;
-        this.setDefaultState(this.getDefaultState().with(LIT, false));
-    }
     public LitHorizontalFacingBlock(AbstractBlock.Settings settings) {
         super(settings);
         this.turnOnSound = null;

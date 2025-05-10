@@ -4,15 +4,15 @@ import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.leafenzo.ltones.ModInit;
 import net.leafenzo.ltones.Super;
-import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.particle.ParticleEffect;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModParticleTypes {
-    public static final DefaultParticleType ZKUL = registerParticle("zkul");
+    public static final ParticleEffect ZKUL = registerParticle("zkul");
 
-    private static DefaultParticleType registerParticle(String name) {
+    private static ParticleEffect registerParticle(String name) {
         return Registry.register(Registries.PARTICLE_TYPE, Identifier.of(Super.MOD_ID, name), FabricParticleTypes.simple());
     }
 

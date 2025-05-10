@@ -3,13 +3,13 @@ package net.leafenzo.ltones.block.custom;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.SlabType;
 import net.minecraft.entity.ai.pathing.NavigationType;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.tag.FluidTags;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
@@ -28,13 +28,9 @@ public class LitSlabBlock extends LitBlock implements Waterloggable {
     protected static final VoxelShape BOTTOM_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 8.0, 16.0);
     protected static final VoxelShape TOP_SHAPE = Block.createCuboidShape(0.0, 8.0, 0.0, 16.0, 16.0, 16.0);
 
-    public LitSlabBlock(AbstractBlock.Settings settings, @Nullable SoundEvent turnOnSound, @Nullable SoundEvent turnOffSound, boolean Flickers) {
-        super(settings, turnOnSound, turnOffSound, Flickers);
-        this.setDefaultState((BlockState)((BlockState)this.getDefaultState().with(TYPE, SlabType.BOTTOM)).with(WATERLOGGED, false).with(LIT, false));
-    }
     public LitSlabBlock(AbstractBlock.Settings settings) {
         super(settings, null, null, false);
-        this.setDefaultState((BlockState)((BlockState)this.getDefaultState().with(TYPE, SlabType.BOTTOM)).with(WATERLOGGED, false).with(LIT, false));
+        this.setDefaultState(this.getDefaultState().with(TYPE, SlabType.BOTTOM).with(WATERLOGGED, false).with(LIT, false));
     }
 
     @Override
@@ -68,13 +64,13 @@ public class LitSlabBlock extends LitBlock implements Waterloggable {
         BlockPos blockPos = ctx.getBlockPos();
         BlockState blockState = ctx.getWorld().getBlockState(blockPos);
         if (blockState.isOf(this)) {
-            return (BlockState)((BlockState)blockState.with(TYPE, SlabType.DOUBLE)).with(WATERLOGGED, false).with(LIT, ctx.getWorld().isReceivingRedstonePower(ctx.getBlockPos()));
+            return blockState.with(TYPE, SlabType.DOUBLE).with(WATERLOGGED, false).with(LIT, ctx.getWorld().isReceivingRedstonePower(ctx.getBlockPos()));
         }
         FluidState fluidState = ctx.getWorld().getFluidState(blockPos);
-        BlockState blockState2 = (BlockState)((BlockState)this.getDefaultState().with(TYPE, SlabType.BOTTOM)).with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
+        BlockState blockState2 = this.getDefaultState().with(TYPE, SlabType.BOTTOM).with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
         Direction direction = ctx.getSide();
         if (direction == Direction.DOWN || direction != Direction.UP && ctx.getHitPos().y - (double)blockPos.getY() > 0.5) {
-            return (BlockState)blockState2.with(TYPE, SlabType.TOP).with(LIT, ctx.getWorld().isReceivingRedstonePower(ctx.getBlockPos()));
+            return blockState2.with(TYPE, SlabType.TOP).with(LIT, ctx.getWorld().isReceivingRedstonePower(ctx.getBlockPos()));
         }
         return blockState2;
     }
@@ -114,12 +110,13 @@ public class LitSlabBlock extends LitBlock implements Waterloggable {
     }
 
     @Override
-    public boolean canFillWithFluid(BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
+    public boolean canFillWithFluid(@Nullable PlayerEntity player, BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
         if (state.get(TYPE) != SlabType.DOUBLE) {
-            return Waterloggable.super.canFillWithFluid(world, pos, state, fluid);
+            return Waterloggable.super.canFillWithFluid(player, world, pos, state, fluid);
         }
         return false;
     }
+
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
@@ -130,19 +127,21 @@ public class LitSlabBlock extends LitBlock implements Waterloggable {
     }
 
     @Override
-    public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
+    protected boolean canPathfindThrough(BlockState state, NavigationType type) {
         switch (type) {
-            case LAND: {
+            case LAND -> {
                 return false;
             }
-            case WATER: {
-                return world.getFluidState(pos).isIn(FluidTags.WATER);
+            case WATER -> {
+                return state.getFluidState().isIn(FluidTags.WATER);
             }
-            case AIR: {
+            case AIR -> {
+                return false;
+            }
+            default -> {
                 return false;
             }
         }
-        return false;
     }
 
 }

@@ -48,40 +48,40 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         return s.toString();
     }
 
-    public static void offerStairsRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
+    public static void offerStairsRecipe(Consumer<RecipeProvider> exporter, ItemConvertible output, ItemConvertible input) {
         createStairsRecipe(output, Ingredient.ofItems(input))
                 .criterion(FabricRecipeProvider.hasItem(input), FabricRecipeProvider.conditionsFromItem(input))
-                .offerTo(exporter, Identifier.of(FabricRecipeProvider.getRecipeName(output)));
+                .offerTo((RecipeExporter) exporter, Identifier.of(FabricRecipeProvider.getRecipeName(output)));
     }
 
-    public static void offerSlabRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
-        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, output, input);
+    public static void offerSlabRecipe(Consumer<RecipeProvider> exporter, ItemConvertible output, ItemConvertible input) {
+        offerSlabRecipe((RecipeExporter) exporter, RecipeCategory.BUILDING_BLOCKS, output, input);
     }
 
-    public static void offerWallRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
-        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, output, input);
+    public static void offerWallRecipe(Consumer<RecipeProvider> exporter, ItemConvertible output, ItemConvertible input) {
+        offerWallRecipe((RecipeExporter) exporter, RecipeCategory.BUILDING_BLOCKS, output, input);
     }
 
-    public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, ItemConvertible input2, @Nullable String group, int outputCount) {
+    public static void offerShapelessRecipe(Consumer<RecipeProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, ItemConvertible input2, @Nullable String group, int outputCount) {
         ShapelessRecipeJsonBuilder
                 .create(recipeCategory, output, outputCount)
                 .input(input)
                 .input(input2)
                 .group(group)
                 .criterion(hasItem(input), conditionsFromItem(input))
-                .offerTo(exporter, getRecipePath(output, input, input2));
+                .offerTo((RecipeExporter) exporter, getRecipePath(output, input, input2));
     }
 
-    public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, @Nullable String group, int outputCount) {
+    public static void offerShapelessRecipe(Consumer<RecipeProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, @Nullable String group, int outputCount) {
         ShapelessRecipeJsonBuilder
                 .create(recipeCategory, output, outputCount)
                 .input(input)
                 .group(group)
                 .criterion(hasItem(input), conditionsFromItem(input))
-                .offerTo(exporter, getRecipePath(output, input));
+                .offerTo((RecipeExporter) exporter, getRecipePath(output, input));
     }
 
-    public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, ItemConvertible input2, ItemConvertible input3, @Nullable String group, int outputCount) {
+    public static void offerShapelessRecipe(Consumer<RecipeProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, ItemConvertible input2, ItemConvertible input3, @Nullable String group, int outputCount) {
         ShapelessRecipeJsonBuilder
                 .create(recipeCategory, output, outputCount)
                 .input(input)
@@ -89,10 +89,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(input3)
                 .group(group)
                 .criterion(hasItem(input), conditionsFromItem(input))
-                .offerTo(exporter, getRecipePath(output, input, input2, input3));
+                .offerTo((RecipeExporter) exporter, getRecipePath(output, input, input2, input3));
     }
 
-    public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, ItemConvertible input2, ItemConvertible input3, ItemConvertible input4, @Nullable String group, int outputCount) {
+    public static void offerShapelessRecipe(Consumer<RecipeProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, ItemConvertible input2, ItemConvertible input3, ItemConvertible input4, @Nullable String group, int outputCount) {
         ShapelessRecipeJsonBuilder
                 .create(recipeCategory, output, outputCount)
                 .input(input)
@@ -101,10 +101,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(input4)
                 .group(group)
                 .criterion(hasItem(input), conditionsFromItem(input))
-                .offerTo(exporter, getRecipePath(output, input, input2, input3));
+                .offerTo((RecipeExporter) exporter, getRecipePath(output, input, input2, input3));
     }
 
-    public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, TagKey<Item> input2, @Nullable String group, int outputCount) {
+    public static void offerShapelessRecipe(Consumer<RecipeProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, TagKey<Item> input2, @Nullable String group, int outputCount) {
         ShapelessRecipeJsonBuilder
                 .create(recipeCategory, output, outputCount)
                 .input(input)
@@ -112,10 +112,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .group(group)
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .criterion(hasTag(input2), conditionsFromTag(input2))
-                .offerTo(exporter, getRecipePath(output, input) + "_and_" + input2.id().getPath());
+                .offerTo((RecipeExporter) exporter, getRecipePath(output, input) + "_and_" + input2.id().getPath());
     }
 
-    public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, TagKey<Item> input, ItemConvertible input2, @Nullable String group, int outputCount) {
+    public static void offerShapelessRecipe(Consumer<RecipeProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, TagKey<Item> input, ItemConvertible input2, @Nullable String group, int outputCount) {
         ShapelessRecipeJsonBuilder
                 .create(recipeCategory, output, outputCount)
                 .input(input)
@@ -123,30 +123,30 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .group(group)
                 .criterion(hasTag(input), conditionsFromTag(input))
                 .criterion(hasItem(input2), conditionsFromItem(input2))
-                .offerTo(exporter, getRecipePath(output, input2) + "_and_" + input.id().getPath());
+                .offerTo((RecipeExporter) exporter, getRecipePath(output, input2) + "_and_" + input.id().getPath());
     }
 
-    public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, ItemConvertible input2, int outputCount) {
+    public static void offerShapelessRecipe(Consumer<RecipeProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, ItemConvertible input2, int outputCount) {
         offerShapelessRecipe(exporter, recipeCategory, output, input, input2, Super.MOD_ID + output.toString(), outputCount);
     }
 
-    public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, ItemConvertible input2, ItemConvertible input3, int outputCount) {
+    public static void offerShapelessRecipe(Consumer<RecipeProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, ItemConvertible input2, ItemConvertible input3, int outputCount) {
         offerShapelessRecipe(exporter, recipeCategory, output, input, input2, input3, Super.MOD_ID + output.toString(), outputCount);
     }
 
-    public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, ItemConvertible input2, ItemConvertible input3, ItemConvertible input4, int outputCount) {
+    public static void offerShapelessRecipe(Consumer<RecipeProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, ItemConvertible input2, ItemConvertible input3, ItemConvertible input4, int outputCount) {
         offerShapelessRecipe(exporter, recipeCategory, output, input, input2, input3, input4, Super.MOD_ID + output.toString(), outputCount);
     }
 
-    public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, TagKey<Item> input2, int outputCount) {
+    public static void offerShapelessRecipe(Consumer<RecipeProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, ItemConvertible input, TagKey<Item> input2, int outputCount) {
         offerShapelessRecipe(exporter, recipeCategory, output, input, input2, Super.MOD_ID + output.toString(), outputCount);
     }
 
-    public static void offerShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, TagKey<Item> input, ItemConvertible input2, int outputCount) {
+    public static void offerShapelessRecipe(Consumer<RecipeProvider> exporter, RecipeCategory recipeCategory, ItemConvertible output, TagKey<Item> input, ItemConvertible input2, int outputCount) {
         offerShapelessRecipe(exporter, recipeCategory, output, input, input2, Super.MOD_ID + output.toString(), outputCount);
     }
 
-    public static void offerStonecuttingRecipesForBlockSet(Consumer<RecipeJsonProvider> exporter, RecipeCategory recipeCategory, BlockSet blockSet) {
+    public static void offerStonecuttingRecipesForBlockSet(Consumer<RecipeProvider> exporter, RecipeCategory recipeCategory, BlockSet blockSet) {
         //  List<Block> outputs = blockSet.blocks.stream().filter(x -> !ModBlocks.STAIR_FROM_BLOCK.containsKey(x) && !ModBlocks.SLAB_FROM_BLOCK.containsKey(x)).toList();   // Doesn't work
         List<Block> outputs = blockSet.blocks;
         TagKey<Item> inputs = blockSet.itemTag;
@@ -357,7 +357,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(Consumer<RecipeExporter> exporter) {
         // Item Recipes
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.OIL, Items.BONE_MEAL, Items.COAL, 1);
         offerShapelessRecipe(exporter, RecipeCategory.MISC, ModItems.OIL, Items.DRIED_KELP, Items.COAL, 2);

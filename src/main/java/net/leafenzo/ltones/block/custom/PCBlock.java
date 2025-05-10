@@ -1,5 +1,6 @@
 package net.leafenzo.ltones.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import net.leafenzo.ltones.block.entity.ModBlockEntityType;
 import net.leafenzo.ltones.block.entity.PCBlockEntity;
 import net.leafenzo.ltones.sound.ModSoundEvents;
@@ -37,6 +38,13 @@ public class PCBlock extends BlockWithEntity {
     public PCBlock(Settings settings) {
         super(settings);
         this.setDefaultState((this.stateManager.getDefaultState()).with(POWERED, false));
+    }
+
+    public static final MapCodec<PCBlock> CODEC = createCodec(PCBlock::new);
+
+    @Override
+    protected MapCodec<? extends BlockWithEntity> getCodec() {
+        return CODEC;
     }
 
     protected static final VoxelShape[] HORIZONTAL_FACING_TO_SHAPE = new VoxelShape[]{
@@ -83,7 +91,7 @@ public class PCBlock extends BlockWithEntity {
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (state.get(POWERED)) {
             world.playSound(null, pos, ModSoundEvents.BLOCK_PC_TURN_OFF, SoundCategory.BLOCKS, 0.6f, 1.0f);
         } else {
@@ -122,7 +130,7 @@ public class PCBlock extends BlockWithEntity {
     @Override
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return world.isClient ? null : PCBlock.checkType(type, ModBlockEntityType.PC, PCBlockEntity::tick);
+        return world.isClient ? null : PCBlock.validateTicker(type, ModBlockEntityType.PC, PCBlockEntity::tick);
     }
 
     @Override

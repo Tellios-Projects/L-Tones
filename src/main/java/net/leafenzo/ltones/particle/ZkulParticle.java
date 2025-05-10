@@ -4,7 +4,10 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
-import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.particle.ParticleEffect;
+import net.minecraft.particle.ParticleType;
+import net.minecraft.particle.SimpleParticleType;
+import org.jetbrains.annotations.Nullable;
 
 @Environment(value = EnvType.CLIENT)
 public class ZkulParticle extends SpriteBillboardParticle {
@@ -51,15 +54,16 @@ public class ZkulParticle extends SpriteBillboardParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class Factory implements ParticleFactory<DefaultParticleType> {
+    public static class Factory implements ParticleFactory<SimpleParticleType> {
         private final SpriteProvider spriteProvider;
 
         public Factory(SpriteProvider spriteProvider) {
             this.spriteProvider = spriteProvider;
         }
 
-        public Particle createParticle(DefaultParticleType particleType, ClientWorld level, double x, double y, double z, double dx, double dy, double dz) {
-            ZkulParticle particle = new ZkulParticle(level, x, y, z, dx, dy, dz);
+        @Override
+        public @Nullable Particle createParticle(SimpleParticleType simpleParticleType, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
+            ZkulParticle particle = new ZkulParticle(world, x, y, z, velocityX, velocityY, velocityZ);
             particle.setSprite(spriteProvider);
             return particle;
         }

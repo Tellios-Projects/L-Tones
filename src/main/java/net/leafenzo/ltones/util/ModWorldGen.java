@@ -22,16 +22,6 @@ public class ModWorldGen {
 
 //    public static final BlockStateProviderType<ModSimpleBlockStateProvider> MOD_SIMPLE_BLOCK_STATE_PROVIDER = BlockStateProviderMixin.callRegister("mod_simple_block_state_provider", ModSimpleBlockStateProvider.CODEC);
 
-    private static <P extends FoliagePlacer> FoliagePlacerType<P> registerFoliagePlacer(String id, Codec<P> codec) {
-        return (FoliagePlacerType) Registry.register(Registries.FOLIAGE_PLACER_TYPE, Identifier.of(Super.MOD_ID, id), new FoliagePlacerType(codec));
-    }
-    private static <P extends TrunkPlacer> TrunkPlacerType<P> registerTrunkPlacer(String id, Codec<P> codec) {
-        return (TrunkPlacerType)Registry.register(Registries.TRUNK_PLACER_TYPE,  Identifier.of(Super.MOD_ID, id), new TrunkPlacerType(codec));
-    }
-    private static <P extends TreeDecorator> TreeDecoratorType<P> registerTreeDecorator(String id, Codec<P> codec) {
-        return (TreeDecoratorType)Registry.register(Registries.TREE_DECORATOR_TYPE,  Identifier.of(Super.MOD_ID, id), new TreeDecoratorType(codec));
-    }
-
     public static void registerWorldGen() {
         ModInit.LOGGER.debug("Registering mod world gen for " + Super.MOD_ID);
         ModPlacedFeatures.registerModifications(); // feels a bit wrong calling this here. It should work fine it just feels smelly to me.

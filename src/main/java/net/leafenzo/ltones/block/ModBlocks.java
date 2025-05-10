@@ -1,8 +1,5 @@
 package net.leafenzo.ltones.block;
 
-
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.AbstractBlock.Settings;
 import net.leafenzo.ltones.ModInit;
 import net.leafenzo.ltones.Super;
 import net.leafenzo.ltones.block.custom.*;
@@ -11,7 +8,7 @@ import net.leafenzo.ltones.sound.ModBlockSoundGroup;
 import net.leafenzo.ltones.sound.ModSoundEvents;
 import net.leafenzo.ltones.util.ModUtil;
 import net.minecraft.block.*;
-import net.minecraft.block.enums.Instrument;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
@@ -123,10 +120,10 @@ public class ModBlocks {
     //</editor-fold>
     //<editor-fold desc ="Blocks - AGON">
 
-    private static final AbstractBlock.Settings agonMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock agonMaterial = new Block(AbstractBlock.Settings.create()
             .strength(0.3f)
             .sounds(ModBlockSoundGroup.AGON)
-            .luminance(state -> 15);
+            .luminance(state -> 15));
     public static final Block WHITE_AGON = registerBlockInBlockset(AGON_BLOCKS, "white_agon", new Block(AbstractBlock.Settings.copy(agonMaterial).mapColor(MapColor.WHITE)));
     public static final Block LIGHT_GRAY_AGON = registerBlockInBlockset(AGON_BLOCKS, "light_gray_agon", new Block(AbstractBlock.Settings.copy(agonMaterial).mapColor(MapColor.LIGHT_GRAY)));
     public static final Block GRAY_AGON = registerBlockInBlockset(AGON_BLOCKS, "gray_agon", new Block(AbstractBlock.Settings.copy(agonMaterial).mapColor(MapColor.GRAY)));
@@ -146,9 +143,9 @@ public class ModBlocks {
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - FORTT">
-    private static final AbstractBlock.Settings forttMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock forttMaterial = new Block(AbstractBlock.Settings.create()
             .strength(1.0f)
-            .sounds(ModBlockSoundGroup.FORTT);
+            .sounds(ModBlockSoundGroup.FORTT));
     public static final Block FORTT = registerBlockInBlockset(FORTT_BLOCKS, "fortt", new Block(AbstractBlock.Settings.copy(forttMaterial).mapColor(MapColor.WHITE_GRAY)));
     public static final Block GRAY_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "gray_fortt", new Block(AbstractBlock.Settings.copy(forttMaterial).mapColor(MapColor.IRON_GRAY)));
     public static final Block STONE_GRAY_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "stone_gray_fortt", new Block(AbstractBlock.Settings.copy(forttMaterial).mapColor(MapColor.STONE_GRAY)));
@@ -167,7 +164,7 @@ public class ModBlocks {
     public static final Block BRIGHT_VIOLET_FORTT = registerBlockInBlockset(FORTT_BLOCKS, "bright_violet_fortt", new Block(AbstractBlock.Settings.copy(forttMaterial).mapColor(MapColor.TERRACOTTA_BLUE)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - GLAXX">
-    private static final AbstractBlock.Settings glaxxMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock glaxxMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.CLEAR)
             .strength(0.3f)
             .sounds(ModBlockSoundGroup.GLAXX)
@@ -175,29 +172,29 @@ public class ModBlocks {
             .allowsSpawning(ModBlocks::never)
             .solidBlock(ModBlocks::never)
             .suffocates(ModBlocks::never)
-            .blockVision(ModBlocks::never);
-    public static final Block SANDALWOOD_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sandalwood_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.IRON_GRAY)*/));
-    public static final Block LICORICE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "licorice_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.STONE_GRAY)*/));
-    public static final Block INCENSE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "incense_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.GRAY)*/));
-    public static final Block CINNAMON_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "cinnamon_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.DARK_CRIMSON)*/));
-    public static final Block CITRUS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "citrus_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.DIRT_BROWN)*/));
-    public static final Block PINE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "pine_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.SPRUCE_BROWN)*/));
-    public static final Block LEMON_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "lemon_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_YELLOW)*/));
-    public static final Block THYME_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "thyme_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_GREEN)*/));
-    public static final Block SAGE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sage_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_LIME)*/));
-    public static final Block MINT_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "mint_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.LICHEN_GREEN)*/));
-    public static final Block COCONUT_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "coconut_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_CYAN)*/));
-    public static final Block BRINE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "brine_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.CYAN)*/));
-    public static final Block SASSAFRAS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sassafras_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.BLUE)*/));
-    public static final Block LAVENDER_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "lavender_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_BLUE)*/));
-    public static final Block EUCALYPTUS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "eucalyptus_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.DARK_DULL_PINK)*/));
-    public static final Block ROSE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "rose_glaxx", new GlassBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.DULL_PINK)*/));
+            .blockVision(ModBlocks::never));
+    public static final Block SANDALWOOD_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sandalwood_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.IRON_GRAY)*/));
+    public static final Block LICORICE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "licorice_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.STONE_GRAY)*/));
+    public static final Block INCENSE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "incense_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.GRAY)*/));
+    public static final Block CINNAMON_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "cinnamon_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.DARK_CRIMSON)*/));
+    public static final Block CITRUS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "citrus_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.DIRT_BROWN)*/));
+    public static final Block PINE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "pine_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.SPRUCE_BROWN)*/));
+    public static final Block LEMON_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "lemon_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_YELLOW)*/));
+    public static final Block THYME_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "thyme_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_GREEN)*/));
+    public static final Block SAGE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sage_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_LIME)*/));
+    public static final Block MINT_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "mint_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.LICHEN_GREEN)*/));
+    public static final Block COCONUT_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "coconut_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_CYAN)*/));
+    public static final Block BRINE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "brine_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.CYAN)*/));
+    public static final Block SASSAFRAS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "sassafras_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.BLUE)*/));
+    public static final Block LAVENDER_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "lavender_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.TERRACOTTA_BLUE)*/));
+    public static final Block EUCALYPTUS_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "eucalyptus_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.DARK_DULL_PINK)*/));
+    public static final Block ROSE_GLAXX = registerBlockInBlockset(GLAXX_BLOCKS, "rose_glaxx", new TransparentBlock(AbstractBlock.Settings.copy(glaxxMaterial)/*.mapColor(MapColor.DULL_PINK)*/));
     //</editor-fold>
     //<editor-fold desc ="Blocks - CRAY">
-    private static final AbstractBlock.Settings crayMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock crayMaterial = new Block(AbstractBlock.Settings.create()
             .strength(0.8f) // same as sandstone
             .requiresTool()
-            .sounds(ModBlockSoundGroup.CRAY);
+            .sounds(ModBlockSoundGroup.CRAY));
     public static final Block CRAY = registerBlockInBlockset(CRAY_BLOCKS, "cray", new Block(AbstractBlock.Settings.copy(crayMaterial).mapColor(MapColor.WHITE_GRAY)));
     public static final Block BLACK_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "black_cray", new Block(AbstractBlock.Settings.copy(crayMaterial).mapColor(MapColor.LIGHT_GRAY)));
     public static final Block RED_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "red_cray", new Block(AbstractBlock.Settings.copy(crayMaterial).mapColor(MapColor.RED)));
@@ -216,9 +213,9 @@ public class ModBlocks {
     public static final Block FUCHSIA_CRAY = registerBlockInBlockset(CRAY_BLOCKS, "fuchsia_cray", new Block(AbstractBlock.Settings.copy(crayMaterial).mapColor(MapColor.DULL_PINK)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - CAST">
-    private static final AbstractBlock.Settings castMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock castMaterial = new Block(AbstractBlock.Settings.create()
             .strength(1.0f)
-            .sounds(ModBlockSoundGroup.CAST);
+            .sounds(ModBlockSoundGroup.CAST));
     public static final Block CAST = registerBlockInBlockset(CAST_BLOCKS, "cast", new Block(AbstractBlock.Settings.copy(castMaterial).mapColor(MapColor.WHITE)));
     public static final Block BLACK_CAST = registerBlockInBlockset(CAST_BLOCKS, "black_cast", new Block(AbstractBlock.Settings.copy(castMaterial).mapColor(MapColor.BLACK)));
     public static final Block BROWN_CAST = registerBlockInBlockset(CAST_BLOCKS, "brown_cast", new Block(AbstractBlock.Settings.copy(castMaterial).mapColor(MapColor.TERRACOTTA_ORANGE)));
@@ -237,10 +234,10 @@ public class ModBlocks {
     public static final Block VELVET_CAST = registerBlockInBlockset(CAST_BLOCKS, "velvet_cast", new Block(AbstractBlock.Settings.copy(castMaterial).mapColor(MapColor.DULL_RED)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - HOST">
-    private static final AbstractBlock.Settings hostMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock hostMaterial = new Block(AbstractBlock.Settings.create()
             .strength(1.5f)
             .requiresTool()
-            .sounds(ModBlockSoundGroup.HOST);
+            .sounds(ModBlockSoundGroup.HOST));
     public static final Block EMPTY_HOST = registerBlockInBlockset(HOST_BLOCKS, "empty_host", new Block(AbstractBlock.Settings.copy(hostMaterial).mapColor(MapColor.BLACK).sounds(BlockSoundGroup.COPPER)));
     public static final Block HOST = registerBlockInBlockset(HOST_BLOCKS, "host", new Block(AbstractBlock.Settings.copy(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 3)));
     public static final Block RED_HOST = registerBlockInBlockset(HOST_BLOCKS, "red_host", new Block(AbstractBlock.Settings.copy(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
@@ -259,11 +256,11 @@ public class ModBlocks {
     public static final Block FUCHSIA_HOST = registerBlockInBlockset(HOST_BLOCKS, "fuchsia_host", new Block(AbstractBlock.Settings.copy(hostMaterial).mapColor(MapColor.GRAY).luminance(state -> 7)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - ZANE">
-    private static final AbstractBlock.Settings zaneMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock zaneMaterial = new Block(AbstractBlock.Settings.create()
             .strength(0.75f)
             .requiresTool()
-            .instrument(Instrument.BASEDRUM)
-            .sounds(ModBlockSoundGroup.ZANE);
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .sounds(ModBlockSoundGroup.ZANE));
     public static final Block ZANE = registerBlockInBlockset(ZANE_BLOCKS, "zane", new Block(AbstractBlock.Settings.copy(zaneMaterial).mapColor(MapColor.WHITE)));
     public static final Block BLACK_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "black_zane", new Block(AbstractBlock.Settings.copy(zaneMaterial).mapColor(MapColor.BLACK)));
     public static final Block RED_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "red_zane", new Block(AbstractBlock.Settings.copy(zaneMaterial).mapColor(MapColor.RED)));
@@ -282,11 +279,11 @@ public class ModBlocks {
     public static final Block FUCHSIA_ZANE = registerBlockInBlockset(ZANE_BLOCKS, "fuchsia_zane", new Block(AbstractBlock.Settings.copy(zaneMaterial).mapColor(MapColor.DULL_PINK)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - VECT">
-    private static final AbstractBlock.Settings vectMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock vectMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.YELLOW)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.VECT);
+            .sounds(ModBlockSoundGroup.VECT));
     public static final Block VECT = registerBlockInBlockset(VECT_BLOCKS, "vect", new Block(AbstractBlock.Settings.copy(vectMaterial)));
     public static final Block VECT_TILE = registerBlockInBlockset(VECT_BLOCKS, "vect_tile", new Block(AbstractBlock.Settings.copy(vectMaterial)));
     public static final Block VECT_RIVET = registerBlockInBlockset(VECT_BLOCKS, "vect_rivet", new Block(AbstractBlock.Settings.copy(vectMaterial)));
@@ -305,11 +302,11 @@ public class ModBlocks {
     public static final Block VECT_FOIL = registerBlockInBlockset(VECT_BLOCKS, "vect_foil", new Block(AbstractBlock.Settings.copy(vectMaterial).mapColor(MapColor.GOLD).strength(1.2f).sounds(ModBlockSoundGroup.VECT_FOIL)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - REDDS">
-    private static final AbstractBlock.Settings reddsMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock reddsMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.DARK_RED)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.REDDS);
+            .sounds(ModBlockSoundGroup.REDDS));
     public static final Block REDDS = registerBlockInBlockset(REDDS_BLOCKS, "redds", new LitBlock(AbstractBlock.Settings.copy(reddsMaterial).luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_REDDS_ACTIVATE, ModSoundEvents.BLOCK_REDDS_DEACTIVATE, false));
     public static final Block REDDS_PICE = registerBlockInBlockset(REDDS_BLOCKS, "redds_pice", new LitBlock(AbstractBlock.Settings.copy(reddsMaterial)));
     public static final Block REDDS_PICE_STAIRS = registerStairs(REDDS_PICE, "redds_pice_stairs", new LitStairsBlock(REDDS_PICE.getDefaultState(), AbstractBlock.Settings.copy(REDDS_PICE), null, null));
@@ -330,35 +327,35 @@ public class ModBlocks {
     public static final Block REDDS_CURRENT = registerBlockInBlockset(REDDS_BLOCKS, "redds_current", new LitBlock(AbstractBlock.Settings.copy(reddsMaterial).luminance(createLightLevelFromProperty(3, Properties.LIT)), ModSoundEvents.BLOCK_REDDS_ACTIVATE, ModSoundEvents.BLOCK_REDDS_DEACTIVATE, false));
     //</editor-fold>
     //<editor-fold desc ="Blocks - MINN">
-    private static final AbstractBlock.Settings minnMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock minnMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.PALE_GREEN)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.MINN);
-    public static final Block MINN = registerBlockInBlockset(MINN_BLOCKS, "minn", new Block(minnMaterial));
-    public static final Block MINN_TILES = registerBlockInBlockset(MINN_BLOCKS, "minn_tiles", new Block(minnMaterial));
-    public static final Block MINN_RESONANCE = registerBlockInBlockset(MINN_BLOCKS, "minn_resonance", new Block(minnMaterial));
-    public static final Block MINN_QUILT = registerBlockInBlockset(MINN_BLOCKS, "minn_quilt", new Block(minnMaterial));
-    public static final Block MINN_POFFNODE = registerBlockInBlockset(MINN_BLOCKS, "minn_poffnode", new Block(minnMaterial));
-    public static final Block MINN_POFFCAGE = registerBlockInBlockset(MINN_BLOCKS, "minn_poffcage", new Block(minnMaterial));
-    public static final Block MINN_POFF = registerBlockInBlockset(MINN_BLOCKS, "minn_poff", new Block(minnMaterial));
-    public static final Block MINN_PAD = registerBlockInBlockset(MINN_BLOCKS, "minn_pad", new Block(minnMaterial));
-    public static final Block MINN_NEXUS = registerBlockInBlockset(MINN_BLOCKS, "minn_nexus", new Block(minnMaterial));
-    public static final Block MINN_LINENODE = registerBlockInBlockset(MINN_BLOCKS, "minn_linenode", new Block(minnMaterial));
-    public static final Block MINN_LINE = registerBlockInBlockset(MINN_BLOCKS, "minn_line", new PillarBlock(minnMaterial));
-    public static final Block MINN_CIRCLE = registerBlockInBlockset(MINN_BLOCKS, "minn_circle", new Block(minnMaterial));
-    public static final Block MINN_CAGE = registerBlockInBlockset(MINN_BLOCKS, "minn_cage", new Block(minnMaterial));
-    public static final Block MINN_CUBES = registerBlockInBlockset(MINN_BLOCKS, "minn_cubes", new Block(minnMaterial));
-    public static final Block MINN_BLANK = registerBlockInBlockset(MINN_BLOCKS, "minn_blank", new Block(minnMaterial));
-    public static final Block MINN_BEVEL = registerBlockInBlockset(MINN_BLOCKS, "minn_bevel", new Block(minnMaterial));
+            .sounds(ModBlockSoundGroup.MINN));
+    public static final Block MINN = registerBlockInBlockset(MINN_BLOCKS, "minn", new Block(AbstractBlock.Settings.copy(minnMaterial)));
+    public static final Block MINN_TILES = registerBlockInBlockset(MINN_BLOCKS, "minn_tiles", new Block(AbstractBlock.Settings.copy(minnMaterial)));
+    public static final Block MINN_RESONANCE = registerBlockInBlockset(MINN_BLOCKS, "minn_resonance", new Block(AbstractBlock.Settings.copy(minnMaterial)));
+    public static final Block MINN_QUILT = registerBlockInBlockset(MINN_BLOCKS, "minn_quilt", new Block(AbstractBlock.Settings.copy(minnMaterial)));
+    public static final Block MINN_POFFNODE = registerBlockInBlockset(MINN_BLOCKS, "minn_poffnode", new Block(AbstractBlock.Settings.copy(minnMaterial)));
+    public static final Block MINN_POFFCAGE = registerBlockInBlockset(MINN_BLOCKS, "minn_poffcage", new Block(AbstractBlock.Settings.copy(minnMaterial)));
+    public static final Block MINN_POFF = registerBlockInBlockset(MINN_BLOCKS, "minn_poff", new Block(AbstractBlock.Settings.copy(minnMaterial)));
+    public static final Block MINN_PAD = registerBlockInBlockset(MINN_BLOCKS, "minn_pad", new Block(AbstractBlock.Settings.copy(minnMaterial)));
+    public static final Block MINN_NEXUS = registerBlockInBlockset(MINN_BLOCKS, "minn_nexus", new Block(AbstractBlock.Settings.copy(minnMaterial)));
+    public static final Block MINN_LINENODE = registerBlockInBlockset(MINN_BLOCKS, "minn_linenode", new Block(AbstractBlock.Settings.copy(minnMaterial)));
+    public static final Block MINN_LINE = registerBlockInBlockset(MINN_BLOCKS, "minn_line", new PillarBlock(AbstractBlock.Settings.copy(minnMaterial)));
+    public static final Block MINN_CIRCLE = registerBlockInBlockset(MINN_BLOCKS, "minn_circle", new Block(AbstractBlock.Settings.copy(minnMaterial)));
+    public static final Block MINN_CAGE = registerBlockInBlockset(MINN_BLOCKS, "minn_cage", new Block(AbstractBlock.Settings.copy(minnMaterial)));
+    public static final Block MINN_CUBES = registerBlockInBlockset(MINN_BLOCKS, "minn_cubes", new Block(AbstractBlock.Settings.copy(minnMaterial)));
+    public static final Block MINN_BLANK = registerBlockInBlockset(MINN_BLOCKS, "minn_blank", new Block(AbstractBlock.Settings.copy(minnMaterial)));
+    public static final Block MINN_BEVEL = registerBlockInBlockset(MINN_BLOCKS, "minn_bevel", new Block(AbstractBlock.Settings.copy(minnMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - LAIR">
-    private static final AbstractBlock.Settings lairMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock lairMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.RAW_IRON_PINK)
             .requiresTool()
             .strength(0.75f)
-            .instrument(Instrument.BASEDRUM)
-            .sounds(ModBlockSoundGroup.LAIR);
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .sounds(ModBlockSoundGroup.LAIR));
     public static final Block LAIR = registerBlockInBlockset(LAIR_BLOCKS, "lair", new Block(AbstractBlock.Settings.copy(lairMaterial).mapColor(MapColor.DARK_CRIMSON)));
     public static final Block LAIR_STRUT = registerBlockInBlockset(LAIR_BLOCKS, "lair_strut", new Block(AbstractBlock.Settings.copy(lairMaterial)));
     public static final Block LAIR_SMOOTH = registerBlockInBlockset(LAIR_BLOCKS, "lair_smooth", new Block(AbstractBlock.Settings.copy(lairMaterial).mapColor(MapColor.DARK_CRIMSON)));
@@ -383,11 +380,11 @@ public class ModBlocks {
     public static final Block LAIR_AGED = registerBlockInBlockset(LAIR_BLOCKS, "lair_aged", new Block(AbstractBlock.Settings.copy(lairMaterial).mapColor(MapColor.DARK_CRIMSON)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - KRYP">
-    private static final AbstractBlock.Settings krypMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock krypMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
             .requiresTool()
             .strength(3.0f, 6.0f)
-            .sounds(ModBlockSoundGroup.KRYP);
+            .sounds(ModBlockSoundGroup.KRYP));
     public static final Block KRYP = registerBlockInBlockset(KRYP_BLOCKS, "kryp", new Block(AbstractBlock.Settings.copy(krypMaterial).sounds(ModBlockSoundGroup.KRYP_BASE)));
     public static final Block KRYP_WIRE = registerBlockInBlockset(KRYP_BLOCKS, "kryp_wire", new Block(AbstractBlock.Settings.copy(krypMaterial)));
     public static final Block KRYP_WIRE_STAIRS = registerStairs(KRYP_WIRE, "kryp_wire_stairs", new StairsBlock(KRYP_WIRE.getDefaultState(), AbstractBlock.Settings.copy(KRYP_WIRE)));
@@ -412,12 +409,12 @@ public class ModBlocks {
     public static final Block KRYP_SLAB = registerSlab(KRYP, "kryp_slab", new SlabBlock(AbstractBlock.Settings.copy(KRYP).sounds(ModBlockSoundGroup.KRYP_BASE)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - LAVE">
-    private static final AbstractBlock.Settings laveMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock laveMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.LIGHT_BLUE_GRAY)
-            .instrument(Instrument.BASEDRUM)
+            .instrument(NoteBlockInstrument.BASEDRUM)
             .requiresTool()
             .strength(0.8f)
-            .sounds(ModBlockSoundGroup.LAVE);
+            .sounds(ModBlockSoundGroup.LAVE));
     public static final Block LAVE = registerBlockInBlockset(LAVE_BLOCKS, "lave", new Block(AbstractBlock.Settings.copy(laveMaterial)));
     public static final Block LAVE_WINDOW = registerBlockInBlockset(LAVE_BLOCKS, "lave_window", new Block(AbstractBlock.Settings.copy(laveMaterial)));
     public static final Block LAVE_VENT = registerBlockInBlockset(LAVE_BLOCKS, "lave_vent", new Block(AbstractBlock.Settings.copy(laveMaterial)));
@@ -438,12 +435,12 @@ public class ModBlocks {
     public static final Block LAVE_BEAM = registerBlockInBlockset(LAVE_BLOCKS, "lave_beam", new PillarBlock(AbstractBlock.Settings.copy(laveMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - VEELD">
-    private static final AbstractBlock.Settings veeldMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock veeldMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.LICHEN_GREEN)
-            .instrument(Instrument.BASEDRUM)
+            .instrument(NoteBlockInstrument.BASEDRUM)
             .requiresTool()
             .strength(2.0f, 6.0f)
-            .sounds(ModBlockSoundGroup.VEELD);
+            .sounds(ModBlockSoundGroup.VEELD));
     public static final Block VEELD = registerBlockInBlockset(VEELD_BLOCKS, "veeld", new Block(AbstractBlock.Settings.copy(veeldMaterial).mapColor(MapColor.GREEN)));
     public static final Block VEELD_WET = registerBlockInBlockset(VEELD_BLOCKS, "veeld_wet", new Block(AbstractBlock.Settings.copy(veeldMaterial).mapColor(MapColor.GREEN)));
     public static final Block VEELD_TRACTION = registerBlockInBlockset(VEELD_BLOCKS, "veeld_traction", new PillarBlock(AbstractBlock.Settings.copy(veeldMaterial)));
@@ -474,11 +471,11 @@ public class ModBlocks {
 
     //</editor-fold>
     //<editor-fold desc ="Blocks - JELT">
-    private static final AbstractBlock.Settings jeltMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock jeltMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.ORANGE)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.JELT);
+            .sounds(ModBlockSoundGroup.JELT));
     public static final Block JELT = registerBlockInBlockset(JELT_BLOCKS, "jelt", new Block(AbstractBlock.Settings.copy(jeltMaterial)));
     public static final Block JELT_SUPPLY = registerBlockInBlockset(JELT_BLOCKS, "jelt_supply", new Block(AbstractBlock.Settings.copy(jeltMaterial)));
     public static final Block JELT_POKE = registerBlockInBlockset(JELT_BLOCKS, "jelt_poke", new Block(AbstractBlock.Settings.copy(jeltMaterial)));
@@ -497,11 +494,11 @@ public class ModBlocks {
     public static final Block JELT_ATWAL = registerBlockInBlockset(JELT_BLOCKS, "jelt_atwal", new Block(AbstractBlock.Settings.copy(jeltMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - KORP">
-    private static final AbstractBlock.Settings korpMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock korpMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.TERRACOTTA_BLACK)
             .requiresTool()
             .strength(2.0f, 6.0f)
-            .sounds(ModBlockSoundGroup.KORP);
+            .sounds(ModBlockSoundGroup.KORP));
     public static final Block KORP = registerBlockInBlockset(KORP_BLOCKS, "korp", new Block(AbstractBlock.Settings.copy(korpMaterial)));
     public static final Block KORP_WALL = registerBlockInBlockset(KORP_BLOCKS, "korp_wall", new Block(AbstractBlock.Settings.copy(korpMaterial)));
     public static final Block KORP_VEST = registerBlockInBlockset(KORP_BLOCKS, "korp_vest", new PillarBlock(AbstractBlock.Settings.copy(korpMaterial)));
@@ -522,11 +519,11 @@ public class ModBlocks {
     //    };
     //</editor-fold>
     //<editor-fold desc ="Blocks - TANK">
-    private static final AbstractBlock.Settings tankMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock tankMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.LIGHT_GRAY)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.TANK);
+            .sounds(ModBlockSoundGroup.TANK));
     public static final Block TANK = registerBlockInBlockset(TANK_BLOCKS, "tank", new Block(AbstractBlock.Settings.copy(tankMaterial)));
     public static final Block TANK_CAMO = registerBlockInBlockset(TANK_BLOCKS, "tank_camo", new Block(AbstractBlock.Settings.copy(tankMaterial)));
     public static final Block TANK_CAMOCOVER = registerBlockInBlockset(TANK_BLOCKS, "tank_camocover", new PillarBlock(AbstractBlock.Settings.copy(tankMaterial)));
@@ -546,11 +543,11 @@ public class ModBlocks {
 
     //</editor-fold>
     //<editor-fold desc ="Blocks - EXRI">
-    private static final AbstractBlock.Settings exriMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock exriMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.GRAY)
             .requiresTool()
             .strength(1.8f)
-            .sounds(ModBlockSoundGroup.EXRI);
+            .sounds(ModBlockSoundGroup.EXRI));
     public static final Block EXRI = registerBlockInBlockset(EXRI_BLOCKS, "exri", new Block(AbstractBlock.Settings.copy(exriMaterial)));
     public static final Block EXRI_LEVEL = registerBlockInBlockset(EXRI_BLOCKS, "exri_level", new LitHorizontalFacingBlock(AbstractBlock.Settings.copy(exriMaterial)));
     public static final Block EXRI_TECT = registerBlockInBlockset(EXRI_BLOCKS, "exri_tect", new Block(AbstractBlock.Settings.copy(exriMaterial)));
@@ -582,11 +579,11 @@ public class ModBlocks {
 
     //</editor-fold>
     //<editor-fold desc ="Blocks - AZUR">
-    private static final AbstractBlock.Settings azurMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock azurMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.LAPIS_BLUE)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.AZUR);
+            .sounds(ModBlockSoundGroup.AZUR));
     public static final Block AZUR = registerBlockInBlockset(AZUR_BLOCKS, "azur", new Block(AbstractBlock.Settings.copy(azurMaterial)));
     public static final Block AZUR_CRIPT = registerBlockInBlockset(AZUR_BLOCKS, "azur_cript", new PillarBlock(AbstractBlock.Settings.copy(azurMaterial)));
     public static final Block AZUR_CUBE = registerBlockInBlockset(AZUR_BLOCKS, "azur_cube", new Block(AbstractBlock.Settings.copy(azurMaterial)));
@@ -605,11 +602,11 @@ public class ModBlocks {
     public static final Block AZUR_SIGNAL = registerBlockInBlockset(AZUR_BLOCKS, "azur_signal", new PillarBlock(AbstractBlock.Settings.copy(azurMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - FLEQ">
-    private static final AbstractBlock.Settings fleqMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock fleqMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.DARK_AQUA)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.FLEQ);
+            .sounds(ModBlockSoundGroup.FLEQ));
     public static final Block FLEQ = registerBlockInBlockset(FLEQ_BLOCKS, "fleq", new Block(AbstractBlock.Settings.copy(fleqMaterial)));
     public static final Block FLEQ_WET = registerBlockInBlockset(FLEQ_BLOCKS, "fleq_wet", new Block(AbstractBlock.Settings.copy(fleqMaterial)));
     public static final Block FLEQ_VALVE = registerBlockInBlockset(FLEQ_BLOCKS, "fleq_valve", new Block(AbstractBlock.Settings.copy(fleqMaterial)));
@@ -628,10 +625,10 @@ public class ModBlocks {
     public static final Block FLEQ_ABODE = registerBlockInBlockset(FLEQ_BLOCKS, "fleq_abode", new Block(AbstractBlock.Settings.copy(fleqMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - ISZM">
-    private static final AbstractBlock.Settings iszmMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock iszmMaterial = new Block(AbstractBlock.Settings.create()
             .strength(0.3f)
             .luminance(createLightLevelFromProperty(11, Properties.LIT))
-            .sounds(ModBlockSoundGroup.ISZM);
+            .sounds(ModBlockSoundGroup.ISZM));
     public static final Block ISZM = registerBlockInBlockset(ISZM_BLOCKS, "iszm", new LitBlock(AbstractBlock.Settings.copy(iszmMaterial).mapColor(MapColor.GRAY)));
     public static final Block WHITE_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "white_iszm", new LitBlock(AbstractBlock.Settings.copy(iszmMaterial).mapColor(MapColor.TERRACOTTA_WHITE)));
     public static final Block FADED_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "faded_iszm", new LitBlock(AbstractBlock.Settings.copy(iszmMaterial).mapColor(MapColor.PALE_YELLOW)));
@@ -650,7 +647,7 @@ public class ModBlocks {
     public static final Block STUDY_ISZM = registerBlockInBlockset(ISZM_BLOCKS, "study_iszm", new LitBlock(AbstractBlock.Settings.copy(iszmMaterial).mapColor(MapColor.BLUE)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - MYST">
-    private static final AbstractBlock.Settings mystMaterial = AbstractBlock.Settings.create() // TODO, color based scrolling animation // what did i MEAN by this grrgrjgjrglerkgjer;kgkj;ekgrj // i assume u meant to sort the coloured blocks in the creative inventory?
+    private static final AbstractBlock mystMaterial = new Block(AbstractBlock.Settings.create() // TODO, color based scrolling animation // what did i MEAN by this grrgrjgjrglerkgjer;kgkj;ekgrj // i assume u meant to sort the coloured blocks in the creative inventory?
             .strength(0.3f)
             .mapColor(MapColor.CLEAR)
             .nonOpaque()
@@ -658,7 +655,7 @@ public class ModBlocks {
             .solidBlock(ModBlocks::never)
             .suffocates(ModBlocks::never)
             .blockVision(ModBlocks::never)
-            .sounds(ModBlockSoundGroup.MYST);
+            .sounds(ModBlockSoundGroup.MYST));
     public static final Block WHITE_MYST = registerBlockInBlockset(MYST_BLOCKS, "white_myst", new StainedGlassBlock(DyeColor.WHITE, AbstractBlock.Settings.copy(mystMaterial)));
     public static final Block LIGHT_GRAY_MYST = registerBlockInBlockset(MYST_BLOCKS, "light_gray_myst", new StainedGlassBlock(DyeColor.LIGHT_GRAY, AbstractBlock.Settings.copy(mystMaterial)));
     public static final Block GRAY_MYST = registerBlockInBlockset(MYST_BLOCKS, "gray_myst", new StainedGlassBlock(DyeColor.GRAY, AbstractBlock.Settings.copy(mystMaterial)));
@@ -677,11 +674,11 @@ public class ModBlocks {
     public static final Block PINK_MYST = registerBlockInBlockset(MYST_BLOCKS, "pink_myst", new StainedGlassBlock(DyeColor.PINK, AbstractBlock.Settings.copy(mystMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - SYNC">
-    private static final AbstractBlock.Settings syncMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock syncMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.LIME)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.SYNC);
+            .sounds(ModBlockSoundGroup.SYNC));
     public static final Block SYNC = registerBlockInBlockset(SYNC_BLOCKS, "sync", new LitBlock(AbstractBlock.Settings.copy(syncMaterial)));
     public static final Block SYNC_TANK = registerBlockInBlockset(SYNC_BLOCKS, "sync_tank", new LitPillarBlock(AbstractBlock.Settings.copy(syncMaterial)));
     public static final Block SYNC_SHIELDING = registerBlockInBlockset(SYNC_BLOCKS, "sync_shielding", new LitBlock(AbstractBlock.Settings.copy(syncMaterial).mapColor(MapColor.BLACK)));
@@ -700,11 +697,11 @@ public class ModBlocks {
     public static final Block SYNC_CAUTION = registerBlockInBlockset(SYNC_BLOCKS, "sync_caution", new LitPillarBlock(AbstractBlock.Settings.copy(syncMaterial)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - NURR">
-    private static final AbstractBlock.Settings nurrMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock nurrMaterial = new Block(AbstractBlock.Settings.create()
             .requiresTool()
             .strength(1.2f)
             .luminance(state -> 11)
-            .sounds(ModBlockSoundGroup.NURR);
+            .sounds(ModBlockSoundGroup.NURR));
     public static final Block NURR = registerBlockInBlockset(NURR_BLOCKS, "nurr", new PillarBlock(AbstractBlock.Settings.copy(nurrMaterial).mapColor(MapColor.GRAY)));
     public static final Block BLACK_NURR = registerBlockInBlockset(NURR_BLOCKS, "black_nurr", new PillarBlock(AbstractBlock.Settings.copy(nurrMaterial).mapColor(MapColor.BLACK).luminance(state -> 0)));
     public static final Block RED_NURR = registerBlockInBlockset(NURR_BLOCKS, "red_nurr", new PillarBlock(AbstractBlock.Settings.copy(nurrMaterial).mapColor(MapColor.RED)));
@@ -723,10 +720,10 @@ public class ModBlocks {
     public static final Block FUCHSIA_NURR = registerBlockInBlockset(NURR_BLOCKS, "fuchsia_nurr", new PillarBlock(AbstractBlock.Settings.copy(nurrMaterial).mapColor(MapColor.TERRACOTTA_MAGENTA)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - TYEL">
-    private static final AbstractBlock.Settings tyelMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock tyelMaterial = new Block(AbstractBlock.Settings.create()
             .requiresTool()
             .strength(1.4f)
-            .sounds(ModBlockSoundGroup.TYEL);
+            .sounds(ModBlockSoundGroup.TYEL));
     public static final Block TYEL = registerBlockInBlockset(TYEL_BLOCKS, "tyel", new Block(AbstractBlock.Settings.copy(tyelMaterial).mapColor(MapColor.WHITE_GRAY)));
     public static final Block BLACK_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "black_tyel", new Block(AbstractBlock.Settings.copy(tyelMaterial).mapColor(MapColor.BLACK)));
     public static final Block TAN_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "tan_tyel", new Block(AbstractBlock.Settings.copy(tyelMaterial).mapColor(MapColor.RAW_IRON_PINK)));
@@ -745,10 +742,10 @@ public class ModBlocks {
     public static final Block FUCHSIA_TYEL = registerBlockInBlockset(TYEL_BLOCKS, "fuchsia_tyel", new Block(AbstractBlock.Settings.copy(tyelMaterial).mapColor(MapColor.DULL_PINK)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - ROEN">
-    private static final AbstractBlock.Settings roenMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock roenMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.LICHEN_GREEN)
             .strength(0.6f)
-            .sounds(ModBlockSoundGroup.ROEN);
+            .sounds(ModBlockSoundGroup.ROEN));
     public static final Block ROEN = registerBlockInBlockset(ROEN_BLOCKS, "roen", new Block(AbstractBlock.Settings.copy(roenMaterial).mapColor(MapColor.LIME)));
     public static final Block ROEN_DESSICATE = registerBlockInBlockset(ROEN_BLOCKS, "roen_dessicate", new Block(AbstractBlock.Settings.copy(roenMaterial).mapColor(MapColor.RAW_IRON_PINK)));
     public static final Block ROEN_LESION = registerBlockInBlockset(ROEN_BLOCKS, "roen_lesion", new PillarBlock(AbstractBlock.Settings.copy(roenMaterial).mapColor(MapColor.RED)));
@@ -767,18 +764,18 @@ public class ModBlocks {
     public static final Block ROEN_GROUT = registerBlockInBlockset(ROEN_BLOCKS, "roen_grout", new Block(AbstractBlock.Settings.copy(roenMaterial).mapColor(MapColor.WHITE_GRAY)));
     //</editor-fold>
     //<editor-fold desc ="Blocks - SOL">
-    private static final AbstractBlock.Settings solMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock solMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.TERRACOTTA_YELLOW)
             .strength(0.3f)
             .luminance(createLightLevelFromProperty(15, Properties.LIT))
             .mapColor(state -> state.get(Properties.LIT) ? MapColor.OFF_WHITE : MapColor.TERRACOTTA_YELLOW)
-            .sounds(ModBlockSoundGroup.SOL);
-    private static final AbstractBlock.Settings solMaterialDim = AbstractBlock.Settings.create()
+            .sounds(ModBlockSoundGroup.SOL));
+    private static final AbstractBlock solMaterialDim = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.TERRACOTTA_YELLOW)
             .strength(0.3f)
             .luminance(createLightLevelFromProperty(11, Properties.LIT))
             .mapColor(state -> state.get(Properties.LIT) ? MapColor.YELLOW : MapColor.TERRACOTTA_ORANGE)
-            .sounds(ModBlockSoundGroup.SOL);
+            .sounds(ModBlockSoundGroup.SOL));
     public static final Block SOL = registerBlockInBlockset(SOL_BLOCKS, "sol", new LitBlock(AbstractBlock.Settings.copy(solMaterial)));
     public static final Block SOL_PHOTO = registerBlockInBlockset(SOL_BLOCKS, "sol_photo", new LitBlock(AbstractBlock.Settings.copy(solMaterial)));
     public static final Block SOL_ELECTRON = registerBlockInBlockset(SOL_BLOCKS, "sol_electron", new LitBlock(AbstractBlock.Settings.copy(solMaterial)));
@@ -798,11 +795,11 @@ public class ModBlocks {
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - BITT">
-    private static final AbstractBlock.Settings bittMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock bittMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.TERRACOTTA_GRAY)
             .strength(0.6f)
 //          .luminance(state -> 5)
-            .sounds(ModBlockSoundGroup.BITT);
+            .sounds(ModBlockSoundGroup.BITT));
     public static final Block BITT = registerBlockInBlockset(BITT_BLOCKS, "bitt", new BittBlock(AbstractBlock.Settings.copy(bittMaterial)));
     public static final Block SHELL_BITT = registerBlockInBlockset(BITT_BLOCKS, "shell_bitt", new BittBlock(AbstractBlock.Settings.copy(bittMaterial)));
     public static final Block RED_BITT = registerBlockInBlockset(BITT_BLOCKS, "red_bitt", new BittBlock(AbstractBlock.Settings.copy(bittMaterial)));
@@ -822,17 +819,17 @@ public class ModBlocks {
     //</editor-fold>
     //</editor-fold>
     //<editor-fold desc ="Blocks - ROST">
-    private static final AbstractBlock.Settings rostMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock rostMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.OAK_TAN)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.ROST);
+            .sounds(ModBlockSoundGroup.ROST));
 
-    private static final AbstractBlock.Settings rostRustMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock rostRustMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.DULL_RED)
             .requiresTool()
             .strength(2.4f, 2.0f)
-            .sounds(ModBlockSoundGroup.ROST_RUST);
+            .sounds(ModBlockSoundGroup.ROST_RUST));
     //TODO: refactor rusting system in order to implement scraping with crow's beak
     public static final Block ROST_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_rust", new Block(AbstractBlock.Settings.copy(rostRustMaterial)));
     public static final Block ROST_WALLPAPER_RUST = registerBlockInBlockset(ROST_BLOCKS_RUST, "rost_wallpaper_rust", new Block(AbstractBlock.Settings.copy(rostRustMaterial)));
@@ -878,10 +875,10 @@ public class ModBlocks {
 
     //</editor-fold>
     //<editor-fold desc ="Blocks - VECT">
-    private static final AbstractBlock.Settings plexMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock plexMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.LIME)
             .strength(0.3f)
-            .sounds(ModBlockSoundGroup.PLEX);
+            .sounds(ModBlockSoundGroup.PLEX));
     public static final Block PLEX = registerBlockInBlockset(PLEX_BLOCKS, "plex", new Block(AbstractBlock.Settings.copy(plexMaterial)));
     public static final Block PLEX_PLAID = registerBlockInBlockset(PLEX_BLOCKS, "plex_plaid", new Block(AbstractBlock.Settings.copy(plexMaterial).mapColor(MapColor.DIAMOND_BLUE)));
     public static final Block PLEX_PUFF = registerBlockInBlockset(PLEX_BLOCKS, "plex_puff", new Block(AbstractBlock.Settings.copy(plexMaterial).mapColor(MapColor.LIGHT_BLUE)));
@@ -944,9 +941,9 @@ public class ModBlocks {
     public static final Block AGED_SWITCH = registerBlockInBlockset(SWITCH_BLOCKS, "aged_switch", new SwitchBlock(AbstractBlock.Settings.copy(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_TURN_ON, ModSoundEvents.BLOCK_SWITCH_TURN_OFF));
     public static final Block BLACK_SWITCH = registerBlockInBlockset(SWITCH_BLOCKS, "black_switch", new SwitchBlock(AbstractBlock.Settings.copy(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_TURN_ON, ModSoundEvents.BLOCK_SWITCH_TURN_OFF));
     public static final Block GRAY_SWITCH = registerBlockInBlockset(SWITCH_BLOCKS, "gray_switch", new SwitchBlock(AbstractBlock.Settings.copy(MOUSE).pistonBehavior(PistonBehavior.DESTROY), ModSoundEvents.BLOCK_SWITCH_TURN_ON, ModSoundEvents.BLOCK_SWITCH_TURN_OFF));
-    public static final Block EMPTY_TIRE = registerBlock("empty_tire", new BouncyPillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).instrument(Instrument.BASS).strength(0.2f).sounds(ModBlockSoundGroup.TIRE)));
+    public static final Block EMPTY_TIRE = registerBlock("empty_tire", new BouncyPillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).instrument(NoteBlockInstrument.BASS).strength(0.2f).sounds(ModBlockSoundGroup.TIRE)));
     public static final Block TIRE = registerBlock("tire", new PillarBlock(AbstractBlock.Settings.copy(EMPTY_TIRE).strength(1.0f).requiresTool()));
-    public static final Block CRATE = registerBlock("crate", new CrateBlock(AbstractBlock.Settings.create().instrument(Instrument.BASEDRUM).mapColor(MapColor.TERRACOTTA_GRAY).strength(3.5f, 50.0f).requiresTool().sounds(ModBlockSoundGroup.KORP)));
+    public static final Block CRATE = registerBlock("crate", new CrateBlock(AbstractBlock.Settings.create().instrument(NoteBlockInstrument.BASEDRUM).mapColor(MapColor.TERRACOTTA_GRAY).strength(3.5f, 50.0f).requiresTool().sounds(ModBlockSoundGroup.KORP)));
 
     public static final Block ANTENNA = registerBlock("antenna", new AntennaBlock(AbstractBlock.Settings.create().mapColor(MapColor.TERRACOTTA_GRAY).strength(3.0f, 6.0f).sounds(ModBlockSoundGroup.ANTENNA).nonOpaque().blockVision(ModBlocks::never).allowsSpawning(ModBlocks::never)));
 
@@ -969,23 +966,23 @@ public class ModBlocks {
         return b;
     }
 
-    public static final Block DOOR_PUNCTURE = registerDoor("door_puncture", new DoorBlock(AbstractBlock.Settings.copy(LUESIUM_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.LUESIUM));
-    public static final Block DOOR_STEAK = registerDoor("door_steak", new DoorBlock(AbstractBlock.Settings.copy(forttMaterial).mapColor(MapColor.DEEPSLATE_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.FORTT));
-    public static final Block DOOR_NEON = registerDoor("door_neon", new DoorBlock(AbstractBlock.Settings.copy(crayMaterial).mapColor(MapColor.PURPLE).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.CRAY));
-    public static final Block DOOR_TOY = registerDoor("door_toy", new DoorBlock(AbstractBlock.Settings.copy(castMaterial).mapColor(MapColor.BRIGHT_RED).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.CAST));
-    public static final Block DOOR_POWER = registerDoor("door_power", new DoorBlock(AbstractBlock.Settings.copy(nurrMaterial).mapColor(MapColor.BLACK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.NURR));
-    public static final Block DOOR_VACUUM = registerDoor("door_vacuum", new DoorBlock(AbstractBlock.Settings.copy(vectMaterial).mapColor(MapColor.BLACK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.VECT));
-    public static final Block DOOR_CONFINE = registerDoor("door_confine", new DoorBlock(AbstractBlock.Settings.copy(minnMaterial).mapColor(MapColor.WHITE).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.MINN));
-    public static final Block DOOR_END = registerDoor("door_end", new DoorBlock(AbstractBlock.Settings.copy(lairMaterial).mapColor(MapColor.DARK_CRIMSON).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.LAIR));
-    public static final Block DOOR_HEAVY = registerDoor("door_heavy", new DoorBlock(AbstractBlock.Settings.copy(krypMaterial).mapColor(MapColor.SPRUCE_BROWN).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.KRYP));
-    public static final Block DOOR_TEST = registerDoor("door_test", new DoorBlock(AbstractBlock.Settings.copy(laveMaterial).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.LAVE));
-    public static final Block DOOR_GROWN = registerDoor("door_grown", new DoorBlock(AbstractBlock.Settings.copy(veeldMaterial).mapColor(MapColor.DARK_GREEN).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.VEELD));
-    public static final Block DOOR_KNET = registerDoor("door_knet", new DoorBlock(AbstractBlock.Settings.copy(korpMaterial).mapColor(MapColor.CLEAR).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.KORP));
-    public static final Block DOOR_WORK = registerDoor("door_work", new DoorBlock(AbstractBlock.Settings.copy(tankMaterial).mapColor(MapColor.GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.TANK));
-    public static final Block DOOR_SAFE = registerDoor("door_safe", new DoorBlock(AbstractBlock.Settings.copy(exriMaterial).mapColor(MapColor.BLACK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.EXRI));
-    public static final Block DOOR_PETRI = registerDoor("door_petri", new DoorBlock(AbstractBlock.Settings.copy(roenMaterial).mapColor(MapColor.PALE_YELLOW).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.ROEN));
-    public static final Block DOOR_BUNKER = registerDoor("door_bunker", new DoorBlock(AbstractBlock.Settings.copy(ModBlocks.ABSTRACT_TONE).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), ModBlockSetType.TONE));
-    public static final Block IRON_BAR_DOOR = registerDoor("iron_bar_door", new DoorBlock(AbstractBlock.Settings.copy(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), BlockSetType.IRON));
+    public static final Block DOOR_PUNCTURE = registerDoor("door_puncture", new DoorBlock(ModBlockSetType.LUESIUM, AbstractBlock.Settings.copy(LUESIUM_BLOCK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DOOR_STEAK = registerDoor("door_steak", new DoorBlock(ModBlockSetType.FORTT, AbstractBlock.Settings.copy(forttMaterial).mapColor(MapColor.DEEPSLATE_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DOOR_NEON = registerDoor("door_neon", new DoorBlock(ModBlockSetType.CRAY, AbstractBlock.Settings.copy(crayMaterial).mapColor(MapColor.PURPLE).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DOOR_TOY = registerDoor("door_toy", new DoorBlock(ModBlockSetType.CAST, AbstractBlock.Settings.copy(castMaterial).mapColor(MapColor.BRIGHT_RED).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DOOR_POWER = registerDoor("door_power", new DoorBlock(ModBlockSetType.NURR, AbstractBlock.Settings.copy(nurrMaterial).mapColor(MapColor.BLACK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DOOR_VACUUM = registerDoor("door_vacuum", new DoorBlock(ModBlockSetType.VECT, AbstractBlock.Settings.copy(vectMaterial).mapColor(MapColor.BLACK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DOOR_CONFINE = registerDoor("door_confine", new DoorBlock(ModBlockSetType.MINN, AbstractBlock.Settings.copy(minnMaterial).mapColor(MapColor.WHITE).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DOOR_END = registerDoor("door_end", new DoorBlock(ModBlockSetType.LAIR, AbstractBlock.Settings.copy(lairMaterial).mapColor(MapColor.DARK_CRIMSON).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DOOR_HEAVY = registerDoor("door_heavy", new DoorBlock(ModBlockSetType.KRYP, AbstractBlock.Settings.copy(krypMaterial).mapColor(MapColor.SPRUCE_BROWN).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DOOR_TEST = registerDoor("door_test", new DoorBlock(ModBlockSetType.LAVE, AbstractBlock.Settings.copy(laveMaterial).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DOOR_GROWN = registerDoor("door_grown", new DoorBlock(ModBlockSetType.VEELD, AbstractBlock.Settings.copy(veeldMaterial).mapColor(MapColor.DARK_GREEN).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DOOR_KNET = registerDoor("door_knet", new DoorBlock(ModBlockSetType.KORP, AbstractBlock.Settings.copy(korpMaterial).mapColor(MapColor.CLEAR).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DOOR_WORK = registerDoor("door_work", new DoorBlock(ModBlockSetType.TANK, AbstractBlock.Settings.copy(tankMaterial).mapColor(MapColor.GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DOOR_SAFE = registerDoor("door_safe", new DoorBlock(ModBlockSetType.EXRI, AbstractBlock.Settings.copy(exriMaterial).mapColor(MapColor.BLACK).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DOOR_PETRI = registerDoor("door_petri", new DoorBlock(ModBlockSetType.ROEN, AbstractBlock.Settings.copy(roenMaterial).mapColor(MapColor.PALE_YELLOW).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block DOOR_BUNKER = registerDoor("door_bunker", new DoorBlock(ModBlockSetType.TONE, AbstractBlock.Settings.copy(ModBlocks.ABSTRACT_TONE).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block IRON_BAR_DOOR = registerDoor("iron_bar_door", new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.copy(Blocks.IRON_DOOR).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - Trapdoors">
@@ -996,23 +993,23 @@ public class ModBlocks {
         return b;
     }
 
-    public static final Block TRAPDOOR_PUNCTURE = registerTrapdoor("trapdoor_puncture", new TrapdoorBlock(AbstractBlock.Settings.copy(LUESIUM_BLOCK).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.LUESIUM));
-    public static final Block TRAPDOOR_STEAK = registerTrapdoor("trapdoor_steak", new TrapdoorBlock(AbstractBlock.Settings.copy(forttMaterial).mapColor(MapColor.DEEPSLATE_GRAY).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.FORTT));
-    public static final Block TRAPDOOR_NEON = registerTrapdoor("trapdoor_neon", new TrapdoorBlock(AbstractBlock.Settings.copy(crayMaterial).mapColor(MapColor.PURPLE).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.CRAY));
-    public static final Block TRAPDOOR_TOY = registerTrapdoor("trapdoor_toy", new TrapdoorBlock(AbstractBlock.Settings.copy(castMaterial).mapColor(MapColor.BRIGHT_RED).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.CAST));
-    public static final Block TRAPDOOR_POWER = registerTrapdoor("trapdoor_power", new TrapdoorBlock(AbstractBlock.Settings.copy(nurrMaterial).mapColor(MapColor.BLACK).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.NURR));
-    public static final Block TRAPDOOR_VACUUM = registerTrapdoor("trapdoor_vacuum", new TrapdoorBlock(AbstractBlock.Settings.copy(vectMaterial).mapColor(MapColor.BLACK).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.VECT));
-    public static final Block TRAPDOOR_CONFINE = registerTrapdoor("trapdoor_confine", new TrapdoorBlock(AbstractBlock.Settings.copy(minnMaterial).mapColor(MapColor.WHITE).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.MINN));
-    public static final Block TRAPDOOR_END = registerTrapdoor("trapdoor_end", new TrapdoorBlock(AbstractBlock.Settings.copy(lairMaterial).mapColor(MapColor.DARK_CRIMSON).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.LAIR));
-    public static final Block TRAPDOOR_HEAVY = registerTrapdoor("trapdoor_heavy", new TrapdoorBlock(AbstractBlock.Settings.copy(krypMaterial).mapColor(MapColor.SPRUCE_BROWN).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.KRYP));
-    public static final Block TRAPDOOR_TEST = registerTrapdoor("trapdoor_test", new TrapdoorBlock(AbstractBlock.Settings.copy(laveMaterial).mapColor(MapColor.IRON_GRAY).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.LAVE));
-    public static final Block TRAPDOOR_GROWN = registerTrapdoor("trapdoor_grown", new TrapdoorBlock(AbstractBlock.Settings.copy(veeldMaterial).mapColor(MapColor.DARK_GREEN).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.VEELD));
-    public static final Block TRAPDOOR_KNET = registerTrapdoor("trapdoor_knet", new TrapdoorBlock(AbstractBlock.Settings.copy(korpMaterial).mapColor(MapColor.CLEAR).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.KORP));
-    public static final Block TRAPDOOR_WORK = registerTrapdoor("trapdoor_work", new TrapdoorBlock(AbstractBlock.Settings.copy(tankMaterial).mapColor(MapColor.GRAY).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.TANK));
-    public static final Block TRAPDOOR_SAFE = registerTrapdoor("trapdoor_safe", new TrapdoorBlock(AbstractBlock.Settings.copy(exriMaterial).mapColor(MapColor.BLACK).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.EXRI));
-    public static final Block TRAPDOOR_PETRI = registerTrapdoor("trapdoor_petri", new TrapdoorBlock(AbstractBlock.Settings.copy(roenMaterial).mapColor(MapColor.PALE_YELLOW).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.ROEN));
-    public static final Block TRAPDOOR_BUNKER = registerTrapdoor("trapdoor_bunker", new TrapdoorBlock(AbstractBlock.Settings.copy(ModBlocks.ABSTRACT_TONE).mapColor(MapColor.IRON_GRAY).nonOpaque().allowsSpawning(ModBlocks::never), ModBlockSetType.TONE));
-    public static final Block IRON_BAR_TRAPDOOR = registerTrapdoor("iron_bar_trapdoor", new TrapdoorBlock(AbstractBlock.Settings.copy(Blocks.IRON_TRAPDOOR).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY), BlockSetType.IRON));
+    public static final Block TRAPDOOR_PUNCTURE = registerTrapdoor("trapdoor_puncture", new TrapdoorBlock(ModBlockSetType.LUESIUM, AbstractBlock.Settings.copy(LUESIUM_BLOCK).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block TRAPDOOR_STEAK = registerTrapdoor("trapdoor_steak", new TrapdoorBlock(ModBlockSetType.FORTT, AbstractBlock.Settings.copy(forttMaterial).mapColor(MapColor.DEEPSLATE_GRAY).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block TRAPDOOR_NEON = registerTrapdoor("trapdoor_neon", new TrapdoorBlock(ModBlockSetType.CRAY, AbstractBlock.Settings.copy(crayMaterial).mapColor(MapColor.PURPLE).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block TRAPDOOR_TOY = registerTrapdoor("trapdoor_toy", new TrapdoorBlock(ModBlockSetType.CAST, AbstractBlock.Settings.copy(castMaterial).mapColor(MapColor.BRIGHT_RED).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block TRAPDOOR_POWER = registerTrapdoor("trapdoor_power", new TrapdoorBlock(ModBlockSetType.NURR, AbstractBlock.Settings.copy(nurrMaterial).mapColor(MapColor.BLACK).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block TRAPDOOR_VACUUM = registerTrapdoor("trapdoor_vacuum", new TrapdoorBlock(ModBlockSetType.VECT, AbstractBlock.Settings.copy(vectMaterial).mapColor(MapColor.BLACK).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block TRAPDOOR_CONFINE = registerTrapdoor("trapdoor_confine", new TrapdoorBlock(ModBlockSetType.MINN, AbstractBlock.Settings.copy(minnMaterial).mapColor(MapColor.WHITE).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block TRAPDOOR_END = registerTrapdoor("trapdoor_end", new TrapdoorBlock(ModBlockSetType.LAIR, AbstractBlock.Settings.copy(lairMaterial).mapColor(MapColor.DARK_CRIMSON).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block TRAPDOOR_HEAVY = registerTrapdoor("trapdoor_heavy", new TrapdoorBlock(ModBlockSetType.KRYP, AbstractBlock.Settings.copy(krypMaterial).mapColor(MapColor.SPRUCE_BROWN).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block TRAPDOOR_TEST = registerTrapdoor("trapdoor_test", new TrapdoorBlock(ModBlockSetType.LAVE, AbstractBlock.Settings.copy(laveMaterial).mapColor(MapColor.IRON_GRAY).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block TRAPDOOR_GROWN = registerTrapdoor("trapdoor_grown", new TrapdoorBlock(ModBlockSetType.VEELD, AbstractBlock.Settings.copy(veeldMaterial).mapColor(MapColor.DARK_GREEN).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block TRAPDOOR_KNET = registerTrapdoor("trapdoor_knet", new TrapdoorBlock(ModBlockSetType.KORP, AbstractBlock.Settings.copy(korpMaterial).mapColor(MapColor.CLEAR).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block TRAPDOOR_WORK = registerTrapdoor("trapdoor_work", new TrapdoorBlock(ModBlockSetType.TANK, AbstractBlock.Settings.copy(tankMaterial).mapColor(MapColor.GRAY).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block TRAPDOOR_SAFE = registerTrapdoor("trapdoor_safe", new TrapdoorBlock(ModBlockSetType.EXRI, AbstractBlock.Settings.copy(exriMaterial).mapColor(MapColor.BLACK).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block TRAPDOOR_PETRI = registerTrapdoor("trapdoor_petri", new TrapdoorBlock(ModBlockSetType.ROEN, AbstractBlock.Settings.copy(roenMaterial).mapColor(MapColor.PALE_YELLOW).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block TRAPDOOR_BUNKER = registerTrapdoor("trapdoor_bunker", new TrapdoorBlock(ModBlockSetType.TONE, AbstractBlock.Settings.copy(ModBlocks.ABSTRACT_TONE).mapColor(MapColor.IRON_GRAY).nonOpaque().allowsSpawning(ModBlocks::never)));
+    public static final Block IRON_BAR_TRAPDOOR = registerTrapdoor("iron_bar_trapdoor", new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.copy(Blocks.IRON_TRAPDOOR).mapColor(MapColor.IRON_GRAY).nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     //</editor-fold>
 
     //<editor-fold desc ="Blocks - Decals">
@@ -1022,12 +1019,12 @@ public class ModBlocks {
         return b;
     }
 
-    private static final AbstractBlock.Settings decalMaterial = AbstractBlock.Settings.create()
+    private static final AbstractBlock decalMaterial = new Block(AbstractBlock.Settings.create()
             .mapColor(MapColor.CLEAR)
             .strength(0.1f)
             .nonOpaque()
             .noCollision()
-            .pistonBehavior(PistonBehavior.DESTROY);
+            .pistonBehavior(PistonBehavior.DESTROY));
     public static final Block DECAL_LUESIUM = registerDecalBlock("decal_luesium", new DecalBlock(AbstractBlock.Settings.copy(decalMaterial).pistonBehavior(PistonBehavior.DESTROY).sounds(ModBlockSoundGroup.DECAL_LUESIUM)));
 
     static {
@@ -1300,7 +1297,7 @@ public class ModBlocks {
     }
 
     private static Item registerBlockItem(String name, Block block) {
-        BlockItem blockItem = new BlockItem(block, new FabricItemSettings());
+        BlockItem blockItem = new BlockItem(block, new Item.Settings());
         //ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(blockItem));
         return Registry.register(Registries.ITEM, Identifier.of(Super.MOD_ID, name), blockItem);
     }

@@ -40,13 +40,13 @@ public class RadioBlock extends BasicHorizontalFacingBlock {
         this.setDefaultState(this.stateManager.getDefaultState().with(ENABLED, false).with(HAS_ANTENNA, false));
     }
 
-    @Override
-    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        if (state.get(HAS_ANTENNA) && !player.isCreative()) {
-            dropStack(world,pos, ModBlocks.ANTENNA.asItem().getDefaultStack());
-        }
-        super.onBreak(world, pos, state, player);
-    }
+//    @Override
+//    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+//        if (state.get(HAS_ANTENNA) && !player.isCreative()) {
+//            dropStack(world,pos, ModBlocks.ANTENNA.asItem().getDefaultStack());
+//        }
+//        super.onBreak(world, pos, state, player);
+//    } Fuck
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
