@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ltones:block/plex_roll_top",
+    "east": "ltones:block/plex_roll",
+    "north": "ltones:block/plex_roll",
+    "particle": "ltones:block/plex_roll",
+    "south": "ltones:block/plex_roll",
+    "up": "ltones:block/plex_roll_top",
+    "west": "ltones:block/plex_roll"
+  }
+}
